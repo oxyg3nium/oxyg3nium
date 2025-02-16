@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/SweepAddressTransaction.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/SweepAddressTransaction.scala)
 
 This code defines a case class called `SweepAddressTransaction` and an object with the same name. The case class has four fields: `txId`, which is a `TransactionId` object; `unsignedTx`, which is a string representation of an `UnsignedTransaction` object; `gasAmount`, which is a `GasBox` object; and `gasPrice`, which is a `GasPrice` object. The object `SweepAddressTransaction` has a single method called `from` that takes an `UnsignedTransaction` object as input and returns a `SweepAddressTransaction` object.
 

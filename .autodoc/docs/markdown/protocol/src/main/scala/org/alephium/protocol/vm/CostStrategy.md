@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/CostStrategy.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/CostStrategy.scala)
 
 This file contains the implementation of the `CostStrategy` trait, which is used to manage the gas cost of executing smart contracts in the Oxyg3nium blockchain. Gas is a unit of measurement used to determine the computational effort required to execute a given operation or contract. The purpose of this trait is to provide a set of methods that can be used to charge gas for various operations that are performed during contract execution.
 

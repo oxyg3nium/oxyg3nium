@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/BrokerInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/BrokerInfo.scala)
 
 This file contains code related to the Oxyg3nium project's protocol model. The purpose of this code is to define traits and classes that represent information about brokers and broker groups in the Oxyg3nium network. 
 

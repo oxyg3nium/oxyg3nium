@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/TxInput.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/TxInput.scala)
 
 This file contains code related to the Oxyg3nium transaction model. The code defines the input and output references for transactions, which are used to track the flow of assets and contracts in the network. 
 
@@ -19,8 +19,8 @@ val outputRefBytes = Serde.serialize(outputRef)
 val inputBytes = Serde.serialize(input)
 ```
 ## Questions: 
- 1. What is the purpose of the `alephium.protocol.model` package?
-- The `alephium.protocol.model` package contains classes and traits related to the Oxyg3nium protocol's data model.
+ 1. What is the purpose of the `oxyg3nium.protocol.model` package?
+- The `oxyg3nium.protocol.model` package contains classes and traits related to the Oxyg3nium protocol's data model.
 
 2. What is the difference between `AssetOutputRef` and `ContractOutputRef`?
 - `AssetOutputRef` represents an output that contains an asset, while `ContractOutputRef` represents an output that contains a contract.

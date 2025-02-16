@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol/src/main/scala/org/alephium/protocol)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/protocol/src/main/scala/org/oxyg3nium/protocol)
 
 The code in the `org.oxyg3nium.protocol` package provides essential functionality for the Oxyg3nium project, such as managing the Oxyg3nium cryptocurrency, handling message serialization and deserialization, and managing the mining process. This package contains several files and subfolders, each with a specific purpose.
 

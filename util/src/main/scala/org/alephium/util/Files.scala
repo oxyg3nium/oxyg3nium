@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -44,6 +44,6 @@ object Files {
 
   def testRootPath(env: Env): Path = {
     assume(env == Env.Test || env == Env.Integration)
-    tmpDir.resolve(s".alephium-${env.name}")
+    tmpDir.resolve(s".oxyg3nium-${env.name}")
   }
 }

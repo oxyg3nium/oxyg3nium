@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Cache.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Cache.scala)
 
 The code defines a cache implementation that can be used to store key-value pairs in memory. The cache is implemented as a LinkedHashMap, which allows for efficient access and removal of elements based on their insertion order or access order. The cache can be configured to have a maximum capacity, after which the least recently used elements will be removed to make room for new elements.
 

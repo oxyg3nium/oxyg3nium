@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/ConfigTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/ConfigTest.scala)
 
 The code is a test file for the Oxyg3nium project's configuration settings. The purpose of this file is to test if the configuration settings are correctly loaded and if the genesis blocks are created as expected. The `ConfigTest` class extends the `Oxyg3niumActorSpec` class, which is a testing utility class that provides a test environment for actors in the Oxyg3nium project. 
 

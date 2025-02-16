@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/macros/src/main/scala/org/alephium/macros/HPC.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/macros/src/main/scala/org/oxyg3nium/macros/HPC.scala)
 
 The `HPC` object in this file contains a single method `cfor` that is used to create a C-style for loop in Scala. This method takes three parameters: `init`, `test`, and `next`, which are the initial value, the test condition, and the next value of the loop variable, respectively. The `body` parameter is a function that takes the loop variable as input and performs the loop body. The `cfor` method uses Scala macros to generate efficient code for the loop.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/macros/src/main)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/macros/src/main)
 
 The `.autodoc/docs/json/macros/src/main` folder contains Scala macros and annotations that help generate boilerplate code and improve code efficiency in the Oxyg3nium project. These macros and annotations are used to automatically generate code for serialization, hashing, enumeration of sealed traits, and C-style for loops.
 

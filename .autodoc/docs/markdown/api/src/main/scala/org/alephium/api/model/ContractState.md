@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/ContractState.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/ContractState.scala)
 
 This file contains two case classes, `ContractState` and `AssetState`, and an object `AssetState` with two methods. These classes and methods are used to represent and manipulate the state of a smart contract in the Oxyg3nium blockchain.
 
@@ -23,8 +23,8 @@ This file contains two case classes, `ContractState` and `AssetState`, and an ob
 
 These classes and methods are used throughout the Oxyg3nium project to represent and manipulate the state of smart contracts. For example, `ContractState` objects are used to store the state of contracts in the blockchain, and `AssetState` objects are used to represent the assets held by contracts. The `AssetState` methods are used to create and manipulate `AssetState` objects from `ContractOutput` objects, which are used to represent the output of a contract execution. Overall, these classes and methods are an important part of the Oxyg3nium blockchain's smart contract functionality.
 ## Questions: 
- 1. What is the purpose of the `alephium.api.model` package?
-- The `alephium.api.model` package contains classes that represent data models used in the Oxyg3nium API.
+ 1. What is the purpose of the `oxyg3nium.api.model` package?
+- The `oxyg3nium.api.model` package contains classes that represent data models used in the Oxyg3nium API.
 
 2. What is the `AssetState` case class used for?
 - The `AssetState` case class represents the state of an asset, including the amount of attoAlph and an optional vector of tokens.

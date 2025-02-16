@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BlocksAndEventsPerTimeStampRange.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BlocksAndEventsPerTimeStampRange.scala)
 
 This code defines a case class called `BlocksAndEventsPerTimeStampRange` which contains a vector of vectors of `BlockAndEvents`. The `BlockAndEvents` class is not defined in this file, but it is likely defined elsewhere in the project. 
 
@@ -35,4 +35,4 @@ Overall, this code defines a case class that is likely used to represent a range
    - The `AVector` type is imported from `org.oxyg3nium.util` and is used to represent a vector (i.e. an ordered collection) of elements.
 
 3. What is the significance of the GNU Lesser General Public License mentioned in the code comments?
-   - The GNU Lesser General Public License is the license under which the alephium library is distributed, allowing for free redistribution and modification of the code under certain conditions.
+   - The GNU Lesser General Public License is the license under which the oxyg3nium library is distributed, allowing for free redistribution and modification of the code under certain conditions.

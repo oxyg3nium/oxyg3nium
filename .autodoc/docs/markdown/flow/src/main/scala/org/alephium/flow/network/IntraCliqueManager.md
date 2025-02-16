@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/IntraCliqueManager.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/IntraCliqueManager.scala)
 
 The `IntraCliqueManager` class is part of the Oxyg3nium project and is responsible for managing the intra-clique communication between brokers in a clique. A clique is a group of brokers that work together to maintain the blockchain network. The purpose of this class is to ensure that all brokers in a clique are connected and synced with each other.
 

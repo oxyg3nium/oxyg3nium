@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralph/src/main/scala/org/alephium/ralph/Operator.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralph/src/main/scala/org/oxyg3nium/ralph/Operator.scala)
 
 This code defines several traits and objects related to operators used in the Oxyg3nium project's virtual machine. The `Operator` trait defines two methods: `getReturnType` and `genCode`. The former takes a sequence of `Type` objects as input and returns another sequence of `Type` objects that represent the return type of the operator when applied to arguments of the given types. The latter takes the same input and returns a sequence of `Instr` objects that represent the bytecode instructions needed to execute the operator on the given types of arguments.
 

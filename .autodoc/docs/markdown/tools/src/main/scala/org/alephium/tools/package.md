@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/tools/src/main/scala/org/alephium/tools/package.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/tools/src/main/scala/org/oxyg3nium/tools/package.scala)
 
 The code provided is a simple Scala file that defines a function called `printLine`. This function takes a single argument, a string, and prints it to the console with a newline character appended to the end. The purpose of this function is to provide a convenient way to print text to the console in other parts of the Oxyg3nium project.
 

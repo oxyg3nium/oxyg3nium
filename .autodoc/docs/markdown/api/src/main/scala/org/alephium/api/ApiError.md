@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/ApiError.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/ApiError.scala)
 
 This file contains code for handling API errors in the Oxyg3nium project. The code defines a sealed trait called `ApiError` that represents an error that can occur in the API. The trait has a single method `detail` that returns a string describing the error. The file also defines several case classes that extend the `ApiError` trait and represent specific types of errors that can occur in the API. These case classes include `Unauthorized`, `BadRequest`, `ServiceUnavailable`, `InternalServerError`, and `NotFound`.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/MutBalanceState.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/MutBalanceState.scala)
 
 The code defines a case class called `MutBalanceState` that represents the state of a frame in the Oxyg3nium virtual machine (VM). The VM is used to execute smart contracts on the Oxyg3nium blockchain. The `MutBalanceState` class has two fields: `remaining` and `approved`, both of type `MutBalances`. `MutBalances` is a class that represents a set of balances for a given lockup script (a script that locks up funds for a certain period of time). 
 

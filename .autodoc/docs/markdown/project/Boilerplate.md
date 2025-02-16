@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/project/Boilerplate.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/project/Boilerplate.scala)
 
 This file contains the `Boilerplate` object which provides functionality for generating boilerplate code for the Oxyg3nium project. The code is licensed under the GNU Lesser General Public License. 
 

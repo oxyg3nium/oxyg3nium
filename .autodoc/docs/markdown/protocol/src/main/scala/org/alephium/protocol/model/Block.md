@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/Block.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/Block.scala)
 
 This file contains the implementation of the `Block` class and its companion object, which are part of the Oxyg3nium project. The `Block` class represents a block in the Oxyg3nium blockchain, which consists of a header and a vector of transactions. The `Block` class is a case class, which means that it is immutable and has a number of useful methods generated automatically, such as `equals`, `hashCode`, and `toString`.
 

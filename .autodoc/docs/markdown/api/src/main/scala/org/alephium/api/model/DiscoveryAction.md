@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/DiscoveryAction.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/DiscoveryAction.scala)
 
 This code defines a sealed trait called `DiscoveryAction` and two case classes that extend it: `Unreachable` and `Reachable`. The purpose of this code is to provide a way to represent actions related to discovering peers in a network. 
 

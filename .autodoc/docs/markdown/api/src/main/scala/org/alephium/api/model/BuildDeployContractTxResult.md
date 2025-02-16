@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BuildDeployContractTxResult.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BuildDeployContractTxResult.scala)
 
 This file contains the implementation of the `BuildDeployContractTxResult` class, which is used to represent the result of building and deploying a smart contract transaction on the Oxyg3nium blockchain. 
 

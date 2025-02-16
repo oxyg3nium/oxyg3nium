@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/resources/network_mainnet.conf.tmpl)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/resources/network_mainnet.conf.tmpl)
 
 The code above is a configuration file for the Oxyg3nium project. It defines various parameters related to the broker, consensus, network, and discovery components of the project.
 
@@ -12,7 +12,7 @@ The `discovery` section defines a list of bootstrap nodes that are used to help 
 
 Overall, this configuration file is an important part of the Oxyg3nium project as it defines many of the key parameters that govern the behavior of the network. Developers working on the project can modify these parameters to experiment with different network configurations and optimize the performance of the network. For example, they may adjust the block target time to balance the tradeoff between transaction throughput and block confirmation time.
 ## Questions: 
- 1. What is the purpose of the `broker` section in the `alephium` code?
+ 1. What is the purpose of the `broker` section in the `oxyg3nium` code?
 - The `broker` section specifies the broker configuration for the Oxyg3nium network, including the broker ID, number of brokers, and number of groups.
 
 2. What is the significance of the `no-pre-mine-proof` array in the `network` section?

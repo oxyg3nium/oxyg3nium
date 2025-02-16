@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/gasestimation)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/gasestimation)
 
 The code in the `gasestimation` folder is responsible for estimating the amount of gas required to execute various types of scripts in the Oxyg3nium blockchain. Gas is a measure of computational effort required to execute a script and is used to prevent spamming and denial-of-service attacks on the network.
 

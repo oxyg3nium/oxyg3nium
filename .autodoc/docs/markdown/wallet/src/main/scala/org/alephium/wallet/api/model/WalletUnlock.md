@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/WalletUnlock.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/WalletUnlock.scala)
 
 The code above defines a case class called `WalletUnlock` that is used in the Oxyg3nium wallet API. The purpose of this class is to represent the information needed to unlock a wallet, specifically a password and an optional mnemonic passphrase. 
 

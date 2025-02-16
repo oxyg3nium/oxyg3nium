@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/config/BrokerConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/config/BrokerConfig.scala)
 
-The code defines a trait called `BrokerConfig` which extends other traits and classes from the `alephium` project. The purpose of this trait is to provide configuration information for brokers in the Oxyg3nium network. 
+The code defines a trait called `BrokerConfig` which extends other traits and classes from the `oxyg3nium` project. The purpose of this trait is to provide configuration information for brokers in the Oxyg3nium network. 
 
 The `BrokerConfig` trait defines several methods and variables that are used to calculate and store information about the broker's configuration. For example, the `brokerId` method returns the ID of the current broker, while the `groupNumPerBroker` method calculates the number of groups per broker. The `groupRange` method calculates the range of group IDs that belong to the current broker. 
 

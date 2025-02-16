@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/ralph/src/main)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/ralph/src/main)
 
 The code in the `ralph` folder plays a crucial role in the Oxyg3nium project, providing the necessary components for compiling, analyzing, and executing Oxyg3nium code. The various components work together to ensure that the Oxyg3nium programming language is robust, efficient, and easy to use for developers.
 

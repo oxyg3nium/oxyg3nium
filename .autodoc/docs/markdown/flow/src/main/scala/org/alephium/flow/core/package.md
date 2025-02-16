@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/package.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/package.scala)
 
 This code defines two constants in the `org.oxyg3nium.flow.core` package object. The first constant, `maxForkDepth`, is an integer value set to 100. The second constant, `maxSyncBlocksPerChain`, is also an integer value set to 50. 
 

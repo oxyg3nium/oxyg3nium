@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Forest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Forest.scala)
 
 This file contains the implementation of a data structure called Forest, which is used to represent a collection of trees. The Forest is implemented as a collection of root nodes, each of which represents the root of a tree. Each node in the tree has a key and a value, where the key is used to identify the node and the value is the data associated with the node.
 

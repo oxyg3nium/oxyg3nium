@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/mining/Miner.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/mining/Miner.scala)
 
 This file contains the implementation of the Miner class and its associated Command object. The Miner class is an Akka actor that handles mining tasks and maintains the state of the mining process. The Command object defines the messages that can be sent to the Miner actor.
 

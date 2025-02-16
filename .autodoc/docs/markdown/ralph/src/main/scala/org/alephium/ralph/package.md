@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralph/src/main/scala/org/alephium/ralph/package.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralph/src/main/scala/org/oxyg3nium/ralph/package.scala)
 
 The code provided is a simple Scala file that defines a single function called `quote`. This function takes a generic type `T` as input and returns a string that wraps the input in double quotes. The purpose of this function is to provide a convenient way to quote any value that needs to be represented as a string in the Oxyg3nium project.
 

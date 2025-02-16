@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/rpc/src)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/rpc/src)
 
 The `.autodoc/docs/json/rpc/src` folder contains the implementation of the JSON-RPC 2.0 specification for the Oxyg3nium project. JSON-RPC is a remote procedure call (RPC) protocol encoded in JSON, providing a standardized way for clients to interact with the Oxyg3nium node.
 

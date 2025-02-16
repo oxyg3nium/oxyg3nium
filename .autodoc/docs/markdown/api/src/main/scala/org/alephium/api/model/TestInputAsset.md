@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/TestInputAsset.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/TestInputAsset.scala)
 
 The code defines a case class called `TestInputAsset` which represents an input asset for a transaction in the Oxyg3nium project. The `TestInputAsset` contains an `Address.Asset` and an `AssetState`. The `Address.Asset` represents the address of the asset and the `AssetState` represents the state of the asset.
 

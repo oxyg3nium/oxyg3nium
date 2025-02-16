@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/docker/grafana/provisioning/datasources/datasource.yml)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/docker/grafana/provisioning/datasources/datasource.yml)
 
 This code is a configuration file for the Oxyg3nium project that specifies the version of the API and provides a list of datasources to be deleted from the database, as well as a list of datasources to be inserted or updated depending on what is available in the database. 
 
@@ -14,7 +14,7 @@ Example usage:
 
 ```
 # Load the configuration file
-config = load_config_file('alephium.yml')
+config = load_config_file('oxyg3nium.yml')
 
 # Get the list of datasources to delete
 delete_list = config['deleteDatasources']
@@ -32,7 +32,7 @@ for datasource in datasources:
 ## Questions: 
  1. What is the purpose of this code file?
     
-    This code file is a configuration file for a project called alephium. It specifies a list of datasources to be deleted and a list of datasources to be inserted or updated in the database.
+    This code file is a configuration file for a project called oxyg3nium. It specifies a list of datasources to be deleted and a list of datasources to be inserted or updated in the database.
 
 2. What is the format of the datasources list?
     

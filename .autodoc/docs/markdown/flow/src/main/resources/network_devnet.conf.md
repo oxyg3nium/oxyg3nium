@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/resources/network_devnet.conf.tmpl)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/resources/network_devnet.conf.tmpl)
 
 The code above defines various parameters for the Oxyg3nium blockchain network. It is used to set up the initial configuration of the network, including consensus rules, network parameters, and the genesis block.
 
@@ -10,11 +10,11 @@ The `genesis` section defines the initial allocation of tokens for the network. 
 
 Overall, this code is used to set up the initial configuration of the Oxyg3nium blockchain network. It defines various parameters that are used to govern the behavior of the network, including consensus rules, network parameters, and the initial allocation of tokens. This code is essential for launching a new blockchain network and ensuring that it operates correctly.
 ## Questions: 
- 1. What is the block target time for the alephium consensus?
-   - The block target time for the alephium consensus is 64 seconds.
+ 1. What is the block target time for the oxyg3nium consensus?
+   - The block target time for the oxyg3nium consensus is 64 seconds.
    
 2. What is the purpose of the `no-pre-mine-proof` array in the network section?
-   - The `no-pre-mine-proof` array in the network section contains block hashes from BTC and ETH to prove that there was no pre-mine of alephium tokens.
+   - The `no-pre-mine-proof` array in the network section contains block hashes from BTC and ETH to prove that there was no pre-mine of oxyg3nium tokens.
    
 3. What are the allocations in the genesis section and how are they locked?
-   - The allocations in the genesis section are addresses that will receive a certain amount of alephium tokens, and they are not locked.
+   - The allocations in the genesis section are addresses that will receive a certain amount of oxyg3nium tokens, and they are not locked.

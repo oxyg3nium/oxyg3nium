@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/project/scalastyle-config.xml)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/project/scalastyle-config.xml)
 
 This code is a configuration file for the Scalastyle tool, which is a code analysis tool for Scala code. The purpose of this file is to define a set of rules that the tool will use to analyze the codebase and report any violations of these rules. 
 

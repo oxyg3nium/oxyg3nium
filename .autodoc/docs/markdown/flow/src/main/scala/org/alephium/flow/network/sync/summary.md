@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/sync)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network/sync)
 
 The code in this folder is responsible for managing the synchronization of blocks and broker status in the Oxyg3nium network. It provides functionality for fetching blocks, tracking download progress, and maintaining the state of items that need to be fetched from the network.
 

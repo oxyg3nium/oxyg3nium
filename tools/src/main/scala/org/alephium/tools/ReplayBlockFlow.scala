@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -76,7 +76,7 @@ class ReplayBlockFlow(
 object ReplayBlockFlow extends App with StrictLogging {
   private val sourcePath = Platform.getRootPath()
   private val targetPath = {
-    val path = AFiles.homeDir.resolve(".alephium-replay")
+    val path = AFiles.homeDir.resolve(".oxyg3nium-replay")
     path.toFile.mkdir()
     Files.copy(
       sourcePath.resolve("user.conf"),

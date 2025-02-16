@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/serde/src/main/scala/org/alephium/serde/Serializer.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/serde/src/main/scala/org/oxyg3nium/serde/Serializer.scala)
 
 This file contains code related to serialization in the Oxyg3nium project. Serialization is the process of converting an object into a format that can be easily stored or transmitted over a network. The code defines a trait called `Serializer` which is a generic interface for serializing objects of any type `T`. The `serialize` method takes an object of type `T` and returns a `ByteString` which is a data structure used to represent a sequence of bytes.
 

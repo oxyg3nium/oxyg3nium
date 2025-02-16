@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/ContractUtils.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/ContractUtils.scala)
 
 This code defines a trait called `ContractUtils` which provides utility functions related to contracts in the Oxyg3nium project. The trait is dependent on another trait called `FlowUtils`. 
 

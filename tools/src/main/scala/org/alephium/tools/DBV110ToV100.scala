@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -27,7 +27,7 @@ import org.oxyg3nium.serde.serialize
 import org.oxyg3nium.util.{Bytes, Files}
 
 object DBV110ToV100 extends App {
-  private val rootPath      = Files.homeDir.resolve(".alephium/mainnet")
+  private val rootPath      = Files.homeDir.resolve(".oxyg3nium/mainnet")
   private val brokerCfBytes = ColumnFamily.Broker.name.getBytes(StandardCharsets.UTF_8)
   private val allCfBytes    = ColumnFamily.All.name.getBytes(StandardCharsets.UTF_8)
 

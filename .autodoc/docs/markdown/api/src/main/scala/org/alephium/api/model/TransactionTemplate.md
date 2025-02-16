@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/TransactionTemplate.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/TransactionTemplate.scala)
 
 This code defines a class called `TransactionTemplate` and an object with the same name. The `TransactionTemplate` class has three fields: `unsigned`, `inputSignatures`, and `scriptSignatures`. The `unsigned` field is an instance of the `UnsignedTx` class, while the other two fields are instances of the `AVector[ByteString]` class. The `TransactionTemplate` class has a method called `toProtocol` that takes an implicit `NetworkConfig` parameter and returns an `Either[String, protocol.TransactionTemplate]`. The `fromProtocol` method in the `TransactionTemplate` object takes a `protocol.TransactionTemplate` parameter and returns an instance of the `TransactionTemplate` class.
 

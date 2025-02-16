@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/Sign.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/Sign.scala)
 
 This file contains two case classes, `Sign` and `SignResult`, which are used in the `org.oxyg3nium.wallet.api` package of the Oxyg3nium project. 
 

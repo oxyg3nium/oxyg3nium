@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/mining/CpuMiner.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/mining/CpuMiner.scala)
 
 The `CpuMiner` class is a component of the Oxyg3nium project that is responsible for mining new blocks on the blockchain. It is designed to work with a specific configuration of brokers and groups, and uses templates to generate new blocks. 
 

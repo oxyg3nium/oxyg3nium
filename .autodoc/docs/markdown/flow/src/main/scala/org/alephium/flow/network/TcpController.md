@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/TcpController.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/TcpController.scala)
 
 The `TcpController` class is part of the Oxyg3nium project and is responsible for managing TCP connections between nodes in the network. It is an Akka actor that listens for incoming connections and manages outbound connections to other nodes. 
 
@@ -19,7 +19,7 @@ When the `TcpController` receives a `MisbehaviorManager.PeerBanned` event, it re
 Overall, the `TcpController` class is an important part of the Oxyg3nium project's networking infrastructure. It manages TCP connections between nodes in the network and ensures that connections are properly confirmed and denied.
 ## Questions: 
  1. What is the purpose of this code?
-- This code is a part of the alephium project and it is responsible for managing TCP connections between nodes in the network.
+- This code is a part of the oxyg3nium project and it is responsible for managing TCP connections between nodes in the network.
 
 2. What external libraries or dependencies does this code use?
 - This code uses Akka and Scala standard libraries.

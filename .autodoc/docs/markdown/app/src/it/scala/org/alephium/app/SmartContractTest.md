@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/SmartContractTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/SmartContractTest.scala)
 
 This code is part of the Oxyg3nium project and contains a test suite for smart contracts, specifically for a token swap contract. The test suite is implemented as a class `SmartContractTest` that extends `Oxyg3niumActorSpec`. The test suite uses a `SwapContractsFixture` to set up the environment for testing, including starting a clique of nodes, creating and deploying contracts, and executing scripts.
 

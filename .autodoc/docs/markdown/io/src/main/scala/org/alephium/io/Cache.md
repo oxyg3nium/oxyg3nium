@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/Cache.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/io/src/main/scala/org/oxyg3nium/io/Cache.scala)
 
 This file contains code for a cache implementation used in the Oxyg3nium project. The cache is defined as a sealed trait, which means that it can only be extended within the same file. The cache has three possible states: Cached, Modified, and Removed. 
 

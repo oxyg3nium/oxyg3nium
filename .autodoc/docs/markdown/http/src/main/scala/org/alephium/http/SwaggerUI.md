@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/http/src/main/scala/org/alephium/http/SwaggerUI.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/http/src/main/scala/org/oxyg3nium/http/SwaggerUI.scala)
 
 The `SwaggerUI` object is a Scala class that provides a set of server endpoints for serving a Swagger UI. Swagger UI is a tool that allows users to interact with a RESTful API by providing a web-based interface for exploring the API's endpoints and parameters. 
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/io/ChainStateStorage.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/io/ChainStateStorage.scala)
 
 This file contains a trait called `ChainStateStorage` which defines three methods for updating, loading, and clearing the state of a `BlockHashChain`. 
 

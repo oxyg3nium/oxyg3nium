@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Bytes.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Bytes.scala)
 
 The `Bytes` object in the `org.oxyg3nium.util` package provides utility methods for working with bytes and byte strings. 
 

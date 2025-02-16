@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/setting/Configs.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/setting/Configs.scala)
 
 The `Configs` object provides utility methods for loading and parsing configuration files for the Oxyg3nium project. The object is responsible for loading configuration files for the system, network, and user. It also provides methods for validating and parsing the configuration files.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/GetBlock.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/GetBlock.scala)
 
 This code defines a case class called `GetBlock` which is used in the Oxyg3nium project's API model. The `GetBlock` case class takes in a single parameter, `hash`, which is of type `BlockHash`. 
 
@@ -16,5 +16,5 @@ Overall, this code is a small but important piece of the Oxyg3nium project's API
 2. What is the significance of the `BlockHash` import statement?
    - The `BlockHash` import statement indicates that the `GetBlock` case class uses the `BlockHash` type, which is likely defined in another file or package.
 
-3. What is the `alephium` project and what is its license?
-   - The `alephium` project is a library that is released under the GNU Lesser General Public License, version 3 or later.
+3. What is the `oxyg3nium` project and what is its license?
+   - The `oxyg3nium` project is a library that is released under the GNU Lesser General Public License, version 3 or later.

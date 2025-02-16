@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/OXM.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/OXM.scala)
 
 The `OXM` object in the `org.oxyg3nium.protocol` package contains constants and utility functions related to the Oxyg3nium cryptocurrency. 
 

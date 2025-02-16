@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -78,7 +78,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   trait TransferFromOneToManyGroupsFixture extends FlowFixtureWithApi with GetTxFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     implicit val serverUtils: ServerUtils = new ServerUtils
 
@@ -220,7 +220,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
   it should "check tx status for intra group txs" in new Fixture with GetTxFixture {
 
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     implicit val serverUtils: ServerUtils = new ServerUtils
 
@@ -279,7 +279,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   it should "check tx status for inter group txs" in new FlowFixtureWithApi with GetTxFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     implicit val serverUtils: ServerUtils = new ServerUtils
 
@@ -478,7 +478,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   it should "support Schnorr address" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val chainIndex                        = ChainIndex.unsafe(0, 0)
     val (genesisPriKey, genesisPubKey, _) = genesisKeys(0)
@@ -529,7 +529,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   it should "check sweep address tx status for intra group txs" in new Fixture with GetTxFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     implicit val serverUtils: ServerUtils = new ServerUtils
 
@@ -605,7 +605,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
   it should "check sweep all tx status for inter group txs" in new FlowFixtureWithApi
     with GetTxFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     implicit val serverUtils: ServerUtils = new ServerUtils
 
@@ -702,7 +702,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   it should "sweep only small UTXOs" in new FlowFixtureWithApi with GetTxFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     implicit val serverUtils: ServerUtils = new ServerUtils
 
@@ -966,7 +966,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     ServerUtils.validateUnsignedTransaction(tooMuchGasFee) is Left(
       ApiError.BadRequest(
-        "Gas fee exceeds the limit: maximum allowed is 1.0 OXM, but got 20,000.0 OXM. Please lower the gas price or adjust the alephium.api.gas-fee-cap in your user.conf file."
+        "Gas fee exceeds the limit: maximum allowed is 1.0 OXM, but got 20,000.0 OXM. Please lower the gas price or adjust the oxyg3nium.api.gas-fee-cap in your user.conf file."
       )
     )
 
@@ -1257,7 +1257,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
   it should "return mempool statuses" in new Fixture with Generators {
 
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     implicit val serverUtils: ServerUtils = new ServerUtils()
 
@@ -1547,9 +1547,9 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
   trait ContractFixture extends Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.broker.groups", 4),
-      ("alephium.broker.broker-num", 1),
-      ("alephium.node.indexes.tx-output-ref-index", "true")
+      ("oxyg3nium.broker.groups", 4),
+      ("oxyg3nium.broker.broker-num", 1),
+      ("oxyg3nium.node.indexes.tx-output-ref-index", "true")
     )
 
     val chainIndex                        = ChainIndex.unsafe(0, 0)
@@ -3282,7 +3282,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   trait ScriptTxFixture extends Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     implicit val serverUtils: ServerUtils = new ServerUtils
 
@@ -3370,7 +3370,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   trait DustAmountFixture extends ExecuteScriptFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
     implicit val serverUtils: ServerUtils       = new ServerUtils
 
     val chainIndex      = ChainIndex.unsafe(0, 0)
@@ -4975,7 +4975,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
   it should "return correct transaction output for coinbase transactions" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.node.indexes.tx-output-ref-index", "true")
+      ("oxyg3nium.node.indexes.tx-output-ref-index", "true")
     )
 
     val chainIndex                      = ChainIndex.unsafe(0, 0)
@@ -5111,8 +5111,8 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     def enableTxOutputRefIndex: Boolean = true
 
     override val configValues: Map[String, Any] = Map(
-      ("alephium.node.indexes.tx-output-ref-index", s"$enableTxOutputRefIndex"),
-      ("alephium.node.indexes.subcontract-index", "false")
+      ("oxyg3nium.node.indexes.tx-output-ref-index", s"$enableTxOutputRefIndex"),
+      ("oxyg3nium.node.indexes.subcontract-index", "false")
     )
 
     val serverUtils               = new ServerUtils()
@@ -5140,7 +5140,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       .leftValue
       .detail
       .contains(
-        "Please set `alephium.node.indexes.tx-output-ref-index = true` to query transaction id from transaction output reference"
+        "Please set `oxyg3nium.node.indexes.tx-output-ref-index = true` to query transaction id from transaction output reference"
       ) is true
   }
 
@@ -5165,7 +5165,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       .leftValue
       .detail
       .contains(
-        "Please set `alephium.node.indexes.tx-output-ref-index = true` to query transaction id from transaction output reference"
+        "Please set `oxyg3nium.node.indexes.tx-output-ref-index = true` to query transaction id from transaction output reference"
       ) is true
   }
 
@@ -5177,13 +5177,13 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       .leftValue
       .detail
       .contains(
-        "Please set `alephium.node.indexes.tx-output-ref-index = true` to query transaction id from transaction output reference"
+        "Please set `oxyg3nium.node.indexes.tx-output-ref-index = true` to query transaction id from transaction output reference"
       ) is true
   }
 
   it should "get rich transaction that spends asset output" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.node.indexes.tx-output-ref-index", "true")
+      ("oxyg3nium.node.indexes.tx-output-ref-index", "true")
     )
 
     val serverUtils               = new ServerUtils()
@@ -5319,8 +5319,8 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     def subcontractIndexEnabled: Boolean = true
 
     override val configValues: Map[String, Any] = Map(
-      ("alephium.node.indexes.tx-output-ref-index", "false"),
-      ("alephium.node.indexes.subcontract-index", s"$subcontractIndexEnabled")
+      ("oxyg3nium.node.indexes.tx-output-ref-index", "false"),
+      ("oxyg3nium.node.indexes.subcontract-index", s"$subcontractIndexEnabled")
     )
 
     val serverUtils           = new ServerUtils()
@@ -5434,7 +5434,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     def verifyError[T](result: Try[T]) = {
       result.leftValue.detail.contains(
-        "Please set `alephium.node.indexes.subcontract-index = true` to query parent contract or subcontracts"
+        "Please set `oxyg3nium.node.indexes.subcontract-index = true` to query parent contract or subcontracts"
       ) is true
     }
 

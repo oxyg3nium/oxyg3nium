@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/AVector.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/AVector.scala)
 
 The `AVector` class in this code is an immutable vector optimized for appending elements. It is not synchronized and is designed to be used in the Oxyg3nium project. The class provides various methods for manipulating and querying the vector, such as adding elements, slicing, filtering, mapping, folding, and more.
 

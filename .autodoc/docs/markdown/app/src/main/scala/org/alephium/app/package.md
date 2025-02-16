@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/main/scala/org/alephium/app/package.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/main/scala/org/oxyg3nium/app/package.scala)
 
 This file contains a package object for the Oxyg3nium project, which defines two utility functions and a type alias. The `FutureTry` type alias is defined as a `Future` of a `Try`, which is a common pattern in Scala for handling asynchronous operations that may fail. 
 

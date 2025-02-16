@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/PeerId.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/PeerId.scala)
 
 This file contains the definition of a case class called `PeerId` and an object with the same name that provides a `Serde` instance for `PeerId`. 
 

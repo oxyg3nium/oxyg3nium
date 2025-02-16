@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/DecodeFailureHandler.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/DecodeFailureHandler.scala)
 
 This file contains code related to handling decode failures in the Oxyg3nium API. The `DecodeFailureHandler` trait defines a custom failure handler for decoding errors that may occur when processing API requests. 
 

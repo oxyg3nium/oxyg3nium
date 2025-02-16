@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/FlowUtils.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/FlowUtils.scala)
 
 The `FlowUtils` code is part of the Oxyg3nium project and provides utility functions for managing the flow of transactions and blocks in the blockchain. It is responsible for preparing and validating block templates, collecting and filtering transactions, and updating the memory pool.
 

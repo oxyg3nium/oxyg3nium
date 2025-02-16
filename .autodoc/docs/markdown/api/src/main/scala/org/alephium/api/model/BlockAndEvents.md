@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BlockAndEvents.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BlockAndEvents.scala)
 
 This file contains a case class called `BlockAndEvents` which is a part of the `org.oxyg3nium.api.model` package. The purpose of this class is to represent a block and its associated contract events. 
 

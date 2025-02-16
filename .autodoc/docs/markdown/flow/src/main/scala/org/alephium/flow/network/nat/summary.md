@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/nat)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network/nat)
 
 The `Upnp.scala` module in the Oxyg3nium project provides functionality for managing UPnP (Universal Plug and Play) port mappings, which enables devices on a network to discover and communicate with each other. This module is particularly useful for allowing external clients to connect to the Oxyg3nium network without requiring manual port forwarding on the router.
 

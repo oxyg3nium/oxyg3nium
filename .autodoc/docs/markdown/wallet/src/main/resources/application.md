@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/resources/application.conf)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/resources/application.conf)
 
 The code above defines the configuration settings for the Oxyg3nium wallet. The wallet is a key component of the Oxyg3nium project, which is a decentralized blockchain platform. The wallet allows users to store, send, and receive Oxyg3nium coins.
 

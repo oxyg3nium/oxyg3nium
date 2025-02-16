@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/config/ConsensusConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/config/ConsensusConfig.scala)
 
 The code provided is a trait called `ConsensusConfig` that extends `EmissionConfig`. This trait defines several abstract methods that must be implemented by any class that extends it. The purpose of this trait is to provide configuration parameters related to the consensus mechanism of the Oxyg3nium blockchain.
 

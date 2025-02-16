@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -146,15 +146,15 @@ class ApiConfigSpec extends Oxyg3niumSpec {
     }
 
     lazy val configValues: Map[String, Any] = Map(
-      ("alephium.api.network-interface", interface),
-      ("alephium.api.blockflow-fetch-max-age", "30 minutes"),
-      ("alephium.api.ask-timeout", "5 seconds"),
-      ("alephium.api.api-key-enabled", apiKeyEnabled),
-      ("alephium.api.api-key", apiKeyValue),
-      ("alephium.api.gas-fee-cap", "1000000000000000000"),
-      ("alephium.api.default-utxos-limit", 512),
-      ("alephium.api.max-form-buffered-bytes", 128 * 1024),
-      ("alephium.api.enable-http-metrics", enableHttpMetrics.getOrElse(null))
+      ("oxyg3nium.api.network-interface", interface),
+      ("oxyg3nium.api.blockflow-fetch-max-age", "30 minutes"),
+      ("oxyg3nium.api.ask-timeout", "5 seconds"),
+      ("oxyg3nium.api.api-key-enabled", apiKeyEnabled),
+      ("oxyg3nium.api.api-key", apiKeyValue),
+      ("oxyg3nium.api.gas-fee-cap", "1000000000000000000"),
+      ("oxyg3nium.api.default-utxos-limit", 512),
+      ("oxyg3nium.api.max-form-buffered-bytes", 128 * 1024),
+      ("oxyg3nium.api.enable-http-metrics", enableHttpMetrics.getOrElse(null))
     )
 
     lazy val config = ConfigFactory

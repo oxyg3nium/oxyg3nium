@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/ConflictedBlocks.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/ConflictedBlocks.scala)
 
 This code defines a trait called `ConflictedBlocks` that provides functionality for handling conflicts between blocks in the Oxyg3nium project. The trait defines several methods for checking whether a block or transaction is conflicted, as well as filtering out transactions that conflict with a given set of blocks.
 

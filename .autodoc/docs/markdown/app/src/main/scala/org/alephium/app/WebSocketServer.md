@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/main/scala/org/alephium/app/WebSocketServer.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/main/scala/org/oxyg3nium/app/WebSocketServer.scala)
 
 The `WebSocketServer` class is responsible for creating and managing a WebSocket server that listens for incoming connections on a specified port. The server is used to stream events related to the Oxyg3nium blockchain to clients that connect to it. 
 

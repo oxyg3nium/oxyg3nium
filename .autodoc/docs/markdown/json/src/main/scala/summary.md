@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/json/src/main/scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/json/src/main/scala)
 
 The `Json.scala` file in the `org.oxyg3nium.json` package provides a set of utility functions for working with JSON data in the Oxyg3nium project. It is implemented using the `upickle` library, a lightweight JSON serialization library for Scala.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/BlockHeader.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/BlockHeader.scala)
 
 This code defines the `BlockHeader` class and its companion object, which are used to represent the header of a block in the Oxyg3nium blockchain. The `BlockHeader` contains information about the block, such as its version, timestamp, target, and dependencies. The `BlockHeader` is used to calculate the hash of the block, which is used to identify the block and link it to its parent block.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/rpc/src/main/scala/org/alephium/rpc/model/JsonRPC.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/rpc/src/main/scala/org/oxyg3nium/rpc/model/JsonRPC.scala)
 
 The `JsonRPC` object in the `org.oxyg3nium.rpc.model` package provides an implementation of the JSON-RPC 2.0 specification. It defines several case classes and traits that represent JSON-RPC requests, notifications, and responses. 
 

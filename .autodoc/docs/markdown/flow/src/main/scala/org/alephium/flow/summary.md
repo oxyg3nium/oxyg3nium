@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow)
 
 The code in the `Utils.scala` file provides utility functions for displaying various types of data in a human-readable format, which can be used across the Oxyg3nium project. These functions are particularly useful for debugging and logging purposes, as they help developers visualize the data structures used in the project.
 

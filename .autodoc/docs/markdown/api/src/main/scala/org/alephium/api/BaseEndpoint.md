@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/BaseEndpoint.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/BaseEndpoint.scala)
 
 This code defines a trait called `BaseEndpoint` that provides a set of common functionality for building HTTP endpoints in the Oxyg3nium project. The trait defines several types and methods that can be used to create endpoints with or without an API key. 
 
@@ -28,8 +28,8 @@ trait MyEndpoint extends BaseEndpoint {
 }
 ```
 ## Questions: 
- 1. What is the purpose of the `alephium` project?
-- The purpose of the `alephium` project is not clear from this code, as it only contains licensing information and imports.
+ 1. What is the purpose of the `oxyg3nium` project?
+- The purpose of the `oxyg3nium` project is not clear from this code, as it only contains licensing information and imports.
 
 2. What is the role of the `BaseEndpoint` trait?
 - The `BaseEndpoint` trait defines a base endpoint for the API, with security checks for an API key and error handling for common HTTP status codes.

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/event/CachedLogPageCounter.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/event/CachedLogPageCounter.scala)
 
 This code defines a class called `CachedLogPageCounter` and an object called `CachedLogPageCounter`. The class is used to count the number of log pages in a key-value storage system. The `CachedLogPageCounter` class takes two parameters: a `counter` of type `CachedKVStorage[K, Int]` and an `initialCounts` of type `mutable.Map[K, Int]`. The `counter` parameter is used to store the count of log pages for each key, while the `initialCounts` parameter is used to store the initial count of log pages for each key.
 
@@ -27,8 +27,8 @@ val count = counter.staging().increment("key")
 counter.persist()
 ```
 ## Questions: 
- 1. What is the purpose of this code and how does it fit into the overall alephium project?
-- This code defines a class called `CachedLogPageCounter` that implements a trait called `MutableLog.LogPageCounter`. It is located in the `org.oxyg3nium.protocol.vm.event` package. It is not clear how it fits into the overall alephium project without more context.
+ 1. What is the purpose of this code and how does it fit into the overall oxyg3nium project?
+- This code defines a class called `CachedLogPageCounter` that implements a trait called `MutableLog.LogPageCounter`. It is located in the `org.oxyg3nium.protocol.vm.event` package. It is not clear how it fits into the overall oxyg3nium project without more context.
 
 2. What is the `CachedKVStorage` class and how is it used in this code?
 - The `CachedKVStorage` class is used to store key-value pairs in a cache. In this code, an instance of `CachedKVStorage` is passed to the `CachedLogPageCounter` constructor as a parameter.

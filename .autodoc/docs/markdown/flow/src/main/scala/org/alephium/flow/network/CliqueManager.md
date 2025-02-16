@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/CliqueManager.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/CliqueManager.scala)
 
 This code defines the `CliqueManager` class, which is responsible for managing the communication between different cliques in the Oxyg3nium network. A clique is a group of nodes that are connected to each other and share the same blockchain. The `CliqueManager` class is an Akka actor that coordinates the creation of intra-clique and inter-clique managers.
 

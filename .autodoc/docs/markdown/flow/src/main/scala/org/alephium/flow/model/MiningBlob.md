@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/model/MiningBlob.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/model/MiningBlob.scala)
 
 The `MiningBlob` class and its companion object are part of the Oxyg3nium project and are used to generate mining blobs for the Oxyg3nium blockchain. A mining blob is a block header that miners use to mine new blocks. It contains the block dependencies, the state hash, the transaction hash, the target, the timestamp, and the nonce. 
 

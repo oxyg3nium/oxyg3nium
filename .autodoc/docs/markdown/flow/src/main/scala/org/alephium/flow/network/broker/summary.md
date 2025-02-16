@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/broker)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network/broker)
 
-The `.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/broker` folder contains code related to managing network connections, handling misbehavior, and implementing backoff strategies in the Oxyg3nium project. The code in this folder is essential for maintaining the stability and security of the Oxyg3nium network.
+The `.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network/broker` folder contains code related to managing network connections, handling misbehavior, and implementing backoff strategies in the Oxyg3nium project. The code in this folder is essential for maintaining the stability and security of the Oxyg3nium network.
 
 The `BackoffStrategy.scala` file provides a flexible and configurable way to implement backoff strategies for different network settings. It defines the `BackoffStrategy` trait, `DefaultBackoffStrategy` class, and `ResetBackoffStrategy` class. These classes can be used to handle network errors by retrying requests with increasing delays between them. For example, the `DefaultBackoffStrategy` can be used to retry a network request with increasing delays:
 

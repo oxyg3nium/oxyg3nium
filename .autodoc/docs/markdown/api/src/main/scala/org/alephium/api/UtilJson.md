@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/UtilJson.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/UtilJson.scala)
 
 The `UtilJson` object provides various implicit conversions and definitions for JSON serialization and deserialization of certain types used in the Oxyg3nium project. 
 

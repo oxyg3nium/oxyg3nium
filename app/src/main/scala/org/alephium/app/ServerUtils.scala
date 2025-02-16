@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -2312,7 +2312,7 @@ object ServerUtils {
       Left(
         ApiError.BadRequest(
           s"Gas fee exceeds the limit: maximum allowed is $capAmount, but got $gasFeeAmount. " +
-            s"Please lower the gas price or adjust the alephium.api.gas-fee-cap in your user.conf file."
+            s"Please lower the gas price or adjust the oxyg3nium.api.gas-fee-cap in your user.conf file."
         )
       )
     }

@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -45,7 +45,7 @@ class BlocksExporterSpec extends Oxyg3niumSpec {
   trait Fixture extends FlowFixture {
 
     override val configValues: Map[String, Any] = Map(
-      ("alephium.broker.broker-num", 1)
+      ("oxyg3nium.broker.broker-num", 1)
     )
 
     val blocksExporter: BlocksExporter = new BlocksExporter(blockFlow, rootPath)

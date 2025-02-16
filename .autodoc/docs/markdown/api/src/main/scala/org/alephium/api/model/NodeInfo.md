@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/NodeInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/NodeInfo.scala)
 
 The code above defines a Scala case class called `NodeInfo` and a nested case class called `BuildInfo`. The `NodeInfo` case class has three fields: `buildInfo`, `upnp`, and `externalAddress`. The `buildInfo` field is of type `BuildInfo` and contains information about the build version and commit of the node. The `upnp` field is a boolean that indicates whether the node is using UPnP (Universal Plug and Play) to automatically configure its network settings. The `externalAddress` field is an optional `InetSocketAddress` that represents the external IP address and port of the node.
 
@@ -30,11 +30,11 @@ UPnP enabled: true
 External address: Some(/192.168.1.100:12345)
 ```
 ## Questions: 
- 1. What is the purpose of the `NodeInfo` class and how is it used in the `alephium` project?
-   - The `NodeInfo` class is a model that contains information about a node in the `alephium` network, including build information, UPnP status, and external address. It is likely used in various parts of the project that need to access or display node information.
+ 1. What is the purpose of the `NodeInfo` class and how is it used in the `oxyg3nium` project?
+   - The `NodeInfo` class is a model that contains information about a node in the `oxyg3nium` network, including build information, UPnP status, and external address. It is likely used in various parts of the project that need to access or display node information.
    
 2. What is the significance of the `BuildInfo` case class within the `NodeInfo` object?
-   - The `BuildInfo` case class contains information about the build version and commit of the `alephium` project. This information can be useful for debugging and tracking changes in the project over time.
+   - The `BuildInfo` case class contains information about the build version and commit of the `oxyg3nium` project. This information can be useful for debugging and tracking changes in the project over time.
    
-3. What is the licensing for the `alephium` project and how does it apply to this file?
-   - The `alephium` project is licensed under the GNU Lesser General Public License, version 3 or later. This file is also licensed under this license, which allows for free distribution and modification of the code, but with no warranty and certain restrictions on how it can be used.
+3. What is the licensing for the `oxyg3nium` project and how does it apply to this file?
+   - The `oxyg3nium` project is licensed under the GNU Lesser General Public License, version 3 or later. This file is also licensed under this license, which allows for free distribution and modification of the code, but with no warranty and certain restrictions on how it can be used.

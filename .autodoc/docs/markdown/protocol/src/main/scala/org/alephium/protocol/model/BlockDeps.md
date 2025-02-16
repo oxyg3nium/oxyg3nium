@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/BlockDeps.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/BlockDeps.scala)
 
 This code defines a case class called `BlockDeps` that represents the dependencies of a block in the Oxyg3nium blockchain. Each block has a set of dependencies that are other blocks that must be processed before the current block can be processed. 
 

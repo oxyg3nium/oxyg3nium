@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/ConnectionHandler.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/broker/ConnectionHandler.scala)
 
-This file contains the implementation of the ConnectionHandler trait and the CliqueConnectionHandler class, which are used in the alephium project to handle network connections between nodes. 
+This file contains the implementation of the ConnectionHandler trait and the CliqueConnectionHandler class, which are used in the oxyg3nium project to handle network connections between nodes. 
 
 The ConnectionHandler trait is an abstract class that defines the behavior of a network connection handler. It provides methods for sending and buffering messages, as well as for deserializing and handling incoming messages. It also defines a set of states that the handler can be in, such as reading, writing, and closed. The trait is extended by the CliqueConnectionHandler class, which provides an implementation of the tryDeserialize and handleNewMessage methods. 
 
@@ -8,7 +8,7 @@ The CliqueConnectionHandler class is a concrete implementation of the Connection
 
 The file also contains a set of case classes and objects that are used to send commands to the connection handler, such as CloseConnection and Send. Additionally, it defines two counters, uploadBytesTotal and downloadBytesTotal, which are used to keep track of the total number of bytes uploaded and downloaded by the connection handler. 
 
-Overall, this file provides the basic functionality needed to handle network connections between nodes in the alephium project. It defines a set of states that the connection handler can be in, provides methods for sending and buffering messages, and implements the logic for deserializing and handling incoming messages.
+Overall, this file provides the basic functionality needed to handle network connections between nodes in the oxyg3nium project. It defines a set of states that the connection handler can be in, provides methods for sending and buffering messages, and implements the logic for deserializing and handling incoming messages.
 ## Questions: 
  1. What is the purpose of this code file?
 - This code file contains the implementation of a connection handler for a network broker in the Oxyg3nium project.

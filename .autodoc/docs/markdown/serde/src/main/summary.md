@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/serde/src/main)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/serde/src/main)
 
 The `serde` package in the Oxyg3nium project provides a serialization and deserialization library that is essential for data exchange and storage. It includes predefined serializers and deserializers for common data types and utility methods for composing and transforming them.
 

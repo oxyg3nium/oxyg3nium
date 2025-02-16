@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -48,8 +48,8 @@ class BootUp extends StrictLogging {
   val rootPath: Path = Platform.getRootPath()
   val typesafeConfig: Config =
     Configs.parseConfigAndValidate(Env.currentEnv, rootPath, overwrite = true)
-  implicit val config: Oxyg3niumConfig = Oxyg3niumConfig.load(typesafeConfig, "alephium")
-  implicit val apiConfig: ApiConfig   = ApiConfig.load(typesafeConfig, "alephium.api")
+  implicit val config: Oxyg3niumConfig = Oxyg3niumConfig.load(typesafeConfig, "oxyg3nium")
+  implicit val apiConfig: ApiConfig   = ApiConfig.load(typesafeConfig, "oxyg3nium.api")
   val flowSystem: ActorSystem         = ActorSystem("flow", typesafeConfig)
 
   @SuppressWarnings(Array("org.wartremover.warts.GlobalExecutionContext"))
@@ -113,10 +113,10 @@ class BootUp extends StrictLogging {
   def logConfig(): Unit = {
     val renderOptions =
       ConfigRenderOptions.defaults().setOriginComments(false).setComments(true).setJson(false)
-    val alephiumConf = typesafeConfig.withOnlyPath("alephium").withoutPath("alephium.genesis")
+    val oxyg3niumConf = typesafeConfig.withOnlyPath("oxyg3nium").withoutPath("oxyg3nium.genesis")
     val akkaConf     = typesafeConfig.withOnlyPath("akka")
     logger.debug(
-      alephiumConf.withFallback(akkaConf).root().render(renderOptions)
+      oxyg3niumConf.withFallback(akkaConf).root().render(renderOptions)
     )
 
     val digests = config.genesisBlocks.map(showBlocks).mkString("-")
@@ -125,7 +125,7 @@ class BootUp extends StrictLogging {
 
   def collectBuildInfo(): Unit = {
     Gauge
-      .build("alephium_build_info", "Oxyg3nium full node build info")
+      .build("oxyg3nium_build_info", "Oxyg3nium full node build info")
       .labelNames("release_version", "commit_id")
       .register()
       .labels(BuildInfo.releaseVersion, BuildInfo.commitId)

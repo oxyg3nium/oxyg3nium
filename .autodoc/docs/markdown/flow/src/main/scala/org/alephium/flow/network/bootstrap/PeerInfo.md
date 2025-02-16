@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/bootstrap/PeerInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/bootstrap/PeerInfo.scala)
 
 This code defines a case class called `PeerInfo` and an object with the same name. The `PeerInfo` class represents information about a peer in the Oxyg3nium network, including its ID, external and internal addresses, and various ports. The `PeerInfo` object provides methods for serializing and deserializing `PeerInfo` instances, as well as validating them against a `GroupConfig` instance.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/Output.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/Output.scala)
 
 This code defines a set of classes and traits that represent transaction outputs in the Oxyg3nium blockchain. 
 

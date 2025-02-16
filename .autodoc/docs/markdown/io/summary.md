@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/io)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/io)
 
 In the `json/io` folder of the Oxyg3nium project, you will find several files that handle JSON serialization and deserialization. These files are essential for converting data between JSON format and Scala objects, which allows for seamless communication between different components of the project.
 

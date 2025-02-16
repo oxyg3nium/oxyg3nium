@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/Sweep.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/Sweep.scala)
 
 This code defines a case class called "Sweep" that is used in the Oxyg3nium wallet API. The purpose of this class is to represent a request to sweep all the funds from a given address to another address. 
 
@@ -28,4 +28,4 @@ In this example, a new "Sweep" object is created with the destination address "0
    - The optional parameters of the `Sweep` case class are `lockTime`, `gasAmount`, `gasPrice`, `utxosLimit`, and `targetBlockHash`. These parameters allow for customization of the transaction.
 
 3. What other classes are imported in this file?
-   - This file imports classes from the `org.oxyg3nium.api.model`, `org.oxyg3nium.protocol.model`, `org.oxyg3nium.protocol.vm`, and `org.oxyg3nium.util` packages. These classes are likely used elsewhere in the `alephium` project.
+   - This file imports classes from the `org.oxyg3nium.api.model`, `org.oxyg3nium.protocol.model`, `org.oxyg3nium.protocol.vm`, and `org.oxyg3nium.util` packages. These classes are likely used elsewhere in the `oxyg3nium` project.

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/event/StagingLog.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/event/StagingLog.scala)
 
 The code defines a class called `StagingLog` that is used to manage event logs in the Oxyg3nium project. The purpose of this class is to provide a mutable log that can be used to store and manage log events. 
 

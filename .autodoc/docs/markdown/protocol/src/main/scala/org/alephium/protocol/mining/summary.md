@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol/src/main/scala/org/alephium/protocol/mining)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/protocol/src/main/scala/org/oxyg3nium/protocol/mining)
 
 The `org.oxyg3nium.protocol.mining` package in the Oxyg3nium project contains essential classes and objects for managing the mining process and calculating mining rewards. The package consists of three main components: `Emission.scala`, `HashRate.scala`, and `PoW.scala`.
 

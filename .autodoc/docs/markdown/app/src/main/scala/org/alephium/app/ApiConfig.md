@@ -1,10 +1,10 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/main/scala/org/alephium/app/ApiConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/main/scala/org/oxyg3nium/app/ApiConfig.scala)
 
 This code defines the `ApiConfig` class and its companion object, which provides methods for loading an instance of `ApiConfig` from a configuration file. 
 
 `ApiConfig` is a case class that holds various configuration parameters for the Oxyg3nium API. These parameters include the network interface to bind to, the maximum age of a blockflow fetch, the timeout for an `ask` operation, an optional API key, the gas fee cap, and the default limit for unspent transaction outputs (UTXOs). 
 
-The companion object provides two methods for loading an instance of `ApiConfig` from a configuration file. The first method, `load`, takes a `Config` object and a path to the `ApiConfig` configuration within the `Config` object. The second method, `load`, takes only a `Config` object and assumes that the `ApiConfig` configuration is located at the root of the `Config` object under the key `alephium.api`. 
+The companion object provides two methods for loading an instance of `ApiConfig` from a configuration file. The first method, `load`, takes a `Config` object and a path to the `ApiConfig` configuration within the `Config` object. The second method, `load`, takes only a `Config` object and assumes that the `ApiConfig` configuration is located at the root of the `Config` object under the key `oxyg3nium.api`. 
 
 The `ApiConfig` object also defines two implicit `ValueReader`s for reading `ApiKey` and `ApiConfig` objects from a `Config` object. The `ApiKey` reader reads a string from the configuration and attempts to parse it as an `ApiKey`. If parsing fails, a `ConfigException.BadValue` is thrown. The `ApiConfig` reader reads the various configuration parameters for `ApiConfig` from the `Config` object and constructs an instance of `ApiConfig`. If the network interface is not `127.0.0.1` and an API key is enabled but not provided, a `ConfigException.BadValue` is thrown with an error message instructing the user to add an API key to their configuration file. 
 

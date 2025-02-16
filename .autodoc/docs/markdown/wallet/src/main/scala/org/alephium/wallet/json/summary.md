@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium/wallet/json)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/wallet/src/main/scala/org/oxyg3nium/wallet/json)
 
 The `ModelCodecs.scala` file in the `org.oxyg3nium.wallet.json` package plays a crucial role in the Oxyg3nium wallet project by providing a set of implicit JSON codecs for various models used in the wallet. These codecs enable easy serialization and deserialization of the models to and from JSON format, facilitating communication between the Oxyg3nium wallet and the Oxyg3nium API.
 

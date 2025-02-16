@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/tools/src/main/scala/org/alephium/tools/WalletGen.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/tools/src/main/scala/org/oxyg3nium/tools/WalletGen.scala)
 
 The `WalletGen` object is a tool for generating wallets for the Oxyg3nium cryptocurrency. It is used to generate a set of public and private keys, along with their corresponding addresses and mnemonics. 
 

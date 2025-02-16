@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/config/NetworkConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/config/NetworkConfig.scala)
 
 The code defines a trait called `NetworkConfig` which provides configuration details for the Oxyg3nium network. The trait has several methods and properties that can be used to retrieve network-specific information.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/GroupIndex.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/GroupIndex.scala)
 
 This file contains the implementation of the `GroupIndex` class and its companion object. The `GroupIndex` class is a simple wrapper around an integer value that represents the index of a group in the Oxyg3nium network. The purpose of this class is to provide a type-safe way of working with group indices, and to encapsulate the validation logic for group indices.
 

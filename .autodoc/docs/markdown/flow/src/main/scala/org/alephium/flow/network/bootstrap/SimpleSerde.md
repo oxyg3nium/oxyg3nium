@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/bootstrap/SimpleSerde.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/bootstrap/SimpleSerde.scala)
 
 This file contains a trait called `SimpleSerde` which provides a simple serialization and deserialization interface for a given type `T`. This trait is used in the `org.oxyg3nium.flow.network.bootstrap` package to serialize and deserialize messages sent between nodes in the Oxyg3nium network.
 

@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -1490,14 +1490,14 @@ trait RestServerFixture
 
   override val configValues = {
     Map[String, Any](
-      ("alephium.broker.broker-num", nbOfNodes),
-      ("alephium.api.api-key-enabled", apiKeyEnabled),
-      ("alephium.api.default-utxos-limit", utxosLimit),
-      ("alephium.api.max-form-buffered-bytes", maxFormBufferedBytes),
-      ("alephium.node.indexes.tx-output-ref-index", true),
-      ("alephium.node.indexes.subcontract-index", true)
+      ("oxyg3nium.broker.broker-num", nbOfNodes),
+      ("oxyg3nium.api.api-key-enabled", apiKeyEnabled),
+      ("oxyg3nium.api.default-utxos-limit", utxosLimit),
+      ("oxyg3nium.api.max-form-buffered-bytes", maxFormBufferedBytes),
+      ("oxyg3nium.node.indexes.tx-output-ref-index", true),
+      ("oxyg3nium.node.indexes.subcontract-index", true)
     ) ++ apiKeys.headOption
-      .map(_ => Map(("alephium.api.api-key", apiKeys.map(_.value))))
+      .map(_ => Map(("oxyg3nium.api.api-key", apiKeys.map(_.value))))
       .getOrElse(Map.empty)
   }
 

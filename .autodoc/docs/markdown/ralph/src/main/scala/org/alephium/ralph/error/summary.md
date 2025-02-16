@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/ralph/src/main/scala/org/alephium/ralph/error)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/ralph/src/main/scala/org/oxyg3nium/ralph/error)
 
 The code in this folder is related to handling and formatting compiler errors for the Oxyg3nium project. It provides a set of error messages that can be used to provide feedback to users when there is an issue with their code during compilation. These error messages can be used to help users identify and fix issues in their code more easily.
 

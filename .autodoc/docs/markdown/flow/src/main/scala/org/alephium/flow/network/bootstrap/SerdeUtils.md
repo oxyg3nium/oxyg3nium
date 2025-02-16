@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/bootstrap/SerdeUtils.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/bootstrap/SerdeUtils.scala)
 
 This file contains code related to serialization and deserialization of data structures used in the Oxyg3nium network bootstrap process. The code is licensed under the GNU Lesser General Public License and is part of the Oxyg3nium project.
 

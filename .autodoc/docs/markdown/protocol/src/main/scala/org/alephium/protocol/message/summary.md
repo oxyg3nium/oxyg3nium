@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol/src/main/scala/org/alephium/protocol/message)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/protocol/src/main/scala/org/oxyg3nium/protocol/message)
 
 The code in the `org.oxyg3nium.protocol.message` package is responsible for defining the message format and handling the serialization and deserialization of messages exchanged between nodes in the Oxyg3nium network. The package contains several classes and objects that represent different types of messages, such as `DiscoveryMessage`, `Header`, `Message`, and `Payload`. These messages are used for various purposes, such as discovering other nodes, handshaking, and requesting and responding with blocks, headers, and transactions.
 

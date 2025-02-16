@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/validation/ValidationStatus.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/validation/ValidationStatus.scala)
 
 This file contains code related to validation of various components of the Oxyg3nium blockchain. The code defines several sealed traits and case objects that represent different types of invalid status that can occur during validation. These include InvalidBlockStatus, InvalidHeaderStatus, and InvalidTxStatus. 
 

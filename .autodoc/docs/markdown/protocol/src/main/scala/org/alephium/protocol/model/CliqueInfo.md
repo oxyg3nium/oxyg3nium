@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/CliqueInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/CliqueInfo.scala)
 
 This file contains the implementation of the `CliqueInfo` class, which represents information about a clique in the Oxyg3nium protocol. A clique is a group of brokers that work together to validate transactions and maintain the blockchain. 
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/FlowDifficultyAdjustment.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/FlowDifficultyAdjustment.scala)
 
 This file contains the `FlowDifficultyAdjustment` trait, which provides methods for adjusting the difficulty of mining new blocks in the Oxyg3nium blockchain. The trait defines several abstract methods that must be implemented by any concrete class that extends it. These methods include `getBlockHeaderUnsafe`, `getHeightUnsafe`, `getHeaderChain`, `getHashChain`, and `getOutTips`, which are used to retrieve information about blocks and their relationships to one another.
 

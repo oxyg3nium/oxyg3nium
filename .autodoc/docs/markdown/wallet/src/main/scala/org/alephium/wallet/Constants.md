@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/Constants.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/Constants.scala)
 
 The code defines two constants used in the Oxyg3nium wallet. The first constant, `path`, is a vector of integers that represents the BIP32 derivation path used to generate wallet addresses. BIP32 is a hierarchical deterministic wallet structure that allows for the creation of multiple addresses from a single seed. The `path` constant is defined using the `AVector` class from the Oxyg3nium utility library and contains the following values:
 

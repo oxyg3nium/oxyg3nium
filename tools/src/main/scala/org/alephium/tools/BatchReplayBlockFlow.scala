@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -37,7 +37,7 @@ import org.oxyg3nium.util.{ActorRefT, AVector, Duration, Env, EventBus, Files =>
 object BatchReplayBlockFlow extends App with StrictLogging {
   private val sourcePath = Platform.getRootPath()
   private val targetPath = {
-    val path = AFiles.homeDir.resolve(".alephium-batch-replay")
+    val path = AFiles.homeDir.resolve(".oxyg3nium-batch-replay")
     path.toFile.mkdir()
     Files.copy(
       sourcePath.resolve("user.conf"),
@@ -50,7 +50,7 @@ object BatchReplayBlockFlow extends App with StrictLogging {
   private def buildTargetBlockFlowUnsafe() = {
     val typesafeConfig =
       Configs.parseConfigAndValidate(Env.Prod, targetPath, overwrite = true)
-    val config = Oxyg3niumConfig.load(typesafeConfig, "alephium")
+    val config = Oxyg3niumConfig.load(typesafeConfig, "oxyg3nium")
     val dbPath = targetPath.resolve(config.network.networkId.nodeFolder)
     val storages =
       Storages.createUnsafe(dbPath, "db", RocksDBSource.ProdSettings.writeOptions)(

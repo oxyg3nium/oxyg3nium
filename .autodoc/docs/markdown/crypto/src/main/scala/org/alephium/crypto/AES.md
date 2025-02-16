@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/AES.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/AES.scala)
 
 The `AES` object in the `org.oxyg3nium.crypto` package provides methods for encrypting and decrypting data using the Advanced Encryption Standard (AES) algorithm. The purpose of this code is to provide a secure way to encrypt and decrypt data using a password. 
 

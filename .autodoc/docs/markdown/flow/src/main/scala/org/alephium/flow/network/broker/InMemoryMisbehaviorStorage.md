@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/InMemoryMisbehaviorStorage.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/broker/InMemoryMisbehaviorStorage.scala)
 
 The code defines a class called `InMemoryMisbehaviorStorage` that implements the `MisbehaviorStorage` trait. This class is responsible for storing and managing misbehavior information for network peers in the Oxyg3nium project. 
 

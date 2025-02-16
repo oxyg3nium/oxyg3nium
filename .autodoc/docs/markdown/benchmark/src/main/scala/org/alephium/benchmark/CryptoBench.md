@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/benchmark/src/main/scala/org/alephium/benchmark/CryptoBench.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/benchmark/src/main/scala/org/oxyg3nium/benchmark/CryptoBench.scala)
 
 The `CryptoBench` class is a benchmarking tool for cryptographic hash functions and digital signature algorithms. It imports several cryptographic hash functions and digital signature algorithms from the `org.oxyg3nium.crypto` package. The class is annotated with `@BenchmarkMode`, `@OutputTimeUnit`, and `@State` annotations. 
 

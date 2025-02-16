@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/crypto/src/main/scala/org/alephium/crypto)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/crypto/src/main/scala/org/oxyg3nium/crypto)
 
 The code in this folder provides cryptographic functionality for the Oxyg3nium project, including encryption, decryption, hashing, and digital signatures. It is essential for ensuring the security and integrity of data in the project, such as transactions, blocks, and user accounts.
 

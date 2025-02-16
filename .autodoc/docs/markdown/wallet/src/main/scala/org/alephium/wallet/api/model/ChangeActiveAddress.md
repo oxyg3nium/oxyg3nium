@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/ChangeActiveAddress.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/ChangeActiveAddress.scala)
 
 This code defines a case class called `ChangeActiveAddress` that is used in the Oxyg3nium wallet API. The purpose of this class is to represent a request to change the active address for a particular asset. 
 

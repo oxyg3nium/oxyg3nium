@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/MutBalances.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/MutBalances.scala)
 
 The code defines a class called `MutBalances` that represents a mutable collection of balances for a given lockup script. The balances are stored as an `ArrayBuffer` of tuples, where each tuple contains a lockup script and a `MutBalancesPerLockup` object that represents the balances for that lockup script. 
 

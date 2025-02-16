@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/GetBalance.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/GetBalance.scala)
 
 This file contains a case class called `GetBalance` which is a part of the `org.oxyg3nium.api.model` package in the Oxyg3nium project. The purpose of this class is to represent a request to retrieve the balance of a specific address for a particular asset. 
 

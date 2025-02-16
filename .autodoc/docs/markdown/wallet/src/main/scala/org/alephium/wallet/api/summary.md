@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium/wallet/api)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/wallet/src/main/scala/org/oxyg3nium/wallet/api)
 
 The code in the `org.oxyg3nium.wallet.api` folder is responsible for defining the wallet API endpoints and providing examples for various wallet-related operations in the Oxyg3nium project. The wallet API allows users to interact with their wallets, manage addresses, and perform transactions.
 
@@ -24,7 +24,7 @@ val gasPrice = GasPrice(100)
 val transfer = Transfer(destinations, Some(gasBox), Some(gasPrice))
 
 // Send the transfer request to the Oxyg3nium network for processing
-val transferResult = alephiumApi.sendTransfer(transfer)
+val transferResult = oxyg3niumApi.sendTransfer(transfer)
 
 // Retrieve the transaction ID and group indices from the transfer result
 val txId = transferResult.txId
@@ -32,6 +32,6 @@ val fromGroup = transferResult.fromGroup
 val toGroup = transferResult.toGroup
 ```
 
-In this example, a new `Transfer` object is created with two destination addresses, a gas amount, and a gas price. The object is then sent to the Oxyg3nium network for processing using the `sendTransfer` method of the `alephiumApi` object. The resulting `transferResult` object contains the transaction ID and group indices for the transfer.
+In this example, a new `Transfer` object is created with two destination addresses, a gas amount, and a gas price. The object is then sent to the Oxyg3nium network for processing using the `sendTransfer` method of the `oxyg3niumApi` object. The resulting `transferResult` object contains the transaction ID and group indices for the transfer.
 
 Overall, the code in this folder plays a crucial role in managing wallets, addresses, balances, and transactions in the Oxyg3nium project, providing a convenient and type-safe way for users to interact with their wallets.

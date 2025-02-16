@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/app)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/app)
 
 The `.autodoc/docs/json/app` folder contains essential Scala files and integration tests for the Oxyg3nium project, a blockchain platform. These files handle various aspects of the project, such as API configurations, block exporting and importing, application booting, CPU solo mining, API documentation generation, and REST and WebSocket server management.
 

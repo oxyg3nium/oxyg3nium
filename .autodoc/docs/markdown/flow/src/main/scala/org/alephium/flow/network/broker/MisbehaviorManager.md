@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/MisbehaviorManager.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/broker/MisbehaviorManager.scala)
 
 The `MisbehaviorManager` class is part of the Oxyg3nium project and is responsible for managing misbehaving peers in the network. It is used to detect and handle misbehaviors of peers in the network and impose penalties on them. The penalties can range from warnings to critical misbehaviors, and the severity of the penalty depends on the type of misbehavior.
 

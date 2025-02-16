@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/ralphc/src)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/ralphc/src)
 
 The `.autodoc/docs/json/ralphc/src` folder focuses on the Ralph compiler, which is responsible for compiling smart contracts and scripts written in the Oxyg3nium language. The folder contains several Scala files, each serving a specific purpose within the compiler.
 

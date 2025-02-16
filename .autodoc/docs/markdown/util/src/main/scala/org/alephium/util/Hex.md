@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Hex.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Hex.scala)
 
 The `Hex` object in the `org.oxyg3nium.util` package provides utility functions for working with hexadecimal strings and byte sequences. 
 

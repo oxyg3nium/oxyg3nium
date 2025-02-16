@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/docker/grafana/provisioning/datasources)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/docker/grafana/provisioning/datasources)
 
 The `datasource.yml` file in the `.autodoc/docs/json/docker/grafana/provisioning/datasources` folder is a configuration file for managing datasources in the Oxyg3nium project. It specifies the API version and provides a list of datasources to be deleted from the database, as well as a list of datasources to be inserted or updated depending on their availability in the database.
 
@@ -14,7 +14,7 @@ Here's an example of how this code might be used:
 
 ```python
 # Load the configuration file
-config = load_config_file('alephium.yml')
+config = load_config_file('oxyg3nium.yml')
 
 # Get the list of datasources to delete
 delete_list = config['deleteDatasources']

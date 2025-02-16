@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/LogUtils.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/LogUtils.scala)
 
 This file contains the implementation of the `LogUtils` trait, which provides utility methods for working with contract logs in the Oxyg3nium project. The trait is mixed in with the `FlowUtils` trait, which provides additional utility methods.
 

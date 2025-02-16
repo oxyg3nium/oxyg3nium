@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/http/src/main/scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/http/src/main/scala)
 
 The `.autodoc/docs/json/http/src/main/scala` folder contains essential components for handling HTTP requests and responses in the Oxyg3nium project. It includes classes for sending requests to endpoints, configuring server options, and serving a Swagger UI for API documentation.
 

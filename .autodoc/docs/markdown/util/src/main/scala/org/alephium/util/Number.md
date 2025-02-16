@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Number.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Number.scala)
 
 The code defines a Scala object called `Number` that provides utility functions and constants related to numbers. The purpose of this object is to simplify the code that deals with numbers in the larger Oxyg3nium project.
 
@@ -17,4 +17,4 @@ Overall, the `Number` object provides a set of useful functions and constants th
 - This code is released under the GNU Lesser General Public License, version 3 or later.
 
 3. Why are there constants for large numbers defined in this code?
-- The constants for large numbers are likely used in other parts of the `alephium` project, such as for defining maximum values or for performing calculations involving very large numbers.
+- The constants for large numbers are likely used in other parts of the `oxyg3nium` project, such as for defining maximum values or for performing calculations involving very large numbers.

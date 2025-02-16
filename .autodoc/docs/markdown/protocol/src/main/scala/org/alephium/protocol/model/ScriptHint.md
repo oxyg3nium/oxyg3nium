@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/ScriptHint.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/ScriptHint.scala)
 
 This file contains code related to the Oxyg3nium project, which is licensed under the GNU Lesser General Public License. The code defines a class called `ScriptHint` and an object called `ScriptHint`. 
 

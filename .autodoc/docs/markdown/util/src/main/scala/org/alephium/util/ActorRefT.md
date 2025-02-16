@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/ActorRefT.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/ActorRefT.scala)
 
 This file contains the implementation of the `ActorRefT` class and its companion object. The purpose of this class is to provide a type-safe wrapper around an `ActorRef` instance, which is a reference to an actor in the Akka actor system. 
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/MinerAddressesInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/MinerAddressesInfo.scala)
 
 The code defines a case class called `MinerAddressesInfo` which contains a single field called `addresses` of type `AVector[AddressInfo]`. 
 

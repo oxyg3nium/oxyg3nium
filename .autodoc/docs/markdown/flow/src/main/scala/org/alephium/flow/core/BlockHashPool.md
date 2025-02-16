@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/BlockHashPool.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/BlockHashPool.scala)
 
 This file defines a trait called `BlockHashPool` and an object called `BlockHashPool` that provides some utility functions. The `BlockHashPool` trait defines a set of methods that can be used to interact with a pool of block hashes. 
 

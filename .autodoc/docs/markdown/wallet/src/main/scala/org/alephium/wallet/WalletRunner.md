@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/WalletRunner.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/WalletRunner.scala)
 
 This code is the entry point for the Oxyg3nium wallet application. It initializes the wallet configuration, creates a new instance of the `WalletApp` class, and starts the wallet service. 
 

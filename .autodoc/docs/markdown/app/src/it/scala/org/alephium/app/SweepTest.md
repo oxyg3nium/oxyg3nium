@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/SweepTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/SweepTest.scala)
 
 This code defines a set of tests for sweeping funds from Oxyg3nium wallets. The tests are defined in the `SweepTest` abstract class, which is then extended by two concrete classes: `SweepMiner` and `SweepNoneMiner`. These classes differ only in the number of addresses they use for testing, with `SweepMiner` using four addresses and `SweepNoneMiner` using only one.
 

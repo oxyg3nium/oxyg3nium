@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/intraclique)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network/intraclique)
 
-The `.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/intraclique` folder contains code related to handling intra-clique communication between brokers in the Oxyg3nium network. This communication is essential for synchronizing the state of the network and sharing information about new transactions and blocks.
+The `.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network/intraclique` folder contains code related to handling intra-clique communication between brokers in the Oxyg3nium network. This communication is essential for synchronizing the state of the network and sharing information about new transactions and blocks.
 
 The `BrokerHandler.scala` file defines a trait called `BrokerHandler` that extends another trait called `BaseBrokerHandler`. It provides methods and variables for handling different types of messages and events during intra-clique communication, such as `handleHandshakeInfo`, `handleInv`, and `handleTxsResponse`. The `syncing` method is used to periodically synchronize the state of the broker with other brokers in the clique.
 

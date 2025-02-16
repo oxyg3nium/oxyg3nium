@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Env.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Env.scala)
 
 This code defines an enumeration called `Env` and an object called `Env` that contains methods for resolving the current environment and executing code only in the production environment. 
 

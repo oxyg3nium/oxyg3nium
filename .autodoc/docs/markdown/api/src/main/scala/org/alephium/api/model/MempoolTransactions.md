@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/MempoolTransactions.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/MempoolTransactions.scala)
 
 This code defines a case class called `MempoolTransactions` which is used to represent a group of transactions in the Oxyg3nium project's mempool. The mempool is a data structure used by nodes in a blockchain network to store unconfirmed transactions before they are added to a block and confirmed by the network.
 

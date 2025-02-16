@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/project/Dependencies.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/project/Dependencies.scala)
 
 This file contains two Scala objects: `Version` and `Dependencies`. These objects define the versions of various libraries and dependencies used in the Oxyg3nium project. 
 

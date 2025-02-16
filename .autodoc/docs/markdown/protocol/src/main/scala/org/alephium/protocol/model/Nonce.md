@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/Nonce.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/Nonce.scala)
 
 This file contains the implementation of a Nonce class and its companion object. A Nonce is a random number that is used only once in a cryptographic communication protocol to prevent replay attacks. The Nonce class is defined as a case class with a single field of type ByteString. The ByteString is used to store the random bytes generated for the Nonce.
 
@@ -8,9 +8,9 @@ The Nonce object also provides a `serde` implicit value of type Serde[Nonce]. Th
 
 The Nonce class and its companion object are likely used in the larger project for cryptographic communication protocols. Nonces are an important part of many cryptographic protocols and are used to prevent replay attacks. The Nonce class provides a convenient way to generate and manipulate Nonces. The Nonce object provides several methods for creating Nonces with different properties. The `serde` implicit value allows Nonces to be easily serialized and deserialized. Overall, the Nonce class and its companion object are an important part of the Oxyg3nium project's cryptographic infrastructure.
 ## Questions: 
- 1. What is the purpose of the `Nonce` class and how is it used in the `alephium` project?
+ 1. What is the purpose of the `Nonce` class and how is it used in the `oxyg3nium` project?
    
-   The `Nonce` class is used to represent a cryptographic nonce in the `alephium` project. It is used to generate random values for various purposes such as mining and transaction verification.
+   The `Nonce` class is used to represent a cryptographic nonce in the `oxyg3nium` project. It is used to generate random values for various purposes such as mining and transaction verification.
 
 2. What is the difference between `unsecureRandom()` and `secureRandom()` methods in the `Nonce` object?
    

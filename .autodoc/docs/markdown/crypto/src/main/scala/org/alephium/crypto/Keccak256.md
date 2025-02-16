@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/Keccak256.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/Keccak256.scala)
 
 This file contains code related to the Keccak256 hash function, which is used in the Oxyg3nium project for cryptographic purposes. The code is licensed under the GNU Lesser General Public License, which allows for free distribution and modification of the code.
 

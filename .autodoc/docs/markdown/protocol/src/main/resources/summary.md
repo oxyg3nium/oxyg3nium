@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol/src/main/resources)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/protocol/src/main/resources)
 
 The `.autodoc/docs/json/protocol/src/main/resources` folder contains two data files, `hashrate-inflation.csv` and `time-inflation.csv`, which seem to be related to the Oxyg3nium cryptocurrency project.
 
@@ -17,7 +17,7 @@ for transaction in block.transactions:
 ```python
 import matplotlib.pyplot as plt
 
-with open('alephium_data.txt', 'r') as f:
+with open('oxyg3nium_data.txt', 'r') as f:
     data = f.readlines()
 
 block_nums = []

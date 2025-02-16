@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/Val.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/Val.scala)
 
 This code defines a set of classes and traits that represent values in the Oxyg3nium virtual machine. The `Val` trait is the base trait for all values and defines several methods that all values must implement. The `Val` trait is extended by several case classes that represent different types of values, including `Bool`, `I256`, `U256`, `ByteVec`, and `Address`. Each of these case classes represents a different type of value that can be used in the Oxyg3nium virtual machine.
 

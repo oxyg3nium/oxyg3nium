@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/protocol)
 
 The `.autodoc/docs/json/protocol` folder is a crucial part of the Oxyg3nium project, providing essential functionality for various aspects such as managing the Oxyg3nium cryptocurrency, handling message serialization and deserialization, and managing the mining process. The code is organized into the `org.oxyg3nium.protocol` package, which includes several files and subfolders, each with a specific purpose.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/model/BlockFlowTemplate.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/model/BlockFlowTemplate.scala)
 
 The code above defines a case class called `BlockFlowTemplate` which represents a template for a block in the Oxyg3nium blockchain. The `BlockFlowTemplate` contains the following fields:
 

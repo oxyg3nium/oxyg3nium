@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/tools/src/main/scala/org/alephium/tools/MiningRewards.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/tools/src/main/scala/org/oxyg3nium/tools/MiningRewards.scala)
 
 The `MiningRewards` object is a tool that calculates the inflation rate of the Oxyg3nium cryptocurrency based on different parameters. The inflation rate is the rate at which the total supply of a cryptocurrency increases over time. The tool calculates the inflation rate based on the hashrate of the network and the number of years since the network's inception.
 

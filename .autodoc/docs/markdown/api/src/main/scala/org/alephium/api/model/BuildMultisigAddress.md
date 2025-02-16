@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BuildMultisigAddress.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BuildMultisigAddress.scala)
 
 This file contains two case classes, `BuildMultisigAddress` and `BuildMultisigAddressResult`, which are used to build a multisig address in the Oxyg3nium project. 
 
@@ -30,4 +30,4 @@ println(result.address) // prints the multisig address created
 2. What is the expected output of the `BuildMultisigAddressResult` case class?
    - The `BuildMultisigAddressResult` case class is expected to contain the resulting multisig address after the `BuildMultisigAddress` request has been processed.
 3. What other dependencies does this code have?
-   - This code has dependencies on other packages and modules within the `alephium` project, including `org.oxyg3nium.protocol.PublicKey`, `org.oxyg3nium.protocol.model.Address`, and `org.oxyg3nium.util.AVector`.
+   - This code has dependencies on other packages and modules within the `oxyg3nium` project, including `org.oxyg3nium.protocol.PublicKey`, `org.oxyg3nium.protocol.model.Address`, and `org.oxyg3nium.util.AVector`.

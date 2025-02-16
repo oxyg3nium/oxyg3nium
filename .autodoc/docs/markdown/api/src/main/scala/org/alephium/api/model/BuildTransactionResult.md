@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BuildTransactionResult.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BuildTransactionResult.scala)
 
 The code defines a case class called `BuildTransactionResult` which represents the result of building a transaction. It contains several fields including the unsigned transaction, gas amount, gas price, transaction ID, and the source and destination groups. The case class extends two traits, `GasInfo` and `ChainIndexInfo`.
 

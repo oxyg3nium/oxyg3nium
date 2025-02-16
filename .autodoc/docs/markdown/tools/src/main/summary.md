@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/tools/src/main)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/tools/src/main)
 
 The `.autodoc/docs/json/tools/src/main` folder contains essential tools and utilities for the Oxyg3nium project, which are crucial for tasks such as generating documentation, calculating inflation rates, validating patches, and generating wallets. These tools help developers understand and work with the Oxyg3nium protocol more effectively.
 

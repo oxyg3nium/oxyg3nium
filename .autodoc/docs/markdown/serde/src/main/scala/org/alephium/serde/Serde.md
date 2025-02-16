@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/serde/src/main/scala/org/alephium/serde/Serde.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/serde/src/main/scala/org/oxyg3nium/serde/Serde.scala)
 
 This code defines a serialization and deserialization library for the Oxyg3nium project. The library is designed to convert data structures into a binary format (ByteString) and vice versa. It provides a set of predefined serializers and deserializers for common data types, such as Int, Long, Boolean, ByteString, and more. Additionally, it supports more complex data structures like Option, Either, and AVector.
 

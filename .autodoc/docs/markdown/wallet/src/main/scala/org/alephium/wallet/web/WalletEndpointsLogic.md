@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/web/WalletEndpointsLogic.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/web/WalletEndpointsLogic.scala)
 
 This code defines a trait called `WalletEndpointsLogic` that provides the implementation for various endpoints related to wallet functionality. The trait extends another trait called `WalletEndpoints` which defines the signatures of these endpoints. The `WalletEndpointsLogic` trait is used to implement these endpoints by providing the necessary logic for each endpoint.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/mining/package.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/mining/package.scala)
 
 This file contains a package object for the `org.oxyg3nium.flow.mining` package in the Oxyg3nium project. The purpose of this package object is to define a constant value `MiningDispatcher` which is a string representing the name of an Akka actor dispatcher. 
 

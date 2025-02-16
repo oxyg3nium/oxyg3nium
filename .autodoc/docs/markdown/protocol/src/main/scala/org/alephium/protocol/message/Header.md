@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/message/Header.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/message/Header.scala)
 
 This code defines a class called `Header` and an object with the same name. The `Header` class has a single field called `version` of type `WireVersion`. The `Header` object provides a way to serialize and deserialize `Header` objects using the `Serde` library.
 

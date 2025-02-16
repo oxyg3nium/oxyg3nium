@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/mining/HashRate.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/mining/HashRate.scala)
 
 This file contains code related to mining in the Oxyg3nium project. The code defines a case class called `HashRate` which represents the hash rate of a mining device. The `HashRate` class is defined as a final case class which takes a `BigInteger` value as input. The `HashRate` class extends the `Ordered` trait which allows for comparison of `HashRate` instances. The `HashRate` class also defines methods to multiply and subtract hash rates.
 

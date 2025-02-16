@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/serde/src/main/scala/org/alephium/serde)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/serde/src/main/scala/org/oxyg3nium/serde)
 
 The code in the `org.oxyg3nium.serde` package provides a serialization and deserialization library for the Oxyg3nium project. It is designed to convert data structures into a binary format (ByteString) and vice versa, which is essential for data exchange and storage in the project. The library includes predefined serializers and deserializers for common data types, as well as utility methods for composing and transforming them.
 

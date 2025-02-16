@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/model/BrokerDiscoveryState.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/model/BrokerDiscoveryState.scala)
 
 This code defines a case class called `BrokerDiscoveryState` which represents the state of a broker in the Oxyg3nium project. The state includes the broker's network address and a unique identifier called `brokerNum`. 
 

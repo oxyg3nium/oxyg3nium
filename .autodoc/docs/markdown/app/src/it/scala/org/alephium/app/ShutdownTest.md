@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/ShutdownTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/ShutdownTest.scala)
 
 The `ShutdownTest` code is a test suite for the Oxyg3nium project that verifies the proper functioning of the shutdown mechanism in two different scenarios. The first scenario tests whether the node shuts down correctly when the TCP port is in use. The second scenario tests whether the clique shuts down correctly when one of the nodes in the clique is down.
 

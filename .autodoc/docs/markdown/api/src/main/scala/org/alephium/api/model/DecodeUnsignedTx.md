@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/DecodeUnsignedTx.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/DecodeUnsignedTx.scala)
 
 This file contains two case classes, `DecodeUnsignedTx` and `DecodeUnsignedTxResult`, which are used in the Oxyg3nium project's API model. 
 

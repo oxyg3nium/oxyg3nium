@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/bootstrap/CliqueCoordinator.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/bootstrap/CliqueCoordinator.scala)
 
 The code defines the `CliqueCoordinator` class, which is responsible for coordinating the connection of brokers in the Oxyg3nium network. The class receives information about the brokers and waits for all of them to be connected before broadcasting the clique information to all the brokers. Once all the brokers are ready, the class broadcasts a `Ready` message to all the brokers and waits for them to acknowledge receipt of the message. Once all the brokers have acknowledged receipt of the message, the class broadcasts the clique information to all the brokers and waits for them to terminate the connection. Once all the brokers have terminated the connection, the class sends the clique information to the bootstrapper and stops itself.
 

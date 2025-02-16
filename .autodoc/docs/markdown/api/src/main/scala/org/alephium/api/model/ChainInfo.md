@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/ChainInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/ChainInfo.scala)
 
 This code defines a case class called `ChainInfo` that contains a single field `currentHeight` of type `Int`. This class is located in the `org.oxyg3nium.api.model` package.
 
@@ -21,5 +21,5 @@ Overall, this code provides a simple but important piece of functionality for th
    - The `ChainInfo` case class is used to represent information about the current height of a blockchain.
 2. What license is this code released under?
    - This code is released under the GNU Lesser General Public License, version 3 or later.
-3. What is the scope of this code file within the `alephium` project?
+3. What is the scope of this code file within the `oxyg3nium` project?
    - This code file is located within the `org.oxyg3nium.api.model` package, but without further context it is unclear what specific functionality it provides within the project.

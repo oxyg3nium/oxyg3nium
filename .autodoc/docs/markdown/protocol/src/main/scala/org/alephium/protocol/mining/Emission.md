@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/mining/Emission.scala)
 
 The `Emission` class in the `org.oxyg3nium.protocol.mining` package is responsible for calculating the mining rewards for the Oxyg3nium blockchain. The class takes the block target time and group configuration as input parameters. It calculates the mining rewards based on the time, target, and hash rate of the mining process.
 

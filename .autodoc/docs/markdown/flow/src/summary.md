@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src)
 
 The `.autodoc/docs/json/flow/src` folder contains essential configuration files and utility functions for the Oxyg3nium project, which are crucial for customizing the behavior of the project to suit specific needs and optimize its performance.
 

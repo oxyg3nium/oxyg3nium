@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/VerifySignature.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/VerifySignature.scala)
 
 The code above defines a case class called `VerifySignature` that is used to verify the signature of a given piece of data. The `VerifySignature` class takes in three parameters: `data`, `signature`, and `publicKey`. 
 

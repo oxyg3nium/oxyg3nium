@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/validation/BlockValidation.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/validation/BlockValidation.scala)
 
 The code in this file is part of the Oxyg3nium project and is responsible for validating blocks in the blockchain. It defines a trait `BlockValidation` which extends the `Validation` trait, providing methods to validate blocks and their transactions. The primary purpose of this code is to ensure that blocks and their transactions adhere to the consensus rules and maintain the integrity of the blockchain.
 

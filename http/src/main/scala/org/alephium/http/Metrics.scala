@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -24,7 +24,7 @@ import sttp.tapir.server.metrics.prometheus.PrometheusMetrics
 
 object Metrics {
   val defaultRegistry: PrometheusRegistry = PrometheusRegistry.defaultRegistry
-  val namespace                           = "alephium"
+  val namespace                           = "oxyg3nium"
   val prometheus: PrometheusMetrics[Future] = PrometheusMetrics[Future](
     namespace = namespace,
     registry = defaultRegistry,

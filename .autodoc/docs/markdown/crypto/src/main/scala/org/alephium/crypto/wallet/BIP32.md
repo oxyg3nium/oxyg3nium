@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/wallet/BIP32.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/wallet/BIP32.scala)
 
 The `BIP32` object in the `org.oxyg3nium.crypto.wallet` package provides functionality for generating and manipulating hierarchical deterministic (HD) wallets using the BIP32 standard. HD wallets allow for the generation of a large number of public/private key pairs from a single seed, which can be used to derive child keys in a deterministic manner. This is useful for applications such as cryptocurrency wallets, where a user may want to generate a new address for each transaction.
 

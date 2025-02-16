@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/TimeSpan.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/TimeSpan.scala)
 
 The code defines a case class called TimeSpan that represents a duration of time in milliseconds. The class takes a single argument, which is the number of milliseconds, and stores it as a Long value. The class also has a method called toDuration() that converts the TimeSpan to a Duration object from the org.oxyg3nium.util package.
 

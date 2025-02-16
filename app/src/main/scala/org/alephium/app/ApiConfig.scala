@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -70,7 +70,7 @@ object ApiConfig extends StrictLogging {
       if ((interface != "127.0.0.1") && apiKeyEnabled && apiKeys.isEmpty) {
         val errorMessage = s"""|
                                |Api key is necessary, please add:
-                               |    alephium.api.api-key = ${generateApiKey().value}
+                               |    oxyg3nium.api.api-key = ${generateApiKey().value}
                                |to your user.conf.
                                |""".stripMargin
 
@@ -96,5 +96,5 @@ object ApiConfig extends StrictLogging {
   }
 
   def load(config: Config, path: String): ApiConfig = config.as[ApiConfig](path)
-  def load(config: Config): ApiConfig               = config.as[ApiConfig]("alephium.api")
+  def load(config: Config): ApiConfig               = config.as[ApiConfig]("oxyg3nium.api")
 }

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/FlowData.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/FlowData.scala)
 
 This code defines a trait called `FlowData` which is used in the Oxyg3nium project to represent data related to the flow of blocks in the blockchain. The `FlowData` trait defines several methods and properties that are used to access and manipulate this data.
 
@@ -17,7 +17,7 @@ val blockType: String = blockData.`type`
 val uncleHash: BlockHash = blockData.uncleHash(0)
 ```
 ## Questions: 
- 1. What is the purpose of the `FlowData` trait and how is it used in the `alephium` project?
+ 1. What is the purpose of the `FlowData` trait and how is it used in the `oxyg3nium` project?
 - The `FlowData` trait defines a set of properties and methods that are used to represent and manipulate data related to blocks in the Oxyg3nium blockchain. It is likely used extensively throughout the project to handle block-related logic.
 
 2. What is the significance of the `timestamp` property in the `FlowData` trait?

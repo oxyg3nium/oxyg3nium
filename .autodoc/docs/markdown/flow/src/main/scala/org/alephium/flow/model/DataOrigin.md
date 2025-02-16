@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/model/DataOrigin.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/model/DataOrigin.scala)
 
 This code defines a sealed trait called `DataOrigin` and its companion object. The `DataOrigin` trait has three methods: `isLocal`, `isFrom(another: CliqueId)`, and `isFrom(brokerInfo: BrokerInfo)`. The `isLocal` method returns a boolean indicating whether the data is local or not. The `isFrom(another: CliqueId)` method takes a `CliqueId` parameter and returns a boolean indicating whether the data is from the same clique as the given `CliqueId`. The `isFrom(brokerInfo: BrokerInfo)` method takes a `BrokerInfo` parameter and returns a boolean indicating whether the data is from the same broker as the given `BrokerInfo`.
 

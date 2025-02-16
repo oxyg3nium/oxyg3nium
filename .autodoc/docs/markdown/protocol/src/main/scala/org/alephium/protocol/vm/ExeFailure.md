@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/ExeFailure.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/ExeFailure.scala)
 
 This file contains a set of case classes and traits that define various types of execution failures that can occur in the Oxyg3nium project's virtual machine (VM). The VM is responsible for executing smart contracts written in Oxyg3nium's programming language. 
 

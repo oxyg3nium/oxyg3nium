@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol/src/main/scala/org/alephium/protocol/vm/event)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/protocol/src/main/scala/org/oxyg3nium/protocol/vm/event)
 
 The code in this folder is responsible for managing event logs in the Oxyg3nium project. It provides a caching mechanism to improve performance by reducing the number of reads and writes to the underlying storage. The main components of this folder are the `CachedLog`, `CachedLogPageCounter`, `LogStorage`, `MutableLog`, `StagingLog`, and `StagingLogPageCounter` classes.
 

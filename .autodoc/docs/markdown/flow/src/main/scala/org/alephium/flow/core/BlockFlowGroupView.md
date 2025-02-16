@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/BlockFlowGroupView.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/BlockFlowGroupView.scala)
 
 This code defines a trait called `BlockFlowGroupView` which provides a set of methods to retrieve information about transaction outputs and relevant unspent transaction outputs (UTXOs) for a given lockup script. The trait is generic over a type `WS` which is a subtype of `WorldState[_, _, _, _]`. 
 

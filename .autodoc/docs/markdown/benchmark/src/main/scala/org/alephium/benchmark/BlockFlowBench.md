@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/benchmark/src/main/scala/org/alephium/benchmark/BlockFlowBench.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/benchmark/src/main/scala/org/oxyg3nium/benchmark/BlockFlowBench.scala)
 
 This code defines a benchmarking class called `BlockFlowBench` that measures the average time it takes to execute the `findBestDeps()` method. The purpose of this benchmark is to evaluate the performance of the `BlockFlow` class, which is responsible for managing the blockchain data in the Oxyg3nium project.
 

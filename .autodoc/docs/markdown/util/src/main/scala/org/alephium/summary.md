@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/util/src/main/scala/org/alephium)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/util/src/main/scala/org/oxyg3nium)
 
 In the `org.oxyg3nium` package, the `json/util` folder contains utility classes and methods for handling JSON data within the Oxyg3nium project. These utilities are essential for parsing, encoding, and decoding JSON data, which is a common data format used in various parts of the project, such as API responses and configuration files.
 

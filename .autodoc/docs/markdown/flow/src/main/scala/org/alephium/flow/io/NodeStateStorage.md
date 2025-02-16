@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/io/NodeStateStorage.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/io/NodeStateStorage.scala)
 
 This code defines a trait `NodeStateStorage` and a class `NodeStateRockDBStorage` that implement a storage interface for the Oxyg3nium project. The storage is implemented using RocksDB, a high-performance key-value store. The `NodeStateStorage` trait defines methods for storing and retrieving various types of data, including a flag indicating whether the node has been initialized, bootstrap information, and the version of the database. It also defines a method for getting a `ChainStateStorage` object for a given chain index, which can be used to store and retrieve the state of a block hash chain.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BuildDeployContractTx.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BuildDeployContractTx.scala)
 
 This file contains code for building and decoding a transaction for deploying a stateful smart contract on the Oxyg3nium blockchain. The `BuildDeployContractTx` class represents the transaction and contains various parameters such as the public key of the sender, the bytecode of the contract, the initial amount of Aleph tokens to be sent to the contract, and the gas price and amount for executing the transaction. The `decodeBytecode` method can be used to deserialize the bytecode into a `Code` object, which contains the contract itself as well as the initial values for its immutable and mutable fields.
 

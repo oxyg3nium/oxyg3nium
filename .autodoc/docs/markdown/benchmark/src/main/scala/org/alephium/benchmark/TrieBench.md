@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/benchmark/src/main/scala/org/alephium/benchmark/TrieBench.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/benchmark/src/main/scala/org/oxyg3nium/benchmark/TrieBench.scala)
 
 The `TrieBench` class is a benchmarking tool for measuring the performance of the `SparseMerkleTrie` data structure. The `SparseMerkleTrie` is a tree-like data structure that is used to store key-value pairs in a way that allows for efficient lookups and updates. The `TrieBench` class contains two benchmarking methods: `randomInsert` and `randomInsertBatch`.
 

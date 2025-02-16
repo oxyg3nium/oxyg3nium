@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BuildSweepAddressTransactions.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BuildSweepAddressTransactions.scala)
 
 The code defines a case class called `BuildSweepAddressTransactions` which is used to build transactions for sweeping assets from one address to another. The class takes in several parameters including the public key of the sender, the address of the receiver, the maximum amount of assets that can be transferred per UTXO (unspent transaction output), the lock time for the transaction, the gas amount and gas price for the transaction, and the target block hash.
 

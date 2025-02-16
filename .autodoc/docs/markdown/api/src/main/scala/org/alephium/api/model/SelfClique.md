@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/SelfClique.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/SelfClique.scala)
 
 This code defines a Scala case class called `SelfClique` that represents a clique of nodes in the Oxyg3nium network. A clique is a group of nodes that are connected to each other and work together to validate transactions and maintain the blockchain. 
 

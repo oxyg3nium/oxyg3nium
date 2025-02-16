@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/LockupScript.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/LockupScript.scala)
 
 The code defines a set of lockup scripts that can be used in the Oxyg3nium blockchain. Lockup scripts are used to lock up funds in a transaction output, and can be unlocked only by providing the correct unlocking script in a subsequent transaction input. The code defines four types of lockup scripts: P2PKH, P2MPKH, P2SH, and P2C.
 

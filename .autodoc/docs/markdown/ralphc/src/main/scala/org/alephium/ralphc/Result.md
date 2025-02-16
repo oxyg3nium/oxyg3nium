@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralphc/src/main/scala/org/alephium/ralphc/Result.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralphc/src/main/scala/org/oxyg3nium/ralphc/Result.scala)
 
 This file contains two case classes, `ScriptResult` and `ContractResult`, along with their respective companion objects. These classes are used to represent the results of compiling Oxyg3nium smart contracts and scripts.
 

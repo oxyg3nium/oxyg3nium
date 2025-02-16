@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/BlockChainWithState.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/BlockChainWithState.scala)
 
 This file contains the implementation of the `BlockChainWithState` trait and its companion object. The `BlockChainWithState` trait extends the `BlockChain` trait and adds functionality related to the world state of the blockchain. The world state is the state of all accounts in the blockchain at a particular block height. 
 

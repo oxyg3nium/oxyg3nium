@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/message/DiscoveryMessage.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/message/DiscoveryMessage.scala)
 
 This code defines the message format for the Oxyg3nium discovery protocol. The discovery protocol is used by nodes in the Oxyg3nium network to discover and communicate with each other. The `DiscoveryMessage` class represents a message that can be sent between nodes. It consists of a `Header` and a `Payload`. The `Header` contains the version of the discovery protocol being used, while the `Payload` contains the actual data being sent.
 

@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/http/src/main/scala/org/alephium/http)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/http/src/main/scala/org/oxyg3nium/http)
 
-The `.autodoc/docs/json/http/src/main/scala/org/alephium/http` folder contains essential components for handling HTTP requests and responses in the Oxyg3nium project. It includes classes for sending requests to endpoints, configuring server options, and serving a Swagger UI for API documentation.
+The `.autodoc/docs/json/http/src/main/scala/org/oxyg3nium/http` folder contains essential components for handling HTTP requests and responses in the Oxyg3nium project. It includes classes for sending requests to endpoints, configuring server options, and serving a Swagger UI for API documentation.
 
 `EndpointSender.scala` provides a convenient way to send HTTP requests to endpoints defined in the Oxyg3nium project. It handles decoding failures and provides a simple interface for sending requests and receiving responses. For example, you can create an `EndpointSender` instance and use it to send a request to an endpoint:
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/benchmark/src/main/scala/org/alephium/benchmark/MiningBench.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/benchmark/src/main/scala/org/oxyg3nium/benchmark/MiningBench.scala)
 
 The `MiningBench` class is a benchmarking tool for measuring the throughput of mining a genesis block in the Oxyg3nium blockchain. The purpose of this benchmark is to test the performance of the Proof of Work (PoW) algorithm used in the Oxyg3nium blockchain. 
 

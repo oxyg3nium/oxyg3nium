@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/intraclique/InboundBrokerHandler.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/intraclique/InboundBrokerHandler.scala)
 
 This code defines the `InboundBrokerHandler` class and its associated `props` method. The `InboundBrokerHandler` is responsible for handling incoming broker connections within the Oxyg3nium network. 
 

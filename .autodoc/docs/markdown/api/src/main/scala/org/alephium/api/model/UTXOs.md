@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/UTXOs.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/UTXOs.scala)
 
 The code defines a case class called `UTXOs` which represents a collection of unspent transaction outputs (UTXOs) and an optional warning message. The `UTXOs` case class takes in a vector of `UTXO` objects and an optional warning message as parameters. The `UTXO` objects represent unspent transaction outputs that can be used as inputs for new transactions. 
 
@@ -14,8 +14,8 @@ val utxosObj = UTXOs.from(utxos, utxosLimit)
 println(utxosObj.warning.getOrElse("No warning"))
 ```
 ## Questions: 
- 1. What is the purpose of the `UTXOs` case class and how is it used in the `alephium` project?
-   - The `UTXOs` case class represents a collection of unspent transaction outputs and is used in the `alephium` project's API model.
+ 1. What is the purpose of the `UTXOs` case class and how is it used in the `oxyg3nium` project?
+   - The `UTXOs` case class represents a collection of unspent transaction outputs and is used in the `oxyg3nium` project's API model.
 2. What is the `from` method in the `UTXOs` object used for?
    - The `from` method is used to create a new `UTXOs` instance from a given collection of `UTXO` objects and an integer limit on the number of `UTXO` objects to include in the result.
 3. What is the purpose of the `warning` field in the `UTXOs` case class and when is it set?

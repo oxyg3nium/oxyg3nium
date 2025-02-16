@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Base58.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Base58.scala)
 
 The `Base58` object provides functionality for encoding and decoding data using the Base58 encoding scheme. This encoding scheme is commonly used in Bitcoin and other cryptocurrencies to represent data in a compact and human-readable format.
 

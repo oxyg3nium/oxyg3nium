@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/gasestimation/GasEstimation.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/gasestimation/GasEstimation.scala)
 
 The `GasEstimation` object is responsible for estimating the amount of gas required to execute various types of scripts in the Oxyg3nium blockchain. Gas is a measure of computational effort required to execute a script, and is used to prevent spamming and denial-of-service attacks on the network. 
 

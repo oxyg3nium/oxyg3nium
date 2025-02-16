@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/macros/src/main/scala/org/alephium/macros/HashSerde.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/macros/src/main/scala/org/oxyg3nium/macros/HashSerde.scala)
 
 The code defines a Scala macro annotation called `HashSerde`. This annotation is used to generate boilerplate code for classes that need to be serialized and hashed. The generated code adds a `bytes` field to the class that contains the serialized representation of the object, a `hash` field that contains the hash of the serialized bytes, and a `shortHex` method that returns a short hexadecimal string representation of the hash.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BlockCandidate.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BlockCandidate.scala)
 
 The code defines a case class called `BlockCandidate` which is used to represent a candidate block in the Oxyg3nium project. 
 
@@ -19,5 +19,5 @@ An example usage of this class could be in the process of mining a new block. Mi
 2. What is the significance of the `target` field in the `BlockCandidate` class?
    - The `target` field represents the difficulty target for the candidate block, which is used to ensure that the block is valid and meets the required level of computational effort.
 
-3. What is the relationship between the `BlockCandidate` class and the rest of the `alephium` project?
+3. What is the relationship between the `BlockCandidate` class and the rest of the `oxyg3nium` project?
    - The `BlockCandidate` class is part of the `org.oxyg3nium.api.model` package, which suggests that it is used in the API layer of the Oxyg3nium project. However, without further context it is unclear how exactly it is used within the project.

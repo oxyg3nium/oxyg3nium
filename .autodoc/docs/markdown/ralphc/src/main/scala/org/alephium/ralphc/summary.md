@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/ralphc/src/main/scala/org/alephium/ralphc)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/ralphc/src/main/scala/org/oxyg3nium/ralphc)
 
-The `.autodoc/docs/json/ralphc/src/main/scala/org/alephium/ralphc` folder contains several Scala files that are part of the Oxyg3nium project, specifically focusing on the Ralph compiler. The Ralph compiler is responsible for compiling smart contracts and scripts written in the Oxyg3nium language.
+The `.autodoc/docs/json/ralphc/src/main/scala/org/oxyg3nium/ralphc` folder contains several Scala files that are part of the Oxyg3nium project, specifically focusing on the Ralph compiler. The Ralph compiler is responsible for compiling smart contracts and scripts written in the Oxyg3nium language.
 
 `Artifacts.scala` defines case classes for managing code compilation and artifacts. These classes (`CodeInfo`, `Artifacts`, and `MetaInfo`) track changes to the code, manage compiled bytecode, and ensure proper linking within the project.
 

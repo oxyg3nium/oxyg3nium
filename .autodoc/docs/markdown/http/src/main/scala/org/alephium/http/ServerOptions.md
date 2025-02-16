@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/http/src/main/scala/org/alephium/http/ServerOptions.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/http/src/main/scala/org/oxyg3nium/http/ServerOptions.scala)
 
 This code defines an object called `ServerOptions` that contains a `VertxFutureServerOptions` instance. The `VertxFutureServerOptions` class is imported from the `sttp.tapir.server.vertx` package. This class provides options for configuring a server that uses the Vert.x framework.
 

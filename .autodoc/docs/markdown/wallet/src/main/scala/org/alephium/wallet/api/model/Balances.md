@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/Balances.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/Balances.scala)
 
 The code defines a Scala case class `Balances` and a companion object `Balances` with a nested case class `AddressBalance`. The `Balances` case class has three fields: `totalBalance`, `totalBalanceHint`, and `balances`. The `totalBalance` field is of type `Amount` and represents the total balance of all addresses. The `totalBalanceHint` field is of type `Amount.Hint` and represents a hint for the total balance. The `balances` field is of type `AVector[Balances.AddressBalance]` and represents a vector of `AddressBalance` objects.
 

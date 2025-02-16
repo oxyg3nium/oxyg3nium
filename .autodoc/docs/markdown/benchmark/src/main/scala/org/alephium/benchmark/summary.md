@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/benchmark/src/main/scala/org/alephium/benchmark)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/benchmark/src/main/scala/org/oxyg3nium/benchmark)
 
-The `.autodoc/docs/json/benchmark/src/main/scala/org/alephium/benchmark` folder contains various benchmarking tools for the Oxyg3nium project. These tools help developers measure the performance of different components and algorithms, identify bottlenecks, and optimize the codebase.
+The `.autodoc/docs/json/benchmark/src/main/scala/org/oxyg3nium/benchmark` folder contains various benchmarking tools for the Oxyg3nium project. These tools help developers measure the performance of different components and algorithms, identify bottlenecks, and optimize the codebase.
 
 For example, `BlockFlowBench.scala` measures the average time it takes to execute the `findBestDeps()` method, which calculates the best dependencies for a given group index in the blockchain. This benchmark helps evaluate the performance of the `BlockFlow` class, which manages the blockchain data in Oxyg3nium.
 

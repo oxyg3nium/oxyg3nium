@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/TimeInterval.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/TimeInterval.scala)
 
 This file contains the definition of a case class called `TimeInterval` and an object with the same name. The `TimeInterval` case class represents a time interval between two timestamps, `from` and `toOpt`. The `from` timestamp is mandatory, while the `toOpt` timestamp is optional. If `toOpt` is not provided, the current timestamp is used as the `to` timestamp. 
 

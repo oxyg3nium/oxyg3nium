@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/setting)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/setting)
 
 The code in the `setting` folder of the Oxyg3nium project is responsible for managing the configuration settings and providing utility functions for parsing and reading configuration values. The folder contains four files: `Oxyg3niumConfig.scala`, `ConfigUtils.scala`, `Configs.scala`, and `Platform.scala`.
 
@@ -7,7 +7,7 @@ The code in the `setting` folder of the Oxyg3nium project is responsible for man
 ```scala
 val configPath = "path/to/config/file"
 val rootPath = Paths.get("path/to/root")
-val alephiumConfig = Oxyg3niumConfig.load(rootPath, configPath)
+val oxyg3niumConfig = Oxyg3niumConfig.load(rootPath, configPath)
 ```
 
 `ConfigUtils.scala` provides utility functions for parsing and reading configuration values used in the Oxyg3nium project. It contains several implicit value readers that allow for the conversion of configuration values to their corresponding types. These functions are used throughout the project to ensure that configuration values are properly formatted and validated.

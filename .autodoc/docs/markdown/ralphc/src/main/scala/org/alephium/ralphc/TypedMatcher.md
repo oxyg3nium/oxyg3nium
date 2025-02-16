@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralphc/src/main/scala/org/alephium/ralphc/TypedMatcher.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralphc/src/main/scala/org/oxyg3nium/ralphc/TypedMatcher.scala)
 
 The code defines an object called `TypedMatcher` which contains three regular expressions used to match specific patterns in a given input string. The regular expressions are used to match the names of three different types of objects: contracts, interfaces, and transaction scripts. 
 

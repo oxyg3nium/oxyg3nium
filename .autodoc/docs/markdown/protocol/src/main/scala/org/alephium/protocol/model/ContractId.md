@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/ContractId.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/ContractId.scala)
 
 This file contains the implementation of the `ContractId` class and its companion object. The `ContractId` class represents the identifier of a smart contract in the Oxyg3nium blockchain. It is a wrapper around a `Hash` value and is defined as a value class, which means that it has no runtime overhead. 
 
@@ -12,9 +12,9 @@ Overall, the `ContractId` class and its companion object are essential component
 val contractId = ContractId.generate
 ```
 ## Questions: 
- 1. What is the purpose of the `ContractId` class and how is it used in the `alephium` project?
-   - The `ContractId` class represents a unique identifier for a smart contract in the `alephium` project. It is used to generate, manipulate, and retrieve contract IDs from various sources.
+ 1. What is the purpose of the `ContractId` class and how is it used in the `oxyg3nium` project?
+   - The `ContractId` class represents a unique identifier for a smart contract in the `oxyg3nium` project. It is used to generate, manipulate, and retrieve contract IDs from various sources.
 2. What is the significance of the `groupIndex` method in the `ContractId` class?
-   - The `groupIndex` method returns the group index associated with a given contract ID, which is used to determine the shard on which the contract is stored in the `alephium` network.
+   - The `groupIndex` method returns the group index associated with a given contract ID, which is used to determine the shard on which the contract is stored in the `oxyg3nium` network.
 3. What is the purpose of the `lemanUnsafe` method in the `ContractId` object?
-   - The `lemanUnsafe` method is used to generate a new contract ID from a deprecated contract ID and a group index, as part of a network upgrade in the `alephium` project. It is marked as "unsafe" because it assumes that the input contract ID is in a specific format that is no longer used in the upgraded network.
+   - The `lemanUnsafe` method is used to generate a new contract ID from a deprecated contract ID and a group index, as part of a network upgrade in the `oxyg3nium` project. It is marked as "unsafe" because it assumes that the input contract ID is in a specific format that is no longer used in the upgraded network.

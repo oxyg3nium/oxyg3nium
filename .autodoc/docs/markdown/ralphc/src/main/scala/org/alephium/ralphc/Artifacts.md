@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralphc/src/main/scala/org/alephium/ralphc/Artifacts.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralphc/src/main/scala/org/oxyg3nium/ralphc/Artifacts.scala)
 
 This file contains several case classes that are used in the Oxyg3nium project for managing code compilation and artifacts. 
 
@@ -21,8 +21,8 @@ val metaInfo = MetaInfo("add", Path("/path/to/artifact"), codeInfo)
 
 In this example, we have a simple piece of code that we want to compile and link into the larger project. We create a `CodeInfo` object to track information about the code, an `Artifacts` object to manage the compiled artifacts, and a `MetaInfo` object to provide metadata about the artifact. These objects can then be used to manage the code and artifacts throughout the project.
 ## Questions: 
- 1. What is the purpose of the `alephium` project?
-   - The `alephium` project is not described in this specific code file, so a smart developer might have to look for additional documentation or context to understand its purpose.
+ 1. What is the purpose of the `oxyg3nium` project?
+   - The `oxyg3nium` project is not described in this specific code file, so a smart developer might have to look for additional documentation or context to understand its purpose.
 
 2. What is the `CodeInfo` case class used for?
    - The `CodeInfo` case class is used to store information about a source code file, including its file name, hash, and any associated warnings.

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/UnsignedTransaction.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/UnsignedTransaction.scala)
 
 The `UnsignedTransaction` code is part of the Oxyg3nium project and represents an unsigned transaction in the blockchain. It is used to create, validate, and manipulate transactions before they are signed and added to the blockchain.
 

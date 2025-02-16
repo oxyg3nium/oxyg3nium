@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/RocksDBColumn.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/io/src/main/scala/org/oxyg3nium/io/RocksDBColumn.scala)
 
 This file contains code for interacting with a RocksDB database. RocksDB is an embedded key-value store that is optimized for fast storage and retrieval of data. The code defines a trait called `RocksDBColumn` that provides methods for reading, writing, and deleting key-value pairs in a RocksDB database. 
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/config/WalletConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/config/WalletConfig.scala)
 
 This code defines the configuration for the Oxyg3nium wallet. The `WalletConfig` case class contains various parameters that can be set to configure the wallet, such as the port number to listen on, the directory to store secret information, the timeout for locking, and the `BlockFlow` configuration. The `BlockFlow` case class contains information about the blockflow service, which is used to retrieve information about the blockchain.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/IntraCliqueSyncTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/IntraCliqueSyncTest.scala)
 
 This file contains code for testing the synchronization of nodes within a clique in the Oxyg3nium project. The code defines a class called `IntraCliqueSyncTest` which extends `Oxyg3niumActorSpec`, a class used for testing actors in the Oxyg3nium project. 
 

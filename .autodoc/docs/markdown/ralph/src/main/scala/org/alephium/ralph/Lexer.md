@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralph/src/main/scala/org/alephium/ralph/Lexer.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralph/src/main/scala/org/oxyg3nium/ralph/Lexer.scala)
 
 The `Lexer` object is a Scala implementation of a lexer, which is a program that takes a stream of characters as input and produces a stream of tokens as output. Tokens are meaningful units of code that can be used by a parser to build an abstract syntax tree (AST) of the code. The `Lexer` object is part of the Oxyg3nium project and is used to tokenize the Ralph programming language.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/Blake3.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/Blake3.scala)
 
 This file contains the implementation of the Blake3 cryptographic hash function for the Oxyg3nium project. The Blake3 hash function is used to generate a fixed-size output (32 bytes) from an arbitrary input. This implementation is based on the Bouncy Castle cryptographic library and provides a convenient interface for hashing data.
 

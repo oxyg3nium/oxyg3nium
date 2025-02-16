@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/tools/src/main/scala/org)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/tools/src/main/scala/org)
 
-The `.autodoc/docs/json/tools/src/main/scala/org/alephium/tools` folder contains various tools and utilities for the Oxyg3nium project. These tools help with tasks such as generating documentation, calculating inflation rates, validating patches, and generating wallets.
+The `.autodoc/docs/json/tools/src/main/scala/org/oxyg3nium/tools` folder contains various tools and utilities for the Oxyg3nium project. These tools help with tasks such as generating documentation, calculating inflation rates, validating patches, and generating wallets.
 
 `BuiltInFunctions.scala` is a tool that generates a JSON file containing information about the built-in functions in the Oxyg3nium protocol. This JSON file can be used by other tools to provide information about the functions to users, such as an IDE or a web-based documentation tool. Example usage:
 

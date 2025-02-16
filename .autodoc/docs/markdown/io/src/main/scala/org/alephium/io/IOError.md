@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/IOError.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/io/src/main/scala/org/oxyg3nium/io/IOError.scala)
 
 This file contains code related to error handling for input/output (IO) operations in the Oxyg3nium project. The purpose of this code is to define a set of error types that can be thrown when an IO operation fails, and to provide a way to handle those errors in a consistent manner throughout the project.
 

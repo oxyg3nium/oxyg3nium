@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralphc/src/main/scala/org/alephium/ralphc/Ralphc.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralphc/src/main/scala/org/oxyg3nium/ralphc/Ralphc.scala)
 
 This code is a part of the Oxyg3nium project and is responsible for running the Ralphc application. The Ralphc application is a command-line interface (CLI) tool that allows users to interact with the Oxyg3nium blockchain. 
 

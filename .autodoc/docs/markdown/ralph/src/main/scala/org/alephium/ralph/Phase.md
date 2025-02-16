@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralph/src/main/scala/org/alephium/ralph/Phase.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralph/src/main/scala/org/oxyg3nium/ralph/Phase.scala)
 
 This file contains code related to the compiler of the Oxyg3nium project. The code defines a sealed trait `Phase` and an object `Phase` with three case objects: `Initial`, `Check`, and `GenCode`. The trait `PhaseLike` extends the `Compiler.State[_]` trait and defines several methods and variables related to the different phases of the compiler.
 

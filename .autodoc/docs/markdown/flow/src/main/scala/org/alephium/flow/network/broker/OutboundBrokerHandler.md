@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/OutboundBrokerHandler.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/broker/OutboundBrokerHandler.scala)
 
 This code defines the `OutboundBrokerHandler` trait, which is used to handle outbound connections to other brokers in the Oxyg3nium network. The trait extends the `BrokerHandler` trait and the `EventStream.Publisher` trait. It also defines a case object `Retry` and a case class `OutboundBrokerHandler` that extends the `BrokerHandler` trait.
 
@@ -17,7 +17,7 @@ The `OutboundBrokerHandler` trait also overrides the `handShakeDuration`, `handS
 Overall, the `OutboundBrokerHandler` trait is used to handle outbound connections to other brokers in the Oxyg3nium network. It establishes a connection with the remote address, performs a handshake, and sends ping messages to maintain the connection.
 ## Questions: 
  1. What is the purpose of this code and what project is it a part of?
-- This code is part of the alephium project and it defines an OutboundBrokerHandler trait that extends a BrokerHandler trait. Its purpose is to handle outbound broker connections.
+- This code is part of the oxyg3nium project and it defines an OutboundBrokerHandler trait that extends a BrokerHandler trait. Its purpose is to handle outbound broker connections.
 
 2. What dependencies does this code have?
 - This code has dependencies on several other packages and classes, including akka.io.Tcp, org.oxyg3nium.flow.network, org.oxyg3nium.flow.setting.NetworkSetting, org.oxyg3nium.protocol.message.Hello, org.oxyg3nium.protocol.model.CliqueInfo, and org.oxyg3nium.util.ActorRefT.

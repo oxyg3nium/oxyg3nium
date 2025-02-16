@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralph/src/main/scala/org/alephium/ralph/error/FastParseExtension.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralph/src/main/scala/org/oxyg3nium/ralph/error/FastParseExtension.scala)
 
 The code provided is a Scala file that contains an object called `FastParseExtension`. This object provides a method called `LastIndex` that takes a `parser` and a `ctx` as input parameters and returns the tail/last index after the parser run. 
 

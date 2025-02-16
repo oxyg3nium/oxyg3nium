@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/serde/src/main/scala/org/alephium/serde/Staging.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/serde/src/main/scala/org/oxyg3nium/serde/Staging.scala)
 
 This code defines a case class called `Staging` that is used for serialization and deserialization of data in the Oxyg3nium project. The `Staging` class takes in a value of type `T` and a `ByteString` object called `rest`. The `ByteString` object represents the remaining bytes that have not been processed during serialization or deserialization.
 
@@ -32,11 +32,11 @@ In this example, we define a case class called `Person` that we want to serializ
 
 To deserialize the `Person` object, we access the `name` and `age` fields of the `value` field of the `Staging` object. We also get the remaining bytes that were not processed during deserialization from the `rest` field.
 ## Questions: 
- 1. What is the purpose of the `Staging` class and how is it used in the `alephium` project?
-   - The `Staging` class is used to represent a value of type `T` along with a `ByteString` that contains the remaining bytes after parsing the value. It is used in the `org.oxyg3nium.serde` package of the `alephium` project.
+ 1. What is the purpose of the `Staging` class and how is it used in the `oxyg3nium` project?
+   - The `Staging` class is used to represent a value of type `T` along with a `ByteString` that contains the remaining bytes after parsing the value. It is used in the `org.oxyg3nium.serde` package of the `oxyg3nium` project.
    
 2. What is the significance of the `mapValue` method in the `Staging` class?
    - The `mapValue` method is used to apply a function `f` to the value of type `T` stored in the `Staging` instance and return a new `Staging` instance with the result of the function application and the same `ByteString` as the original instance.
    
-3. What is the licensing for the `alephium` project and how does it affect the use of this code?
-   - The `alephium` project is licensed under the GNU Lesser General Public License, version 3 or later. This means that the code in this file can be redistributed and/or modified under the terms of this license, and any derivative works must also be licensed under the same terms.
+3. What is the licensing for the `oxyg3nium` project and how does it affect the use of this code?
+   - The `oxyg3nium` project is licensed under the GNU Lesser General Public License, version 3 or later. This means that the code in this file can be redistributed and/or modified under the terms of this license, and any derivative works must also be licensed under the same terms.

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/model/PersistedTxId.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/model/PersistedTxId.scala)
 
 This file contains the definition of a case class called `PersistedTxId` and an object with the same name. The `PersistedTxId` case class has two fields: `timestamp` of type `TimeStamp` and `txId` of type `TransactionId`. The purpose of this case class is to represent a transaction ID that has been persisted to storage along with its timestamp. 
 

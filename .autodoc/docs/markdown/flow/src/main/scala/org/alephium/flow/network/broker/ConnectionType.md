@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/ConnectionType.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/broker/ConnectionType.scala)
 
 This file contains code related to the network broker in the Oxyg3nium project. The purpose of this code is to define two types of connections: inbound and outbound. These connection types are represented by the sealed trait `ConnectionType`, which is defined at the beginning of the file. 
 
@@ -35,4 +35,4 @@ In this example, the `handleConnection` function takes a `ConnectionType` parame
    - The GNU Lesser General Public License is a type of open source software license that allows for the library to be freely distributed and modified, but with certain restrictions and requirements. Developers may want to know more about the specific terms and conditions of this license.
 
 3. What is the purpose of the `org.oxyg3nium.flow.network.broker` package?
-   - It is unclear from this code alone what the `org.oxyg3nium.flow.network.broker` package is used for. A smart developer may want to investigate other files within this package or consult documentation to understand its purpose within the larger `alephium` project.
+   - It is unclear from this code alone what the `org.oxyg3nium.flow.network.broker` package is used for. A smart developer may want to investigate other files within this package or consult documentation to understand its purpose within the larger `oxyg3nium` project.

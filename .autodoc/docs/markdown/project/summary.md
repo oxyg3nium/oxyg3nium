@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/project)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/project)
 
 The `.autodoc/docs/json/project` folder contains essential files for the Oxyg3nium project, including code generation, dependency management, versioning, and code style configuration.
 

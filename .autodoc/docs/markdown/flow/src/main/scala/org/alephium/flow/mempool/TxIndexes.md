@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/mempool/TxIndexes.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/mempool/TxIndexes.scala)
 
 The `TxIndexes` class is a data structure that indexes transactions in the mempool of the Oxyg3nium blockchain. It is used to efficiently query transactions by their inputs, outputs, and addresses. 
 
@@ -28,8 +28,8 @@ val relevantUtxos = txIndexes.getRelevantUtxos(lockupScript)
 txIndexes.remove(tx)
 ```
 ## Questions: 
- 1. What is the purpose of this code and how does it fit into the overall alephium project?
-- This code defines a class called `TxIndexes` which is used to index transactions in the mempool of the alephium project.
+ 1. What is the purpose of this code and how does it fit into the overall oxyg3nium project?
+- This code defines a class called `TxIndexes` which is used to index transactions in the mempool of the oxyg3nium project.
 - It is part of the `org.oxyg3nium.flow.mempool` package and is used to manage transactions in the mempool.
 
 2. What are the main data structures used in this code and how are they used?

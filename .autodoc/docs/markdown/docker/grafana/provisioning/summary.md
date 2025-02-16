@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/docker/grafana/provisioning)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/docker/grafana/provisioning)
 
 The `.autodoc/docs/json/docker/grafana/provisioning` folder contains configuration files for integrating the Oxyg3nium project with Grafana, a popular open-source platform for monitoring and observability. This integration allows Oxyg3nium to display monitoring data from Prometheus in a Grafana dashboard, providing valuable insights into the performance and health of the project.
 
@@ -28,7 +28,7 @@ Here's an example of how this code might be used:
 
 ```python
 # Load the configuration file
-config = load_config_file('alephium.yml')
+config = load_config_file('oxyg3nium.yml')
 
 # Get the list of datasources to delete
 delete_list = config['deleteDatasources']

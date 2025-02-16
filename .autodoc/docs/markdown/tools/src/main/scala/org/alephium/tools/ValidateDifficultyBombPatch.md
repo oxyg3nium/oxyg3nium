@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/tools/src/main/scala/org/alephium/tools/ValidateDifficultyBombPatch.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/tools/src/main/scala/org/oxyg3nium/tools/ValidateDifficultyBombPatch.scala)
 
 The `ValidateDifficultyBombPatch` object is a tool used to validate the difficulty bomb patch in the Oxyg3nium blockchain. The difficulty bomb is a mechanism that increases the difficulty of mining blocks over time, making it harder to mine new blocks. The purpose of the difficulty bomb patch is to prevent the difficulty from increasing too quickly, which could lead to a slowdown in block production.
 

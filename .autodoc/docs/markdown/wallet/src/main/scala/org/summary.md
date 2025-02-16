@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/wallet/src/main/scala/org)
 
 The code in the `wallet` folder is crucial for managing wallets, addresses, balances, and transactions in the Oxyg3nium project. It provides a convenient and type-safe way for users to interact with their wallets and the Oxyg3nium blockchain.
 

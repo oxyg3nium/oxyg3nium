@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/InboundBrokerHandler.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/broker/InboundBrokerHandler.scala)
 
 This code defines a trait called `InboundBrokerHandler` which is used to handle incoming broker connections in the Oxyg3nium network. The trait extends another trait called `BrokerHandler` and overrides some of its methods to provide specific behavior for incoming connections.
 
@@ -11,7 +11,7 @@ The `handShakeDuration` method is overridden to return the retry timeout from th
 Overall, this code provides a framework for handling incoming broker connections in the Oxyg3nium network. By implementing the `InboundBrokerHandler` trait and providing the required methods, developers can customize the behavior of incoming connections to fit their specific needs. For example, they could provide different retry timeouts or ping frequencies depending on the type of connection or the network conditions.
 ## Questions: 
  1. What is the purpose of this code and what project is it a part of?
-- This code is part of the alephium project and defines a trait for an inbound broker handler that handles incoming connections.
+- This code is part of the oxyg3nium project and defines a trait for an inbound broker handler that handles incoming connections.
 
 2. What dependencies does this code have?
 - This code imports several dependencies, including `akka.io.Tcp`, `org.oxyg3nium.flow.network.CliqueManager`, `org.oxyg3nium.flow.setting.NetworkSetting`, `org.oxyg3nium.protocol.message.{Hello, Payload}`, `org.oxyg3nium.protocol.model.CliqueInfo`, and `org.oxyg3nium.util.{ActorRefT, Duration}`.

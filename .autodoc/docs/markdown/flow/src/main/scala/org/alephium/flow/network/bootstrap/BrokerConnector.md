@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/bootstrap/BrokerConnector.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/bootstrap/BrokerConnector.scala)
 
-The `BrokerConnector` class is part of the `alephium` project and is responsible for connecting to a broker and sending/receiving messages. The broker is used during the bootstrap phase of the network, where nodes exchange information about the network topology and their roles. 
+The `BrokerConnector` class is part of the `oxyg3nium` project and is responsible for connecting to a broker and sending/receiving messages. The broker is used during the bootstrap phase of the network, where nodes exchange information about the network topology and their roles. 
 
 The `BrokerConnector` class is an Akka actor that communicates with the broker using TCP. It receives a `remoteAddress` and a `connection` as constructor arguments, which are used to create a `connectionHandler` actor. The `connectionHandler` actor is responsible for handling the TCP connection and deserializing incoming messages. 
 
@@ -14,7 +14,7 @@ In the `forwardReady` state, the actor expects to receive a `CliqueCoordinator.R
 
 If the actor receives an unexpected message, it logs an error message and shuts down the system. 
 
-The `BrokerConnector` class is used during the bootstrap phase of the network to connect to a broker and exchange information about the network topology and node roles. It is an important part of the `alephium` project's networking infrastructure. 
+The `BrokerConnector` class is used during the bootstrap phase of the network to connect to a broker and exchange information about the network topology and node roles. It is an important part of the `oxyg3nium` project's networking infrastructure. 
 
 Example usage: 
 
@@ -32,7 +32,7 @@ brokerConnector ! BrokerConnector.Send(intraCliqueInfo)
 ## Questions: 
  1. What is the purpose of this code?
     
-    This code is part of the `alephium` project and is responsible for connecting to a broker and forwarding clique information.
+    This code is part of the `oxyg3nium` project and is responsible for connecting to a broker and forwarding clique information.
 
 2. What external dependencies does this code have?
     

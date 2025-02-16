@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/EventBus.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/EventBus.scala)
 
 The code defines an event bus that can be used to publish and subscribe to events within the Oxyg3nium project. The event bus is implemented as an Akka actor and provides a simple API for subscribing to and publishing events.
 

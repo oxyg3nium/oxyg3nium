@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/Byte32.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/Byte32.scala)
 
 This code defines a class called `Byte32` and an object called `Byte32` that extends a companion object called `RandomBytes`. The purpose of this code is to provide a way to represent and manipulate 32-byte arrays of data, which are commonly used in cryptographic operations. 
 
@@ -12,8 +12,8 @@ Overall, this code provides a convenient and standardized way to represent and m
 val randomBytes = Byte32.random()
 ```
 ## Questions: 
- 1. What is the purpose of the `Byte32` class and how is it used in the `alephium` project?
-   - The `Byte32` class represents a 32-byte hash value and is used for cryptographic purposes in the `alephium` project.
+ 1. What is the purpose of the `Byte32` class and how is it used in the `oxyg3nium` project?
+   - The `Byte32` class represents a 32-byte hash value and is used for cryptographic purposes in the `oxyg3nium` project.
 2. What is the `RandomBytes` trait and how is it related to the `Byte32` class?
    - The `RandomBytes` trait is a serialization trait used for generating random byte arrays, and the `Byte32` class extends this trait to provide a 32-byte hash value.
 3. What is the `HashSchema` object and how is it used in the `Byte32` companion object?

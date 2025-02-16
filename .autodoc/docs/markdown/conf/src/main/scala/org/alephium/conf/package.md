@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/conf/src/main/scala/org/alephium/conf/package.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/conf/src/main/scala/org/oxyg3nium/conf/package.scala)
 
 This code defines a package object `conf` that contains several implicit value readers for parsing configuration values. The purpose of this code is to provide a convenient way to read configuration values from a Typesafe Config object. The `conf` object provides implicit value readers for several types, including `Path`, `U256`, `Address.Asset`, `AVector[T]`, and `Duration`. These readers can be used to parse configuration values of these types from a Typesafe Config object.
 

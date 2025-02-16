@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -86,7 +86,7 @@ object Boilerplate {
 
   object GenProductSerde extends Template {
     override def filename(root: File): File =
-      root / "org" / "alephium" / "serde" / "ProductSerde.scala"
+      root / "org" / "oxyg3nium" / "serde" / "ProductSerde.scala"
 
     // scalastyle:off method.length
     override def content(tv: TemplateVals): String = {
@@ -148,7 +148,7 @@ object Boilerplate {
 
   object GenProductSerializer extends Template {
     override def filename(root: File): File =
-      root / "org" / "alephium" / "serde" / "ProductSerializer.scala"
+      root / "org" / "oxyg3nium" / "serde" / "ProductSerializer.scala"
 
     // scalastyle:off method.length
     override def content(tv: TemplateVals): String = {
@@ -199,7 +199,7 @@ object Boilerplate {
 
   object GenProductSerdeTest extends TemplateTest {
     override def filename(root: File): File =
-      root / "org" / "alephium" / "serde" / "ProductSerdeSpec.scala"
+      root / "org" / "oxyg3nium" / "serde" / "ProductSerdeSpec.scala"
 
     override def content(tv: TemplateVals): String = {
       import tv._

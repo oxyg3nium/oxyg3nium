@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/main/scala/org/alephium/app/BlocksExporter.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/main/scala/org/oxyg3nium/app/BlocksExporter.scala)
 
 The `BlocksExporter` class is responsible for exporting blocks from the Oxyg3nium blockchain to a file. The class takes in a `BlockFlow` instance, which is responsible for managing the blockchain, and a `Path` instance, which represents the root directory where the exported file will be stored. The `GroupConfig` instance is also passed in implicitly.
 

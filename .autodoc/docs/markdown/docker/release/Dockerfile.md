@@ -1,16 +1,16 @@
-[View code on GitHub](https://github.com/alephium/alephium/docker/release/Dockerfile.release)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/docker/release/Dockerfile.release)
 
 This Dockerfile is used to build a Docker image for the Oxyg3nium project. The Oxyg3nium project is a blockchain platform that allows for the creation of decentralized applications. The purpose of this Dockerfile is to create a container that can run the Oxyg3nium node software.
 
 The Dockerfile starts by pulling the `eclipse-temurin:17-jre` image, which is a Java runtime environment. It then sets an argument called `RELEASE` to `0.0.0`. This argument is used later in the Dockerfile to download the Oxyg3nium node software.
 
-The next step is to download the Oxyg3nium node software from GitHub. This is done using the `curl` command, which downloads the software and saves it as `/alephium.jar`. The `mkdir` command is then used to create a directory called `/alephium-home`, which is used to store the Oxyg3nium node data. The `usermod` and `chown` commands are used to set the owner of the `/alephium-home` directory to `nobody`, which is a non-root user. The `mkdir` command is then used to create two directories called `~nobody/.alephium` and `~nobody/.alephium-wallets`, which are used to store the Oxyg3nium node configuration and wallet data, respectively. The `chown` command is used to set the owner of these directories to `nobody`.
+The next step is to download the Oxyg3nium node software from GitHub. This is done using the `curl` command, which downloads the software and saves it as `/oxyg3nium.jar`. The `mkdir` command is then used to create a directory called `/oxyg3nium-home`, which is used to store the Oxyg3nium node data. The `usermod` and `chown` commands are used to set the owner of the `/oxyg3nium-home` directory to `nobody`, which is a non-root user. The `mkdir` command is then used to create two directories called `~nobody/.oxyg3nium` and `~nobody/.oxyg3nium-wallets`, which are used to store the Oxyg3nium node configuration and wallet data, respectively. The `chown` command is used to set the owner of these directories to `nobody`.
 
-The `COPY` command is then used to copy two files into the container. The first file is called `user-mainnet-release.conf` and is copied to `/alephium-home/.alephium/user.conf`. This file contains the configuration settings for the Oxyg3nium node. The second file is called `entrypoint.sh` and is copied to the root directory of the container. This file is used as the entrypoint for the container.
+The `COPY` command is then used to copy two files into the container. The first file is called `user-mainnet-release.conf` and is copied to `/oxyg3nium-home/.oxyg3nium/user.conf`. This file contains the configuration settings for the Oxyg3nium node. The second file is called `entrypoint.sh` and is copied to the root directory of the container. This file is used as the entrypoint for the container.
 
 The `EXPOSE` command is used to expose four ports: `12973` for HTTP, `11973` for WebSocket, `10973` for the miner, and `9973` for P2P communication.
 
-The `VOLUME` command is used to create two volumes: `/alephium-home/.alephium` and `/alephium-home/.alephium-wallets`. These volumes are used to store the Oxyg3nium node data and wallet data, respectively.
+The `VOLUME` command is used to create two volumes: `/oxyg3nium-home/.oxyg3nium` and `/oxyg3nium-home/.oxyg3nium-wallets`. These volumes are used to store the Oxyg3nium node data and wallet data, respectively.
 
 The `USER` command is used to set the user to `nobody`.
 

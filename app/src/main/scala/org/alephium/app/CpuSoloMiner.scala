@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -31,7 +31,7 @@ object CpuSoloMiner extends App {
   val rootPath: Path = Platform.getRootPath()
   val typesafeConfig: Config =
     Configs.parseConfigAndValidate(Env.currentEnv, rootPath, overwrite = false)
-  val config: Oxyg3niumConfig = Oxyg3niumConfig.load(typesafeConfig, "alephium")
+  val config: Oxyg3niumConfig = Oxyg3niumConfig.load(typesafeConfig, "oxyg3nium")
   val system: ActorSystem    = ActorSystem("cpu-miner", typesafeConfig)
 
   new CpuSoloMiner(config, system, args.headOption)

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BuildTransaction.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/BuildTransaction.scala)
 
 The `BuildTransaction` class is a model used in the Oxyg3nium project to represent a transaction that can be built and sent to the network. It contains various fields that are used to specify the details of the transaction, such as the sender's public key, the list of destinations and their amounts, the list of unspent transaction outputs (UTXOs) to use as inputs, the gas amount and price, and the target block hash.
 

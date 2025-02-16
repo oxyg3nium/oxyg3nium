@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/BackoffStrategy.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/broker/BackoffStrategy.scala)
 
 This code defines two classes and a trait that implement backoff strategies for network communication in the Oxyg3nium project. The backoff strategy is a technique used to handle network errors by retrying requests with increasing delays between them. The purpose of this code is to provide a flexible and configurable way to implement backoff strategies for different network settings.
 

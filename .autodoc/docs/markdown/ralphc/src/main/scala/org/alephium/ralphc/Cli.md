@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralphc/src/main/scala/org/alephium/ralphc/Cli.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralphc/src/main/scala/org/oxyg3nium/ralphc/Cli.scala)
 
 The `Cli` class is responsible for parsing command line arguments and invoking the Oxyg3nium compiler to compile smart contracts. It defines a set of command line options that can be used to configure the compiler, such as the location of the contract and artifact folders, whether to treat warnings as errors, and which warnings to ignore.
 

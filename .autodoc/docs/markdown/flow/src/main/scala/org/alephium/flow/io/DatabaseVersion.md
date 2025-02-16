@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/io/DatabaseVersion.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/io/DatabaseVersion.scala)
 
 This file contains the definition of a case class called `DatabaseVersion` and an object with the same name. The purpose of this code is to provide a way to represent and serialize/deserialize database versions in the Oxyg3nium project. 
 
@@ -27,7 +27,7 @@ println(s"Current database version: $currentVersion")
 ```
 ## Questions: 
  1. What is the purpose of this code file?
-   - This code file is part of the alephium project and contains a final case class and an object for DatabaseVersion.
+   - This code file is part of the oxyg3nium project and contains a final case class and an object for DatabaseVersion.
 
 2. What is the license for this code?
    - This code is licensed under the GNU Lesser General Public License, version 3 or later.

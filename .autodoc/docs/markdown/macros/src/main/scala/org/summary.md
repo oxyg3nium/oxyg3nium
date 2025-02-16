@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/macros/src/main/scala/org)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/macros/src/main/scala/org)
 
-The `.autodoc/docs/json/macros/src/main/scala/org/alephium/macros` folder contains Scala macros and annotations that help generate boilerplate code and improve code efficiency in the Oxyg3nium project. These macros and annotations are used to automatically generate code for serialization, hashing, enumeration of sealed traits, and C-style for loops.
+The `.autodoc/docs/json/macros/src/main/scala/org/oxyg3nium/macros` folder contains Scala macros and annotations that help generate boilerplate code and improve code efficiency in the Oxyg3nium project. These macros and annotations are used to automatically generate code for serialization, hashing, enumeration of sealed traits, and C-style for loops.
 
 1. **ByteCode.scala**: This file defines a `ByteCode` macro annotation that adds a `code` method to case classes, returning a `Byte` value from the companion object. This can be useful when you need to associate a unique byte code with each case class instance.
 

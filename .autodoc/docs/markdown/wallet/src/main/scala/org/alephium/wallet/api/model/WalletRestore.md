@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/WalletRestore.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/WalletRestore.scala)
 
 This file contains two case classes that are used in the Oxyg3nium wallet API. The first case class is called `WalletRestore` and it represents the data needed to restore a wallet. It contains the following fields:
 

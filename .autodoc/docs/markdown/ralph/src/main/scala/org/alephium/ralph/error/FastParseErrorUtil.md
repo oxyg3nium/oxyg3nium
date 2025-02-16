@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralph/src/main/scala/org/alephium/ralph/error/FastParseErrorUtil.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralph/src/main/scala/org/oxyg3nium/ralph/error/FastParseErrorUtil.scala)
 
 The `FastParseErrorUtil` object is a utility module that provides a set of functions to handle errors that occur during parsing of Oxyg3nium code. The module is part of the Oxyg3nium project and is licensed under the GNU Lesser General Public License.
 

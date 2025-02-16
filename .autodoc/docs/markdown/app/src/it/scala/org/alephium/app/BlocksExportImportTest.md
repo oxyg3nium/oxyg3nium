@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/BlocksExportImportTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/BlocksExportImportTest.scala)
 
 This code is a test suite for the Oxyg3nium project's `BlocksExportImport` functionality. The purpose of this test is to ensure that blocks can be correctly exported and imported between nodes. 
 

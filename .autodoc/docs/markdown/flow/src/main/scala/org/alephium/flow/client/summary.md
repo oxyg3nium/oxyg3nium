@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/client)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/client)
 
 The `Node.scala` file in the Oxyg3nium project defines the structure and behavior of a node in the Oxyg3nium network. It consists of a `Node` trait and a `Node` object, which provide the necessary components and methods for managing a node in the network.
 

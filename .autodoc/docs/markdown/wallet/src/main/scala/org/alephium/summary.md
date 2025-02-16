@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/wallet/src/main/scala/org/oxyg3nium)
 
 The code in the `wallet` folder is responsible for the Oxyg3nium wallet's functionality, allowing users to interact with the Oxyg3nium blockchain through various wallet operations. It defines constants, wallet application logic, API documentation, and configuration settings, as well as providing JSON codecs, wallet services, secret storage, and web-related components.
 

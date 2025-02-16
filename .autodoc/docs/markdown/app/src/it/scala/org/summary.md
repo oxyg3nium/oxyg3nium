@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/app/src/it/scala/org)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/app/src/it/scala/org)
 
 The code in this folder is essential for ensuring the correct functioning of the Oxyg3nium project, as it contains integration tests that verify the proper interaction between the various components of the system. These tests are written in Scala and are designed to ensure that the different parts of the Oxyg3nium project work together correctly.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/SecP256K1.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/SecP256K1.scala)
 
 The code defines a cryptographic library for the Oxyg3nium project, which provides functionality for generating and manipulating private and public keys, signing and verifying messages, and recovering public keys from signatures. The library is implemented using the Bouncy Castle cryptographic library and the SecP256K1 elliptic curve, which is commonly used in blockchain applications.
 
@@ -12,8 +12,8 @@ The `SecP256K1` object provides static methods for generating private and public
 
 The library is designed to be used in the larger Oxyg3nium project, which may involve creating and verifying transactions, managing user accounts, and interacting with other blockchain nodes. For example, the library may be used to generate a private key and corresponding public key for a user account, sign a transaction with the private key, and verify the signature of a transaction received from another node. The library may also be used to recover the public key of a user who has signed a message, which can be used to verify their identity.
 ## Questions: 
- 1. What is the purpose of the `alephium.crypto` package?
-- The `alephium.crypto` package contains classes and traits related to cryptography, such as private and public keys, signatures, and signature verification.
+ 1. What is the purpose of the `oxyg3nium.crypto` package?
+- The `oxyg3nium.crypto` package contains classes and traits related to cryptography, such as private and public keys, signatures, and signature verification.
 
 2. What is the significance of the `SecP256K1` object?
 - The `SecP256K1` object is a singleton that implements the `SignatureSchema` trait for the secp256k1 elliptic curve. It provides methods for generating private and public keys, signing and verifying messages, and recovering the eth address that generated a signature.

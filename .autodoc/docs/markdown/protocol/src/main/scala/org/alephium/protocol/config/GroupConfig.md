@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/config/GroupConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/config/GroupConfig.scala)
 
 This code defines a trait called `GroupConfig` which provides configuration parameters for a group-based blockchain protocol. The trait includes several lazy values that are computed based on the `groups` parameter, which represents the number of groups in the blockchain network.
 
@@ -13,7 +13,7 @@ The `cliqueChainIndexes` and `cliqueGroupIndexes` values are vectors of `ChainIn
 Overall, this code provides a set of configuration parameters that are used throughout the Oxyg3nium blockchain protocol to define the structure and behavior of the network. By defining these parameters in a trait, the code allows for easy customization and extension of the protocol by other developers. For example, a developer could create a new implementation of the `GroupConfig` trait with different values for the `groups` parameter to create a network with a different number of groups.
 ## Questions: 
  1. What is the purpose of this code file?
-- This code file is part of the alephium project and contains the GroupConfig trait which defines various properties related to group configuration.
+- This code file is part of the oxyg3nium project and contains the GroupConfig trait which defines various properties related to group configuration.
 
 2. What is the significance of the lazy keyword used in this code?
 - The lazy keyword is used to define properties that are evaluated only when they are accessed for the first time, and their values are cached for future use.

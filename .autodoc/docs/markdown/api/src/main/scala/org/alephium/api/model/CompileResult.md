@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/CompileResult.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/CompileResult.scala)
 
 This file contains code related to compiling Oxyg3nium smart contracts and scripts. The code defines several case classes that represent the results of compiling a script or contract, as well as a case class that represents the result of compiling an entire project. 
 

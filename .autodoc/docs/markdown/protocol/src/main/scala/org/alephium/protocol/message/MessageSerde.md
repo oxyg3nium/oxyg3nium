@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/message/MessageSerde.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/message/MessageSerde.scala)
 
 The `MessageSerde` object provides serialization and deserialization functionality for messages in the Oxyg3nium protocol. It defines methods for extracting and validating message fields such as checksums and message lengths, as well as for unwrapping message payloads from their serialized form.
 

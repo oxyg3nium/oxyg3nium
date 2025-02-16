@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/WalletEndpoints.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/WalletEndpoints.scala)
 
 This code defines the endpoints for the wallet API of the Oxyg3nium project. The endpoints are defined using the Tapir library, which provides a type-safe and composable way to define HTTP endpoints in Scala. 
 

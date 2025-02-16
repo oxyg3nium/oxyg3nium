@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/UnlockScript.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/UnlockScript.scala)
 
 This code defines a sealed trait `UnlockScript` and its three case classes `P2PKH`, `P2MPKH`, and `P2SH` that extend it. `UnlockScript` represents the unlocking script of a transaction output, which is used to prove ownership of the coins locked in the output. The unlocking script is executed by the virtual machine (VM) to verify that it produces a valid result when combined with the locking script of the corresponding input.
 

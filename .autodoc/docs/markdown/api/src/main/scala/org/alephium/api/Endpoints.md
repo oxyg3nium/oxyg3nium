@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/Endpoints.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/Endpoints.scala)
 
 This code defines the API endpoints for the Oxyg3nium project, a blockchain platform. The endpoints are organized into several categories, such as `infos`, `addresses`, `multisig`, `transactions`, `miners`, `contracts`, `blockflow`, `utils`, and `events`. These categories cover various functionalities of the Oxyg3nium blockchain, such as node information, address management, multi-signature transactions, contract management, and event handling.
 
@@ -21,11 +21,11 @@ This endpoint is a part of the `addresses` category and is used to get the balan
 
 Overall, this code provides a comprehensive set of API endpoints for interacting with the Oxyg3nium blockchain, enabling developers to build applications and services on top of the platform.
 ## Questions: 
- 1. **Question**: What is the purpose of the `alephium` project?
-   **Answer**: The `alephium` project is a blockchain-based project, but the specific purpose or functionality is not clear from the provided code. The code seems to define various API endpoints for interacting with the blockchain, such as getting node information, managing transactions, and working with contracts.
+ 1. **Question**: What is the purpose of the `oxyg3nium` project?
+   **Answer**: The `oxyg3nium` project is a blockchain-based project, but the specific purpose or functionality is not clear from the provided code. The code seems to define various API endpoints for interacting with the blockchain, such as getting node information, managing transactions, and working with contracts.
 
 2. **Question**: What are the main components or modules in this code?
-   **Answer**: The main components in this code are the `Endpoints` trait and the `Endpoints` object. The `Endpoints` trait defines various API endpoints for the alephium project, such as managing transactions, contracts, and blockchain information. The `Endpoints` object provides helper methods and JSON body handling for the API endpoints.
+   **Answer**: The main components in this code are the `Endpoints` trait and the `Endpoints` object. The `Endpoints` trait defines various API endpoints for the oxyg3nium project, such as managing transactions, contracts, and blockchain information. The `Endpoints` object provides helper methods and JSON body handling for the API endpoints.
 
 3. **Question**: How does the code handle API errors and responses?
    **Answer**: The code handles API errors and responses using the `error` method defined in the `Endpoints` object. This method takes an `ApiError` and a `matcher` function to create a `OneOfVariant` for the error response. The API endpoints use this method to define error handling and response schemas for different scenarios.

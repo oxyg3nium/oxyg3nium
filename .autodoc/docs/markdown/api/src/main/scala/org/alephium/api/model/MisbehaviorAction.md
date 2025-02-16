@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/MisbehaviorAction.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/MisbehaviorAction.scala)
 
 This code defines a sealed trait called `MisbehaviorAction` and two case classes that extend it: `Ban` and `Unban`. The purpose of this code is to provide a way to handle misbehavior by peers in the Oxyg3nium network. 
 

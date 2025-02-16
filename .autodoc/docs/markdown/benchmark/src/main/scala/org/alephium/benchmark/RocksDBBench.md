@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/benchmark/src/main/scala/org/alephium/benchmark/RocksDBBench.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/benchmark/src/main/scala/org/oxyg3nium/benchmark/RocksDBBench.scala)
 
 The `RocksDBBench` class is a benchmarking tool for testing the performance of RocksDB, a high-performance embedded database for key-value data. The class contains several benchmarking methods that test the performance of RocksDB under different settings, such as different compaction strategies and memory budgets.
 

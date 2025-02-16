@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/OutputRef.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/OutputRef.scala)
 
 This file contains code for the `OutputRef` class and its companion object. The `OutputRef` class is a case class that represents a reference to an output in a transaction. It contains two fields: `hint`, an integer that represents the type of output (asset or contract), and `key`, a `Hash` object that represents the unique identifier of the output.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/mining/ExternalMinerMock.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/mining/ExternalMinerMock.scala)
 
 This code defines a mock external miner for the Oxyg3nium project. The miner is responsible for mining new blocks and submitting them to the network. The miner connects to the Oxyg3nium network via a TCP connection to the miner API. The miner receives mining tasks from the network and submits the resulting blocks back to the network.
 

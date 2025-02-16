@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/MiningTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/MiningTest.scala)
 
 The `MiningTest` class is a test suite for the mining functionality of the Oxyg3nium blockchain. It tests the mining process with different scenarios, including mining with two nodes, mining with an external miner, and mining multiple transactions.
 

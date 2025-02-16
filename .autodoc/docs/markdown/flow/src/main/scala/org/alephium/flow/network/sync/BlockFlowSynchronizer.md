@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/sync/BlockFlowSynchronizer.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/sync/BlockFlowSynchronizer.scala)
 
 The `BlockFlowSynchronizer` class is a component of the Oxyg3nium project that handles the synchronization of blocks between nodes in the network. It is responsible for managing the download and tracking of blocks, as well as handling announcements of new blocks and broker status updates.
 

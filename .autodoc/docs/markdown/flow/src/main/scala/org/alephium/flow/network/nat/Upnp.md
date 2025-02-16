@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/nat/Upnp.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/nat/Upnp.scala)
 
 This code defines a module for managing UPnP (Universal Plug and Play) port mappings. UPnP is a protocol that allows devices to discover and communicate with each other on a network. This module provides functionality for discovering UPnP gateway devices on a network and adding or deleting port mappings on those devices.
 
@@ -10,7 +10,7 @@ Overall, this module provides a way for the Oxyg3nium project to manage UPnP por
 ## Questions: 
  1. What is the purpose of this code?
     
-    This code is a part of the alephium project and it provides functionality for mapping external ports to internal ports using UPnP protocol.
+    This code is a part of the oxyg3nium project and it provides functionality for mapping external ports to internal ports using UPnP protocol.
 
 2. What is the license for this code?
     

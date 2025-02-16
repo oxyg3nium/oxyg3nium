@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/benchmark)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/benchmark)
 
 The `.autodoc/docs/json/benchmark` folder contains benchmarking tools for the Oxyg3nium project, which help developers measure the performance of different components and algorithms, identify bottlenecks, and optimize the codebase. The folder has a subfolder named `src` that contains various Scala files for benchmarking purposes.
 

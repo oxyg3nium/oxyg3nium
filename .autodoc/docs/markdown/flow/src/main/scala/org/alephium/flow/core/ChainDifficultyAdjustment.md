@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/ChainDifficultyAdjustment.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/ChainDifficultyAdjustment.scala)
 
 This file contains the implementation of the `ChainDifficultyAdjustment` trait, which provides methods for calculating the difficulty of mining blocks in the Oxyg3nium blockchain. The trait defines several abstract methods that must be implemented by any class that extends it, including `getHeight`, `getTimestamp`, `chainBackUntil`, and `getTarget`. These methods are used to retrieve information about the blockchain, such as the height and timestamp of a block, and the target difficulty for a given block height.
 

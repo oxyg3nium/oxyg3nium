@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/BroadcastTxTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/BroadcastTxTest.scala)
 
 The `BroadcastTxTest` class is a test suite for testing the broadcasting of transactions in the Oxyg3nium network. The class contains two test cases that test the broadcasting of transactions within a clique and between inter-clique nodes.
 

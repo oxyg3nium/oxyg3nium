@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/ValueSortedMap.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/ValueSortedMap.scala)
 
 The `ValueSortedMap` class is a data structure that implements a map with values sorted by their natural ordering. It is a wrapper around a `HashMap` and a `TreeMap`, where the `HashMap` is used to store the key-value pairs, and the `TreeMap` is used to maintain the order of the values based on their natural ordering. 
 

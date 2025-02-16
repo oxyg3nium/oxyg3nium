@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/SubmitTransaction.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/SubmitTransaction.scala)
 
 This code defines a Scala case class called `SubmitTransaction` that is used to represent a signed transaction in the Oxyg3nium project. The `SubmitTransaction` class has two fields: `unsignedTx` and `signature`. `unsignedTx` is a string that represents the unsigned transaction, while `signature` is an object of type `Signature` that represents the signature of the transaction.
 
@@ -31,5 +31,5 @@ Overall, this code is a small but important piece of the Oxyg3nium project that 
 2. What is the `Signature` class and where is it defined?
    - The `Signature` class is used in this code to represent a cryptographic signature. Its definition is not shown in this file, but it is imported from another package.
 
-3. What is the `alephium` project and what license is it released under?
-   - The `alephium` project is not described in detail in this file, but it is mentioned that this file is part of it. The project is released under the GNU Lesser General Public License, version 3 or later.
+3. What is the `oxyg3nium` project and what license is it released under?
+   - The `oxyg3nium` project is not described in detail in this file, but it is mentioned that this file is part of it. The project is released under the GNU Lesser General Public License, version 3 or later.

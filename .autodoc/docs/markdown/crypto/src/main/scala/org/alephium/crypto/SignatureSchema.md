@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/SignatureSchema.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/SignatureSchema.scala)
 
 This file contains code related to cryptography in the Oxyg3nium project. It defines several traits that are used to generate and verify digital signatures. 
 
@@ -34,8 +34,8 @@ val signature = MySignatureSchema.sign(message, privateKey)
 val isValid = MySignatureSchema.verify(message, signature, publicKey)
 ```
 ## Questions: 
- 1. What is the purpose of the `alephium.crypto` package?
-- The `alephium.crypto` package contains traits for private keys, public keys, and signatures, as well as a signature schema that defines methods for generating and verifying signatures.
+ 1. What is the purpose of the `oxyg3nium.crypto` package?
+- The `oxyg3nium.crypto` package contains traits for private keys, public keys, and signatures, as well as a signature schema that defines methods for generating and verifying signatures.
 
 2. What is the difference between `generatePriPub()` and `secureGeneratePriPub()`?
 - `generatePriPub()` and `secureGeneratePriPub()` both generate a private-public key pair, but `secureGeneratePriPub()` is intended to be more secure and may take longer to execute.

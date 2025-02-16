@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/main/scala/org/alephium/app/Documentation.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/main/scala/org/oxyg3nium/app/Documentation.scala)
 
 The `Documentation` trait is a part of the Oxyg3nium project and provides functionality for generating documentation for the Oxyg3nium API. It defines an `openAPI` object that represents the OpenAPI specification for the API, which can be used to generate documentation for the API.
 

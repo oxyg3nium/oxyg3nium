@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/AssetInput.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/AssetInput.scala)
 
 This code defines a Scala class called `AssetInput` and an object with the same name. The `AssetInput` class has two fields: `outputRef` and `unlockScript`. The `outputRef` field is of type `OutputRef`, which is defined in another file in the same package. The `unlockScript` field is of type `ByteString`, which is a data structure that represents a sequence of bytes.
 

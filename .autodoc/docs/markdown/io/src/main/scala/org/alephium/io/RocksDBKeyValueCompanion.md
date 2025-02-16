@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/RocksDBKeyValueCompanion.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/io/src/main/scala/org/oxyg3nium/io/RocksDBKeyValueCompanion.scala)
 
 This file contains a trait called `RocksDBKeyValueCompanion` that defines several factory methods for creating instances of a `RocksDBKeyValueStorage` implementation. 
 

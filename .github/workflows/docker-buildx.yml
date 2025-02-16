@@ -48,8 +48,8 @@ jobs:
           build-args: RELEASE=${{ steps.get_version.outputs.VERSION-NO-V }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            docker.io/alephium/alephium:${{ steps.get_version.outputs.VERSION }}
-            docker.io/alephium/alephium:latest
+            docker.io/oxyg3nium/oxyg3nium:${{ steps.get_version.outputs.VERSION }}
+            docker.io/oxyg3nium/oxyg3nium:latest
           push: true
 
       - name: Build and publish docker image (using adoptjdk for older docker) for stable versions
@@ -61,7 +61,7 @@ jobs:
           build-args: RELEASE=${{ steps.get_version.outputs.VERSION-NO-V }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            docker.io/alephium/alephium:${{ steps.get_version.outputs.VERSION }}-adoptjdk
+            docker.io/oxyg3nium/oxyg3nium:${{ steps.get_version.outputs.VERSION }}-adoptjdk
           push: true
 
       - name: Build and publish docker image for development
@@ -72,8 +72,8 @@ jobs:
           build-args: RELEASE=${{ steps.get_version.outputs.VERSION-NO-V }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            docker.io/alephium/dev-alephium:${{ steps.get_version.outputs.VERSION-NO-V }}
-            docker.io/alephium/dev-alephium:latest
+            docker.io/oxyg3nium/dev-oxyg3nium:${{ steps.get_version.outputs.VERSION-NO-V }}
+            docker.io/oxyg3nium/dev-oxyg3nium:latest
           push: true
 
       - name: Build and publish tools docker image for stable versions
@@ -85,6 +85,6 @@ jobs:
           build-args: RELEASE=${{ steps.get_version.outputs.VERSION-NO-V }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            docker.io/alephium/alephium-tools:${{ steps.get_version.outputs.VERSION }}
-            docker.io/alephium/alephium-tools:latest
+            docker.io/oxyg3nium/oxyg3nium-tools:${{ steps.get_version.outputs.VERSION }}
+            docker.io/oxyg3nium/oxyg3nium-tools:latest
           push: true

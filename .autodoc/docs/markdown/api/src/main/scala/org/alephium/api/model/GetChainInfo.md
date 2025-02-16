@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/GetChainInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/GetChainInfo.scala)
 
 The code above defines a case class called `GetChainInfo` which is used in the Oxyg3nium project's API model. The purpose of this case class is to represent a request for information about a chain of blocks in the Oxyg3nium blockchain. 
 

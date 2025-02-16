@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/ReadableKV.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/io/src/main/scala/org/oxyg3nium/io/ReadableKV.scala)
 
 This code defines a trait called `ReadableKV` which is used for reading key-value pairs from a data store. The trait has three methods: `get`, `getOpt`, and `exists`. 
 

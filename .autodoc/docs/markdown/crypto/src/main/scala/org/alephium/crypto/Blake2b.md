@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/Blake2b.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/Blake2b.scala)
 
 The code defines a class and an object related to the Blake2b cryptographic hash function. The purpose of this code is to provide a way to generate a Blake2b hash from a given input. 
 

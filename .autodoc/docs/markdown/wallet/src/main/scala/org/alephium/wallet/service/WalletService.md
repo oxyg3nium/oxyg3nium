@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/service/WalletService.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/service/WalletService.scala)
 
 The `WalletService` is a core component of the Oxyg3nium project that provides functionalities for managing wallets, addresses, and transactions. It is designed to interact with the Oxyg3nium blockchain and perform various wallet-related operations.
 

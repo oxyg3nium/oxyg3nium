@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/conf/src/main/scala/org/alephium/conf)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/conf/src/main/scala/org/oxyg3nium/conf)
 
-The folder `.autodoc/docs/json/conf/src/main/scala/org/alephium/conf` contains the configuration files for the Oxyg3nium project. These files are responsible for setting up various parameters and configurations that are used throughout the project. The following is a summary of the files in this folder:
+The folder `.autodoc/docs/json/conf/src/main/scala/org/oxyg3nium/conf` contains the configuration files for the Oxyg3nium project. These files are responsible for setting up various parameters and configurations that are used throughout the project. The following is a summary of the files in this folder:
 
 1. `Oxyg3niumConfig.scala`: This file contains the main configuration class `Oxyg3niumConfig`, which is responsible for loading and managing all the configurations for the Oxyg3nium project. It includes configurations for network settings, consensus settings, mining settings, and more. The `Oxyg3niumConfig` class is used throughout the project to access these configurations. For example, to get the network settings, you can use `Oxyg3niumConfig.network`.
 

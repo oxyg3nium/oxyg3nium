@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main)
 
 The `.autodoc/docs/json/flow/src/main` folder contains essential configuration files and utility functions for the Oxyg3nium project. The configuration files in the `resources` subfolder define various parameters for different components of the project, such as consensus, mining, network, discovery, mempool, API, wallet, and node. These files are crucial for customizing the behavior of the Oxyg3nium project to suit specific needs and optimize its performance.
 

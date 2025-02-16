@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/validation/Validation.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/validation/Validation.scala)
 
 This file contains code related to data validation in the Oxyg3nium project. The code defines an abstract class called `Validation` that takes three type parameters: `T`, `I`, and `R`. The `T` parameter represents the type of data that needs to be validated, `I` represents the type of invalid status that can be returned, and `R` represents the type of result that can be returned if the validation is successful. The `Validation` class has three methods: `validate`, `validateUntilDependencies`, and `validateAfterDependencies`. These methods take in the data to be validated and a `BlockFlow` object, which represents the flow of blocks in the blockchain.
 

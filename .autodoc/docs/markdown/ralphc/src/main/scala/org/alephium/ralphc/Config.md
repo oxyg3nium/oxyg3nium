@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralphc/src/main/scala/org/alephium/ralphc/Config.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralphc/src/main/scala/org/oxyg3nium/ralphc/Config.scala)
 
 The code defines two case classes, `Configs` and `Config`, that are used to store and retrieve configuration options for the Oxyg3nium project's Ralph compiler. 
 

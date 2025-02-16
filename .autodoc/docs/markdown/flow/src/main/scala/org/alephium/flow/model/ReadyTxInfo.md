@@ -1,12 +1,12 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/model/ReadyTxInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/model/ReadyTxInfo.scala)
 
 This file contains code for the ReadyTxInfo class and its associated Serde implementation. The ReadyTxInfo class is a case class that represents information about a transaction that is ready to be included in a block. It contains two fields: chainIndex, which is a ChainIndex object representing the range of groups that the transaction spans, and timestamp, which is a TimeStamp object representing the time at which the transaction became ready.
 
-The ChainIndex and TimeStamp classes are imported from other packages in the alephium project. The ChainIndex class represents a range of group indices, while the TimeStamp class represents a Unix timestamp.
+The ChainIndex and TimeStamp classes are imported from other packages in the oxyg3nium project. The ChainIndex class represents a range of group indices, while the TimeStamp class represents a Unix timestamp.
 
-The ReadyTxInfo object also contains a Serde implementation for the ReadyTxInfo class. Serde is a serialization/deserialization library used throughout the alephium project. The Serde implementation for ReadyTxInfo uses the Serde implementation for ChainIndex and a built-in Serde implementation for TimeStamp.
+The ReadyTxInfo object also contains a Serde implementation for the ReadyTxInfo class. Serde is a serialization/deserialization library used throughout the oxyg3nium project. The Serde implementation for ReadyTxInfo uses the Serde implementation for ChainIndex and a built-in Serde implementation for TimeStamp.
 
-This code is used in the larger alephium project to represent information about transactions that are ready to be included in blocks. The ReadyTxInfo class is likely used in conjunction with other classes and functions to manage the flow of transactions through the system. The Serde implementation is used to serialize and deserialize ReadyTxInfo objects for storage and transmission. 
+This code is used in the larger oxyg3nium project to represent information about transactions that are ready to be included in blocks. The ReadyTxInfo class is likely used in conjunction with other classes and functions to manage the flow of transactions through the system. The Serde implementation is used to serialize and deserialize ReadyTxInfo objects for storage and transmission. 
 
 Example usage:
 

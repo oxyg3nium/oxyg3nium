@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/config/DiscoveryConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/config/DiscoveryConfig.scala)
 
 The code defines a trait called `DiscoveryConfig` which contains various configuration parameters related to peer discovery in the Oxyg3nium project. 
 

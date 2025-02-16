@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network)
 
-The code in the `.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network` folder is responsible for managing the network communication and connections between nodes in the Oxyg3nium blockchain platform. It includes classes and traits for bootstrapping the network, managing cliques, handling discovery, and synchronizing data between nodes.
+The code in the `.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network` folder is responsible for managing the network communication and connections between nodes in the Oxyg3nium blockchain platform. It includes classes and traits for bootstrapping the network, managing cliques, handling discovery, and synchronizing data between nodes.
 
 For example, the `Bootstrapper.scala` file defines the `Bootstrapper` class, which is responsible for connecting nodes and creating cliques. Depending on the node's role, it uses one of its subclasses: `SingleNodeCliqueBootstrapper`, `CliqueCoordinatorBootstrapper`, or `BrokerBootstrapper`. The `BootstrapperHandler` trait defines common methods and variables for these subclasses.
 

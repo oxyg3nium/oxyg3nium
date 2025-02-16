@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/client/Node.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/client/Node.scala)
 
 The `Node` object and `Node` trait are part of the Oxyg3nium project and are used to define a node in the Oxyg3nium network. The `Node` trait defines a set of abstract methods and values that must be implemented by any concrete `Node` object. The `Node` object provides a default implementation of the `Node` trait.
 

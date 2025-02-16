@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/MultisigTest.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/it/scala/org/oxyg3nium/app/MultisigTest.scala)
 
 The `MultisigTest` class is a test suite for testing the functionality of multisignature transactions in the Oxyg3nium project. Multisignature transactions are transactions that require multiple signatures to be authorized, making them more secure than regular transactions that only require one signature. 
 

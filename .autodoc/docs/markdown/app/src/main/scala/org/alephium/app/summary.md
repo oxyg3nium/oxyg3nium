@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/app/src/main/scala/org/alephium/app)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/app/src/main/scala/org/oxyg3nium/app)
 
-The `.autodoc/docs/json/app/src/main/scala/org/alephium/app` folder contains various Scala files that are essential for the Oxyg3nium project, which is a blockchain platform. These files are responsible for handling API configurations, exporting and importing blocks, booting up the application, managing CPU solo mining, generating API documentation, and managing REST and WebSocket servers.
+The `.autodoc/docs/json/app/src/main/scala/org/oxyg3nium/app` folder contains various Scala files that are essential for the Oxyg3nium project, which is a blockchain platform. These files are responsible for handling API configurations, exporting and importing blocks, booting up the application, managing CPU solo mining, generating API documentation, and managing REST and WebSocket servers.
 
 For example, the `ApiConfig.scala` file defines the `ApiConfig` class and its companion object, which are responsible for loading and validating configuration parameters for the Oxyg3nium API. This makes it easy to pass around and use these parameters in other parts of the codebase.
 

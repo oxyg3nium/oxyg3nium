@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/main/scala/org/alephium/app/CpuSoloMiner.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/main/scala/org/oxyg3nium/app/CpuSoloMiner.scala)
 
 This code defines a CPU solo miner for the Oxyg3nium cryptocurrency. The purpose of this code is to provide a way for users to mine Oxyg3nium blocks using their CPU. 
 

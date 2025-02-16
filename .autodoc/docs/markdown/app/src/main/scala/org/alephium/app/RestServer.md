@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/main/scala/org/alephium/app/RestServer.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/main/scala/org/oxyg3nium/app/RestServer.scala)
 
 The `RestServer` class is a REST API server that exposes various endpoints for interacting with the Oxyg3nium blockchain. It is built using the Vert.x web framework and uses the Tapir library for defining and handling endpoints. 
 

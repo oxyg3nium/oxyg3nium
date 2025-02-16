@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -31,7 +31,7 @@ import org.oxyg3nium.util.{Env, Math}
 object ValidateDifficultyBombPatch extends App {
   private val rootPath: Path = Platform.getRootPath()
   private val typesafeConfig = Configs.parseConfigAndValidate(Env.Prod, rootPath, overwrite = true)
-  implicit private val config: Oxyg3niumConfig = Oxyg3niumConfig.load(typesafeConfig, "alephium")
+  implicit private val config: Oxyg3niumConfig = Oxyg3niumConfig.load(typesafeConfig, "oxyg3nium")
   private val dbPath                          = rootPath.resolve("mainnet")
   private val storages =
     Storages.createUnsafe(dbPath, "db", ProdSettings.writeOptions)(config.broker, config.node)

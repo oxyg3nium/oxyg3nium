@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/IOUtils.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/io/src/main/scala/org/oxyg3nium/io/IOUtils.scala)
 
 The `IOUtils` file is part of the Oxyg3nium project and contains utility functions for handling input/output (IO) operations. The file is written in Scala and imports several classes from the Java standard library. 
 

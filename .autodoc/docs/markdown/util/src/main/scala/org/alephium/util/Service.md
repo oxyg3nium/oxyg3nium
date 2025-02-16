@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Service.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Service.scala)
 
 This code defines a trait called `Service` which is used to define a service that can be started and stopped. The trait provides methods to start and stop the service, as well as sub-services that the service may depend on. The `Service` trait extends the `StrictLogging` trait, which provides logging capabilities.
 

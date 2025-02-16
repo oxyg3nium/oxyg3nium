@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/benchmark/src/main/scala/org/alephium/benchmark/CollectionBench.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/benchmark/src/main/scala/org/oxyg3nium/benchmark/CollectionBench.scala)
 
 The `CollectionBench` class is a benchmarking tool that measures the performance of various operations on two different collection types: `Vector` and `AVector`. The purpose of this benchmark is to compare the performance of these two collections and determine which one is faster for different operations.
 

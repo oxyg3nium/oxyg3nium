@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/mining/MinerApiController.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/mining/MinerApiController.scala)
 
 The `MinerApiController` is a class that handles the mining API server for the Oxyg3nium project. The purpose of this code is to allow miners to connect to the Oxyg3nium network and receive mining tasks, as well as submit mined blocks to the network.
 

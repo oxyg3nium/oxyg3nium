@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/handler/ViewHandler.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/handler/ViewHandler.scala)
 
 This file contains the implementation of the `ViewHandler` class, which is responsible for handling the view of the block flow. The block flow is a directed acyclic graph (DAG) of blocks that represents the state of the Oxyg3nium blockchain. The `ViewHandler` class is used to prepare and update the templates of the block flow, which are used by miners to create new blocks.
 

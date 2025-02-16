@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/Transaction.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/Transaction.scala)
 
 The code defines a `Transaction` class and a companion object in the `org.oxyg3nium.api.model` package. The `Transaction` class represents a transaction in the Oxyg3nium blockchain. It contains the following fields:
 

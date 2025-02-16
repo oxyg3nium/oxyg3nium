@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/crypto/src/main/scala/org/alephium/crypto/Sha3.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/crypto/src/main/scala/org/oxyg3nium/crypto/Sha3.scala)
 
 This file contains code related to cryptographic hashing using the SHA3 algorithm. The code is part of the Oxyg3nium project and is licensed under the GNU Lesser General Public License. 
 
@@ -26,13 +26,13 @@ val hash = Sha3.computeHash(data)
 
 This will return the SHA3 hash value of the `data` `ByteString`. Overall, the `Sha3` class and object provide a convenient and standardized way to compute SHA3 hash values in the Oxyg3nium project.
 ## Questions: 
- 1. What is the purpose of the `Sha3` class and how is it used in the `alephium` project?
+ 1. What is the purpose of the `Sha3` class and how is it used in the `oxyg3nium` project?
    
-   The `Sha3` class is used for generating SHA3 hashes and extends the `RandomBytes` trait. It is used in the `alephium` project for cryptographic purposes.
+   The `Sha3` class is used for generating SHA3 hashes and extends the `RandomBytes` trait. It is used in the `oxyg3nium` project for cryptographic purposes.
 
 2. What is the `BCHashSchema` trait and how is it related to the `Sha3` object?
    
-   The `BCHashSchema` trait is a trait for defining hash functions in the `alephium` project. The `Sha3` object extends this trait and provides an implementation for the SHA3 hash function.
+   The `BCHashSchema` trait is a trait for defining hash functions in the `oxyg3nium` project. The `Sha3` object extends this trait and provides an implementation for the SHA3 hash function.
 
 3. What is the purpose of the `provider` method in the `Sha3` object?
    

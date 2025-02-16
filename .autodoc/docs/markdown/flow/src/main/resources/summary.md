@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/resources)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/resources)
 
 The `.autodoc/docs/json/flow/src/main/resources` folder contains configuration files that define various parameters for different components of the Oxyg3nium project, such as consensus, mining, network, discovery, mempool, API, wallet, and node. These configuration files are essential for customizing the behavior of the Oxyg3nium project to suit specific needs and optimize its performance.
 
@@ -16,7 +16,7 @@ The `system_it.conf.tmpl` and `system_prod.conf.tmpl` files set various paramete
 import com.typesafe.config.ConfigFactory
 
 val config = ConfigFactory.load()
-val networkConfig = config.getConfig("alephium.network")
+val networkConfig = config.getConfig("oxyg3nium.network")
 val restPort = networkConfig.getInt("rest-port")
 val wsPort = networkConfig.getInt("ws-port")
 ```

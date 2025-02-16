@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/WalletStatus.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/WalletStatus.scala)
 
 The code above defines a case class called `WalletStatus` that is used in the Oxyg3nium wallet API. The purpose of this class is to represent the status of a wallet, including its name and whether it is currently locked or not.
 
@@ -26,7 +26,7 @@ In this example, we create a new `WalletStatus` object with the name "my_wallet"
    - The `WalletStatus` case class is used to represent the status of a wallet, including its name and whether it is locked or not.
 
 2. What is the significance of the copyright and license information at the top of the file?
-   - The copyright and license information indicates that the code is part of the alephium project and is licensed under the GNU Lesser General Public License, which allows for the free distribution and modification of the code.
+   - The copyright and license information indicates that the code is part of the oxyg3nium project and is licensed under the GNU Lesser General Public License, which allows for the free distribution and modification of the code.
 
 3. What is the `org.oxyg3nium.wallet.api.model` package used for?
-   - The `org.oxyg3nium.wallet.api.model` package is likely used to contain various models and data structures related to the wallet functionality of the alephium project.
+   - The `org.oxyg3nium.wallet.api.model` package is likely used to contain various models and data structures related to the wallet functionality of the oxyg3nium project.

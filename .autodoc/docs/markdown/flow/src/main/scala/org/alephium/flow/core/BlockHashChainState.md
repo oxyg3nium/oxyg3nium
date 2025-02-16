@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/BlockHashChainState.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/BlockHashChainState.scala)
 
 This code defines a trait called `BlockHashChainState` that provides functionality for managing a chain of block hashes. It is part of the Oxyg3nium project, which is a free software project distributed under the GNU Lesser General Public License.
 

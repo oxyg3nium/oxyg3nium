@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/event/CachedLog.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/event/CachedLog.scala)
 
 This file contains the implementation of a CachedLog class that is used to cache and persist log data in the Oxyg3nium project. The purpose of this class is to provide a way to store and retrieve log data efficiently, while also allowing for easy persistence of the data.
 

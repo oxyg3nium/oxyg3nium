@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/package.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/io/src/main/scala/org/oxyg3nium/io/package.scala)
 
 This code defines a type alias called `IOResult` in the `org.oxyg3nium.io` package object. The `IOResult` type is defined as an `Either` type with two possible values: `IOError` and `T`. 
 
@@ -33,11 +33,11 @@ The `result` variable is then pattern matched to determine whether the operation
 
 Overall, this code provides a useful abstraction for handling I/O operations in the Oxyg3nium project, making it easier to write robust and reliable code.
 ## Questions: 
- 1. What is the purpose of the `alephium` project?
-- The `alephium` project is not described in this specific code file, so a smart developer might want to look for additional documentation or information about the project's goals and objectives.
+ 1. What is the purpose of the `oxyg3nium` project?
+- The `oxyg3nium` project is not described in this specific code file, so a smart developer might want to look for additional documentation or information about the project's goals and objectives.
 
 2. What is the `IOResult` type used for?
 - The `IOResult` type is defined as an alias for `Either[IOError, T]`, which suggests that it is used to represent the result of an I/O operation that can either succeed with a value of type `T` or fail with an `IOError`.
 
 3. Are there any specific I/O operations or functions defined in this file?
-- No, this file only defines the `IOResult` type alias within the `org.oxyg3nium.io` package object. A smart developer might want to look for other files or modules within the `alephium` project that use this type or define I/O operations.
+- No, this file only defines the `IOResult` type alias within the `org.oxyg3nium.io` package object. A smart developer might want to look for other files or modules within the `oxyg3nium` project that use this type or define I/O operations.

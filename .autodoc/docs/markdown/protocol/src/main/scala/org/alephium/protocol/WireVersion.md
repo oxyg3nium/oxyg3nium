@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/WireVersion.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/WireVersion.scala)
 
 This code defines a case class called `WireVersion` and an object called `WireVersion` that contains a `Serde` instance and a `currentWireVersion` value. 
 

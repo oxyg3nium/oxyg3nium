@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/TimeStamp.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/TimeStamp.scala)
 
 The code defines a TimeStamp class and a companion object in the `org.oxyg3nium.util` package. The TimeStamp class is a value class that takes a Long value representing the number of milliseconds since the Unix epoch (January 1, 1970, 00:00:00 UTC) and provides methods to perform arithmetic operations on it. The companion object provides factory methods to create TimeStamp instances and a few utility methods.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/ExportFile.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/ExportFile.scala)
 
 The code above defines a case class called `ExportFile` that is used in the Oxyg3nium project. The purpose of this class is to represent a file that is being exported from the project. It has a single field called `filename` which is a string that represents the name of the file being exported.
 
@@ -18,6 +18,6 @@ Overall, this code is a small but important part of the Oxyg3nium project, provi
  1. What is the purpose of the `ExportFile` case class?
    - The `ExportFile` case class is used to represent a file that is being exported, and it contains a `filename` field that specifies the name of the file.
 2. What is the significance of the GNU Lesser General Public License mentioned in the code?
-   - The GNU Lesser General Public License is the license under which the `alephium` library is distributed, and it allows users to modify and redistribute the library under certain conditions.
+   - The GNU Lesser General Public License is the license under which the `oxyg3nium` library is distributed, and it allows users to modify and redistribute the library under certain conditions.
 3. What is the `org.oxyg3nium.api.model` package used for?
-   - The `org.oxyg3nium.api.model` package contains the `ExportFile` case class and potentially other model classes that are used in the `alephium` API.
+   - The `org.oxyg3nium.api.model` package contains the `ExportFile` case class and potentially other model classes that are used in the `oxyg3nium` API.

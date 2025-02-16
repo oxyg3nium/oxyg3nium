@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/SubmitTxResult.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/SubmitTxResult.scala)
 
 This file contains a Scala case class called `SubmitTxResult` that is used in the Oxyg3nium project. The purpose of this class is to represent the result of submitting a transaction to the Oxyg3nium network. 
 
@@ -31,5 +31,5 @@ In this example, we create a new `SubmitTxResult` object with a `TransactionId` 
 2. What is the significance of the `TransactionId` import statement?
    - The `TransactionId` import statement indicates that the `TransactionId` type is used in the `SubmitTxResult` case class.
 
-3. What is the `alephium` project licensed under?
-   - The `alephium` project is licensed under the GNU Lesser General Public License, as stated in the code comments.
+3. What is the `oxyg3nium` project licensed under?
+   - The `oxyg3nium` project is licensed under the GNU Lesser General Public License, as stated in the code comments.

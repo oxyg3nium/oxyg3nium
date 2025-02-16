@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/setting/Oxyg3niumConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/setting/Oxyg3niumConfig.scala)
 
 This code defines the configuration settings for the Oxyg3nium project, a blockchain platform. The configuration settings are organized into several case classes, each representing a specific aspect of the system, such as consensus, mining, network, discovery, mempool, wallet, node, and genesis settings.
 
@@ -13,7 +13,7 @@ Here's an example of how to load the configuration settings:
 ```scala
 val configPath = "path/to/config/file"
 val rootPath = Paths.get("path/to/root")
-val alephiumConfig = Oxyg3niumConfig.load(rootPath, configPath)
+val oxyg3niumConfig = Oxyg3niumConfig.load(rootPath, configPath)
 ```
 
 This configuration object can then be used throughout the Oxyg3nium project to access various settings and customize the behavior of the system.
@@ -22,7 +22,7 @@ This configuration object can then be used throughout the Oxyg3nium project to a
    **Answer**: The `Oxyg3niumConfig` object and its related case classes are used to define and load the configuration settings for the Oxyg3nium project. These settings include broker, consensus, mining, network, discovery, mempool, wallet, node, and genesis configurations.
 
 2. **Question**: How does the `load` method work in the `Oxyg3niumConfig` object?
-   **Answer**: The `load` method in the `Oxyg3niumConfig` object is used to load the configuration settings from a given `Config` object and an optional `configPath`. It first extracts the configuration settings using the `alephiumValueReader` and then performs a sanity check on the loaded configuration before returning it.
+   **Answer**: The `load` method in the `Oxyg3niumConfig` object is used to load the configuration settings from a given `Config` object and an optional `configPath`. It first extracts the configuration settings using the `oxyg3niumValueReader` and then performs a sanity check on the loaded configuration before returning it.
 
 3. **Question**: What is the purpose of the `sanityCheck` method in the `Oxyg3niumConfig` object?
    **Answer**: The `sanityCheck` method is used to validate the loaded configuration settings, specifically checking if the `networkId` is set to `Oxyg3niumMainNet` and if the `lemanHardForkTimestamp` has the correct value. If the check fails, an `IllegalArgumentException` is thrown.

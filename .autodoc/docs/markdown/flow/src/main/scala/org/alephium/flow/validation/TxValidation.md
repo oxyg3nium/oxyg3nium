@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/validation/TxValidation.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/validation/TxValidation.scala)
 
 The code in this file is part of the Oxyg3nium project and focuses on transaction validation. It defines a `TxValidation` trait and its implementation, which are responsible for validating various aspects of a transaction, such as its structure, inputs, outputs, gas usage, and script execution.
 

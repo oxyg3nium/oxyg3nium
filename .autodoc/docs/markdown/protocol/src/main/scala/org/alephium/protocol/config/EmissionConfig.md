@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/config/EmissionConfig.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/config/EmissionConfig.scala)
 
 This code defines a trait called `EmissionConfig` that is used to configure the emission of new tokens in the Oxyg3nium blockchain. The `Emission` class is imported from the `org.oxyg3nium.protocol.mining` package and is used as the return type for the `emission` method defined in the trait.
 

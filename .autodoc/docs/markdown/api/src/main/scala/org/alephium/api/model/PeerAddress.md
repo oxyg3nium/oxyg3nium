@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/PeerAddress.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/PeerAddress.scala)
 
 This code defines a case class called `PeerAddress` that represents the network address of a peer in the Oxyg3nium network. The `PeerAddress` class has four fields: `address`, which is an `InetAddress` object representing the IP address of the peer, `restPort`, which is an integer representing the port number for the peer's REST API, `wsPort`, which is an integer representing the port number for the peer's WebSocket API, and `minerApiPort`, which is an integer representing the port number for the peer's miner API.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/mining/PoW.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/mining/PoW.scala)
 
 The `PoW` object in the `org.oxyg3nium.protocol.mining` package provides functionality related to Proof-of-Work (PoW) mining in the Oxyg3nium blockchain. PoW is a consensus mechanism used in many blockchain systems to validate transactions and create new blocks. The purpose of this code is to provide methods for hashing block headers, checking the validity of PoW solutions, and verifying mined blocks.
 

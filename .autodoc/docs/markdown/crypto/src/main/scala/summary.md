@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/crypto/src/main/scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/crypto/src/main/scala)
 
 The `crypto` folder provides essential cryptographic functionality for the Oxyg3nium project, ensuring the security and integrity of data such as transactions, blocks, and user accounts. It includes encryption, decryption, hashing, and digital signatures.
 

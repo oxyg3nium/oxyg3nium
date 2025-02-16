@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Duration.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Duration.scala)
 
 The code defines a `Duration` class that represents a duration of time in milliseconds. It provides methods to convert the duration to seconds, minutes, and hours. It also provides methods to perform arithmetic operations on durations, such as addition, subtraction, multiplication, and division. 
 

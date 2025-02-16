@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/Difficulty.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/Difficulty.scala)
 
 This code defines a Difficulty class and its companion object in the Oxyg3nium project. The Difficulty class is a wrapper around a BigInteger value and is defined as a final case class. The companion object provides factory methods to create instances of the Difficulty class.
 

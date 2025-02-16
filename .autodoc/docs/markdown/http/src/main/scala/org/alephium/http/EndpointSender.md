@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/http/src/main/scala/org/alephium/http/EndpointSender.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/http/src/main/scala/org/oxyg3nium/http/EndpointSender.scala)
 
 The `EndpointSender` class is a part of the Oxyg3nium project and is used to send HTTP requests to endpoints defined in the project. It extends the `BaseEndpoint` trait and uses the `SttpClientInterpreter` to create requests. The class takes an optional `ApiKey` parameter and an `ExecutionContext` parameter in its constructor.
 

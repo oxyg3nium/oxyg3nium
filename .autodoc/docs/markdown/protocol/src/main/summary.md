@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol/src/main)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/protocol/src/main)
 
 The `.autodoc/docs/json/protocol/src/main` folder contains essential functionality for the Oxyg3nium project, such as managing the Oxyg3nium cryptocurrency, handling message serialization and deserialization, and managing the mining process. The code in this folder is organized into the `org.oxyg3nium.protocol` package, which includes several files and subfolders, each with a specific purpose.
 

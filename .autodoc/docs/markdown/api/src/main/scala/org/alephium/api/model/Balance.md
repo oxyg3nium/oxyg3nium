@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/Balance.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/Balance.scala)
 
 The `Balance` class and its companion object are part of the Oxyg3nium project and are used to represent the balance of an account. The `Balance` class is a case class that takes in several parameters, including the account's balance, locked balance, token balances, locked token balances, and the number of unspent transaction outputs (UTXOs) associated with the account. The `Balance` object provides two methods for creating a `Balance` instance from different input types.
 

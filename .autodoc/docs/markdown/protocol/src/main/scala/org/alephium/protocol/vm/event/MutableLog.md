@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/event/MutableLog.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/event/MutableLog.scala)
 
 This code defines a trait called `MutableLog` that provides functionality for logging events in the Oxyg3nium project. The trait defines several methods for adding logs to the event log, as well as methods for indexing the logs by transaction ID, block hash, and byte32. 
 

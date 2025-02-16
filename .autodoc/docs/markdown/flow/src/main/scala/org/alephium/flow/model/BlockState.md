@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/model/BlockState.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/model/BlockState.scala)
 
 This file contains the definition of a case class called `BlockState` and an object with the same name. The `BlockState` case class has two fields: `height` of type `Int` and `weight` of type `Weight`. The `BlockState` object contains an implicit `Serde` instance for the `BlockState` case class.
 

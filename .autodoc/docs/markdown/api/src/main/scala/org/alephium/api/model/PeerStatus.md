@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/PeerStatus.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/PeerStatus.scala)
 
 This file contains code for the PeerStatus trait and its two case classes, Penalty and Banned. The PeerStatus trait is a sealed trait, which means that all of its implementations must be declared in the same file as the trait itself. 
 
@@ -18,7 +18,7 @@ val bannedPeer = PeerStatus.Banned(TimeStamp.now())
 ```
 ## Questions: 
  1. What is the purpose of this code file?
-   - This code file is part of the alephium project and contains a library that can be redistributed and/or modified under the terms of the GNU Lesser General Public License.
+   - This code file is part of the oxyg3nium project and contains a library that can be redistributed and/or modified under the terms of the GNU Lesser General Public License.
 
 2. What is the `PeerStatus` trait and what are its implementations?
    - `PeerStatus` is a sealed trait that has two implementations: `Penalty` and `Banned`.

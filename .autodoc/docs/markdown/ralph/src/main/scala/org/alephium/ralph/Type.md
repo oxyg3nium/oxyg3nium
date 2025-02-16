@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralph/src/main/scala/org/alephium/ralph/Type.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralph/src/main/scala/org/oxyg3nium/ralph/Type.scala)
 
 This file contains the definition of the `Type` trait and its related classes and objects. The `Type` trait is used to represent the different types that can be used in the Oxyg3nium project. It is a sealed trait, which means that all its implementations must be defined in this file. 
 

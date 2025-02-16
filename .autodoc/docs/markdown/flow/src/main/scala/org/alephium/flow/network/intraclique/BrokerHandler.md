@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/intraclique/BrokerHandler.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/intraclique/BrokerHandler.scala)
 
 This code defines a trait called `BrokerHandler` that extends another trait called `BaseBrokerHandler`. The purpose of this trait is to handle intra-clique communication between brokers in the Oxyg3nium network. 
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/BlockHeaderPool.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/core/BlockHeaderPool.scala)
 
 The code defines a trait called `BlockHeaderPool` which is used in the Oxyg3nium project. The purpose of this trait is to provide a set of methods that can be used to manage a pool of block headers. 
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/ralph/src/main/scala/org/alephium/ralph/error/CompilerErrorFormatter.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/ralph/src/main/scala/org/oxyg3nium/ralph/error/CompilerErrorFormatter.scala)
 
 The code defines a `CompilerErrorFormatter` class that builds a formatted error message. The class takes in several parameters such as `errorTitle`, `errorLine`, `foundLength`, `errorMessage`, `errorFooter`, and `sourcePosition`. These parameters are used to format the error message. 
 

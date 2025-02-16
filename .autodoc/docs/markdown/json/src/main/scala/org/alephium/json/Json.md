@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/json/src/main/scala/org/alephium/json/Json.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/json/src/main/scala/org/oxyg3nium/json/Json.scala)
 
 The `Json` object in the `org.oxyg3nium.json` package provides utility functions for working with JSON data. The object is implemented using the `upickle` library, which is a lightweight JSON serialization library for Scala.
 

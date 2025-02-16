@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Math.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Math.scala)
 
 The code provided is a Scala file that contains a single object called "Math". This object provides two methods: "max" and "min". These methods take two parameters of type T, which must be a subtype of "Ordered[T]". This means that the type T must have an ordering defined, which allows the comparison of two values of type T.
 

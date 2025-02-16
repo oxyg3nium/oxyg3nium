@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/HashRateResponse.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/HashRateResponse.scala)
 
 The code defines a case class called `HashRateResponse` which is used to represent the response of a hash rate API endpoint in the Oxyg3nium project. The `final` keyword indicates that the class cannot be extended or overridden. The class has a single field called `hashrate` which is of type `String`. The `AnyVal` keyword indicates that the class is a value class, which means that it has a single field and no other non-private fields or methods.
 

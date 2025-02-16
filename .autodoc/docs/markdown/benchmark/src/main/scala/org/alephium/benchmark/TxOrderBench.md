@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/benchmark/src/main/scala/org/alephium/benchmark/TxOrderBench.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/benchmark/src/main/scala/org/oxyg3nium/benchmark/TxOrderBench.scala)
 
 The `TxOrderBench` class is a benchmarking tool for measuring the average time it takes to calculate the execution order of transactions in a block. This class is part of the Oxyg3nium project, which is a blockchain platform that aims to provide a scalable and secure infrastructure for decentralized applications.
 

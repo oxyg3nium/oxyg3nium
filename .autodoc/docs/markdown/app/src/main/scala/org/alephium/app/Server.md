@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/app/src/main/scala/org/alephium/app/Server.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/app/src/main/scala/org/oxyg3nium/app/Server.scala)
 
 This code defines a trait called `Server` that is used to create a server for the Oxyg3nium project. The `Server` trait is a service that can be started and stopped. It defines several abstract methods and values that must be implemented by any concrete implementation of the trait. 
 

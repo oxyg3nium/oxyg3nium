@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium/wallet/config)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/wallet/src/main/scala/org/oxyg3nium/wallet/config)
 
 The `WalletConfig.scala` file in the `org.oxyg3nium.wallet.config` package defines the configuration settings for the Oxyg3nium wallet. It allows developers to customize the wallet's behavior, connect it to the blockflow service, and authenticate API requests.
 

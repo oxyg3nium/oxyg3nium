@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/Utils.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/Utils.scala)
 
 The code defines a set of utility functions that can be used across the Oxyg3nium project. These functions are designed to help with displaying various types of data in a human-readable format. 
 
@@ -18,7 +18,7 @@ The `unsafe` function takes an `IOResult` object and returns the value contained
 - This code file contains utility functions for displaying various types of data in a specific format.
 
 2. What external libraries or dependencies does this code use?
-- This code imports several classes from other packages within the alephium project, as well as the `RandomBytes` class from the `org.oxyg3nium.serde` package.
+- This code imports several classes from other packages within the oxyg3nium project, as well as the `RandomBytes` class from the `org.oxyg3nium.serde` package.
 
 3. What is the license for this code?
 - This code is released under the GNU Lesser General Public License, version 3 or later.

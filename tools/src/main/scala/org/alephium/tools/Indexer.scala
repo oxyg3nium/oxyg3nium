@@ -1,5 +1,5 @@
 // Copyright 2018 The Oxyg3nium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -37,7 +37,7 @@ import org.oxyg3nium.util.{AVector, Env}
 object Indexer extends App with StrictLogging {
   private val rootPath       = Platform.getRootPath()
   private val typesafeConfig = Configs.parseConfigAndValidate(Env.Prod, rootPath, overwrite = true)
-  private val config         = Oxyg3niumConfig.load(typesafeConfig, "alephium")
+  private val config         = Oxyg3niumConfig.load(typesafeConfig, "oxyg3nium")
   private val brokerConfig   = config.broker
   private val intraChainIndexes = brokerConfig.chainIndexes.filter(_.isIntraGroup)
   private val indexedBlockCount = new AtomicInteger(0)

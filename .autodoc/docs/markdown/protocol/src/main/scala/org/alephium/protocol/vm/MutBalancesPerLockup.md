@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/MutBalancesPerLockup.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/MutBalancesPerLockup.scala)
 
 This file contains the implementation of the `MutBalancesPerLockup` class, which represents the mutable balances of a lockup script. A lockup script is a smart contract that locks up some funds and/or tokens for a certain period of time. The purpose of this class is to keep track of the balances of the lockup script during its execution.
 

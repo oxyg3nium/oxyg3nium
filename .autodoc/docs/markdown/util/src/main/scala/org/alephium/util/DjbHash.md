@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/DjbHash.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/DjbHash.scala)
 
 The code provided is a Scala implementation of the DJB hash function. The DJB hash function is a non-cryptographic hash function that is designed to be fast and produce a good distribution of hash values. The hash function takes an input of bytes and returns an integer hash value.
 

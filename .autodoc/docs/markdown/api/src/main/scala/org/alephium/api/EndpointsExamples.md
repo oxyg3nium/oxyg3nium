@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/EndpointsExamples.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/EndpointsExamples.scala)
 
 This code is part of the Oxyg3nium project and defines the `EndpointsExamples` trait, which provides examples for various API endpoints. These examples are used to generate API documentation and test cases for the Oxyg3nium blockchain platform. The code includes examples for various data structures, such as transactions, blocks, addresses, and contracts, as well as examples for various API actions, such as starting/stopping mining, banning/unbanning peers, and compiling/submitting contracts.
 
@@ -18,8 +18,8 @@ This creates a list of examples for the `Transaction` data structure, which can 
 
 Overall, the `EndpointsExamples` trait serves as a valuable resource for developers working with the Oxyg3nium blockchain platform, as it provides a comprehensive set of examples for various data structures and API actions.
 ## Questions: 
- 1. **Question**: What is the purpose of the `alephium` project and how does this code fit into the overall project?
-   **Answer**: The `alephium` project is a blockchain platform, and this code is part of the API implementation for the project. It defines various data structures, examples, and implicit values used in the API endpoints.
+ 1. **Question**: What is the purpose of the `oxyg3nium` project and how does this code fit into the overall project?
+   **Answer**: The `oxyg3nium` project is a blockchain platform, and this code is part of the API implementation for the project. It defines various data structures, examples, and implicit values used in the API endpoints.
 
 2. **Question**: What are the main data structures and types used in this code?
    **Answer**: The code uses various data structures and types such as `NodeInfo`, `Balance`, `Transaction`, `BlockEntry`, `ContractState`, and many others. These structures represent different aspects of the blockchain, such as node information, balances, transactions, and contract states.

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/web/WalletServer.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/web/WalletServer.scala)
 
 This file defines a `WalletServer` class and an `object` that converts `WalletError` to `ApiError`. The `WalletServer` class extends `WalletEndpointsLogic` and `WalletDocumentation` and uses `VertxFutureServerInterpreter` to define routes for various wallet-related operations. 
 

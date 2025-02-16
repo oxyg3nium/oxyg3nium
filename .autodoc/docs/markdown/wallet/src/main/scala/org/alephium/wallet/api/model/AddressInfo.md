@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/AddressInfo.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/api/model/AddressInfo.scala)
 
 This code defines a case class called `AddressInfo` and an object with the same name. The `AddressInfo` case class has four fields: `address`, `publicKey`, `group`, and `path`. The `address` field is of type `Address.Asset`, which is a type alias for `Address`. The `publicKey` field is of type `PublicKey`, which is defined in the `org.oxyg3nium.protocol` package. The `group` field is of type `GroupIndex`, which is also defined in the `org.oxyg3nium.protocol` package. The `path` field is of type `String`.
 

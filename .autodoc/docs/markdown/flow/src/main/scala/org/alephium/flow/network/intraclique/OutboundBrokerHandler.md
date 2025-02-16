@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/intraclique/OutboundBrokerHandler.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/intraclique/OutboundBrokerHandler.scala)
 
 This file contains the implementation of the `OutboundBrokerHandler` class, which is responsible for handling outbound connections to other brokers in the Oxyg3nium network. 
 

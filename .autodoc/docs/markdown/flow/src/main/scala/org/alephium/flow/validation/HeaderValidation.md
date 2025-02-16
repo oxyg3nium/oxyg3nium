@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/validation/HeaderValidation.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/validation/HeaderValidation.scala)
 
 This code defines a trait called `HeaderValidation` and an object called `HeaderValidation` that implements this trait. The purpose of this code is to provide a set of validation rules for block headers in the Oxyg3nium blockchain. 
 

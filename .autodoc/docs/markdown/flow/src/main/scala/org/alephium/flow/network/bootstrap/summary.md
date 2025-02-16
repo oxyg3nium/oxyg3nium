@@ -1,6 +1,6 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/bootstrap)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network/bootstrap)
 
-The `.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/bootstrap` folder contains code related to the bootstrap process of the Oxyg3nium network. The bootstrap process is responsible for establishing the initial network topology and exchanging information about the network's nodes.
+The `.autodoc/docs/json/flow/src/main/scala/org/oxyg3nium/flow/network/bootstrap` folder contains code related to the bootstrap process of the Oxyg3nium network. The bootstrap process is responsible for establishing the initial network topology and exchanging information about the network's nodes.
 
 The `Broker` class is an Akka actor that connects to the master node and receives clique information. The `BrokerConnector` class is responsible for connecting to a broker and sending/receiving messages during the bootstrap phase. The `CliqueCoordinator` class coordinates the connection of brokers in the network and broadcasts clique information to all brokers once they are ready.
 

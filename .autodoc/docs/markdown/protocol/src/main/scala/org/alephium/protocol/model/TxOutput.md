@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/TxOutput.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/TxOutput.scala)
 
 This file contains code related to transaction outputs in the Oxyg3nium project. A transaction output is an amount of OXM (the native token of the Oxyg3nium blockchain) or other tokens that are locked up and can be spent only by the owner of the corresponding private key. 
 

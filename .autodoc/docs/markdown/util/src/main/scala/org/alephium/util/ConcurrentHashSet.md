@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/ConcurrentHashSet.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/ConcurrentHashSet.scala)
 
 The code defines a ConcurrentHashSet class that is used to store a set of elements in a thread-safe manner. The class is implemented using a ConcurrentHashMap from the Java standard library. The class provides methods to add, remove, and check if an element is present in the set. Additionally, it provides an iterable method that returns an iterable of the elements in the set.
 

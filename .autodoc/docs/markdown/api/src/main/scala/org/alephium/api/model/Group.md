@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/Group.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/Group.scala)
 
 This code defines a Scala case class called `Group` that takes an integer parameter. The purpose of this class is to represent a group of entities within the Oxyg3nium project. 
 
@@ -33,6 +33,6 @@ Overall, this code defines a simple but useful class for organizing entities wit
  1. What is the purpose of the `Group` case class?
    - The `Group` case class is used to represent a group with an integer value.
 2. What is the significance of the copyright and license information at the top of the file?
-   - The copyright and license information indicate that the code is part of the alephium project and is licensed under the GNU Lesser General Public License.
+   - The copyright and license information indicate that the code is part of the oxyg3nium project and is licensed under the GNU Lesser General Public License.
 3. What is the namespace of this code file?
    - The namespace of this code file is `org.oxyg3nium.api.model`.

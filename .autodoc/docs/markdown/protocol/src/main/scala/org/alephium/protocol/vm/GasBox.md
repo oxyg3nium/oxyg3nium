@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/GasBox.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/vm/GasBox.scala)
 
 The `GasBox` class and its companion object in the `org.oxyg3nium.protocol.vm` package provide functionality for managing gas usage in the Oxyg3nium project. Gas is a measure of computational effort required to execute a transaction on the blockchain. It is used to prevent spamming and denial-of-service attacks on the network. 
 
@@ -27,8 +27,8 @@ val tooMuchGas = GasBox.unsafe(1000000) // throws an AssertionError
 val isValid = GasBox.validate(remainingGas) // true
 ```
 ## Questions: 
- 1. What is the purpose of the `GasBox` class and how is it used in the `alephium` project?
-- The `GasBox` class represents a box of gas that can be used to execute transactions in the `alephium` project. It provides methods for performing arithmetic operations on gas boxes and checking if they have enough gas to execute a transaction.
+ 1. What is the purpose of the `GasBox` class and how is it used in the `oxyg3nium` project?
+- The `GasBox` class represents a box of gas that can be used to execute transactions in the `oxyg3nium` project. It provides methods for performing arithmetic operations on gas boxes and checking if they have enough gas to execute a transaction.
 
 2. What is the significance of the `serde` field in the `GasBox` object?
 - The `serde` field provides a serialization/deserialization mechanism for `GasBox` objects, allowing them to be stored and retrieved from disk or transmitted over a network.

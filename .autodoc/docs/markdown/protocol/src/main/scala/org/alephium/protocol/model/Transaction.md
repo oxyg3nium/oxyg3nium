@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/Transaction.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/Transaction.scala)
 
 This file contains code related to transactions in the Oxyg3nium project. The `TransactionAbstract` trait defines common methods and properties for transactions, such as `id`, `fromGroup`, `toGroup`, `gasFeeUnsafe`, `outputsLength`, and `getOutput`. It also defines the `assetOutputRefs` method, which returns a vector of `AssetOutputRef` objects for each output in the transaction.
 

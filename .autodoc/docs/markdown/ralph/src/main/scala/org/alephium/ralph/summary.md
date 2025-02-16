@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/ralph/src/main/scala/org/alephium/ralph)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/ralph/src/main/scala/org/oxyg3nium/ralph)
 
 The code in this folder is primarily focused on the implementation of the Oxyg3nium programming language, specifically the compiler, lexer, and static analysis components. It also includes code for managing scopes, types, and keywords in the language, as well as error handling and formatting.
 

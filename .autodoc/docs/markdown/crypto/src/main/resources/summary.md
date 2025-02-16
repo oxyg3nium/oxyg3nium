@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/crypto/src/main/resources)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/.autodoc/docs/json/crypto/src/main/resources)
 
 The `bip39_english_wordlist.txt` file in the `.autodoc/docs/json/crypto/src/main/resources` folder is a valuable resource for the Oxyg3nium project, providing a comprehensive list of English words that can be utilized in various applications. This list contains a diverse range of words, including nouns, verbs, adjectives, and adverbs, which can be employed for different purposes such as generating random strings, creating word-based identifiers, or implementing natural language processing tasks.
 

@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/ChainIndex.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/model/ChainIndex.scala)
 
 The code defines a `ChainIndex` class and its companion object. The `ChainIndex` class represents an index that identifies a chain between two groups in the Oxyg3nium network. The `ChainIndex` object provides methods to create, validate, and manipulate `ChainIndex` instances.
 

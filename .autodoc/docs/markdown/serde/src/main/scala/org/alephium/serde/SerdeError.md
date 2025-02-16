@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/serde/src/main/scala/org/alephium/serde/SerdeError.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/serde/src/main/scala/org/oxyg3nium/serde/SerdeError.scala)
 
 This code defines a set of error classes that can be used in the Oxyg3nium project's serialization and deserialization code. The `SerdeError` class is an abstract class that extends `AppException`, which is a custom exception class used throughout the project. The `SerdeError` class is sealed, which means that all of its subclasses must be defined in this file. 
 

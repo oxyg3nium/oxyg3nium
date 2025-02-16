@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/message/Message.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/protocol/src/main/scala/org/oxyg3nium/protocol/message/Message.scala)
 
 This file contains the implementation of the `Message` class and related methods. The `Message` class represents a message that can be sent over the network in the Oxyg3nium project. The message consists of a header, payload, and checksum. The header contains the current wire version, which is used to ensure compatibility between different versions of the software. The payload contains the actual data being sent. The checksum is used to ensure the integrity of the message during transmission.
 

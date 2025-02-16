@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/CurrentDifficulty.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/api/src/main/scala/org/oxyg3nium/api/model/CurrentDifficulty.scala)
 
 The code above defines a case class called `CurrentDifficulty` that takes in a single parameter of type `BigInteger`. This case class is located in the `org.oxyg3nium.api.model` package. 
 

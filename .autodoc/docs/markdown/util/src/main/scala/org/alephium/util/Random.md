@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Random.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Random.scala)
 
 This file contains code for generating random numbers and values used in the Oxyg3nium project. It defines two objects, `UnsecureRandom` and `SecureAndSlowRandom`, which implement the `AbstractRandom` trait. 
 

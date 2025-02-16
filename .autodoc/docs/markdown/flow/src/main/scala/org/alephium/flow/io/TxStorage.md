@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/io/TxStorage.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/io/TxStorage.scala)
 
 This code defines a trait and a class for storing transaction indexes in RocksDB. The trait `TxStorage` extends the `KeyValueStorage` trait and defines two methods for adding transaction indexes to the storage. The `add` method adds a transaction index to the storage and the `addUnsafe` method does the same but without returning an `IOResult`. The `TxRocksDBStorage` class extends the `RocksDBKeyValueStorage` class and implements the `TxStorage` trait. It also defines two methods for removing transaction indexes from the storage, but these methods are not implemented and throw an exception if called.
 

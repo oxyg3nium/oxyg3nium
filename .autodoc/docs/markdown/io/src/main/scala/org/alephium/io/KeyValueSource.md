@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/KeyValueSource.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/io/src/main/scala/org/oxyg3nium/io/KeyValueSource.scala)
 
 The code above defines a trait called `KeyValueSource` which is a part of the Oxyg3nium project. A trait is similar to an interface in other programming languages and defines a set of methods that a class implementing the trait must implement. 
 

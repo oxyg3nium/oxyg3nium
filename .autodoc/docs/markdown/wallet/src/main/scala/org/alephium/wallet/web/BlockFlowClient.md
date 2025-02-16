@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/web/BlockFlowClient.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/wallet/src/main/scala/org/oxyg3nium/wallet/web/BlockFlowClient.scala)
 
 This code defines a trait `BlockFlowClient` and an object `BlockFlowClient` that implements this trait. The `BlockFlowClient` trait defines four methods that allow interaction with the Oxyg3nium blockchain. The `BlockFlowClient` object provides an implementation of these methods.
 

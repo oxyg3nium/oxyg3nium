@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/InterCliqueManager.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/flow/src/main/scala/org/oxyg3nium/flow/network/InterCliqueManager.scala)
 
 The `InterCliqueManager` class in this code is responsible for managing the connections and interactions between different cliques (groups of nodes) in the Oxyg3nium blockchain network. It maintains the state of connected brokers (nodes) and handles various types of messages and events related to the network.
 

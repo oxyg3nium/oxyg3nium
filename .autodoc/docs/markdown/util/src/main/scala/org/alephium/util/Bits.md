@@ -1,4 +1,4 @@
-[View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Bits.scala)
+[View code on GitHub](https://github.com/oxyg3nium/oxyg3nium/util/src/main/scala/org/oxyg3nium/util/Bits.scala)
 
 The `Bits` object in the `org.oxyg3nium.util` package provides two methods for working with bits. The `from` method takes a byte and returns a vector of booleans representing the bits in the byte. The `toIint` method takes a vector of booleans representing bits and returns an integer value.
 
