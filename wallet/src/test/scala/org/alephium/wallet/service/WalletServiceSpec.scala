@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -30,12 +30,12 @@ import org.alephium.http.EndpointSender
 import org.alephium.protocol.{Generators, Hash, PrivateKey, PublicKey, SignatureSchema}
 import org.alephium.protocol.model.{Address, TxGenerators}
 import org.alephium.protocol.vm.LockupScript
-import org.alephium.util.{AlephiumFutureSpec, AVector, Duration, Hex}
+import org.alephium.util.{Oxyg3niumFutureSpec, AVector, Duration, Hex}
 import org.alephium.wallet.api.model.{Addresses, AddressInfo}
 import org.alephium.wallet.config.WalletConfigFixture
 import org.alephium.wallet.web.BlockFlowClient
 
-class WalletServiceSpec extends AlephiumFutureSpec {
+class WalletServiceSpec extends Oxyg3niumFutureSpec {
 
   it should "handle a miner wallet" in new Fixture {
 

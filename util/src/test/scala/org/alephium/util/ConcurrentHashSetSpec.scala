@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
 
 package org.oxyg3nium.util
 
-class ConcurrentHashSetSpec extends AlephiumSpec {
+class ConcurrentHashSetSpec extends Oxyg3niumSpec {
   trait Fixture {
     val set = ConcurrentHashSet.empty[Int]
   }

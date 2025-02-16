@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,10 +23,10 @@ import org.scalatest.Assertion
 import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfigFixture}
 import org.oxyg3nium.protocol.model._
-import org.oxyg3nium.util.{AlephiumSpec, AVector, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, U256}
 import org.oxyg3nium.util.Bytes.byteStringOrdering
 
-class MutBalancesPerLockupSpec extends AlephiumSpec {
+class MutBalancesPerLockupSpec extends Oxyg3niumSpec {
 
   it should "tokenVector" in new Fixture {
     val tokens = mutable.Map(tokenId -> ALPH.oneAlph)

@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/resources/system_it.conf.tmpl)
 
-This code is a configuration file for the Alephium project. It sets various parameters for different components of the system, such as the broker, consensus, mining, network, discovery, API, mempool, wallet, and node. 
+This code is a configuration file for the Oxyg3nium project. It sets various parameters for different components of the system, such as the broker, consensus, mining, network, discovery, API, mempool, wallet, and node. 
 
 For example, in the network section, it sets the maximum number of outbound and inbound connections per group, as well as various parameters related to syncing blocks and transactions between nodes. It also sets the REST and WebSocket ports for the API. 
 
@@ -10,7 +10,7 @@ In the wallet section, it sets the directory for storing secret keys and the tim
 
 In the node section, it enables or disables writing to the database during sync, and sets parameters related to event logging. 
 
-Overall, this configuration file is an important part of the Alephium project, as it allows users to customize various aspects of the system to suit their needs. For example, they can adjust the network parameters to optimize for their particular network environment, or set the API key to enable access control for their API. 
+Overall, this configuration file is an important part of the Oxyg3nium project, as it allows users to customize various aspects of the system to suit their needs. For example, they can adjust the network parameters to optimize for their particular network environment, or set the API key to enable access control for their API. 
 
 Here is an example of how to access the network section of this configuration file in Scala:
 

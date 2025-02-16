@@ -4,7 +4,7 @@ The code provided is a Scala file that contains a single object called "Math". T
 
 The "max" method returns the larger of the two values passed as parameters, while the "min" method returns the smaller of the two values. These methods are implemented using a simple if-else statement that compares the two values and returns the appropriate one.
 
-This code can be used in the larger Alephium project to provide a simple and generic way to compare values of any type that has an ordering defined. This can be useful in many different contexts, such as sorting algorithms, searching algorithms, or any other situation where it is necessary to compare values.
+This code can be used in the larger Oxyg3nium project to provide a simple and generic way to compare values of any type that has an ordering defined. This can be useful in many different contexts, such as sorting algorithms, searching algorithms, or any other situation where it is necessary to compare values.
 
 Here is an example of how this code can be used:
 

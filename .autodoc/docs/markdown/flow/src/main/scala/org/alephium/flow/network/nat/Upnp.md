@@ -6,7 +6,7 @@ The `Upnp` object defines constants and methods for discovering UPnP gateway dev
 
 The `UpnpClient` class represents a UPnP gateway device and provides methods for adding and deleting port mappings. The `addPortMapping` method takes an external port number and an internal port number as input and returns a `Boolean` indicating whether the port mapping was successfully added. This method uses the `GatewayDevice` instance associated with the `UpnpClient` to add port mappings for both TCP and UDP protocols. The `deletePortMapping` method takes an external port number as input and returns a `Boolean` indicating whether the port mapping was successfully deleted. This method uses the `GatewayDevice` instance associated with the `UpnpClient` to delete port mappings for both TCP and UDP protocols.
 
-Overall, this module provides a way for the Alephium project to manage UPnP port mappings on a network. This could be useful for allowing external clients to connect to the Alephium network without requiring manual port forwarding on the router. For example, a user could run an Alephium node on their home network and use UPnP to automatically configure their router to allow incoming connections to the node.
+Overall, this module provides a way for the Oxyg3nium project to manage UPnP port mappings on a network. This could be useful for allowing external clients to connect to the Oxyg3nium network without requiring manual port forwarding on the router. For example, a user could run an Oxyg3nium node on their home network and use UPnP to automatically configure their router to allow incoming connections to the node.
 ## Questions: 
  1. What is the purpose of this code?
     

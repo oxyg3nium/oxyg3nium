@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/ralph/src/main/scala/org/alephium/ralph/error)
 
-The code in this folder is related to handling and formatting compiler errors for the Alephium project. It provides a set of error messages that can be used to provide feedback to users when there is an issue with their code during compilation. These error messages can be used to help users identify and fix issues in their code more easily.
+The code in this folder is related to handling and formatting compiler errors for the Oxyg3nium project. It provides a set of error messages that can be used to provide feedback to users when there is an issue with their code during compilation. These error messages can be used to help users identify and fix issues in their code more easily.
 
 `CompilerError.scala` defines a set of error messages that can be produced by the compiler. It includes a base trait `CompilerError` and several case classes representing specific types of errors, such as `FastParseError`, `Expected an I256 value`, and `Invalid byteVec`. These error messages can be used to provide feedback to users when there is an issue with their code during compilation.
 
@@ -21,7 +21,7 @@ val error = CompilerErrorFormatter(
 println(error.format(Some(Console.RED)))
 ```
 
-`FastParseErrorUtil.scala` provides a set of functions to handle errors that occur during parsing of Alephium code. The `apply` function takes a `Parsed.TracedFailure` object as input and returns a `CompilerError.FastParseError` object. The `getLatestErrorMessage` function takes a `Parsed.TracedFailure` object and an integer index as input and returns a string that represents the most recent error message for the given index.
+`FastParseErrorUtil.scala` provides a set of functions to handle errors that occur during parsing of Oxyg3nium code. The `apply` function takes a `Parsed.TracedFailure` object as input and returns a `CompilerError.FastParseError` object. The `getLatestErrorMessage` function takes a `Parsed.TracedFailure` object and an integer index as input and returns a string that represents the most recent error message for the given index.
 
 Example usage of `FastParseErrorUtil`:
 

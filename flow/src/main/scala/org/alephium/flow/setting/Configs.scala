@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -101,7 +101,7 @@ object Configs extends StrictLogging {
   def parseNetworkId(config: Config): Either[String, NetworkId] = {
     val keyPath = "oxyg3nium.network.network-id"
     if (!config.hasPath(keyPath)) {
-      Right(NetworkId.AlephiumMainNet)
+      Right(NetworkId.Oxyg3niumMainNet)
     } else {
       val id = config.getInt(keyPath)
       NetworkId.from(id).toRight(s"Invalid chain id: $id")
@@ -110,7 +110,7 @@ object Configs extends StrictLogging {
 
   @SuppressWarnings(Array("org.wartremover.warts.ToString"))
   def checkRootPath(rootPath: Path, networkId: NetworkId): Either[String, Unit] = {
-    if (rootPath.toString.contains("mainnet") && networkId != NetworkId.AlephiumMainNet) {
+    if (rootPath.toString.contains("mainnet") && networkId != NetworkId.Oxyg3niumMainNet) {
       Left("The network is not mainnet, but the path contains mainnet")
     } else {
       Right(())
@@ -126,7 +126,7 @@ object Configs extends StrictLogging {
   }
 
   def updateGenesis(networkId: NetworkId, networkConfig: Config): Config = {
-    if (networkId == NetworkId.AlephiumMainNet) {
+    if (networkId == NetworkId.Oxyg3niumMainNet) {
       val genesisResource = this.getClass.getResource("/mainnet_genesis.conf")
       val genesis         = ConfigFactory.parseURL(genesisResource)
       networkConfig.withFallback(genesis)

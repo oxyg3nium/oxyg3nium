@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.flow.network.sync
 import scala.util.Random
 
 import org.oxyg3nium.protocol.config.GroupConfigFixture
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class FlattenIndexedArraySpec extends AlephiumSpec with GroupConfigFixture.Default {
+class FlattenIndexedArraySpec extends Oxyg3niumSpec with GroupConfigFixture.Default {
 
   trait Fixture {
     groups is 3

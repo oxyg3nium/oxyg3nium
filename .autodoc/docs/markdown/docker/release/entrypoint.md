@@ -1,8 +1,8 @@
 [View code on GitHub](https://github.com/alephium/alephium/docker/release/entrypoint.sh)
 
-This code is a shell script that is used to start the Alephium project. The script takes in various Java options as arguments and then executes the Alephium jar file with those options. 
+This code is a shell script that is used to start the Oxyg3nium project. The script takes in various Java options as arguments and then executes the Oxyg3nium jar file with those options. 
 
-The purpose of this script is to provide a convenient way to start the Alephium project with the desired Java options. By using this script, users can easily customize the Java environment for the Alephium project without having to manually specify the options each time they start the project. 
+The purpose of this script is to provide a convenient way to start the Oxyg3nium project with the desired Java options. By using this script, users can easily customize the Java environment for the Oxyg3nium project without having to manually specify the options each time they start the project. 
 
 Here is an example of how this script can be used:
 
@@ -10,9 +10,9 @@ Here is an example of how this script can be used:
 ./start_alephium.sh -Xmx4g -XX:+UseG1GC
 ```
 
-This command will start the Alephium project with a maximum heap size of 4GB and using the G1 garbage collector. 
+This command will start the Oxyg3nium project with a maximum heap size of 4GB and using the G1 garbage collector. 
 
-Overall, this script is a small but important part of the Alephium project as it provides a convenient way for users to customize the Java environment for the project.
+Overall, this script is a small but important part of the Oxyg3nium project as it provides a convenient way for users to customize the Java environment for the project.
 ## Questions: 
  1. What is the purpose of this script?
    - This script is used to start a Java application called alephium by executing a jar file with specified options.

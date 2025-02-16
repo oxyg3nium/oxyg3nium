@@ -8,7 +8,7 @@ The `ActorRefT` class also overrides the `equals` and `hashCode` methods to prov
 
 The companion object provides factory methods for creating instances of `ActorRefT`. The `apply` method creates an instance from an existing `ActorRef` instance, while the `build` methods create a new actor and return an `ActorRefT` instance that references it. The `build` method with two arguments creates an actor with a given name.
 
-This class is likely used throughout the Alephium project to interact with actors in a type-safe manner. For example, a message can be sent to an actor of type `MyActor` using the following code:
+This class is likely used throughout the Oxyg3nium project to interact with actors in a type-safe manner. For example, a message can be sent to an actor of type `MyActor` using the following code:
 
 ```
 val myActorRef: ActorRef = ...

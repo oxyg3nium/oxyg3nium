@@ -6,7 +6,7 @@ The `Json` object provides several implicit conversions for working with JSON da
 
 The `dropNullValues` method is a utility method that removes null values from a JSON object. The method recursively traverses the JSON object and removes any null values it encounters. If the entire object is null, the method returns `ujson.Null`.
 
-Overall, the `Json` object provides a set of utility methods for working with JSON data in the Alephium project. These methods can be used to serialize and deserialize JSON data, as well as manipulate JSON objects.
+Overall, the `Json` object provides a set of utility methods for working with JSON data in the Oxyg3nium project. These methods can be used to serialize and deserialize JSON data, as well as manipulate JSON objects.
 ## Questions: 
  1. What is the purpose of this code file?
 - This code file is a Scala object that provides utilities for working with JSON data.

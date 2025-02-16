@@ -562,7 +562,7 @@
     },
     {
       "datasource": "Prometheus",
-      "description": "Alephium Version",
+      "description": "Oxyg3nium Version",
       "fieldConfig": {
         "defaults": {
           "custom": {},
@@ -618,7 +618,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Alephium Version",
+      "title": "Oxyg3nium Version",
       "type": "stat"
     },
     {
@@ -3441,7 +3441,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Alephium Overview",
+  "title": "Oxyg3nium Overview",
   "uid": "S3eJTo3Mk",
   "version": 1
 }

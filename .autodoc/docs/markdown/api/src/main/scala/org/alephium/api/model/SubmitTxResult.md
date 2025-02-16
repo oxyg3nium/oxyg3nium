@@ -1,10 +1,10 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/SubmitTxResult.scala)
 
-This file contains a Scala case class called `SubmitTxResult` that is used in the Alephium project. The purpose of this class is to represent the result of submitting a transaction to the Alephium network. 
+This file contains a Scala case class called `SubmitTxResult` that is used in the Oxyg3nium project. The purpose of this class is to represent the result of submitting a transaction to the Oxyg3nium network. 
 
 The `SubmitTxResult` class has three fields: `txId`, `fromGroup`, and `toGroup`. `txId` is of type `TransactionId`, which is defined in another file in the project and represents the unique identifier of a transaction. `fromGroup` and `toGroup` are both of type `Int` and represent the source and destination groups of the transaction, respectively. 
 
-This class is likely used in other parts of the Alephium project where transactions are submitted and their results need to be represented. For example, it could be used in an API endpoint that allows users to submit transactions and returns the result of the submission. 
+This class is likely used in other parts of the Oxyg3nium project where transactions are submitted and their results need to be represented. For example, it could be used in an API endpoint that allows users to submit transactions and returns the result of the submission. 
 
 Here is an example of how this class could be used in Scala code:
 

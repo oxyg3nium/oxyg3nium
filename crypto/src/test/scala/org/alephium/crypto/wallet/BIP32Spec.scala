@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,10 +20,10 @@ import akka.util.ByteString
 import org.scalacheck.Gen
 
 import org.oxyg3nium.crypto.{SecP256K1PrivateKey, SecP256K1PublicKey}
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Base58}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Base58}
 import org.oxyg3nium.util.Hex._
 
-class BIP32Spec extends AlephiumSpec {
+class BIP32Spec extends Oxyg3niumSpec {
   def decodeBtcXPrv(input: String): (SecP256K1PrivateKey, ByteString) = {
     val bs         = Base58.decode(input).get
     val rawKey     = bs.drop(46).take(32)

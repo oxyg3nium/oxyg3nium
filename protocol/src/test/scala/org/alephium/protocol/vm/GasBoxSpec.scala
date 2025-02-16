@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -17,9 +17,9 @@
 package org.oxyg3nium.protocol.vm
 
 import org.oxyg3nium.protocol.model._
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class GasBoxSpec extends AlephiumSpec {
+class GasBoxSpec extends Oxyg3niumSpec {
   it should "validate gas bound" in {
     GasBox.validate(minimalGas, HardFork.Leman) is true
     GasBox.validate(GasBox.unsafe(minimalGas.value - 1), HardFork.Leman) is false

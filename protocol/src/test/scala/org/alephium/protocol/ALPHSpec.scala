@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,9 +21,9 @@ import scala.util.Random
 import org.oxyg3nium.protocol.config.GroupConfigFixture
 import org.oxyg3nium.protocol.model.{Address, ChainIndex, HardFork}
 import org.oxyg3nium.protocol.vm.LockupScript
-import org.oxyg3nium.util.{AlephiumSpec, AVector, NumericHelpers, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, NumericHelpers, U256}
 
-class ALPHSpec extends AlephiumSpec {
+class ALPHSpec extends Oxyg3niumSpec {
   import ALPH._
 
   it should "use correct unit" in {

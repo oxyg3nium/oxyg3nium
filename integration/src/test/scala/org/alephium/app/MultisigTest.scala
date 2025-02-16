@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ import org.oxyg3nium.serde.{deserialize, serialize}
 import org.oxyg3nium.util._
 import org.oxyg3nium.wallet.api.model._
 
-class MultisigTest extends AlephiumActorSpec {
+class MultisigTest extends Oxyg3niumActorSpec {
 
   it should "handle multisig with private keys" in new MultisigFixture {
 

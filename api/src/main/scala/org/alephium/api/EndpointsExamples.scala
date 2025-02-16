@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -42,7 +42,7 @@ import org.oxyg3nium.util.Hex.HexStringSyntax
 // scalastyle:off magic.number file.size.limit
 trait EndpointsExamples extends ErrorExamples {
 
-  private val networkId = NetworkId.AlephiumMainNet
+  private val networkId = NetworkId.Oxyg3niumMainNet
   private val lockupScript =
     LockupScript.asset("1AujpupFP4KWeZvqA7itsHY9cLJmx4qTzojVZrg8W9y9n").get
   private val publicKey = PublicKey

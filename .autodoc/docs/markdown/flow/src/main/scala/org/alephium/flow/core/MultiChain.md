@@ -9,7 +9,7 @@ The `MultiChain` trait also defines several concrete methods that can be used to
 Overall, the `MultiChain` trait provides a high-level API for interacting with a blockchain. It can be used by other classes in the `alephium` project to interact with the blockchain and perform various operations on it.
 ## Questions: 
  1. What is the purpose of the `MultiChain` trait?
-- The `MultiChain` trait is a collection of APIs for interacting with blockchains, block headers, and block hashes in the Alephium project.
+- The `MultiChain` trait is a collection of APIs for interacting with blockchains, block headers, and block hashes in the Oxyg3nium project.
 
 2. What is the purpose of the `concatOutBlockChainsE` and `concatIntraBlockChainsE` methods?
 - The `concatOutBlockChainsE` and `concatIntraBlockChainsE` methods are used to concatenate the out-blockchains and intra-blockchains, respectively, and apply a function to each block in the resulting chain.

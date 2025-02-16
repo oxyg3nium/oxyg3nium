@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/ConnectionType.scala)
 
-This file contains code related to the network broker in the Alephium project. The purpose of this code is to define two types of connections: inbound and outbound. These connection types are represented by the sealed trait `ConnectionType`, which is defined at the beginning of the file. 
+This file contains code related to the network broker in the Oxyg3nium project. The purpose of this code is to define two types of connections: inbound and outbound. These connection types are represented by the sealed trait `ConnectionType`, which is defined at the beginning of the file. 
 
 The `sealed` keyword means that all possible subtypes of `ConnectionType` must be defined in this file. In this case, there are two subtypes: `InboundConnection` and `OutboundConnection`, which are defined as objects. 
 

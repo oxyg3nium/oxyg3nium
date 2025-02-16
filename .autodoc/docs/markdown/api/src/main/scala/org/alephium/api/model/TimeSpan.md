@@ -2,7 +2,7 @@
 
 The code defines a case class called TimeSpan that represents a duration of time in milliseconds. The class takes a single argument, which is the number of milliseconds, and stores it as a Long value. The class also has a method called toDuration() that converts the TimeSpan to a Duration object from the org.alephium.util package.
 
-This code is likely used in the larger Alephium project to represent time durations in a consistent and type-safe way. By defining a separate class for time spans, the code can ensure that only valid time values are used throughout the project. The toDuration() method can then be used to convert these time spans to the appropriate Duration object for use in other parts of the project.
+This code is likely used in the larger Oxyg3nium project to represent time durations in a consistent and type-safe way. By defining a separate class for time spans, the code can ensure that only valid time values are used throughout the project. The toDuration() method can then be used to convert these time spans to the appropriate Duration object for use in other parts of the project.
 
 Here is an example of how this code might be used:
 

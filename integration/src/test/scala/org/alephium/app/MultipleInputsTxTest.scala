@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@ import org.oxyg3nium.protocol._
 import org.oxyg3nium.protocol.model.Address
 import org.oxyg3nium.util._
 
-class MultipleInputsTxTest extends AlephiumActorSpec {
+class MultipleInputsTxTest extends Oxyg3niumActorSpec {
   it should "one input" in new CliqueFixture {
     val clique = bootClique(nbOfNodes = 1)
     clique.start()

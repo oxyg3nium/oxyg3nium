@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,9 +23,9 @@ import akka.util.ByteString
 import org.oxyg3nium.protocol.Generators
 import org.oxyg3nium.protocol.config.{GroupConfigFixture, NetworkConfigFixture}
 import org.oxyg3nium.serde.{deserialize, serialize}
-import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, TimeStamp}
 
-class CoinbaseDataSpec extends AlephiumSpec with Generators with GroupConfigFixture.Default {
+class CoinbaseDataSpec extends Oxyg3niumSpec with Generators with GroupConfigFixture.Default {
   it should "serde CoinbaseDataV1" in {
     def test(prefix: CoinbaseDataPrefix, minerData: ByteString) = {
       val data = CoinbaseDataV1(prefix, minerData)

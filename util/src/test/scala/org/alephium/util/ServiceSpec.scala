@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,7 +20,7 @@ import scala.collection.immutable.ArraySeq
 import scala.concurrent.{ExecutionContext, Future}
 import scala.concurrent.ExecutionContext.Implicits
 
-class ServiceSpec extends AlephiumFutureSpec {
+class ServiceSpec extends Oxyg3niumFutureSpec {
   trait Test extends Service {
     implicit override protected def executionContext: ExecutionContext = Implicits.global
 

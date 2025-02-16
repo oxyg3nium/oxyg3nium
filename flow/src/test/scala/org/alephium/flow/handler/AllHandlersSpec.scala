@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,14 +18,14 @@ package org.oxyg3nium.flow.handler
 
 import akka.testkit.TestProbe
 
-import org.oxyg3nium.flow.AlephiumFlowActorSpec
+import org.oxyg3nium.flow.Oxyg3niumFlowActorSpec
 import org.oxyg3nium.flow.model.DataOrigin
 import org.oxyg3nium.flow.validation.InvalidWorkAmount
 import org.oxyg3nium.protocol.Generators
 import org.oxyg3nium.protocol.model.{BlockHash, ChainIndex}
 import org.oxyg3nium.util.AVector
 
-class AllHandlersSpec extends AlephiumFlowActorSpec {
+class AllHandlersSpec extends Oxyg3niumFlowActorSpec {
   override val configValues: Map[String, Any] = Map(
     ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 1)
   )

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ import scala.concurrent.duration.{FiniteDuration => SDuration, MILLISECONDS}
 
 import org.scalatest.Assertion
 
-class DurationSpec extends AlephiumSpec {
+class DurationSpec extends Oxyg3niumSpec {
   def check(dt: Duration, jdt: JDuration): Assertion = {
     dt.millis is jdt.toMillis
     dt.toSeconds is jdt.getSeconds

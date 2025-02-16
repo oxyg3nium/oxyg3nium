@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,9 +16,9 @@
 
 package org.oxyg3nium.crypto.wallet
 
-import org.oxyg3nium.util.{AlephiumSpec, Hex}
+import org.oxyg3nium.util.{Oxyg3niumSpec, Hex}
 
-class MnemonicSpec extends AlephiumSpec {
+class MnemonicSpec extends Oxyg3niumSpec {
   it should "pass test vectors from trezor" in {
     val cases = Seq(
       ("Entropy", "Sentence", "Seed", "bip32_xprv"),

@@ -2,13 +2,13 @@
 
 This file contains code for the PeerStatus trait and its two case classes, Penalty and Banned. The PeerStatus trait is a sealed trait, which means that all of its implementations must be declared in the same file as the trait itself. 
 
-The purpose of this code is to define the possible statuses that a peer can have in the Alephium network. A peer is a node in the network that communicates with other nodes to share information about the state of the network. 
+The purpose of this code is to define the possible statuses that a peer can have in the Oxyg3nium network. A peer is a node in the network that communicates with other nodes to share information about the state of the network. 
 
-The Penalty case class represents a peer that has been penalized for some reason, with the value parameter indicating the severity of the penalty. The Banned case class represents a peer that has been banned from the network until a certain TimeStamp, which is a class defined in the Alephium.util package. 
+The Penalty case class represents a peer that has been penalized for some reason, with the value parameter indicating the severity of the penalty. The Banned case class represents a peer that has been banned from the network until a certain TimeStamp, which is a class defined in the Oxyg3nium.util package. 
 
-These case classes are used in other parts of the Alephium project to keep track of the status of peers in the network. For example, when a peer is found to be misbehaving, it may be given a Penalty status, which would affect how other nodes interact with it. Similarly, if a peer is found to be malicious, it may be given a Banned status, which would prevent it from participating in the network for a certain period of time. 
+These case classes are used in other parts of the Oxyg3nium project to keep track of the status of peers in the network. For example, when a peer is found to be misbehaving, it may be given a Penalty status, which would affect how other nodes interact with it. Similarly, if a peer is found to be malicious, it may be given a Banned status, which would prevent it from participating in the network for a certain period of time. 
 
-Overall, this code is an important part of the Alephium project's network management system, allowing nodes to keep track of the status of other nodes and take appropriate action based on that status. 
+Overall, this code is an important part of the Oxyg3nium project's network management system, allowing nodes to keep track of the status of other nodes and take appropriate action based on that status. 
 
 Example usage:
 

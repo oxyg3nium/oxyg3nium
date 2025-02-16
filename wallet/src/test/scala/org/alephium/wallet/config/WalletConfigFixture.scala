@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@ import java.nio.file.Files
 
 import org.alephium.api.model.ApiKey
 import org.alephium.protocol.config.{GroupConfig, NetworkConfigFixture}
-import org.alephium.util.{AlephiumSpec, AVector, Duration, SocketUtil}
+import org.alephium.util.{Oxyg3niumSpec, AVector, Duration, SocketUtil}
 
 trait WalletConfigFixture extends SocketUtil with NetworkConfigFixture.Default {
 
@@ -37,7 +37,7 @@ trait WalletConfigFixture extends SocketUtil with NetworkConfigFixture.Default {
 
   val tempSecretDir = Files.createTempDirectory("blockflow-wallet-spec")
   tempSecretDir.toFile.deleteOnExit
-  AlephiumSpec.addCleanTask(() => AlephiumSpec.delete(tempSecretDir))
+  Oxyg3niumSpec.addCleanTask(() => Oxyg3niumSpec.delete(tempSecretDir))
 
   implicit val groupConfig: GroupConfig = new GroupConfig {
     override def groups: Int = config.blockflow.groups

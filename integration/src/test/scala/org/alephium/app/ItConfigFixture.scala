@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,9 +22,9 @@ import java.nio.channels.{DatagramChannel, ServerSocketChannel}
 import scala.util.Random
 import scala.util.control.NonFatal
 
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
 
-trait ItConfigFixture extends AlephiumConfigFixture {
+trait ItConfigFixture extends Oxyg3niumConfigFixture {
 
   def wsPort(port: Int)    = port - 1
   def restPort(port: Int)  = port - 2

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,13 +18,13 @@ package org.oxyg3nium.flow.mempool
 
 import scala.util.Random
 
-import org.oxyg3nium.flow.AlephiumFlowSpec
+import org.oxyg3nium.flow.Oxyg3niumFlowSpec
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm.GasPrice
 import org.oxyg3nium.util.{AVector, Duration, LockFixture, TimeStamp, UnsecureRandom}
 
 class MemPoolSpec
-    extends AlephiumFlowSpec
+    extends Oxyg3niumFlowSpec
     with TxIndexesSpec.Fixture
     with LockFixture
     with NoIndexModelGeneratorsLike {

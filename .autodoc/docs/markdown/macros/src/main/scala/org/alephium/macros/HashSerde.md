@@ -6,7 +6,7 @@ The `HashSerde` annotation is applied to a case class and an object that contain
 
 The `HashSerde` annotation is implemented using Scala macros. The `impl` method of the `HashSerdeImpl` object is the macro implementation. The macro takes the annotated class and object as input and generates the code that adds the `bytes`, `hash`, and `shortHex` fields and methods.
 
-The `HashSerde` annotation is useful in the Alephium project because it simplifies the process of serializing and hashing objects. By using the annotation, developers can avoid writing boilerplate code for each class that needs to be serialized and hashed. Instead, they can simply annotate the class with `HashSerde` and the necessary code will be generated automatically.
+The `HashSerde` annotation is useful in the Oxyg3nium project because it simplifies the process of serializing and hashing objects. By using the annotation, developers can avoid writing boilerplate code for each class that needs to be serialized and hashed. Instead, they can simply annotate the class with `HashSerde` and the necessary code will be generated automatically.
 
 Example usage:
 

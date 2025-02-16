@@ -16,7 +16,7 @@ The `existsRawUnsafe` method takes a `ByteString` key and returns a boolean indi
 
 The `deleteRawUnsafe` method takes a `ByteString` key and deletes the corresponding key-value pair from the storage system.
 
-Overall, this trait provides a flexible and extensible interface for interacting with key-value storage systems in the Alephium project. Different implementations of this trait can be used depending on the specific requirements of the project, allowing for easy swapping of storage systems if needed.
+Overall, this trait provides a flexible and extensible interface for interacting with key-value storage systems in the Oxyg3nium project. Different implementations of this trait can be used depending on the specific requirements of the project, allowing for easy swapping of storage systems if needed.
 ## Questions: 
  1. What is the purpose of the `RawKeyValueStorage` trait?
    - The `RawKeyValueStorage` trait defines a set of methods for interacting with a key-value storage system, allowing for getting, putting, and deleting raw byte strings associated with specific keys.

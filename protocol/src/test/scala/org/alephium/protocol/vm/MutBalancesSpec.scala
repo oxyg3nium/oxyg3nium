@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,9 +22,9 @@ import scala.collection.mutable.ArrayBuffer
 import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfigFixture}
 import org.oxyg3nium.protocol.model.{GroupIndex, TokenId, TxGenerators, TxOutput}
-import org.oxyg3nium.util.{AlephiumSpec, AVector, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, U256}
 
-class MutBalancesSpec extends AlephiumSpec {
+class MutBalancesSpec extends Oxyg3niumSpec {
 
   it should "getBalances" in new Fixture {
     balances.getBalances(lockupScript) is Some(balancesPerLockup)

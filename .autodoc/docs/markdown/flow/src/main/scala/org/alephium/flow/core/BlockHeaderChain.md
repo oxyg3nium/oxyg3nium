@@ -4,7 +4,7 @@ This code defines a trait called `BlockHeaderChain` that provides functionality 
 
 The `BlockHeaderChain` trait defines methods for retrieving and caching block headers, adding new headers to the chain, checking the completeness and canonicality of the chain, and getting data for synchronizing with other nodes. It also includes methods for checking the indexing of block hashes and for cleaning up invalid tips.
 
-The `BlockHeaderChain` trait is used in the `alephium` project to manage the chain of block headers for the Alephium blockchain. It is likely used in conjunction with other components of the project to manage the state of the blockchain and validate new blocks.
+The `BlockHeaderChain` trait is used in the `alephium` project to manage the chain of block headers for the Oxyg3nium blockchain. It is likely used in conjunction with other components of the project to manage the state of the blockchain and validate new blocks.
 
 Here is an example of how the `getBlockHeader` method might be used:
 

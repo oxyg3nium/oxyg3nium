@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,9 +20,9 @@ import scala.concurrent.Future
 
 import sttp.tapir.server.interceptor.metrics.MetricsRequestInterceptor
 
-import org.alephium.util.AlephiumSpec
+import org.alephium.util.Oxyg3niumSpec
 
-class ServerOptionsSpec extends AlephiumSpec {
+class ServerOptionsSpec extends Oxyg3niumSpec {
   "ServerOptions" should "enable metrics based on the config" in {
     def checkMetrics(enableMetrics: Boolean) = {
       ServerOptions

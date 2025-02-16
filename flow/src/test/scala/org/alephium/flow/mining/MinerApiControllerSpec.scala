@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@ import akka.io.{IO, Tcp}
 import akka.testkit.{TestActor, TestProbe}
 import akka.util.ByteString
 
-import org.oxyg3nium.flow.AlephiumFlowActorSpec
+import org.oxyg3nium.flow.Oxyg3niumFlowActorSpec
 import org.oxyg3nium.flow.handler.{BlockChainHandler, TestUtils, ViewHandler}
 import org.oxyg3nium.flow.model.BlockFlowTemplate
 import org.oxyg3nium.flow.validation.InvalidBlockVersion
@@ -31,7 +31,7 @@ import org.oxyg3nium.protocol.model.{Block, ChainIndex, Target}
 import org.oxyg3nium.serde.{avectorSerde, deserialize, serialize}
 import org.oxyg3nium.util.{AVector, SocketUtil}
 
-class MinerApiControllerSpec extends AlephiumFlowActorSpec with SocketUtil {
+class MinerApiControllerSpec extends Oxyg3niumFlowActorSpec with SocketUtil {
   trait Fixture {
     val apiPort                         = generatePort()
     val (allHandlers, allHandlerProbes) = TestUtils.createAllHandlersProbe

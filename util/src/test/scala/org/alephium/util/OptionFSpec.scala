@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@ package org.oxyg3nium.util
 
 import scala.util.Random
 
-class OptionFSpec extends AlephiumSpec {
+class OptionFSpec extends Oxyg3niumSpec {
   it should "foreach for positive case" in {
     forAll { (ns: Seq[Int]) =>
       var sum    = 0

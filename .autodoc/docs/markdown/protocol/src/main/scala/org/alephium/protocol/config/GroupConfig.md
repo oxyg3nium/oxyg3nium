@@ -10,7 +10,7 @@ The `targetAverageCount` value represents the target number of blocks that shoul
 
 The `cliqueChainIndexes` and `cliqueGroupIndexes` values are vectors of `ChainIndex` and `GroupIndex` objects, respectively, which represent the indices of the chains and groups in the network. These vectors are also computed using the `tabulate` method of the `AVector` class.
 
-Overall, this code provides a set of configuration parameters that are used throughout the Alephium blockchain protocol to define the structure and behavior of the network. By defining these parameters in a trait, the code allows for easy customization and extension of the protocol by other developers. For example, a developer could create a new implementation of the `GroupConfig` trait with different values for the `groups` parameter to create a network with a different number of groups.
+Overall, this code provides a set of configuration parameters that are used throughout the Oxyg3nium blockchain protocol to define the structure and behavior of the network. By defining these parameters in a trait, the code allows for easy customization and extension of the protocol by other developers. For example, a developer could create a new implementation of the `GroupConfig` trait with different values for the `groups` parameter to create a network with a different number of groups.
 ## Questions: 
  1. What is the purpose of this code file?
 - This code file is part of the alephium project and contains the GroupConfig trait which defines various properties related to group configuration.

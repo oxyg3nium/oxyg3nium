@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -211,9 +211,9 @@ object Boilerplate {
       block"""
         |package org.alephium.serde
         |
-        |import org.alephium.util.AlephiumSpec
+        |import org.alephium.util.Oxyg3niumSpec
         |
-        |class ProductSerdeSpec extends AlephiumSpec {
+        |class ProductSerdeSpec extends Oxyg3niumSpec {
         |
         |  behavior of "Serde for case class"
         +

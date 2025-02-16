@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -25,9 +25,9 @@ import org.oxyg3nium.protocol.config.GroupConfigFixture
 import org.oxyg3nium.protocol.model.ContractId
 import org.oxyg3nium.protocol.vm._
 import org.oxyg3nium.serde._
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Hex}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Hex}
 
-class AddressSpec extends AlephiumSpec {
+class AddressSpec extends Oxyg3niumSpec {
 
   it should "calculate group index" in new GroupConfigFixture.Default {
     def testP2pkh(pubKey: String, expectedGroup: Int) = {

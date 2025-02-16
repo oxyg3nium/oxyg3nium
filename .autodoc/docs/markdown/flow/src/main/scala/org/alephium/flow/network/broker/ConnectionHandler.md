@@ -11,10 +11,10 @@ The file also contains a set of case classes and objects that are used to send c
 Overall, this file provides the basic functionality needed to handle network connections between nodes in the alephium project. It defines a set of states that the connection handler can be in, provides methods for sending and buffering messages, and implements the logic for deserializing and handling incoming messages.
 ## Questions: 
  1. What is the purpose of this code file?
-- This code file contains the implementation of a connection handler for a network broker in the Alephium project.
+- This code file contains the implementation of a connection handler for a network broker in the Oxyg3nium project.
 
 2. What is the role of the `ConnectionHandler` trait?
 - The `ConnectionHandler` trait defines the behavior of a connection handler, including how to handle incoming and outgoing messages, how to buffer messages, and how to handle errors.
 
 3. What is the purpose of the `CliqueConnectionHandler` class?
-- The `CliqueConnectionHandler` class is a specific implementation of the `ConnectionHandler` trait for handling connections to other nodes in the Alephium network. It overrides the `tryDeserialize` and `handleNewMessage` methods to handle messages specific to the Alephium protocol.
+- The `CliqueConnectionHandler` class is a specific implementation of the `ConnectionHandler` trait for handling connections to other nodes in the Oxyg3nium network. It overrides the `tryDeserialize` and `handleNewMessage` methods to handle messages specific to the Oxyg3nium protocol.

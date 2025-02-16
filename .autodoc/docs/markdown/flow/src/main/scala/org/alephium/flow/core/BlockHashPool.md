@@ -6,7 +6,7 @@ The `BlockHashPool` trait provides methods to retrieve information about a block
 
 The `BlockHashPool` object provides two utility functions that are used to compare block hashes based on their weight and height. These functions are used to order block hashes in a consistent way.
 
-This code is likely used in the larger Alephium project to manage a pool of block hashes. It provides a set of methods that can be used to retrieve information about block hashes and compare them. This information can be used to validate blocks and determine the best chain. 
+This code is likely used in the larger Oxyg3nium project to manage a pool of block hashes. It provides a set of methods that can be used to retrieve information about block hashes and compare them. This information can be used to validate blocks and determine the best chain. 
 
 Here is an example of how this code might be used:
 

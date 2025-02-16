@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -42,7 +42,7 @@ import org.oxyg3nium.flow.io.{Storages, StoragesFixture}
 import org.oxyg3nium.flow.mining.{Job, Miner}
 import org.oxyg3nium.flow.network.DiscoveryServer
 import org.oxyg3nium.flow.network.broker.MisbehaviorManager
-import org.oxyg3nium.flow.setting.AlephiumConfig
+import org.oxyg3nium.flow.setting.Oxyg3niumConfig
 import org.oxyg3nium.flow.validation.BlockValidation
 import org.oxyg3nium.http.HttpFixture
 import org.oxyg3nium.json.Json._
@@ -59,8 +59,8 @@ import org.oxyg3nium.wallet.api.model._
 // scalastyle:off method.length
 // scalastyle:off number.of.methods
 // scalastyle:off file.size.limit
-class CliqueFixture(implicit spec: AlephiumActorSpec)
-    extends AlephiumFutureSpec
+class CliqueFixture(implicit spec: Oxyg3niumActorSpec)
+    extends Oxyg3niumFutureSpec
     with ItConfigFixture
     with NumericHelpers
     with ApiModelCodec
@@ -290,11 +290,11 @@ class CliqueFixture(implicit spec: AlephiumActorSpec)
         ("oxyg3nium.wallet.port", walletPort),
         ("oxyg3nium.wallet.secret-dir", s"${java.nio.file.Files.createTempDirectory("it-test")}")
       ) ++ configOverrides
-      implicit override lazy val config: AlephiumConfig = {
+      implicit override lazy val config: Oxyg3niumConfig = {
         val minerAddresses =
           genesisKeys.map(p => Address.Asset(LockupScript.p2pkh(p._2)))
 
-        val tmp0 = AlephiumConfig.load(newConfig)
+        val tmp0 = Oxyg3niumConfig.load(newConfig)
         val tmp1 = tmp0.copy(mining = tmp0.mining.copy(minerAddresses = Some(minerAddresses)))
         bootstrap match {
           case Some(address) =>
@@ -368,7 +368,7 @@ class CliqueFixture(implicit spec: AlephiumActorSpec)
       val defaultNetwork = platformEnv.config.network
       val network        = defaultNetwork.copy(connectionBuild = connectionBuild)
 
-      implicit val config: AlephiumConfig = platformEnv.config.copy(network = network)
+      implicit val config: Oxyg3niumConfig = platformEnv.config.copy(network = network)
       implicit val apiConfig: ApiConfig   = ApiConfig.load(platformEnv.newConfig)
       val storages                        = platformEnv.storages
 

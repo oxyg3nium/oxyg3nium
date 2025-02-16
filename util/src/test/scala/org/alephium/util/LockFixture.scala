@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ import org.scalatest.Assertion
 import org.scalatest.concurrent.Conductors
 import org.scalatest.time.{Seconds, Span}
 
-trait LockFixture extends AlephiumSpec with Conductors {
+trait LockFixture extends Oxyg3niumSpec with Conductors {
   implicit override val patienceConfig: PatienceConfig =
     PatienceConfig(timeout = Span(5, Seconds), interval = Span(1, Seconds))
 

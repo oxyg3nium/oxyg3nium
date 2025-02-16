@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/resources/system_prod.conf.tmpl)
 
-This code is a configuration file for the Alephium project. It sets various parameters for different components of the project, such as consensus, mining, network, discovery, mempool, api, wallet, and node. 
+This code is a configuration file for the Oxyg3nium project. It sets various parameters for different components of the project, such as consensus, mining, network, discovery, mempool, api, wallet, and node. 
 
 For example, in the mining section, the `api-interface` parameter specifies the IP address that the mining API will bind to, while `nonce-step` sets the increment for the nonce value used in mining. The `polling-interval` parameter specifies the interval at which block templates are polled when no new blocks are generated. 
 
@@ -14,7 +14,7 @@ The wallet section sets parameters for the wallet, such as `home-dir`, which spe
 
 Finally, the node section sets parameters for the node, such as `db-sync-write`, which specifies whether a write with rocksdb should be synchronized, and `event-log`, which enables or disables event logging and sets the indexing mode for events. 
 
-Overall, this configuration file is an important part of the Alephium project, as it sets various parameters that affect the behavior of different components of the project. Developers can modify these parameters to customize the behavior of the project to their needs. 
+Overall, this configuration file is an important part of the Oxyg3nium project, as it sets various parameters that affect the behavior of different components of the project. Developers can modify these parameters to customize the behavior of the project to their needs. 
 
 Example usage:
 

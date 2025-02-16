@@ -1,8 +1,8 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/SubmitMultisig.scala)
 
-This code defines a case class called `SubmitMultisig` that is used in the Alephium project's API model. The purpose of this class is to represent a multisignature transaction that has been signed by multiple parties. 
+This code defines a case class called `SubmitMultisig` that is used in the Oxyg3nium project's API model. The purpose of this class is to represent a multisignature transaction that has been signed by multiple parties. 
 
-The `SubmitMultisig` class has two fields: `unsignedTx` and `signatures`. The `unsignedTx` field is a string that represents the unsigned transaction that is being signed. The `signatures` field is an `AVector` (a vector implementation provided by the Alephium project) of `Signature` objects, which represent the signatures that have been added to the transaction. 
+The `SubmitMultisig` class has two fields: `unsignedTx` and `signatures`. The `unsignedTx` field is a string that represents the unsigned transaction that is being signed. The `signatures` field is an `AVector` (a vector implementation provided by the Oxyg3nium project) of `Signature` objects, which represent the signatures that have been added to the transaction. 
 
 This class is likely used in the context of a multisignature wallet, where multiple parties must sign a transaction before it can be executed. The `SubmitMultisig` object would be created once all parties have signed the transaction, and then submitted to the network for execution. 
 
@@ -25,7 +25,7 @@ val submitMultisig = SubmitMultisig(unsignedTx, AVector(signature1, signature2))
 submitToNetwork(submitMultisig)
 ``` 
 
-Overall, this code provides a simple and straightforward way to represent and submit multisignature transactions in the Alephium project.
+Overall, this code provides a simple and straightforward way to represent and submit multisignature transactions in the Oxyg3nium project.
 ## Questions: 
  1. What is the purpose of the `SubmitMultisig` case class?
    - The `SubmitMultisig` case class is used to represent a request to submit a multisig transaction, containing an unsigned transaction and a vector of signatures.

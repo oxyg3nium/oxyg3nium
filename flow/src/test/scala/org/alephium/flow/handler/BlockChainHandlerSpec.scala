@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,12 +21,12 @@ import java.net.InetSocketAddress
 import akka.testkit.{TestActorRef, TestProbe}
 import akka.util.ByteString
 
-import org.oxyg3nium.flow.{AlephiumFlowActorSpec, FlowFixture}
+import org.oxyg3nium.flow.{Oxyg3niumFlowActorSpec, FlowFixture}
 import org.oxyg3nium.flow.core.BlockFlow
 import org.oxyg3nium.flow.model.DataOrigin
 import org.oxyg3nium.flow.network.{InterCliqueManager, IntraCliqueManager}
 import org.oxyg3nium.flow.network.broker.MisbehaviorManager
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
 import org.oxyg3nium.flow.validation._
 import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.message.{Message, NewBlock, NewHeader}
@@ -34,7 +34,7 @@ import org.oxyg3nium.protocol.model.{Block, BlockHeader, BrokerInfo, ChainIndex,
 import org.oxyg3nium.serde.serialize
 import org.oxyg3nium.util.ActorRefT
 
-class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
+class BlockChainHandlerSpec extends Oxyg3niumFlowActorSpec {
   trait Fixture extends FlowFixture {
     val brokerInfo = BrokerInfo.unsafe(CliqueId.zero, 0, 1, new InetSocketAddress("127.0.0.1", 0))
     val brokerHandler       = TestProbe()
@@ -69,7 +69,7 @@ class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
   }
 
   it should "not broadcast block if the block comes from other broker groups" in new Fixture { F =>
-    val fixture = new AlephiumConfigFixture {
+    val fixture = new Oxyg3niumConfigFixture {
       override val configValues: Map[String, Any] = Map(
         ("oxyg3nium.broker.broker-id", 1)
       )
@@ -261,7 +261,7 @@ class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
       ("oxyg3nium.network.network-id", 1),
       ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 0)
     )
-    networkConfig.networkId is NetworkId.AlephiumTestNet
+    networkConfig.networkId is NetworkId.Oxyg3niumTestNet
     blockChainHandler ! InterCliqueManager.SyncedResult(true)
 
     val block = emptyBlock(blockFlow, chainIndex)

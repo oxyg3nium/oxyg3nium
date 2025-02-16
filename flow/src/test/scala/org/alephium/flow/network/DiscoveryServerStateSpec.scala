@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -33,9 +33,9 @@ import org.oxyg3nium.protocol.Generators
 import org.oxyg3nium.protocol.config._
 import org.oxyg3nium.protocol.message.DiscoveryMessage
 import org.oxyg3nium.protocol.model._
-import org.oxyg3nium.util.{ActorRefT, AlephiumActorSpec, Duration, TimeStamp}
+import org.oxyg3nium.util.{ActorRefT, Oxyg3niumActorSpec, Duration, TimeStamp}
 
-class DiscoveryServerStateSpec extends AlephiumActorSpec {
+class DiscoveryServerStateSpec extends Oxyg3niumActorSpec {
   import DiscoveryMessage._
   import DiscoveryServerSpec._
 

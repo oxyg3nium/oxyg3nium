@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -188,7 +188,7 @@ class ApiModelSpec extends JsonFixture with ApiModelFixture with EitherValues wi
   }
 
   it should "encode/decode ChainParams" in {
-    val chainParams = ChainParams(NetworkId.AlephiumMainNet, 18, 1, 2)
+    val chainParams = ChainParams(NetworkId.Oxyg3niumMainNet, 18, 1, 2)
     val jsonRaw =
       s"""
          |{

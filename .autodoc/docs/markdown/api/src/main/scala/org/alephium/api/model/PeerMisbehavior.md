@@ -4,9 +4,9 @@ The code above defines a case class called `PeerMisbehavior` which is used to re
 
 The `PeerMisbehavior` class has two properties: `peer` and `status`. The `peer` property is of type `InetAddress` and represents the IP address of the misbehaving peer. The `status` property is of type `PeerStatus` and represents the status of the misbehaving peer.
 
-This class is likely used in the larger Alephium project to keep track of peers that are misbehaving on the network. When a peer is detected to be misbehaving, an instance of `PeerMisbehavior` is created and stored in a data structure for later analysis or action.
+This class is likely used in the larger Oxyg3nium project to keep track of peers that are misbehaving on the network. When a peer is detected to be misbehaving, an instance of `PeerMisbehavior` is created and stored in a data structure for later analysis or action.
 
-Here is an example of how this class might be used in the context of the Alephium project:
+Here is an example of how this class might be used in the context of the Oxyg3nium project:
 
 ```scala
 import org.alephium.api.model.PeerMisbehavior
@@ -35,10 +35,10 @@ val misbehavingPeers: List[PeerMisbehavior] = peers.filter(isMisbehaving).map(pe
 In this example, we have a list of peers on the network represented by their IP addresses. We also have a function called `isMisbehaving` which checks if a peer is misbehaving. We use the `filter` method to create a new list of only misbehaving peers, and then use the `map` method to convert each misbehaving peer into an instance of `PeerMisbehavior`. Finally, we can take some action on the misbehaving peers, such as banning them from the network.
 ## Questions: 
  1. What is the purpose of the `PeerMisbehavior` case class?
-   - The `PeerMisbehavior` case class is used to represent instances of misbehavior by a peer in the Alephium network, including the IP address of the peer and their status.
+   - The `PeerMisbehavior` case class is used to represent instances of misbehavior by a peer in the Oxyg3nium network, including the IP address of the peer and their status.
 
 2. What is the significance of the `PeerStatus` type in this code?
-   - The `PeerStatus` type is likely an enum or sealed trait that represents the different states a peer can be in within the Alephium network. It is used as a parameter in the `PeerMisbehavior` case class.
+   - The `PeerStatus` type is likely an enum or sealed trait that represents the different states a peer can be in within the Oxyg3nium network. It is used as a parameter in the `PeerMisbehavior` case class.
 
-3. What is the context in which this code is used within the Alephium project?
-   - Without additional context, it is unclear where this code is used within the Alephium project. It is possible that it is part of the networking layer or a monitoring system for peer behavior.
+3. What is the context in which this code is used within the Oxyg3nium project?
+   - Without additional context, it is unclear where this code is used within the Oxyg3nium project. It is possible that it is part of the networking layer or a monitoring system for peer behavior.

@@ -10,7 +10,7 @@ The `Service` trait has a method called `serviceName` which returns the name of 
 
 The `Service` trait has a method called `subServices` which returns an `ArraySeq` of sub-services that the service depends on. The sub-services are started and stopped in reverse order.
 
-This code can be used to define services in the Alephium project. For example, a service that depends on a database connection can extend the `Service` trait and implement the `startSelfOnce()` and `stopSelfOnce()` methods to start and stop the database connection. The service can also define any sub-services that it depends on in the `subServices` method. The `start()` and `stop()` methods can be used to start and stop the service and its sub-services. 
+This code can be used to define services in the Oxyg3nium project. For example, a service that depends on a database connection can extend the `Service` trait and implement the `startSelfOnce()` and `stopSelfOnce()` methods to start and stop the database connection. The service can also define any sub-services that it depends on in the `subServices` method. The `start()` and `stop()` methods can be used to start and stop the service and its sub-services. 
 
 Example usage:
 

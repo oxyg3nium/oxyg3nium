@@ -2,7 +2,7 @@
 
 This code defines a type alias called `IOResult` in the `org.alephium.io` package object. The `IOResult` type is defined as an `Either` type with two possible values: `IOError` and `T`. 
 
-The purpose of this code is to provide a standardized way of handling I/O operations in the Alephium project. By using the `IOResult` type, functions that perform I/O operations can return either a successful result or an error. This allows for more robust error handling and makes it easier to reason about the behavior of I/O operations throughout the project.
+The purpose of this code is to provide a standardized way of handling I/O operations in the Oxyg3nium project. By using the `IOResult` type, functions that perform I/O operations can return either a successful result or an error. This allows for more robust error handling and makes it easier to reason about the behavior of I/O operations throughout the project.
 
 Here is an example of how this code might be used in the larger project:
 
@@ -31,7 +31,7 @@ In this example, the `readFromFile` function attempts to read the contents of a 
 
 The `result` variable is then pattern matched to determine whether the operation was successful or not. If it was successful, the contents of the file are printed to the console. If an error occurred, a message describing the error is printed instead.
 
-Overall, this code provides a useful abstraction for handling I/O operations in the Alephium project, making it easier to write robust and reliable code.
+Overall, this code provides a useful abstraction for handling I/O operations in the Oxyg3nium project, making it easier to write robust and reliable code.
 ## Questions: 
  1. What is the purpose of the `alephium` project?
 - The `alephium` project is not described in this specific code file, so a smart developer might want to look for additional documentation or information about the project's goals and objectives.

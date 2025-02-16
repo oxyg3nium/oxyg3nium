@@ -1,10 +1,10 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/Token.scala)
 
-This code defines a Scala case class called `Token` that represents a token in the Alephium blockchain. A token is identified by its `id`, which is of type `TokenId`, and has an associated `amount`, which is of type `U256`. 
+This code defines a Scala case class called `Token` that represents a token in the Oxyg3nium blockchain. A token is identified by its `id`, which is of type `TokenId`, and has an associated `amount`, which is of type `U256`. 
 
-`TokenId` is a type alias for `ByteVector32`, which is a 32-byte vector used to represent a hash value in the Alephium protocol. `U256` is a type alias for `BigInt`, which is a large integer used to represent token amounts in the Alephium protocol.
+`TokenId` is a type alias for `ByteVector32`, which is a 32-byte vector used to represent a hash value in the Oxyg3nium protocol. `U256` is a type alias for `BigInt`, which is a large integer used to represent token amounts in the Oxyg3nium protocol.
 
-This `Token` class is used throughout the Alephium project to represent tokens in various contexts, such as in transaction inputs and outputs, account balances, and contract state variables. For example, a transaction output that creates a new token would have a `Token` object as its output value, with the `id` field set to the hash of the token's name and the `amount` field set to the initial supply of the token.
+This `Token` class is used throughout the Oxyg3nium project to represent tokens in various contexts, such as in transaction inputs and outputs, account balances, and contract state variables. For example, a transaction output that creates a new token would have a `Token` object as its output value, with the `id` field set to the hash of the token's name and the `amount` field set to the initial supply of the token.
 
 Here is an example of how the `Token` class might be used in a transaction output:
 

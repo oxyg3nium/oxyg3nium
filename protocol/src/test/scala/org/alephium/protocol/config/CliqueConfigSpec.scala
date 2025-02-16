@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,9 +16,9 @@
 
 package org.oxyg3nium.protocol.config
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class CliqueConfigSpec extends AlephiumSpec {
+class CliqueConfigSpec extends Oxyg3niumSpec {
   it should "validate broker id" in {
     val cliqueConfig = new CliqueConfig {
       override def brokerNum: Int = 3

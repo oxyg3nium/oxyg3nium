@@ -10,7 +10,7 @@ The `PendingTxStorage` trait defines the following methods:
 
 The `PendingTxRocksDBStorage` class defines a constructor that takes a `RocksDBSource` object, a column family, and read and write options. It also defines the `replace` method that removes the old transaction and inserts the new one with the same transaction ID. The `removeUnsafe` and `putUnsafe` methods are inherited from the `RocksDBKeyValueStorage` class and are used to remove and insert transactions in the database.
 
-This code is used to store and manage pending transactions in the Alephium project. It provides an interface for adding, removing, and iterating over transactions in a RocksDB database. The `PendingTxRocksDBStorage` class can be instantiated with different column families to store different types of transactions. For example, the project may use different column families for different types of transactions, such as regular transactions, contract transactions, and governance transactions. The `PendingTxStorage` trait can be used as a common interface for managing all types of pending transactions. Here is an example of how to use this code to store and retrieve a transaction:
+This code is used to store and manage pending transactions in the Oxyg3nium project. It provides an interface for adding, removing, and iterating over transactions in a RocksDB database. The `PendingTxRocksDBStorage` class can be instantiated with different column families to store different types of transactions. For example, the project may use different column families for different types of transactions, such as regular transactions, contract transactions, and governance transactions. The `PendingTxStorage` trait can be used as a common interface for managing all types of pending transactions. Here is an example of how to use this code to store and retrieve a transaction:
 
 ```scala
 val storage = PendingTxRocksDBStorage(...)
@@ -21,7 +21,7 @@ val retrievedTx = storage.get(txId)
 ```
 ## Questions: 
  1. What is the purpose of this code?
-   - This code defines a trait and a class for storing and managing pending transactions in a RocksDB database for the Alephium project.
+   - This code defines a trait and a class for storing and managing pending transactions in a RocksDB database for the Oxyg3nium project.
 
 2. What other dependencies does this code have?
    - This code imports `org.rocksdb.{ReadOptions, WriteOptions}` and several classes from the `org.alephium` and `org.alephium.io` packages.

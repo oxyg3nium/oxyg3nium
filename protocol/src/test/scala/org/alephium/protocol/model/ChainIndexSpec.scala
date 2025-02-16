@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,9 +16,9 @@
 
 package org.oxyg3nium.protocol.model
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class ChainIndexSpec extends AlephiumSpec with NoIndexModelGenerators {
+class ChainIndexSpec extends Oxyg3niumSpec with NoIndexModelGenerators {
   it should "check when it's intra group index" in {
     val index0 = ChainIndex.unsafe(0, 0)
     val index1 = ChainIndex.unsafe(0, 1)

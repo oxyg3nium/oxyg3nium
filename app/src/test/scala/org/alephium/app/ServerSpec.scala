@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,13 +22,13 @@ import akka.actor.ActorSystem
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.time.{Minutes, Span}
 
-import org.alephium.flow.setting.AlephiumConfigFixture
-import org.alephium.util.{AlephiumSpec, SocketUtil}
+import org.alephium.flow.setting.Oxyg3niumConfigFixture
+import org.alephium.util.{Oxyg3niumSpec, SocketUtil}
 
-class ServerSpec extends AlephiumSpec with ScalaFutures with SocketUtil {
+class ServerSpec extends Oxyg3niumSpec with ScalaFutures with SocketUtil {
   implicit override val patienceConfig: PatienceConfig = PatienceConfig(timeout = Span(1, Minutes))
 
-  it should "start and stop correctly" in new AlephiumConfigFixture {
+  it should "start and stop correctly" in new Oxyg3niumConfigFixture {
     override val configValues = configPortsValues
 
     implicit val apiConfig: ApiConfig = ApiConfig.load(newConfig)

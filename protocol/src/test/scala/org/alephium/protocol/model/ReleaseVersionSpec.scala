@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,9 +20,9 @@ import akka.util.ByteString
 
 import org.oxyg3nium.protocol.Generators
 import org.oxyg3nium.protocol.config.NetworkConfig
-import org.oxyg3nium.util.{AlephiumSpec, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, TimeStamp}
 
-class ReleaseVersionSpec extends AlephiumSpec {
+class ReleaseVersionSpec extends Oxyg3niumSpec {
   it should "get version from release string" in {
     forAll(Generators.versionGen) { case (versionStr, version) =>
       ReleaseVersion.from(versionStr) contains version
@@ -62,7 +62,7 @@ class ReleaseVersionSpec extends AlephiumSpec {
 
     {
       info("Test mainnet pre-Rhone")
-      implicit val config = buildNetworkConfig(NetworkId.AlephiumMainNet, now.plusHoursUnsafe(1))
+      implicit val config = buildNetworkConfig(NetworkId.Oxyg3niumMainNet, now.plusHoursUnsafe(1))
       config.getHardFork(now) is HardFork.Leman
       ReleaseVersion.fromClientId("xxx") is None
       ReleaseVersion.fromClientId("scala-oxyg3nium/v2.8.1/Linux") is Some(ReleaseVersion(2, 8, 1))
@@ -72,7 +72,7 @@ class ReleaseVersionSpec extends AlephiumSpec {
 
     {
       info("Test mainnet Rhone")
-      implicit val config = buildNetworkConfig(NetworkId.AlephiumMainNet, now.plusHoursUnsafe(-1))
+      implicit val config = buildNetworkConfig(NetworkId.Oxyg3niumMainNet, now.plusHoursUnsafe(-1))
       config.getHardFork(now) is HardFork.Rhone
       ReleaseVersion.fromClientId("xxx") is None
       ReleaseVersion.fromClientId("scala-oxyg3nium/v2.8.1/Linux") is None
@@ -82,7 +82,7 @@ class ReleaseVersionSpec extends AlephiumSpec {
 
     {
       info("Test testnet pre-Rhone")
-      implicit val config = buildNetworkConfig(NetworkId.AlephiumTestNet, now.plusHoursUnsafe(1))
+      implicit val config = buildNetworkConfig(NetworkId.Oxyg3niumTestNet, now.plusHoursUnsafe(1))
       config.getHardFork(now) is HardFork.Leman
       ReleaseVersion.fromClientId("xxx") is None
       ReleaseVersion.fromClientId("scala-oxyg3nium/v2.14.5/Linux") is Some(ReleaseVersion(2, 14, 5))
@@ -92,7 +92,7 @@ class ReleaseVersionSpec extends AlephiumSpec {
 
     {
       info("Test testnet Rhone")
-      implicit val config = buildNetworkConfig(NetworkId.AlephiumTestNet, now.plusHoursUnsafe(-1))
+      implicit val config = buildNetworkConfig(NetworkId.Oxyg3niumTestNet, now.plusHoursUnsafe(-1))
       config.getHardFork(now) is HardFork.Rhone
       ReleaseVersion.fromClientId("xxx") is None
       ReleaseVersion.fromClientId("scala-oxyg3nium/v2.14.5/Linux") is None

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -17,9 +17,9 @@
 package org.oxyg3nium.io
 
 import org.oxyg3nium.crypto.{Blake2b => Hash}
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class StagingSMTSpec extends AlephiumSpec {
+class StagingSMTSpec extends Oxyg3niumSpec {
 
   trait Fixture extends CachedTrieSpec.Fixture {
     val stagingCache   = cached.asInstanceOf[CachedSMT[Hash, Hash]].staging()

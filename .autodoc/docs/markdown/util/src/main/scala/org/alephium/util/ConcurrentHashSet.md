@@ -8,7 +8,7 @@ The class provides a number of methods to manipulate the set. The add method add
 
 The iterable method returns an iterable of the elements in the set. This method is implemented using the keySet method of the ConcurrentHashMap, which returns a set of the keys in the map. The set is then converted to an iterable using the asScala method from the Scala standard library.
 
-Overall, the ConcurrentHashSet class provides a thread-safe way to store a set of elements in a multi-threaded environment. It is intended to be used as a building block for other concurrent data structures in the Alephium project. An example usage of the class is shown below:
+Overall, the ConcurrentHashSet class provides a thread-safe way to store a set of elements in a multi-threaded environment. It is intended to be used as a building block for other concurrent data structures in the Oxyg3nium project. An example usage of the class is shown below:
 
 ```
 val set = ConcurrentHashSet.empty[Int]

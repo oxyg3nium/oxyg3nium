@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -42,13 +42,13 @@ import org.alephium.protocol.model.{
   TxGenerators
 }
 import org.alephium.serde.serialize
-import org.alephium.util.{discard, AlephiumFutureSpec, AVector, Duration, Hex, U256}
+import org.alephium.util.{discard, Oxyg3niumFutureSpec, AVector, Duration, Hex, U256}
 import org.alephium.wallet.api.model._
 import org.alephium.wallet.config.WalletConfigFixture
 import org.alephium.wallet.json.ModelCodecs
 
 class WalletAppSpec
-    extends AlephiumFutureSpec
+    extends Oxyg3niumFutureSpec
     with ModelCodecs
     with WalletConfigFixture
     with TxGenerators
@@ -503,7 +503,7 @@ object WalletAppSpec extends {
     router.route().path("/infos/chain-params").handler { ctx =>
       complete(
         ctx,
-        ChainParams(NetworkId.AlephiumMainNet, 18, 1, 2)
+        ChainParams(NetworkId.Oxyg3niumMainNet, 18, 1, 2)
       )
     }
 

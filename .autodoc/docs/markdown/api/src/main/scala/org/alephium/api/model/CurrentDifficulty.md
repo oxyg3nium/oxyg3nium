@@ -2,9 +2,9 @@
 
 The code above defines a case class called `CurrentDifficulty` that takes in a single parameter of type `BigInteger`. This case class is located in the `org.alephium.api.model` package. 
 
-The purpose of this case class is to represent the current difficulty of the Alephium blockchain. Difficulty is a measure of how difficult it is to find a hash below a given target. In the context of blockchain, difficulty is adjusted periodically to maintain a consistent block time. 
+The purpose of this case class is to represent the current difficulty of the Oxyg3nium blockchain. Difficulty is a measure of how difficult it is to find a hash below a given target. In the context of blockchain, difficulty is adjusted periodically to maintain a consistent block time. 
 
-By defining a case class for `CurrentDifficulty`, the code provides a convenient way to pass around the current difficulty value as a single object. This can be useful in other parts of the Alephium project that need to access the current difficulty value. 
+By defining a case class for `CurrentDifficulty`, the code provides a convenient way to pass around the current difficulty value as a single object. This can be useful in other parts of the Oxyg3nium project that need to access the current difficulty value. 
 
 For example, if there is a need to display the current difficulty value on a user interface, the `CurrentDifficulty` case class can be used to encapsulate the value and pass it to the UI component. 
 
@@ -20,10 +20,10 @@ println(currentDifficulty.difficulty) // prints 1234567890
 
 In the example above, a new instance of `CurrentDifficulty` is created with a difficulty value of `1234567890`. The `difficulty` field of the instance is then accessed and printed to the console. 
 
-Overall, the `CurrentDifficulty` case class provides a simple and convenient way to represent the current difficulty value in the Alephium blockchain.
+Overall, the `CurrentDifficulty` case class provides a simple and convenient way to represent the current difficulty value in the Oxyg3nium blockchain.
 ## Questions: 
  1. What is the purpose of the `CurrentDifficulty` case class?
-- The `CurrentDifficulty` case class is used to represent the current difficulty of the Alephium blockchain network.
+- The `CurrentDifficulty` case class is used to represent the current difficulty of the Oxyg3nium blockchain network.
 
 2. What is the significance of the `AnyVal` keyword in the `CurrentDifficulty` definition?
 - The `AnyVal` keyword indicates that the `CurrentDifficulty` case class is a value class, which means it has no runtime overhead and can be used in place of its underlying type (`BigInteger`) in most situations.

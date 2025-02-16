@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,9 +20,9 @@ import java.nio.file.{Files, Paths}
 
 import scala.io.Source
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class CliSpec extends AlephiumSpec {
+class CliSpec extends Oxyg3niumSpec {
   val baseDir     = "src/test/resources"
   val project1    = baseDir + "/project1"
   val project2    = baseDir + "/project2"

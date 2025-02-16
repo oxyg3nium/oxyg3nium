@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@ import akka.testkit.TestProbe
 
 import org.oxyg3nium.util._
 
-class ShutdownTest extends AlephiumActorSpec {
+class ShutdownTest extends Oxyg3niumActorSpec {
   it should "shutdown the node when Tcp port is used" in new CliqueFixture {
     val connection = TestProbe()
     IO(Tcp) ! Tcp.Bind(connection.ref, new InetSocketAddress("127.0.0.1", defaultMasterPort))

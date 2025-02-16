@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,9 +16,9 @@
 
 package org.oxyg3nium.protocol.model
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class CliqueIdSpec extends AlephiumSpec with NoIndexModelGenerators {
+class CliqueIdSpec extends Oxyg3niumSpec with NoIndexModelGenerators {
   it should "compute hamming distance for peer ids" in {
     forAll(cliqueIdGen, cliqueIdGen) { (id0, id1) =>
       val output0 = CliqueId.hammingDist(id0, id1)

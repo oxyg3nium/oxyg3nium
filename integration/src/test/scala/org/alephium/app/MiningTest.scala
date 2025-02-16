@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@ import org.oxyg3nium.flow.mining.Miner
 import org.oxyg3nium.protocol.model.nonCoinbaseMinGasFee
 import org.oxyg3nium.util._
 
-class MiningTest extends AlephiumActorSpec {
+class MiningTest extends Oxyg3niumActorSpec {
   class Fixture(numNodes: Int) extends CliqueFixture {
     val clique = bootClique(nbOfNodes = numNodes)
     clique.start()

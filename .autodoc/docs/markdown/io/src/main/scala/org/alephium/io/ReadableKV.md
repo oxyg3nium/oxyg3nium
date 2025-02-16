@@ -47,5 +47,5 @@ An instance of `MyDataStore` is created and used to read the value of a key call
 2. What is the `IOResult` type used in this code?
    - The `get`, `getOpt`, and `exists` methods all return a `IOResult` type, but it's not clear what this type represents or how it's used.
 
-3. How is this code related to the rest of the Alephium project?
-   - The code includes a copyright notice and license information, but it's unclear how this code fits into the larger Alephium project or what its dependencies might be.
+3. How is this code related to the rest of the Oxyg3nium project?
+   - The code includes a copyright notice and license information, but it's unclear how this code fits into the larger Oxyg3nium project or what its dependencies might be.

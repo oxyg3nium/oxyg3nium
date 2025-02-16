@@ -1,10 +1,10 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/docker/grafana)
 
-The `.autodoc/docs/json/docker/grafana` folder contains configuration files and provisioning settings for integrating the Alephium project with Grafana, a popular open-source platform for monitoring and observability. This integration allows Alephium to display monitoring data from Prometheus in a Grafana dashboard, providing valuable insights into the performance and health of the project.
+The `.autodoc/docs/json/docker/grafana` folder contains configuration files and provisioning settings for integrating the Oxyg3nium project with Grafana, a popular open-source platform for monitoring and observability. This integration allows Oxyg3nium to display monitoring data from Prometheus in a Grafana dashboard, providing valuable insights into the performance and health of the project.
 
 The `provisioning` subfolder contains two subfolders: `dashboards` and `datasources`.
 
-The `dashboards` subfolder contains a `dashboard.yml` file, which is a configuration file for integrating Alephium with Prometheus. It specifies the API version, provider information, and additional configuration options for the provider. To use this file, save it as `prometheus.yml` and place it in the `/etc/grafana/provisioning/dashboards` directory. Once the file is in place, Alephium can retrieve the Prometheus dashboards and display them in the Grafana dashboard.
+The `dashboards` subfolder contains a `dashboard.yml` file, which is a configuration file for integrating Oxyg3nium with Prometheus. It specifies the API version, provider information, and additional configuration options for the provider. To use this file, save it as `prometheus.yml` and place it in the `/etc/grafana/provisioning/dashboards` directory. Once the file is in place, Oxyg3nium can retrieve the Prometheus dashboards and display them in the Grafana dashboard.
 
 Example usage:
 
@@ -22,7 +22,7 @@ providers:
     path: /etc/grafana/provisioning/dashboards
 ```
 
-The `datasources` subfolder contains a `datasource.yml` file, which is a configuration file for managing datasources in the Alephium project. It specifies the API version and provides a list of datasources to be deleted from the database, as well as a list of datasources to be inserted or updated depending on their availability in the database.
+The `datasources` subfolder contains a `datasource.yml` file, which is a configuration file for managing datasources in the Oxyg3nium project. It specifies the API version and provides a list of datasources to be deleted from the database, as well as a list of datasources to be inserted or updated depending on their availability in the database.
 
 Here's an example of how this code might be used:
 
@@ -44,4 +44,4 @@ for datasource in datasources:
         insert_or_update_datasource(datasource)
 ```
 
-In this example, the configuration file is loaded, and the lists of datasources to delete and insert/update are retrieved. The code then iterates through the datasources, deleting those in the delete list and inserting or updating the others as needed. This allows for efficient and flexible management of datasources within the Alephium project.
+In this example, the configuration file is loaded, and the lists of datasources to delete and insert/update are retrieved. The code then iterates through the datasources, deleting those in the delete list and inserting or updating the others as needed. This allows for efficient and flexible management of datasources within the Oxyg3nium project.

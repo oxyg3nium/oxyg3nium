@@ -8,7 +8,7 @@ The `serverOptions` value is initialized by calling the `customiseInterceptors` 
 
 Finally, the `options` method is called on the builder object to build the `VertxFutureServerOptions` instance with the custom interceptors.
 
-This code is used to configure the server options for the Alephium project's HTTP server. By customizing the interceptors, the project can handle decoding failures in a specific way. The `ServerOptions` object can be imported and used in other parts of the project to access the `VertxFutureServerOptions` instance and its configured options. For example, it could be used to start the HTTP server with the custom interceptors:
+This code is used to configure the server options for the Oxyg3nium project's HTTP server. By customizing the interceptors, the project can handle decoding failures in a specific way. The `ServerOptions` object can be imported and used in other parts of the project to access the `VertxFutureServerOptions` instance and its configured options. For example, it could be used to start the HTTP server with the custom interceptors:
 
 ```scala
 import org.alephium.http.ServerOptions
@@ -20,7 +20,7 @@ val server = VertxServerBuilder
 ```
 ## Questions: 
  1. What is the purpose of this code file?
-   - This code file is defining server options for the Alephium project's HTTP API.
+   - This code file is defining server options for the Oxyg3nium project's HTTP API.
 
 2. What is the license for this code?
    - This code is licensed under the GNU Lesser General Public License, version 3 or later.

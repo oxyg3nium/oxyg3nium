@@ -1,12 +1,12 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/Group.scala)
 
-This code defines a Scala case class called `Group` that takes an integer parameter. The purpose of this class is to represent a group of entities within the Alephium project. 
+This code defines a Scala case class called `Group` that takes an integer parameter. The purpose of this class is to represent a group of entities within the Oxyg3nium project. 
 
 In software development, a case class is a class that is designed to hold data. It is immutable, meaning that once an instance of the class is created, its values cannot be changed. This makes it useful for representing data that should not be modified after it is created. 
 
-In the context of the Alephium project, this `Group` class may be used to organize various entities, such as transactions or blocks, into groups for easier management and processing. For example, a group of transactions may be processed together to improve efficiency. 
+In the context of the Oxyg3nium project, this `Group` class may be used to organize various entities, such as transactions or blocks, into groups for easier management and processing. For example, a group of transactions may be processed together to improve efficiency. 
 
-Here is an example of how this `Group` class may be used in the larger Alephium project:
+Here is an example of how this `Group` class may be used in the larger Oxyg3nium project:
 
 ```scala
 val group1 = Group(1)
@@ -28,7 +28,7 @@ val group2Transactions = transactions.filter(_.group == group2)
 
 In this example, we create two groups (`group1` and `group2`) and a list of transactions. We then filter the transactions by group and process them separately. This allows for more efficient processing of transactions and better organization of data within the project. 
 
-Overall, this code defines a simple but useful class for organizing entities within the Alephium project.
+Overall, this code defines a simple but useful class for organizing entities within the Oxyg3nium project.
 ## Questions: 
  1. What is the purpose of the `Group` case class?
    - The `Group` case class is used to represent a group with an integer value.

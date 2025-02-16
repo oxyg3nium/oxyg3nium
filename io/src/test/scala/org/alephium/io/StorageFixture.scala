@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,9 +20,9 @@ import java.nio.file.{Files => JFiles}
 
 import org.oxyg3nium.crypto.Keccak256
 import org.oxyg3nium.serde.Serde
-import org.oxyg3nium.util.{AlephiumFixture, AlephiumSpec, Env, Files}
+import org.oxyg3nium.util.{Oxyg3niumFixture, Oxyg3niumSpec, Env, Files}
 
-trait StorageFixture extends AlephiumFixture {
+trait StorageFixture extends Oxyg3niumFixture {
 
   def newDBStorage(): RocksDBSource = {
     val rootPath = Files.testRootPath(Env.currentEnv)
@@ -32,7 +32,7 @@ trait StorageFixture extends AlephiumFixture {
     val dbname  = s"test-db-${Keccak256.generate.toHexString}"
     val dbPath  = rootPath.resolve(dbname)
     val storage = RocksDBSource.openUnsafe(dbPath)
-    AlephiumSpec.addCleanTask(() => storage.dESTROYUnsafe())
+    Oxyg3niumSpec.addCleanTask(() => storage.dESTROYUnsafe())
     storage
   }
 

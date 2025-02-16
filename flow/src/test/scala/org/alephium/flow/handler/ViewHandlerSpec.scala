@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ import org.oxyg3nium.protocol.model.{Address, ChainIndex, GroupIndex, LockupScri
 import org.oxyg3nium.protocol.vm.LockupScript
 import org.oxyg3nium.util.*
 
-class ViewHandlerSpec extends AlephiumActorSpec {
+class ViewHandlerSpec extends Oxyg3niumActorSpec {
   it should "update when necessary" in {
     implicit val brokerConfig = new BrokerConfig {
       override def brokerId: Int  = 1

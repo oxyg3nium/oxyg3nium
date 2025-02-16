@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/app/src/it/scala/org/alephium/app/IntraCliqueSyncTest.scala)
 
-This file contains code for testing the synchronization of nodes within a clique in the Alephium project. The code defines a class called `IntraCliqueSyncTest` which extends `AlephiumActorSpec`, a class used for testing actors in the Alephium project. 
+This file contains code for testing the synchronization of nodes within a clique in the Oxyg3nium project. The code defines a class called `IntraCliqueSyncTest` which extends `Oxyg3niumActorSpec`, a class used for testing actors in the Oxyg3nium project. 
 
 The `IntraCliqueSyncTest` class contains two test cases. The first test case checks if a single node clique can be booted and synced. The second test case checks if a two node clique can be booted and synced. 
 
@@ -10,7 +10,7 @@ The first test case starts a single node clique and waits for it to become ready
 
 The second test case starts two nodes in a clique and mines blocks on the first node until the second node is unable to sync with the first node. Once the second node is unable to sync, the test starts the second node and waits for it to become ready. Once the second node is ready, the test checks that both nodes contain the same blocks in their blockchains. Finally, the test stops both nodes. 
 
-This code is used to test the synchronization of nodes within a clique in the Alephium project. It ensures that nodes can be started and synced correctly, and that the blockchain is consistent across all nodes in the clique.
+This code is used to test the synchronization of nodes within a clique in the Oxyg3nium project. It ensures that nodes can be started and synced correctly, and that the blockchain is consistent across all nodes in the clique.
 ## Questions: 
  1. What is the purpose of the `IntraCliqueSyncTest` class?
 - The `IntraCliqueSyncTest` class is a test class that tests the synchronization of nodes within a clique.

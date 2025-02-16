@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -37,7 +37,7 @@ import org.oxyg3nium.protocol.vm.LogConfig
 import org.oxyg3nium.util.{ActorRefT, Env, EventBus, Service}
 
 trait Node extends Service {
-  implicit def config: AlephiumConfig
+  implicit def config: Oxyg3niumConfig
   def system: ActorSystem
   def blockFlow: BlockFlow
   def misbehaviorManager: ActorRefT[MisbehaviorManager.Command]
@@ -59,12 +59,12 @@ trait Node extends Service {
 object Node {
   def build(storages: Storages, flowSystem: ActorSystem)(implicit
       executionContext: ExecutionContext,
-      config: AlephiumConfig
+      config: Oxyg3niumConfig
   ): Node = new Default(storages, flowSystem)
 
   class Default(storages: Storages, flowSystem: ActorSystem)(implicit
       val executionContext: ExecutionContext,
-      val config: AlephiumConfig
+      val config: Oxyg3niumConfig
   ) extends Node
       with StrictLogging {
     override def serviceName: String = "Node"
@@ -139,14 +139,14 @@ object Node {
   def buildBlockFlowUnsafe(rootPath: Path): (BlockFlow, Storages) = {
     val typesafeConfig =
       Configs.parseConfigAndValidate(Env.Prod, rootPath, overwrite = true)
-    val config = AlephiumConfig.load(typesafeConfig, "oxyg3nium")
+    val config = Oxyg3niumConfig.load(typesafeConfig, "oxyg3nium")
     val dbPath = rootPath.resolve(config.network.networkId.nodeFolder)
     val storages =
       Storages.createUnsafe(dbPath, "db", ProdSettings.writeOptions)(config.broker, config.node)
     buildBlockFlowUnsafe(storages)(config) -> storages
   }
 
-  def buildBlockFlowUnsafe(storages: Storages)(implicit config: AlephiumConfig): BlockFlow = {
+  def buildBlockFlowUnsafe(storages: Storages)(implicit config: Oxyg3niumConfig): BlockFlow = {
     val nodeStateStorage = storages.nodeStateStorage
     val isInitialized    = Utils.unsafe(nodeStateStorage.isInitialized())
     if (isInitialized) {
@@ -160,7 +160,7 @@ object Node {
     }
   }
 
-  def checkGenesisBlocks(blockFlow: BlockFlow)(implicit config: AlephiumConfig): Unit = {
+  def checkGenesisBlocks(blockFlow: BlockFlow)(implicit config: Oxyg3niumConfig): Unit = {
     config.broker.chainIndexes.foreach { chainIndex =>
       val configGenesisBlock = config.genesisBlocks(chainIndex.from.value)(chainIndex.to.value)
       val hashes             = Utils.unsafe(blockFlow.getHashes(chainIndex, 0))

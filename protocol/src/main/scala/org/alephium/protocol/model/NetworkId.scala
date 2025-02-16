@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -36,9 +36,9 @@ final case class NetworkId(id: Byte) extends AnyVal {
 }
 
 object NetworkId {
-  val AlephiumMainNet: NetworkId = NetworkId(0)
-  val AlephiumTestNet: NetworkId = NetworkId(1)
-  val AlephiumDevNet: NetworkId  = NetworkId(2)
+  val Oxyg3niumMainNet: NetworkId = NetworkId(0)
+  val Oxyg3niumTestNet: NetworkId = NetworkId(1)
+  val Oxyg3niumDevNet: NetworkId  = NetworkId(2)
 
   implicit val serde: Serde[NetworkId] = byteSerde.xmap(NetworkId.apply, _.id)
 

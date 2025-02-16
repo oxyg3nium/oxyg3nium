@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -27,9 +27,9 @@ import org.alephium.http.EndpointSender
 import org.alephium.json.Json._
 import org.alephium.protocol.config.GroupConfig
 import org.alephium.protocol.model._
-import org.alephium.util.{AlephiumSpec, AVector, Duration, U256}
+import org.alephium.util.{Oxyg3niumSpec, AVector, Duration, U256}
 
-class BlockFlowClientSpec() extends AlephiumSpec with Inside {
+class BlockFlowClientSpec() extends Oxyg3niumSpec with Inside {
   it should "correclty create an sttp request" in new Fixture {
     val destinations = AVector(Destination(toAddress, Some(value), None, None))
     val buildTransferTransactionIn =

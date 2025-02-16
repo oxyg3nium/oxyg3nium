@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -25,9 +25,9 @@ import org.oxyg3nium.io.SparseMerkleTrie.Node
 import org.oxyg3nium.protocol.Hash
 import org.oxyg3nium.protocol.model.{Address, Block, ChainIndex, ContractId}
 import org.oxyg3nium.protocol.vm.TokenIssuance
-import org.oxyg3nium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector}
 
-class PruneStorageServiceSpec extends AlephiumSpec {
+class PruneStorageServiceSpec extends Oxyg3niumSpec {
   trait Fixture extends FlowFixture {
     override val configValues: Map[String, Any] = Map(
       ("oxyg3nium.broker.groups", 4),

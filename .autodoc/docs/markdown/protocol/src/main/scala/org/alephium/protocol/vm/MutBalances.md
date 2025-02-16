@@ -4,7 +4,7 @@ The code defines a class called `MutBalances` that represents a mutable collecti
 
 The `MutBalances` class provides methods to add and subtract balances for a given lockup script, as well as methods to retrieve the balances for a given lockup script or token ID. The class also provides methods to merge two `MutBalances` objects and to convert the balances to a collection of transaction outputs.
 
-The `MutBalances` class is used in the larger Alephium project to keep track of the balances of assets (such as Alphium tokens and other tokens) for a given lockup script. The balances are updated when assets are added or removed from the lockup script, such as when a transaction is processed. The balances can then be used to determine whether a transaction is valid or not.
+The `MutBalances` class is used in the larger Oxyg3nium project to keep track of the balances of assets (such as Alphium tokens and other tokens) for a given lockup script. The balances are updated when assets are added or removed from the lockup script, such as when a transaction is processed. The balances can then be used to determine whether a transaction is valid or not.
 
 For example, the following code adds 100 Alphium tokens to the balances for a given lockup script:
 
@@ -14,7 +14,7 @@ val lockupScript = LockupScript(...)
 balances.addAlph(lockupScript, U256.from(100))
 ```
 
-Overall, the `MutBalances` class provides a convenient way to manage balances for a given lockup script in the Alephium project.
+Overall, the `MutBalances` class provides a convenient way to manage balances for a given lockup script in the Oxyg3nium project.
 ## Questions: 
  1. What is the purpose of the `MutBalances` class?
 - The `MutBalances` class represents a mutable collection of balances for different lockup scripts, which can hold both ALPH and token amounts.

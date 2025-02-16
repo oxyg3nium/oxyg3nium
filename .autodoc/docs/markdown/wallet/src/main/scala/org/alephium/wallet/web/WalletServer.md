@@ -6,7 +6,7 @@ The `WalletServer` class takes in a `WalletService` instance, a `Duration` objec
 
 The `WalletServer` class defines a `routes` `AVector` that maps each defined method to a `Route` object using the `route` method provided by `VertxFutureServerInterpreter`. It also defines a `docsRoute` that provides Swagger UI documentation for the defined routes.
 
-The `WalletServer` class is used to define the wallet-related routes for the Alephium project. The `WalletError` to `ApiError` conversion provided by the `WalletServer` object is used to convert wallet-related errors to API errors that can be returned to the user. 
+The `WalletServer` class is used to define the wallet-related routes for the Oxyg3nium project. The `WalletError` to `ApiError` conversion provided by the `WalletServer` object is used to convert wallet-related errors to API errors that can be returned to the user. 
 
 Example usage:
 ```scala

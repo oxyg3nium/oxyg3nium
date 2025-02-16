@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.protocol.vm
 import akka.util.ByteString
 
 import org.oxyg3nium.protocol.model.{minimalGas, HardFork}
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class CostStrategySpec extends AlephiumSpec {
+class CostStrategySpec extends Oxyg3niumSpec {
   it should "charge gas" in {
     def test(charge: CostStrategy => ExeResult[Unit], cost: Int) = {
       val strategy = new CostStrategy {

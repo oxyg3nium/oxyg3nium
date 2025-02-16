@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/message/MessageSerde.scala)
 
-The `MessageSerde` object provides serialization and deserialization functionality for messages in the Alephium protocol. It defines methods for extracting and validating message fields such as checksums and message lengths, as well as for unwrapping message payloads from their serialized form.
+The `MessageSerde` object provides serialization and deserialization functionality for messages in the Oxyg3nium protocol. It defines methods for extracting and validating message fields such as checksums and message lengths, as well as for unwrapping message payloads from their serialized form.
 
 The `MessageSerde` object is designed to be used in conjunction with other classes and objects in the `org.alephium.protocol.message` package, which define the message types and their associated fields. When a message is received or sent, it is first serialized into a byte string using the `Serde` trait, which is implemented by the message classes. The resulting byte string is then passed to the appropriate `MessageSerde` method to extract or validate the message fields.
 
@@ -10,11 +10,11 @@ The `extractBytes` method is used by `extractChecksum`, `extractLength`, and `ex
 
 The `checksum` method calculates the checksum of a byte string using the DjbHash algorithm, which is a fast and secure hash function. The resulting checksum is used to validate the integrity of the message payload.
 
-Overall, the `MessageSerde` object provides a set of low-level utilities for working with the binary message format used by the Alephium protocol. These utilities are used by higher-level classes and objects to implement the protocol's message handling logic.
+Overall, the `MessageSerde` object provides a set of low-level utilities for working with the binary message format used by the Oxyg3nium protocol. These utilities are used by higher-level classes and objects to implement the protocol's message handling logic.
 ## Questions: 
  1. What is the purpose of this code?
-   - This code provides message serialization and deserialization functionality for the Alephium protocol.
+   - This code provides message serialization and deserialization functionality for the Oxyg3nium protocol.
 2. What external dependencies does this code have?
-   - This code depends on the Akka library, the Alephium protocol configuration, and the Alephium serialization library.
+   - This code depends on the Akka library, the Oxyg3nium protocol configuration, and the Oxyg3nium serialization library.
 3. What is the format of the messages being serialized and deserialized?
    - The messages are expected to have a magic byte prefix, followed by a checksum, followed by a length field, followed by the message data. The checksum is calculated using the DjbHash algorithm.

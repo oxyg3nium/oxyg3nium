@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/validation/package.scala)
 
-This code defines several type aliases that are used throughout the Alephium project for validation of blocks and transactions. The purpose of this code is to provide a standardized way of handling validation errors and results across the project.
+This code defines several type aliases that are used throughout the Oxyg3nium project for validation of blocks and transactions. The purpose of this code is to provide a standardized way of handling validation errors and results across the project.
 
 The `BlockValidationError` and `TxValidationError` types are defined as `Either` types that can either contain an `IOError` or an `InvalidBlockStatus`/`InvalidTxStatus` object. These types are used to represent the possible validation errors that can occur when validating a block or transaction.
 
@@ -8,7 +8,7 @@ The `ValidationResult` type is a generic type that takes two type parameters: `I
 
 Finally, the `HeaderValidationResult`, `TxValidationResult`, and `BlockValidationResult` types are defined as specific instances of the `ValidationResult` type, with the `Invalid` type parameter set to `InvalidHeaderStatus`, `InvalidTxStatus`, and `InvalidBlockStatus`, respectively. These types are used to represent the results of validating headers, transactions, and blocks, respectively.
 
-Overall, this code provides a standardized way of handling validation errors and results across the Alephium project, making it easier to write and maintain code that performs validation operations. Here is an example of how these types might be used in practice:
+Overall, this code provides a standardized way of handling validation errors and results across the Oxyg3nium project, making it easier to write and maintain code that performs validation operations. Here is an example of how these types might be used in practice:
 
 ```scala
 import org.alephium.flow.validation._

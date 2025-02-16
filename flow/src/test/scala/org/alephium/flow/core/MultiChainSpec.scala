@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -17,9 +17,9 @@
 package org.oxyg3nium.flow.core
 
 import org.oxyg3nium.protocol.model.NoIndexModelGenerators
-import org.oxyg3nium.util.{AlephiumSpec, LockFixture}
+import org.oxyg3nium.util.{Oxyg3niumSpec, LockFixture}
 
-class MultiChainSpec extends AlephiumSpec with NoIndexModelGenerators with LockFixture {
+class MultiChainSpec extends Oxyg3niumSpec with NoIndexModelGenerators with LockFixture {
   it should "work as cache with capacity" in {
     val cache  = MultiChain.bodyVerifyingBlocks(2)
     val blocks = (0 until 3).map(_ => blockGen.sample.get)

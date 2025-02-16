@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,12 +16,12 @@
 
 package org.oxyg3nium.flow.network.sync
 
-import org.oxyg3nium.flow.AlephiumFlowActorSpec
+import org.oxyg3nium.flow.Oxyg3niumFlowActorSpec
 import org.oxyg3nium.flow.core.BlockFlow
 import org.oxyg3nium.protocol.model.{BlockHash, ChainIndex}
 import org.oxyg3nium.util.{AVector, Duration, TimeStamp}
 
-class DownloadTrackerSpec extends AlephiumFlowActorSpec {
+class DownloadTrackerSpec extends Oxyg3niumFlowActorSpec {
   trait Fixture { F =>
     val blockflow = genesisBlockFlow()
     val hashes = AVector.from((1 to 5).map { k =>

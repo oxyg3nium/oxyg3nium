@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,13 +16,13 @@
 
 package org.oxyg3nium.flow.core
 
-import org.oxyg3nium.flow.AlephiumFlowSpec
+import org.oxyg3nium.flow.Oxyg3niumFlowSpec
 import org.oxyg3nium.flow.io.StoragesFixture
 import org.oxyg3nium.protocol.Hash
 import org.oxyg3nium.protocol.model.{Block, ChainIndex, ChainTip, NoIndexModelGeneratorsLike, Weight}
 import org.oxyg3nium.util.AVector
 
-class BlockChainWithStateSpec extends AlephiumFlowSpec with NoIndexModelGeneratorsLike {
+class BlockChainWithStateSpec extends Oxyg3niumFlowSpec with NoIndexModelGeneratorsLike {
   trait Fixture {
     val genesis =
       Block.genesis(ChainIndex.unsafe(0, 0), AVector.empty)(groupConfig, consensusConfigs.mainnet)

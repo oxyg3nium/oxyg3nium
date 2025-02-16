@@ -9,10 +9,10 @@ The `conf` object also provides several implicit value readers for parsing confi
 Overall, this code provides a convenient way to read configuration values from a Typesafe Config object, which can be useful in a larger project that requires configuration values to be specified in a configuration file.
 ## Questions: 
  1. What is the purpose of this code file?
-- This code file contains package-level utility functions and implicit value readers for Alephium's configuration files.
+- This code file contains package-level utility functions and implicit value readers for Oxyg3nium's configuration files.
 
 2. What external libraries or dependencies does this code use?
 - This code uses several external libraries including `java.io.File`, `java.net.InetAddress`, `java.net.InetSocketAddress`, `java.nio.file.Path`, `scala.collection.immutable.ArraySeq`, `scala.concurrent.duration.MILLISECONDS`, `scala.jdk.CollectionConverters._`, `scala.reflect.ClassTag`, `scala.util.{Failure, Success, Try}`, `com.typesafe.config.{Config, ConfigException}`, `net.ceedubs.ficus.Ficus._`, `net.ceedubs.ficus.readers.{NameMapper, ValueReader}`, and `net.ceedubs.ficus.readers.CollectionReaders.traversableReader`.
 
 3. What is the purpose of the `valueReader` function and how is it used?
-- The `valueReader` function is a utility function that takes a function that maps a `Cfg` object to a value of type `A` and returns a `ValueReader[A]` object. It is used to create custom value readers for specific types that can be used with Alephium's configuration files.
+- The `valueReader` function is a utility function that takes a function that maps a `Cfg` object to a value of type `A` and returns a `ValueReader[A]` object. It is used to create custom value readers for specific types that can be used with Oxyg3nium's configuration files.

@@ -1,10 +1,10 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/BlockPool.scala)
 
-This code defines a trait called `BlockPool` which extends another trait called `BlockHashPool`. The purpose of this trait is to provide a set of methods for managing a pool of blocks in the Alephium project. 
+This code defines a trait called `BlockPool` which extends another trait called `BlockHashPool`. The purpose of this trait is to provide a set of methods for managing a pool of blocks in the Oxyg3nium project. 
 
 The `BlockPool` trait defines several methods for interacting with the block pool. The `contains` method checks if a given block is present in the pool. The `getBlock` method retrieves a block from the pool given its hash. The `add` method adds a block to the pool along with its weight. The `getBlocksAfter` method retrieves all blocks that come after a given block in the pool. The `getHeight` method retrieves the height of a given block in the pool. The `getWeight` method retrieves the weight of a given block in the pool. The `getBlockSlice` method retrieves a slice of blocks starting from a given block hash or block. Finally, the `isTip` method checks if a given block is the tip of the pool.
 
-This trait is used in the larger Alephium project to manage the pool of blocks in the blockchain. Other parts of the project can use these methods to retrieve, add, and manipulate blocks in the pool. For example, the `getBlockSlice` method can be used to retrieve a slice of blocks for validation or mining purposes. 
+This trait is used in the larger Oxyg3nium project to manage the pool of blocks in the blockchain. Other parts of the project can use these methods to retrieve, add, and manipulate blocks in the pool. For example, the `getBlockSlice` method can be used to retrieve a slice of blocks for validation or mining purposes. 
 
 Here is an example of how the `getBlock` method can be used:
 

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -27,9 +27,9 @@ import org.oxyg3nium.flow.handler.TestUtils
 import org.oxyg3nium.flow.model.DataOrigin
 import org.oxyg3nium.flow.network.broker.BrokerHandler
 import org.oxyg3nium.protocol.model._
-import org.oxyg3nium.util.{ActorRefT, AlephiumActorSpec, AVector, Duration, TimeStamp}
+import org.oxyg3nium.util.{ActorRefT, Oxyg3niumActorSpec, AVector, Duration, TimeStamp}
 
-class DependencyHandlerSpec extends AlephiumActorSpec {
+class DependencyHandlerSpec extends Oxyg3niumActorSpec {
   trait Fixture extends FlowFixture { Self =>
     lazy val brokerProbe = TestProbe()
     lazy val broker      = ActorRefT[ChainHandler.Event](brokerProbe.ref)

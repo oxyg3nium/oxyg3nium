@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/GasBox.scala)
 
-The `GasBox` class and its companion object in the `org.alephium.protocol.vm` package provide functionality for managing gas usage in the Alephium project. Gas is a measure of computational effort required to execute a transaction on the blockchain. It is used to prevent spamming and denial-of-service attacks on the network. 
+The `GasBox` class and its companion object in the `org.alephium.protocol.vm` package provide functionality for managing gas usage in the Oxyg3nium project. Gas is a measure of computational effort required to execute a transaction on the blockchain. It is used to prevent spamming and denial-of-service attacks on the network. 
 
 The `GasBox` class is a simple wrapper around an integer value representing the amount of gas available. It provides methods for performing arithmetic operations on gas values, such as addition, subtraction, and multiplication. It also provides a `use` method that checks if there is enough gas available to perform a given operation and returns a new `GasBox` instance with the remaining gas if there is, or an error if there isn't. 
 
@@ -8,7 +8,7 @@ The `GasBox` object provides several factory methods for creating `GasBox` insta
 
 The `GasBox` object also provides a `zero` value representing an empty gas box, and a `validate` method that checks if a given `GasBox` instance is within the valid range of gas values for a transaction. 
 
-Overall, the `GasBox` class and object provide a convenient and safe way to manage gas usage in the Alephium project, ensuring that transactions are executed efficiently and securely. 
+Overall, the `GasBox` class and object provide a convenient and safe way to manage gas usage in the Oxyg3nium project, ensuring that transactions are executed efficiently and securely. 
 
 Example usage:
 

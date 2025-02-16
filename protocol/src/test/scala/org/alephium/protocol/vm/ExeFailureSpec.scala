@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.protocol.vm
 import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.model.{dustUtxoAmount, Address, TokenId}
 import org.oxyg3nium.protocol.vm.NotEnoughApprovedBalance
-import org.oxyg3nium.util.{AlephiumSpec, Hex, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, Hex, U256}
 
-class ExeFailureSpec extends AlephiumSpec {
+class ExeFailureSpec extends Oxyg3niumSpec {
   it should "test NotEnoughApprovedBalance" in {
     val lockupScript =
       Address.fromBase58("1G5fKUFGRFEHXcTeCfgKQNppbumd8E9G8vA6p2wf4n2L6").get.lockupScript

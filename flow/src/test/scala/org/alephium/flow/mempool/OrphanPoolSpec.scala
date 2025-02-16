@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,12 +16,12 @@
 
 package org.oxyg3nium.flow.mempool
 
-import org.oxyg3nium.flow.AlephiumFlowSpec
+import org.oxyg3nium.flow.Oxyg3niumFlowSpec
 import org.oxyg3nium.protocol.model.NoIndexModelGeneratorsLike
 import org.oxyg3nium.util.TimeStamp
 
 class OrphanPoolSpec
-    extends AlephiumFlowSpec
+    extends Oxyg3niumFlowSpec
     with TxIndexesSpec.Fixture
     with NoIndexModelGeneratorsLike {
   override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))

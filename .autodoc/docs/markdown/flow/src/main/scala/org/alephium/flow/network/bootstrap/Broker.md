@@ -30,7 +30,7 @@ val broker = system.actorOf(Broker.props(bootstrapper))
 
 2. What external dependencies does this code have?
    
-   This code depends on Akka, a toolkit and runtime for building highly concurrent, distributed, and fault-tolerant systems, and on the Alephium project, which provides the setting and configuration for the network.
+   This code depends on Akka, a toolkit and runtime for building highly concurrent, distributed, and fault-tolerant systems, and on the Oxyg3nium project, which provides the setting and configuration for the network.
 
 3. What is the license for this code?
    

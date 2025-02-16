@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -26,15 +26,15 @@ import org.oxyg3nium.flow.FlowFixture
 import org.oxyg3nium.flow.core.BlockChain.TxIndex
 import org.oxyg3nium.flow.core.BlockFlowState.{BlockCache, Confirmed}
 import org.oxyg3nium.flow.io.StoragesFixture
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
 import org.oxyg3nium.protocol.{ALPH, Generators}
 import org.oxyg3nium.protocol.config.GroupConfigFixture
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm.{LockupScript, TokenIssuance}
-import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp, U256, UnsecureRandom}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, TimeStamp, U256, UnsecureRandom}
 
 // scalastyle:off file.size.limit
-class BlockFlowSpec extends AlephiumSpec {
+class BlockFlowSpec extends Oxyg3niumSpec {
   it should "compute correct blockflow height" in new FlowFixture {
     config.genesisBlocks.flatMap(identity).foreach { block =>
       blockFlow.getWeight(block.hash) isE Weight.zero
@@ -458,7 +458,7 @@ class BlockFlowSpec extends AlephiumSpec {
     val anotherBroker = (brokerConfig.brokerId + 1 + Random.nextInt(
       brokerConfig.brokerNum - 1
     )) % brokerConfig.brokerNum
-    val newConfigFixture = new AlephiumConfigFixture {
+    val newConfigFixture = new Oxyg3niumConfigFixture {
       override val configValues: Map[String, Any] = Map(
         ("oxyg3nium.broker.broker-id", anotherBroker)
       )

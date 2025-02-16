@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
 
 package org.oxyg3nium.util
 
-class CacheSpec extends AlephiumSpec {
+class CacheSpec extends Oxyg3niumSpec {
   it should "work as map" in {
     for (accessOrder <- Seq(true, false)) {
       val cache = if (accessOrder) {

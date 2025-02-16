@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -24,9 +24,9 @@ import net.ceedubs.ficus.Ficus._
 
 import org.alephium.api.model.ApiKey
 import org.alephium.protocol.Hash
-import org.alephium.util.{AlephiumSpec, AVector}
+import org.alephium.util.{Oxyg3niumSpec, AVector}
 
-class WalletConfigSpec() extends AlephiumSpec {
+class WalletConfigSpec() extends Oxyg3niumSpec {
   it should "load wallet config" in {
 
     val typesafeConfig: Config = ConfigFactory.load()

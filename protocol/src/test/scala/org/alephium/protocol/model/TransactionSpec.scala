@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -24,10 +24,10 @@ import org.oxyg3nium.protocol.config.NetworkConfigFixture
 import org.oxyg3nium.protocol.model.TokenId
 import org.oxyg3nium.protocol.vm._
 import org.oxyg3nium.serde._
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Hex, TimeStamp, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Hex, TimeStamp, U256}
 
 class TransactionSpec
-    extends AlephiumSpec
+    extends Oxyg3niumSpec
     with NoIndexModelGenerators
     with NetworkConfigFixture.Default {
 

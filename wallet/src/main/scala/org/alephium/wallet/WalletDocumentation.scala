@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -47,5 +47,5 @@ trait WalletDocumentation extends WalletEndpoints with OpenAPIDocsInterpreter {
   ).map(_.endpoint)
 
   lazy val walletOpenAPI: OpenAPI =
-    toOpenAPI(walletEndpoints, "Alephium Wallet", "1.0")
+    toOpenAPI(walletEndpoints, "Oxyg3nium Wallet", "1.0")
 }

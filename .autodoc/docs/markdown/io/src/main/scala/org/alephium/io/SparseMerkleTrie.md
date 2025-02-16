@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/SparseMerkleTrie.scala)
 
-This code defines a Sparse Merkle Trie (SMT) data structure, which is a tree-based data structure used for efficient storage and verification of key-value pairs. SMT is particularly useful in blockchain projects like Alephium, where it can be used to store and verify the state of the blockchain.
+This code defines a Sparse Merkle Trie (SMT) data structure, which is a tree-based data structure used for efficient storage and verification of key-value pairs. SMT is particularly useful in blockchain projects like Oxyg3nium, where it can be used to store and verify the state of the blockchain.
 
 The main class `SparseMerkleTrie` provides methods for adding, removing, and retrieving key-value pairs. It also supports in-memory caching and batch persistence for improved performance. The trie is built using two types of nodes: `BranchNode` and `LeafNode`. A `BranchNode` contains a path and an array of child nodes, while a `LeafNode` contains a path and the data associated with a key.
 
@@ -29,7 +29,7 @@ val updatedTrie = trie.put("key", 42).right.get
 val value = updatedTrie.get("key").right.get // value = 42
 ```
 
-In summary, this code provides an efficient and secure data structure for storing and verifying key-value pairs, which can be used in the Alephium blockchain project for managing the state of the blockchain.
+In summary, this code provides an efficient and secure data structure for storing and verifying key-value pairs, which can be used in the Oxyg3nium blockchain project for managing the state of the blockchain.
 ## Questions: 
  1. **Question**: What is the purpose of the `SparseMerkleTrie` class and how does it work?
    **Answer**: The `SparseMerkleTrie` class is an implementation of a sparse Merkle trie, which is a tree-like data structure used for efficient storage and retrieval of key-value pairs. It allows operations like insertion, deletion, and retrieval of values based on keys. The class provides methods for these operations, as well as methods for serialization and deserialization of keys and values.

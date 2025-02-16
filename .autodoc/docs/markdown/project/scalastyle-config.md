@@ -6,11 +6,11 @@ The file contains a list of checks, each of which is defined by a class from the
 
 Some of the checks in this file include the FileLengthChecker, which checks that files are not too long, and the ClassNamesChecker, which checks that class names follow a certain naming convention. There are also checks for things like whitespace usage, magic numbers, and method length. 
 
-The file also includes some custom checks that are specific to the Alephium project. For example, there is a check that ensures that the header of each file matches a specific copyright notice. 
+The file also includes some custom checks that are specific to the Oxyg3nium project. For example, there is a check that ensures that the header of each file matches a specific copyright notice. 
 
-Overall, this file is an important part of the Alephium project's code quality process. By defining a set of rules for code analysis, the project can ensure that its codebase is consistent, maintainable, and free of common issues. 
+Overall, this file is an important part of the Oxyg3nium project's code quality process. By defining a set of rules for code analysis, the project can ensure that its codebase is consistent, maintainable, and free of common issues. 
 
-Example usage of this file would be to run the Scalastyle tool on the Alephium codebase with this configuration file, and then review the output to identify any violations of the defined rules. The violations can then be addressed by the development team to improve the quality of the codebase.
+Example usage of this file would be to run the Scalastyle tool on the Oxyg3nium codebase with this configuration file, and then review the output to identify any violations of the defined rules. The violations can then be addressed by the development team to improve the quality of the codebase.
 ## Questions: 
  1. What is the purpose of this code?
    - This code is a configuration file for Scalastyle, a tool that checks Scala code for style and quality issues.

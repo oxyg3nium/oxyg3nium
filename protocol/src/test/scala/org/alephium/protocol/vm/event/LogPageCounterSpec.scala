@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.protocol.vm.event
 import org.oxyg3nium.io.Inserted
 import org.oxyg3nium.protocol.model.ContractId
 import org.oxyg3nium.protocol.vm.nodeindexes.{CachedPageCounter, StagingPageCounter}
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class LogPageCounterSpec extends AlephiumSpec with Fixture {
+class LogPageCounterSpec extends Oxyg3niumSpec with Fixture {
   it should "cache initial counters" in {
     val cachedCounter: CachedPageCounter[ContractId] =
       newCachedLog(newDBStorage()).eventLogPageCounter

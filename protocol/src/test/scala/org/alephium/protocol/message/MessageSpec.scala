@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,9 +22,9 @@ import org.oxyg3nium.protocol.Hash
 import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfig, NetworkConfigFixture}
 import org.oxyg3nium.protocol.model.NetworkId
 import org.oxyg3nium.serde._
-import org.oxyg3nium.util.{AlephiumSpec, Bytes, DjbHash, Hex, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, Bytes, DjbHash, Hex, TimeStamp}
 
-class MessageSpec extends AlephiumSpec with NetworkConfigFixture.Default {
+class MessageSpec extends Oxyg3niumSpec with NetworkConfigFixture.Default {
 
   implicit val groupConfig: GroupConfig = new GroupConfig {
     override def groups: Int = 4
@@ -93,7 +93,7 @@ class MessageSpec extends AlephiumSpec with NetworkConfigFixture.Default {
   it should "fail to deserialize if magic number doesn't match" in {
     Message
       .deserialize(Message.serialize(message)(new NetworkConfig {
-        val networkId: NetworkId              = NetworkId.AlephiumMainNet
+        val networkId: NetworkId              = NetworkId.Oxyg3niumMainNet
         val noPreMineProof: ByteString        = ByteString.empty
         val lemanHardForkTimestamp: TimeStamp = TimeStamp.now()
         val rhoneHardForkTimestamp: TimeStamp = TimeStamp.now()

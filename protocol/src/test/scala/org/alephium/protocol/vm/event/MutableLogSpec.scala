@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,9 +21,9 @@ import scala.util.Random
 import org.oxyg3nium.crypto.Byte32
 import org.oxyg3nium.protocol.model.{BlockHash, ContractId, TransactionId}
 import org.oxyg3nium.protocol.vm.{LogState, LogStateRef, LogStates, LogStatesId, Val}
-import org.oxyg3nium.util.{AlephiumSpec, AVector, I256, NumericHelpers}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, I256, NumericHelpers}
 
-class MutableLogSpec extends AlephiumSpec with Fixture with NumericHelpers {
+class MutableLogSpec extends Oxyg3niumSpec with Fixture with NumericHelpers {
   trait LogFixture {
     val storage    = newDBStorage()
     val cachedLog  = newCachedLog(storage)

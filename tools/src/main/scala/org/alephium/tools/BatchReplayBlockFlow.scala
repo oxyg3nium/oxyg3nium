@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@ import org.alephium.flow.core.BlockFlow
 import org.alephium.flow.handler.{AllHandlers, BlockChainHandler, DependencyHandler, IOBaseActor}
 import org.alephium.flow.io.Storages
 import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.setting.{AlephiumConfig, Configs, Platform}
+import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
 import org.alephium.io.{IOResult, IOUtils, RocksDBSource}
 import org.alephium.protocol.model.Block
 import org.alephium.util.{ActorRefT, AVector, Duration, Env, EventBus, Files => AFiles}
@@ -50,7 +50,7 @@ object BatchReplayBlockFlow extends App with StrictLogging {
   private def buildTargetBlockFlowUnsafe() = {
     val typesafeConfig =
       Configs.parseConfigAndValidate(Env.Prod, targetPath, overwrite = true)
-    val config = AlephiumConfig.load(typesafeConfig, "alephium")
+    val config = Oxyg3niumConfig.load(typesafeConfig, "alephium")
     val dbPath = targetPath.resolve(config.network.networkId.nodeFolder)
     val storages =
       Storages.createUnsafe(dbPath, "db", RocksDBSource.ProdSettings.writeOptions)(

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,7 +20,7 @@ import java.nio.file.Path
 
 import org.alephium.flow.core.BlockFlow
 import org.alephium.flow.io.Storages
-import org.alephium.flow.setting.{AlephiumConfig, Configs, Platform}
+import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
 import org.alephium.io.RocksDBSource.ProdSettings
 import org.alephium.protocol.ALPH
 import org.alephium.protocol.mining.HashRate
@@ -31,7 +31,7 @@ import org.alephium.util.{Env, Math}
 object ValidateDifficultyBombPatch extends App {
   private val rootPath: Path = Platform.getRootPath()
   private val typesafeConfig = Configs.parseConfigAndValidate(Env.Prod, rootPath, overwrite = true)
-  implicit private val config: AlephiumConfig = AlephiumConfig.load(typesafeConfig, "alephium")
+  implicit private val config: Oxyg3niumConfig = Oxyg3niumConfig.load(typesafeConfig, "alephium")
   private val dbPath                          = rootPath.resolve("mainnet")
   private val storages =
     Storages.createUnsafe(dbPath, "db", ProdSettings.writeOptions)(config.broker, config.node)

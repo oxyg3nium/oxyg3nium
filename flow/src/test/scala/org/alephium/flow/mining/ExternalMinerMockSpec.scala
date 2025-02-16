@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,11 +23,11 @@ import akka.testkit.{TestActor, TestProbe}
 
 import org.oxyg3nium.flow.handler.{TestUtils, ViewHandler}
 import org.oxyg3nium.flow.mining.{ExternalMinerMock, Miner, MinerApiController}
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
-import org.oxyg3nium.util.{AlephiumActorSpec, AVector, Duration, SocketUtil}
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
+import org.oxyg3nium.util.{Oxyg3niumActorSpec, AVector, Duration, SocketUtil}
 
-class ExternalMinerMockSpec extends AlephiumActorSpec {
-  override def actorSystemConfig = AlephiumActorSpec.infoConfig
+class ExternalMinerMockSpec extends Oxyg3niumActorSpec {
+  override def actorSystemConfig = Oxyg3niumActorSpec.infoConfig
 
   it should "initialize connections as None" in new ExternalMinerMockFixture {
     miner.underlyingActor.apiConnections.foreach(_ is None)
@@ -92,7 +92,7 @@ class ExternalMinerMockSpec extends AlephiumActorSpec {
     minerApiControllers.tail.foreach(system.stop)
   }
 
-  trait ExternalMinerMockFixture extends SocketUtil with AlephiumConfigFixture {
+  trait ExternalMinerMockFixture extends SocketUtil with Oxyg3niumConfigFixture {
     lazy val controllersAddresses =
       (1 to groups0).map(_ => new InetSocketAddress(config.mining.apiInterface, generatePort()))
 

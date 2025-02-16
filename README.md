@@ -1,9 +1,9 @@
-Alephium
+Oxyg3nium
 =========
 [![codecov][codecov-badge]][codecov-link]
 [![Discord][discord-badge]][discord-link]
 
-This repository contains the reference implementation of Alephium, a sharded
+This repository contains the reference implementation of Oxyg3nium, a sharded
 blockchain that makes programmable money scalable and secure. For more information, please visit the [wiki](https://wiki.oxyg3nium.org/).
 
 ## Overview

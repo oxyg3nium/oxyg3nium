@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,10 +23,10 @@ import akka.util.ByteString
 import org.bouncycastle.asn1.{ASN1Integer, ASN1StreamParser, DLSequence}
 
 import org.oxyg3nium.serde.byteAVectorSerde
-import org.oxyg3nium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector}
 import org.oxyg3nium.util.Hex._
 
-class SecP256K1Spec extends AlephiumSpec {
+class SecP256K1Spec extends Oxyg3niumSpec {
   def nonCanonical(signature: SecP256K1Signature): SecP256K1Signature = {
     val (r, s) = signature.bytes.splitAt(32)
     val ss     = SecP256K1.params.getN.subtract(new BigInteger(1, s.toArray))

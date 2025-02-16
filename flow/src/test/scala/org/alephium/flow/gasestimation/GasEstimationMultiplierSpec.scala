@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,9 +20,9 @@ import scala.util.Random
 
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm.GasBox
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class GasEstimationMultiplierSpec extends AlephiumSpec {
+class GasEstimationMultiplierSpec extends Oxyg3niumSpec {
   it should "validate gas estimation multiplier" in {
     GasEstimationMultiplier.from(0.9).leftValue is
       "Invalid gas estimation multiplier, expected a value between [1.0, 2.0]"

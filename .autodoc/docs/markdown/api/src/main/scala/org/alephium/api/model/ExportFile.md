@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/ExportFile.scala)
 
-The code above defines a case class called `ExportFile` that is used in the Alephium project. The purpose of this class is to represent a file that is being exported from the project. It has a single field called `filename` which is a string that represents the name of the file being exported.
+The code above defines a case class called `ExportFile` that is used in the Oxyg3nium project. The purpose of this class is to represent a file that is being exported from the project. It has a single field called `filename` which is a string that represents the name of the file being exported.
 
 This class is likely used in other parts of the project where files need to be exported, such as when exporting data or logs. It provides a simple and standardized way to represent exported files throughout the project.
 
@@ -13,7 +13,7 @@ exportData(fileToExport)
 
 In this example, we create an instance of `ExportFile` with the filename "data.csv". We then pass this instance to a function called `exportData` which exports the data to a file with the specified name.
 
-Overall, this code is a small but important part of the Alephium project, providing a standardized way to represent exported files.
+Overall, this code is a small but important part of the Oxyg3nium project, providing a standardized way to represent exported files.
 ## Questions: 
  1. What is the purpose of the `ExportFile` case class?
    - The `ExportFile` case class is used to represent a file that is being exported, and it contains a `filename` field that specifies the name of the file.

@@ -1,10 +1,10 @@
 [View code on GitHub](https://github.com/alephium/alephium/serde/src/main/scala/org/alephium/serde/Staging.scala)
 
-This code defines a case class called `Staging` that is used for serialization and deserialization of data in the Alephium project. The `Staging` class takes in a value of type `T` and a `ByteString` object called `rest`. The `ByteString` object represents the remaining bytes that have not been processed during serialization or deserialization.
+This code defines a case class called `Staging` that is used for serialization and deserialization of data in the Oxyg3nium project. The `Staging` class takes in a value of type `T` and a `ByteString` object called `rest`. The `ByteString` object represents the remaining bytes that have not been processed during serialization or deserialization.
 
 The `Staging` class has a method called `mapValue` that takes a function `f` as input and applies it to the `value` field of the `Staging` object. The result of the function is then used to create a new `Staging` object with the same `rest` field as the original object. This method is useful for transforming the value of a `Staging` object without modifying the `rest` field.
 
-This code is part of the `org.alephium.serde` package, which contains classes and utilities for serialization and deserialization of data in the Alephium project. The `Staging` class is likely used in conjunction with other classes in this package to serialize and deserialize data in a consistent and efficient manner.
+This code is part of the `org.alephium.serde` package, which contains classes and utilities for serialization and deserialization of data in the Oxyg3nium project. The `Staging` class is likely used in conjunction with other classes in this package to serialize and deserialize data in a consistent and efficient manner.
 
 Here is an example of how the `Staging` class might be used in the larger project:
 

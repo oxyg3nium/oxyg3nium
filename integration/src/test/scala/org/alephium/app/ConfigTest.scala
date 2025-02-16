@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -17,9 +17,9 @@
 package org.oxyg3nium.app
 
 import org.oxyg3nium.protocol.ALPH
-import org.oxyg3nium.util.AlephiumActorSpec
+import org.oxyg3nium.util.Oxyg3niumActorSpec
 
-class ConfigTest extends AlephiumActorSpec {
+class ConfigTest extends Oxyg3niumActorSpec {
   it should "load testnet genesis" in new CliqueFixture {
     val clique    = bootClique(nbOfNodes = 1)
     val theConfig = clique.servers.head.config

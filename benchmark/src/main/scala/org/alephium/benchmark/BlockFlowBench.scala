@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@ import org.openjdk.jmh.annotations._
 
 import org.oxyg3nium.flow.core.BlockFlow
 import org.oxyg3nium.flow.io.Storages
-import org.oxyg3nium.flow.setting.{AlephiumConfig, Platform}
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfig, Platform}
 import org.oxyg3nium.io.RocksDBSource
 import org.oxyg3nium.protocol.model.{BlockDeps, GroupIndex}
 
@@ -33,7 +33,7 @@ import org.oxyg3nium.protocol.model.{BlockDeps, GroupIndex}
 @SuppressWarnings(Array("org.wartremover.warts.OptionPartial"))
 class BlockFlowBench {
   val rootPath: Path                  = Platform.getRootPath()
-  implicit val config: AlephiumConfig = AlephiumConfig.load(rootPath, "oxyg3nium")
+  implicit val config: Oxyg3niumConfig = Oxyg3niumConfig.load(rootPath, "oxyg3nium")
   private val storages: Storages = {
     val dbFolder = "db"
     Storages.createUnsafe(rootPath, dbFolder, RocksDBSource.ProdSettings.writeOptions)(

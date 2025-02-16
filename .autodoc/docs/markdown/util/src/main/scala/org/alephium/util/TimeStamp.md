@@ -12,7 +12,7 @@ The TimeStamp class also provides methods to calculate the difference between tw
 
 The companion object provides a factory method to create a TimeStamp instance from a Long value representing the number of milliseconds since the Unix epoch. This method returns an Option[TimeStamp] which is None if the input value is negative, or Some[TimeStamp] otherwise. There is also a corresponding "unsafe" method that creates a TimeStamp instance directly, assuming that the input value is non-negative. The companion object also provides a zero timestamp and a maximum timestamp value.
 
-Overall, this code provides a convenient way to perform arithmetic operations on timestamps and durations, and to compare timestamps. It can be used in any part of the Alephium project that requires timestamp manipulation, such as the consensus algorithm or the transaction pool. Here is an example of how to use the TimeStamp class:
+Overall, this code provides a convenient way to perform arithmetic operations on timestamps and durations, and to compare timestamps. It can be used in any part of the Oxyg3nium project that requires timestamp manipulation, such as the consensus algorithm or the transaction pool. Here is an example of how to use the TimeStamp class:
 
 ```
 import org.alephium.util._

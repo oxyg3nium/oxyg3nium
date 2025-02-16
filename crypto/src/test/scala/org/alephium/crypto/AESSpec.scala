@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,9 +23,9 @@ import org.scalacheck.Arbitrary.arbitrary
 import org.scalacheck.Gen
 import org.scalatest.TryValues
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class AESSpec() extends AlephiumSpec with TryValues {
+class AESSpec() extends Oxyg3niumSpec with TryValues {
 
   val dataGen: Gen[ByteString] =
     Gen.nonEmptyListOf(arbitrary[Byte]).map(bytes => ByteString.fromArrayUnsafe(bytes.toArray))

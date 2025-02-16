@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ import org.oxyg3nium.flow.setting.NodeSetting
 import org.oxyg3nium.io.RocksDBSource
 import org.oxyg3nium.protocol.Hash
 import org.oxyg3nium.protocol.config.GroupConfig
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
 trait StoragesFixture {
   def storages: Storages
@@ -42,7 +42,7 @@ object StoragesFixture {
     val dbFolders = s"db-$postFix"
     val storages: Storages =
       Storages.createUnsafe(rootPath, dbFolders, RocksDBSource.ProdSettings.syncWrite)
-    AlephiumSpec.addCleanTask(() => storages.dESTROYUnsafe())
+    Oxyg3niumSpec.addCleanTask(() => storages.dESTROYUnsafe())
     storages
   }
 

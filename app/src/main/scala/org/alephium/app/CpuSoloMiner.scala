@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -24,20 +24,20 @@ import com.typesafe.config.Config
 import com.typesafe.scalalogging.StrictLogging
 
 import org.alephium.flow.mining.{ExternalMinerMock, Miner}
-import org.alephium.flow.setting.{AlephiumConfig, Configs, Platform}
+import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
 import org.alephium.util.{AVector, Env}
 
 object CpuSoloMiner extends App {
   val rootPath: Path = Platform.getRootPath()
   val typesafeConfig: Config =
     Configs.parseConfigAndValidate(Env.currentEnv, rootPath, overwrite = false)
-  val config: AlephiumConfig = AlephiumConfig.load(typesafeConfig, "alephium")
+  val config: Oxyg3niumConfig = Oxyg3niumConfig.load(typesafeConfig, "alephium")
   val system: ActorSystem    = ActorSystem("cpu-miner", typesafeConfig)
 
   new CpuSoloMiner(config, system, args.headOption)
 }
 
-class CpuSoloMiner(config: AlephiumConfig, system: ActorSystem, rawApiAddresses: Option[String])
+class CpuSoloMiner(config: Oxyg3niumConfig, system: ActorSystem, rawApiAddresses: Option[String])
     extends StrictLogging {
   val miner: ActorRef = {
     val props = rawApiAddresses match {

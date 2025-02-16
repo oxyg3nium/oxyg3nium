@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.flow.core
 import org.oxyg3nium.flow.FlowFixture
 import org.oxyg3nium.io.IOError
 import org.oxyg3nium.protocol.model._
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Bytes, Duration, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Bytes, Duration, TimeStamp}
 
-class BlockFlowStateSpec extends AlephiumSpec {
+class BlockFlowStateSpec extends Oxyg3niumSpec {
   trait Fixture extends FlowFixture {
     override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
   }

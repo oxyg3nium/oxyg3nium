@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -34,7 +34,7 @@ import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm.NodeIndexesConfig
 import org.oxyg3nium.util._
 
-class DiscoveryServerSpec extends AlephiumActorSpec with SocketUtil {
+class DiscoveryServerSpec extends Oxyg3niumActorSpec with SocketUtil {
   import DiscoveryServerSpec._
 
   implicit val nodeSetting: NodeSetting =

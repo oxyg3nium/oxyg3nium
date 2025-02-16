@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@ import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.model.{Address, BrokerInfo, GroupIndex}
 import org.oxyg3nium.util._
 
-class BroadcastTxTest extends AlephiumActorSpec {
+class BroadcastTxTest extends Oxyg3niumActorSpec {
   it should "broadcast cross-group txs inside a clique" in new CliqueFixture {
     val clique = bootClique(nbOfNodes = 2)
     clique.start()

@@ -2,7 +2,7 @@
 
 The code above defines a Scala case class called `NodeInfo` and a nested case class called `BuildInfo`. The `NodeInfo` case class has three fields: `buildInfo`, `upnp`, and `externalAddress`. The `buildInfo` field is of type `BuildInfo` and contains information about the build version and commit of the node. The `upnp` field is a boolean that indicates whether the node is using UPnP (Universal Plug and Play) to automatically configure its network settings. The `externalAddress` field is an optional `InetSocketAddress` that represents the external IP address and port of the node.
 
-This code is likely used in the larger Alephium project to provide information about a node's status and configuration. For example, a client application could use this code to retrieve information about a node's build version and commit, whether UPnP is enabled, and the node's external IP address and port. This information could be used to display to the user or to make decisions about how to interact with the node.
+This code is likely used in the larger Oxyg3nium project to provide information about a node's status and configuration. For example, a client application could use this code to retrieve information about a node's build version and commit, whether UPnP is enabled, and the node's external IP address and port. This information could be used to display to the user or to make decisions about how to interact with the node.
 
 Here is an example of how this code could be used:
 

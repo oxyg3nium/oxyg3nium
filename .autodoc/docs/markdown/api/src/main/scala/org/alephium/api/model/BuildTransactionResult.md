@@ -4,7 +4,7 @@ The code defines a case class called `BuildTransactionResult` which represents t
 
 The `from` method in the `BuildTransactionResult` object takes an `UnsignedTransaction` as input and returns a `BuildTransactionResult`. The `UnsignedTransaction` is a model class that represents a transaction that has not been signed yet. The `from` method uses the `serialize` method from the `org.alephium.serde` package to convert the `UnsignedTransaction` to a hex string and assigns it to the `unsignedTx` field. It also assigns the `gasAmount`, `gasPrice`, `id`, `fromGroup`, and `toGroup` fields of the `UnsignedTransaction` to the corresponding fields in the `BuildTransactionResult` object.
 
-This code is likely used in the larger Alephium project to build and serialize transactions before they are signed and broadcasted to the network. The `BuildTransactionResult` object provides a convenient way to package the results of building a transaction and pass them around the codebase. The `from` method is likely used in conjunction with other methods to build and sign transactions. 
+This code is likely used in the larger Oxyg3nium project to build and serialize transactions before they are signed and broadcasted to the network. The `BuildTransactionResult` object provides a convenient way to package the results of building a transaction and pass them around the codebase. The `from` method is likely used in conjunction with other methods to build and sign transactions. 
 
 Example usage:
 

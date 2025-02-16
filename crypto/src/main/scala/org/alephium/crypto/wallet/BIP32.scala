@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -39,7 +39,7 @@ object BIP32 {
 
   def btcMasterKey(seed: ByteString): ExtendedPrivateKey = masterKey("Bitcoin seed", seed)
 
-  def alphMasterKey(seed: ByteString): ExtendedPrivateKey = masterKey("Alephium seed", seed)
+  def alphMasterKey(seed: ByteString): ExtendedPrivateKey = masterKey("Oxyg3nium seed", seed)
 
   def isHardened(index: Int): Boolean = index < 0
 

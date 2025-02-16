@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
 package org.oxyg3nium.flow.core
 
 import org.oxyg3nium.flow.io.Storages
-import org.oxyg3nium.flow.setting.{AlephiumConfig, ConsensusSettings, MemPoolSetting, NetworkSetting}
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfig, ConsensusSettings, MemPoolSetting, NetworkSetting}
 import org.oxyg3nium.io.IOResult
 import org.oxyg3nium.protocol.config.BrokerConfig
 import org.oxyg3nium.protocol.model._
@@ -26,7 +26,7 @@ import org.oxyg3nium.util.AVector
 
 trait EmptyBlockFlow extends BlockFlow {
   def storages: Storages
-  implicit def config: AlephiumConfig
+  implicit def config: Oxyg3niumConfig
 
   implicit lazy val brokerConfig: BrokerConfig           = config.broker
   implicit lazy val consensusConfigs: ConsensusSettings  = config.consensus

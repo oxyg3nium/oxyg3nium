@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -17,9 +17,9 @@
 package org.oxyg3nium.protocol.config
 
 import org.oxyg3nium.protocol.model.{ChainIndex, GroupIndex}
-import org.oxyg3nium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector}
 
-class BrokerConfigSpec extends AlephiumSpec {
+class BrokerConfigSpec extends Oxyg3niumSpec {
   it should "work properly" in {
     val config0 = buildConfig(0, 1, 12)
     config0.groupRange is Range(0, 12)

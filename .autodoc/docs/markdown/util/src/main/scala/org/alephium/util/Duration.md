@@ -8,7 +8,7 @@ The `Duration` object provides factory methods to create instances of the `Durat
 
 The `Duration` class also provides a method to convert a duration to a `scala.concurrent.duration.FiniteDuration`, which is a standard Scala class for representing durations. This method throws an exception if the duration is outside the range of `scala.concurrent.duration.FiniteDuration`.
 
-Overall, this code provides a convenient and efficient way to work with durations of time in the Alephium project. It can be used to represent timeouts, intervals, and other time-related concepts. Here is an example of how to use the `Duration` class:
+Overall, this code provides a convenient and efficient way to work with durations of time in the Oxyg3nium project. It can be used to represent timeouts, intervals, and other time-related concepts. Here is an example of how to use the `Duration` class:
 
 ```scala
 import org.alephium.util.Duration

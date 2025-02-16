@@ -1,12 +1,12 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/intraclique/InboundBrokerHandler.scala)
 
-This code defines the `InboundBrokerHandler` class and its associated `props` method. The `InboundBrokerHandler` is responsible for handling incoming broker connections within the Alephium network. 
+This code defines the `InboundBrokerHandler` class and its associated `props` method. The `InboundBrokerHandler` is responsible for handling incoming broker connections within the Oxyg3nium network. 
 
 The `props` method takes in several parameters, including the `selfCliqueInfo` of the node, the `remoteAddress` of the incoming connection, and various actor references. It returns a `Props` object that can be used to create a new instance of the `InboundBrokerHandler`.
 
 The `InboundBrokerHandler` class extends the `BaseInboundBrokerHandler` class and implements the `BrokerHandler` trait. It also takes in several parameters in its constructor, including the `selfCliqueInfo`, `remoteAddress`, and actor references. 
 
-Overall, this code is an important part of the Alephium network's ability to handle incoming broker connections. It provides a way for nodes to communicate with each other and exchange information about the network. The `InboundBrokerHandler` class can be used in conjunction with other classes and methods to create a robust and reliable network for the Alephium project. 
+Overall, this code is an important part of the Oxyg3nium network's ability to handle incoming broker connections. It provides a way for nodes to communicate with each other and exchange information about the network. The `InboundBrokerHandler` class can be used in conjunction with other classes and methods to create a robust and reliable network for the Oxyg3nium project. 
 
 Example usage:
 
@@ -36,7 +36,7 @@ val inboundBrokerHandler = system.actorOf(props)
 ## Questions: 
  1. What is the purpose of this code file?
     
-    This code file defines the `InboundBrokerHandler` class and its `props` method, which are used for handling incoming broker connections in the Alephium network.
+    This code file defines the `InboundBrokerHandler` class and its `props` method, which are used for handling incoming broker connections in the Oxyg3nium network.
 
 2. What other classes or libraries does this code file depend on?
     
@@ -44,4 +44,4 @@ val inboundBrokerHandler = system.actorOf(props)
 
 3. What is the relationship between `InboundBrokerHandler` and `BaseInboundBrokerHandler`?
     
-    `InboundBrokerHandler` extends `BaseInboundBrokerHandler` and adds additional functionality specific to the Alephium network, such as handling incoming broker connections and synchronizing block flows.
+    `InboundBrokerHandler` extends `BaseInboundBrokerHandler` and adds additional functionality specific to the Oxyg3nium network, such as handling incoming broker connections and synchronizing block flows.

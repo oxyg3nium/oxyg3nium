@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ import org.oxyg3nium.protocol.model.{Address, GroupIndex}
 import org.oxyg3nium.protocol.vm.{LogConfig, NodeIndexesConfig}
 import org.oxyg3nium.util.{AVector, Duration, Env, Number, U256}
 
-trait AlephiumConfigFixture extends RandomPortsConfigFixture {
+trait Oxyg3niumConfigFixture extends RandomPortsConfigFixture {
 
   val configValues: Map[String, Any] = Map.empty
 
@@ -64,8 +64,8 @@ trait AlephiumConfigFixture extends RandomPortsConfigFixture {
       (privateKey, publicKey, genesisBalance)
     }
 
-  implicit lazy val config: AlephiumConfig = {
-    val tmp = AlephiumConfig
+  implicit lazy val config: Oxyg3niumConfig = {
+    val tmp = Oxyg3niumConfig
       .load(newConfig)
 
     val allocations = genesisKeys.map { case (_, pubKey, amount) =>

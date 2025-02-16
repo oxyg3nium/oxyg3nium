@@ -1,14 +1,14 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/interclique/InboundBrokerHandler.scala)
 
-This code defines a class called `InboundBrokerHandler` and an object called `InboundBrokerHandler` in the `org.alephium.flow.network.interclique` package. The purpose of this code is to handle incoming broker connections in the Alephium network. 
+This code defines a class called `InboundBrokerHandler` and an object called `InboundBrokerHandler` in the `org.alephium.flow.network.interclique` package. The purpose of this code is to handle incoming broker connections in the Oxyg3nium network. 
 
 The `InboundBrokerHandler` class extends another class called `BaseInboundBrokerHandler` and implements a trait called `BrokerHandler`. It takes in several parameters, including the `selfCliqueInfo`, `remoteAddress`, `connection`, `blockflow`, `allHandlers`, `cliqueManager`, and `blockFlowSynchronizer`. These parameters are used to handle incoming broker connections and synchronize block flows between different nodes in the network. 
 
 The `InboundBrokerHandler` object defines a `props` method that takes in the same parameters as the `InboundBrokerHandler` class constructor. This method returns a new instance of the `InboundBrokerHandler` class with the given parameters. 
 
-This code is used in the larger Alephium project to handle incoming broker connections and synchronize block flows between different nodes in the network. It is part of the interclique network module, which is responsible for managing communication between different cliques (subnetworks) in the Alephium network. 
+This code is used in the larger Oxyg3nium project to handle incoming broker connections and synchronize block flows between different nodes in the network. It is part of the interclique network module, which is responsible for managing communication between different cliques (subnetworks) in the Oxyg3nium network. 
 
-Here is an example of how this code might be used in the larger Alephium project:
+Here is an example of how this code might be used in the larger Oxyg3nium project:
 
 ```
 val inboundBrokerHandler = InboundBrokerHandler.props(
@@ -27,7 +27,7 @@ In this example, a new instance of the `InboundBrokerHandler` class is created u
 ## Questions: 
  1. What is the purpose of this code file?
     
-    This code file defines the `InboundBrokerHandler` class and its `props` method, which are used to handle incoming broker connections in the Alephium network.
+    This code file defines the `InboundBrokerHandler` class and its `props` method, which are used to handle incoming broker connections in the Oxyg3nium network.
 
 2. What other classes or libraries does this code file depend on?
     

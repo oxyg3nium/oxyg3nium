@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,9 +21,9 @@ import org.oxyg3nium.flow.FlowFixture
 import org.oxyg3nium.protocol.model.{BlockHash, ContractId, TransactionId}
 import org.oxyg3nium.protocol.vm.{LogState, LogStateRef, LogStates, LogStatesId, Val}
 import org.oxyg3nium.protocol.vm.event.CachedLog
-import org.oxyg3nium.util.{AlephiumSpec, AVector, I256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, I256}
 
-class LogUtilsSpec extends AlephiumSpec {
+class LogUtilsSpec extends Oxyg3niumSpec {
   trait Fixture extends FlowFixture {
     val blockHash  = BlockHash.random
     val txId       = TransactionId.random

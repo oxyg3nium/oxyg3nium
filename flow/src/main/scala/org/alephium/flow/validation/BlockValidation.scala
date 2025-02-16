@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -466,7 +466,7 @@ trait BlockValidation extends Validation[Block, InvalidBlockStatus, Option[World
   ): BlockValidationResult[Unit] = {
     if (
       hardFork.isRhoneEnabled() &&
-      networkConfig.networkId == NetworkId.AlephiumTestNet &&
+      networkConfig.networkId == NetworkId.Oxyg3niumTestNet &&
       !ALPH.testnetWhitelistedMiners.contains(block.minerLockupScript)
     ) {
       invalidBlock(InvalidTestnetMiner)

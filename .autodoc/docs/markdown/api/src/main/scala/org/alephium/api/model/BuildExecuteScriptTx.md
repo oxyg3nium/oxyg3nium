@@ -1,8 +1,8 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BuildExecuteScriptTx.scala)
 
-The `BuildExecuteScriptTx` class is a model used in the Alephium project to represent a transaction that executes a smart contract script. It contains various parameters that are used to build the transaction, including the public key of the sender (`fromPublicKey`), the bytecode of the script (`bytecode`), the amount of Alph tokens to transfer (`attoAlphAmount`), any additional tokens to transfer (`tokens`), the amount of gas to use (`gasAmount`), the price of gas (`gasPrice`), and the target block hash (`targetBlockHash`).
+The `BuildExecuteScriptTx` class is a model used in the Oxyg3nium project to represent a transaction that executes a smart contract script. It contains various parameters that are used to build the transaction, including the public key of the sender (`fromPublicKey`), the bytecode of the script (`bytecode`), the amount of Alph tokens to transfer (`attoAlphAmount`), any additional tokens to transfer (`tokens`), the amount of gas to use (`gasAmount`), the price of gas (`gasPrice`), and the target block hash (`targetBlockHash`).
 
-This class is used in conjunction with other classes and methods in the project to build and execute transactions on the Alephium blockchain. For example, a developer could use this class to build a transaction that executes a custom smart contract on the blockchain, transferring tokens and interacting with other contracts as needed.
+This class is used in conjunction with other classes and methods in the project to build and execute transactions on the Oxyg3nium blockchain. For example, a developer could use this class to build a transaction that executes a custom smart contract on the blockchain, transferring tokens and interacting with other contracts as needed.
 
 Here is an example of how this class might be used in code:
 

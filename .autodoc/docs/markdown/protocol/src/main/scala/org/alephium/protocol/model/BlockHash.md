@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/BlockHash.scala)
 
-This file contains the implementation of the `BlockHash` class and its companion object. The `BlockHash` class is a wrapper around the `Blake3` hash function, which is used to compute the hash of a block in the Alephium blockchain. The `BlockHash` class is defined as a `final case class` with a private constructor, which means that instances of this class can only be created using the `apply` method defined in the companion object.
+This file contains the implementation of the `BlockHash` class and its companion object. The `BlockHash` class is a wrapper around the `Blake3` hash function, which is used to compute the hash of a block in the Oxyg3nium blockchain. The `BlockHash` class is defined as a `final case class` with a private constructor, which means that instances of this class can only be created using the `apply` method defined in the companion object.
 
 The `BlockHash` class extends the `RandomBytes` trait, which provides a `bytes` method that returns the hash value as a `ByteString`. The `BlockHash` class also provides a `value` field that holds the actual `Blake3` hash value.
 
@@ -8,7 +8,7 @@ The companion object provides several methods for creating and manipulating `Blo
 
 The `BlockHash` companion object also provides a `serde` instance for serializing and deserializing `BlockHash` instances using the `Serde` library. The `zero` and `length` fields provide the zero value and length of the `Blake3` hash function, respectively.
 
-Overall, this file provides a simple and efficient implementation of the `BlockHash` class and its companion object, which is used extensively throughout the Alephium blockchain to compute and manipulate block hashes. Here is an example of how to create a new `BlockHash` instance:
+Overall, this file provides a simple and efficient implementation of the `BlockHash` class and its companion object, which is used extensively throughout the Oxyg3nium blockchain to compute and manipulate block hashes. Here is an example of how to create a new `BlockHash` instance:
 
 ```scala
 import akka.util.ByteString

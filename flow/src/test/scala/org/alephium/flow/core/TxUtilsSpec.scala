@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ import org.oxyg3nium.flow.core.FlowUtils.{
 }
 import org.oxyg3nium.flow.gasestimation._
 import org.oxyg3nium.flow.mempool.MemPool
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
 import org.oxyg3nium.flow.validation.TxValidation
 import org.oxyg3nium.protocol._
 import org.oxyg3nium.protocol.mining.Emission
@@ -41,10 +41,10 @@ import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
 import org.oxyg3nium.protocol.vm._
 import org.oxyg3nium.ralph.Compiler
-import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, TimeStamp, U256}
 
 // scalastyle:off file.size.limit
-class TxUtilsSpec extends AlephiumSpec {
+class TxUtilsSpec extends Oxyg3niumSpec {
   it should "consider use minimal gas fee" in new FlowFixture {
     val chainIndex            = ChainIndex.unsafe(0, 0)
     val (genesisPriKey, _, _) = genesisKeys(0)
@@ -1815,7 +1815,7 @@ class TxUtilsSpec extends AlephiumSpec {
     )
   }
 
-  "TxUtils.countResultingTxOutputs" should "count outputs including tokens and change utxo" in new AlephiumConfigFixture {
+  "TxUtils.countResultingTxOutputs" should "count outputs including tokens and change utxo" in new Oxyg3niumConfigFixture {
     def tokensOfSameId(n: Int): AVector[(TokenId, U256)] =
       AVector.fill(n)(TokenId.hash("tokenId") -> U256.unsafe(10))
 
@@ -2046,7 +2046,7 @@ class TxUtilsSpec extends AlephiumSpec {
       .leftValue is s"Selected input UTXOs are not available: ${nonExistingHash.toHexString}"
   }
 
-  it should "calculate balances correctly" in new TxGenerators with AlephiumConfigFixture {
+  it should "calculate balances correctly" in new TxGenerators with Oxyg3niumConfigFixture {
     val now          = TimeStamp.now()
     val timestampGen = Gen.oneOf(Seq(TimeStamp.zero, now.plusHoursUnsafe(1)))
     val assetOutputsGen = Gen

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ import org.oxyg3nium.ralph.util.OperatingSystem
 import org.oxyg3nium.util._
 
 // scalastyle:off no.equal file.size.limit
-class StatelessParserSpec extends AlephiumSpec {
+class StatelessParserSpec extends Oxyg3niumSpec {
   val StatelessParser = new StatelessParser(None)
 
   it should "disallow mutable template params" in {

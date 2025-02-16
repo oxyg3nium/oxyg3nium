@@ -1,12 +1,12 @@
 [View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/WalletStatus.scala)
 
-The code above defines a case class called `WalletStatus` that is used in the Alephium wallet API. The purpose of this class is to represent the status of a wallet, including its name and whether it is currently locked or not.
+The code above defines a case class called `WalletStatus` that is used in the Oxyg3nium wallet API. The purpose of this class is to represent the status of a wallet, including its name and whether it is currently locked or not.
 
 The `WalletStatus` class is defined as `final`, which means that it cannot be extended or subclassed. It has two fields: `walletName`, which is a string that represents the name of the wallet, and `locked`, which is a boolean that indicates whether the wallet is currently locked or not.
 
-This class is likely used in the larger Alephium project to provide information about the status of a user's wallet. For example, when a user logs into their wallet, the API may return a `WalletStatus` object that indicates whether their wallet is currently locked or not. This information can then be used to determine whether the user needs to enter their password to unlock the wallet before they can perform any transactions.
+This class is likely used in the larger Oxyg3nium project to provide information about the status of a user's wallet. For example, when a user logs into their wallet, the API may return a `WalletStatus` object that indicates whether their wallet is currently locked or not. This information can then be used to determine whether the user needs to enter their password to unlock the wallet before they can perform any transactions.
 
-Here is an example of how this class might be used in the Alephium wallet API:
+Here is an example of how this class might be used in the Oxyg3nium wallet API:
 
 ```scala
 import org.alephium.wallet.api.model.WalletStatus

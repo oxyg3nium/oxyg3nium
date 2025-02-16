@@ -29,7 +29,7 @@ unreachableAction match {
 This would output "Marking peers Vector(/192.168.0.1, /192.168.0.2) as unreachable", since we are matching on the `unreachableAction` variable.
 ## Questions: 
  1. What is the purpose of this code file?
-   - This code file defines a sealed trait and two case classes related to network discovery for the Alephium project's API.
+   - This code file defines a sealed trait and two case classes related to network discovery for the Oxyg3nium project's API.
 
 2. What is the significance of the `sealed` keyword before the `trait DiscoveryAction`?
    - The `sealed` keyword restricts the inheritance of `DiscoveryAction` to this file, allowing exhaustive pattern matching on its subclasses.

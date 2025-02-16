@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/io/src/main/scala/org/alephium/io/IOError.scala)
 
-This file contains code related to error handling for input/output (IO) operations in the Alephium project. The purpose of this code is to define a set of error types that can be thrown when an IO operation fails, and to provide a way to handle those errors in a consistent manner throughout the project.
+This file contains code related to error handling for input/output (IO) operations in the Oxyg3nium project. The purpose of this code is to define a set of error types that can be thrown when an IO operation fails, and to provide a way to handle those errors in a consistent manner throughout the project.
 
 The code defines a hierarchy of error types, with the top-level class being `IOError`. This class is abstract and cannot be instantiated directly. Instead, there are several concrete subclasses that extend `IOError` and represent specific types of IO errors. These subclasses include `Serde`, `KeyNotFound`, `JavaIO`, `JavaSecurity`, `RocksDB`, and `Other`.
 
@@ -28,11 +28,11 @@ In this example, the `get` method of a data store is called with a given key. If
 ## Questions: 
  1. What is the purpose of this code?
     
-    This code defines a set of error classes for handling input/output errors in the Alephium project.
+    This code defines a set of error classes for handling input/output errors in the Oxyg3nium project.
 
 2. What external libraries or dependencies does this code rely on?
     
-    This code relies on the RocksDB library and the Alephium Serde library.
+    This code relies on the RocksDB library and the Oxyg3nium Serde library.
 
 3. How are the different types of errors handled in this code?
     

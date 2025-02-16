@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium/wallet/api/model)
 
-The code in this folder is part of the Alephium wallet API and provides various case classes and objects that represent different wallet-related operations and data structures. These classes are used to manage wallets, addresses, balances, and transactions in the Alephium project.
+The code in this folder is part of the Oxyg3nium wallet API and provides various case classes and objects that represent different wallet-related operations and data structures. These classes are used to manage wallets, addresses, balances, and transactions in the Oxyg3nium project.
 
 For example, the `AddressInfo` case class represents information about an address, such as its public key, group index, and derivation path. The `Addresses` class manages a collection of Bitcoin addresses, and its companion object provides a convenient way to create an instance of the `Addresses` class given a user's private keys.
 
@@ -25,7 +25,7 @@ val gasBox = GasBox(1000, 10000)
 val gasPrice = GasPrice(100)
 val transfer = Transfer(destinations, Some(gasBox), Some(gasPrice))
 
-// Send the transfer request to the Alephium network for processing
+// Send the transfer request to the Oxyg3nium network for processing
 val transferResult = alephiumApi.sendTransfer(transfer)
 
 // Retrieve the transaction ID and group indices from the transfer result
@@ -34,6 +34,6 @@ val fromGroup = transferResult.fromGroup
 val toGroup = transferResult.toGroup
 ```
 
-In this example, a new `Transfer` object is created with two destination addresses, a gas amount, and a gas price. The object is then sent to the Alephium network for processing using the `sendTransfer` method of the `alephiumApi` object. The resulting `transferResult` object contains the transaction ID and group indices for the transfer.
+In this example, a new `Transfer` object is created with two destination addresses, a gas amount, and a gas price. The object is then sent to the Oxyg3nium network for processing using the `sendTransfer` method of the `alephiumApi` object. The resulting `transferResult` object contains the transaction ID and group indices for the transfer.
 
-Overall, the code in this folder plays a crucial role in managing wallets, addresses, balances, and transactions in the Alephium project.
+Overall, the code in this folder plays a crucial role in managing wallets, addresses, balances, and transactions in the Oxyg3nium project.

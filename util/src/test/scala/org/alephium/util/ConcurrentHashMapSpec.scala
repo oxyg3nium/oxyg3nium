@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
 
 package org.oxyg3nium.util
 
-class ConcurrentHashMapSpec extends AlephiumSpec {
+class ConcurrentHashMapSpec extends Oxyg3niumSpec {
   trait Fixture {
     val map = ConcurrentHashMap.empty[Int, Long]
   }

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -85,7 +85,7 @@ object Injected {
 
 }
 
-class InterCliqueSyncTest extends AlephiumActorSpec {
+class InterCliqueSyncTest extends Oxyg3niumActorSpec {
   it should "boot and sync two cliques of 2 nodes using protocol v1" in new Fixture {
     test(2, 2)
   }
@@ -347,11 +347,11 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
     server0.start().futureValue is ()
 
     val currentNetworkId = config.network.networkId
-    currentNetworkId isnot NetworkId.AlephiumMainNet
+    currentNetworkId isnot NetworkId.Oxyg3niumMainNet
     val modifier: ByteString => ByteString = { data =>
       val message = Message.deserialize(data).rightValue
       Message.serialize(message.payload)(new NetworkConfig {
-        val networkId: NetworkId              = NetworkId.AlephiumMainNet
+        val networkId: NetworkId              = NetworkId.Oxyg3niumMainNet
         val noPreMineProof: ByteString        = ByteString.empty
         val lemanHardForkTimestamp: TimeStamp = TimeStamp.now()
         val rhoneHardForkTimestamp: TimeStamp = TimeStamp.now()

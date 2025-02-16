@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@ import scala.util.Random
 import akka.io.Tcp
 import akka.testkit.{TestActorRef, TestProbe}
 
-import org.oxyg3nium.flow.{AlephiumFlowActorSpec, FlowFixture}
+import org.oxyg3nium.flow.{Oxyg3niumFlowActorSpec, FlowFixture}
 import org.oxyg3nium.flow.handler.TestUtils
 import org.oxyg3nium.flow.network.broker.BrokerHandler
 import org.oxyg3nium.protocol.{Generators, SignatureSchema}
@@ -29,7 +29,7 @@ import org.oxyg3nium.protocol.message.{Hello, P2PV1, P2PV2}
 import org.oxyg3nium.protocol.model.InterBrokerInfo
 import org.oxyg3nium.util.ActorRefT
 
-class OutboundBrokerHandlerSpec extends AlephiumFlowActorSpec {
+class OutboundBrokerHandlerSpec extends Oxyg3niumFlowActorSpec {
   it should "connect to remote broker with valid broker info" in new Fixture {
     brokerHandler ! Tcp.Connected(
       expectedRemoteBroker.address,

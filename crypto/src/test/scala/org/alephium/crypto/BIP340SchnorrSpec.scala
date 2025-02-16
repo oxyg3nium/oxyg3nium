@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,9 +18,9 @@ package org.oxyg3nium.crypto
 
 import scala.io.Source
 
-import org.oxyg3nium.util.{AlephiumSpec, Hex}
+import org.oxyg3nium.util.{Oxyg3niumSpec, Hex}
 
-class BIP340SchnorrSpec extends AlephiumSpec {
+class BIP340SchnorrSpec extends Oxyg3niumSpec {
   it should "test parameters" in {
     ((BIP340Schnorr.curve.getQ.bitLength() + 7) / 8) is 32
   }

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,9 +18,9 @@ package org.oxyg3nium.protocol.model
 
 import org.oxyg3nium.crypto.Blake3
 import org.oxyg3nium.protocol.Hash
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class IdsSpec extends AlephiumSpec {
+class IdsSpec extends Oxyg3niumSpec {
   it should "check equality for general hashes" in {
     val hash0 = Hash.hash("hello")
     val hash1 = Hash.hash("hello")

@@ -13,10 +13,10 @@ Similarly, the `getBalancesLogic` method takes a `wallet` object as input and ca
 Overall, this code provides the implementation for various wallet-related endpoints that can be used in the larger project. These endpoints allow users to create, restore, lock, unlock, delete, and manage wallets, as well as perform various operations such as transferring funds, signing data, and deriving new addresses.
 ## Questions: 
  1. What is the purpose of this code?
-- This code defines the logic for various wallet-related endpoints in the Alephium project's web API.
+- This code defines the logic for various wallet-related endpoints in the Oxyg3nium project's web API.
 
 2. What dependencies does this code have?
-- This code imports various classes and traits from other packages in the Alephium project, including `scala.concurrent`, `org.alephium.api.model`, `org.alephium.crypto.wallet`, `org.alephium.protocol.config`, `org.alephium.util`, `org.alephium.wallet.api`, and `org.alephium.wallet.service`.
+- This code imports various classes and traits from other packages in the Oxyg3nium project, including `scala.concurrent`, `org.alephium.api.model`, `org.alephium.crypto.wallet`, `org.alephium.protocol.config`, `org.alephium.util`, `org.alephium.wallet.api`, and `org.alephium.wallet.service`.
 
 3. What are some of the endpoints that this code defines?
 - This code defines the logic for endpoints related to creating, restoring, locking, unlocking, deleting, and getting information about wallets, as well as endpoints related to getting balances, addresses, and miner addresses, revealing mnemonics, transferring funds, sweeping addresses, signing data, deriving addresses, and listing wallets.

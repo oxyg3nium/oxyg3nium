@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@ import org.scalatest.Assertion
 
 import org.oxyg3nium.util._
 
-class CompactIntegerSpec extends AlephiumSpec {
+class CompactIntegerSpec extends Oxyg3niumSpec {
   it should "encode/decode U32 & U256" in {
     import CompactInteger.Unsigned._
 

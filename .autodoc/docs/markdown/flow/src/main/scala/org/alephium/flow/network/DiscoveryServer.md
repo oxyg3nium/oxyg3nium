@@ -13,7 +13,7 @@ The `DiscoveryServer` class has a `scheduleScan` method that schedules a scan of
 In summary, the `DiscoveryServer` class is responsible for discovering and maintaining a list of brokers in the `alephium` peer-to-peer network. It implements a variant of the Kademlia protocol and uses UDP to communicate with peers. The `DiscoveryServer` class has methods to handle different types of messages and payloads and schedules scans to discover new peers.
 ## Questions: 
  1. What is the purpose of this code?
-- This code is a part of the Alephium project and implements a variant of the Kademlia protocol for peer discovery in a P2P network.
+- This code is a part of the Oxyg3nium project and implements a variant of the Kademlia protocol for peer discovery in a P2P network.
 
 2. What are the main components of this code?
 - The main components of this code include the `DiscoveryServer` class, which implements the Kademlia protocol, and several case classes and traits that define the messages and events used by the protocol.

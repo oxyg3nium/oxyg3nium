@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,9 +18,9 @@ package org.alephium.app
 
 import org.alephium.flow.FlowFixture
 import org.alephium.io.IOError
-import org.alephium.util.AlephiumSpec
+import org.alephium.util.Oxyg3niumSpec
 
-class BlocksExporterSpec extends AlephiumSpec {
+class BlocksExporterSpec extends Oxyg3niumSpec {
 
   it should "validate filename" in new Fixture {
     Seq(

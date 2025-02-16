@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -40,7 +40,7 @@ import org.oxyg3nium.util._
 import org.oxyg3nium.util.Hex.HexStringSyntax
 
 // scalastyle:off file.size.limit method.length number.of.methods
-class VMSpec extends AlephiumSpec with Generators {
+class VMSpec extends Oxyg3niumSpec with Generators {
 
   it should "not start with private function" in new ContractFixture {
     val input =
@@ -4655,7 +4655,7 @@ class VMSpec extends AlephiumSpec with Generators {
 
   it should "test debug function" in new EventFixture {
     override lazy val initialImmState: AVector[Val] = AVector.empty
-    override lazy val initialMutState: AVector[Val] = AVector(Val.ByteVec.fromString("Alephium"))
+    override lazy val initialMutState: AVector[Val] = AVector(Val.ByteVec.fromString("Oxyg3nium"))
     override def contractRaw: String =
       s"""
          |Contract Foo(mut name: ByteVec) {

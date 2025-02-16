@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ import org.alephium.protocol.model._
 import org.alephium.util._
 import org.alephium.wallet.api.model._
 
-class ModelCodecsSpec extends AlephiumSpec with ModelCodecs {
+class ModelCodecsSpec extends Oxyg3niumSpec with ModelCodecs {
 
   implicit val groupConfig: GroupConfig =
     new GroupConfig {

@@ -4,9 +4,9 @@ This file contains a case class called `BlockAndEvents` which is a part of the `
 
 The `BlockAndEvents` class has two fields: `block` and `events`. The `block` field is of type `BlockEntry` and represents the block itself. The `events` field is of type `AVector[ContractEventByBlockHash]` and represents the contract events associated with the block. 
 
-The `BlockEntry` class represents a block in the Alephium blockchain. It contains information such as the block's hash, height, timestamp, and transactions. The `ContractEventByBlockHash` class represents a contract event that occurred in a specific block. It contains information such as the contract address, event name, and event data. 
+The `BlockEntry` class represents a block in the Oxyg3nium blockchain. It contains information such as the block's hash, height, timestamp, and transactions. The `ContractEventByBlockHash` class represents a contract event that occurred in a specific block. It contains information such as the contract address, event name, and event data. 
 
-By combining these two classes into the `BlockAndEvents` class, the code allows for easy retrieval of both the block and its associated contract events. This can be useful for various purposes such as analyzing the behavior of smart contracts on the Alephium blockchain or tracking the flow of funds through the blockchain. 
+By combining these two classes into the `BlockAndEvents` class, the code allows for easy retrieval of both the block and its associated contract events. This can be useful for various purposes such as analyzing the behavior of smart contracts on the Oxyg3nium blockchain or tracking the flow of funds through the blockchain. 
 
 Here is an example of how this class could be used:
 

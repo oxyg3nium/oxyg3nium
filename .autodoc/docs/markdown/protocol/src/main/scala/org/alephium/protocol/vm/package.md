@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/package.scala)
 
-This code defines a package object for the Alephium project's virtual machine (VM). The VM is responsible for executing smart contracts on the Alephium blockchain. 
+This code defines a package object for the Oxyg3nium project's virtual machine (VM). The VM is responsible for executing smart contracts on the Oxyg3nium blockchain. 
 
 The package object defines several constants and types that are used throughout the VM codebase. For example, `ExeResult` is a type alias for an `Either` that can contain either an `IOFailure`, an `ExeFailure`, or a successful result. `okay`, `failed`, and `ioFailed` are functions that return `ExeResult` instances for common cases. 
 
@@ -10,7 +10,7 @@ The object also defines several constants that are used to identify special cont
 
 Finally, the object defines a type alias `ContractStorageImmutableState` that is used to represent the immutable state of a contract's storage. This type alias is an `Either` that can contain either a `ContractImmutableState` or a `StatefulContract.HalfDecoded`. 
 
-Overall, this package object provides a set of constants and types that are used throughout the Alephium VM codebase. These constants and types help to configure the VM's behavior and provide a common interface for working with the VM's results and state.
+Overall, this package object provides a set of constants and types that are used throughout the Oxyg3nium VM codebase. These constants and types help to configure the VM's behavior and provide a common interface for working with the VM's results and state.
 ## Questions: 
  1. What is the purpose of this code file?
 - This code file contains the license and package object for the alephium project's protocol virtual machine.

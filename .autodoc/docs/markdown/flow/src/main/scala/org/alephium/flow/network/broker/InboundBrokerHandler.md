@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/InboundBrokerHandler.scala)
 
-This code defines a trait called `InboundBrokerHandler` which is used to handle incoming broker connections in the Alephium network. The trait extends another trait called `BrokerHandler` and overrides some of its methods to provide specific behavior for incoming connections.
+This code defines a trait called `InboundBrokerHandler` which is used to handle incoming broker connections in the Oxyg3nium network. The trait extends another trait called `BrokerHandler` and overrides some of its methods to provide specific behavior for incoming connections.
 
 The `InboundBrokerHandler` trait requires the implementation of several methods, including `selfCliqueInfo`, which returns information about the local clique (a group of nodes that work together to validate transactions in the network), `networkSetting`, which provides network settings such as retry timeouts and ping frequencies, `connection`, which is the actor reference for the incoming connection, and `cliqueManager`, which is the actor reference for the clique manager.
 
@@ -8,7 +8,7 @@ The trait also defines a `brokerConnectionHandler` which is an actor reference f
 
 The `handShakeDuration` method is overridden to return the retry timeout from the `networkSetting`. The `handShakeMessage` method is overridden to return a `Hello` message that includes the local clique's inter-broker information and private key. The `pingFrequency` method is overridden to return the ping frequency from the `networkSetting`.
 
-Overall, this code provides a framework for handling incoming broker connections in the Alephium network. By implementing the `InboundBrokerHandler` trait and providing the required methods, developers can customize the behavior of incoming connections to fit their specific needs. For example, they could provide different retry timeouts or ping frequencies depending on the type of connection or the network conditions.
+Overall, this code provides a framework for handling incoming broker connections in the Oxyg3nium network. By implementing the `InboundBrokerHandler` trait and providing the required methods, developers can customize the behavior of incoming connections to fit their specific needs. For example, they could provide different retry timeouts or ping frequencies depending on the type of connection or the network conditions.
 ## Questions: 
  1. What is the purpose of this code and what project is it a part of?
 - This code is part of the alephium project and defines a trait for an inbound broker handler that handles incoming connections.

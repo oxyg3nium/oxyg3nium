@@ -4,7 +4,7 @@ This file contains the implementation of a data structure called Forest, which i
 
 The Forest is implemented as a Scala class, with a companion object that provides factory methods for creating new Forest instances. The Forest class provides methods for adding and removing nodes from the Forest, as well as methods for querying the Forest to determine if it contains a particular node.
 
-The Forest is designed to be used in the context of the Alephium project, which is a blockchain platform. The Forest is used to represent the blockchain as a collection of trees, where each tree represents a fork in the blockchain. The key of each node in the tree is the hash of the block that the node represents, and the value is the block data.
+The Forest is designed to be used in the context of the Oxyg3nium project, which is a blockchain platform. The Forest is used to represent the blockchain as a collection of trees, where each tree represents a fork in the blockchain. The key of each node in the tree is the hash of the block that the node represents, and the value is the block data.
 
 The Forest is implemented using a mutable data structure, which allows for efficient updates to the Forest as new blocks are added to the blockchain. The Forest is also designed to be simple and easy to use, with a small number of methods that provide the basic functionality needed to work with the Forest.
 

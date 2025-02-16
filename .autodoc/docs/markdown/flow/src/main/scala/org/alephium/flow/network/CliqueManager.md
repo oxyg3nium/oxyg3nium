@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/CliqueManager.scala)
 
-This code defines the `CliqueManager` class, which is responsible for managing the communication between different cliques in the Alephium network. A clique is a group of nodes that are connected to each other and share the same blockchain. The `CliqueManager` class is an Akka actor that coordinates the creation of intra-clique and inter-clique managers.
+This code defines the `CliqueManager` class, which is responsible for managing the communication between different cliques in the Oxyg3nium network. A clique is a group of nodes that are connected to each other and share the same blockchain. The `CliqueManager` class is an Akka actor that coordinates the creation of intra-clique and inter-clique managers.
 
 The `CliqueManager` class has four constructor parameters: `blockflow`, `allHandlers`, `discoveryServer`, `blockFlowSynchronizer`, and `numBootstrapNodes`. These parameters are used to create the intra-clique and inter-clique managers.
 
@@ -8,7 +8,7 @@ The `CliqueManager` class has three message types: `Start`, `Synced`, and `IsSel
 
 The `CliqueManager` class has three states: `awaitStart`, `awaitIntraCliqueReady`, and `isSelfCliqueSynced`. In the `awaitStart` state, the `CliqueManager` waits for a `Start` message to create the intra-clique and inter-clique managers. In the `awaitIntraCliqueReady` state, the `CliqueManager` waits for the intra-clique manager to be ready before creating the inter-clique manager. In the `isSelfCliqueSynced` state, the `CliqueManager` responds to `IsSelfCliqueReady` messages with the status of the self-clique.
 
-The `CliqueManager` class is used in the Alephium network to manage the communication between different cliques. It coordinates the creation of intra-clique and inter-clique managers, which are responsible for managing the communication within and between cliques. The `CliqueManager` class is an important component of the Alephium network, as it ensures that the different cliques are able to communicate with each other and share the same blockchain.
+The `CliqueManager` class is used in the Oxyg3nium network to manage the communication between different cliques. It coordinates the creation of intra-clique and inter-clique managers, which are responsible for managing the communication within and between cliques. The `CliqueManager` class is an important component of the Oxyg3nium network, as it ensures that the different cliques are able to communicate with each other and share the same blockchain.
 ## Questions: 
  1. What is the purpose of the `CliqueManager` class and what does it do?
 - The `CliqueManager` class is responsible for managing the intra and inter clique managers, and ensuring that the self-clique is synced. It receives messages such as `Start`, `Synced`, and `IsSelfCliqueReady` to perform its tasks.

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,9 +20,9 @@ import java.math.BigInteger
 
 import org.scalacheck.Gen
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class DifficultySpec extends AlephiumSpec {
+class DifficultySpec extends Oxyg3niumSpec {
   it should "convert to Target" in {
     (1 until 256).foreach { k =>
       val diff = Difficulty.unsafe(BigInteger.ONE.shiftLeft(k))

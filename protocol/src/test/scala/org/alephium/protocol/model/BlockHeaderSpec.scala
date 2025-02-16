@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,10 +20,10 @@ import org.oxyg3nium.crypto.Blake3
 import org.oxyg3nium.protocol.Hash
 import org.oxyg3nium.protocol.config.{ConsensusConfigsFixture, GroupConfigFixture}
 import org.oxyg3nium.serde.serialize
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Hex, TimeStamp, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Hex, TimeStamp, U256}
 
 class BlockHeaderSpec
-    extends AlephiumSpec
+    extends Oxyg3niumSpec
     with GroupConfigFixture.Default
     with ConsensusConfigsFixture.Default {
 

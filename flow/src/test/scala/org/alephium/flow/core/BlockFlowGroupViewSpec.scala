@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,7 +20,7 @@ import scala.collection.mutable
 
 import akka.util.ByteString
 
-import org.oxyg3nium.flow.{AlephiumFlowSpec, FlowFixture}
+import org.oxyg3nium.flow.{Oxyg3niumFlowSpec, FlowFixture}
 import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.Generators.hashGen
 import org.oxyg3nium.protocol.model.{
@@ -34,7 +34,7 @@ import org.oxyg3nium.protocol.model.{
 }
 import org.oxyg3nium.util.{AVector, TimeStamp}
 
-class BlockFlowGroupViewSpec extends AlephiumFlowSpec {
+class BlockFlowGroupViewSpec extends Oxyg3niumFlowSpec {
   it should "fetch getPreAssetOutputs and getPreOutputs" in new FlowFixture {
     val blockFlow1 = isolatedBlockFlow()
     val now        = TimeStamp.now()

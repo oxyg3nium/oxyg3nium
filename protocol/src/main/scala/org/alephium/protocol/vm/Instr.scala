@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -2868,7 +2868,7 @@ final case class DEBUG(stringParts: AVector[Val.ByteVec])
   }
 
   def runWithLeman[C <: StatelessContext](frame: Frame[C]): ExeResult[Unit] = {
-    if (frame.ctx.networkConfig.networkId == model.NetworkId.AlephiumMainNet) {
+    if (frame.ctx.networkConfig.networkId == model.NetworkId.Oxyg3niumMainNet) {
       failed(DebugIsNotSupportedForMainnet)
     } else if (stringParts.isEmpty) {
       failed(DebugMessageIsEmpty)

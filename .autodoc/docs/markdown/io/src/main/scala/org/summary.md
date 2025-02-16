@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/io/src/main/scala/org)
 
-In the `org.alephium` package within the `json/io/src/main/scala` directory, you will find several files that handle JSON serialization and deserialization for the Alephium project. These files are essential for converting data between JSON format and Scala objects, which allows for seamless communication between different components of the project.
+In the `org.alephium` package within the `json/io/src/main/scala` directory, you will find several files that handle JSON serialization and deserialization for the Oxyg3nium project. These files are essential for converting data between JSON format and Scala objects, which allows for seamless communication between different components of the project.
 
 Here's a brief overview of the files in this folder:
 
@@ -38,4 +38,4 @@ Here's a brief overview of the files in this folder:
    val personTry = json.asTry[Person]
    ```
 
-In summary, the code in this folder provides JSON serialization and deserialization utilities for the Alephium project. It leverages the `circe` library and adds some custom functionality to make it more convenient to work with JSON data in Scala. By using these utilities, developers can easily convert data between JSON format and Scala objects, facilitating communication between different parts of the project.
+In summary, the code in this folder provides JSON serialization and deserialization utilities for the Oxyg3nium project. It leverages the `circe` library and adds some custom functionality to make it more convenient to work with JSON data in Scala. By using these utilities, developers can easily convert data between JSON format and Scala objects, facilitating communication between different parts of the project.

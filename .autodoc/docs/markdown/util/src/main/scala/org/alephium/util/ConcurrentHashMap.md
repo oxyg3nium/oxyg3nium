@@ -6,7 +6,7 @@ The code defines a companion object for the ConcurrentHashMap class that provide
 
 The ConcurrentHashMap class provides several methods to interact with the underlying map. The getUnsafe method returns the value associated with the given key, assuming that the key is present in the map. The get method returns an Option that contains the value associated with the given key, or None if the key is not present in the map. The contains method returns true if the map contains the given key, and false otherwise. The put method adds a new key-value pair to the map, or updates the value associated with an existing key. The remove method removes the key-value pair associated with the given key from the map and returns an Option that contains the value that was removed, or None if the key was not present in the map. The unsafe method returns the value associated with the given key, assuming that the key is present in the map. The clear method removes all key-value pairs from the map.
 
-This ConcurrentHashMap class can be used in the Alephium project to provide a thread-safe implementation of a map data structure. It can be used to store and retrieve data in a concurrent environment, such as in a multi-threaded server application. The class can be instantiated with a Java ConcurrentHashMap instance, allowing it to be used with existing Java code. 
+This ConcurrentHashMap class can be used in the Oxyg3nium project to provide a thread-safe implementation of a map data structure. It can be used to store and retrieve data in a concurrent environment, such as in a multi-threaded server application. The class can be instantiated with a Java ConcurrentHashMap instance, allowing it to be used with existing Java code. 
 
 Example usage:
 

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -42,11 +42,11 @@ import org.oxyg3nium.protocol.model.{
   NetworkId
 }
 import org.oxyg3nium.protocol.vm.{LogConfig, NodeIndexesConfig}
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Duration, Env, Files, Hex, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Duration, Env, Files, Hex, TimeStamp}
 
-class AlephiumConfigSpec extends AlephiumSpec {
+class Oxyg3niumConfigSpec extends Oxyg3niumSpec {
   import ConfigUtils._
-  it should "load oxyg3nium config" in new AlephiumConfigFixture {
+  it should "load oxyg3nium config" in new Oxyg3niumConfigFixture {
     override val configValues: Map[String, Any] = Map(
       ("oxyg3nium.broker.groups", "12"),
       ("oxyg3nium.consensus.mainnet.block-target-time", "11 seconds"),
@@ -67,9 +67,9 @@ class AlephiumConfigSpec extends AlephiumSpec {
 
   it should "load mainnet config" in {
     val rootPath = Files.tmpDir
-    val config   = AlephiumConfig.load(Env.Prod, rootPath, "oxyg3nium")
+    val config   = Oxyg3niumConfig.load(Env.Prod, rootPath, "oxyg3nium")
 
-    config.network.networkId is NetworkId.AlephiumMainNet
+    config.network.networkId is NetworkId.Oxyg3niumMainNet
     config.broker.groups is 4
     config.consensus.mainnet.numZerosAtLeastInHash is 37
     val initialHashRate =
@@ -95,7 +95,7 @@ class AlephiumConfigSpec extends AlephiumSpec {
 
   it should "load rhone config" in {
     val rootPath = Files.tmpDir
-    val config   = AlephiumConfig.load(Env.Prod, rootPath, "oxyg3nium")
+    val config   = Oxyg3niumConfig.load(Env.Prod, rootPath, "oxyg3nium")
 
     config.broker.groups is 4
     config.consensus.rhone.numZerosAtLeastInHash is 37
@@ -109,25 +109,25 @@ class AlephiumConfigSpec extends AlephiumSpec {
         config.broker
       )
     initialHashRate is HashRate.unsafe(new BigInteger("2199027449856"))
-    config.network.networkId is NetworkId.AlephiumMainNet
+    config.network.networkId is NetworkId.Oxyg3niumMainNet
     config.network.rhoneHardForkTimestamp is TimeStamp.unsafe(1718186400000L)
   }
 
-  it should "throw error when mainnet config has invalid hardfork timestamp" in new AlephiumConfigFixture {
+  it should "throw error when mainnet config has invalid hardfork timestamp" in new Oxyg3niumConfigFixture {
     override val configValues: Map[String, Any] = Map(
       ("oxyg3nium.network.network-id", 0),
       ("oxyg3nium.network.leman-hard-fork-timestamp", 0)
     )
-    assertThrows[IllegalArgumentException](config.network.networkId is NetworkId.AlephiumMainNet)
+    assertThrows[IllegalArgumentException](config.network.networkId is NetworkId.Oxyg3niumMainNet)
   }
 
-  it should "check rhone hardfork timestamp" in new AlephiumConfigFixture {
+  it should "check rhone hardfork timestamp" in new Oxyg3niumConfigFixture {
     override val configValues: Map[String, Any] = Map(
       ("oxyg3nium.network.network-id", 0),
       ("oxyg3nium.network.rhone-hard-fork-timestamp", 0)
     )
     intercept[RuntimeException](
-      AlephiumConfig.load(buildNewConfig(), "oxyg3nium")
+      Oxyg3niumConfig.load(buildNewConfig(), "oxyg3nium")
     ).getMessage is
       "Invalid timestamp for rhone hard fork"
   }
@@ -193,7 +193,7 @@ class AlephiumConfigSpec extends AlephiumSpec {
       .as[GenesisSetting]("genesis")(ValueReader[GenesisSetting]) is GenesisSetting(AVector.empty)
   }
 
-  it should "fail to load if miner's addresses are wrong" in new AlephiumConfigFixture {
+  it should "fail to load if miner's addresses are wrong" in new Oxyg3niumConfigFixture {
     val minerAddresses = AVector(
       "49bUQbTo6tHa35U3QC1tsAkEDaryyQGJD2S8eomYfcZx",
       "D9PBcRXK5uzrNYokNMB7oh6JpW86sZajJ5gD845cshED"
@@ -206,10 +206,10 @@ class AlephiumConfigSpec extends AlephiumSpec {
       )
     )
 
-    assertThrows[ConfigException](AlephiumConfig.load(newConfig, "oxyg3nium"))
+    assertThrows[ConfigException](Oxyg3niumConfig.load(newConfig, "oxyg3nium"))
   }
 
-  class MinerFixture(groupIndexes: Seq[Int]) extends AlephiumConfigFixture {
+  class MinerFixture(groupIndexes: Seq[Int]) extends Oxyg3niumConfigFixture {
     val groupConfig1 = new GroupConfig {
       override def groups: Int = 3
     }
@@ -230,7 +230,7 @@ class AlephiumConfigSpec extends AlephiumSpec {
   it should "fail to load if miner's addresses are of wrong indexes" in new MinerFixture(
     Seq(0, 1, 1)
   ) {
-    assertThrows[ConfigException](AlephiumConfig.load(newConfig, "oxyg3nium"))
+    assertThrows[ConfigException](Oxyg3niumConfig.load(newConfig, "oxyg3nium"))
   }
 
   it should "load if miner's addresses are of correct indexes" in new MinerFixture(
@@ -244,12 +244,12 @@ class AlephiumConfigSpec extends AlephiumSpec {
     val rootPath1 = Paths.get("/user/foo/mainnet/test")
     val rootPath2 = Paths.get("/user/foo/mainne/test")
 
-    Configs.checkRootPath(rootPath0, NetworkId.AlephiumMainNet) isE ()
-    Configs.checkRootPath(rootPath1, NetworkId.AlephiumMainNet) isE ()
-    Configs.checkRootPath(rootPath2, NetworkId.AlephiumMainNet) isE ()
-    Configs.checkRootPath(rootPath0, NetworkId.AlephiumTestNet).isLeft is true
-    Configs.checkRootPath(rootPath1, NetworkId.AlephiumTestNet).isLeft is true
-    Configs.checkRootPath(rootPath2, NetworkId.AlephiumTestNet) isE ()
+    Configs.checkRootPath(rootPath0, NetworkId.Oxyg3niumMainNet) isE ()
+    Configs.checkRootPath(rootPath1, NetworkId.Oxyg3niumMainNet) isE ()
+    Configs.checkRootPath(rootPath2, NetworkId.Oxyg3niumMainNet) isE ()
+    Configs.checkRootPath(rootPath0, NetworkId.Oxyg3niumTestNet).isLeft is true
+    Configs.checkRootPath(rootPath1, NetworkId.Oxyg3niumTestNet).isLeft is true
+    Configs.checkRootPath(rootPath2, NetworkId.Oxyg3niumTestNet) isE ()
   }
 
   it should "load logConfig" in {
@@ -358,7 +358,7 @@ class AlephiumConfigSpec extends AlephiumSpec {
     )
   }
 
-  it should "adjust diff for height gaps across chains" in new AlephiumConfigFixture {
+  it should "adjust diff for height gaps across chains" in new Oxyg3niumConfigFixture {
     val N               = 123456
     val diff            = Difficulty.unsafe(N)
     val consensusConfig = consensusConfigs.mainnet

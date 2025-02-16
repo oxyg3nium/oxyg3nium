@@ -1,8 +1,8 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/EndpointsExamples.scala)
 
-This code is part of the Alephium project and defines the `EndpointsExamples` trait, which provides examples for various API endpoints. These examples are used to generate API documentation and test cases for the Alephium blockchain platform. The code includes examples for various data structures, such as transactions, blocks, addresses, and contracts, as well as examples for various API actions, such as starting/stopping mining, banning/unbanning peers, and compiling/submitting contracts.
+This code is part of the Oxyg3nium project and defines the `EndpointsExamples` trait, which provides examples for various API endpoints. These examples are used to generate API documentation and test cases for the Oxyg3nium blockchain platform. The code includes examples for various data structures, such as transactions, blocks, addresses, and contracts, as well as examples for various API actions, such as starting/stopping mining, banning/unbanning peers, and compiling/submitting contracts.
 
-For example, the `transactionExamples` list provides examples of `Transaction` objects, which represent transactions on the Alephium blockchain. Similarly, the `balanceExamples` list provides examples of `Balance` objects, which represent the balance of an address on the blockchain.
+For example, the `transactionExamples` list provides examples of `Transaction` objects, which represent transactions on the Oxyg3nium blockchain. Similarly, the `balanceExamples` list provides examples of `Balance` objects, which represent the balance of an address on the blockchain.
 
 The code also provides examples for various API actions, such as `minerActionExamples`, which includes examples for starting and stopping mining, and `misbehaviorActionExamples`, which includes examples for banning and unbanning peers.
 
@@ -16,7 +16,7 @@ implicit val transactionExamples: List[Example[Transaction]] = List(
 
 This creates a list of examples for the `Transaction` data structure, which can be used in API documentation and test cases.
 
-Overall, the `EndpointsExamples` trait serves as a valuable resource for developers working with the Alephium blockchain platform, as it provides a comprehensive set of examples for various data structures and API actions.
+Overall, the `EndpointsExamples` trait serves as a valuable resource for developers working with the Oxyg3nium blockchain platform, as it provides a comprehensive set of examples for various data structures and API actions.
 ## Questions: 
  1. **Question**: What is the purpose of the `alephium` project and how does this code fit into the overall project?
    **Answer**: The `alephium` project is a blockchain platform, and this code is part of the API implementation for the project. It defines various data structures, examples, and implicit values used in the API endpoints.

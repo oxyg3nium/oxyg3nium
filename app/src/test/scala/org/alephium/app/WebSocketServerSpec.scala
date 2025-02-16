@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -39,7 +39,7 @@ import org.alephium.rpc.model.JsonRPC._
 import org.alephium.util._
 
 class WebSocketServerSpec
-    extends AlephiumFutureSpec
+    extends Oxyg3niumFutureSpec
     with NoIndexModelGenerators
     with EitherValues
     with NumericHelpers {

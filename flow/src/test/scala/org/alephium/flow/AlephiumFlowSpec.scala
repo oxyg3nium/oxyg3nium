@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ import org.oxyg3nium.flow.core.{BlockFlow, ExtraUtxosInfo, FlowUtils}
 import org.oxyg3nium.flow.core.FlowUtils.AssetOutputInfo
 import org.oxyg3nium.flow.io.StoragesFixture
 import org.oxyg3nium.flow.model.BlockFlowTemplate
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
 import org.oxyg3nium.flow.validation.{BlockValidation, HeaderValidation, TxValidation}
 import org.oxyg3nium.protocol._
 import org.oxyg3nium.protocol.mining.PoW
@@ -40,8 +40,8 @@ import org.oxyg3nium.util._
 
 // scalastyle:off number.of.methods file.size.limit
 trait FlowFixture
-    extends AlephiumSpec
-    with AlephiumConfigFixture
+    extends Oxyg3niumSpec
+    with Oxyg3niumConfigFixture
     with StoragesFixture.Default
     with NumericHelpers {
   lazy val blockFlow: BlockFlow  = genesisBlockFlow()
@@ -1053,6 +1053,6 @@ trait FlowFixture
   }
 }
 
-trait AlephiumFlowSpec extends AlephiumSpec with FlowFixture
+trait Oxyg3niumFlowSpec extends Oxyg3niumSpec with FlowFixture
 
-class AlephiumFlowActorSpec extends AlephiumActorSpec with AlephiumFlowSpec
+class Oxyg3niumFlowActorSpec extends Oxyg3niumActorSpec with Oxyg3niumFlowSpec

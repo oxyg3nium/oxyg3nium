@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/rpc/src/main/scala/org/alephium)
 
-The `JsonRPC` object in the `org.alephium.rpc.model` package provides an implementation of the JSON-RPC 2.0 specification, which is a remote procedure call (RPC) protocol encoded in JSON. It is used in the Alephium project to provide a standardized way for clients to interact with the Alephium node.
+The `JsonRPC` object in the `org.alephium.rpc.model` package provides an implementation of the JSON-RPC 2.0 specification, which is a remote procedure call (RPC) protocol encoded in JSON. It is used in the Oxyg3nium project to provide a standardized way for clients to interact with the Oxyg3nium node.
 
 The object defines several case classes and traits that represent JSON-RPC requests, notifications, and responses. The main components are:
 
@@ -10,7 +10,7 @@ The object defines several case classes and traits that represent JSON-RPC reque
 
 The `JsonRPC` object also provides helper methods for working with JSON objects, such as `paramsCheck` for validating parameter objects and `versionSet` for adding the JSON-RPC version to a JSON object.
 
-Here's an example of how the `JsonRPC` object might be used in the Alephium project:
+Here's an example of how the `JsonRPC` object might be used in the Oxyg3nium project:
 
 ```scala
 import org.alephium.rpc.model.JsonRPC
@@ -37,4 +37,4 @@ val responseJson = upickle.default.write(response)
 
 In this example, we define a handler function for the "echo" method, which simply returns the input string. We then parse a JSON-RPC request, run it with the handler, and serialize the response to JSON.
 
-This implementation of JSON-RPC allows the Alephium project to provide a consistent and standardized interface for clients to interact with the Alephium node. Clients can send JSON-RPC requests to the node, which are then handled by the `Handler` functions defined in the `JsonRPC` object. The `JsonRPC` object is responsible for parsing the requests, validating them, and returning the appropriate response.
+This implementation of JSON-RPC allows the Oxyg3nium project to provide a consistent and standardized interface for clients to interact with the Oxyg3nium node. Clients can send JSON-RPC requests to the node, which are then handled by the `Handler` functions defined in the `JsonRPC` object. The `JsonRPC` object is responsible for parsing the requests, validating them, and returning the appropriate response.

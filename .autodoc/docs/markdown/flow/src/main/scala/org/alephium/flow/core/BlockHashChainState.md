@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/BlockHashChainState.scala)
 
-This code defines a trait called `BlockHashChainState` that provides functionality for managing a chain of block hashes. It is part of the Alephium project, which is a free software project distributed under the GNU Lesser General Public License.
+This code defines a trait called `BlockHashChainState` that provides functionality for managing a chain of block hashes. It is part of the Oxyg3nium project, which is a free software project distributed under the GNU Lesser General Public License.
 
 The `BlockHashChainState` trait defines several methods for managing a chain of block hashes, including adding and removing tips, getting timestamps for tips, and loading and updating the state of the chain from storage. The trait also defines a `tips` map that stores the block hashes and their associated timestamps.
 

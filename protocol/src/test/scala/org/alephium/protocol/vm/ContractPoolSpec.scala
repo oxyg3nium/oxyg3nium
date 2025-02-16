@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,9 +23,9 @@ import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.config._
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm.nodeindexes.TxOutputLocator
-import org.oxyg3nium.util.{AlephiumSpec, AVector, NumericHelpers, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, NumericHelpers, TimeStamp}
 
-class ContractPoolSpec extends AlephiumSpec with NumericHelpers {
+class ContractPoolSpec extends Oxyg3niumSpec with NumericHelpers {
   trait Fixture extends VMFactory with NetworkConfigFixture.Default {
     val initialGas = GasBox.unsafe(1000000)
 

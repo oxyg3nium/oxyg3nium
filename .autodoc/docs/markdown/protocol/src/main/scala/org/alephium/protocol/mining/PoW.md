@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/mining/PoW.scala)
 
-The `PoW` object in the `org.alephium.protocol.mining` package provides functionality related to Proof-of-Work (PoW) mining in the Alephium blockchain. PoW is a consensus mechanism used in many blockchain systems to validate transactions and create new blocks. The purpose of this code is to provide methods for hashing block headers, checking the validity of PoW solutions, and verifying mined blocks.
+The `PoW` object in the `org.alephium.protocol.mining` package provides functionality related to Proof-of-Work (PoW) mining in the Oxyg3nium blockchain. PoW is a consensus mechanism used in many blockchain systems to validate transactions and create new blocks. The purpose of this code is to provide methods for hashing block headers, checking the validity of PoW solutions, and verifying mined blocks.
 
 The `hash` method takes a `BlockHeader` object and returns its hash as a `BlockHash` object. It first serializes the header using the `serialize` method from the `org.alephium.serde` package and then calls the `hash` method with the serialized header as a `ByteString` object. The `hash` method takes a `ByteString` object and returns its double SHA-256 hash as a `BlockHash` object.
 
@@ -10,11 +10,11 @@ The `checkMined` method takes a `FlowData` object and a `ChainIndex` object and 
 
 The other `checkMined` method takes a `ChainIndex` object, a block header as a `ByteString` object, and a `Target` object and returns a boolean indicating whether the block represented by the header has been mined with the given `ChainIndex` and `Target`. It first calls the `hash` method with the block header to get its hash value as a `BlockHash` object. It then calls the `from` method of the `ChainIndex` object with the block hash to get a `ChainIndex` object representing the block's position in the blockchain. Finally, it calls the other `checkWork` method with the block hash and the `Target` object.
 
-Overall, this code provides essential functionality for PoW mining in the Alephium blockchain. It can be used to hash block headers, check the validity of PoW solutions, and verify mined blocks. These methods are likely used extensively throughout the Alephium codebase to ensure the security and integrity of the blockchain.
+Overall, this code provides essential functionality for PoW mining in the Oxyg3nium blockchain. It can be used to hash block headers, check the validity of PoW solutions, and verify mined blocks. These methods are likely used extensively throughout the Oxyg3nium codebase to ensure the security and integrity of the blockchain.
 ## Questions: 
  1. What is the purpose of this code file?
     
-    This code file contains an object called `PoW` which provides functions related to Proof of Work mining for the Alephium blockchain.
+    This code file contains an object called `PoW` which provides functions related to Proof of Work mining for the Oxyg3nium blockchain.
 
 2. What external dependencies does this code have?
     

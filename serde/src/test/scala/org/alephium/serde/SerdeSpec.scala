@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ import org.scalacheck.Gen
 import org.oxyg3nium.serde.Serde.ByteSerde
 import org.oxyg3nium.util._
 
-class SerdeSpec extends AlephiumSpec {
+class SerdeSpec extends Oxyg3niumSpec {
 
   def checkException[T](serde: FixedSizeSerde[T]): Unit = {
     it should "throw correct exceptions when error occurs" in {

@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/HashRateResponse.scala)
 
-The code defines a case class called `HashRateResponse` which is used to represent the response of a hash rate API endpoint in the Alephium project. The `final` keyword indicates that the class cannot be extended or overridden. The class has a single field called `hashrate` which is of type `String`. The `AnyVal` keyword indicates that the class is a value class, which means that it has a single field and no other non-private fields or methods.
+The code defines a case class called `HashRateResponse` which is used to represent the response of a hash rate API endpoint in the Oxyg3nium project. The `final` keyword indicates that the class cannot be extended or overridden. The class has a single field called `hashrate` which is of type `String`. The `AnyVal` keyword indicates that the class is a value class, which means that it has a single field and no other non-private fields or methods.
 
 The purpose of this code is to provide a standardized response format for the hash rate API endpoint. The `HashRateResponse` class is used to encapsulate the hash rate value returned by the endpoint and provide a consistent structure for the response. This allows other parts of the project to easily consume the response and extract the hash rate value without having to parse the response format themselves.
 

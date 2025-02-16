@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ trait RandomPortsConfigFixture extends SocketUtil {
 
   lazy val configPortsValues: Map[String, Any] = {
     val networkId = Env.currentEnv match {
-      case Env.Test        => NetworkId.AlephiumDevNet.id
+      case Env.Test        => NetworkId.Oxyg3niumDevNet.id
       case Env.Integration => 4 // A testnet that is different from public testnet (id = 1)
       case _               => throw new RuntimeException("Invalid test env")
     }

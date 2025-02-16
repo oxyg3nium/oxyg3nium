@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ import java.time.temporal.ChronoUnit
 import org.scalacheck.Gen
 import org.scalatest.Assertion
 
-class TimeStampSpec extends AlephiumSpec {
+class TimeStampSpec extends Oxyg3niumSpec {
   it should "initialize correctly" in {
     TimeStamp.from(1).get.millis is 1
     (TimeStamp.now().millis > 0) is true

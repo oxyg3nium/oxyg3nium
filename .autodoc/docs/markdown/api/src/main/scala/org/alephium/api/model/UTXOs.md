@@ -4,7 +4,7 @@ The code defines a case class called `UTXOs` which represents a collection of un
 
 The `UTXOs` object also defines a companion object with a single method called `from`. The `from` method takes in a vector of `UTXO` objects and an integer `utxosLimit` as parameters. The method returns a new `UTXOs` object with the given `utxos` vector and an optional warning message. The warning message is only included if the length of the `utxos` vector is equal to the `utxosLimit` parameter. 
 
-This code is likely used in the larger Alephium project to represent and manipulate UTXOs. The `UTXOs` case class can be used to store and pass around collections of UTXOs, while the `from` method can be used to create new `UTXOs` objects with optional warnings based on a given vector of `UTXO` objects and a limit. 
+This code is likely used in the larger Oxyg3nium project to represent and manipulate UTXOs. The `UTXOs` case class can be used to store and pass around collections of UTXOs, while the `from` method can be used to create new `UTXOs` objects with optional warnings based on a given vector of `UTXO` objects and a limit. 
 
 Example usage:
 ```

@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/udp/UdpServer.scala)
 
-The `UdpServer` class is a Scala implementation of a UDP server that can be used to send and receive data over a network. It is part of the Alephium project and is licensed under the GNU Lesser General Public License.
+The `UdpServer` class is a Scala implementation of a UDP server that can be used to send and receive data over a network. It is part of the Oxyg3nium project and is licensed under the GNU Lesser General Public License.
 
 The class defines a number of commands and events that can be used to interact with the server. The `Bind` command is used to bind the server to a specific network address, while the `Send` command is used to send data to a remote address. The `Read` command is used internally to read data from the network.
 

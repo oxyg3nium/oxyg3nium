@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@ import org.scalacheck.Gen
 import org.scalatest.Assertion
 
 import org.oxyg3nium.json.Json._
-import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, TimeStamp}
 
 case class Foo(bar: ByteString)
 object Foo {
@@ -32,7 +32,7 @@ object Foo {
   implicit val rw: ReadWriter[Foo] = macroRW
 }
 
-class UtilJsonSpec extends AlephiumSpec {
+class UtilJsonSpec extends Oxyg3niumSpec {
   import UtilJson._
 
   def check[T: Reader: Writer](input: T, rawJson: String): Assertion = {

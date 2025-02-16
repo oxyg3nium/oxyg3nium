@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/handler/ViewHandler.scala)
 
-This file contains the implementation of the `ViewHandler` class, which is responsible for handling the view of the block flow. The block flow is a directed acyclic graph (DAG) of blocks that represents the state of the Alephium blockchain. The `ViewHandler` class is used to prepare and update the templates of the block flow, which are used by miners to create new blocks.
+This file contains the implementation of the `ViewHandler` class, which is responsible for handling the view of the block flow. The block flow is a directed acyclic graph (DAG) of blocks that represents the state of the Oxyg3nium blockchain. The `ViewHandler` class is used to prepare and update the templates of the block flow, which are used by miners to create new blocks.
 
 The `ViewHandler` class extends the `ViewHandlerState` trait, which defines the state and behavior of the view handler. The `ViewHandlerState` trait defines the `blockFlow` and `minerAddressesOpt` variables, which represent the block flow and the addresses of the miners, respectively. The `ViewHandlerState` trait also defines the `isNodeSynced` variable, which indicates whether the node is synced with the network.
 
@@ -11,7 +11,7 @@ The `ViewHandler` class also defines the `subscribe`, `unsubscribe`, `updateSubs
 The `ViewHandler` object defines the `props` method, which creates a new instance of the `ViewHandler` class. The `props` method takes a `blockFlow` parameter, which represents the block flow, and a `brokerConfig` and `miningSetting` implicit parameters, which represent the broker configuration and the mining settings, respectively. The `ViewHandler` object also defines the `Command` and `Event` traits, which represent the commands and events that can be sent to and received by the view handler. The `ViewHandler` object also defines the `needUpdate` and `prepareTemplates` methods, which are used to determine whether the templates need to be updated and to prepare the templates, respectively.
 ## Questions: 
  1. What is the purpose of this code?
-- This code defines a ViewHandler class and its companion object, which handle subscriptions and updates for mining templates in the Alephium network.
+- This code defines a ViewHandler class and its companion object, which handle subscriptions and updates for mining templates in the Oxyg3nium network.
 
 2. What external dependencies does this code have?
 - This code imports several classes and objects from other packages, including akka.actor, org.alephium.flow.core, org.alephium.flow.mining, org.alephium.flow.network, org.alephium.flow.setting, org.alephium.io, org.alephium.protocol.config, org.alephium.protocol.model, and org.alephium.util.

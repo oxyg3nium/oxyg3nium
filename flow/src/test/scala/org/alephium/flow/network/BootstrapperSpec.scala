@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,11 +23,11 @@ import org.oxyg3nium.crypto.SecP256K1PrivateKey
 import org.oxyg3nium.flow.io.StoragesFixture
 import org.oxyg3nium.flow.model.BootstrapInfo
 import org.oxyg3nium.flow.network.bootstrap.{InfoFixture, IntraCliqueInfo}
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
 import org.oxyg3nium.io.IOResult
-import org.oxyg3nium.util.{AlephiumActorSpec, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumActorSpec, TimeStamp}
 
-class BootstrapperSpec extends AlephiumActorSpec {
+class BootstrapperSpec extends Oxyg3niumActorSpec {
   it should "bootstrap a master" in new Fixture {
     override val configValues: Map[String, Any] = Map(
       ("oxyg3nium.network.internal-address", s"127.0.0.1:9972"),
@@ -99,7 +99,7 @@ class BootstrapperSpec extends AlephiumActorSpec {
     storages.nodeStateStorage.getBootstrapInfo() isE Some(bootstrapInfo)
   }
 
-  trait Fixture extends AlephiumConfigFixture with InfoFixture with StoragesFixture.Default {
+  trait Fixture extends Oxyg3niumConfigFixture with InfoFixture with StoragesFixture.Default {
     val tcpControllerProbe = TestProbe()
     val cliqueManagerProbe = TestProbe()
 

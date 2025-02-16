@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.protocol.vm
 import org.oxyg3nium.protocol.Hash
 import org.oxyg3nium.protocol.model.{ContractId, NoIndexModelGenerators}
 import org.oxyg3nium.serde._
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Hex}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Hex}
 
-class LockupScriptSpec extends AlephiumSpec with NoIndexModelGenerators {
+class LockupScriptSpec extends Oxyg3niumSpec with NoIndexModelGenerators {
   it should "serde correctly" in {
     forAll(groupIndexGen.flatMap(assetLockupGen)) { lock =>
       serialize[LockupScript](lock) is serialize[LockupScript.Asset](lock)

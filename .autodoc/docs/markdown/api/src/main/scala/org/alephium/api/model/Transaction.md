@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/Transaction.scala)
 
-The code defines a `Transaction` class and a companion object in the `org.alephium.api.model` package. The `Transaction` class represents a transaction in the Alephium blockchain. It contains the following fields:
+The code defines a `Transaction` class and a companion object in the `org.alephium.api.model` package. The `Transaction` class represents a transaction in the Oxyg3nium blockchain. It contains the following fields:
 
 - `unsigned`: an `UnsignedTx` object representing the unsigned part of the transaction.
 - `scriptExecutionOk`: a boolean indicating whether the script execution was successful.
@@ -13,11 +13,11 @@ The `Transaction` class has a method `toProtocol()` that converts the transactio
 
 The companion object of the `Transaction` class has a method `fromProtocol()` that converts a `protocol.Transaction` object to a `Transaction` object. It uses the `UnsignedTx.fromProtocol()` method to create the `unsigned` field of the `Transaction` object. It also converts the `contractInputs` field to `OutputRef` objects using the `OutputRef.from()` method. The `generatedOutputs` field is converted to `Output` objects using the `Output.from()` method. The `inputSignatures` and `scriptSignatures` fields are serialized to `ByteString` objects using the `serialize` method from the `org.alephium.serde` package.
 
-Overall, this code provides a way to convert transactions between the Alephium blockchain and the API layer. It allows the API layer to create and manipulate transactions, and to communicate with the blockchain layer.
+Overall, this code provides a way to convert transactions between the Oxyg3nium blockchain and the API layer. It allows the API layer to create and manipulate transactions, and to communicate with the blockchain layer.
 ## Questions: 
  1. What is the purpose of the `Transaction` class?
-   - The `Transaction` class represents a transaction in the Alephium protocol, containing information such as unsigned transaction data, input and script signatures, and generated outputs.
+   - The `Transaction` class represents a transaction in the Oxyg3nium protocol, containing information such as unsigned transaction data, input and script signatures, and generated outputs.
 2. What is the `toProtocol` method used for?
    - The `toProtocol` method is used to convert a `Transaction` object to a `protocol.Transaction` object, which is a serialized version of the transaction that can be sent over the network.
 3. What is the `fromProtocol` method used for?
-   - The `fromProtocol` method is used to convert a `protocol.Transaction` object to a `Transaction` object, which is a deserialized version of the transaction that can be used within the Alephium codebase.
+   - The `fromProtocol` method is used to convert a `protocol.Transaction` object to a `Transaction` object, which is a deserialized version of the transaction that can be used within the Oxyg3nium codebase.

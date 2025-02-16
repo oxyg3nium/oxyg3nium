@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@ import org.scalatest.compatible.Assertion
 import org.oxyg3nium.flow.core.FlowUtils.{AssetOutputInfo, PersistedOutput, UnpersistedBlockOutput}
 import org.oxyg3nium.flow.core.UtxoSelectionAlgo._
 import org.oxyg3nium.flow.gasestimation._
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
 import org.oxyg3nium.protocol.Hash
 import org.oxyg3nium.protocol.config.GroupConfig
 import org.oxyg3nium.protocol.model._
@@ -32,7 +32,7 @@ import org.oxyg3nium.protocol.vm.{GasBox, GasPrice, LockupScript}
 import org.oxyg3nium.util._
 
 // scalastyle:off number.of.methods
-class UtxoSelectionAlgoSpec extends AlephiumSpec with LockupScriptGenerators {
+class UtxoSelectionAlgoSpec extends Oxyg3niumSpec with LockupScriptGenerators {
 
   implicit val groupConfig: GroupConfig = new GroupConfig {
     override def groups: Int = 2
@@ -322,7 +322,7 @@ class UtxoSelectionAlgoSpec extends AlephiumSpec with LockupScriptGenerators {
     UtxoSelection(allAlphAmount, (tokenIds(101), tokenAmounts(101))).verifyCanNotSelect()
   }
 
-  trait Fixture extends AlephiumConfigFixture {
+  trait Fixture extends Oxyg3niumConfigFixture {
 
     def buildOutput(
         lockupScript: LockupScript.Asset,

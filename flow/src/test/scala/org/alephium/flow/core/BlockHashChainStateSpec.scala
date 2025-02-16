@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -20,13 +20,13 @@ import scala.language.reflectiveCalls
 
 import org.scalatest.Assertion
 
-import org.oxyg3nium.flow.AlephiumFlowSpec
+import org.oxyg3nium.flow.Oxyg3niumFlowSpec
 import org.oxyg3nium.flow.io.ChainStateStorage
 import org.oxyg3nium.io.IOResult
 import org.oxyg3nium.protocol.model.{BlockHash, ChainIndex}
 import org.oxyg3nium.util.{ConcurrentHashMap, TimeStamp}
 
-class BlockHashChainStateSpec extends AlephiumFlowSpec { Test =>
+class BlockHashChainStateSpec extends Oxyg3niumFlowSpec { Test =>
   trait Fixture {
     val chainState = new BlockHashChainState {
       private val dummyIndex        = ChainIndex.unsafe(0, 0)

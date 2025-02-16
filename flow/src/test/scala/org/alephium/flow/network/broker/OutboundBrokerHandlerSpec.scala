@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -27,14 +27,14 @@ import org.oxyg3nium.flow.handler.AllHandlers
 import org.oxyg3nium.flow.model.DataOrigin
 import org.oxyg3nium.flow.network.{CliqueManager, TcpController}
 import org.oxyg3nium.flow.network.sync.BlockFlowSynchronizer
-import org.oxyg3nium.flow.setting.{AlephiumConfigFixture, NetworkSetting}
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfigFixture, NetworkSetting}
 import org.oxyg3nium.protocol.Generators
 import org.oxyg3nium.protocol.config.BrokerConfig
 import org.oxyg3nium.protocol.message.P2PVersion
 import org.oxyg3nium.protocol.model.{BrokerInfo, CliqueInfo}
-import org.oxyg3nium.util.{ActorRefT, AlephiumActorSpec}
+import org.oxyg3nium.util.{ActorRefT, Oxyg3niumActorSpec}
 
-class OutboundBrokerHandlerSpec extends AlephiumActorSpec {
+class OutboundBrokerHandlerSpec extends Oxyg3niumActorSpec {
   it should "retry to connect if the connection failed" in new Fixture {
     listener.expectMsg(TcpController.ConnectTo(remoteAddress, ActorRefT(brokerHandler)))
     brokerHandler ! Tcp.CommandFailed(Tcp.Connect(remoteAddress))
@@ -59,7 +59,7 @@ class OutboundBrokerHandlerSpec extends AlephiumActorSpec {
     expectTerminated(brokerHandler)
   }
 
-  trait Fixture extends AlephiumConfigFixture {
+  trait Fixture extends Oxyg3niumConfigFixture {
     val listener = TestProbe()
     system.eventStream.subscribe(listener.ref, classOf[TcpController.ConnectTo])
 

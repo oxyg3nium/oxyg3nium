@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/broker/BaseHandler.scala)
 
-The code provided is a trait called `BaseHandler` that extends `BaseActor` and `Publisher`. This trait is used in the `org.alephium.flow.network.broker` package of the Alephium project. 
+The code provided is a trait called `BaseHandler` that extends `BaseActor` and `Publisher`. This trait is used in the `org.alephium.flow.network.broker` package of the Oxyg3nium project. 
 
 The purpose of this trait is to provide a base implementation for handling misbehavior in the network broker. The `handleMisbehavior` method is defined in this trait and is responsible for publishing the misbehavior event and handling it accordingly. 
 

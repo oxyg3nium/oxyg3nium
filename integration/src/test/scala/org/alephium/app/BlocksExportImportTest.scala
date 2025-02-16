@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@ package org.oxyg3nium.app
 
 import org.oxyg3nium.util._
 
-class BlocksExportImportTest extends AlephiumActorSpec {
+class BlocksExportImportTest extends Oxyg3niumActorSpec {
   it should "correcly export/import blocks" in new CliqueFixture {
     val filename = s"export-import-test-${TimeStamp.now().millis}"
 

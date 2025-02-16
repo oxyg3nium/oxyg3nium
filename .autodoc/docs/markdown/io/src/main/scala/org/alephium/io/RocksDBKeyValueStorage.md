@@ -34,7 +34,7 @@ storage.iterate((k, v) => println(s"$k -> $v"))
 ## Questions: 
  1. What is the purpose of this code?
    
-   This code defines a key-value storage implementation using RocksDB for the Alephium project.
+   This code defines a key-value storage implementation using RocksDB for the Oxyg3nium project.
 
 2. What dependencies does this code have?
    

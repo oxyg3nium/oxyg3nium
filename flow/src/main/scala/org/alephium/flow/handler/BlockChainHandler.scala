@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -177,7 +177,7 @@ class BlockChainHandler(
         blockFlow.cacheHeaderVerifiedBlock(block)
         if (origin != DataOrigin.Local) {
           if (
-            networkConfig.networkId == NetworkId.AlephiumTestNet &&
+            networkConfig.networkId == NetworkId.Oxyg3niumTestNet &&
             !validator.validateTestnetMiner(block)
           ) {
             handleInvalidData(block, broker, origin, InvalidTestnetMiner)

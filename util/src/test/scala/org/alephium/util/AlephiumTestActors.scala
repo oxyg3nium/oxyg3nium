@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@ package org.oxyg3nium.util
 
 import akka.actor.{Actor, Props}
 
-object AlephiumTestActors {
+object Oxyg3niumTestActors {
   class ConstActor(message: Any) extends Actor {
     override def receive: Receive = { case _ =>
       sender() ! message

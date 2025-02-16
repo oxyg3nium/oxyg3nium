@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -31,12 +31,12 @@ import org.oxyg3nium.protocol._
 import org.oxyg3nium.protocol.config.{NetworkConfig, NetworkConfigFixture}
 import org.oxyg3nium.protocol.config.NetworkConfigFixture.{Genesis, Leman}
 import org.oxyg3nium.protocol.model.{NetworkId => _, _}
-import org.oxyg3nium.protocol.model.NetworkId.AlephiumMainNet
+import org.oxyg3nium.protocol.model.NetworkId.Oxyg3niumMainNet
 import org.oxyg3nium.serde._
 import org.oxyg3nium.util._
 
 // scalastyle:off file.size.limit no.equal number.of.methods number.of.types
-class InstrSpec extends AlephiumSpec with NumericHelpers {
+class InstrSpec extends Oxyg3niumSpec with NumericHelpers {
   import Instr._
 
   it should "initialize proper bytecodes" in {
@@ -221,7 +221,7 @@ class InstrSpec extends AlephiumSpec with NumericHelpers {
     lazy val mockBlockEnv =
       BlockEnv(
         ChainIndex.randomIntraGroup,
-        AlephiumMainNet,
+        Oxyg3niumMainNet,
         TimeStamp.now(),
         Target.Max,
         Some(BlockHash.generate)
@@ -245,7 +245,7 @@ class InstrSpec extends AlephiumSpec with NumericHelpers {
         blockEnv = Some(
           BlockEnv(
             ChainIndex.randomIntraGroup,
-            AlephiumMainNet,
+            Oxyg3niumMainNet,
             blockTs,
             Target.Max,
             Some(BlockHash.generate)
@@ -294,7 +294,7 @@ class InstrSpec extends AlephiumSpec with NumericHelpers {
         blockEnv = Some(
           BlockEnv(
             ChainIndex.randomIntraGroup,
-            AlephiumMainNet,
+            Oxyg3niumMainNet,
             blockTs,
             Target.Max,
             Some(BlockHash.generate)
@@ -1673,7 +1673,7 @@ class InstrSpec extends AlephiumSpec with NumericHelpers {
     val initialGas = context.gasRemaining
     NetworkId.runWith(frame) isE ()
     stack.size is 1
-    stack.top.get is Val.ByteVec(ByteString(AlephiumMainNet.id))
+    stack.top.get is Val.ByteVec(ByteString(Oxyg3niumMainNet.id))
     initialGas.subUnsafe(context.gasRemaining) is NetworkId.gas()
   }
 
@@ -4345,7 +4345,7 @@ class InstrSpec extends AlephiumSpec with NumericHelpers {
     DEBUG(AVector(Val.ByteVec.fromString("Hello"))).combineUnsafe(AVector.empty) is
       Val.ByteVec.fromString("Hello")
     DEBUG(AVector(Val.ByteVec.fromString("Hello "), Val.ByteVec.fromString("!")))
-      .combineUnsafe(AVector(Val.ByteVec.fromString("Alephium"))) is
+      .combineUnsafe(AVector(Val.ByteVec.fromString("Oxyg3nium"))) is
       Val.ByteVec.fromString("Hello 416c65706869756d!")
   }
 
@@ -4368,7 +4368,7 @@ class InstrSpec extends AlephiumSpec with NumericHelpers {
         .leftValue isE
         StackUnderflow
 
-      frame.pushOpStack(Val.ByteVec.fromString("Alephium"))
+      frame.pushOpStack(Val.ByteVec.fromString("Oxyg3nium"))
       DEBUG(AVector(Val.ByteVec.fromString("Hello, "), Val.ByteVec.fromString("!")))
         .runWith(frame) isE ()
       frame.ctx.worldState.logState.eventLog

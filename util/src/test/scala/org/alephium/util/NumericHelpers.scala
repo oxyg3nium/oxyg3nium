@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -62,7 +62,7 @@ trait NumericHelpers {
   def max(xs: U256*): U256 = xs.max
 }
 
-class NumericHelpersSpec extends AlephiumSpec with NumericHelpers {
+class NumericHelpersSpec extends Oxyg3niumSpec with NumericHelpers {
   it should "generate random int" in {
     nextInt(0, 0) is 0
     nextInt(Int.MaxValue, Int.MaxValue) is Int.MaxValue

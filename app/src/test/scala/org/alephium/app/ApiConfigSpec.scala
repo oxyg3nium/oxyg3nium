@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -22,12 +22,12 @@ import scala.jdk.CollectionConverters._
 
 import com.typesafe.config.{ConfigException, ConfigFactory, ConfigValueFactory}
 
-import org.alephium.flow.setting.{AlephiumConfig, Configs, Platform}
+import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
 import org.alephium.protocol.model.NetworkId
-import org.alephium.util.{AlephiumSpec, AVector, Env}
+import org.alephium.util.{Oxyg3niumSpec, AVector, Env}
 
 // scalastyle:off null
-class ApiConfigSpec extends AlephiumSpec {
+class ApiConfigSpec extends Oxyg3niumSpec {
   it should "load api config" in {
     val path   = getClass.getResource(s"/system_test.conf.tmpl").getPath
     val file   = new File(path)
@@ -38,9 +38,9 @@ class ApiConfigSpec extends AlephiumSpec {
   it should "load mainnet api config" in {
     val randomPath = Platform.getRootPath(Env.Test) // generate a random folder
     val prodConfig = Configs.parseConfig(Env.Prod, randomPath, false, ConfigFactory.empty())
-    val alphConfig = AlephiumConfig.load(prodConfig)
+    val alphConfig = Oxyg3niumConfig.load(prodConfig)
     val apiConfig  = ApiConfig.load(prodConfig)
-    alphConfig.network.networkId is NetworkId.AlephiumMainNet
+    alphConfig.network.networkId is NetworkId.Oxyg3niumMainNet
     apiConfig.defaultUtxosLimit is 5000
     apiConfig.enableHttpMetrics is false
   }

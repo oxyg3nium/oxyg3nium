@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -17,17 +17,17 @@
 package org.oxyg3nium.flow.io
 
 import org.oxyg3nium.flow.model.ReadyTxInfo
-import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
 import org.oxyg3nium.io.RocksDBSource
 import org.oxyg3nium.io.RocksDBSource.ColumnFamily
 import org.oxyg3nium.protocol.Generators
 import org.oxyg3nium.protocol.model.{ChainIndex, TransactionId}
-import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, TimeStamp}
 
 class ReadyTxStorageSpec
-    extends AlephiumSpec
+    extends Oxyg3niumSpec
     with StorageSpec[ReadyTxRocksDBStorage]
-    with AlephiumConfigFixture {
+    with Oxyg3niumConfigFixture {
 
   override val dbname: String = "ready-tx-storage-spec"
   override val builder: RocksDBSource => ReadyTxRocksDBStorage =

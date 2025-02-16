@@ -11,7 +11,7 @@ The `NotImplemented` object is a placeholder implementation of the `AssetScriptG
 The code in this file is used to estimate the gas required to execute a given asset script. It is used in the larger project to optimize the execution of asset scripts by estimating the gas required to execute them and adjusting the gas limit accordingly.
 ## Questions: 
  1. What is the purpose of this code file?
-- This code file contains a trait and objects related to estimating gas for asset scripts in the Alephium project.
+- This code file contains a trait and objects related to estimating gas for asset scripts in the Oxyg3nium project.
 
 2. What is the difference between the `Default`, `Mock`, and `NotImplemented` objects?
 - `Default` is an implementation of the `AssetScriptGasEstimator` trait that estimates gas by running the asset script on a dry-run block environment. `Mock` is another implementation that simply returns a default gas value. `NotImplemented` is an object that throws a `NotImplementedError` when its `estimate` method is called.

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,10 +21,10 @@ import scala.collection.mutable
 import akka.util.ByteString
 
 import org.oxyg3nium.protocol.vm.Val
-import org.oxyg3nium.util.{AlephiumSpec, AVector, DjbHash, Hex}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, DjbHash, Hex}
 
 //scalastyle:off file.size.limit
-class AstSpec extends AlephiumSpec {
+class AstSpec extends Oxyg3niumSpec {
 
   behavior of "Check external caller"
 

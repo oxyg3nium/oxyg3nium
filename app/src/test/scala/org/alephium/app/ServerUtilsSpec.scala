@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -45,7 +45,7 @@ import org.alephium.serde.{avectorSerde, deserialize, serialize}
 import org.alephium.util._
 
 // scalastyle:off file.size.limit number.of.methods
-class ServerUtilsSpec extends AlephiumSpec {
+class ServerUtilsSpec extends Oxyg3niumSpec {
   implicit val ec: scala.concurrent.ExecutionContext = scala.concurrent.ExecutionContext.global
   val defaultUtxosLimit: Int                         = ALPH.MaxTxInputNum * 2
 
@@ -956,7 +956,7 @@ class ServerUtilsSpec extends AlephiumSpec {
 
     val tooMuchGasFee = UnsignedTransaction(
       DefaultTxVersion,
-      NetworkId.AlephiumDevNet,
+      NetworkId.Oxyg3niumDevNet,
       None,
       minimalGas,
       GasPrice(ALPH.oneAlph),
@@ -972,7 +972,7 @@ class ServerUtilsSpec extends AlephiumSpec {
 
     val noInputs = UnsignedTransaction(
       DefaultTxVersion,
-      NetworkId.AlephiumDevNet,
+      NetworkId.Oxyg3niumDevNet,
       None,
       minimalGas,
       nonCoinbaseMinGasPrice,
@@ -2274,7 +2274,7 @@ class ServerUtilsSpec extends AlephiumSpec {
       s"""
          |Contract Foo() {
          |  fn foo() -> () {
-         |    emit Debug(`Hello, Alephium!`)
+         |    emit Debug(`Hello, Oxyg3nium!`)
          |    assert!(false, 0)
          |  }
          |}
@@ -2285,7 +2285,7 @@ class ServerUtilsSpec extends AlephiumSpec {
     val testContract = TestContract(bytecode = code).toComplete().rightValue
     val testError    = serverUtils.runTestContract(blockFlow, testContract).leftValue.detail
     testError is
-      s"> Contract @ ${Address.contract(testContract.contractId).toBase58} - Hello, Alephium!\n" ++
+      s"> Contract @ ${Address.contract(testContract.contractId).toBase58} - Hello, Oxyg3nium!\n" ++
       "VM execution error: Assertion Failed in Contract @ tgx7VNFoP9DJiFMFgXXtafQZkUvyEdDHT9ryamHJYrjq, Error Code: 0"
   }
 
@@ -2331,12 +2331,12 @@ class ServerUtilsSpec extends AlephiumSpec {
       .detail is "Invalid debug message"
 
     serverUtils
-      .extractDebugMessage(buildEvent(ValByteVec(ByteString.fromString("Hello, Alephium!")))) isE
-      DebugMessage(contractAddress, "Hello, Alephium!")
+      .extractDebugMessage(buildEvent(ValByteVec(ByteString.fromString("Hello, Oxyg3nium!")))) isE
+      DebugMessage(contractAddress, "Hello, Oxyg3nium!")
 
     serverUtils
       .extractDebugMessage(
-        buildEvent(ValByteVec(ByteString.fromString("Hello, Alephium!")), ValBool(true))
+        buildEvent(ValByteVec(ByteString.fromString("Hello, Oxyg3nium!")), ValBool(true))
       )
       .leftValue
       .detail is "Invalid debug message"
@@ -2355,7 +2355,7 @@ class ServerUtilsSpec extends AlephiumSpec {
 
     val testContract = TestContract(
       bytecode = code,
-      initialImmFields = Some(AVector(ValByteVec(ByteString.fromString("Alephium"))))
+      initialImmFields = Some(AVector(ValByteVec(ByteString.fromString("Oxyg3nium"))))
     ).toComplete().rightValue
     val serverUtils = new ServerUtils()
     val testResult  = serverUtils.runTestContract(blockFlow, testContract).rightValue

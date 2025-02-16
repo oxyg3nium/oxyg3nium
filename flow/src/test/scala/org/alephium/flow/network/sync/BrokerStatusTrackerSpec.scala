@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@ package org.oxyg3nium.flow.network.sync
 import akka.actor.ActorRef
 import akka.testkit.TestProbe
 
-import org.oxyg3nium.flow.AlephiumFlowActorSpec
+import org.oxyg3nium.flow.Oxyg3niumFlowActorSpec
 import org.oxyg3nium.flow.network.sync.BrokerStatusTracker.BrokerStatus
 import org.oxyg3nium.flow.network.sync.SyncState.{BlockBatch, BlockDownloadTask}
 import org.oxyg3nium.flow.setting.NetworkSetting
@@ -28,7 +28,7 @@ import org.oxyg3nium.protocol.message.{P2PV1, P2PV2, P2PVersion}
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.util.{ActorRefT, AVector}
 
-class BrokerStatusTrackerSpec extends AlephiumFlowActorSpec with Generators {
+class BrokerStatusTrackerSpec extends Oxyg3niumFlowActorSpec with Generators {
   val brokerInfo = brokerInfoGen.sample.get
 
   trait Fixture extends BrokerStatusTracker {

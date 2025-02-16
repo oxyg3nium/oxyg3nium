@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,9 +21,9 @@ import org.oxyg3nium.flow.setting.ConsensusSetting
 import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.model.{ChainIndex, NetworkId, Target}
 import org.oxyg3nium.protocol.vm.LockupScript
-import org.oxyg3nium.util.{AlephiumSpec, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, TimeStamp}
 
-class FlowDifficultyAdjustmentSpec extends AlephiumSpec {
+class FlowDifficultyAdjustmentSpec extends Oxyg3niumSpec {
 
   it should "calculate weighted target" in new PreLemanDifficultyFixture {
     prepareBlocks(2)
@@ -210,12 +210,12 @@ class FlowDifficultyAdjustmentSpec extends AlephiumSpec {
 
   it should "use diff penalty for leman fork" in new FlowFixture {
     override val configValues: Map[String, Any] = Map(
-      ("oxyg3nium.network.network-id", NetworkId.AlephiumDevNet.id),
+      ("oxyg3nium.network.network-id", NetworkId.Oxyg3niumDevNet.id),
       ("oxyg3nium.network.leman-hard-fork-timestamp ", TimeStamp.now().plusHoursUnsafe(-1).millis),
       ("oxyg3nium.network.rhone-hard-fork-timestamp ", TimeStamp.Max.millis),
       ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 3)
     )
-    config.network.networkId is NetworkId.AlephiumDevNet
+    config.network.networkId is NetworkId.Oxyg3niumDevNet
     config.network.getHardFork(TimeStamp.now()).isLemanEnabled() is true
     implicit val consensusConfig: ConsensusSetting = consensusConfigs.mainnet
     consensusConfig.numZerosAtLeastInHash is 3

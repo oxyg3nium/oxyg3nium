@@ -1,14 +1,14 @@
 [View code on GitHub](https://github.com/alephium/alephium/docker/prometheus/prometheus.yml)
 
-This code is a configuration file for Prometheus, a monitoring and alerting system. The purpose of this file is to define how Prometheus should scrape data from a target, in this case, the Alephium application. 
+This code is a configuration file for Prometheus, a monitoring and alerting system. The purpose of this file is to define how Prometheus should scrape data from a target, in this case, the Oxyg3nium application. 
 
 The `global` section sets the default scrape interval and evaluation interval to 15 seconds. It also sets the external label for all time series and alerts to 'alephium'. 
 
-The `scrape_configs` section defines the job name as 'alephium' and sets the scrape interval to 15 seconds. The `static_configs` section specifies the target to be scraped, which is the Alephium application running on port 12973. It also adds a label 'app' with the value 'alephium' to all scraped time series and alerts. 
+The `scrape_configs` section defines the job name as 'alephium' and sets the scrape interval to 15 seconds. The `static_configs` section specifies the target to be scraped, which is the Oxyg3nium application running on port 12973. It also adds a label 'app' with the value 'alephium' to all scraped time series and alerts. 
 
-This configuration file can be used in the larger Alephium project to monitor the performance and health of the application. Prometheus will scrape metrics from the Alephium application at the defined interval and store them in a time series database. These metrics can then be visualized and analyzed using Prometheus' built-in query language, or used to trigger alerts based on predefined rules. 
+This configuration file can be used in the larger Oxyg3nium project to monitor the performance and health of the application. Prometheus will scrape metrics from the Oxyg3nium application at the defined interval and store them in a time series database. These metrics can then be visualized and analyzed using Prometheus' built-in query language, or used to trigger alerts based on predefined rules. 
 
-Example usage of this configuration file in the Alephium project:
+Example usage of this configuration file in the Oxyg3nium project:
 
 ```
 # Start Prometheus with the alephium.yml configuration file

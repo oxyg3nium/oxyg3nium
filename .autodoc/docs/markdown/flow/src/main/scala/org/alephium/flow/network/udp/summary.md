@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/udp)
 
-The `.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/udp` folder contains code for handling UDP communication in the Alephium project. It includes three main files: `SelectionHandler.scala`, `SerializedExecutionContext.scala`, and `UdpServer.scala`.
+The `.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/udp` folder contains code for handling UDP communication in the Oxyg3nium project. It includes three main files: `SelectionHandler.scala`, `SerializedExecutionContext.scala`, and `UdpServer.scala`.
 
 `SelectionHandler.scala` defines the `SelectionHandler` object and class, which are responsible for selecting UDP packets from a selector. The object extends the Akka actor system, while the class handles the actual packet selection. The `registerTask` method adds tasks to the `pendingTasks` buffer and wakes up the selector. The `select` method selects UDP packets from the selector, and the `loop` method executes the `select` method in a loop.
 
@@ -33,4 +33,4 @@ udpServer ! UdpServer.Bind(localAddress)
 udpServer ! UdpServer.Send(data, remoteAddress)
 ```
 
-In summary, this folder contains code for handling UDP communication in the Alephium project. The `SelectionHandler` class selects UDP packets from a selector, the `SerializedExecutionContext` class provides a serialized execution context for tasks, and the `UdpServer` class implements a UDP server for sending and receiving data over a network. These components work together to enable efficient network communication in the Alephium project.
+In summary, this folder contains code for handling UDP communication in the Oxyg3nium project. The `SelectionHandler` class selects UDP packets from a selector, the `SerializedExecutionContext` class provides a serialized execution context for tasks, and the `UdpServer` class implements a UDP server for sending and receiving data over a network. These components work together to enable efficient network communication in the Oxyg3nium project.

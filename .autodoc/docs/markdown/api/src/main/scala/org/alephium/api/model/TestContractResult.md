@@ -6,7 +6,7 @@ The `TestContractResult` case class has several fields that represent the result
 
 The `DebugMessage` case class has two fields: `contractAddress` of type `Address.Contract` and `message` of type `String`. This class is used to represent debug messages that can be printed during the execution of a smart contract. The `toString()` method is overridden to provide a string representation of the debug message that includes the contract address and the message itself. 
 
-These case classes are used in the larger Alephium project to facilitate the testing and debugging of smart contracts. The `TestContractResult` case class is used to represent the result of testing a smart contract, which can be used to verify that the smart contract is functioning as expected. The `DebugMessage` case class is used to provide developers with a way to print debug messages during the execution of a smart contract, which can be useful for identifying and fixing bugs. 
+These case classes are used in the larger Oxyg3nium project to facilitate the testing and debugging of smart contracts. The `TestContractResult` case class is used to represent the result of testing a smart contract, which can be used to verify that the smart contract is functioning as expected. The `DebugMessage` case class is used to provide developers with a way to print debug messages during the execution of a smart contract, which can be useful for identifying and fixing bugs. 
 
 Example usage of `TestContractResult`:
 ```

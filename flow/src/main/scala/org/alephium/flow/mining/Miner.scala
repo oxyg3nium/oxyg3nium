@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -136,7 +136,7 @@ object Miner extends LazyLogging {
   @inline def validateTestnetMiners(
       miners: AVector[Address.Asset]
   )(implicit network: NetworkConfig): Either[String, Unit] = {
-    if (network.networkId == NetworkId.AlephiumTestNet) {
+    if (network.networkId == NetworkId.Oxyg3niumTestNet) {
       if (ALPH.isTestnetMinersWhitelisted(miners)) {
         Right(())
       } else {

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -26,9 +26,9 @@ import org.scalatest.Assertion
 import org.oxyg3nium.protocol.ALPH
 import org.oxyg3nium.protocol.config.GroupConfig
 import org.oxyg3nium.protocol.model.Target
-import org.oxyg3nium.util.{AlephiumSpec, Duration, NumericHelpers, TimeStamp, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, Duration, NumericHelpers, TimeStamp, U256}
 
-class EmissionSpec extends AlephiumSpec with NumericHelpers {
+class EmissionSpec extends Oxyg3niumSpec with NumericHelpers {
   def equalLong(x: Long, y: Long, errorOrder: Long = 8): Assertion = {
     val errorBase = math.pow(10.0, errorOrder.toDouble).toLong
     (x >= y * (errorBase - 1) / errorBase && x <= y * (errorBase + 1) / errorBase) is true

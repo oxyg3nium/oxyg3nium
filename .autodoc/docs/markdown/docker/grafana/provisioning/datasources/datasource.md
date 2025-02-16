@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/docker/grafana/provisioning/datasources/datasource.yml)
 
-This code is a configuration file for the Alephium project that specifies the version of the API and provides a list of datasources to be deleted from the database, as well as a list of datasources to be inserted or updated depending on what is available in the database. 
+This code is a configuration file for the Oxyg3nium project that specifies the version of the API and provides a list of datasources to be deleted from the database, as well as a list of datasources to be inserted or updated depending on what is available in the database. 
 
 The `deleteDatasources` section specifies a list of datasources that should be deleted from the database. In this case, there is only one datasource named "Prometheus" with an orgId of 1. 
 
@@ -8,7 +8,7 @@ The `datasources` section specifies a list of datasources to be inserted or upda
 
 Other optional fields include `orgId`, `url`, `password`, `user`, `database`, `basicAuth`, `basicAuthUser`, `basicAuthPassword`, `withCredentials`, `isDefault`, `jsonData`, `secureJsonData`, `version`, and `editable`. These fields provide additional configuration options for the datasource, such as specifying the database URL, enabling basic authentication, and allowing users to edit the datasource from the UI. 
 
-Overall, this configuration file allows the Alephium project to manage its datasources in a flexible and customizable way. For example, if a new datasource is added to the database, it can be automatically inserted into the configuration file and made available to the project without requiring manual configuration. 
+Overall, this configuration file allows the Oxyg3nium project to manage its datasources in a flexible and customizable way. For example, if a new datasource is added to the database, it can be automatically inserted into the configuration file and made available to the project without requiring manual configuration. 
 
 Example usage:
 

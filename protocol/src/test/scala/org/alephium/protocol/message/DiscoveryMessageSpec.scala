@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -23,9 +23,9 @@ import org.oxyg3nium.protocol.{DiscoveryVersion, SignatureSchema}
 import org.oxyg3nium.protocol.config.{BrokerConfig, DiscoveryConfig, NetworkConfigFixture}
 import org.oxyg3nium.protocol.model.{BrokerInfo, CliqueId}
 import org.oxyg3nium.serde._
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Duration}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Duration}
 
-class DiscoveryMessageSpec extends AlephiumSpec with NetworkConfigFixture.Default {
+class DiscoveryMessageSpec extends Oxyg3niumSpec with NetworkConfigFixture.Default {
   import DiscoveryMessage.{Code, Header}
 
   implicit val ordering: Ordering[Code[_]] = Ordering.by(Code.toInt(_))

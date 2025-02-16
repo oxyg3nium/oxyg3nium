@@ -36,7 +36,7 @@ brokerConnector ! BrokerConnector.Send(intraCliqueInfo)
 
 2. What external dependencies does this code have?
     
-    This code depends on the Akka library, the Alephium project, and the GNU Lesser General Public License.
+    This code depends on the Akka library, the Oxyg3nium project, and the GNU Lesser General Public License.
 
 3. What is the expected input and output of this code?
     

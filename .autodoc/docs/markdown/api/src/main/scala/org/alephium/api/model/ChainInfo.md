@@ -2,9 +2,9 @@
 
 This code defines a case class called `ChainInfo` that contains a single field `currentHeight` of type `Int`. This class is located in the `org.alephium.api.model` package.
 
-The purpose of this class is to represent information about the current state of the Alephium blockchain. Specifically, it provides the current height of the blockchain, which is the number of blocks that have been added to the chain.
+The purpose of this class is to represent information about the current state of the Oxyg3nium blockchain. Specifically, it provides the current height of the blockchain, which is the number of blocks that have been added to the chain.
 
-This information can be used by other parts of the Alephium project, such as the API layer, to provide information to users about the current state of the blockchain. For example, a user might want to know the current height of the blockchain in order to determine how many blocks have been added since they last checked.
+This information can be used by other parts of the Oxyg3nium project, such as the API layer, to provide information to users about the current state of the blockchain. For example, a user might want to know the current height of the blockchain in order to determine how many blocks have been added since they last checked.
 
 Here is an example of how this class might be used:
 
@@ -15,7 +15,7 @@ println(s"Current height: ${chainInfo.currentHeight}")
 
 This would create a new `ChainInfo` object with a current height of 1000, and then print out the current height to the console.
 
-Overall, this code provides a simple but important piece of functionality for the Alephium project, allowing other parts of the system to easily access information about the current state of the blockchain.
+Overall, this code provides a simple but important piece of functionality for the Oxyg3nium project, allowing other parts of the system to easily access information about the current state of the blockchain.
 ## Questions: 
  1. What is the purpose of the `ChainInfo` case class?
    - The `ChainInfo` case class is used to represent information about the current height of a blockchain.

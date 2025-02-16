@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -35,8 +35,8 @@ import org.oxyg3nium.protocol.message.{Message, NewBlock, P2PV1}
 import org.oxyg3nium.protocol.model.{BrokerInfo, ChainIndex, TransactionId}
 import org.oxyg3nium.util._
 
-class InterCliqueManagerSpec extends AlephiumActorSpec with Generators with ScalaFutures {
-  override def actorSystemConfig = AlephiumActorSpec.debugConfig
+class InterCliqueManagerSpec extends Oxyg3niumActorSpec with Generators with ScalaFutures {
+  override def actorSystemConfig = Oxyg3niumActorSpec.debugConfig
   implicit val timeout: Timeout  = Timeout(Duration.ofSecondsUnsafe(2).asScala)
   val clientInfo: String         = "v0.0.0"
 

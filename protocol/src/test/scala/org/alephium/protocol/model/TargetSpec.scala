@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -25,9 +25,9 @@ import org.scalatest.Assertion
 
 import org.oxyg3nium.protocol.config.{GroupConfig, GroupConfigFixture}
 import org.oxyg3nium.protocol.mining.HashRate
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Duration, Hex}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Duration, Hex}
 
-class TargetSpec extends AlephiumSpec with GroupConfigFixture {
+class TargetSpec extends Oxyg3niumSpec with GroupConfigFixture {
   val groups: Int = 1
 
   it should "check special values" in {

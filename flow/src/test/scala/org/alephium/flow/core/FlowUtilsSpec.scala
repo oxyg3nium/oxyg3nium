@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -32,7 +32,7 @@ import org.oxyg3nium.ralph.Compiler
 import org.oxyg3nium.util._
 
 // scalastyle:off file.size.limit
-class FlowUtilsSpec extends AlephiumSpec {
+class FlowUtilsSpec extends Oxyg3niumSpec {
   it should "generate failed tx" in new FlowFixture with NoIndexModelGeneratorsLike {
     val chainIndex = ChainIndex.unsafe(0, 0)
     val groupIndex = chainIndex.from

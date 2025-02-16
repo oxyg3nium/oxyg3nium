@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,9 +16,9 @@
 
 package org.oxyg3nium.ralph
 
-import org.oxyg3nium.util.{AlephiumFixture, AlephiumSpec, AVector}
+import org.oxyg3nium.util.{Oxyg3niumFixture, Oxyg3niumSpec, AVector}
 
-class TypeSpec extends AlephiumSpec {
+class TypeSpec extends Oxyg3niumSpec {
   it should "return correct signature" in new TypeSignatureFixture {
     contractAst.getFieldsSignature() is
       "Contract Foo(aa:Bool,mut bb:U256,cc:I256,mut dd:ByteVec,ee:Address,ff:[[Bool;1];2],gg:Account)"
@@ -79,7 +79,7 @@ class TypeSpec extends AlephiumSpec {
   }
 }
 
-trait TypeSignatureFixture extends AlephiumFixture {
+trait TypeSignatureFixture extends Oxyg3niumFixture {
   val contractStr =
     s"""
        |struct Account {

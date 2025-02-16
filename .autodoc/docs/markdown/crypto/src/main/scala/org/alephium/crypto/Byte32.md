@@ -6,7 +6,7 @@ The `Byte32` class takes a `ByteString` as its constructor argument and stores i
 
 The `Byte32` object extends the `RandomBytes.Companion` object, which is a factory for creating instances of the `Byte32` class. It takes two arguments: a `HashSchema` object that specifies the format of the 32-byte array, and a function that extracts the `ByteString` from a `Byte32` instance. The `HashSchema` object is used to ensure that the 32-byte array is formatted correctly for cryptographic operations. 
 
-Overall, this code provides a convenient and standardized way to represent and manipulate 32-byte arrays of data in the Alephium project. It can be used in various cryptographic operations, such as hashing and encryption. Here is an example of how this code might be used to generate a random 32-byte array:
+Overall, this code provides a convenient and standardized way to represent and manipulate 32-byte arrays of data in the Oxyg3nium project. It can be used in various cryptographic operations, such as hashing and encryption. Here is an example of how this code might be used to generate a random 32-byte array:
 
 ```
 val randomBytes = Byte32.random()

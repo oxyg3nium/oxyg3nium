@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,10 +21,10 @@ import scala.language.implicitConversions
 import org.oxyg3nium.protocol.config.GroupConfigFixture
 import org.oxyg3nium.protocol.model.LockupScriptGenerators
 import org.oxyg3nium.protocol.vm.Val
-import org.oxyg3nium.util.{AlephiumSpec, Hex, I256, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, Hex, I256, U256}
 
 class OperatorSpec
-    extends AlephiumSpec
+    extends Oxyg3niumSpec
     with LockupScriptGenerators
     with GroupConfigFixture.Default {
   trait Fixture {

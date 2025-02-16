@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/http/src/main/scala/org/alephium/http/EndpointSender.scala)
 
-The `EndpointSender` class is a part of the Alephium project and is used to send HTTP requests to endpoints defined in the project. It extends the `BaseEndpoint` trait and uses the `SttpClientInterpreter` to create requests. The class takes an optional `ApiKey` parameter and an `ExecutionContext` parameter in its constructor.
+The `EndpointSender` class is a part of the Oxyg3nium project and is used to send HTTP requests to endpoints defined in the project. It extends the `BaseEndpoint` trait and uses the `SttpClientInterpreter` to create requests. The class takes an optional `ApiKey` parameter and an `ExecutionContext` parameter in its constructor.
 
 The `createRequest` method takes an endpoint, its parameters, and a URI, and returns a request object that can be sent to the endpoint. The `send` method takes an endpoint, its parameters, and a URI, and sends the request to the endpoint using the `AsyncHttpClientFutureBackend`. It returns a `Future` that contains the response from the endpoint.
 
@@ -8,7 +8,7 @@ The `handleDecodeFailures` method is a private method that is used to handle dec
 
 The `startSelfOnce` and `stopSelfOnce` methods are used to start and stop the `EndpointSender` service. The `subServices` method returns an empty `ArraySeq`.
 
-Overall, the `EndpointSender` class provides a convenient way to send HTTP requests to endpoints defined in the Alephium project. It handles decoding failures and provides a simple interface for sending requests and receiving responses.
+Overall, the `EndpointSender` class provides a convenient way to send HTTP requests to endpoints defined in the Oxyg3nium project. It handles decoding failures and provides a simple interface for sending requests and receiving responses.
 ## Questions: 
  1. What is the purpose of this code?
    

@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/json/src)
 
-The `Json.scala` file, located in the `org.alephium.json` package, provides a set of utility functions for working with JSON data in the Alephium project. It is implemented using the `upickle` library, a lightweight JSON serialization library for Scala.
+The `Json.scala` file, located in the `org.alephium.json` package, provides a set of utility functions for working with JSON data in the Oxyg3nium project. It is implemented using the `upickle` library, a lightweight JSON serialization library for Scala.
 
 The `Json` object offers several implicit conversions for JSON data manipulation:
 
@@ -28,4 +28,4 @@ val jsonObjectWithNulls = ujson.Obj("id" -> 1, "name" -> null)
 val jsonObjectWithoutNulls = Json.dropNullValues(jsonObjectWithNulls)
 ```
 
-In the Alephium project, the `Json.scala` file plays a vital role in handling JSON data. It works in conjunction with other parts of the project that require JSON processing, such as API communication, configuration management, and data storage. The utility functions provided by this file enable developers to easily serialize and deserialize JSON data, as well as manipulate JSON objects, ensuring smooth data handling throughout the project.
+In the Oxyg3nium project, the `Json.scala` file plays a vital role in handling JSON data. It works in conjunction with other parts of the project that require JSON processing, such as API communication, configuration management, and data storage. The utility functions provided by this file enable developers to easily serialize and deserialize JSON data, as well as manipulate JSON objects, ensuring smooth data handling throughout the project.

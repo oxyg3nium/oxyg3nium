@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/ralphc/src/main/scala/org/alephium/ralphc/Artifacts.scala)
 
-This file contains several case classes that are used in the Alephium project for managing code compilation and artifacts. 
+This file contains several case classes that are used in the Oxyg3nium project for managing code compilation and artifacts. 
 
 The `CodeInfo` case class contains information about a specific piece of code, including the source file name, a hash of the source code, a bytecode debug patch, a hash of the debug code, and any warnings that were generated during compilation. This information is used to track changes to the code and ensure that the compiled bytecode is up-to-date.
 
@@ -8,7 +8,7 @@ The `Artifacts` case class contains information about the artifacts generated du
 
 The `MetaInfo` case class contains metadata about a specific artifact, including the name of the artifact, the path to the artifact file, and the `CodeInfo` object for the compiled code. This information is used to manage the compiled artifacts and ensure that they are properly named and located.
 
-Overall, these case classes provide a way to manage the compilation and linking of code in the Alephium project. They allow for tracking changes to the code, managing the compiled artifacts, and ensuring that everything is properly linked together. 
+Overall, these case classes provide a way to manage the compilation and linking of code in the Oxyg3nium project. They allow for tracking changes to the code, managing the compiled artifacts, and ensuring that everything is properly linked together. 
 
 Here is an example of how these case classes might be used in the larger project:
 

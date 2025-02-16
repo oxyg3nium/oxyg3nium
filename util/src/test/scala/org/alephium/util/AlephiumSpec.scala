@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -35,21 +35,21 @@ import org.scalatest.matchers.dsl.ResultOfATypeInvocation
 import org.scalatest.matchers.should.Matchers
 import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
-trait AlephiumSpec
+trait Oxyg3niumSpec
     extends AnyFlatSpecLike
     with OptionValues
     with ScalaCheckDrivenPropertyChecks
-    with AlephiumFixture
+    with Oxyg3niumFixture
     with BeforeAndAfterAll {
   @nowarn implicit protected def noShrink[A]: Shrink[A] = Shrink(_ => Stream.empty)
 
   override def afterAll(): Unit = {
     super.afterAll()
-    AlephiumSpec.clean()
+    Oxyg3niumSpec.clean()
   }
 }
 
-object AlephiumSpec {
+object Oxyg3niumSpec {
   private val cleanTasks: mutable.ArrayBuffer[() => Unit] = mutable.ArrayBuffer.empty
 
   def addCleanTask(task: () => Unit): Unit = cleanTasks.addOne(task)
@@ -82,13 +82,13 @@ object AlephiumSpec {
   }
 }
 
-trait AlephiumFutureSpec
-    extends AlephiumSpec
+trait Oxyg3niumFutureSpec
+    extends Oxyg3niumSpec
     with ScalaFutures
     with Eventually
     with IntegrationPatience
 
-trait AlephiumFixture extends Matchers {
+trait Oxyg3niumFixture extends Matchers {
 
   lazy val posLongGen: Gen[Long] = Gen.chooseNum(0L, Long.MaxValue)
   lazy val negLongGen: Gen[Long] = Gen.chooseNum(Long.MinValue, -1L)

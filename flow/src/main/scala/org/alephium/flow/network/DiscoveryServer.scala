@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -136,7 +136,7 @@ class DiscoveryServer(
       log.debug(s"bootstrap nodes: ${bootstrap.mkString(";")}")
       startBinding()
 
-      if (networkConfig.networkId == NetworkId.AlephiumMainNet) {
+      if (networkConfig.networkId == NetworkId.Oxyg3niumMainNet) {
         scheduleOnce(self, InitialDiscoveryDone, discoveryConfig.initialDiscoveryPeriod)
       } else {
         scheduleOnce(self, InitialDiscoveryDone, Duration.ofSecondsUnsafe(1))

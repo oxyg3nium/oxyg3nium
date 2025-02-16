@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@ import org.oxyg3nium.serde._
 import org.oxyg3nium.util._
 
 // scalastyle:off no.equal file.size.limit number.of.methods
-class CompilerSpec extends AlephiumSpec with ContextGenerators {
+class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
 
   def replace(code: String): String = code.replace("$", "")
   def replaceFirst(code: String): String = {
@@ -3548,7 +3548,7 @@ class CompilerSpec extends AlephiumSpec with ContextGenerators {
         s"""
            |Contract Foo() {
            |  enum Chain {
-           |    Alephium = 0
+           |    Oxyg3nium = 0
            |    Eth = 1
            |  }
            |
@@ -3558,7 +3558,7 @@ class CompilerSpec extends AlephiumSpec with ContextGenerators {
            |  }
            |
            |  pub fn foo() -> () {
-           |    assert!(Chain.Alephium == 0, 0)
+           |    assert!(Chain.Oxyg3nium == 0, 0)
            |    assert!(Language.Ralph == #00, 0)
            |  }
            |}

@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/Sign.scala)
 
-This file contains two case classes, `Sign` and `SignResult`, which are used in the `org.alephium.wallet.api` package of the Alephium project. 
+This file contains two case classes, `Sign` and `SignResult`, which are used in the `org.alephium.wallet.api` package of the Oxyg3nium project. 
 
 The `Sign` case class takes a string `data` as input and is used to represent data that needs to be signed. The `SignResult` case class takes a `Signature` object as input and is used to represent the result of signing the data.
 
@@ -27,4 +27,4 @@ Overall, this file provides a simple way to represent data that needs to be sign
 2. What is the `Signature` class imported from `org.alephium.protocol`?
    - The `Signature` class is likely a class from the `org.alephium.protocol` package that is used to represent cryptographic signatures.
 3. What is the overall purpose of the `org.alephium.wallet.api.model` package?
-   - It is unclear from this code alone what the overall purpose of the `org.alephium.wallet.api.model` package is, but it likely contains models or data structures used by the Alephium wallet API.
+   - It is unclear from this code alone what the overall purpose of the `org.alephium.wallet.api.model` package is, but it likely contains models or data structures used by the Oxyg3nium wallet API.

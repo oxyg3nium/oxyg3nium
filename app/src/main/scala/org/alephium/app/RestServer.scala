@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the alephium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -61,7 +61,7 @@ class RestServer(
 
   val endpointSender: EndpointSender = new EndpointSender(apiKeys.headOption)
 
-  private val truncateAddresses = node.config.network.networkId == NetworkId.AlephiumMainNet
+  private val truncateAddresses = node.config.network.networkId == NetworkId.Oxyg3niumMainNet
   private val swaggerUiRoute = SwaggerUI(
     openApiJson(openAPI, apiKeys.isEmpty, truncateAddresses)
   ).map(route(_))

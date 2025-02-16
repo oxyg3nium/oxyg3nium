@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/docker/docker-compose.yml)
 
-This code is a docker-compose file that defines the services and configurations for running the Alephium blockchain node, along with Prometheus and Grafana for monitoring. 
+This code is a docker-compose file that defines the services and configurations for running the Oxyg3nium blockchain node, along with Prometheus and Grafana for monitoring. 
 
 The `alephium` service is defined with the `alephium/alephium:latest` image and is set to restart unless stopped. It exposes ports `9973` for external p2p connections and `10973`, `11973`, and `12973` for internal connections. The service also sets security options to prevent new privileges and defines volumes for data and wallets. The `user.conf` file is mounted to configure the container to connect to the mainnet.
 
@@ -8,7 +8,7 @@ The `grafana` service uses the `grafana/grafana:7.2.1` image and depends on the 
 
 The `prometheus` service uses the `prom/prometheus:v2.21.0` image and defines volumes for configuration and data. It sets command-line options for configuration and restarts unless stopped.
 
-Overall, this code sets up a docker-compose environment for running the Alephium blockchain node along with monitoring tools. It allows for easy deployment and management of the node and monitoring services. 
+Overall, this code sets up a docker-compose environment for running the Oxyg3nium blockchain node along with monitoring tools. It allows for easy deployment and management of the node and monitoring services. 
 
 Example usage:
 ```

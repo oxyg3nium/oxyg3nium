@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -15,9 +15,9 @@
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 package org.oxyg3nium.ralph
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class SourcePositionSpec extends AlephiumSpec {
+class SourcePositionSpec extends Oxyg3niumSpec {
 
   it should "parse valid line number format" in {
     forAll { (rowNum: Int, colNum: Int) =>

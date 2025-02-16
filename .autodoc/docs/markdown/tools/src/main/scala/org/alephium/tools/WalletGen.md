@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/tools/src/main/scala/org/alephium/tools/WalletGen.scala)
 
-The `WalletGen` object is a tool for generating wallets for the Alephium cryptocurrency. It is used to generate a set of public and private keys, along with their corresponding addresses and mnemonics. 
+The `WalletGen` object is a tool for generating wallets for the Oxyg3nium cryptocurrency. It is used to generate a set of public and private keys, along with their corresponding addresses and mnemonics. 
 
 The `gen` method is the core of the tool. It takes a `GroupIndex` as input and returns a tuple containing an `Address`, a `SecP256K1PublicKey`, a `SecP256K1PrivateKey`, and a `Mnemonic`. The `GroupIndex` is used to ensure that the generated address belongs to the specified group. The method generates a random 24-word mnemonic, which is used to derive a BIP32 master key. From this master key, a private key, public key, and address are derived. If the generated address does not belong to the specified group, the method is called recursively until a valid address is generated.
 
@@ -30,11 +30,11 @@ This code generates a wallet for the first group of the default network ID (1). 
 ## Questions: 
  1. What is the purpose of this code?
    
-   This code generates wallet addresses, public and private keys, and mnemonics for the Alephium cryptocurrency project.
+   This code generates wallet addresses, public and private keys, and mnemonics for the Oxyg3nium cryptocurrency project.
 
 2. What external libraries or dependencies does this code use?
    
-   This code imports several libraries from the Alephium project, including `org.alephium.crypto`, `org.alephium.crypto.wallet`, `org.alephium.protocol`, and `org.alephium.wallet.Constants`.
+   This code imports several libraries from the Oxyg3nium project, including `org.alephium.crypto`, `org.alephium.crypto.wallet`, `org.alephium.protocol`, and `org.alephium.wallet.Constants`.
 
 3. What is the output of this code?
    

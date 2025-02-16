@@ -1,8 +1,8 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium/wallet/web)
 
-The code in this folder provides wallet-related functionality for the Alephium project, allowing users to interact with the Alephium blockchain through various wallet operations. The main components are the `BlockFlowClient`, `WalletEndpointsLogic`, and `WalletServer`.
+The code in this folder provides wallet-related functionality for the Oxyg3nium project, allowing users to interact with the Oxyg3nium blockchain through various wallet operations. The main components are the `BlockFlowClient`, `WalletEndpointsLogic`, and `WalletServer`.
 
-`BlockFlowClient.scala` defines a trait and an object that implement methods for interacting with the Alephium blockchain, such as fetching balances, preparing transactions, and posting transactions. The `BlockFlowClient` object provides an implementation of these methods, taking parameters like the default URI for the Alephium blockchain, the maximum age of a cached response, an optional API key, and an object that sends requests to the Alephium blockchain.
+`BlockFlowClient.scala` defines a trait and an object that implement methods for interacting with the Oxyg3nium blockchain, such as fetching balances, preparing transactions, and posting transactions. The `BlockFlowClient` object provides an implementation of these methods, taking parameters like the default URI for the Oxyg3nium blockchain, the maximum age of a cached response, an optional API key, and an object that sends requests to the Oxyg3nium blockchain.
 
 `WalletEndpointsLogic.scala` defines a trait that provides the implementation for various wallet-related endpoints, such as creating, restoring, locking, unlocking, and deleting wallets, as well as transferring funds, signing data, and deriving new addresses. The methods in this trait use the `walletService` object to perform the necessary operations and return the results in the appropriate format.
 

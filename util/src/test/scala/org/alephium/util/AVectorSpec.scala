@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ import org.scalatest.Assertion
 
 // scalastyle:off file.size.limit
 abstract class AVectorSpec[@sp A: ClassTag](implicit ab: Arbitrary[A], cmp: Ordering[A])
-    extends AlephiumSpec {
+    extends Oxyg3niumSpec {
 
   behavior of "AVector"
 
@@ -823,7 +823,7 @@ class IntAVectorSpec extends AVectorSpec[Int] {
   }
 }
 
-class SpecialAVectorSpec extends AlephiumSpec {
+class SpecialAVectorSpec extends Oxyg3niumSpec {
   it should "convert covariantly" in {
     sealed trait Foo
     final case class Bar(n: Int) extends Foo

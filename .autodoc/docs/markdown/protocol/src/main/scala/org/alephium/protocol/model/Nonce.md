@@ -6,7 +6,7 @@ The Nonce object provides several methods for creating Nonces. The `unsafe` meth
 
 The Nonce object also provides a `serde` implicit value of type Serde[Nonce]. This allows Nonces to be serialized and deserialized using the Serde library. The Serde library provides a convenient way to convert between bytes and objects.
 
-The Nonce class and its companion object are likely used in the larger project for cryptographic communication protocols. Nonces are an important part of many cryptographic protocols and are used to prevent replay attacks. The Nonce class provides a convenient way to generate and manipulate Nonces. The Nonce object provides several methods for creating Nonces with different properties. The `serde` implicit value allows Nonces to be easily serialized and deserialized. Overall, the Nonce class and its companion object are an important part of the Alephium project's cryptographic infrastructure.
+The Nonce class and its companion object are likely used in the larger project for cryptographic communication protocols. Nonces are an important part of many cryptographic protocols and are used to prevent replay attacks. The Nonce class provides a convenient way to generate and manipulate Nonces. The Nonce object provides several methods for creating Nonces with different properties. The `serde` implicit value allows Nonces to be easily serialized and deserialized. Overall, the Nonce class and its companion object are an important part of the Oxyg3nium project's cryptographic infrastructure.
 ## Questions: 
  1. What is the purpose of the `Nonce` class and how is it used in the `alephium` project?
    

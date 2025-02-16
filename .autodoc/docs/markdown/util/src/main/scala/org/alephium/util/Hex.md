@@ -10,7 +10,7 @@ The `toHexString` method takes an `IndexedSeq[Byte]` as input and returns a hexa
 
 The `HexStringSyntax` class is an implicit class that provides a convenient syntax for creating `ByteString` objects from hexadecimal string literals. It defines a `hex` method that can be called on a string literal with the `s` prefix. For example, `"deadbeef".hex` returns a `ByteString` object that represents the byte sequence `0xde 0xad 0xbe 0xef`. This is achieved using Scala macros to generate code that calls the `ByteString` constructor with the decoded byte sequence. 
 
-Overall, the `Hex` object provides a set of utility functions that make it easy to work with hexadecimal strings and byte sequences in the Alephium project. It can be used in various parts of the project that require encoding or decoding of data in hexadecimal format.
+Overall, the `Hex` object provides a set of utility functions that make it easy to work with hexadecimal strings and byte sequences in the Oxyg3nium project. It can be used in various parts of the project that require encoding or decoding of data in hexadecimal format.
 ## Questions: 
  1. What is the purpose of this code?
 - This code defines a utility object called `Hex` that provides methods for converting between hexadecimal strings and `ByteString` objects.

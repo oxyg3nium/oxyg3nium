@@ -4,11 +4,11 @@ The code defines a class and an object related to the Blake2b cryptographic hash
 
 The `Blake2b` class takes a `ByteString` as input and extends the `RandomBytes` trait. It has a method `toByte32` which returns a `Byte32` object that represents the hash of the input. 
 
-The `Blake2b` object provides a factory method `provider()` that returns a new instance of the `Blake2bDigest` class from the Bouncy Castle library. This method is used internally by the `BCHashSchema` trait to generate a hash function that conforms to the Alephium hash schema. 
+The `Blake2b` object provides a factory method `provider()` that returns a new instance of the `Blake2bDigest` class from the Bouncy Castle library. This method is used internally by the `BCHashSchema` trait to generate a hash function that conforms to the Oxyg3nium hash schema. 
 
-The `Blake2b` object also extends the `BCHashSchema` trait, which defines a generic interface for hash functions used in the Alephium project. The `Blake2b` object provides an implementation of this interface for the Blake2b hash function. 
+The `Blake2b` object also extends the `BCHashSchema` trait, which defines a generic interface for hash functions used in the Oxyg3nium project. The `Blake2b` object provides an implementation of this interface for the Blake2b hash function. 
 
-Overall, this code provides a way to generate Blake2b hashes in a standardized way that conforms to the Alephium hash schema. This can be used in various parts of the project, such as verifying transactions or blocks. 
+Overall, this code provides a way to generate Blake2b hashes in a standardized way that conforms to the Oxyg3nium hash schema. This can be used in various parts of the project, such as verifying transactions or blocks. 
 
 Example usage:
 

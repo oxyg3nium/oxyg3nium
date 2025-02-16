@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@ package org.oxyg3nium.util
 
 import java.math.BigInteger
 
-class I32Spec extends AlephiumSpec {
+class I32Spec extends Oxyg3niumSpec {
   val numGen = (0 to 4).flatMap(i => List(i - 2, Int.MinValue + i, Int.MaxValue - i))
 
   it should "convert to BigInt" in {

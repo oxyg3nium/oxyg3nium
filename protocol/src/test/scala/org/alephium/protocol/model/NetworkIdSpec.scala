@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -16,12 +16,12 @@
 
 package org.oxyg3nium.protocol.model
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class NetworkIdSpec extends AlephiumSpec {
+class NetworkIdSpec extends Oxyg3niumSpec {
   it should "return the right node folder" in {
-    NetworkId.AlephiumMainNet.nodeFolder is "mainnet"
-    NetworkId.AlephiumTestNet.nodeFolder is "testnet"
-    NetworkId.AlephiumDevNet.nodeFolder is "network-2"
+    NetworkId.Oxyg3niumMainNet.nodeFolder is "mainnet"
+    NetworkId.Oxyg3niumTestNet.nodeFolder is "testnet"
+    NetworkId.Oxyg3niumDevNet.nodeFolder is "network-2"
   }
 }

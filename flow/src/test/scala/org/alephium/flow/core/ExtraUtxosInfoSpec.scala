@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,9 +21,9 @@ import org.scalacheck.Gen
 import org.oxyg3nium.flow.FlowFixture
 import org.oxyg3nium.flow.core.FlowUtils.{AssetOutputInfo, MemPoolOutput}
 import org.oxyg3nium.protocol.model.{AssetOutputRef, ChainIndex, ModelGenerators, TxGenerators}
-import org.oxyg3nium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector}
 
-class ExtraUtxosInfoSpec extends AlephiumSpec {
+class ExtraUtxosInfoSpec extends Oxyg3niumSpec {
 
   trait UtxoFixture extends FlowFixture with ModelGenerators {
     val chainIndex = ChainIndex.unsafe(0, 0)

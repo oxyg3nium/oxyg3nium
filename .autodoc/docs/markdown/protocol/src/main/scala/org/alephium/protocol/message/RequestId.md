@@ -4,7 +4,7 @@ This code defines a RequestId class and its companion object in the `org.alephiu
 
 The companion object provides two methods for creating RequestId objects. The `unsafe` method creates a RequestId object from an integer value. The `random` method generates a new RequestId object with a random value using the `SecureAndSlowRandom` utility class.
 
-The RequestId class is likely used in the larger project to uniquely identify requests and responses between nodes in the Alephium network. The `serde` implicit value defined in the companion object suggests that RequestId objects can be serialized and deserialized using the `org.alephium.serde.Serde` library, which is likely used for network communication.
+The RequestId class is likely used in the larger project to uniquely identify requests and responses between nodes in the Oxyg3nium network. The `serde` implicit value defined in the companion object suggests that RequestId objects can be serialized and deserialized using the `org.alephium.serde.Serde` library, which is likely used for network communication.
 
 Example usage:
 

@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.flow.core
 import akka.util.ByteString
 
 import org.oxyg3nium.protocol.model.{BlockHash, Weight}
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class BlockHashPoolSpec extends AlephiumSpec {
+class BlockHashPoolSpec extends Oxyg3niumSpec {
   val hash0 = BlockHash.unsafe(ByteString.fromArray(Array.fill(BlockHash.length)(0)))
   val hash1 = BlockHash.unsafe(hash0.bytes.init ++ ByteString(1))
 

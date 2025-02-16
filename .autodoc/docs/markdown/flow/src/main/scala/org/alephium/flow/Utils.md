@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/Utils.scala)
 
-The code defines a set of utility functions that can be used across the Alephium project. These functions are designed to help with displaying various types of data in a human-readable format. 
+The code defines a set of utility functions that can be used across the Oxyg3nium project. These functions are designed to help with displaying various types of data in a human-readable format. 
 
 The `showDigest` function takes a vector of `RandomBytes` objects and returns a string representation of the vector. If the vector is empty, it returns `"[]"`. Otherwise, it returns a string containing the short hexadecimal representation of the first and last elements of the vector, separated by `".."` and enclosed in square brackets. For example, `showDigest(AVector(RandomBytes(1), RandomBytes(2), RandomBytes(3)))` would return `"[ 01..03 ]"`.
 

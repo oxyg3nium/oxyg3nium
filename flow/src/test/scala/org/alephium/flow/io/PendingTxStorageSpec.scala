@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -21,10 +21,10 @@ import scala.util.Random
 import org.oxyg3nium.flow.model.PersistedTxId
 import org.oxyg3nium.io.RocksDBSource
 import org.oxyg3nium.protocol.model.{NoIndexModelGenerators, TransactionTemplate}
-import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, TimeStamp}
 
 class PendingTxStorageSpec
-    extends AlephiumSpec
+    extends Oxyg3niumSpec
     with NoIndexModelGenerators
     with StorageSpec[PendingTxRocksDBStorage] {
   import RocksDBSource.ColumnFamily

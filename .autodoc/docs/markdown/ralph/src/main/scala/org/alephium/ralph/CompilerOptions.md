@@ -4,7 +4,7 @@ The code defines a case class called `CompilerOptions` and an object with the sa
 
 The `CompilerOptions` object defines a default set of options that can be used if no options are specified. The default options are set to `false` for all the boolean parameters. 
 
-This code is part of the Alephium project and is used to configure the compiler options for the project. By using the `CompilerOptions` case class, the project can easily define and manage different sets of compiler options. For example, if the project wants to ignore warnings related to unused constants, it can create a new instance of the `CompilerOptions` case class and set the `ignoreUnusedConstantsWarnings` parameter to `true`. 
+This code is part of the Oxyg3nium project and is used to configure the compiler options for the project. By using the `CompilerOptions` case class, the project can easily define and manage different sets of compiler options. For example, if the project wants to ignore warnings related to unused constants, it can create a new instance of the `CompilerOptions` case class and set the `ignoreUnusedConstantsWarnings` parameter to `true`. 
 
 Here is an example of how the `CompilerOptions` case class can be used:
 

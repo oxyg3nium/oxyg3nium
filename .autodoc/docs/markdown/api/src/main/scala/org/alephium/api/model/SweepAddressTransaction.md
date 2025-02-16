@@ -4,7 +4,7 @@ This code defines a case class called `SweepAddressTransaction` and an object wi
 
 The purpose of this code is to provide a way to represent a transaction that sweeps funds from an address. The `SweepAddressTransaction` object is used to store information about such a transaction, including the transaction ID, the unsigned transaction, the gas amount, and the gas price. The `from` method is a convenience method that takes an `UnsignedTransaction` object and returns a `SweepAddressTransaction` object with the relevant information.
 
-This code is likely used in the larger Alephium project to facilitate the creation and processing of transactions that sweep funds from an address. For example, it may be used in a wallet application that allows users to sweep funds from multiple addresses into a single address. The `SweepAddressTransaction` object could be used to represent each of these transactions, and the `from` method could be used to convert an `UnsignedTransaction` object into a `SweepAddressTransaction` object.
+This code is likely used in the larger Oxyg3nium project to facilitate the creation and processing of transactions that sweep funds from an address. For example, it may be used in a wallet application that allows users to sweep funds from multiple addresses into a single address. The `SweepAddressTransaction` object could be used to represent each of these transactions, and the `from` method could be used to convert an `UnsignedTransaction` object into a `SweepAddressTransaction` object.
 ## Questions: 
  1. What is the purpose of the `SweepAddressTransaction` class?
    - The `SweepAddressTransaction` class represents a transaction that sweeps funds from an address to another and includes gas information.

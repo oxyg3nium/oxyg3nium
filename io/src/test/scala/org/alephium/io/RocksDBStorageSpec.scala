@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -17,9 +17,9 @@
 package org.oxyg3nium.io
 
 import org.oxyg3nium.macros.EnumerationMacros
-import org.oxyg3nium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector}
 
-class RocksDBStorageSpec extends AlephiumSpec {
+class RocksDBStorageSpec extends Oxyg3niumSpec {
   import RocksDBSource.ColumnFamily
 
   behavior of "RocksDBStorage"

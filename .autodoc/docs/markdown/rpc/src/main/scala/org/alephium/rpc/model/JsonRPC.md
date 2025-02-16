@@ -6,9 +6,9 @@ The `JsonRPC` object defines a `Handler` type, which is a map of method names to
 
 The `JsonRPC` object also defines several helper methods for working with JSON objects, such as `paramsCheck`, which checks if a JSON object is a valid parameter object, and `versionSet`, which adds the JSON-RPC version to a JSON object. 
 
-The `JsonRPC` object is used in the larger Alephium project to provide a standardized way for clients to interact with the Alephium node. Clients can send JSON-RPC requests to the node, which are then handled by the `Handler` functions defined in the `JsonRPC` object. The `JsonRPC` object is responsible for parsing the requests, validating them, and returning the appropriate response. 
+The `JsonRPC` object is used in the larger Oxyg3nium project to provide a standardized way for clients to interact with the Oxyg3nium node. Clients can send JSON-RPC requests to the node, which are then handled by the `Handler` functions defined in the `JsonRPC` object. The `JsonRPC` object is responsible for parsing the requests, validating them, and returning the appropriate response. 
 
-Here is an example of how the `JsonRPC` object might be used in the Alephium project:
+Here is an example of how the `JsonRPC` object might be used in the Oxyg3nium project:
 
 ```scala
 import org.alephium.rpc.model.JsonRPC
@@ -34,7 +34,7 @@ val responseJson = upickle.default.write(response)
 ```
 ## Questions: 
  1. What is the purpose of this code?
-- This code implements a JSON-RPC server for the Alephium project.
+- This code implements a JSON-RPC server for the Oxyg3nium project.
 
 2. What is the license for this code?
 - The code is licensed under the GNU Lesser General Public License version 3 or later.

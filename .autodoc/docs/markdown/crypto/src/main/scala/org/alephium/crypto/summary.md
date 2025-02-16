@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/crypto/src/main/scala/org/alephium/crypto)
 
-The code in this folder provides cryptographic functionality for the Alephium project, including encryption, decryption, hashing, and digital signatures. It is essential for ensuring the security and integrity of data in the project, such as transactions, blocks, and user accounts.
+The code in this folder provides cryptographic functionality for the Oxyg3nium project, including encryption, decryption, hashing, and digital signatures. It is essential for ensuring the security and integrity of data in the project, such as transactions, blocks, and user accounts.
 
 For example, the `AES` object provides methods for encrypting and decrypting data using the Advanced Encryption Standard (AES) algorithm. This can be used to securely store sensitive user data or encrypt data transmitted over a network.
 
@@ -63,4 +63,4 @@ val signature = sign(message, privateKey)
 val isValid = verify(message, signature, publicKey)
 ```
 
-Overall, the cryptographic functionality provided in this folder is crucial for ensuring the security and integrity of data in the Alephium project. It can be used in various parts of the project, such as verifying transactions, blocks, and user accounts, as well as encrypting and decrypting sensitive data.
+Overall, the cryptographic functionality provided in this folder is crucial for ensuring the security and integrity of data in the Oxyg3nium project. It can be used in various parts of the project, such as verifying transactions, blocks, and user accounts, as well as encrypting and decrypting sensitive data.

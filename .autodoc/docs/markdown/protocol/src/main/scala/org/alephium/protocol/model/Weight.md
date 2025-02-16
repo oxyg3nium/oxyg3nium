@@ -8,7 +8,7 @@ The `Weight` object has two methods defined on it. The first method is `from`, w
 
 The `Weight` class also has an implicit `serde` value defined on it, which is an instance of the `Serde` type class. The `Serde` type class is used to serialize and deserialize instances of a type. The `serde` instance is defined using the `forProduct1` method of the `Serde` companion object, which takes two functions as arguments. The first function is used to construct a new `Weight` instance from a single argument of type `BigInteger`. The second function is used to extract the `BigInteger` value from a `Weight` instance.
 
-Overall, the `Weight` class and object are used to represent and manipulate weights in the Alephium protocol. The `Weight` class is defined as a value class to optimize memory usage, and it has methods for addition and multiplication. The `Weight` object has methods for creating `Weight` instances from `Target` instances and for creating a zero `Weight` instance. The `serde` instance is used to serialize and deserialize `Weight` instances.
+Overall, the `Weight` class and object are used to represent and manipulate weights in the Oxyg3nium protocol. The `Weight` class is defined as a value class to optimize memory usage, and it has methods for addition and multiplication. The `Weight` object has methods for creating `Weight` instances from `Target` instances and for creating a zero `Weight` instance. The `serde` instance is used to serialize and deserialize `Weight` instances.
 ## Questions: 
  1. What is the purpose of the `Weight` class and how is it used in the `alephium` project?
    

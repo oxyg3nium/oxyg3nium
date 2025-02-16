@@ -4,7 +4,7 @@ This code defines a trait and a class for storing transaction indexes in RocksDB
 
 The `TxRocksDBStorage` object is a companion object for the `TxRocksDBStorage` class and extends the `RocksDBKeyValueCompanion` object. It defines an `apply` method that creates a new instance of the `TxRocksDBStorage` class with the given parameters.
 
-This code is part of the Alephium project and is used to store transaction indexes in RocksDB. The `TxRocksDBStorage` class can be used by other parts of the project that need to store transaction indexes. For example, the `BlockChain` class may use this class to store transaction indexes for blocks in the blockchain. Here is an example of how this class may be used:
+This code is part of the Oxyg3nium project and is used to store transaction indexes in RocksDB. The `TxRocksDBStorage` class can be used by other parts of the project that need to store transaction indexes. For example, the `BlockChain` class may use this class to store transaction indexes for blocks in the blockchain. Here is an example of how this class may be used:
 
 ```scala
 val storage = new RocksDBSource(...)
@@ -18,15 +18,15 @@ val txIndex = TxIndex(...)
 txStorage.add(txId, txIndex)
 ```
 
-This code creates a new instance of the `TxRocksDBStorage` class with the given parameters and adds a transaction index to the storage. The `TransactionId` and `TxIndex` classes are part of the Alephium project and represent transaction IDs and indexes, respectively.
+This code creates a new instance of the `TxRocksDBStorage` class with the given parameters and adds a transaction index to the storage. The `TransactionId` and `TxIndex` classes are part of the Oxyg3nium project and represent transaction IDs and indexes, respectively.
 ## Questions: 
  1. What is the purpose of this code?
    
-   This code defines a trait and a class for storing transaction indexes in RocksDB for the Alephium blockchain project.
+   This code defines a trait and a class for storing transaction indexes in RocksDB for the Oxyg3nium blockchain project.
 
 2. What other classes or libraries does this code depend on?
    
-   This code depends on the `org.rocksdb` library, as well as several classes from the Alephium project, including `BlockChain`, `TransactionId`, and `AVector`.
+   This code depends on the `org.rocksdb` library, as well as several classes from the Oxyg3nium project, including `BlockChain`, `TransactionId`, and `AVector`.
 
 3. What methods are available for adding and removing transaction indexes?
    

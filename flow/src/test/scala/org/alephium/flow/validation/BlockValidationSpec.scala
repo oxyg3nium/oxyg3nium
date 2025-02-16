@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -35,10 +35,10 @@ import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm
 import org.oxyg3nium.protocol.vm.{BlockHash => _, NetworkId => _, _}
 import org.oxyg3nium.serde.serialize
-import org.oxyg3nium.util.{AlephiumSpec, AVector, Bytes, Duration, TimeStamp, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Bytes, Duration, TimeStamp, U256}
 
 // scalastyle:off file.size.limit
-class BlockValidationSpec extends AlephiumSpec {
+class BlockValidationSpec extends Oxyg3niumSpec {
 
   trait Fixture extends BlockValidation with FlowFixture with NoIndexModelGeneratorsLike {
     lazy val chainIndex = chainIndexGenForBroker(brokerConfig).sample.value
@@ -1504,7 +1504,7 @@ class BlockValidationSpec extends AlephiumSpec {
       ("oxyg3nium.network.rhone-hard-fork-timestamp", 0)
     )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Rhone
-    networkConfig.networkId is NetworkId.AlephiumTestNet
+    networkConfig.networkId is NetworkId.Oxyg3niumTestNet
 
     newBlock(whitelistedMiner).pass()
     newBlock(randomMiner).fail(InvalidTestnetMiner)
@@ -1517,7 +1517,7 @@ class BlockValidationSpec extends AlephiumSpec {
         ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
       )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
-    networkConfig.networkId is NetworkId.AlephiumTestNet
+    networkConfig.networkId is NetworkId.Oxyg3niumTestNet
 
     newBlock(whitelistedMiner).pass()
     newBlock(randomMiner).pass()
@@ -1527,7 +1527,7 @@ class BlockValidationSpec extends AlephiumSpec {
     override val configValues: Map[String, Any] =
       Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
-    networkConfig.networkId is NetworkId.AlephiumDevNet
+    networkConfig.networkId is NetworkId.Oxyg3niumDevNet
 
     newBlock(whitelistedMiner).pass()
     newBlock(randomMiner).pass()

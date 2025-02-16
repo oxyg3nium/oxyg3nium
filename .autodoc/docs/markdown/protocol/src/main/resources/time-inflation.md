@@ -1,8 +1,8 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/resources/time-inflation.csv)
 
-This code appears to be a data file containing information about a cryptocurrency called Alephium. Each line represents a different block in the Alephium blockchain and contains three pieces of information: the block number, the block reward (in Alephium coins), and the total supply of Alephium coins at that block. 
+This code appears to be a data file containing information about a cryptocurrency called Oxyg3nium. Each line represents a different block in the Oxyg3nium blockchain and contains three pieces of information: the block number, the block reward (in Oxyg3nium coins), and the total supply of Oxyg3nium coins at that block. 
 
-This data could be used in a variety of ways within the larger Alephium project. For example, it could be used to analyze the distribution of rewards and the growth of the coin supply over time. It could also be used to create visualizations or charts to help users better understand the history and current state of the Alephium blockchain. 
+This data could be used in a variety of ways within the larger Oxyg3nium project. For example, it could be used to analyze the distribution of rewards and the growth of the coin supply over time. It could also be used to create visualizations or charts to help users better understand the history and current state of the Oxyg3nium blockchain. 
 
 Here is an example of how this data could be visualized using Python and the matplotlib library:
 
@@ -25,20 +25,20 @@ for line in data:
 
 # create a line chart showing the block rewards over time
 plt.plot(block_nums, rewards)
-plt.title('Alephium Block Rewards')
+plt.title('Oxyg3nium Block Rewards')
 plt.xlabel('Block Number')
 plt.ylabel('Reward (ALEPH)')
 plt.show()
 
-# create a line chart showing the total supply of Alephium coins over time
+# create a line chart showing the total supply of Oxyg3nium coins over time
 plt.plot(block_nums, supplies)
-plt.title('Alephium Coin Supply')
+plt.title('Oxyg3nium Coin Supply')
 plt.xlabel('Block Number')
 plt.ylabel('Total Supply (ALEPH)')
 plt.show()
 ```
 
-This code would read in the data from the file and then use matplotlib to create two line charts: one showing the block rewards over time and one showing the total supply of Alephium coins over time. These charts could be useful for investors, developers, or other stakeholders who are interested in tracking the growth and development of the Alephium blockchain.
+This code would read in the data from the file and then use matplotlib to create two line charts: one showing the block rewards over time and one showing the total supply of Oxyg3nium coins over time. These charts could be useful for investors, developers, or other stakeholders who are interested in tracking the growth and development of the Oxyg3nium blockchain.
 ## Questions: 
  1. What is the purpose of this code?
    

@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/mempool/TxIndexes.scala)
 
-The `TxIndexes` class is a data structure that indexes transactions in the mempool of the Alephium blockchain. It is used to efficiently query transactions by their inputs, outputs, and addresses. 
+The `TxIndexes` class is a data structure that indexes transactions in the mempool of the Oxyg3nium blockchain. It is used to efficiently query transactions by their inputs, outputs, and addresses. 
 
 The class contains several mutable hash maps that store the following information:
 - `inputIndex`: maps an `AssetOutputRef` (a reference to an output of a previous transaction) to the transaction that spends it (`TransactionTemplate`).
@@ -17,7 +17,7 @@ The `TxIndexes` class provides several methods to add and remove transactions fr
 - `getRelevantUtxos`: returns a list of unspent outputs that are locked by a specific address.
 - `clear`: clears all the indexes.
 
-The `TxIndexes` class is used extensively throughout the Alephium codebase to manage the mempool. For example, it is used in the `Mempool` class to add and remove transactions from the mempool, and in the `TxValidator` class to validate transactions before they are added to the mempool. 
+The `TxIndexes` class is used extensively throughout the Oxyg3nium codebase to manage the mempool. For example, it is used in the `Mempool` class to add and remove transactions from the mempool, and in the `TxValidator` class to validate transactions before they are added to the mempool. 
 
 Example usage:
 ```scala

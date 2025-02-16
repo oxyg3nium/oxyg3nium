@@ -3,9 +3,9 @@
 // format: off
 package org.oxyg3nium.serde
 
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class ProductSerdeSpec extends AlephiumSpec {
+class ProductSerdeSpec extends Oxyg3niumSpec {
 
   behavior of "Serde for case class"
 

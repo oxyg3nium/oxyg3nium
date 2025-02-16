@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.ralphc
 import java.nio.file.Files
 
 import org.oxyg3nium.ralph.CompilerOptions
-import org.oxyg3nium.util.AlephiumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
-class CompilerSpec extends AlephiumSpec {
+class CompilerSpec extends Oxyg3niumSpec {
 
   it should "be able to call compileProject" in {
     val rootPath  = Files.createTempDirectory("project")

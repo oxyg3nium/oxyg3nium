@@ -1,12 +1,12 @@
 [View code on GitHub](https://github.com/alephium/alephium/wallet/src/main/scala/org/alephium/wallet/api/model/Transfer.scala)
 
-This file contains code for the Transfer model and related classes used in the Alephium wallet API. The Transfer model represents a transfer of funds from one or more source addresses to one or more destination addresses. It contains a list of Destination objects, which represent the destination addresses and the amount of funds to be transferred to each address. 
+This file contains code for the Transfer model and related classes used in the Oxyg3nium wallet API. The Transfer model represents a transfer of funds from one or more source addresses to one or more destination addresses. It contains a list of Destination objects, which represent the destination addresses and the amount of funds to be transferred to each address. 
 
-The Transfer model also contains optional fields for specifying gas and gas price, which are used to pay for the computational resources required to execute the transaction on the Alephium network. The utxosLimit field is also optional and can be used to limit the number of unspent transaction outputs (UTXOs) that can be used as inputs to the transaction.
+The Transfer model also contains optional fields for specifying gas and gas price, which are used to pay for the computational resources required to execute the transaction on the Oxyg3nium network. The utxosLimit field is also optional and can be used to limit the number of unspent transaction outputs (UTXOs) that can be used as inputs to the transaction.
 
 The TransferResult class represents the result of a transfer transaction and contains the transaction ID, as well as the source and destination group indices. The TransferResults class is a wrapper around a list of TransferResult objects and provides a convenience method for creating a TransferResults object from a list of tuples containing the transaction ID and group indices.
 
-This code is an important part of the Alephium wallet API, as it provides a way for users to initiate transfers of funds on the Alephium network. The Transfer model can be used to construct transfer requests, which can then be sent to the Alephium network for processing. The TransferResult and TransferResults classes provide a way for users to retrieve information about the status of their transfer requests and to track the progress of their transactions. 
+This code is an important part of the Oxyg3nium wallet API, as it provides a way for users to initiate transfers of funds on the Oxyg3nium network. The Transfer model can be used to construct transfer requests, which can then be sent to the Oxyg3nium network for processing. The TransferResult and TransferResults classes provide a way for users to retrieve information about the status of their transfer requests and to track the progress of their transactions. 
 
 Example usage:
 
@@ -23,7 +23,7 @@ val gasBox = GasBox(1000, 10000)
 val gasPrice = GasPrice(100)
 val transfer = Transfer(destinations, Some(gasBox), Some(gasPrice))
 
-// Send the transfer request to the Alephium network for processing
+// Send the transfer request to the Oxyg3nium network for processing
 val transferResult = alephiumApi.sendTransfer(transfer)
 
 // Retrieve the transaction ID and group indices from the transfer result

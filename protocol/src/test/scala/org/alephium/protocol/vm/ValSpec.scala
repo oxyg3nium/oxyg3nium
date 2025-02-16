@@ -1,4 +1,4 @@
-// Copyright 2018 The Alephium Authors
+// Copyright 2018 The Oxyg3nium Authors
 // This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
@@ -19,9 +19,9 @@ package org.oxyg3nium.protocol.vm
 import akka.util.ByteString
 
 import org.oxyg3nium.protocol.model.Address
-import org.oxyg3nium.util.{AlephiumSpec, I256, U256}
+import org.oxyg3nium.util.{Oxyg3niumSpec, I256, U256}
 
-class ValSpec extends AlephiumSpec {
+class ValSpec extends Oxyg3niumSpec {
   it should "convert to debug messages" in {
     Val.True.toDebugString() is ByteString.fromString("true")
     Val.False.toDebugString() is ByteString.fromString("false")
