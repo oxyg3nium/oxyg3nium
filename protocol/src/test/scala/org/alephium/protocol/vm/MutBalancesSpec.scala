@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,15 +14,15 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.config.{GroupConfig, NetworkConfigFixture}
-import org.alephium.protocol.model.{GroupIndex, TokenId, TxGenerators, TxOutput}
-import org.alephium.util.{AlephiumSpec, AVector, U256}
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfigFixture}
+import org.oxyg3nium.protocol.model.{GroupIndex, TokenId, TxGenerators, TxOutput}
+import org.oxyg3nium.util.{AlephiumSpec, AVector, U256}
 
 class MutBalancesSpec extends AlephiumSpec {
 

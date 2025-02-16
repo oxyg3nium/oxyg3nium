@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
-import org.alephium.crypto.Byte32
-import org.alephium.flow.FlowFixture
-import org.alephium.protocol.model.{BlockHash, ContractId, TransactionId}
-import org.alephium.protocol.vm.{LogState, LogStateRef, LogStates, LogStatesId, Val}
-import org.alephium.protocol.vm.event.CachedLog
-import org.alephium.util.{AlephiumSpec, AVector, I256}
+import org.oxyg3nium.crypto.Byte32
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.protocol.model.{BlockHash, ContractId, TransactionId}
+import org.oxyg3nium.protocol.vm.{LogState, LogStateRef, LogStates, LogStatesId, Val}
+import org.oxyg3nium.protocol.vm.event.CachedLog
+import org.oxyg3nium.util.{AlephiumSpec, AVector, I256}
 
 class LogUtilsSpec extends AlephiumSpec {
   trait Fixture extends FlowFixture {
@@ -66,7 +66,7 @@ class LogUtilsSpec extends AlephiumSpec {
     ) isE ()
 
     blockFlow.getEventsByHash(hash).leftValue.getMessage is
-      s"org.alephium.util.AppException: Key LogStatesId(ContractId(hex\"${refId.toHexString}\"),0) not found in LogUtils.getEventByRef"
+      s"org.oxyg3nium.util.AppException: Key LogStatesId(ContractId(hex\"${refId.toHexString}\"),0) not found in LogUtils.getEventByRef"
   }
 
   it should "fail when log offsets are invalid" in new Fixture {

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.model
+package org.oxyg3nium.protocol.model
 
 import akka.util.ByteString
 
-import org.alephium.protocol.Generators
-import org.alephium.protocol.config.NetworkConfig
-import org.alephium.util.{AlephiumSpec, TimeStamp}
+import org.oxyg3nium.protocol.Generators
+import org.oxyg3nium.protocol.config.NetworkConfig
+import org.oxyg3nium.util.{AlephiumSpec, TimeStamp}
 
 class ReleaseVersionSpec extends AlephiumSpec {
   it should "get version from release string" in {
@@ -65,9 +65,9 @@ class ReleaseVersionSpec extends AlephiumSpec {
       implicit val config = buildNetworkConfig(NetworkId.AlephiumMainNet, now.plusHoursUnsafe(1))
       config.getHardFork(now) is HardFork.Leman
       ReleaseVersion.fromClientId("xxx") is None
-      ReleaseVersion.fromClientId("scala-alephium/v2.8.1/Linux") is Some(ReleaseVersion(2, 8, 1))
-      ReleaseVersion.fromClientId("scala-alephium/v3.0.0/Linux") is Some(ReleaseVersion(3, 0, 0))
-      ReleaseVersion.fromClientId("scala-alephium/v3.1.1/Linux") is Some(ReleaseVersion(3, 1, 1))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v2.8.1/Linux") is Some(ReleaseVersion(2, 8, 1))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v3.0.0/Linux") is Some(ReleaseVersion(3, 0, 0))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v3.1.1/Linux") is Some(ReleaseVersion(3, 1, 1))
     }
 
     {
@@ -75,9 +75,9 @@ class ReleaseVersionSpec extends AlephiumSpec {
       implicit val config = buildNetworkConfig(NetworkId.AlephiumMainNet, now.plusHoursUnsafe(-1))
       config.getHardFork(now) is HardFork.Rhone
       ReleaseVersion.fromClientId("xxx") is None
-      ReleaseVersion.fromClientId("scala-alephium/v2.8.1/Linux") is None
-      ReleaseVersion.fromClientId("scala-alephium/v3.0.0/Linux") is Some(ReleaseVersion(3, 0, 0))
-      ReleaseVersion.fromClientId("scala-alephium/v3.1.1/Linux") is Some(ReleaseVersion(3, 1, 1))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v2.8.1/Linux") is None
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v3.0.0/Linux") is Some(ReleaseVersion(3, 0, 0))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v3.1.1/Linux") is Some(ReleaseVersion(3, 1, 1))
     }
 
     {
@@ -85,9 +85,9 @@ class ReleaseVersionSpec extends AlephiumSpec {
       implicit val config = buildNetworkConfig(NetworkId.AlephiumTestNet, now.plusHoursUnsafe(1))
       config.getHardFork(now) is HardFork.Leman
       ReleaseVersion.fromClientId("xxx") is None
-      ReleaseVersion.fromClientId("scala-alephium/v2.14.5/Linux") is Some(ReleaseVersion(2, 14, 5))
-      ReleaseVersion.fromClientId("scala-alephium/v2.14.6/Linux") is Some(ReleaseVersion(2, 14, 6))
-      ReleaseVersion.fromClientId("scala-alephium/v3.0.0/Linux") is Some(ReleaseVersion(3, 0, 0))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v2.14.5/Linux") is Some(ReleaseVersion(2, 14, 5))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v2.14.6/Linux") is Some(ReleaseVersion(2, 14, 6))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v3.0.0/Linux") is Some(ReleaseVersion(3, 0, 0))
     }
 
     {
@@ -95,9 +95,9 @@ class ReleaseVersionSpec extends AlephiumSpec {
       implicit val config = buildNetworkConfig(NetworkId.AlephiumTestNet, now.plusHoursUnsafe(-1))
       config.getHardFork(now) is HardFork.Rhone
       ReleaseVersion.fromClientId("xxx") is None
-      ReleaseVersion.fromClientId("scala-alephium/v2.14.5/Linux") is None
-      ReleaseVersion.fromClientId("scala-alephium/v2.14.6/Linux") is Some(ReleaseVersion(2, 14, 6))
-      ReleaseVersion.fromClientId("scala-alephium/v3.0.0/Linux") is Some(ReleaseVersion(3, 0, 0))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v2.14.5/Linux") is None
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v2.14.6/Linux") is Some(ReleaseVersion(2, 14, 6))
+      ReleaseVersion.fromClientId("scala-oxyg3nium/v3.0.0/Linux") is Some(ReleaseVersion(3, 0, 0))
     }
   }
 }

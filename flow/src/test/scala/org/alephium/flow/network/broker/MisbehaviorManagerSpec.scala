@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.broker
+package org.oxyg3nium.flow.network.broker
 
 import akka.io.Tcp
 import akka.testkit.TestProbe
 
-import org.alephium.flow.AlephiumFlowActorSpec
-import org.alephium.flow.network.DiscoveryServer
-import org.alephium.flow.network.TcpController
-import org.alephium.flow.network.broker.MisbehaviorManager._
-import org.alephium.protocol.Generators
-import org.alephium.protocol.model.BrokerInfo
-import org.alephium.util.{AVector, Duration, TimeStamp}
+import org.oxyg3nium.flow.AlephiumFlowActorSpec
+import org.oxyg3nium.flow.network.DiscoveryServer
+import org.oxyg3nium.flow.network.TcpController
+import org.oxyg3nium.flow.network.broker.MisbehaviorManager._
+import org.oxyg3nium.protocol.Generators
+import org.oxyg3nium.protocol.model.BrokerInfo
+import org.oxyg3nium.util.{AVector, Duration, TimeStamp}
 
 class MisbehaviorManagerSpec extends AlephiumFlowActorSpec {
   it should "start without peers" in new Fixture {

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network
+package org.oxyg3nium.flow.network
 
 import java.net.InetSocketAddress
 
@@ -26,18 +26,18 @@ import akka.io.Tcp
 import akka.util.ByteString
 import io.prometheus.client.Gauge
 
-import org.alephium.flow.{Utils => FlowUtils}
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.handler.AllHandlers
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.broker._
-import org.alephium.flow.network.interclique.{InboundBrokerHandler, OutboundBrokerHandler}
-import org.alephium.flow.network.sync.BlockFlowSynchronizer
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.protocol.config.BrokerConfig
-import org.alephium.protocol.message.P2PVersion
-import org.alephium.protocol.model._
-import org.alephium.util._
+import org.oxyg3nium.flow.{Utils => FlowUtils}
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.handler.AllHandlers
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.broker._
+import org.oxyg3nium.flow.network.interclique.{InboundBrokerHandler, OutboundBrokerHandler}
+import org.oxyg3nium.flow.network.sync.BlockFlowSynchronizer
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.protocol.config.BrokerConfig
+import org.oxyg3nium.protocol.message.P2PVersion
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util._
 
 object InterCliqueManager {
   // scalastyle:off parameter.number
@@ -125,7 +125,7 @@ object InterCliqueManager {
   final case class PeerDisconnected(peer: InetSocketAddress)
 
   val peersTotal: Gauge = Gauge
-    .build("alephium_peers_total", "Number of connected peers")
+    .build("oxyg3nium_peers_total", "Number of connected peers")
     .register()
 
   trait NodeSyncStatus extends BaseActor {

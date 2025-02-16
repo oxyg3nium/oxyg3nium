@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import org.scalacheck.Gen
 
-import org.alephium.protocol.{Hash, Signature}
-import org.alephium.protocol.config.{GroupConfigFixture, NetworkConfigFixture}
-import org.alephium.protocol.model._
-import org.alephium.util.{AlephiumSpec, AVector, Duration, TimeStamp}
+import org.oxyg3nium.protocol.{Hash, Signature}
+import org.oxyg3nium.protocol.config.{GroupConfigFixture, NetworkConfigFixture}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{AlephiumSpec, AVector, Duration, TimeStamp}
 
 class ConflictedBlocksSpec
     extends AlephiumSpec

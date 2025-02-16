@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.validation
+package org.oxyg3nium.flow.validation
 
 import java.math.BigInteger
 
@@ -24,18 +24,18 @@ import akka.util.ByteString
 import org.scalatest.Assertion
 import org.scalatest.EitherValues._
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.{BlockFlow, FlowUtils}
-import org.alephium.flow.gasestimation.GasEstimation
-import org.alephium.flow.io.StoragesFixture
-import org.alephium.protocol.{ALPH, Hash, PrivateKey, PublicKey, Signature, SignatureSchema}
-import org.alephium.protocol.config._
-import org.alephium.protocol.mining.{Emission, HashRate}
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm
-import org.alephium.protocol.vm.{BlockHash => _, NetworkId => _, _}
-import org.alephium.serde.serialize
-import org.alephium.util.{AlephiumSpec, AVector, Bytes, Duration, TimeStamp, U256}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.{BlockFlow, FlowUtils}
+import org.oxyg3nium.flow.gasestimation.GasEstimation
+import org.oxyg3nium.flow.io.StoragesFixture
+import org.oxyg3nium.protocol.{ALPH, Hash, PrivateKey, PublicKey, Signature, SignatureSchema}
+import org.oxyg3nium.protocol.config._
+import org.oxyg3nium.protocol.mining.{Emission, HashRate}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm
+import org.oxyg3nium.protocol.vm.{BlockHash => _, NetworkId => _, _}
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util.{AlephiumSpec, AVector, Bytes, Duration, TimeStamp, U256}
 
 // scalastyle:off file.size.limit
 class BlockValidationSpec extends AlephiumSpec {
@@ -109,8 +109,8 @@ class BlockValidationSpec extends AlephiumSpec {
 
   trait GenesisForkFixture extends Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.leman-hard-fork-timestamp", TimeStamp.now().plusHoursUnsafe(1).millis),
-      ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
+      ("oxyg3nium.network.leman-hard-fork-timestamp", TimeStamp.now().plusHoursUnsafe(1).millis),
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
     )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Mainnet
   }
@@ -229,7 +229,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   trait PreRhoneForkFixture extends Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
     )
   }
 
@@ -257,7 +257,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "check coinbase data for pre-rhone hardfork" in new CoinbaseDataFixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
 
     implicit val validator: (Block) => BlockValidationResult[Unit] =
@@ -288,7 +288,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "check uncles for pre-rhone hardfork" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
 
     val ghostUncles = AVector.fill(ALPH.MaxGhostUncleSize)(
@@ -306,7 +306,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "check coinbase data for rhone hardfork" in new CoinbaseDataFixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", 0))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", 0))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Rhone
 
     implicit val validator: (Block) => BlockValidationResult[Unit] =
@@ -350,7 +350,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "check coinbase locked amount pre-rhone" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     val block           = emptyBlock(blockFlow, chainIndex)
     val consensusConfig = consensusConfigs.getConsensusConfig(block.timestamp)
     val miningReward    = consensusConfig.emission.reward(block.header).miningReward
@@ -370,7 +370,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "check coinbase reward pre-rhone" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     val block = emptyBlock(blockFlow, chainIndex)
     implicit val validator: (Block) => BlockValidationResult[Unit] = (blk: Block) => {
       val groupView = blockFlow.getMutableGroupView(blk).rightValue
@@ -414,7 +414,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "check gas reward for Leman fork" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()).isLemanEnabled() is true
 
     implicit val validator: (Block) => BlockValidationResult[Unit] = (blk: Block) => {
@@ -621,7 +621,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "invalidate blocks with breaking instrs" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     override lazy val chainIndex: ChainIndex = ChainIndex.unsafe(0, 0)
     val newStorages = StoragesFixture.buildStorages(rootPath.resolve(Hash.generate.toHexString))
     val genesisNetworkConfig = new NetworkConfigFixture.Default {
@@ -890,7 +890,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   trait RhoneFixture extends Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.now().millis)
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.now().millis)
     )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Rhone
     lazy val miner = getGenesisLockupScript(chainIndex.to)
@@ -1079,8 +1079,8 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "invalidate block with invalid uncle intra deps" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.broker.broker-num", 1),
-      ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.now().millis)
+      ("oxyg3nium.broker.broker-num", 1),
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.now().millis)
     )
     override lazy val chainIndex: ChainIndex = ChainIndex.unsafe(1, 2)
     val chain00                              = ChainIndex.unsafe(0, 0)
@@ -1174,7 +1174,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "invalidate blocks with sequential txs for pre-rhone hardfork" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
     override lazy val chainIndex = ChainIndex.unsafe(0, 0)
 
@@ -1464,7 +1464,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "check PoLW coinbase tx pre-rhone" in new PoLWCoinbaseFixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
 
     implicit val validator: (Block) => BlockValidationResult[Unit] = (block: Block) => {
@@ -1500,8 +1500,8 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "check miner for tesnet" in new TestnetFixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.network-id", 1),
-      ("alephium.network.rhone-hard-fork-timestamp", 0)
+      ("oxyg3nium.network.network-id", 1),
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", 0)
     )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Rhone
     networkConfig.networkId is NetworkId.AlephiumTestNet
@@ -1513,8 +1513,8 @@ class BlockValidationSpec extends AlephiumSpec {
   it should "not check miner for testnet pre-Rhone" in new TestnetFixture {
     override val configValues: Map[String, Any] =
       Map(
-        ("alephium.network.network-id", 1),
-        ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
+        ("oxyg3nium.network.network-id", 1),
+        ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
       )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
     networkConfig.networkId is NetworkId.AlephiumTestNet
@@ -1525,7 +1525,7 @@ class BlockValidationSpec extends AlephiumSpec {
 
   it should "not check miner for devnet" in new TestnetFixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
     networkConfig.networkId is NetworkId.AlephiumDevNet
 

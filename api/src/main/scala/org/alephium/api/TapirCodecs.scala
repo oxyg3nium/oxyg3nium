@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,20 +14,20 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api
+package org.oxyg3nium.api
 
 import scala.util.{Failure, Success, Try}
 
 import sttp.tapir.{Codec, DecodeResult, Schema, Validator}
 import sttp.tapir.CodecFormat.TextPlain
 
-import org.alephium.api.model._
-import org.alephium.json.Json._
-import org.alephium.protocol.{Hash, PublicKey}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{Address, BlockHash, GroupIndex, TransactionId}
-import org.alephium.protocol.vm.{GasBox, GasPrice}
-import org.alephium.util.{TimeStamp, U256}
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.{Hash, PublicKey}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{Address, BlockHash, GroupIndex, TransactionId}
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice}
+import org.oxyg3nium.util.{TimeStamp, U256}
 
 trait TapirCodecs extends ApiModelCodec with TapirSchemasLike {
 

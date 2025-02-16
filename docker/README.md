@@ -20,7 +20,7 @@ sudo usermod -aG docker $USER
 The provided [docker-compose.yml](./docker-compose.yml) file will be used to run Alephium:
 
 ```shell
-docker-compose stop && docker-compose rm -f alephium && docker-compose pull && docker-compose up -d
+docker-compose stop && docker-compose rm -f oxyg3nium && docker-compose pull && docker-compose up -d
 ```
 
 The default config connects your container to the mainnet, and makes the API available to [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
@@ -37,7 +37,7 @@ http://127.0.0.1:3000/d/ME6diT3Mk/jvm-overview?orgId=1&refresh=30s
 
 and `Alephium Overview`:
 ```
-http://127.0.0.1:3000/d/S3eJTo3Mk/alephium-overview?orgId=1&refresh=30s
+http://127.0.0.1:3000/d/S3eJTo3Mk/oxyg3nium-overview?orgId=1&refresh=30s
 ```
 
 ## Advanced Configuration
@@ -47,33 +47,33 @@ http://127.0.0.1:3000/d/S3eJTo3Mk/alephium-overview?orgId=1&refresh=30s
 API key is mandatory by default for the sake of security.
 
 You should setup API key as follows:
-1. remove the `# ` before `alephium.api.api-key` in `user.conf`
+1. remove the `# ` before `oxyg3nium.api.api-key` in `user.conf`
 2. replace the default key `0000...000` with your own key. The key must have at least 32 alphanumeric characters.
 
 If you don't want to use an API key, you can setup in your `user.conf`:
-- `alephium.api.api-key-enabled = false`
+- `oxyg3nium.api.api-key-enabled = false`
 
-For more information about using API key, please follow this wiki [API Key](https://wiki.alephium.org/Full-Node-More.html#api-key)
+For more information about using API key, please follow this wiki [API Key](https://wiki.oxyg3nium.org/Full-Node-More.html#api-key)
 
 ### Persistence
 
 In order to persist your data (blocks, wallets, ...), two volumes/mounts can be used.
 
-- `/alephium-home/.alephium` inside the container is where the chain's data and logs are stored
-- `/alephium-home/.alephium-wallets` inside the container is where the wallets are stored.
+- `/oxyg3nium-home/.oxyg3nium` inside the container is where the chain's data and logs are stored
+- `/oxyg3nium-home/.oxyg3nium-wallets` inside the container is where the wallets are stored.
 
 Create these folders on the host:
 
 ```shell
-mkdir ./alephium-data ./alephium-wallets && chown nobody ./alephium-data ./alephium-wallets
+mkdir ./oxyg3nium-data ./oxyg3nium-wallets && chown nobody ./oxyg3nium-data ./oxyg3nium-wallets
 ```
 
 Mount them as volumes inside the container:
 
 ```
     volumes:
-      - ./alephium-data:/alephium-home/.alephium
-      - ./alephium-wallets:/alephium-home/.alephium-wallets
+      - ./oxyg3nium-data:/oxyg3nium-home/.oxyg3nium
+      - ./oxyg3nium-wallets:/oxyg3nium-home/.oxyg3nium-wallets
 ```
 
 All good, your data will survive across restarts!
@@ -88,7 +88,7 @@ which enables the docker runtime to access the Nvidia graphics card on the host 
 
 Restart docker daemon and run
 ```shell
-docker run --rm --gpus all --privileged --entrypoint nvidia-smi alephium/gpu-miner:latest
+docker run --rm --gpus all --privileged --entrypoint nvidia-smi oxyg3nium/gpu-miner:latest
 ```
 to verify the setup is successful. It should have the same output as running `nvidia-smi` on the host machine.
 
@@ -96,14 +96,14 @@ To start the GPU miner docker container, either run the following `docker-compos
 
 ```shell
 docker-compose -f docker-compose.yml -f docker-compose.gpu-miner.yml stop && \
-  docker-compose -f docker-compose.yml -f docker-compose.gpu-miner.yml rm -f alephium && \
+  docker-compose -f docker-compose.yml -f docker-compose.gpu-miner.yml rm -f oxyg3nium && \
   docker-compose -f docker-compose.yml -f docker-compose.gpu-miner.yml pull && \
   docker-compose -f docker-compose.yml -f docker-compose.gpu-miner.yml up -d
 ```
 
 or run the following docker command:
 ```shell
-docker run --network="docker_default" --gpus all --privileged --name gpu-miner -d alephium/gpu-miner:latest alephium
+docker run --network="docker_default" --gpus all --privileged --name gpu-miner -d oxyg3nium/gpu-miner:latest oxyg3nium
 ```
 
 ## Block Explorer (Optional)

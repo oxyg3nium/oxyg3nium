@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,11 +14,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.message
+package org.oxyg3nium.protocol.message
 
-import org.alephium.protocol.WireVersion
-import org.alephium.serde._
-import org.alephium.util.AlephiumSpec
+import org.oxyg3nium.protocol.WireVersion
+import org.oxyg3nium.serde._
+import org.oxyg3nium.util.AlephiumSpec
 
 class HeaderSpec extends AlephiumSpec {
   it should "serialize/deserialize the Header when version compatible" in {

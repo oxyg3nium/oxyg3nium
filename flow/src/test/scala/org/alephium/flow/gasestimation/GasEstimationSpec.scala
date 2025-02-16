@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,19 +14,19 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.gasestimation
+package org.oxyg3nium.flow.gasestimation
 
 import org.scalacheck.Gen
 
-import org.alephium.flow.AlephiumFlowSpec
-import org.alephium.flow.core.ExtraUtxosInfo
-import org.alephium.flow.core.UtxoSelectionAlgo.TxInputWithAsset
-import org.alephium.protocol.{ALPH, PublicKey}
-import org.alephium.protocol.model._
-import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
-import org.alephium.protocol.vm.{GasBox, LockupScript, UnlockScript, Val}
-import org.alephium.ralph.Compiler
-import org.alephium.util._
+import org.oxyg3nium.flow.AlephiumFlowSpec
+import org.oxyg3nium.flow.core.ExtraUtxosInfo
+import org.oxyg3nium.flow.core.UtxoSelectionAlgo.TxInputWithAsset
+import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
+import org.oxyg3nium.protocol.vm.{GasBox, LockupScript, UnlockScript, Val}
+import org.oxyg3nium.ralph.Compiler
+import org.oxyg3nium.util._
 
 class GasEstimationSpec extends AlephiumFlowSpec with TxInputGenerators {
 

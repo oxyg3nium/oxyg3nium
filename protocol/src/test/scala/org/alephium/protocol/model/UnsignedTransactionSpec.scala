@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.model
+package org.oxyg3nium.protocol.model
 
 import akka.util.ByteString
 
-import org.alephium.protocol.{ALPH, PublicKey}
-import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
-import org.alephium.protocol.vm.LockupScript
-import org.alephium.util.{AlephiumSpec, AVector, NumericHelpers, TimeStamp, U256}
+import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
+import org.oxyg3nium.protocol.vm.LockupScript
+import org.oxyg3nium.util.{AlephiumSpec, AVector, NumericHelpers, TimeStamp, U256}
 
 class UnsignedTransactionSpec extends AlephiumSpec with NumericHelpers {
   behavior of "Build outputs"

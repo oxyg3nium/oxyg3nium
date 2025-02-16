@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import java.math.BigInteger
 
@@ -24,13 +24,13 @@ import scala.util.Random
 import org.scalatest.BeforeAndAfter
 import org.scalatest.EitherValues._
 
-import org.alephium.flow.core.BlockChain.{TxIndex, TxIndexes, TxStatus}
-import org.alephium.flow.io.StoragesFixture
-import org.alephium.flow.setting.AlephiumConfigFixture
-import org.alephium.io.IOError
-import org.alephium.protocol.{ALPH, Hash}
-import org.alephium.protocol.model._
-import org.alephium.util.{AlephiumSpec, AVector, Bytes, Duration, TimeStamp}
+import org.oxyg3nium.flow.core.BlockChain.{TxIndex, TxIndexes, TxStatus}
+import org.oxyg3nium.flow.io.StoragesFixture
+import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.io.IOError
+import org.oxyg3nium.protocol.{ALPH, Hash}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{AlephiumSpec, AVector, Bytes, Duration, TimeStamp}
 
 // scalastyle:off file.size.limit
 class BlockChainSpec extends AlephiumSpec with BeforeAndAfter {
@@ -172,7 +172,7 @@ class BlockChainSpec extends AlephiumSpec with BeforeAndAfter {
   }
 
   it should "return correct tx status for forks 0" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val shortChain = chainGenOf(2, genesis).sample.get
     val longChain  = chainGenOf(4, genesis).sample.get
@@ -217,7 +217,7 @@ class BlockChainSpec extends AlephiumSpec with BeforeAndAfter {
   }
 
   it should "return correct tx status for forks 1" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val longChain = chainGenOf(4, genesis).sample.get
     val shortChain = chainGenOf(2, genesis).sample.get.mapWithIndex { case (block, index) =>
@@ -398,7 +398,7 @@ class BlockChainSpec extends AlephiumSpec with BeforeAndAfter {
 
   it should "update mainchain hash based on heights instead of weight" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.consensus.num-zeros-at-least-in-hash", 10)
+      ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 10)
     )
 
     val longChain   = chainGenOf(3, genesis).sample.get
@@ -644,7 +644,7 @@ class BlockChainSpec extends AlephiumSpec with BeforeAndAfter {
   }
 
   it should "fix hash indexing" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val shortChain = chainGenOf(2, genesis).sample.get
     val longChain  = chainGenOf(4, genesis).sample.get

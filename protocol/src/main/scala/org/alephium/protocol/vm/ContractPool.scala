@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,20 +14,20 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
-import org.alephium.io.IOError
-import org.alephium.protocol.model.{
+import org.oxyg3nium.io.IOError
+import org.oxyg3nium.protocol.model.{
   Address,
   ContractId,
   ContractOutput,
   ContractOutputRef,
   HardFork
 }
-import org.alephium.util.{AVector, EitherF}
+import org.oxyg3nium.util.{AVector, EitherF}
 
 trait ContractPool extends CostStrategy {
   import ContractPool._

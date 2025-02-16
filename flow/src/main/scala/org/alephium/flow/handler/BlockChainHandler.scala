@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,26 +14,26 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.handler
+package org.oxyg3nium.flow.handler
 
 import akka.actor.Props
 import akka.util.ByteString
 import io.prometheus.client.{Counter, Gauge, Histogram}
 
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.handler.AllHandlers.BlockNotify
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.{InterCliqueManager, IntraCliqueManager}
-import org.alephium.flow.network.broker.MisbehaviorManager
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.flow.validation._
-import org.alephium.io.IOResult
-import org.alephium.protocol.config.{BrokerConfig, ConsensusConfigs}
-import org.alephium.protocol.message.{Message, NewBlock, NewHeader}
-import org.alephium.protocol.model.{Block, BlockHash, ChainIndex, NetworkId}
-import org.alephium.protocol.vm.{LogConfig, WorldState}
-import org.alephium.serde.{deserialize, serialize}
-import org.alephium.util.{ActorRefT, EventBus, EventStream, Hex}
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.handler.AllHandlers.BlockNotify
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.{InterCliqueManager, IntraCliqueManager}
+import org.oxyg3nium.flow.network.broker.MisbehaviorManager
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.flow.validation._
+import org.oxyg3nium.io.IOResult
+import org.oxyg3nium.protocol.config.{BrokerConfig, ConsensusConfigs}
+import org.oxyg3nium.protocol.message.{Message, NewBlock, NewHeader}
+import org.oxyg3nium.protocol.model.{Block, BlockHash, ChainIndex, NetworkId}
+import org.oxyg3nium.protocol.vm.{LogConfig, WorldState}
+import org.oxyg3nium.serde.{deserialize, serialize}
+import org.oxyg3nium.util.{ActorRefT, EventBus, EventStream, Hex}
 
 object BlockChainHandler {
   // scalastyle:off parameter.number
@@ -70,7 +70,7 @@ object BlockChainHandler {
 
   val blocksTotal: Gauge = Gauge
     .build(
-      "alephium_blocks_total",
+      "oxyg3nium_blocks_total",
       "Total number of blocks"
     )
     .labelNames("chain_from", "chain_to")
@@ -78,7 +78,7 @@ object BlockChainHandler {
 
   val blocksReceivedTotal: Counter = Counter
     .build(
-      "alephium_blocks_received_total",
+      "oxyg3nium_blocks_received_total",
       "Total number of blocks received"
     )
     .labelNames("chain_from", "chain_to")
@@ -86,7 +86,7 @@ object BlockChainHandler {
 
   val transactionsReceivedTotal: Counter = Counter
     .build(
-      "alephium_transactions_received_total",
+      "oxyg3nium_transactions_received_total",
       "Total number of transactions received"
     )
     .labelNames("chain_from", "chain_to")

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.interclique
+package org.oxyg3nium.flow.network.interclique
 
 import java.net.InetSocketAddress
 
@@ -27,22 +27,22 @@ import akka.io.Tcp
 import akka.testkit.{EventFilter, TestActorRef, TestProbe}
 import org.scalacheck.Gen
 
-import org.alephium.flow.{AlephiumFlowActorSpec, FlowFixture}
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.handler.{AllHandlers, FlowHandler, TestUtils, TxHandler}
-import org.alephium.flow.network.CliqueManager
-import org.alephium.flow.network.broker.{BrokerHandler => BaseBrokerHandler}
-import org.alephium.flow.network.broker.{InboundBrokerHandler => BaseInboundBrokerHandler}
-import org.alephium.flow.network.broker.{ChainTipInfo, ConnectionHandler, MisbehaviorManager}
-import org.alephium.flow.network.sync.BlockFlowSynchronizer
-import org.alephium.flow.network.sync.SyncState.BlockDownloadTask
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.protocol.{ALPH, Generators}
-import org.alephium.protocol.config.BrokerConfig
-import org.alephium.protocol.message._
-import org.alephium.protocol.model._
-import org.alephium.serde.serialize
-import org.alephium.util.{ActorRefT, AVector, Duration, TimeStamp, UnsecureRandom}
+import org.oxyg3nium.flow.{AlephiumFlowActorSpec, FlowFixture}
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.handler.{AllHandlers, FlowHandler, TestUtils, TxHandler}
+import org.oxyg3nium.flow.network.CliqueManager
+import org.oxyg3nium.flow.network.broker.{BrokerHandler => BaseBrokerHandler}
+import org.oxyg3nium.flow.network.broker.{InboundBrokerHandler => BaseInboundBrokerHandler}
+import org.oxyg3nium.flow.network.broker.{ChainTipInfo, ConnectionHandler, MisbehaviorManager}
+import org.oxyg3nium.flow.network.sync.BlockFlowSynchronizer
+import org.oxyg3nium.flow.network.sync.SyncState.BlockDownloadTask
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.protocol.{ALPH, Generators}
+import org.oxyg3nium.protocol.config.BrokerConfig
+import org.oxyg3nium.protocol.message._
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util.{ActorRefT, AVector, Duration, TimeStamp, UnsecureRandom}
 
 // scalastyle:off file.size.limit
 class BrokerHandlerSpec extends AlephiumFlowActorSpec {
@@ -162,7 +162,7 @@ class BrokerHandlerSpec extends AlephiumFlowActorSpec {
 
   it should "publish misbehavior when receive invalid pow block hash" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.consensus.num-zeros-at-least-in-hash", 1)
+      ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 1)
     )
 
     val invalidPoWBlock = invalidNonceBlock(blockFlow, chainIndex)
@@ -415,7 +415,7 @@ class BrokerHandlerSpec extends AlephiumFlowActorSpec {
 
   it should "stop handler and publish misbehavior if the tip hash is invalid" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.consensus.num-zeros-at-least-in-hash", 1))
+      Map(("oxyg3nium.consensus.num-zeros-at-least-in-hash", 1))
 
     val invalidBlock = invalidNonceBlock(blockFlow, chainIndex)
     val invalidTip   = ChainTip(invalidBlock.hash, 1, invalidBlock.weight)
@@ -628,7 +628,7 @@ class BrokerHandlerSpec extends AlephiumFlowActorSpec {
     info("invalid header hash")
     new GetAncestorsFixture {
       override val configValues: Map[String, Any] =
-        Map(("alephium.consensus.num-zeros-at-least-in-hash", 1))
+        Map(("oxyg3nium.consensus.num-zeros-at-least-in-hash", 1))
 
       val invalidBlock = invalidNonceBlock(blockFlow, chainIndex)
       checkInvalidHeaders(AVector(AVector(invalidBlock.header)))
@@ -636,7 +636,7 @@ class BrokerHandlerSpec extends AlephiumFlowActorSpec {
 
     info("invalid chain index")
     new GetAncestorsFixture {
-      override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+      override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
       val block0 = emptyBlock(blockFlow, chainIndex)
       val block1 = emptyBlock(
@@ -942,7 +942,7 @@ class BrokerHandlerSpec extends AlephiumFlowActorSpec {
     info("invalid block hash")
     new DownloadBlocksFixture {
       override val configValues: Map[String, Any] =
-        Map(("alephium.consensus.num-zeros-at-least-in-hash", 1))
+        Map(("oxyg3nium.consensus.num-zeros-at-least-in-hash", 1))
 
       val blockss        = genBlocksResponse(4)
       val invalidBlock   = invalidNonceBlock(blockFlow, chainIndex)
@@ -1132,7 +1132,7 @@ class BrokerHandlerSpec extends AlephiumFlowActorSpec {
   }
 
   it should "update the sync state when receiving the locators from v1 peer" in new SyncV2Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     setRemoteBrokerInfo()
     brokerHandlerActor.remoteP2PVersion = P2PV1

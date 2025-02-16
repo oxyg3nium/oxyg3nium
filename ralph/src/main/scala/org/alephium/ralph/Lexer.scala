@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.ralph
+package org.oxyg3nium.ralph
 
 import java.math.{BigDecimal, BigInteger}
 
@@ -23,15 +23,15 @@ import scala.util.control.NonFatal
 import fastparse._
 import fastparse.NoWhitespace._
 
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.model.Address
-import org.alephium.protocol.vm.{LockupScript, StatelessContext, Val}
-import org.alephium.protocol.vm.Val.ByteVec
-import org.alephium.ralph.ArithOperator._
-import org.alephium.ralph.LogicalOperator._
-import org.alephium.ralph.TestOperator._
-import org.alephium.ralph.error.CompilerError
-import org.alephium.util._
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.model.Address
+import org.oxyg3nium.protocol.vm.{LockupScript, StatelessContext, Val}
+import org.oxyg3nium.protocol.vm.Val.ByteVec
+import org.oxyg3nium.ralph.ArithOperator._
+import org.oxyg3nium.ralph.LogicalOperator._
+import org.oxyg3nium.ralph.TestOperator._
+import org.oxyg3nium.ralph.error.CompilerError
+import org.oxyg3nium.util._
 
 // scalastyle:off number.of.methods
 class Lexer(fileURI: Option[java.net.URI]) {

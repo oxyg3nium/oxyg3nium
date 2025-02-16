@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,25 +14,25 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.handler
+package org.oxyg3nium.flow.handler
 
 import java.net.InetSocketAddress
 
 import akka.testkit.{TestActorRef, TestProbe}
 import akka.util.ByteString
 
-import org.alephium.flow.{AlephiumFlowActorSpec, FlowFixture}
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.{InterCliqueManager, IntraCliqueManager}
-import org.alephium.flow.network.broker.MisbehaviorManager
-import org.alephium.flow.setting.AlephiumConfigFixture
-import org.alephium.flow.validation._
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.message.{Message, NewBlock, NewHeader}
-import org.alephium.protocol.model.{Block, BlockHeader, BrokerInfo, ChainIndex, CliqueId, NetworkId}
-import org.alephium.serde.serialize
-import org.alephium.util.ActorRefT
+import org.oxyg3nium.flow.{AlephiumFlowActorSpec, FlowFixture}
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.{InterCliqueManager, IntraCliqueManager}
+import org.oxyg3nium.flow.network.broker.MisbehaviorManager
+import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.validation._
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.message.{Message, NewBlock, NewHeader}
+import org.oxyg3nium.protocol.model.{Block, BlockHeader, BrokerInfo, ChainIndex, CliqueId, NetworkId}
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util.ActorRefT
 
 class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
   trait Fixture extends FlowFixture {
@@ -71,7 +71,7 @@ class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
   it should "not broadcast block if the block comes from other broker groups" in new Fixture { F =>
     val fixture = new AlephiumConfigFixture {
       override val configValues: Map[String, Any] = Map(
-        ("alephium.broker.broker-id", 1)
+        ("oxyg3nium.broker.broker-id", 1)
       )
       override lazy val genesisKeys = F.genesisKeys
     }
@@ -120,7 +120,7 @@ class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
   }
 
   it should "not broadcast block only if there is only one broker in clique" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val block = emptyBlock(blockFlow, chainIndex)
     blockChainHandler ! InterCliqueManager.SyncedResult(true)
@@ -176,7 +176,7 @@ class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
   }
 
   trait InvalidBlockFixture extends Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val block         = emptyBlock(blockFlow, chainIndex)
     val invalidHeader = block.header.copy(version = 4.toByte)
@@ -217,7 +217,7 @@ class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
   }
 
   it should "publish misbehavior when receiving deep forked blocks from remote" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val invalidForkedBlock = emptyBlock(blockFlow, chainIndex)
     val listener           = TestProbe()
@@ -258,8 +258,8 @@ class BlockChainHandlerSpec extends AlephiumFlowActorSpec {
 
   it should "not broadcast block if the testnet miner is invalid" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.network-id", 1),
-      ("alephium.consensus.num-zeros-at-least-in-hash", 0)
+      ("oxyg3nium.network.network-id", 1),
+      ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 0)
     )
     networkConfig.networkId is NetworkId.AlephiumTestNet
     blockChainHandler ! InterCliqueManager.SyncedResult(true)

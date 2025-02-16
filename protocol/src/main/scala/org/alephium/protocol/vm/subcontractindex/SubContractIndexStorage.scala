@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm.subcontractindex
+package org.oxyg3nium.protocol.vm.subcontractindex
 
-import org.alephium.io.KeyValueStorage
-import org.alephium.protocol.model.ContractId
+import org.oxyg3nium.io.KeyValueStorage
+import org.oxyg3nium.protocol.model.ContractId
 
 final case class SubContractIndexStorage(
     parentContractIndexState: KeyValueStorage[ContractId, ContractId],

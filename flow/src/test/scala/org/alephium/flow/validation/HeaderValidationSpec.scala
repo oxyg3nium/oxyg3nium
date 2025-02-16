@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.validation
+package org.oxyg3nium.flow.validation
 
 import java.math.BigInteger
 
@@ -22,13 +22,13 @@ import org.scalacheck.Gen
 import org.scalatest.Assertion
 import org.scalatest.EitherValues._
 
-import org.alephium.crypto.Blake3
-import org.alephium.flow.{AlephiumFlowSpec, FlowFixture}
-import org.alephium.flow.setting.ConsensusSetting
-import org.alephium.protocol.{ALPH, Hash}
-import org.alephium.protocol.model._
-import org.alephium.serde.intSerde
-import org.alephium.util.{AVector, Duration, TimeStamp}
+import org.oxyg3nium.crypto.Blake3
+import org.oxyg3nium.flow.{AlephiumFlowSpec, FlowFixture}
+import org.oxyg3nium.flow.setting.ConsensusSetting
+import org.oxyg3nium.protocol.{ALPH, Hash}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.serde.intSerde
+import org.oxyg3nium.util.{AVector, Duration, TimeStamp}
 
 class HeaderValidationSpec extends AlephiumFlowSpec with NoIndexModelGeneratorsLike {
   trait Fixture {
@@ -141,9 +141,9 @@ class HeaderValidationSpec extends AlephiumFlowSpec with NoIndexModelGeneratorsL
     def rhoneHardForkTimestamp: TimeStamp = TimeStamp.now()
 
     override val configValues: Map[String, Any] = Map(
-      ("alephium.broker.broker-num", 1),
-      ("alephium.consensus.num-zeros-at-least-in-hash", 1),
-      ("alephium.network.rhone-hard-fork-timestamp", rhoneHardForkTimestamp.millis)
+      ("oxyg3nium.broker.broker-num", 1),
+      ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 1),
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", rhoneHardForkTimestamp.millis)
     )
 
     val chainIndex = ChainIndex.unsafe(1, 2)

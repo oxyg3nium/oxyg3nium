@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.mining
+package org.oxyg3nium.flow.mining
 
 import scala.annotation.tailrec
 
@@ -22,13 +22,13 @@ import akka.testkit.TestActorRef
 import akka.util.Timeout
 import org.scalatest.concurrent.ScalaFutures
 
-import org.alephium.flow.{AlephiumFlowActorSpec, FlowFixture}
-import org.alephium.flow.handler.{BlockChainHandler, TestUtils, ViewHandler}
-import org.alephium.flow.model.BlockFlowTemplate
-import org.alephium.flow.validation.InvalidBlockVersion
-import org.alephium.protocol.model._
-import org.alephium.serde._
-import org.alephium.util.{AVector, Duration}
+import org.oxyg3nium.flow.{AlephiumFlowActorSpec, FlowFixture}
+import org.oxyg3nium.flow.handler.{BlockChainHandler, TestUtils, ViewHandler}
+import org.oxyg3nium.flow.model.BlockFlowTemplate
+import org.oxyg3nium.flow.validation.InvalidBlockVersion
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.serde._
+import org.oxyg3nium.util.{AVector, Duration}
 
 class MinerSpec extends AlephiumFlowActorSpec with ScalaFutures {
 
@@ -36,7 +36,7 @@ class MinerSpec extends AlephiumFlowActorSpec with ScalaFutures {
 
   trait WorkflowFixture extends FlowFixture with NoIndexModelGeneratorsLike {
     override val configValues: Map[String, Any] =
-      Map(("alephium.broker.groups", 1), ("alephium.broker.broker-num", 1))
+      Map(("oxyg3nium.broker.groups", 1), ("oxyg3nium.broker.broker-num", 1))
 
     val minerAddresses =
       AVector.tabulate(groups0)(g => getGenesisLockupScript(ChainIndex.unsafe(g, 0)))

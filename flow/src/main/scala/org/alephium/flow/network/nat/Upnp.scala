@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.nat
+package org.oxyg3nium.flow.network.nat
 
 import java.net.InetAddress
 
@@ -24,7 +24,7 @@ import scala.jdk.CollectionConverters.MapHasAsScala
 import com.typesafe.scalalogging.StrictLogging
 import org.bitlet.weupnp.{GatewayDevice, GatewayDiscover}
 
-import org.alephium.flow.setting.UpnpSettings
+import org.oxyg3nium.flow.setting.UpnpSettings
 
 object Upnp extends StrictLogging {
   val tcp                         = "TCP"

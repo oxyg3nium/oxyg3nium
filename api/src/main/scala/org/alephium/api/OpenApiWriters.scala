@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api
+package org.oxyg3nium.api
 
 import scala.collection.immutable.ListMap
 import scala.collection.mutable.ArrayBuffer
@@ -24,7 +24,7 @@ import sttp.apispec._
 import sttp.apispec.openapi._
 import upickle.core.LinkedHashMap
 
-import org.alephium.json.Json._
+import org.oxyg3nium.json.Json._
 
 object OpenAPIWriters extends EndpointsExamples {
 

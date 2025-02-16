@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,16 +14,16 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
-import org.alephium.flow.Utils
-import org.alephium.flow.io._
-import org.alephium.flow.setting.ConsensusSettings
-import org.alephium.io.IOResult
-import org.alephium.protocol.Hash
-import org.alephium.protocol.config.{BrokerConfig, NetworkConfig}
-import org.alephium.protocol.model.{Block, BlockHash, Weight}
-import org.alephium.protocol.vm.WorldState
+import org.oxyg3nium.flow.Utils
+import org.oxyg3nium.flow.io._
+import org.oxyg3nium.flow.setting.ConsensusSettings
+import org.oxyg3nium.io.IOResult
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.config.{BrokerConfig, NetworkConfig}
+import org.oxyg3nium.protocol.model.{Block, BlockHash, Weight}
+import org.oxyg3nium.protocol.vm.WorldState
 
 trait BlockChainWithState extends BlockChain {
   def worldStateStorage: WorldStateStorage

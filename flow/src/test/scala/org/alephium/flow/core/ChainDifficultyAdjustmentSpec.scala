@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import java.math.BigInteger
 
@@ -23,13 +23,13 @@ import scala.util.Random
 
 import akka.util.ByteString
 
-import org.alephium.flow.AlephiumFlowSpec
-import org.alephium.flow.setting.{ConsensusSetting, ConsensusSettings}
-import org.alephium.io.IOResult
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.config._
-import org.alephium.protocol.model.{BlockHash, HardFork, NetworkId, Target}
-import org.alephium.util.{AVector, Duration, NumericHelpers, TimeStamp}
+import org.oxyg3nium.flow.AlephiumFlowSpec
+import org.oxyg3nium.flow.setting.{ConsensusSetting, ConsensusSettings}
+import org.oxyg3nium.io.IOResult
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.config._
+import org.oxyg3nium.protocol.model.{BlockHash, HardFork, NetworkId, Target}
+import org.oxyg3nium.util.{AVector, Duration, NumericHelpers, TimeStamp}
 
 class ChainDifficultyAdjustmentSpec extends AlephiumFlowSpec { Test =>
   import ChainDifficultyAdjustment._

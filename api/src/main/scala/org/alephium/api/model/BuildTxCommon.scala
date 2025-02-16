@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,16 +14,16 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api.model
+package org.oxyg3nium.api.model
 
 import akka.util.ByteString
 
-import org.alephium.api.{badRequest, Try}
-import org.alephium.crypto.BIP340SchnorrPublicKey
-import org.alephium.protocol.PublicKey
-import org.alephium.protocol.model.{Address, BlockHash, SchnorrAddress, TokenId, TransactionId}
-import org.alephium.protocol.vm.{GasBox, GasPrice, LockupScript, UnlockScript}
-import org.alephium.util.{AVector, Hex, U256}
+import org.oxyg3nium.api.{badRequest, Try}
+import org.oxyg3nium.crypto.BIP340SchnorrPublicKey
+import org.oxyg3nium.protocol.PublicKey
+import org.oxyg3nium.protocol.model.{Address, BlockHash, SchnorrAddress, TokenId, TransactionId}
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice, LockupScript, UnlockScript}
+import org.oxyg3nium.util.{AVector, Hex, U256}
 
 trait BuildTxCommon {
   def gasAmount: Option[GasBox]

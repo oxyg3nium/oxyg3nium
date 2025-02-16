@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,25 +14,25 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.broker
+package org.oxyg3nium.flow.network.broker
 
 import java.net.InetSocketAddress
 
 import akka.actor.Props
 import akka.testkit.{TestActorRef, TestProbe}
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.handler._
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.sync.BlockFlowSynchronizer
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.flow.validation.{InvalidHeaderFlow, InvalidTestnetMiner}
-import org.alephium.protocol.{Generators, Signature, SignatureSchema}
-import org.alephium.protocol.config.BrokerConfig
-import org.alephium.protocol.message._
-import org.alephium.protocol.model.{BlockHash, BrokerInfo, ChainIndex, CliqueId}
-import org.alephium.util.{ActorRefT, AlephiumActorSpec, AVector, Duration, TimeStamp}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.handler._
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.sync.BlockFlowSynchronizer
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.flow.validation.{InvalidHeaderFlow, InvalidTestnetMiner}
+import org.oxyg3nium.protocol.{Generators, Signature, SignatureSchema}
+import org.oxyg3nium.protocol.config.BrokerConfig
+import org.oxyg3nium.protocol.message._
+import org.oxyg3nium.protocol.model.{BlockHash, BrokerInfo, ChainIndex, CliqueId}
+import org.oxyg3nium.util.{ActorRefT, AlephiumActorSpec, AVector, Duration, TimeStamp}
 
 class BrokerHandlerSpec extends AlephiumActorSpec {
   it should "handshake with new connection" in new Fixture {
@@ -53,7 +53,7 @@ class BrokerHandlerSpec extends AlephiumActorSpec {
   }
 
   it should "stop when handshake message contains invalid client id" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.network.network-id", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.network.network-id", 1))
 
     networkConfig.networkId.id is 1.toByte
     networkConfig.getHardFork(TimeStamp.now()).isRhoneEnabled() is true
@@ -61,7 +61,7 @@ class BrokerHandlerSpec extends AlephiumActorSpec {
     watch(brokerHandler)
     brokerHandler ! BrokerHandler.Received(
       Hello.unsafe(
-        "scala-alephium/v2.13.1/Linux",
+        "scala-oxyg3nium/v2.13.1/Linux",
         TimeStamp.now(),
         brokerInfo.interBrokerInfo,
         Signature.zero
@@ -149,7 +149,7 @@ class BrokerHandlerSpec extends AlephiumActorSpec {
 
   it should "publish misbehavior when received invalid block" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.consensus.num-zeros-at-least-in-hash", 1)
+      ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 1)
     )
 
     receivedHandshakeMessage()
@@ -197,14 +197,14 @@ class BrokerHandlerSpec extends AlephiumActorSpec {
 
   it should "use sync protocol v1" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.enable-p2p-v2", false))
+      Map(("oxyg3nium.network.enable-p2p-v2", false))
     brokerHandlerActor.selfP2PVersion is P2PV1
     brokerHandlerActor.handShakeMessage.asInstanceOf[Hello].clientId.endsWith("p2p-v1")
   }
 
   it should "use sync protocol v2" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.enable-p2p-v2", true))
+      Map(("oxyg3nium.network.enable-p2p-v2", true))
     brokerHandlerActor.selfP2PVersion is P2PV2
     brokerHandlerActor.handShakeMessage.asInstanceOf[Hello].clientId.endsWith("p2p-v2")
   }

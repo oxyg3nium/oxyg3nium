@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,24 +14,24 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network
+package org.oxyg3nium.flow.network
 
 import akka.io.Tcp
 import akka.testkit.TestProbe
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.handler.TestUtils
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.bootstrap.InfoFixture
-import org.alephium.flow.network.broker.{BrokerHandler, InboundConnection, OutboundConnection}
-import org.alephium.protocol.message.{Message, NewBlock, NewHeader, RequestId, TxsResponse}
-import org.alephium.protocol.model.{BrokerInfo, ChainIndex}
-import org.alephium.util.{ActorRefT, AlephiumActorSpec, AVector}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.handler.TestUtils
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.bootstrap.InfoFixture
+import org.oxyg3nium.flow.network.broker.{BrokerHandler, InboundConnection, OutboundConnection}
+import org.oxyg3nium.protocol.message.{Message, NewBlock, NewHeader, RequestId, TxsResponse}
+import org.oxyg3nium.protocol.model.{BrokerInfo, ChainIndex}
+import org.oxyg3nium.util.{ActorRefT, AlephiumActorSpec, AVector}
 
 class IntraCliqueManagerSpec extends AlephiumActorSpec {
   it should "sync with other brokers" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      "alephium.broker.broker-id" -> 1
+      "oxyg3nium.broker.broker-id" -> 1
     )
 
     brokerConfig.brokerNum is 3
@@ -107,7 +107,7 @@ class IntraCliqueManagerSpec extends AlephiumActorSpec {
 
   it should "become ready immediately in single broker clique" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      "alephium.broker.broker-num" -> 1
+      "oxyg3nium.broker.broker-num" -> 1
     )
 
     // create the lazy value

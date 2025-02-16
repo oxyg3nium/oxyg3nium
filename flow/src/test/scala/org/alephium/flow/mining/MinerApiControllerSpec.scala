@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.mining
+package org.oxyg3nium.flow.mining
 
 import scala.util.Random
 
@@ -23,13 +23,13 @@ import akka.io.{IO, Tcp}
 import akka.testkit.{TestActor, TestProbe}
 import akka.util.ByteString
 
-import org.alephium.flow.AlephiumFlowActorSpec
-import org.alephium.flow.handler.{BlockChainHandler, TestUtils, ViewHandler}
-import org.alephium.flow.model.BlockFlowTemplate
-import org.alephium.flow.validation.InvalidBlockVersion
-import org.alephium.protocol.model.{Block, ChainIndex, Target}
-import org.alephium.serde.{avectorSerde, deserialize, serialize}
-import org.alephium.util.{AVector, SocketUtil}
+import org.oxyg3nium.flow.AlephiumFlowActorSpec
+import org.oxyg3nium.flow.handler.{BlockChainHandler, TestUtils, ViewHandler}
+import org.oxyg3nium.flow.model.BlockFlowTemplate
+import org.oxyg3nium.flow.validation.InvalidBlockVersion
+import org.oxyg3nium.protocol.model.{Block, ChainIndex, Target}
+import org.oxyg3nium.serde.{avectorSerde, deserialize, serialize}
+import org.oxyg3nium.util.{AVector, SocketUtil}
 
 class MinerApiControllerSpec extends AlephiumFlowActorSpec with SocketUtil {
   trait Fixture {
@@ -204,7 +204,7 @@ class MinerApiControllerSpec extends AlephiumFlowActorSpec with SocketUtil {
   }
 
   it should "get cache key from header blob" in new SubmissionFixture {
-    import org.alephium.serde.byteSerde
+    import org.oxyg3nium.serde.byteSerde
     val cacheKey = MinerApiController.getCacheKey(headerBlob)
     cacheKey isnot headerBlob
 

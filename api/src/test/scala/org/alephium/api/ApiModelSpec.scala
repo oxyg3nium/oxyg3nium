@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api
+package org.oxyg3nium.api
 
 import java.math.BigInteger
 import java.net.{InetAddress, InetSocketAddress}
@@ -23,17 +23,17 @@ import akka.util.ByteString
 import org.scalacheck.Gen
 import org.scalatest.EitherValues
 
-import org.alephium.api.{model => api}
-import org.alephium.api.UtilJson._
-import org.alephium.api.model._
-import org.alephium.json.Json._
-import org.alephium.protocol._
-import org.alephium.protocol.model.{AssetOutput => _, ContractOutput => _, _}
-import org.alephium.protocol.vm.{GasBox, GasPrice, LockupScript, StatefulContract}
-import org.alephium.ralph.TypeSignatureFixture
-import org.alephium.serde.serialize
-import org.alephium.util._
-import org.alephium.util.Hex.HexStringSyntax
+import org.oxyg3nium.api.{model => api}
+import org.oxyg3nium.api.UtilJson._
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol._
+import org.oxyg3nium.protocol.model.{AssetOutput => _, ContractOutput => _, _}
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice, LockupScript, StatefulContract}
+import org.oxyg3nium.ralph.TypeSignatureFixture
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util._
+import org.oxyg3nium.util.Hex.HexStringSyntax
 
 //scalastyle:off file.size.limit
 class ApiModelSpec extends JsonFixture with ApiModelFixture with EitherValues with NumericHelpers {

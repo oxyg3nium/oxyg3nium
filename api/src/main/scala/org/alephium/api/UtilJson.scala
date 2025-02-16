@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api
+package org.oxyg3nium.api
 
 import java.math.BigInteger
 import java.net.{InetAddress, InetSocketAddress}
@@ -24,8 +24,8 @@ import scala.reflect.ClassTag
 import akka.util.ByteString
 import upickle.core.ParseUtils
 
-import org.alephium.json.Json._
-import org.alephium.util.{AVector, Hex, TimeStamp}
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.util.{AVector, Hex, TimeStamp}
 
 object UtilJson {
 

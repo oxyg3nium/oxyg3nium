@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.io
+package org.oxyg3nium.io
 
 import scala.annotation.tailrec
 
@@ -22,9 +22,9 @@ import akka.util.ByteString
 import org.scalacheck.{Arbitrary, Gen}
 import org.scalatest.Assertion
 
-import org.alephium.crypto.{Blake2b => Hash}
-import org.alephium.serde._
-import org.alephium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.crypto.{Blake2b => Hash}
+import org.oxyg3nium.serde._
+import org.oxyg3nium.util.{AlephiumSpec, AVector}
 
 class SparseMerkleTrieSpec extends AlephiumSpec {
   import SparseMerkleTrie._
@@ -384,7 +384,7 @@ object SparseMerkleTrieSpec {
 
   @tailrec
   def show[K: Serde, V: Serde](trie: SparseMerkleTrie[K, V], hashes: Seq[Hash]): Unit = {
-    import org.alephium.util.Hex
+    import org.oxyg3nium.util.Hex
     val newHashes = hashes.flatMap { hash =>
       val shortHash = Hex.toHexString(hash.bytes.take(4))
       trie.getNode(hash).toOption.get match {

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
-import org.alephium.crypto.Byte32
-import org.alephium.io.{RocksDBSource, SparseMerkleTrie, StorageFixture}
-import org.alephium.protocol.Hash
-import org.alephium.protocol.model.{ContractId, TxOutputRef}
-import org.alephium.protocol.vm.event.LogStorage
-import org.alephium.protocol.vm.nodeindexes.NodeIndexesStorage
-import org.alephium.protocol.vm.nodeindexes.TxIdTxOutputLocators
-import org.alephium.protocol.vm.subcontractindex._
-import org.alephium.serde.{avectorSerde, eitherSerde, intSerde}
-import org.alephium.util.AVector
+import org.oxyg3nium.crypto.Byte32
+import org.oxyg3nium.io.{RocksDBSource, SparseMerkleTrie, StorageFixture}
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.model.{ContractId, TxOutputRef}
+import org.oxyg3nium.protocol.vm.event.LogStorage
+import org.oxyg3nium.protocol.vm.nodeindexes.NodeIndexesStorage
+import org.oxyg3nium.protocol.vm.nodeindexes.TxIdTxOutputLocators
+import org.oxyg3nium.protocol.vm.subcontractindex._
+import org.oxyg3nium.serde.{avectorSerde, eitherSerde, intSerde}
+import org.oxyg3nium.util.AVector
 
 trait VMFactory extends StorageFixture {
   lazy val cachedWorldState: WorldState.Cached = {

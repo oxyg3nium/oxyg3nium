@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.crypto
+package org.oxyg3nium.crypto
 
 import java.nio.charset.Charset
 
 import akka.util.ByteString
 import org.bouncycastle.crypto.Digest
 
-import org.alephium.serde._
+import org.oxyg3nium.serde._
 
 object HashSchema {
   def unsafeBlake2b(bs: ByteString): Blake2b = {

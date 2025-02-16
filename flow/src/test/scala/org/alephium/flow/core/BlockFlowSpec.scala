@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import scala.util.Random
 
@@ -22,16 +22,16 @@ import org.scalacheck.Gen
 import org.scalatest.Assertion
 import org.scalatest.concurrent.{Eventually, IntegrationPatience}
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.BlockChain.TxIndex
-import org.alephium.flow.core.BlockFlowState.{BlockCache, Confirmed}
-import org.alephium.flow.io.StoragesFixture
-import org.alephium.flow.setting.AlephiumConfigFixture
-import org.alephium.protocol.{ALPH, Generators}
-import org.alephium.protocol.config.GroupConfigFixture
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.{LockupScript, TokenIssuance}
-import org.alephium.util.{AlephiumSpec, AVector, TimeStamp, U256, UnsecureRandom}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.BlockChain.TxIndex
+import org.oxyg3nium.flow.core.BlockFlowState.{BlockCache, Confirmed}
+import org.oxyg3nium.flow.io.StoragesFixture
+import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.protocol.{ALPH, Generators}
+import org.oxyg3nium.protocol.config.GroupConfigFixture
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.{LockupScript, TokenIssuance}
+import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp, U256, UnsecureRandom}
 
 // scalastyle:off file.size.limit
 class BlockFlowSpec extends AlephiumSpec {
@@ -44,7 +44,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "work for at least 2 user group when adding blocks sequentially" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     if (brokerConfig.groups >= 2) {
       val chainIndex1 = ChainIndex.unsafe(0, 0)
@@ -88,7 +88,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "compute cached blocks" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val newBlocks = for {
       i <- 0 to 1
@@ -115,7 +115,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "work for at least 2 user group when adding blocks in parallel" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     if (brokerConfig.groups >= 2) {
       val blockFlow = genesisBlockFlow()
@@ -154,7 +154,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "work for 2 user group when there is a fork" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     if (brokerConfig.groups >= 2) {
       val chainIndex1 = ChainIndex.unsafe(0, 0)
@@ -199,7 +199,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "compute block weight" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val blocks0 = for {
       from <- 0 until groups0
@@ -257,7 +257,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "reload blockflow properly from storage" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
     val blockFlow0                              = genesisBlockFlow()
 
     val newBlocks1 = for {
@@ -365,7 +365,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "compute sync locators and inventories for intra cliques" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-id", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-id", 1))
     val blocks = AVector.tabulate(groups0) { toGroup =>
       val chainIndex = ChainIndex.unsafe(1, toGroup)
       val block      = emptyBlock(blockFlow, chainIndex)
@@ -376,7 +376,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "get chain state" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-id", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-id", 1))
 
     val tips0 = blockFlow.getChainTipsUnsafe()
     tips0 is brokerConfig.chainIndexes.map { chainIndex =>
@@ -410,7 +410,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "reduce target gradually and reach a stable target eventually" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     def step() = {
       val blocks = brokerConfig.chainIndexes.map(emptyBlock(blockFlow, _))
@@ -460,7 +460,7 @@ class BlockFlowSpec extends AlephiumSpec {
     )) % brokerConfig.brokerNum
     val newConfigFixture = new AlephiumConfigFixture {
       override val configValues: Map[String, Any] = Map(
-        ("alephium.broker.broker-id", anotherBroker)
+        ("oxyg3nium.broker.broker-id", anotherBroker)
       )
 
       override lazy val genesisKeys = Test.genesisKeys
@@ -543,7 +543,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "cache blocks & headers during initialization" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
     blockFlow.getGroupCache(GroupIndex.unsafe(0)).size is 5
 
     val blockFlow1 = storageBlockFlow()
@@ -576,7 +576,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "cache block and block hashes" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
     val chainIndex                              = ChainIndex.random
     val blockChain                              = blockFlow.getBlockChain(chainIndex)
     blockChain.hashesCache.size is 1
@@ -698,8 +698,8 @@ class BlockFlowSpec extends AlephiumSpec {
 
   it should "handle sequential txs: pre-rhone" in new FlowFixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.broker.broker-num", 1),
-      ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
+      ("oxyg3nium.broker.broker-num", 1),
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
     )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
 
@@ -809,7 +809,7 @@ class BlockFlowSpec extends AlephiumSpec {
     }
 
     new Fixture {
-      override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+      override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
       test()
     }
   }
@@ -817,7 +817,7 @@ class BlockFlowSpec extends AlephiumSpec {
   behavior of "confirmations"
 
   it should "return correct confirmations for genesis txs" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     blockFlow.genesisBlocks.foreachWithIndex { case (blocks, from) =>
       blocks.foreachWithIndex { case (block, to) =>
@@ -877,7 +877,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "return correct confirmations for intra group txs" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     for {
       targetGroup <- 0 until groups0
@@ -894,7 +894,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "return correct confirmations for inter group txs" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     for {
       from <- 0 until groups0
@@ -950,9 +950,9 @@ class BlockFlowSpec extends AlephiumSpec {
   it should "not include new block as dependency when dependency gap time is large for pre-rhone hardfork" in new DependencyGapTimeFixture {
     override val configValues =
       Map(
-        ("alephium.consensus.mainnet.uncle-dependency-gap-time", "5 seconds"),
-        ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis),
-        ("alephium.broker.broker-num", 1)
+        ("oxyg3nium.consensus.mainnet.uncle-dependency-gap-time", "5 seconds"),
+        ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis),
+        ("oxyg3nium.broker.broker-num", 1)
       )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
     test()
@@ -961,8 +961,8 @@ class BlockFlowSpec extends AlephiumSpec {
   it should "not include new block as dependency when dependency gap time is large for rhone hardfork" in new DependencyGapTimeFixture {
     override val configValues =
       Map(
-        ("alephium.consensus.rhone.uncle-dependency-gap-time", "5 seconds"),
-        ("alephium.broker.broker-num", 1)
+        ("oxyg3nium.consensus.rhone.uncle-dependency-gap-time", "5 seconds"),
+        ("oxyg3nium.broker.broker-num", 1)
       )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Rhone
     test()
@@ -971,8 +971,8 @@ class BlockFlowSpec extends AlephiumSpec {
   it should "include new block as dependency when gap time is past" in new FlowFixture {
     override val configValues =
       Map(
-        ("alephium.consensus.uncle-dependency-gap-time", "5 seconds"),
-        ("alephium.broker.broker-num", 1)
+        ("oxyg3nium.consensus.uncle-dependency-gap-time", "5 seconds"),
+        ("oxyg3nium.broker.broker-num", 1)
       )
 
     val blocks0 = for {
@@ -991,7 +991,7 @@ class BlockFlowSpec extends AlephiumSpec {
   }
 
   it should "support sequential transactions" in new FlowFixture with Generators {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     var now = TimeStamp.now()
     def nextBlockTs: TimeStamp = {
@@ -1036,9 +1036,9 @@ class BlockFlowSpec extends AlephiumSpec {
 trait TxOutputRefIndexFixture extends FlowFixture {
   def enableTxOutputRefIndex: Boolean
   override val configValues = Map(
-    ("alephium.broker.broker-num", 1),
-    ("alephium.node.indexes.tx-output-ref-index", s"$enableTxOutputRefIndex"),
-    ("alephium.node.indexes.subcontract-index", "false")
+    ("oxyg3nium.broker.broker-num", 1),
+    ("oxyg3nium.node.indexes.tx-output-ref-index", s"$enableTxOutputRefIndex"),
+    ("oxyg3nium.node.indexes.subcontract-index", "false")
   )
 
   def verifyTxIdIndex(lockupScript: LockupScript, block: Block) = {
@@ -1054,7 +1054,7 @@ trait TxOutputRefIndexFixture extends FlowFixture {
         .getTxIdTxOutputLocatorsFromOutputRef(txOutputRef)
         .leftValue
         .reason
-        .getMessage is "Please set `alephium.node.indexes.tx-output-ref-index = true` to query transaction id from transaction output reference"
+        .getMessage is "Please set `oxyg3nium.node.indexes.tx-output-ref-index = true` to query transaction id from transaction output reference"
     }
   }
 

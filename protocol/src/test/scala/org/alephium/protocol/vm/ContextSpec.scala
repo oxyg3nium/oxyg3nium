@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,15 +14,15 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
 import akka.util.ByteString
 import org.scalacheck.Gen
 
-import org.alephium.protocol.{ALPH, PublicKey}
-import org.alephium.protocol.config.{GroupConfigFixture, NetworkConfigFixture}
-import org.alephium.protocol.model._
-import org.alephium.util.{AlephiumSpec, AVector, TimeStamp, U256}
+import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.config.{GroupConfigFixture, NetworkConfigFixture}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp, U256}
 
 class ContextSpec
     extends AlephiumSpec

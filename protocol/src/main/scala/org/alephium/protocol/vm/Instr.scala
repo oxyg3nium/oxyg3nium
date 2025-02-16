@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
 import java.math.BigInteger
 import java.nio.charset.StandardCharsets
@@ -23,20 +23,20 @@ import scala.annotation.switch
 
 import akka.util.ByteString
 
-import org.alephium.crypto
-import org.alephium.crypto.SecP256K1
-import org.alephium.macros.ByteCode
-import org.alephium.protocol.{PublicKey, SignatureSchema}
-import org.alephium.protocol.model
-import org.alephium.protocol.model.{Address, AssetOutput, ContractId, GroupIndex, HardFork, TokenId}
-import org.alephium.protocol.vm.TokenIssuance.{
+import org.oxyg3nium.crypto
+import org.oxyg3nium.crypto.SecP256K1
+import org.oxyg3nium.macros.ByteCode
+import org.oxyg3nium.protocol.{PublicKey, SignatureSchema}
+import org.oxyg3nium.protocol.model
+import org.oxyg3nium.protocol.model.{Address, AssetOutput, ContractId, GroupIndex, HardFork, TokenId}
+import org.oxyg3nium.protocol.vm.TokenIssuance.{
   IssueTokenAndTransfer,
   IssueTokenWithoutTransfer,
   NoIssuance
 }
-import org.alephium.serde.{deserialize => decode, serialize => encode, _}
-import org.alephium.util.{AVector, Bytes, Duration, EitherF, TimeStamp, U256}
-import org.alephium.util
+import org.oxyg3nium.serde.{deserialize => decode, serialize => encode, _}
+import org.oxyg3nium.util.{AVector, Bytes, Duration, EitherF, TimeStamp, U256}
+import org.oxyg3nium.util
 
 // scalastyle:off file.size.limit number.of.types
 

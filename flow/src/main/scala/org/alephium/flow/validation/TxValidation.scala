@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,20 +14,20 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.validation
+package org.oxyg3nium.flow.validation
 
 import scala.collection.mutable
 
 import akka.util.ByteString
 
-import org.alephium.flow.core.{BlockFlow, BlockFlowGroupView, FlowUtils}
-import org.alephium.io.IOResult
-import org.alephium.protocol.{ALPH, Hash, PublicKey, SignatureSchema}
-import org.alephium.protocol.config.{GroupConfig, NetworkConfig}
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.{InvalidSignature => _, OutOfGas => VMOutOfGas, _}
-import org.alephium.protocol.vm.StatefulVM.TxScriptExecution
-import org.alephium.util.{AVector, EitherF, TimeStamp, U256}
+import org.oxyg3nium.flow.core.{BlockFlow, BlockFlowGroupView, FlowUtils}
+import org.oxyg3nium.io.IOResult
+import org.oxyg3nium.protocol.{ALPH, Hash, PublicKey, SignatureSchema}
+import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfig}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.{InvalidSignature => _, OutOfGas => VMOutOfGas, _}
+import org.oxyg3nium.protocol.vm.StatefulVM.TxScriptExecution
+import org.oxyg3nium.util.{AVector, EitherF, TimeStamp, U256}
 
 // scalastyle:off number.of.methods file.size.limit
 trait TxValidation {

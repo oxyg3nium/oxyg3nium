@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.mempool
+package org.oxyg3nium.flow.mempool
 
-import org.alephium.flow.AlephiumFlowSpec
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model._
-import org.alephium.util.{AlephiumFixture, LockFixture}
+import org.oxyg3nium.flow.AlephiumFlowSpec
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{AlephiumFixture, LockFixture}
 
 class TxIndexesSpec
     extends AlephiumFlowSpec

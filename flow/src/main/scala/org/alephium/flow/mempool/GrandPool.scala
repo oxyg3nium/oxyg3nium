@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.mempool
+package org.oxyg3nium.flow.mempool
 
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.setting.MemPoolSetting
-import org.alephium.protocol.config.BrokerConfig
-import org.alephium.protocol.model.{ChainIndex, GroupIndex, TransactionId, TransactionTemplate}
-import org.alephium.util.{AVector, OptionF, TimeStamp}
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.setting.MemPoolSetting
+import org.oxyg3nium.protocol.config.BrokerConfig
+import org.oxyg3nium.protocol.model.{ChainIndex, GroupIndex, TransactionId, TransactionTemplate}
+import org.oxyg3nium.util.{AVector, OptionF, TimeStamp}
 
 class GrandPool(val mempools: AVector[MemPool], val orphanPool: OrphanPool)(implicit
     val brokerConfig: BrokerConfig

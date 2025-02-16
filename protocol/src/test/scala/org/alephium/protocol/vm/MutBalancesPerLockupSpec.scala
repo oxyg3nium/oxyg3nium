@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,17 +14,17 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
 import scala.collection.mutable
 
 import org.scalatest.Assertion
 
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.config.{GroupConfig, NetworkConfigFixture}
-import org.alephium.protocol.model._
-import org.alephium.util.{AlephiumSpec, AVector, U256}
-import org.alephium.util.Bytes.byteStringOrdering
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfigFixture}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{AlephiumSpec, AVector, U256}
+import org.oxyg3nium.util.Bytes.byteStringOrdering
 
 class MutBalancesPerLockupSpec extends AlephiumSpec {
 
@@ -173,7 +173,7 @@ class MutBalancesPerLockupSpec extends AlephiumSpec {
   }
 
   trait ToTxOutputFixture extends Fixture {
-    import org.alephium.protocol.model.TokenId.tokenIdOrder
+    import org.oxyg3nium.protocol.model.TokenId.tokenIdOrder
 
     val lockupScript = lockupScriptGen.sample.get
     val tokens       = AVector.fill(maxTokenPerContractUtxo + 1)(TokenId.generate).sorted

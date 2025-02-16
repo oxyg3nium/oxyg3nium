@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.model
+package org.oxyg3nium.protocol.model
 
-import org.alephium.crypto.Blake3
-import org.alephium.protocol.Hash
-import org.alephium.protocol.config.{ConsensusConfigsFixture, GroupConfigFixture}
-import org.alephium.serde.serialize
-import org.alephium.util.{AlephiumSpec, AVector, Hex, TimeStamp, U256}
+import org.oxyg3nium.crypto.Blake3
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.config.{ConsensusConfigsFixture, GroupConfigFixture}
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util.{AlephiumSpec, AVector, Hex, TimeStamp, U256}
 
 class BlockHeaderSpec
     extends AlephiumSpec

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,19 +14,19 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.mining
+package org.oxyg3nium.flow.mining
 
 import java.math.BigInteger
 
 import akka.util.ByteString
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.model.BlockFlowTemplate
-import org.alephium.protocol.config.GroupConfigFixture
-import org.alephium.protocol.model.{BlockHash, ChainIndex, Transaction}
-import org.alephium.serde.{avectorSerde, serialize, Staging}
-import org.alephium.util.{AlephiumSpec, AVector}
-import org.alephium.util.Hex.HexStringSyntax
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.model.BlockFlowTemplate
+import org.oxyg3nium.protocol.config.GroupConfigFixture
+import org.oxyg3nium.protocol.model.{BlockHash, ChainIndex, Transaction}
+import org.oxyg3nium.serde.{avectorSerde, serialize, Staging}
+import org.oxyg3nium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.util.Hex.HexStringSyntax
 
 class MessageSpec extends AlephiumSpec with GroupConfigFixture.Default {
   "ClientMessage" should "serde properly" in {

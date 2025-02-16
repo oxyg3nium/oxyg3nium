@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,20 +14,20 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
 import akka.util.ByteString
 import org.scalacheck.Gen
 
-import org.alephium.io.{IOResult, RocksDBSource, StorageFixture}
-import org.alephium.protocol.Hash
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.event.LogStorage
-import org.alephium.protocol.vm.nodeindexes.NodeIndexesStorage
-import org.alephium.protocol.vm.nodeindexes.TxOutputLocator
-import org.alephium.protocol.vm.subcontractindex.SubContractIndexStorage
-import org.alephium.serde.{avectorSerde, eitherSerde, intSerde}
-import org.alephium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.io.{IOResult, RocksDBSource, StorageFixture}
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.event.LogStorage
+import org.oxyg3nium.protocol.vm.nodeindexes.NodeIndexesStorage
+import org.oxyg3nium.protocol.vm.nodeindexes.TxOutputLocator
+import org.oxyg3nium.protocol.vm.subcontractindex.SubContractIndexStorage
+import org.oxyg3nium.serde.{avectorSerde, eitherSerde, intSerde}
+import org.oxyg3nium.util.{AlephiumSpec, AVector}
 
 class WorldStateSpec extends AlephiumSpec with NoIndexModelGenerators with StorageFixture {
   def generateAsset: Gen[(TxOutputRef, TxOutput)] = {

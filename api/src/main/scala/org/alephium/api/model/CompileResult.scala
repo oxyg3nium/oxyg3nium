@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,17 +14,17 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api.model
+package org.oxyg3nium.api.model
 
 import scala.jdk.CollectionConverters.IteratorHasAsScala
 
-import org.alephium.protocol.Hash
-import org.alephium.protocol.model.ReleaseVersion
-import org.alephium.protocol.vm
-import org.alephium.protocol.vm.StatefulContext
-import org.alephium.ralph.{Ast, CompiledContract, CompiledScript, Warning => CompilerWarning}
-import org.alephium.serde.serialize
-import org.alephium.util.{AVector, DiffMatchPatch, Hex}
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.model.ReleaseVersion
+import org.oxyg3nium.protocol.vm
+import org.oxyg3nium.protocol.vm.StatefulContext
+import org.oxyg3nium.ralph.{Ast, CompiledContract, CompiledScript, Warning => CompilerWarning}
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util.{AVector, DiffMatchPatch, Hex}
 
 final case class CompileScriptResult(
     version: String,

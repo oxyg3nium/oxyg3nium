@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,22 +14,22 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import scala.util.Random
 
 import akka.util.ByteString
 import org.scalatest.compatible.Assertion
 
-import org.alephium.flow.core.FlowUtils.{AssetOutputInfo, PersistedOutput, UnpersistedBlockOutput}
-import org.alephium.flow.core.UtxoSelectionAlgo._
-import org.alephium.flow.gasestimation._
-import org.alephium.flow.setting.AlephiumConfigFixture
-import org.alephium.protocol.Hash
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.{GasBox, GasPrice, LockupScript}
-import org.alephium.util._
+import org.oxyg3nium.flow.core.FlowUtils.{AssetOutputInfo, PersistedOutput, UnpersistedBlockOutput}
+import org.oxyg3nium.flow.core.UtxoSelectionAlgo._
+import org.oxyg3nium.flow.gasestimation._
+import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice, LockupScript}
+import org.oxyg3nium.util._
 
 // scalastyle:off number.of.methods
 class UtxoSelectionAlgoSpec extends AlephiumSpec with LockupScriptGenerators {

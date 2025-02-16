@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,16 +14,16 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
-import org.alephium.flow.FlowFixture
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.model.{BlockHash, ChainIndex, GroupIndex}
-import org.alephium.util.{AlephiumSpec, AVector, Duration, TimeStamp}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.model.{BlockHash, ChainIndex, GroupIndex}
+import org.oxyg3nium.util.{AlephiumSpec, AVector, Duration, TimeStamp}
 
 class FlowTipsUtilSpec extends AlephiumSpec {
   trait Fixture extends FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
   }
 
   it should "compute light tips for genesis" in new Fixture {

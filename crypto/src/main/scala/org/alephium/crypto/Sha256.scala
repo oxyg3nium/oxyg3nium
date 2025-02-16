@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.crypto
+package org.oxyg3nium.crypto
 
 import akka.util.ByteString
 import org.bouncycastle.crypto.Digest
 import org.bouncycastle.crypto.digests.SHA256Digest
 
-import org.alephium.serde.RandomBytes
+import org.oxyg3nium.serde.RandomBytes
 
 class Sha256(val bytes: ByteString) extends RandomBytes {
   def length: Int = Sha256.length

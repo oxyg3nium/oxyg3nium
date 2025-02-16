@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,22 +14,22 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import scala.util.Random
 
 import akka.util.ByteString
 import org.scalacheck.Gen
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.ExtraUtxosInfo
-import org.alephium.flow.mempool.{Normal, Reorg}
-import org.alephium.flow.validation.BlockValidation
-import org.alephium.protocol.{ALPH, Generators, PrivateKey, PublicKey, SignatureSchema}
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm._
-import org.alephium.ralph.Compiler
-import org.alephium.util._
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.ExtraUtxosInfo
+import org.oxyg3nium.flow.mempool.{Normal, Reorg}
+import org.oxyg3nium.flow.validation.BlockValidation
+import org.oxyg3nium.protocol.{ALPH, Generators, PrivateKey, PublicKey, SignatureSchema}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm._
+import org.oxyg3nium.ralph.Compiler
+import org.oxyg3nium.util._
 
 // scalastyle:off file.size.limit
 class FlowUtilsSpec extends AlephiumSpec {
@@ -83,7 +83,7 @@ class FlowUtilsSpec extends AlephiumSpec {
   }
 
   it should "check hash order" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val newBlocks = for {
       i <- 0 to 1
@@ -143,9 +143,9 @@ class FlowUtilsSpec extends AlephiumSpec {
   it should "detect tx conflicts using bestDeps for pre-rhone hardfork" in new TxConflictsFixture {
     override val configValues: Map[String, Any] =
       Map(
-        ("alephium.consensus.mainnet.uncle-dependency-gap-time", "10 seconds"),
-        ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis),
-        ("alephium.broker.broker-num", 1)
+        ("oxyg3nium.consensus.mainnet.uncle-dependency-gap-time", "10 seconds"),
+        ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis),
+        ("oxyg3nium.broker.broker-num", 1)
       )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
     test()
@@ -154,8 +154,8 @@ class FlowUtilsSpec extends AlephiumSpec {
   it should "detect tx conflicts using bestDeps for rhone hardfork" in new TxConflictsFixture {
     override val configValues: Map[String, Any] =
       Map(
-        ("alephium.consensus.rhone.uncle-dependency-gap-time", "10 seconds"),
-        ("alephium.broker.broker-num", 1)
+        ("oxyg3nium.consensus.rhone.uncle-dependency-gap-time", "10 seconds"),
+        ("oxyg3nium.broker.broker-num", 1)
       )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Rhone
     test()
@@ -242,7 +242,7 @@ class FlowUtilsSpec extends AlephiumSpec {
 
   it should "prepare block with correct coinbase reward for pre-rhone hardfork" in new CoinbaseRewardFixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
     )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
     val emptyBlock = mineFromMemPool(blockFlow, chainIndex)
@@ -326,7 +326,7 @@ class FlowUtilsSpec extends AlephiumSpec {
 
   it should "prepare block template when txs are inter-dependent: pre-rhone" in new FlowFixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
+      Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
 
     val blockFlow1 = isolatedBlockFlow()
@@ -358,7 +358,7 @@ class FlowUtilsSpec extends AlephiumSpec {
   }
 
   it should "reorg" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val mainGroup = GroupIndex.unsafe(0)
     val deps0     = blockFlow.getBestDeps(mainGroup)
@@ -508,8 +508,8 @@ class FlowUtilsSpec extends AlephiumSpec {
     def rhoneHardForkTimestamp: TimeStamp
 
     override val configValues: Map[String, Any] = Map(
-      ("alephium.broker.broker-num", 1),
-      ("alephium.network.rhone-hard-fork-timestamp", rhoneHardForkTimestamp.millis)
+      ("oxyg3nium.broker.broker-num", 1),
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", rhoneHardForkTimestamp.millis)
     )
 
     lazy val chainIndex = ChainIndex.unsafe(1, 2)
@@ -808,7 +808,7 @@ class FlowUtilsSpec extends AlephiumSpec {
   }
 
   it should "collect random transfer txs" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val chainIndex = ChainIndex.unsafe(0, 0)
     val keys = (0 until 4).map { _ =>
@@ -848,7 +848,7 @@ class FlowUtilsSpec extends AlephiumSpec {
   }
 
   it should "not collect sequential txs if the input of the source tx from other chains" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val chainIndex0               = ChainIndex.unsafe(0, 0)
     val (privateKey0, publicKey0) = chainIndex0.from.generateKey
@@ -943,7 +943,7 @@ class FlowUtilsSpec extends AlephiumSpec {
   }
 
   it should "prepare block template with height" in new FlowFixture with Generators {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val chainIndex = chainIndexGen.sample.get
     val miner      = getGenesisLockupScript(chainIndex.to)

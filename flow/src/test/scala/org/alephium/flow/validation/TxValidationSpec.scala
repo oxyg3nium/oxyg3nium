@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.validation
+package org.oxyg3nium.flow.validation
 
 import scala.util.Random
 
@@ -23,22 +23,22 @@ import org.scalacheck.Gen
 import org.scalatest.Assertion
 import org.scalatest.EitherValues._
 
-import org.alephium.flow.{AlephiumFlowSpec, FlowFixture}
-import org.alephium.flow.core.ExtraUtxosInfo
-import org.alephium.flow.validation.ValidationStatus.{invalidTx, validTx}
-import org.alephium.io.IOError
-import org.alephium.protocol.{ALPH, Hash, PrivateKey, PublicKey, Signature, SignatureSchema}
-import org.alephium.protocol.model.{BlockHash => ModelBlockHash, _}
-import org.alephium.protocol.model.ModelGenerators.AssetInputInfo
-import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
-import org.alephium.protocol.vm.{InvalidSignature => _, NetworkId => _, _}
-import org.alephium.protocol.vm.nodeindexes.TxOutputLocator
-import org.alephium.ralph.Compiler
-import org.alephium.util.{AVector, Duration, TimeStamp, U256}
+import org.oxyg3nium.flow.{AlephiumFlowSpec, FlowFixture}
+import org.oxyg3nium.flow.core.ExtraUtxosInfo
+import org.oxyg3nium.flow.validation.ValidationStatus.{invalidTx, validTx}
+import org.oxyg3nium.io.IOError
+import org.oxyg3nium.protocol.{ALPH, Hash, PrivateKey, PublicKey, Signature, SignatureSchema}
+import org.oxyg3nium.protocol.model.{BlockHash => ModelBlockHash, _}
+import org.oxyg3nium.protocol.model.ModelGenerators.AssetInputInfo
+import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
+import org.oxyg3nium.protocol.vm.{InvalidSignature => _, NetworkId => _, _}
+import org.oxyg3nium.protocol.vm.nodeindexes.TxOutputLocator
+import org.oxyg3nium.ralph.Compiler
+import org.oxyg3nium.util.{AVector, Duration, TimeStamp, U256}
 
 // scalastyle:off number.of.methods file.size.limit
 class TxValidationSpec extends AlephiumFlowSpec with NoIndexModelGeneratorsLike {
-  override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+  override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
   type TxValidator[T] = Transaction => TxValidationResult[T]
 

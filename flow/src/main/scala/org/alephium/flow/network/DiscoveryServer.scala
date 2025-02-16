@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network
+package org.oxyg3nium.flow.network
 
 import java.net.{InetAddress, InetSocketAddress}
 
@@ -23,15 +23,15 @@ import scala.collection.immutable.ArraySeq
 import akka.actor.{ActorRef, Cancellable, Props, Stash, Terminated}
 import io.prometheus.client.Gauge
 
-import org.alephium.flow.handler.IOBaseActor
-import org.alephium.flow.io.BrokerStorage
-import org.alephium.flow.network.broker.MisbehaviorManager
-import org.alephium.flow.network.udp.UdpServer
-import org.alephium.protocol.config.{BrokerConfig, DiscoveryConfig, NetworkConfig}
-import org.alephium.protocol.message.DiscoveryMessage
-import org.alephium.protocol.message.DiscoveryMessage._
-import org.alephium.protocol.model.{BrokerGroupInfo, BrokerInfo, CliqueInfo, NetworkId, PeerId}
-import org.alephium.util._
+import org.oxyg3nium.flow.handler.IOBaseActor
+import org.oxyg3nium.flow.io.BrokerStorage
+import org.oxyg3nium.flow.network.broker.MisbehaviorManager
+import org.oxyg3nium.flow.network.udp.UdpServer
+import org.oxyg3nium.protocol.config.{BrokerConfig, DiscoveryConfig, NetworkConfig}
+import org.oxyg3nium.protocol.message.DiscoveryMessage
+import org.oxyg3nium.protocol.message.DiscoveryMessage._
+import org.oxyg3nium.protocol.model.{BrokerGroupInfo, BrokerInfo, CliqueInfo, NetworkId, PeerId}
+import org.oxyg3nium.util._
 
 object DiscoveryServer {
   def props(
@@ -87,7 +87,7 @@ object DiscoveryServer {
   final case class NewPeer(info: BrokerInfo)                 extends Event with EventStream.Event
 
   val discoveredBrokerSize: Gauge = Gauge
-    .build("alephium_discovered_broker_size", "Number of discovered brokers")
+    .build("oxyg3nium_discovered_broker_size", "Number of discovered brokers")
     .register()
 }
 

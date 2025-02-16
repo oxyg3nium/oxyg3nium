@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,15 +14,15 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.broker
+package org.oxyg3nium.flow.network.broker
 
 import akka.io.Tcp
 
-import org.alephium.flow.network.{CliqueManager, TcpController}
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.protocol.message.{Hello, Payload}
-import org.alephium.protocol.model.CliqueInfo
-import org.alephium.util.{ActorRefT, Duration, EventStream}
+import org.oxyg3nium.flow.network.{CliqueManager, TcpController}
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.protocol.message.{Hello, Payload}
+import org.oxyg3nium.protocol.model.CliqueInfo
+import org.oxyg3nium.util.{ActorRefT, Duration, EventStream}
 
 object OutboundBrokerHandler {
   case object Retry

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.broker
+package org.oxyg3nium.flow.network.broker
 
-import org.alephium.protocol.model.{ChainIndex, ChainTip}
+import org.oxyg3nium.protocol.model.{ChainIndex, ChainTip}
 
 final case class ChainTipInfo(chainIndex: ChainIndex, bestTip: ChainTip, selfTip: ChainTip)

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api
+package org.oxyg3nium.api
 
 import java.io.File
 import java.nio.charset.StandardCharsets
@@ -23,13 +23,13 @@ import java.nio.file.Files
 import akka.util.ByteString
 import org.scalatest.{Assertion, EitherValues}
 
-import org.alephium.api.model._
-import org.alephium.json.Json._
-import org.alephium.protocol.{model => protocol, ALPH}
-import org.alephium.protocol.config.NetworkConfigFixture
-import org.alephium.protocol.vm
-import org.alephium.serde.deserialize
-import org.alephium.util._
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.{model => protocol, ALPH}
+import org.oxyg3nium.protocol.config.NetworkConfigFixture
+import org.oxyg3nium.protocol.vm
+import org.oxyg3nium.serde.deserialize
+import org.oxyg3nium.util._
 
 class ProtocolConversionSpec extends AlephiumSpec with EitherValues with NumericHelpers {
   it should "convert Script" in new Fixture {

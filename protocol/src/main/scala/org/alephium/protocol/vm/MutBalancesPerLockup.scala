@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
 import scala.collection.mutable
 import scala.util.Try
 
-import org.alephium.protocol.model._
-import org.alephium.util.{AVector, TimeStamp, U256}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{AVector, TimeStamp, U256}
 
 final case class MutBalancesPerLockup(
     var attoAlphAmount: U256,
@@ -28,7 +28,7 @@ final case class MutBalancesPerLockup(
     scopeDepth: Int
 ) {
   def tokenVector: AVector[(TokenId, U256)] = {
-    import org.alephium.protocol.model.TokenId.tokenIdOrder
+    import org.oxyg3nium.protocol.model.TokenId.tokenIdOrder
     AVector.from(tokenAmounts.filter(_._2.nonZero)).sortBy(_._1)
   }
 

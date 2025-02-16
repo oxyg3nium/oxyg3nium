@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network
+package org.oxyg3nium.flow.network
 
 import akka.testkit.TestProbe
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.handler.TestUtils
-import org.alephium.flow.network.bootstrap.InfoFixture
-import org.alephium.util.{ActorRefT, AlephiumActorSpec}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.handler.TestUtils
+import org.oxyg3nium.flow.network.bootstrap.InfoFixture
+import org.oxyg3nium.util.{ActorRefT, AlephiumActorSpec}
 
 class CliqueManagerSpec extends AlephiumActorSpec {
   it should "become ready after connected to brokers" in new FlowFixture with InfoFixture {

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.bootstrap
+package org.oxyg3nium.flow.network.bootstrap
 
 import java.net.InetSocketAddress
 
@@ -22,11 +22,11 @@ import akka.actor.{ActorRef, Props, Terminated}
 import akka.io.Tcp
 import akka.util.ByteString
 
-import org.alephium.flow.network.broker.{ConnectionHandler, MisbehaviorManager}
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.serde._
-import org.alephium.util.{ActorRefT, BaseActor, EventStream}
+import org.oxyg3nium.flow.network.broker.{ConnectionHandler, MisbehaviorManager}
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.serde._
+import org.oxyg3nium.util.{ActorRefT, BaseActor, EventStream}
 
 object BrokerConnector {
   def props(

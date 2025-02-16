@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,20 +14,20 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.handler
+package org.oxyg3nium.flow.handler
 
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
 import akka.testkit.{TestActorRef, TestProbe}
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.{maxSyncBlocksPerChain}
-import org.alephium.flow.handler.TestUtils
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.broker.BrokerHandler
-import org.alephium.protocol.model._
-import org.alephium.util.{ActorRefT, AlephiumActorSpec, AVector, Duration, TimeStamp}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.{maxSyncBlocksPerChain}
+import org.oxyg3nium.flow.handler.TestUtils
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.broker.BrokerHandler
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{ActorRefT, AlephiumActorSpec, AVector, Duration, TimeStamp}
 
 class DependencyHandlerSpec extends AlephiumActorSpec {
   trait Fixture extends FlowFixture { Self =>
@@ -49,7 +49,7 @@ class DependencyHandlerSpec extends AlephiumActorSpec {
   }
 
   it should "work for valid data" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val blockFlow1 = isolatedBlockFlow()
 
@@ -146,7 +146,7 @@ class DependencyHandlerSpec extends AlephiumActorSpec {
   }
 
   it should "work for invalid data" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val n          = 3
     val blockFlow1 = isolatedBlockFlow()
@@ -172,7 +172,7 @@ class DependencyHandlerSpec extends AlephiumActorSpec {
   }
 
   it should "work for unordered datas" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val blockFlow1 = isolatedBlockFlow()
     val block0     = mineFromMemPool(blockFlow1, ChainIndex.unsafe(0, 0))
@@ -192,7 +192,7 @@ class DependencyHandlerSpec extends AlephiumActorSpec {
   }
 
   it should "not pend existing blocks" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val block = mineFromMemPool(blockFlow, ChainIndex.unsafe(0, 0))
     addAndCheck(blockFlow, block)
@@ -205,7 +205,7 @@ class DependencyHandlerSpec extends AlephiumActorSpec {
   }
 
   it should "not pend in-processing blocks" in new Fixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val block = mineFromMemPool(blockFlow, ChainIndex.unsafe(0, 0))
     state.addPendingData(block, broker, origin, ArrayBuffer.empty)
@@ -220,8 +220,8 @@ class DependencyHandlerSpec extends AlephiumActorSpec {
 
   it should "remove pending hashes based on capacity" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.broker.broker-num", 1),
-      ("alephium.broker.groups", 1)
+      ("oxyg3nium.broker.broker-num", 1),
+      ("oxyg3nium.broker.groups", 1)
     )
 
     val cacheSize = maxSyncBlocksPerChain * 2
@@ -241,9 +241,9 @@ class DependencyHandlerSpec extends AlephiumActorSpec {
 
   it should "remove pending hashes based on expiry duration" in new Fixture {
     override val configValues = Map(
-      ("alephium.broker.broker-num", 1),
-      ("alephium.broker.groups", 1),
-      ("alephium.network.dependency-expiry-period", "2s")
+      ("oxyg3nium.broker.broker-num", 1),
+      ("oxyg3nium.broker.groups", 1),
+      ("oxyg3nium.network.dependency-expiry-period", "2s")
     )
 
     config.network.dependencyExpiryPeriod is Duration.ofSecondsUnsafe(2)
@@ -455,7 +455,7 @@ class DependencyHandlerSpec extends AlephiumActorSpec {
 
   it should "clean pending block hashes" in new Fixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.dependency-expiry-period", "1s"))
+      Map(("oxyg3nium.network.dependency-expiry-period", "1s"))
     config.network.dependencyExpiryPeriod is Duration.ofSecondsUnsafe(1)
 
     val chainIndex = ChainIndex.unsafe(0, 0)

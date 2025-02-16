@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,19 +14,19 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.config
+package org.oxyg3nium.protocol.config
 
 import akka.util.ByteString
 
-import org.alephium.protocol.Hash
-import org.alephium.protocol.model.{HardFork, NetworkId}
-import org.alephium.util.{Bytes, Duration, TimeStamp}
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.model.{HardFork, NetworkId}
+import org.oxyg3nium.util.{Bytes, Duration, TimeStamp}
 
 trait NetworkConfig {
   def networkId: NetworkId
 
   lazy val magicBytes: ByteString =
-    Bytes.from(Hash.hash(s"alephium-${networkId.id}").toRandomIntUnsafe)
+    Bytes.from(Hash.hash(s"oxyg3nium-${networkId.id}").toRandomIntUnsafe)
 
   def noPreMineProof: ByteString
 

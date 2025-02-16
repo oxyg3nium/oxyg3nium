@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import scala.util.Random
 
@@ -22,26 +22,26 @@ import akka.util.ByteString
 import org.scalacheck.Gen
 import org.scalatest.{Assertion, Succeeded}
 
-import org.alephium.crypto.BIP340Schnorr
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.FlowUtils.{
+import org.oxyg3nium.crypto.BIP340Schnorr
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.FlowUtils.{
   AssetOutputInfo,
   MemPoolOutput,
   OutputType,
   PersistedOutput,
   UnpersistedBlockOutput
 }
-import org.alephium.flow.gasestimation._
-import org.alephium.flow.mempool.MemPool
-import org.alephium.flow.setting.AlephiumConfigFixture
-import org.alephium.flow.validation.TxValidation
-import org.alephium.protocol._
-import org.alephium.protocol.mining.Emission
-import org.alephium.protocol.model._
-import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
-import org.alephium.protocol.vm._
-import org.alephium.ralph.Compiler
-import org.alephium.util.{AlephiumSpec, AVector, TimeStamp, U256}
+import org.oxyg3nium.flow.gasestimation._
+import org.oxyg3nium.flow.mempool.MemPool
+import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.flow.validation.TxValidation
+import org.oxyg3nium.protocol._
+import org.oxyg3nium.protocol.mining.Emission
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
+import org.oxyg3nium.protocol.vm._
+import org.oxyg3nium.ralph.Compiler
+import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp, U256}
 
 // scalastyle:off file.size.limit
 class TxUtilsSpec extends AlephiumSpec {
@@ -112,7 +112,7 @@ class TxUtilsSpec extends AlephiumSpec {
   }
 
   trait PredefinedTxFixture extends UnsignedTxFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     def chainIndex: ChainIndex
 
@@ -173,7 +173,7 @@ class TxUtilsSpec extends AlephiumSpec {
 
   it should "calculate getPreAssetOutputInfo for txs in new blocks" in new FlowFixture
     with Generators {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     forAll(groupIndexGen, groupIndexGen) { (fromGroup, toGroup) =>
       val chainIndex = ChainIndex(fromGroup, toGroup)
@@ -213,7 +213,7 @@ class TxUtilsSpec extends AlephiumSpec {
 
   it should "calculate getPreAssetOutputInfo for txs in mempool" in new FlowFixture
     with Generators {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     forAll(groupIndexGen, groupIndexGen) { (fromGroup, toGroup) =>
       val chainIndex = ChainIndex(fromGroup, toGroup)
@@ -1357,7 +1357,7 @@ class TxUtilsSpec extends AlephiumSpec {
   }
 
   trait TransferFromOneToManyGroupsFixture extends FlowFixture with UnsignedTxFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val (genesisPrivateKey_0, genesisPublicKey_0, _) = genesisKeys(0)
     val (genesisPrivateKey_1, genesisPublicKey_1, _) = genesisKeys(1)
@@ -1725,7 +1725,7 @@ class TxUtilsSpec extends AlephiumSpec {
             Hint.unsafe(0),
             TxOutputRef.unsafeKey(Hash.generate)
           ),
-          org.alephium.protocol.model.AssetOutput(
+          org.oxyg3nium.protocol.model.AssetOutput(
             U256.MaxValue,
             genesisLockupScript,
             TimeStamp.now(),
@@ -2154,7 +2154,7 @@ class TxUtilsSpec extends AlephiumSpec {
   }
 
   it should "transfer to Schnorr addrss" in new FlowFixture {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
 
     val chainIndex                        = ChainIndex.unsafe(0, 0)
     val (genesisPriKey, genesisPubKey, _) = genesisKeys(0)
@@ -2755,7 +2755,7 @@ class TxUtilsSpec extends AlephiumSpec {
 
   it should "check gas amount: pre-rhone" in new FlowFixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
+      ("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis)
     )
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
 

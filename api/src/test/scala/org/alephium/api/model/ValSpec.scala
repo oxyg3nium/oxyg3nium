@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api.model
+package org.oxyg3nium.api.model
 
-import org.alephium.api.{ApiModelCodec, JsonFixture}
-import org.alephium.json.Json.read
-import org.alephium.protocol.Hash
-import org.alephium.protocol.model.Address
-import org.alephium.protocol.vm.LockupScript
-import org.alephium.util.{AVector, Hex, I256, U256}
+import org.oxyg3nium.api.{ApiModelCodec, JsonFixture}
+import org.oxyg3nium.json.Json.read
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.model.Address
+import org.oxyg3nium.protocol.vm.LockupScript
+import org.oxyg3nium.util.{AVector, Hex, I256, U256}
 
 class ValSpec extends ApiModelCodec with JsonFixture {
   def generateContractAddress(): Address.Contract =

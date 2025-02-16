@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,32 +14,32 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.handler
+package org.oxyg3nium.flow.handler
 
 import scala.collection.mutable
 import scala.reflect.ClassTag
 
 import akka.actor.Props
 
-import org.alephium.flow.Utils
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.handler.AllHandlers.{BlockNotify, TxNotify}
-import org.alephium.flow.handler.TxHandler.{FailedValidation, SubmitToMemPoolResult}
-import org.alephium.flow.io.PendingTxStorage
-import org.alephium.flow.mempool.MemPool
-import org.alephium.flow.mempool.MemPool._
-import org.alephium.flow.mining.Miner
-import org.alephium.flow.model.{DataOrigin, PersistedTxId}
-import org.alephium.flow.network.{InterCliqueManager, IntraCliqueManager}
-import org.alephium.flow.network.broker.BrokerHandler
-import org.alephium.flow.network.sync.FetchState
-import org.alephium.flow.setting.{MemPoolSetting, NetworkSetting}
-import org.alephium.flow.validation._
-import org.alephium.protocol.config.{BrokerConfig, GroupConfig}
-import org.alephium.protocol.message.{Message, NewBlock}
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.{LockupScript, LogConfig}
-import org.alephium.util._
+import org.oxyg3nium.flow.Utils
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.handler.AllHandlers.{BlockNotify, TxNotify}
+import org.oxyg3nium.flow.handler.TxHandler.{FailedValidation, SubmitToMemPoolResult}
+import org.oxyg3nium.flow.io.PendingTxStorage
+import org.oxyg3nium.flow.mempool.MemPool
+import org.oxyg3nium.flow.mempool.MemPool._
+import org.oxyg3nium.flow.mining.Miner
+import org.oxyg3nium.flow.model.{DataOrigin, PersistedTxId}
+import org.oxyg3nium.flow.network.{InterCliqueManager, IntraCliqueManager}
+import org.oxyg3nium.flow.network.broker.BrokerHandler
+import org.oxyg3nium.flow.network.sync.FetchState
+import org.oxyg3nium.flow.setting.{MemPoolSetting, NetworkSetting}
+import org.oxyg3nium.flow.validation._
+import org.oxyg3nium.protocol.config.{BrokerConfig, GroupConfig}
+import org.oxyg3nium.protocol.message.{Message, NewBlock}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.{LockupScript, LogConfig}
+import org.oxyg3nium.util._
 
 object TxHandler {
   def props(
@@ -197,7 +197,7 @@ object TxHandler {
       mineTxForDev(blockFlow, chainIndex, publishBlock)
     } else {
       Left(
-        "CPU mining for dev is not enabled, please turn it on in config:\n alephium.mempool.auto-mine-for-dev = true"
+        "CPU mining for dev is not enabled, please turn it on in config:\n oxyg3nium.mempool.auto-mine-for-dev = true"
       )
     }
   }

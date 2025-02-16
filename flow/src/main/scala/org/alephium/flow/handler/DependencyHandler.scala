@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.handler
+package org.oxyg3nium.flow.handler
 
 import java.util.{LinkedHashMap, Map => JMap}
 
@@ -24,14 +24,14 @@ import scala.jdk.CollectionConverters._
 
 import akka.actor.Props
 
-import org.alephium.flow.core.{maxSyncBlocksPerChain, BlockFlow}
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.broker.BrokerHandler
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.io.IOResult
-import org.alephium.protocol.model.{Block, BlockHash, BlockHeader, ChainIndex, FlowData}
-import org.alephium.util.{ActorRefT, AVector, Cache, TimeStamp}
-import org.alephium.util.EventStream.Subscriber
+import org.oxyg3nium.flow.core.{maxSyncBlocksPerChain, BlockFlow}
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.broker.BrokerHandler
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.io.IOResult
+import org.oxyg3nium.protocol.model.{Block, BlockHash, BlockHeader, ChainIndex, FlowData}
+import org.oxyg3nium.util.{ActorRefT, AVector, Cache, TimeStamp}
+import org.oxyg3nium.util.EventStream.Subscriber
 
 object DependencyHandler {
   def props(

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,23 +14,23 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import scala.annotation.tailrec
 
 import com.typesafe.scalalogging.StrictLogging
 
-import org.alephium.crypto.Blake3
-import org.alephium.flow.Utils
-import org.alephium.flow.io.Storages
-import org.alephium.flow.setting.{AlephiumConfig, ConsensusSettings, MemPoolSetting}
-import org.alephium.io.{IOResult, IOUtils}
-import org.alephium.io.RocksDBSource.ProdSettings
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.config.{BrokerConfig, GroupConfig, NetworkConfig}
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.{LogConfig, WorldState}
-import org.alephium.util.{AVector, Env, Files, TimeStamp}
+import org.oxyg3nium.crypto.Blake3
+import org.oxyg3nium.flow.Utils
+import org.oxyg3nium.flow.io.Storages
+import org.oxyg3nium.flow.setting.{AlephiumConfig, ConsensusSettings, MemPoolSetting}
+import org.oxyg3nium.io.{IOResult, IOUtils}
+import org.oxyg3nium.io.RocksDBSource.ProdSettings
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.config.{BrokerConfig, GroupConfig, NetworkConfig}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.{LogConfig, WorldState}
+import org.oxyg3nium.util.{AVector, Env, Files, TimeStamp}
 
 trait BlockFlow
     extends MultiChain

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.validation
+package org.oxyg3nium.flow.validation
 
-import org.alephium.flow.core.{BlockChain, BlockFlow, BlockFlowGroupView}
-import org.alephium.flow.model.BlockFlowTemplate
-import org.alephium.io.{IOError, IOUtils}
-import org.alephium.protocol.{ALPH, Hash}
-import org.alephium.protocol.config.{BrokerConfig, ConsensusConfigs, NetworkConfig}
-import org.alephium.protocol.mining.Emission
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.{NetworkId => _, _}
-import org.alephium.serde._
-import org.alephium.util.{AVector, Bytes, EitherF, U256}
+import org.oxyg3nium.flow.core.{BlockChain, BlockFlow, BlockFlowGroupView}
+import org.oxyg3nium.flow.model.BlockFlowTemplate
+import org.oxyg3nium.io.{IOError, IOUtils}
+import org.oxyg3nium.protocol.{ALPH, Hash}
+import org.oxyg3nium.protocol.config.{BrokerConfig, ConsensusConfigs, NetworkConfig}
+import org.oxyg3nium.protocol.mining.Emission
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.{NetworkId => _, _}
+import org.oxyg3nium.serde._
+import org.oxyg3nium.util.{AVector, Bytes, EitherF, U256}
 
 // scalastyle:off number.of.methods
 

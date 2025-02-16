@@ -2,12 +2,12 @@ FROM adoptopenjdk:11-jre
 
 ARG RELEASE=0.0.0
 
-RUN curl -L --proto "=https" https://github.com/alephium/alephium/releases/download/v${RELEASE}/alephium-${RELEASE}.jar -o /alephium.jar && \
-  mkdir -p /alephium-home && usermod -d /alephium-home nobody && chown nobody /alephium-home && \
-  mkdir -p ~nobody/.alephium && chown nobody ~nobody/.alephium && \
-  mkdir -p ~nobody/.alephium-wallets && chown nobody ~nobody/.alephium-wallets
+RUN curl -L --proto "=https" https://github.com/oxyg3nium/oxyg3nium/releases/download/v${RELEASE}/oxyg3nium-${RELEASE}.jar -o /oxyg3nium.jar && \
+  mkdir -p /oxyg3nium-home && usermod -d /oxyg3nium-home nobody && chown nobody /oxyg3nium-home && \
+  mkdir -p ~nobody/.oxyg3nium && chown nobody ~nobody/.oxyg3nium && \
+  mkdir -p ~nobody/.oxyg3nium-wallets && chown nobody ~nobody/.oxyg3nium-wallets
 
-COPY user-mainnet-release.conf /alephium-home/.alephium/user.conf
+COPY user-mainnet-release.conf /oxyg3nium-home/.oxyg3nium/user.conf
 COPY entrypoint.sh /entrypoint.sh
 
 # http
@@ -19,9 +19,9 @@ EXPOSE 10973
 # p2p
 EXPOSE 9973
 
-VOLUME /alephium-home/.alephium
+VOLUME /oxyg3nium-home/.oxyg3nium
 
-VOLUME /alephium-home/.alephium-wallets
+VOLUME /oxyg3nium-home/.oxyg3nium-wallets
 
 USER nobody
 

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.intraclique
+package org.oxyg3nium.flow.network.intraclique
 
-import org.alephium.flow.Utils
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.handler.{FlowHandler, TxHandler}
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.{CliqueManager, IntraCliqueManager}
-import org.alephium.flow.network.broker.{BrokerHandler => BaseBrokerHandler}
-import org.alephium.protocol.config.BrokerConfig
-import org.alephium.protocol.message._
-import org.alephium.protocol.model._
-import org.alephium.util.{ActorRefT, AVector, Duration}
+import org.oxyg3nium.flow.Utils
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.handler.{FlowHandler, TxHandler}
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.{CliqueManager, IntraCliqueManager}
+import org.oxyg3nium.flow.network.broker.{BrokerHandler => BaseBrokerHandler}
+import org.oxyg3nium.protocol.config.BrokerConfig
+import org.oxyg3nium.protocol.message._
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{ActorRefT, AVector, Duration}
 
 trait BrokerHandler extends BaseBrokerHandler {
   def selfCliqueInfo: CliqueInfo

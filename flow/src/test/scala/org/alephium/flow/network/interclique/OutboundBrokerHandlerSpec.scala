@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,20 +14,20 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.interclique
+package org.oxyg3nium.flow.network.interclique
 
 import scala.util.Random
 
 import akka.io.Tcp
 import akka.testkit.{TestActorRef, TestProbe}
 
-import org.alephium.flow.{AlephiumFlowActorSpec, FlowFixture}
-import org.alephium.flow.handler.TestUtils
-import org.alephium.flow.network.broker.BrokerHandler
-import org.alephium.protocol.{Generators, SignatureSchema}
-import org.alephium.protocol.message.{Hello, P2PV1, P2PV2}
-import org.alephium.protocol.model.InterBrokerInfo
-import org.alephium.util.ActorRefT
+import org.oxyg3nium.flow.{AlephiumFlowActorSpec, FlowFixture}
+import org.oxyg3nium.flow.handler.TestUtils
+import org.oxyg3nium.flow.network.broker.BrokerHandler
+import org.oxyg3nium.protocol.{Generators, SignatureSchema}
+import org.oxyg3nium.protocol.message.{Hello, P2PV1, P2PV2}
+import org.oxyg3nium.protocol.model.InterBrokerInfo
+import org.oxyg3nium.util.ActorRefT
 
 class OutboundBrokerHandlerSpec extends AlephiumFlowActorSpec {
   it should "connect to remote broker with valid broker info" in new Fixture {

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.model
+package org.oxyg3nium.protocol.model
 
 import scala.annotation.tailrec
 import scala.collection.mutable
@@ -25,11 +25,11 @@ import org.scalacheck.Arbitrary._
 import org.scalacheck.Gen
 import org.scalatest.Assertion
 
-import org.alephium.protocol._
-import org.alephium.protocol.config._
-import org.alephium.protocol.model.ModelGenerators._
-import org.alephium.protocol.vm.{LockupScript, StatefulContract, UnlockScript, Val}
-import org.alephium.util._
+import org.oxyg3nium.protocol._
+import org.oxyg3nium.protocol.config._
+import org.oxyg3nium.protocol.model.ModelGenerators._
+import org.oxyg3nium.protocol.vm.{LockupScript, StatefulContract, UnlockScript, Val}
+import org.oxyg3nium.util._
 
 trait LockupScriptGenerators extends Generators {
   import ModelGenerators.ScriptPair

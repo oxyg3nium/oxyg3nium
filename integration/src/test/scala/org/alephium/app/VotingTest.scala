@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
-import org.alephium.api.model._
-import org.alephium.json.Json._
-import org.alephium.protocol.{ALPH, PublicKey}
-import org.alephium.protocol.model.{
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.model.{
   dustUtxoAmount,
   Address,
   BlockHash,
@@ -27,9 +27,9 @@ import org.alephium.protocol.model.{
   TokenId,
   TransactionId
 }
-import org.alephium.protocol.vm
-import org.alephium.util._
-import org.alephium.wallet.api.model._
+import org.oxyg3nium.protocol.vm
+import org.oxyg3nium.util._
+import org.oxyg3nium.wallet.api.model._
 
 class VotingTest extends AlephiumActorSpec {
   it should "test the voting pipeline" in new VotingFixture {
@@ -326,7 +326,7 @@ trait VotingFixture extends WalletFixture {
 }
 
 trait WalletFixture extends CliqueFixture {
-  override val configValues: Map[String, Any] = Map(("alephium.broker.broker-num", 1))
+  override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-num", 1))
   val clique                                  = bootClique(1)
   val activeAddressesGroup                    = 0
   val genesisWalletName                       = "genesis-wallet"
@@ -415,7 +415,7 @@ trait WalletFixture extends CliqueFixture {
       )
     walletsCreation.zip(walletsCreationResult).map {
       case (walletCreation, walletCreationResult) => {
-        import org.alephium.api.UtilJson._
+        import org.oxyg3nium.api.UtilJson._
         unitRequest(unlockWallet(walletCreation.password, walletCreation.walletName), restPort)
         val addresses = request[AVector[MinerAddressesInfo]](
           getMinerAddresses(walletCreation.walletName),

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,11 +14,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.util
+package org.oxyg3nium.util
 
 import akka.util.ByteString
 
-import org.alephium.util.Hex._
+import org.oxyg3nium.util.Hex._
 
 class HexSpec extends AlephiumSpec {
   it should "interpolate string correctly" in {

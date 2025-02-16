@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.setting
+package org.oxyg3nium.flow.setting
 
-import org.alephium.protocol.model.NetworkId
-import org.alephium.util.{Env, SocketUtil}
+import org.oxyg3nium.protocol.model.NetworkId
+import org.oxyg3nium.util.{Env, SocketUtil}
 
 trait RandomPortsConfigFixture extends SocketUtil {
   private val publicPort   = generatePort()
@@ -33,14 +33,14 @@ trait RandomPortsConfigFixture extends SocketUtil {
       case _               => throw new RuntimeException("Invalid test env")
     }
     Map(
-      ("alephium.network.network-id", networkId),
-      ("alephium.network.bind-address", s"127.0.0.1:$publicPort"),
-      ("alephium.network.external-address", s"127.0.0.1:$publicPort"),
-      ("alephium.network.internal-address", s"127.0.0.1:$publicPort"),
-      ("alephium.network.coordinator-address", s"127.0.0.1:$masterPort"),
-      ("alephium.network.rest-port", restPort),
-      ("alephium.network.ws-port", wsPort),
-      ("alephium.network.miner-api-port", minerApiPort)
+      ("oxyg3nium.network.network-id", networkId),
+      ("oxyg3nium.network.bind-address", s"127.0.0.1:$publicPort"),
+      ("oxyg3nium.network.external-address", s"127.0.0.1:$publicPort"),
+      ("oxyg3nium.network.internal-address", s"127.0.0.1:$publicPort"),
+      ("oxyg3nium.network.coordinator-address", s"127.0.0.1:$masterPort"),
+      ("oxyg3nium.network.rest-port", restPort),
+      ("oxyg3nium.network.ws-port", wsPort),
+      ("oxyg3nium.network.miner-api-port", minerApiPort)
     )
   }
 }

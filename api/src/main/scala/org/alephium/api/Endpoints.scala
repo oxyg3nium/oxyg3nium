@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.api
+package org.oxyg3nium.api
 
 import java.net.InetAddress
 
@@ -25,16 +25,16 @@ import sttp.tapir.EndpointIO.Example
 import sttp.tapir.EndpointOutput.OneOfVariant
 import sttp.tapir.generic.auto._
 
-import org.alephium.api.TapirCodecs
-import org.alephium.api.TapirSchemasLike
-import org.alephium.api.UtilJson.{avectorReadWriter, inetAddressRW}
-import org.alephium.api.model._
-import org.alephium.json.Json.ReadWriter
-import org.alephium.protocol.{ALPH, Hash}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{Transaction => _, _}
-import org.alephium.protocol.vm.StatefulContract
-import org.alephium.util.{AVector, TimeStamp}
+import org.oxyg3nium.api.TapirCodecs
+import org.oxyg3nium.api.TapirSchemasLike
+import org.oxyg3nium.api.UtilJson.{avectorReadWriter, inetAddressRW}
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.json.Json.ReadWriter
+import org.oxyg3nium.protocol.{ALPH, Hash}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{Transaction => _, _}
+import org.oxyg3nium.protocol.vm.StatefulContract
+import org.oxyg3nium.util.{AVector, TimeStamp}
 
 //scalastyle:off file.size.limit
 trait Endpoints

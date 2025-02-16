@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,30 +14,30 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.io
+package org.oxyg3nium.flow.io
 
 import java.nio.file.Path
 
 import org.rocksdb.WriteOptions
 
-import org.alephium.crypto.Byte32
-import org.alephium.flow.setting.NodeSetting
-import org.alephium.io._
-import org.alephium.io.RocksDBSource.ColumnFamily._
-import org.alephium.io.SparseMerkleTrie.Node
-import org.alephium.protocol.Hash
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{ContractId, TxOutputRef}
-import org.alephium.protocol.vm._
-import org.alephium.protocol.vm.event.LogStorage
-import org.alephium.protocol.vm.nodeindexes.{NodeIndexesStorage, TxIdTxOutputLocators}
-import org.alephium.protocol.vm.subcontractindex.{
+import org.oxyg3nium.crypto.Byte32
+import org.oxyg3nium.flow.setting.NodeSetting
+import org.oxyg3nium.io._
+import org.oxyg3nium.io.RocksDBSource.ColumnFamily._
+import org.oxyg3nium.io.SparseMerkleTrie.Node
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{ContractId, TxOutputRef}
+import org.oxyg3nium.protocol.vm._
+import org.oxyg3nium.protocol.vm.event.LogStorage
+import org.oxyg3nium.protocol.vm.nodeindexes.{NodeIndexesStorage, TxIdTxOutputLocators}
+import org.oxyg3nium.protocol.vm.subcontractindex.{
   SubContractIndexState,
   SubContractIndexStateId,
   SubContractIndexStorage
 }
-import org.alephium.serde.{avectorSerde, eitherSerde, intSerde}
-import org.alephium.util.AVector
+import org.oxyg3nium.serde.{avectorSerde, eitherSerde, intSerde}
+import org.oxyg3nium.util.AVector
 
 object Storages {
   val isInitializedPostfix: Byte = 0

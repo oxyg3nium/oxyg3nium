@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,11 +14,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.model
+package org.oxyg3nium.protocol.model
 
-import org.alephium.protocol.Hash
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.util.{Bytes, DjbHash}
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.util.{Bytes, DjbHash}
 
 class ScriptHint(val value: Int) extends AnyVal {
   def groupIndex(implicit config: GroupConfig): GroupIndex = {

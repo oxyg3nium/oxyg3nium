@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,16 +14,16 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.model
+package org.oxyg3nium.protocol.model
 
 import scala.util.Random
 
 import akka.util.ByteString
 
-import org.alephium.protocol.Generators
-import org.alephium.protocol.config.{GroupConfigFixture, NetworkConfigFixture}
-import org.alephium.serde.{deserialize, serialize}
-import org.alephium.util.{AlephiumSpec, AVector, TimeStamp}
+import org.oxyg3nium.protocol.Generators
+import org.oxyg3nium.protocol.config.{GroupConfigFixture, NetworkConfigFixture}
+import org.oxyg3nium.serde.{deserialize, serialize}
+import org.oxyg3nium.util.{AlephiumSpec, AVector, TimeStamp}
 
 class CoinbaseDataSpec extends AlephiumSpec with Generators with GroupConfigFixture.Default {
   it should "serde CoinbaseDataV1" in {

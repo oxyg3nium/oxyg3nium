@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.model
+package org.oxyg3nium.protocol.model
 
-import org.alephium.serde.{deserialize, serialize}
-import org.alephium.util.{AlephiumSpec, AVector, NumericHelpers}
+import org.oxyg3nium.serde.{deserialize, serialize}
+import org.oxyg3nium.util.{AlephiumSpec, AVector, NumericHelpers}
 
 class BlockHeightRangeSpec extends AlephiumSpec with NumericHelpers {
   it should "validate block height range" in {

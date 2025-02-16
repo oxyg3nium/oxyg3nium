@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.validation
+package org.oxyg3nium.flow.validation
 
-import org.alephium.io.{IOError, IOResult}
-import org.alephium.protocol.model.{BlockHash, Transaction}
-import org.alephium.protocol.vm._
-import org.alephium.util.AVector
+import org.oxyg3nium.io.{IOError, IOResult}
+import org.oxyg3nium.protocol.model.{BlockHash, Transaction}
+import org.oxyg3nium.protocol.vm._
+import org.oxyg3nium.util.AVector
 
 // scalastyle:off number.of.types
 
@@ -71,7 +71,7 @@ final case object InvalidFlowTxs                                    extends Inva
 final case object InvalidTestnetMiner extends InvalidBlockStatus {
   lazy val errorMessage =
     "The testnet is currently limited to whitelisted miners only. To test miners or pools, please set up a local testnet following the documentation: " +
-      "https://github.com/alephium/alephium-stack/tree/master/mining-pool-local-testnet"
+      "https://github.com/oxyg3nium/oxyg3nium-stack/tree/master/mining-pool-local-testnet"
 
   override def toString: String = errorMessage
 }

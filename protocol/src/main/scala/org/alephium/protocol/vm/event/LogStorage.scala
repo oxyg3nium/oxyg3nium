@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm.event
+package org.oxyg3nium.protocol.vm.event
 
-import org.alephium.crypto.Byte32
-import org.alephium.io.KeyValueStorage
-import org.alephium.protocol.model.ContractId
-import org.alephium.protocol.vm.{LogStateRef, LogStates, LogStatesId}
-import org.alephium.util.AVector
+import org.oxyg3nium.crypto.Byte32
+import org.oxyg3nium.io.KeyValueStorage
+import org.oxyg3nium.protocol.model.ContractId
+import org.oxyg3nium.protocol.vm.{LogStateRef, LogStates, LogStatesId}
+import org.oxyg3nium.util.AVector
 
 final case class LogStorage(
     logState: KeyValueStorage[LogStatesId, LogStates],

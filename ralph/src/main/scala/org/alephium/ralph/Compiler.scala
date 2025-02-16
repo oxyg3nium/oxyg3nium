@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.ralph
+package org.oxyg3nium.ralph
 
 import java.nio.charset.StandardCharsets
 
@@ -23,11 +23,11 @@ import scala.collection.{immutable, mutable}
 import akka.util.ByteString
 import fastparse.Parsed
 
-import org.alephium.protocol.vm._
-import org.alephium.ralph.Ast.{Ident, MultiContract}
-import org.alephium.ralph.error.CompilerError
-import org.alephium.ralph.error.CompilerError.FastParseError
-import org.alephium.util.{AVector, U256}
+import org.oxyg3nium.protocol.vm._
+import org.oxyg3nium.ralph.Ast.{Ident, MultiContract}
+import org.oxyg3nium.ralph.error.CompilerError
+import org.oxyg3nium.ralph.error.CompilerError.FastParseError
+import org.oxyg3nium.util.{AVector, U256}
 
 //TODO add SourceIndex to warnings
 final case class CompiledContract(

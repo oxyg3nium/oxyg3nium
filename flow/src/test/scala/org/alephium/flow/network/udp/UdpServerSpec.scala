@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,15 +14,15 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.udp
+package org.oxyg3nium.flow.network.udp
 
 import java.net.InetSocketAddress
 
 import akka.testkit.{EventFilter, SocketUtil, TestActorRef}
 import akka.util.ByteString
 
-import org.alephium.crypto.Blake2b
-import org.alephium.util.{AlephiumActorSpec}
+import org.oxyg3nium.crypto.Blake2b
+import org.oxyg3nium.util.{AlephiumActorSpec}
 
 class UdpServerSpec extends AlephiumActorSpec {
   it should "read and write messages" in new Fixture {
@@ -30,7 +30,7 @@ class UdpServerSpec extends AlephiumActorSpec {
     val (bindAddress1, udpServer1) = createUdpServer()
 
     (0 until 100).foreach { k =>
-      val message = ByteString.fromString("alephium" * k)
+      val message = ByteString.fromString("oxyg3nium" * k)
       udpServer0 ! UdpServer.Send(message, bindAddress1)
       expectMsg(UdpServer.Received(message, bindAddress0))
 
@@ -41,7 +41,7 @@ class UdpServerSpec extends AlephiumActorSpec {
 
   it should "fail when send data to invalid address" in new Fixture {
     val (_, udpServer) = createUdpServer()
-    val message        = ByteString.fromString("alephium")
+    val message        = ByteString.fromString("oxyg3nium")
     val remote         = new InetSocketAddress(s"www.${Blake2b.generate.toHexString}.io", 9973)
     val send           = UdpServer.Send(message, remote)
 

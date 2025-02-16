@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import org.scalacheck.Gen
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.FlowUtils.{AssetOutputInfo, MemPoolOutput}
-import org.alephium.protocol.model.{AssetOutputRef, ChainIndex, ModelGenerators, TxGenerators}
-import org.alephium.util.{AlephiumSpec, AVector}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.FlowUtils.{AssetOutputInfo, MemPoolOutput}
+import org.oxyg3nium.protocol.model.{AssetOutputRef, ChainIndex, ModelGenerators, TxGenerators}
+import org.oxyg3nium.util.{AlephiumSpec, AVector}
 
 class ExtraUtxosInfoSpec extends AlephiumSpec {
 

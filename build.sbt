@@ -10,7 +10,7 @@ resolvers += "Sonatype Releases" at "https://oss.sonatype.org/content/repositori
 def baseProject(id: String): Project = {
   Project(id, file(id))
     .settings(commonSettings: _*)
-    .settings(name := s"alephium-$id")
+    .settings(name := s"oxyg3nium-$id")
 }
 
 val scalastyleCfgFile     = "project/scalastyle-config.xml"
@@ -21,10 +21,10 @@ val genSerde = Command.command("genSerde") { state =>
   state
 }
 
-lazy val root: Project = Project("alephium-scala-blockflow", file("."))
+lazy val root: Project = Project("oxyg3nium-scala-blockflow", file("."))
   .settings(commonSettings: _*)
   .settings(
-    name              := "alephium",
+    name              := "oxyg3nium",
     scalastyle        := {},
     Test / scalastyle := {},
     publish / skip    := true,
@@ -140,8 +140,8 @@ lazy val app = mainProject("app")
   )
   .enablePlugins(sbtdocker.DockerPlugin, BuildInfoPlugin)
   .settings(
-    assembly / mainClass       := Some("org.alephium.app.Boot"),
-    assembly / assemblyJarName := s"alephium-${version.value}.jar",
+    assembly / mainClass       := Some("org.oxyg3nium.app.Boot"),
+    assembly / assemblyJarName := s"oxyg3nium-${version.value}.jar",
     assembly / test            := {},
     assemblyMergeStrategy := {
       case "logback.xml" => MergeStrategy.first
@@ -166,11 +166,11 @@ lazy val app = mainProject("app")
     publish / skip := true,
     docker / dockerfile := {
       val artifact: File     = assembly.value
-      val artifactTargetPath = "/alephium.jar"
+      val artifactTargetPath = "/oxyg3nium.jar"
 
       val userConf: File = file("docker/user.conf")
 
-      val alephiumHome = "/alephium-home"
+      val oxyg3niumHome = "/oxyg3nium-home"
 
       new Dockerfile {
         from("eclipse-temurin:17-jre")
@@ -180,15 +180,15 @@ lazy val app = mainProject("app")
 
         runRaw(
           Seq(
-            s"mkdir -p $alephiumHome && usermod -d $alephiumHome nobody && chown nobody $alephiumHome",
-            s"mkdir -p $alephiumHome/.alephium && chown nobody $alephiumHome/.alephium",
-            s"mkdir -p $alephiumHome/.alephium/mainnet && chown nobody $alephiumHome/.alephium/mainnet",
-            s"mkdir -p $alephiumHome/.alephium-wallets && chown nobody $alephiumHome/.alephium-wallets"
+            s"mkdir -p $oxyg3niumHome && usermod -d $oxyg3niumHome nobody && chown nobody $oxyg3niumHome",
+            s"mkdir -p $oxyg3niumHome/.oxyg3nium && chown nobody $oxyg3niumHome/.oxyg3nium",
+            s"mkdir -p $oxyg3niumHome/.oxyg3nium/mainnet && chown nobody $oxyg3niumHome/.oxyg3nium/mainnet",
+            s"mkdir -p $oxyg3niumHome/.oxyg3nium-wallets && chown nobody $oxyg3niumHome/.oxyg3nium-wallets"
           ).mkString(" && ")
         )
-        workDir(alephiumHome)
+        workDir(oxyg3niumHome)
 
-        copy(userConf, file(s"$alephiumHome/.alephium/user.conf"))
+        copy(userConf, file(s"$oxyg3niumHome/.oxyg3nium/user.conf"))
 
         copy(artifact, artifactTargetPath)
 
@@ -199,8 +199,8 @@ lazy val app = mainProject("app")
         expose(10973) // miner
         expose(9973)  // p2p
 
-        volume(s"$alephiumHome/.alephium")
-        volume(s"$alephiumHome/.alephium-wallets")
+        volume(s"$oxyg3niumHome/.oxyg3nium")
+        volume(s"$oxyg3niumHome/.oxyg3nium-wallets")
 
         user("nobody")
 
@@ -223,7 +223,7 @@ lazy val app = mainProject("app")
     },
     docker / imageNames := {
       dockerImageNames(
-        baseImageName = "alephium/dev-alephium",
+        baseImageName = "oxyg3nium/dev-oxyg3nium",
         versionTag = version.value.replace('+', '_')
       )
     },
@@ -235,7 +235,7 @@ lazy val app = mainProject("app")
       BuildInfoKey("branch"         -> git.gitCurrentBranch.value),
       BuildInfoKey("releaseVersion" -> version.value)
     ),
-    buildInfoPackage          := "org.alephium.app",
+    buildInfoPackage          := "org.oxyg3nium.app",
     buildInfoUsePackageAsPath := true
   )
 
@@ -270,7 +270,7 @@ lazy val http = project("http")
 lazy val tools = mainProject("tools")
   .enablePlugins(sbtdocker.DockerPlugin)
   .settings(
-    assembly / assemblyJarName := s"alephium-tools-${version.value}.jar",
+    assembly / assemblyJarName := s"oxyg3nium-tools-${version.value}.jar",
     assembly / test            := {},
     assemblyMergeStrategy := {
       case "logback.xml" => MergeStrategy.first
@@ -285,26 +285,26 @@ lazy val tools = mainProject("tools")
     },
     docker / dockerfile := {
       val artifact: File     = assembly.value
-      val artifactTargetPath = "/alephium-tools.jar"
+      val artifactTargetPath = "/oxyg3nium-tools.jar"
 
-      val alephiumHome = "/alephium-home"
+      val oxyg3niumHome = "/oxyg3nium-home"
 
       new Dockerfile {
         from("openjdk:17-jdk")
 
         runRaw(
           Seq(
-            s"mkdir -p $alephiumHome && usermod -d $alephiumHome nobody && chown nobody $alephiumHome",
-            s"mkdir -p $alephiumHome/.alephium && chown nobody $alephiumHome/.alephium",
-            s"mkdir -p $alephiumHome/.alephium/mainnet && chown nobody $alephiumHome/.alephium/mainnet"
+            s"mkdir -p $oxyg3niumHome && usermod -d $oxyg3niumHome nobody && chown nobody $oxyg3niumHome",
+            s"mkdir -p $oxyg3niumHome/.oxyg3nium && chown nobody $oxyg3niumHome/.oxyg3nium",
+            s"mkdir -p $oxyg3niumHome/.oxyg3nium/mainnet && chown nobody $oxyg3niumHome/.oxyg3nium/mainnet"
           ).mkString(" && ")
         )
 
-        workDir(alephiumHome)
+        workDir(oxyg3niumHome)
 
         copy(artifact, artifactTargetPath)
 
-        volume(s"$alephiumHome/.alephium")
+        volume(s"$oxyg3niumHome/.oxyg3nium")
 
         user("nobody")
 
@@ -313,7 +313,7 @@ lazy val tools = mainProject("tools")
     },
     docker / imageNames := {
       dockerImageNames(
-        baseImageName = "alephium/dev-alephium-tools",
+        baseImageName = "oxyg3nium/dev-oxyg3nium-tools",
         versionTag = version.value.replace('+', '_')
       )
     }
@@ -350,7 +350,7 @@ lazy val protocol = project("protocol")
   .enablePlugins(BuildInfoPlugin)
   .settings(
     buildInfoKeys             := Seq[BuildInfoKey](version),
-    buildInfoPackage          := "org.alephium.protocol",
+    buildInfoPackage          := "org.oxyg3nium.protocol",
     buildInfoUsePackageAsPath := true
   )
   .dependsOn(
@@ -397,8 +397,8 @@ lazy val wallet = project("wallet")
       logback
     ),
     publish / skip             := true,
-    assembly / mainClass       := Some("org.alephium.wallet.Main"),
-    assembly / assemblyJarName := s"alephium-wallet-${version.value}.jar",
+    assembly / mainClass       := Some("org.oxyg3nium.wallet.Main"),
+    assembly / assemblyJarName := s"oxyg3nium-wallet-${version.value}.jar",
     assembly / test            := {},
     assemblyMergeStrategy := {
       case PathList("META-INF", "maven", "org.webjars", "swagger-ui", xs @ _*) =>
@@ -429,8 +429,8 @@ lazy val ralphc = project("ralphc")
       scopt
     ),
     publish / skip             := false,
-    assembly / mainClass       := Some("org.alephium.ralphc.Main"),
-    assembly / assemblyJarName := s"alephium-ralphc-${version.value}.jar",
+    assembly / mainClass       := Some("org.oxyg3nium.ralphc.Main"),
+    assembly / assemblyJarName := s"oxyg3nium-ralphc-${version.value}.jar",
     assembly / test            := {},
     assemblyMergeStrategy := {
       case PathList("module-info.class") =>
@@ -450,15 +450,15 @@ lazy val integration = project("integration")
   )
 
 val publishSettings = Seq(
-  organization := "org.alephium",
-  homepage     := Some(url("https://github.com/alephium/alephium")),
+  organization := "org.oxyg3nium",
+  homepage     := Some(url("https://github.com/oxyg3nium/oxyg3nium")),
   licenses     := Seq("LGPL 3.0" -> new URL("https://www.gnu.org/licenses/lgpl-3.0.en.html")),
   developers := List(
     Developer(
-      id = "alephium core dev",
-      name = "alephium core dev",
-      email = "dev@alephium.org",
-      url = url("https://alephium.org/")
+      id = "oxyg3nium core dev",
+      name = "oxyg3nium core dev",
+      email = "dev@oxyg3nium.org",
+      url = url("https://oxyg3nium.org/")
     )
   )
 )

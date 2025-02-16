@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
 import scala.annotation.tailrec
 import scala.collection.mutable
@@ -22,20 +22,20 @@ import scala.reflect.ClassTag
 
 import com.typesafe.scalalogging.LazyLogging
 
-import org.alephium.flow.Utils
-import org.alephium.flow.mempool._
-import org.alephium.flow.model.BlockFlowTemplate
-import org.alephium.flow.setting.{ConsensusSettings, MemPoolSetting}
-import org.alephium.flow.validation._
-import org.alephium.io.{IOError, IOResult, IOUtils}
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.config.NetworkConfig
-import org.alephium.protocol.mining.Emission
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm._
-import org.alephium.protocol.vm.StatefulVM.TxScriptExecution
-import org.alephium.serde.serialize
-import org.alephium.util.{AVector, Hex, TimeStamp, U256}
+import org.oxyg3nium.flow.Utils
+import org.oxyg3nium.flow.mempool._
+import org.oxyg3nium.flow.model.BlockFlowTemplate
+import org.oxyg3nium.flow.setting.{ConsensusSettings, MemPoolSetting}
+import org.oxyg3nium.flow.validation._
+import org.oxyg3nium.io.{IOError, IOResult, IOUtils}
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.config.NetworkConfig
+import org.oxyg3nium.protocol.mining.Emission
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm._
+import org.oxyg3nium.protocol.vm.StatefulVM.TxScriptExecution
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util.{AVector, Hex, TimeStamp, U256}
 
 // scalastyle:off number.of.methods
 trait FlowUtils

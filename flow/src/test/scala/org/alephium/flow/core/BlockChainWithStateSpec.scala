@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.core
+package org.oxyg3nium.flow.core
 
-import org.alephium.flow.AlephiumFlowSpec
-import org.alephium.flow.io.StoragesFixture
-import org.alephium.protocol.Hash
-import org.alephium.protocol.model.{Block, ChainIndex, ChainTip, NoIndexModelGeneratorsLike, Weight}
-import org.alephium.util.AVector
+import org.oxyg3nium.flow.AlephiumFlowSpec
+import org.oxyg3nium.flow.io.StoragesFixture
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.model.{Block, ChainIndex, ChainTip, NoIndexModelGeneratorsLike, Weight}
+import org.oxyg3nium.util.AVector
 
 class BlockChainWithStateSpec extends AlephiumFlowSpec with NoIndexModelGeneratorsLike {
   trait Fixture {

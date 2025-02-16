@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,19 +14,19 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
-import org.alephium.api.ApiError
-import org.alephium.api.model.{TransactionTemplate => _, _}
-import org.alephium.flow.gasestimation._
-import org.alephium.flow.validation.{InvalidSignature, NotEnoughSignature}
-import org.alephium.json.Json._
-import org.alephium.protocol.{Hash, PrivateKey, Signature, SignatureSchema}
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.GasBox
-import org.alephium.serde.{deserialize, serialize}
-import org.alephium.util._
-import org.alephium.wallet.api.model._
+import org.oxyg3nium.api.ApiError
+import org.oxyg3nium.api.model.{TransactionTemplate => _, _}
+import org.oxyg3nium.flow.gasestimation._
+import org.oxyg3nium.flow.validation.{InvalidSignature, NotEnoughSignature}
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.{Hash, PrivateKey, Signature, SignatureSchema}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.GasBox
+import org.oxyg3nium.serde.{deserialize, serialize}
+import org.oxyg3nium.util._
+import org.oxyg3nium.wallet.api.model._
 
 class MultisigTest extends AlephiumActorSpec {
 

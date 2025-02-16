@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,17 +14,17 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.io
+package org.oxyg3nium.flow.io
 
 import akka.util.ByteString
 import org.rocksdb.{ReadOptions, WriteOptions}
 
-import org.alephium.flow.io.HeightIndexStorage.hashesSerde
-import org.alephium.io.{RocksDBKeyValueStorage, RocksDBSource}
-import org.alephium.io.RocksDBSource.ColumnFamily
-import org.alephium.protocol.model.{BlockHash, ChainIndex}
-import org.alephium.serde._
-import org.alephium.util.{AVector, Bytes}
+import org.oxyg3nium.flow.io.HeightIndexStorage.hashesSerde
+import org.oxyg3nium.io.{RocksDBKeyValueStorage, RocksDBSource}
+import org.oxyg3nium.io.RocksDBSource.ColumnFamily
+import org.oxyg3nium.protocol.model.{BlockHash, ChainIndex}
+import org.oxyg3nium.serde._
+import org.oxyg3nium.util.{AVector, Bytes}
 
 object HeightIndexStorage {
   implicit val hashesSerde: Serde[AVector[BlockHash]] = avectorSerde[BlockHash]

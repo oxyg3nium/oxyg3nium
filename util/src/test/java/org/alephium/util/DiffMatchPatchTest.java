@@ -23,7 +23,7 @@
  * java -classpath classes name/fraser/neil/plaintext/DiffMatchPatch_test
  */
 
-package org.alephium.util;
+package org.oxyg3nium.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,9 +32,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import org.alephium.util.DiffMatchPatch.Diff;
-import org.alephium.util.DiffMatchPatch.LinesToCharsResult;
-import org.alephium.util.DiffMatchPatch.Patch;
+import org.oxyg3nium.util.DiffMatchPatch.Diff;
+import org.oxyg3nium.util.DiffMatchPatch.LinesToCharsResult;
+import org.oxyg3nium.util.DiffMatchPatch.Patch;
 
 public class DiffMatchPatchTest {
 

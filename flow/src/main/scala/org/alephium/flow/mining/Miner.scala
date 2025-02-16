@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.mining
+package org.oxyg3nium.flow.mining
 
 import scala.annotation.tailrec
 import scala.concurrent.Future
@@ -23,15 +23,15 @@ import scala.util.{Failure, Success}
 import akka.util.ByteString
 import com.typesafe.scalalogging.LazyLogging
 
-import org.alephium.flow.model.BlockFlowTemplate
-import org.alephium.flow.setting.MiningSetting
-import org.alephium.flow.validation.InvalidTestnetMiner
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.config.{GroupConfig, NetworkConfig}
-import org.alephium.protocol.mining.PoW
-import org.alephium.protocol.model._
-import org.alephium.serde.deserialize
-import org.alephium.util._
+import org.oxyg3nium.flow.model.BlockFlowTemplate
+import org.oxyg3nium.flow.setting.MiningSetting
+import org.oxyg3nium.flow.validation.InvalidTestnetMiner
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfig}
+import org.oxyg3nium.protocol.mining.PoW
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.serde.deserialize
+import org.oxyg3nium.util._
 
 object Miner extends LazyLogging {
   sealed trait Command

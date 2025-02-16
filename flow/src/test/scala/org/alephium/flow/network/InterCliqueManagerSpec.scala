@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network
+package org.oxyg3nium.flow.network
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.Random
@@ -25,15 +25,15 @@ import akka.testkit.{EventFilter, TestActorRef, TestProbe}
 import akka.util.Timeout
 import org.scalatest.concurrent.ScalaFutures
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.handler.TestUtils
-import org.alephium.flow.model.DataOrigin
-import org.alephium.flow.network.InterCliqueManager.{BrokerState, SyncedResult}
-import org.alephium.flow.network.broker._
-import org.alephium.protocol.Generators
-import org.alephium.protocol.message.{Message, NewBlock, P2PV1}
-import org.alephium.protocol.model.{BrokerInfo, ChainIndex, TransactionId}
-import org.alephium.util._
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.handler.TestUtils
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.flow.network.InterCliqueManager.{BrokerState, SyncedResult}
+import org.oxyg3nium.flow.network.broker._
+import org.oxyg3nium.protocol.Generators
+import org.oxyg3nium.protocol.message.{Message, NewBlock, P2PV1}
+import org.oxyg3nium.protocol.model.{BrokerInfo, ChainIndex, TransactionId}
+import org.oxyg3nium.util._
 
 class InterCliqueManagerSpec extends AlephiumActorSpec with Generators with ScalaFutures {
   override def actorSystemConfig = AlephiumActorSpec.debugConfig
@@ -160,7 +160,7 @@ class InterCliqueManagerSpec extends AlephiumActorSpec with Generators with Scal
 
   it should "not accept incoming connection when the number of inbound connections is large" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.max-inbound-connections-per-group", 1)
+      ("oxyg3nium.network.max-inbound-connections-per-group", 1)
     )
 
     val broker = relevantBrokerInfo()
@@ -181,7 +181,7 @@ class InterCliqueManagerSpec extends AlephiumActorSpec with Generators with Scal
 
   it should "not accept outbound connection when the number of outbound connections is large" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.max-outbound-connections-per-group", 1)
+      ("oxyg3nium.network.max-outbound-connections-per-group", 1)
     )
 
     val broker = relevantBrokerInfo(OutboundConnection)
@@ -200,7 +200,7 @@ class InterCliqueManagerSpec extends AlephiumActorSpec with Generators with Scal
 
   it should "not accept outbound connection when the number of pending outbound connections is large" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.max-outbound-connections-per-group", 1)
+      ("oxyg3nium.network.max-outbound-connections-per-group", 1)
     )
 
     val broker = relevantBrokerInfo()
@@ -217,7 +217,7 @@ class InterCliqueManagerSpec extends AlephiumActorSpec with Generators with Scal
 
   it should "not start outbound connection when the number of pending outbound connections is large" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.max-outbound-connections-per-group", 1)
+      ("oxyg3nium.network.max-outbound-connections-per-group", 1)
     )
 
     val broker = relevantBrokerInfo().info
@@ -414,7 +414,7 @@ class InterCliqueManagerSpec extends AlephiumActorSpec with Generators with Scal
 
   it should "publish node synced status" in new SyncFixture {
     override val configValues: Map[String, Any] =
-      Map(("alephium.network.update-synced-frequency", "1 minute"))
+      Map(("oxyg3nium.network.update-synced-frequency", "1 minute"))
     interCliqueManagerActor.lastNodeSyncedStatus is Some(false)
 
     def checkPublish(synced: Boolean) = {
@@ -560,9 +560,9 @@ class InterCliqueManagerSpec extends AlephiumActorSpec with Generators with Scal
 
   trait BroadCastFixture extends Fixture {
     override val configValues: Map[String, Any] = Map(
-      "alephium.broker.groups"     -> 4,
-      "alephium.broker.broker-num" -> 2,
-      "alephium.broker.broker-id"  -> 0
+      "oxyg3nium.broker.groups"     -> 4,
+      "oxyg3nium.broker.broker-num" -> 2,
+      "oxyg3nium.broker.broker-id"  -> 0
     )
 
     def genBrokerInfo(brokerId: Int): BrokerInfo = {

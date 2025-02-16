@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,16 +14,16 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.vm
+package org.oxyg3nium.protocol.vm
 
 import org.scalacheck.Gen
 import org.scalatest.Assertion
 
-import org.alephium.protocol.ALPH
-import org.alephium.protocol.config._
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.nodeindexes.TxOutputLocator
-import org.alephium.util.{AlephiumSpec, AVector, NumericHelpers, TimeStamp}
+import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.config._
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.nodeindexes.TxOutputLocator
+import org.oxyg3nium.util.{AlephiumSpec, AVector, NumericHelpers, TimeStamp}
 
 class ContractPoolSpec extends AlephiumSpec with NumericHelpers {
   trait Fixture extends VMFactory with NetworkConfigFixture.Default {

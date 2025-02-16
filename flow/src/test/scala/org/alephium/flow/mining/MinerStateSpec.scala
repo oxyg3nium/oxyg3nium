@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,19 +14,19 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.mining
+package org.oxyg3nium.flow.mining
 
 import scala.util.Random
 
 import akka.testkit.TestProbe
 import org.scalacheck.Gen
 
-import org.alephium.flow.AlephiumFlowActorSpec
-import org.alephium.flow.handler.{AllHandlers, TestUtils, ViewHandler}
-import org.alephium.flow.setting.MiningSetting
-import org.alephium.protocol.config.BrokerConfig
-import org.alephium.protocol.model.ChainIndex
-import org.alephium.util.AVector
+import org.oxyg3nium.flow.AlephiumFlowActorSpec
+import org.oxyg3nium.flow.handler.{AllHandlers, TestUtils, ViewHandler}
+import org.oxyg3nium.flow.setting.MiningSetting
+import org.oxyg3nium.protocol.config.BrokerConfig
+import org.oxyg3nium.protocol.model.ChainIndex
+import org.oxyg3nium.util.AVector
 
 class MinerStateSpec extends AlephiumFlowActorSpec { Spec =>
 

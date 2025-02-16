@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,25 +14,25 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network
+package org.oxyg3nium.flow.network
 
 import akka.io.Tcp
 import akka.testkit.TestProbe
 
-import org.alephium.crypto.SecP256K1PrivateKey
-import org.alephium.flow.io.StoragesFixture
-import org.alephium.flow.model.BootstrapInfo
-import org.alephium.flow.network.bootstrap.{InfoFixture, IntraCliqueInfo}
-import org.alephium.flow.setting.AlephiumConfigFixture
-import org.alephium.io.IOResult
-import org.alephium.util.{AlephiumActorSpec, TimeStamp}
+import org.oxyg3nium.crypto.SecP256K1PrivateKey
+import org.oxyg3nium.flow.io.StoragesFixture
+import org.oxyg3nium.flow.model.BootstrapInfo
+import org.oxyg3nium.flow.network.bootstrap.{InfoFixture, IntraCliqueInfo}
+import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.io.IOResult
+import org.oxyg3nium.util.{AlephiumActorSpec, TimeStamp}
 
 class BootstrapperSpec extends AlephiumActorSpec {
   it should "bootstrap a master" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      ("alephium.network.internal-address", s"127.0.0.1:9972"),
-      ("alephium.network.coordinator-address", s"127.0.0.1:9972"),
-      ("alephium.network.external-address", s"127.0.0.1:9972")
+      ("oxyg3nium.network.internal-address", s"127.0.0.1:9972"),
+      ("oxyg3nium.network.coordinator-address", s"127.0.0.1:9972"),
+      ("oxyg3nium.network.external-address", s"127.0.0.1:9972")
     )
 
     // Peer connects
@@ -68,7 +68,7 @@ class BootstrapperSpec extends AlephiumActorSpec {
 
   it should "bootstrap a single node clique" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      "alephium.broker.broker-num" -> 1
+      "oxyg3nium.broker.broker-num" -> 1
     )
 
     storages.nodeStateStorage.getBootstrapInfo() isE None
@@ -87,7 +87,7 @@ class BootstrapperSpec extends AlephiumActorSpec {
   // this is disabled for now
   ignore should "bootstrap with persisted discovery key" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      "alephium.broker.broker-num" -> 1
+      "oxyg3nium.broker.broker-num" -> 1
     )
 
     val bootstrapInfo = BootstrapInfo(intraCliqueInfo.priKey, TimeStamp.now())

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,15 +14,15 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.io
+package org.oxyg3nium.flow.io
 
 import akka.util.ByteString
 import org.rocksdb.{ReadOptions, WriteOptions}
 
-import org.alephium.flow.model.BlockState
-import org.alephium.io._
-import org.alephium.io.RocksDBSource.ColumnFamily
-import org.alephium.protocol.model.BlockHash
+import org.oxyg3nium.flow.model.BlockState
+import org.oxyg3nium.io._
+import org.oxyg3nium.io.RocksDBSource.ColumnFamily
+import org.oxyg3nium.protocol.model.BlockHash
 
 trait BlockStateStorage extends KeyValueStorage[BlockHash, BlockState] {
   override def storageKey(key: BlockHash): ByteString =

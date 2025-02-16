@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.benchmark
+package org.oxyg3nium.benchmark
 
 import java.nio.file.Path
 import java.util.concurrent.TimeUnit
 
 import org.openjdk.jmh.annotations._
 
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.io.Storages
-import org.alephium.flow.setting.{AlephiumConfig, Platform}
-import org.alephium.io.RocksDBSource
-import org.alephium.protocol.model.{BlockDeps, GroupIndex}
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.io.Storages
+import org.oxyg3nium.flow.setting.{AlephiumConfig, Platform}
+import org.oxyg3nium.io.RocksDBSource
+import org.oxyg3nium.protocol.model.{BlockDeps, GroupIndex}
 
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -33,7 +33,7 @@ import org.alephium.protocol.model.{BlockDeps, GroupIndex}
 @SuppressWarnings(Array("org.wartremover.warts.OptionPartial"))
 class BlockFlowBench {
   val rootPath: Path                  = Platform.getRootPath()
-  implicit val config: AlephiumConfig = AlephiumConfig.load(rootPath, "alephium")
+  implicit val config: AlephiumConfig = AlephiumConfig.load(rootPath, "oxyg3nium")
   private val storages: Storages = {
     val dbFolder = "db"
     Storages.createUnsafe(rootPath, dbFolder, RocksDBSource.ProdSettings.writeOptions)(

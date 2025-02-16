@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.setting
+package org.oxyg3nium.flow.setting
 
 import scala.jdk.CollectionConverters._
 
 import com.typesafe.config.{ConfigFactory, ConfigValueFactory}
 
-import org.alephium.flow.setting._
-import org.alephium.protocol.{ALPH, PrivateKey, PublicKey}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{Address, GroupIndex}
-import org.alephium.protocol.vm.{LogConfig, NodeIndexesConfig}
-import org.alephium.util.{AVector, Duration, Env, Number, U256}
+import org.oxyg3nium.flow.setting._
+import org.oxyg3nium.protocol.{ALPH, PrivateKey, PublicKey}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{Address, GroupIndex}
+import org.oxyg3nium.protocol.vm.{LogConfig, NodeIndexesConfig}
+import org.oxyg3nium.util.{AVector, Duration, Env, Number, U256}
 
 trait AlephiumConfigFixture extends RandomPortsConfigFixture {
 
@@ -53,7 +53,7 @@ trait AlephiumConfigFixture extends RandomPortsConfigFixture {
   }
   lazy val newConfig = buildNewConfig()
 
-  lazy val groups0 = newConfig.getInt("alephium.broker.groups")
+  lazy val groups0 = newConfig.getInt("oxyg3nium.broker.groups")
 
   lazy val groupConfig: GroupConfig = new GroupConfig { override def groups: Int = groups0 }
 

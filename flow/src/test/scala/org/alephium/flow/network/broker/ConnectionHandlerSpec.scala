@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.broker
+package org.oxyg3nium.flow.network.broker
 
 import java.net.InetSocketAddress
 
@@ -22,12 +22,12 @@ import akka.io.Tcp
 import akka.testkit.{SocketUtil, TestActorRef, TestProbe}
 import akka.util.ByteString
 
-import org.alephium.flow.network.broker.ConnectionHandler.Ack
-import org.alephium.flow.setting.AlephiumConfigFixture
-import org.alephium.protocol.{SignatureSchema, WireVersion}
-import org.alephium.protocol.message.{Header, Hello, Message, P2PV1, Ping, RequestId}
-import org.alephium.protocol.model.{BrokerInfo, CliqueId}
-import org.alephium.util.{AlephiumActorSpec, TimeStamp}
+import org.oxyg3nium.flow.network.broker.ConnectionHandler.Ack
+import org.oxyg3nium.flow.setting.AlephiumConfigFixture
+import org.oxyg3nium.protocol.{SignatureSchema, WireVersion}
+import org.oxyg3nium.protocol.message.{Header, Hello, Message, P2PV1, Ping, RequestId}
+import org.oxyg3nium.protocol.model.{BrokerInfo, CliqueId}
+import org.oxyg3nium.util.{AlephiumActorSpec, TimeStamp}
 
 class ConnectionHandlerSpec extends AlephiumActorSpec {
   trait Fixture extends AlephiumConfigFixture {
@@ -121,7 +121,7 @@ class ConnectionHandlerSpec extends AlephiumActorSpec {
 
   it should "close connection when write buffer overrun" in new Fixture {
     override val configValues: Map[String, Any] = Map(
-      "alephium.network.connection-buffer-capacity-in-byte" -> 100
+      "oxyg3nium.network.connection-buffer-capacity-in-byte" -> 100
     )
 
     watch(connectionHandler)

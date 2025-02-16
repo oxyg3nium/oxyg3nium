@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.net.InetSocketAddress
 import java.util.concurrent.ConcurrentLinkedQueue
@@ -28,16 +28,16 @@ import akka.actor.{Actor, ActorRef, Props}
 import akka.io.Tcp
 import akka.util.ByteString
 
-import org.alephium.api.model._
-import org.alephium.flow.mining.{ClientMessage, SubmitBlock}
-import org.alephium.flow.mining.{ExternalMinerMock, Miner}
-import org.alephium.flow.network.broker.{ConnectionHandler, MisbehaviorManager}
-import org.alephium.protocol.WireVersion
-import org.alephium.protocol.config.{GroupConfig, NetworkConfig}
-import org.alephium.protocol.message._
-import org.alephium.protocol.model.{Block, BlockHash, BrokerInfo, NetworkId}
-import org.alephium.serde.serialize
-import org.alephium.util._
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.flow.mining.{ClientMessage, SubmitBlock}
+import org.oxyg3nium.flow.mining.{ExternalMinerMock, Miner}
+import org.oxyg3nium.flow.network.broker.{ConnectionHandler, MisbehaviorManager}
+import org.oxyg3nium.protocol.WireVersion
+import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfig}
+import org.oxyg3nium.protocol.message._
+import org.oxyg3nium.protocol.model.{Block, BlockHash, BrokerInfo, NetworkId}
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util._
 
 class Injected[T](injection: ByteString => ByteString, ref: ActorRef) extends ActorRefT[T](ref) {
   override def !(message: T)(implicit sender: ActorRef = Actor.noSender): Unit = {
@@ -120,7 +120,7 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
         bootClique(
           nbOfNodes = nbOfNodesClique1,
           connectionBuild = clique1ConnectionBuild,
-          configOverrides = Map(("alephium.network.enable-p2p-v2", false))
+          configOverrides = Map(("oxyg3nium.network.enable-p2p-v2", false))
         )
       val masterPortClique1 = clique1.masterTcpPort
 
@@ -137,7 +137,7 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
           nbOfNodes = nbOfNodesClique2,
           bootstrap = Some(new InetSocketAddress("127.0.0.1", masterPortClique1)),
           connectionBuild = clique2ConnectionBuild,
-          configOverrides = Map(("alephium.network.enable-p2p-v2", false))
+          configOverrides = Map(("oxyg3nium.network.enable-p2p-v2", false))
         )
       val masterPortClique2 = clique2.masterTcpPort
 
@@ -235,7 +235,7 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
       assume(p2pVersions.length == 4)
 
       val fromTs  = TimeStamp.now()
-      val clique1 = bootClique(1, configOverrides = Map(("alephium.network.enable-p2p-v2", p2pVersions.head == P2PV2)))
+      val clique1 = bootClique(1, configOverrides = Map(("oxyg3nium.network.enable-p2p-v2", p2pVersions.head == P2PV2)))
 
       clique1.start()
       clique1.startWs()
@@ -248,7 +248,7 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
         val clique = bootClique(
           1,
           Some(new InetSocketAddress("127.0.0.1", clique1.masterTcpPort)),
-          configOverrides = Map(("alephium.network.enable-p2p-v2", p2pVersions(index) == P2PV2))
+          configOverrides = Map(("oxyg3nium.network.enable-p2p-v2", p2pVersions(index) == P2PV2))
         )
         clique.startWithoutCheckSyncState()
         clique
@@ -291,7 +291,7 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
         1,
         None,
         Injected.payload(injection, _),
-        Map(("alephium.network.enable-p2p-v2", true))
+        Map(("oxyg3nium.network.enable-p2p-v2", true))
       )
       clique1.start()
 
@@ -300,7 +300,7 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
           1,
           Some(new InetSocketAddress("127.0.0.1", clique1.masterTcpPort)),
           Injected.payload(injection, _),
-          Map(("alephium.network.enable-p2p-v2", true))
+          Map(("oxyg3nium.network.enable-p2p-v2", true))
         )
       }
 
@@ -391,8 +391,8 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
     val server0 = bootClique(
       1,
       configOverrides = Map(
-        ("alephium.network.ping-frequency", "1 seconds"),
-        ("alephium.network.penalty-frequency", "1 seconds")
+        ("oxyg3nium.network.ping-frequency", "1 seconds"),
+        ("oxyg3nium.network.penalty-frequency", "1 seconds")
       )
     ).servers.head
     server0.start().futureValue is ()
@@ -508,8 +508,8 @@ class InterCliqueSyncTest extends AlephiumActorSpec {
     }
 
     val configOverrides = Map[String, Any](
-      ("alephium.mining.job-cache-size-per-chain", 100),
-      ("alephium.consensus.num-zeros-at-least-in-hash", 10)
+      ("oxyg3nium.mining.job-cache-size-per-chain", 100),
+      ("oxyg3nium.consensus.num-zeros-at-least-in-hash", 10)
     )
     val clique0 = bootClique(1, configOverrides = configOverrides)
     clique0.start()

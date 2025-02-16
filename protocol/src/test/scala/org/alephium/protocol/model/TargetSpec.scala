@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.protocol.model
+package org.oxyg3nium.protocol.model
 
 import java.math.BigInteger
 
@@ -23,9 +23,9 @@ import scala.math.BigInt.javaBigInteger2bigInt
 import akka.util.ByteString
 import org.scalatest.Assertion
 
-import org.alephium.protocol.config.{GroupConfig, GroupConfigFixture}
-import org.alephium.protocol.mining.HashRate
-import org.alephium.util.{AlephiumSpec, AVector, Duration, Hex}
+import org.oxyg3nium.protocol.config.{GroupConfig, GroupConfigFixture}
+import org.oxyg3nium.protocol.mining.HashRate
+import org.oxyg3nium.util.{AlephiumSpec, AVector, Duration, Hex}
 
 class TargetSpec extends AlephiumSpec with GroupConfigFixture {
   val groups: Int = 1

@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.ralphc
+package org.oxyg3nium.ralphc
 
 import java.nio.file.{Files, Path}
 
@@ -22,10 +22,10 @@ import scala.collection.immutable.ArraySeq
 
 import scopt.OParser
 
-import org.alephium.api.model.CompileProjectResult
-import org.alephium.json.Json._
-import org.alephium.protocol.BuildInfo
-import org.alephium.util.AVector
+import org.oxyg3nium.api.model.CompileProjectResult
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.BuildInfo
+import org.oxyg3nium.util.AVector
 
 // scalastyle:off regex
 final case class Cli() {

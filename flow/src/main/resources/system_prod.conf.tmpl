@@ -1,4 +1,4 @@
-alephium {
+oxyg3nium {
   consensus {
     block-cache-capacity-per-chain = 32
   }
@@ -117,7 +117,7 @@ alephium {
     home-dir = ${user.home}
     home-dir = ${?ALEPHIUM_WALLET_HOME}
 
-    secret-dir = ${alephium.wallet.home-dir}"/.alephium-wallets"
+    secret-dir = ${oxyg3nium.wallet.home-dir}"/.oxyg3nium-wallets"
     locking-timeout = 10 minutes
   }
 
@@ -170,7 +170,7 @@ akka {
       }
     }
 
-    guardian-supervisor-strategy = "org.alephium.util.DefaultStrategy"
+    guardian-supervisor-strategy = "org.oxyg3nium.util.DefaultStrategy"
   }
 
   http {

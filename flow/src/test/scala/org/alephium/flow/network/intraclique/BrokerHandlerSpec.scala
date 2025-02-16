@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.intraclique
+package org.oxyg3nium.flow.network.intraclique
 
 import java.net.InetSocketAddress
 
@@ -23,20 +23,20 @@ import akka.io.Tcp
 import akka.testkit.{TestActorRef, TestProbe}
 import org.scalacheck.Gen
 
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.handler.{AllHandlers, FlowHandler, TestUtils, TxHandler}
-import org.alephium.flow.network.CliqueManager
-import org.alephium.flow.network.broker.{InboundBrokerHandler => BaseInboundBrokerHandler}
-import org.alephium.flow.network.broker.{BrokerHandler => BaseBrokerHandler}
-import org.alephium.flow.network.broker.ConnectionHandler
-import org.alephium.flow.network.sync.BlockFlowSynchronizer
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.protocol.Generators
-import org.alephium.protocol.config.BrokerConfig
-import org.alephium.protocol.message._
-import org.alephium.protocol.model._
-import org.alephium.util.{ActorRefT, AlephiumActorSpec, AVector}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.handler.{AllHandlers, FlowHandler, TestUtils, TxHandler}
+import org.oxyg3nium.flow.network.CliqueManager
+import org.oxyg3nium.flow.network.broker.{InboundBrokerHandler => BaseInboundBrokerHandler}
+import org.oxyg3nium.flow.network.broker.{BrokerHandler => BaseBrokerHandler}
+import org.oxyg3nium.flow.network.broker.ConnectionHandler
+import org.oxyg3nium.flow.network.sync.BlockFlowSynchronizer
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.protocol.Generators
+import org.oxyg3nium.protocol.config.BrokerConfig
+import org.oxyg3nium.protocol.message._
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{ActorRefT, AlephiumActorSpec, AVector}
 
 class BrokerHandlerSpec extends AlephiumActorSpec {
   val clientInfo: String = "v0.0.0"
@@ -58,7 +58,7 @@ class BrokerHandlerSpec extends AlephiumActorSpec {
   }
 
   it should "compute the headers and blocks for sync" in new Fixture with ModelGenerators {
-    override val configValues: Map[String, Any] = Map(("alephium.broker.broker-id", 1))
+    override val configValues: Map[String, Any] = Map(("oxyg3nium.broker.broker-id", 1))
 
     config.broker.brokerNum is 3
     config.broker.groupNumPerBroker is 1

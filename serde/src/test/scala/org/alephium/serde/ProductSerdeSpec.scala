@@ -1,9 +1,9 @@
 // scalastyle:off
 // auto-generated boilerplate
 // format: off
-package org.alephium.serde
+package org.oxyg3nium.serde
 
-import org.alephium.util.AlephiumSpec
+import org.oxyg3nium.util.AlephiumSpec
 
 class ProductSerdeSpec extends AlephiumSpec {
 

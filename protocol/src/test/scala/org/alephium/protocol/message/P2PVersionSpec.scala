@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -13,25 +13,25 @@
 //
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
-package org.alephium.protocol.message
+package org.oxyg3nium.protocol.message
 
-import org.alephium.util.AlephiumSpec
+import org.oxyg3nium.util.AlephiumSpec
 
 class P2PVersionSpec extends AlephiumSpec {
   it should "parse protocol version from client id" in {
-    P2PVersion.fromClientId("scala-alephium/v1.0.0/Linux") is Some(P2PV1)
-    P2PVersion.fromClientId("scala-alephium/v1.0.0/Linux/p2p-v1") is Some(P2PV1)
-    P2PVersion.fromClientId("scala-alephium/v1.0.0/Linux/p2p-v2") is Some(P2PV2)
-    P2PVersion.fromClientId("scala-alephium/v2.5.1/Linux") is Some(P2PV1)
-    P2PVersion.fromClientId("scala-alephium/v3.12.0/Linux") is Some(P2PV1)
-    P2PVersion.fromClientId("scala-alephium/v1.0.0/Linux/p2p-v3") is None
-    P2PVersion.fromClientId("scala-alephium/v1.0/Linux") is Some(P2PV1)
-    P2PVersion.fromClientId("scala-alephium/v1.0.0.0/Linux") is Some(P2PV1)
-    P2PVersion.fromClientId("scala-alephium/v1.a.0/Linux") is Some(P2PV1)
-    P2PVersion.fromClientId("scala-alephium/v1.0.0/Linux/p2p-v2/more") is None
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0.0/Linux") is Some(P2PV1)
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0.0/Linux/p2p-v1") is Some(P2PV1)
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0.0/Linux/p2p-v2") is Some(P2PV2)
+    P2PVersion.fromClientId("scala-oxyg3nium/v2.5.1/Linux") is Some(P2PV1)
+    P2PVersion.fromClientId("scala-oxyg3nium/v3.12.0/Linux") is Some(P2PV1)
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0.0/Linux/p2p-v3") is None
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0/Linux") is Some(P2PV1)
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0.0.0/Linux") is Some(P2PV1)
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.a.0/Linux") is Some(P2PV1)
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0.0/Linux/p2p-v2/more") is None
     P2PVersion.fromClientId("") is None
     P2PVersion.fromClientId("invalid") is None
-    P2PVersion.fromClientId("scala-alephium/v1.0.0") is None
-    P2PVersion.fromClientId("scala-alephium/v1.0.0/Linux/invalid") is None
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0.0") is None
+    P2PVersion.fromClientId("scala-oxyg3nium/v1.0.0/Linux/invalid") is None
   }
 }

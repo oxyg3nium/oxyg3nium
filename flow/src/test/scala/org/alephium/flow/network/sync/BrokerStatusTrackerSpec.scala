@@ -1,5 +1,5 @@
 // Copyright 2018 The Alephium Authors
-// This file is part of the alephium project.
+// This file is part of the oxyg3nium project.
 //
 // The library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -14,19 +14,19 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.flow.network.sync
+package org.oxyg3nium.flow.network.sync
 
 import akka.actor.ActorRef
 import akka.testkit.TestProbe
 
-import org.alephium.flow.AlephiumFlowActorSpec
-import org.alephium.flow.network.sync.BrokerStatusTracker.BrokerStatus
-import org.alephium.flow.network.sync.SyncState.{BlockBatch, BlockDownloadTask}
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.protocol.Generators
-import org.alephium.protocol.message.{P2PV1, P2PV2, P2PVersion}
-import org.alephium.protocol.model._
-import org.alephium.util.{ActorRefT, AVector}
+import org.oxyg3nium.flow.AlephiumFlowActorSpec
+import org.oxyg3nium.flow.network.sync.BrokerStatusTracker.BrokerStatus
+import org.oxyg3nium.flow.network.sync.SyncState.{BlockBatch, BlockDownloadTask}
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.protocol.Generators
+import org.oxyg3nium.protocol.message.{P2PV1, P2PV2, P2PVersion}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{ActorRefT, AVector}
 
 class BrokerStatusTrackerSpec extends AlephiumFlowActorSpec with Generators {
   val brokerInfo = brokerInfoGen.sample.get
