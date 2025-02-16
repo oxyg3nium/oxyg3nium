@@ -17,7 +17,7 @@ myActor ! MyActor.Message("hello")
 ```
 ## Questions: 
  1. What is the purpose of this code?
-   - This code defines a class `ActorRefT` and an object `ActorRefT` in the `org.alephium.util` package, which provide additional functionality to Akka `ActorRef`s.
+   - This code defines a class `ActorRefT` and an object `ActorRefT` in the `org.oxyg3nium.util` package, which provide additional functionality to Akka `ActorRef`s.
 
 2. What is the license for this code?
    - This code is licensed under the GNU Lesser General Public License version 3 or later.

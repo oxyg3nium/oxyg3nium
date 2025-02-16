@@ -7,7 +7,7 @@ This class is likely used in the larger Oxyg3nium project to manage connections 
 Here is an example of how the `PeerAddress` class might be used in the Oxyg3nium project:
 
 ```
-import org.alephium.api.model.PeerAddress
+import org.oxyg3nium.api.model.PeerAddress
 
 val peer = PeerAddress(InetAddress.getByName("192.168.1.100"), 8080, 8081, 8082)
 

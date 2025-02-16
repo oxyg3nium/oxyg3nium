@@ -11,10 +11,10 @@ This code can be used in the larger Oxyg3nium project to create multisig address
 Here is an example of how this code might be used in the Oxyg3nium project:
 
 ```
-import org.alephium.api.model.BuildMultisigAddress
-import org.alephium.protocol.PublicKey
-import org.alephium.protocol.model.Address
-import org.alephium.util.AVector
+import org.oxyg3nium.api.model.BuildMultisigAddress
+import org.oxyg3nium.protocol.PublicKey
+import org.oxyg3nium.protocol.model.Address
+import org.oxyg3nium.util.AVector
 
 val keys: AVector[PublicKey] = AVector(PublicKey("publickey1"), PublicKey("publickey2"), PublicKey("publickey3"))
 val mrequired: Int = 2
@@ -30,4 +30,4 @@ println(result.address) // prints the multisig address created
 2. What is the expected output of the `BuildMultisigAddressResult` case class?
    - The `BuildMultisigAddressResult` case class is expected to contain the resulting multisig address after the `BuildMultisigAddress` request has been processed.
 3. What other dependencies does this code have?
-   - This code has dependencies on other packages and modules within the `alephium` project, including `org.alephium.protocol.PublicKey`, `org.alephium.protocol.model.Address`, and `org.alephium.util.AVector`.
+   - This code has dependencies on other packages and modules within the `alephium` project, including `org.oxyg3nium.protocol.PublicKey`, `org.oxyg3nium.protocol.model.Address`, and `org.oxyg3nium.util.AVector`.

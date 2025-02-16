@@ -36,7 +36,7 @@ val myServer = myEndpoint.toRoutes(myLogic).map(_.intercept(myDecodeFailureHandl
 
 2. What external libraries or dependencies does this code rely on?
     
-    This code relies on the `sttp` and `tapir` libraries for defining and handling API endpoints, as well as the `org.alephium.api` package for defining custom error responses.
+    This code relies on the `sttp` and `tapir` libraries for defining and handling API endpoints, as well as the `org.oxyg3nium.api` package for defining custom error responses.
 
 3. What license is this code released under?
     

@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.math.BigInteger
 
@@ -23,30 +23,30 @@ import scala.concurrent._
 import akka.util.Timeout
 import com.typesafe.scalalogging.StrictLogging
 
-import org.alephium.api._
-import org.alephium.api.ApiError
-import org.alephium.api.model
-import org.alephium.api.model.{AssetOutput => _, Transaction => _, TransactionTemplate => _, _}
-import org.alephium.crypto.Byte32
-import org.alephium.flow.core.{BlockFlow, BlockFlowState, ExtraUtxosInfo, UtxoSelectionAlgo}
-import org.alephium.flow.core.FlowUtils.{AssetOutputInfo, MemPoolOutput}
-import org.alephium.flow.core.TxUtils
-import org.alephium.flow.core.TxUtils.InputData
-import org.alephium.flow.core.UtxoSelectionAlgo._
-import org.alephium.flow.gasestimation._
-import org.alephium.flow.handler.TxHandler
-import org.alephium.flow.mempool.MemPool._
-import org.alephium.io.IOError
-import org.alephium.protocol.{vm, OXM, Hash, PublicKey, Signature, SignatureSchema}
-import org.alephium.protocol.config._
-import org.alephium.protocol.model.{ContractOutput => ProtocolContractOutput, _}
-import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
-import org.alephium.protocol.vm.{failed => _, BlockHash => _, ContractState => _, Val => _, _}
-import org.alephium.protocol.vm.StatefulVM.TxScriptExecution
-import org.alephium.protocol.vm.nodeindexes.{TxIdTxOutputLocators, TxOutputLocator}
-import org.alephium.ralph.Compiler
-import org.alephium.serde.{avectorSerde, deserialize, serialize}
-import org.alephium.util._
+import org.oxyg3nium.api._
+import org.oxyg3nium.api.ApiError
+import org.oxyg3nium.api.model
+import org.oxyg3nium.api.model.{AssetOutput => _, Transaction => _, TransactionTemplate => _, _}
+import org.oxyg3nium.crypto.Byte32
+import org.oxyg3nium.flow.core.{BlockFlow, BlockFlowState, ExtraUtxosInfo, UtxoSelectionAlgo}
+import org.oxyg3nium.flow.core.FlowUtils.{AssetOutputInfo, MemPoolOutput}
+import org.oxyg3nium.flow.core.TxUtils
+import org.oxyg3nium.flow.core.TxUtils.InputData
+import org.oxyg3nium.flow.core.UtxoSelectionAlgo._
+import org.oxyg3nium.flow.gasestimation._
+import org.oxyg3nium.flow.handler.TxHandler
+import org.oxyg3nium.flow.mempool.MemPool._
+import org.oxyg3nium.io.IOError
+import org.oxyg3nium.protocol.{vm, OXM, Hash, PublicKey, Signature, SignatureSchema}
+import org.oxyg3nium.protocol.config._
+import org.oxyg3nium.protocol.model.{ContractOutput => ProtocolContractOutput, _}
+import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
+import org.oxyg3nium.protocol.vm.{failed => _, BlockHash => _, ContractState => _, Val => _, _}
+import org.oxyg3nium.protocol.vm.StatefulVM.TxScriptExecution
+import org.oxyg3nium.protocol.vm.nodeindexes.{TxIdTxOutputLocators, TxOutputLocator}
+import org.oxyg3nium.ralph.Compiler
+import org.oxyg3nium.serde.{avectorSerde, deserialize, serialize}
+import org.oxyg3nium.util._
 
 // scalastyle:off number.of.methods
 // scalastyle:off file.size.limit number.of.types

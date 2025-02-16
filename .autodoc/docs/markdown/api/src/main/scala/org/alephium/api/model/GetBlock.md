@@ -2,7 +2,7 @@
 
 This code defines a case class called `GetBlock` which is used in the Oxyg3nium project's API model. The `GetBlock` case class takes in a single parameter, `hash`, which is of type `BlockHash`. 
 
-`BlockHash` is a type defined in the `org.alephium.protocol.model` package, which is likely used to represent the hash of a block in the Oxyg3nium blockchain. 
+`BlockHash` is a type defined in the `org.oxyg3nium.protocol.model` package, which is likely used to represent the hash of a block in the Oxyg3nium blockchain. 
 
 The purpose of this code is to provide a standardized way for clients of the Oxyg3nium API to request a specific block by its hash. By defining a case class with a single parameter, the API can easily accept requests for a specific block by simply taking in a `GetBlock` object with the desired hash. 
 

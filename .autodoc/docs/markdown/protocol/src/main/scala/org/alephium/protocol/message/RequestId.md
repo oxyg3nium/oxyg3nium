@@ -1,10 +1,10 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/message/RequestId.scala)
 
-This code defines a RequestId class and its companion object in the `org.alephium.protocol.message` package. The RequestId class is a simple wrapper around an unsigned 32-bit integer value. It has a single field `value` of type `U32` and a `toString()` method that returns a string representation of the RequestId object.
+This code defines a RequestId class and its companion object in the `org.oxyg3nium.protocol.message` package. The RequestId class is a simple wrapper around an unsigned 32-bit integer value. It has a single field `value` of type `U32` and a `toString()` method that returns a string representation of the RequestId object.
 
 The companion object provides two methods for creating RequestId objects. The `unsafe` method creates a RequestId object from an integer value. The `random` method generates a new RequestId object with a random value using the `SecureAndSlowRandom` utility class.
 
-The RequestId class is likely used in the larger project to uniquely identify requests and responses between nodes in the Oxyg3nium network. The `serde` implicit value defined in the companion object suggests that RequestId objects can be serialized and deserialized using the `org.alephium.serde.Serde` library, which is likely used for network communication.
+The RequestId class is likely used in the larger project to uniquely identify requests and responses between nodes in the Oxyg3nium network. The `serde` implicit value defined in the companion object suggests that RequestId objects can be serialized and deserialized using the `org.oxyg3nium.serde.Serde` library, which is likely used for network communication.
 
 Example usage:
 

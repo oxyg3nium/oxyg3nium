@@ -11,7 +11,7 @@ This code is likely used in a larger project that involves peer-to-peer networki
 Here is an example of how this code might be used:
 
 ```
-import org.alephium.api.model._
+import org.oxyg3nium.api.model._
 
 val unreachablePeers = AVector(InetAddress.getByName("192.168.0.1"), InetAddress.getByName("192.168.0.2"))
 val unreachableAction = DiscoveryAction.Unreachable(unreachablePeers)

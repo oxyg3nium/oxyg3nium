@@ -39,7 +39,7 @@ The `.autodoc/docs/json/macros/src/main/scala/org/alephium/macros` folder contai
 
    Example usage:
    ```scala
-   import org.alephium.macros.HPC._
+   import org.oxyg3nium.macros.HPC._
 
    cfor(0)(_ < 10, _ + 1) { i =>
      println(i)
@@ -50,7 +50,7 @@ The `.autodoc/docs/json/macros/src/main/scala/org/alephium/macros` folder contai
 
    Example usage:
    ```scala
-   import org.alephium.macros.HashSerde
+   import org.oxyg3nium.macros.HashSerde
 
    @HashSerde
    case class Person(name: String, age: Int)

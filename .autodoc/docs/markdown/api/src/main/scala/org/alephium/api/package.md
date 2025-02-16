@@ -21,10 +21,10 @@ The `alphPlainTextBody` function is used to define an endpoint input/output that
 Overall, this file defines a number of utility functions and types that are used throughout the Oxyg3nium project's API. These functions are used to handle errors, wrap results, and define input/output formats for endpoints.
 ## Questions: 
  1. What is the purpose of this code file?
-- This code file defines a package object for the `org.alephium.api` package, which contains utility functions and type aliases for working with API errors and response bodies.
+- This code file defines a package object for the `org.oxyg3nium.api` package, which contains utility functions and type aliases for working with API errors and response bodies.
 
 2. What external libraries or dependencies does this code file use?
-- This code file imports several libraries, including `sttp`, `org.alephium.io`, and `org.alephium.json`. It also defines a custom codec using `upickle`.
+- This code file imports several libraries, including `sttp`, `org.oxyg3nium.io`, and `org.oxyg3nium.json`. It also defines a custom codec using `upickle`.
 
 3. What is the purpose of the `wrapResult` and `wrapExeResult` functions?
 - The `wrapResult` function takes an `IOResult` and returns a `Try` that either contains the result value or an `ApiError` if the result was an `IOError`. The `wrapExeResult` function takes an `ExeResult` and returns a `Try` that either contains the result value or an `ApiError` if the result was an `IOError` or a `VM` execution error.

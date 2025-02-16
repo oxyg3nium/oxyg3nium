@@ -18,7 +18,7 @@ Overall, the CachedLog class provides a way to cache and persist log data in the
 
 2. What other classes or libraries does this code depend on?
    
-   This code depends on several other classes and libraries, including `Byte32` and `AVector` from the `org.alephium.crypto` and `org.alephium.util` packages, respectively. It also depends on `CachedKVStorage`, `IOResult`, `ContractId`, `LogStateRef`, `LogStates`, and `LogStatesId` from various other packages.
+   This code depends on several other classes and libraries, including `Byte32` and `AVector` from the `org.oxyg3nium.crypto` and `org.oxyg3nium.util` packages, respectively. It also depends on `CachedKVStorage`, `IOResult`, `ContractId`, `LogStateRef`, `LogStates`, and `LogStatesId` from various other packages.
 
 3. What license is this code released under?
    

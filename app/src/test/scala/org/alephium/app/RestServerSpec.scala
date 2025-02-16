@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.math.BigInteger
 import java.net.{InetAddress, InetSocketAddress}
@@ -30,30 +30,30 @@ import org.scalatest.compatible.Assertion
 import sttp.client3.Response
 import sttp.model.StatusCode
 
-import org.alephium.api.{ApiError, ApiModel, OpenAPIWriters}
-import org.alephium.api.UtilJson.avectorReadWriter
-import org.alephium.api.model._
-import org.alephium.app.ServerFixture.NodeDummy
-import org.alephium.crypto.Blake2b
-import org.alephium.flow.handler.{TestUtils, ViewHandler}
-import org.alephium.flow.mining.Miner
-import org.alephium.flow.network.{CliqueManager, InterCliqueManager}
-import org.alephium.flow.network.bootstrap._
-import org.alephium.flow.network.broker.MisbehaviorManager
-import org.alephium.http.HttpFixture._
-import org.alephium.http.HttpRouteFixture
-import org.alephium.json.Json._
-import org.alephium.protocol.{OXM, Hash}
-import org.alephium.protocol.mining.HashRate
-import org.alephium.protocol.model.{Transaction => _, _}
-import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
-import org.alephium.protocol.vm.LockupScript
-import org.alephium.ralph.Compiler
-import org.alephium.serde.serialize
-import org.alephium.util._
-import org.alephium.util.Hex.HexStringSyntax
-import org.alephium.wallet.WalletApp
-import org.alephium.wallet.config.WalletConfig
+import org.oxyg3nium.api.{ApiError, ApiModel, OpenAPIWriters}
+import org.oxyg3nium.api.UtilJson.avectorReadWriter
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.app.ServerFixture.NodeDummy
+import org.oxyg3nium.crypto.Blake2b
+import org.oxyg3nium.flow.handler.{TestUtils, ViewHandler}
+import org.oxyg3nium.flow.mining.Miner
+import org.oxyg3nium.flow.network.{CliqueManager, InterCliqueManager}
+import org.oxyg3nium.flow.network.bootstrap._
+import org.oxyg3nium.flow.network.broker.MisbehaviorManager
+import org.oxyg3nium.http.HttpFixture._
+import org.oxyg3nium.http.HttpRouteFixture
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.{OXM, Hash}
+import org.oxyg3nium.protocol.mining.HashRate
+import org.oxyg3nium.protocol.model.{Transaction => _, _}
+import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
+import org.oxyg3nium.protocol.vm.LockupScript
+import org.oxyg3nium.ralph.Compiler
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util._
+import org.oxyg3nium.util.Hex.HexStringSyntax
+import org.oxyg3nium.wallet.WalletApp
+import org.oxyg3nium.wallet.config.WalletConfig
 
 //scalastyle:off file.size.limit
 abstract class RestServerSpec(

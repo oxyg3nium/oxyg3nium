@@ -11,7 +11,7 @@ The `Duration` class also provides a method to convert a duration to a `scala.co
 Overall, this code provides a convenient and efficient way to work with durations of time in the Oxyg3nium project. It can be used to represent timeouts, intervals, and other time-related concepts. Here is an example of how to use the `Duration` class:
 
 ```scala
-import org.alephium.util.Duration
+import org.oxyg3nium.util.Duration
 
 val timeout = Duration.ofSeconds(30).getOrElse(Duration.zero)
 val interval = Duration.ofMinutesUnsafe(5)

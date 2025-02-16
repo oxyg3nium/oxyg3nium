@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/ChainIndexInfo.scala)
 
-The code above defines a trait called `ChainIndexInfo` that is part of the `org.alephium.api.model` package. A trait is similar to an interface in Java, and it defines a set of methods that a class implementing the trait must implement. 
+The code above defines a trait called `ChainIndexInfo` that is part of the `org.oxyg3nium.api.model` package. A trait is similar to an interface in Java, and it defines a set of methods that a class implementing the trait must implement. 
 
 In this case, the `ChainIndexInfo` trait has two methods: `fromGroup` and `toGroup`, both of which return an integer. The purpose of this trait is to provide a common interface for classes that represent information about a chain index. 
 
@@ -25,5 +25,5 @@ Overall, the `ChainIndexInfo` trait provides a useful abstraction for representi
 2. What is the significance of the copyright and license information at the top of the file?
    - The copyright and license information indicates that the code is part of the alephium project and is licensed under the GNU Lesser General Public License. This means that the code can be freely distributed and modified, but any modifications must also be licensed under the same license.
 
-3. What is the purpose of the `package org.alephium.api.model` statement?
-   - The `package org.alephium.api.model` statement indicates that the code in this file is part of the `org.alephium.api.model` package. This package likely contains classes and traits related to the API of the alephium project.
+3. What is the purpose of the `package org.oxyg3nium.api.model` statement?
+   - The `package org.oxyg3nium.api.model` statement indicates that the code in this file is part of the `org.oxyg3nium.api.model` package. This package likely contains classes and traits related to the API of the alephium project.

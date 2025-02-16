@@ -9,7 +9,7 @@ The purpose of this code is to provide a way to compile code in the Oxyg3nium pr
 Here is an example of how this code might be used in the larger project:
 
 ```scala
-import org.alephium.api.model._
+import org.oxyg3nium.api.model._
 
 val script = Script("println(\"Hello, world!\")")
 val compilerOptions = CompilerOptions(ignoreUnusedConstantsWarnings = Some(true))

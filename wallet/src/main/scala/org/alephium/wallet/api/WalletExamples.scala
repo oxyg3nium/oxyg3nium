@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.api
+package org.oxyg3nium.wallet.api
 
 import sttp.tapir.EndpointIO.Example
 
-import org.alephium.api.EndpointsExamples
-import org.alephium.api.model.Amount
-import org.alephium.crypto.wallet.Mnemonic
-import org.alephium.protocol.PublicKey
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{minimalGas, nonCoinbaseMinGasPrice, GroupIndex}
-import org.alephium.util.{AVector, Hex}
-import org.alephium.wallet.api.model._
+import org.oxyg3nium.api.EndpointsExamples
+import org.oxyg3nium.api.model.Amount
+import org.oxyg3nium.crypto.wallet.Mnemonic
+import org.oxyg3nium.protocol.PublicKey
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{minimalGas, nonCoinbaseMinGasPrice, GroupIndex}
+import org.oxyg3nium.util.{AVector, Hex}
+import org.oxyg3nium.wallet.api.model._
 
 @SuppressWarnings(Array("org.wartremover.warts.OptionPartial"))
 trait WalletExamples extends EndpointsExamples {

@@ -9,8 +9,8 @@ The `escapeIOError` method with one argument takes an `IOResult[Unit]` object an
 Overall, this trait provides a convenient way to handle IO errors in a consistent way across actors in the Oxyg3nium project. Here is an example of how this trait can be used:
 
 ```scala
-import org.alephium.flow.handler.IOBaseActor
-import org.alephium.io.{IOError, IOResult}
+import org.oxyg3nium.flow.handler.IOBaseActor
+import org.oxyg3nium.io.{IOError, IOResult}
 
 class MyActor extends IOBaseActor {
   def performIOOperation(): IOResult[String] = {

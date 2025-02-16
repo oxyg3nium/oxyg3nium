@@ -14,7 +14,7 @@ Overall, this code is an important part of the Oxyg3nium project as it enables e
 - This code file contains a trait and two objects that define a gas estimator for transaction scripts in the Oxyg3nium project.
 
 2. What dependencies does this code file have?
-- This code file imports several classes and objects from other packages in the Oxyg3nium project, including `org.alephium.flow.core`, `org.alephium.protocol`, `org.alephium.protocol.config`, `org.alephium.protocol.model`, `org.alephium.protocol.vm`, and `org.alephium.util`.
+- This code file imports several classes and objects from other packages in the Oxyg3nium project, including `org.oxyg3nium.flow.core`, `org.oxyg3nium.protocol`, `org.oxyg3nium.protocol.config`, `org.oxyg3nium.protocol.model`, `org.oxyg3nium.protocol.vm`, and `org.oxyg3nium.util`.
 
 3. What is the difference between the `Default` and `Mock` objects?
 - The `Default` object implements a gas estimator that runs a mockup of the transaction script and estimates the gas used based on the execution result, while the `Mock` object simply returns a default gas value for each input.

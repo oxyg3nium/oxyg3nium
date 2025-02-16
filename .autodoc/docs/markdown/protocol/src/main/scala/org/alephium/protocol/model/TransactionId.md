@@ -15,4 +15,4 @@ Overall, this file provides the implementation of the `TransactionId` class and 
 - This code is licensed under the GNU Lesser General Public License, version 3 or later.
 
 3. What other dependencies does this code have?
-- This code imports several other classes and objects from the `org.alephium` package, including `ByteString`, `HashUtils`, `Hash`, `Serde`, and `byteStringOrdering`. It also depends on the `akka.util.ByteString` class.
+- This code imports several other classes and objects from the `org.oxyg3nium` package, including `ByteString`, `HashUtils`, `Hash`, `Serde`, and `byteStringOrdering`. It also depends on the `akka.util.ByteString` class.

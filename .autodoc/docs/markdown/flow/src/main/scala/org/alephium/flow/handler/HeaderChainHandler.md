@@ -18,7 +18,7 @@ Overall, the `HeaderChainHandler` class is an important component of the Oxyg3ni
 - This code file contains the implementation of a handler for validating and adding block headers to a block chain.
 
 2. What external libraries or dependencies does this code use?
-- This code uses Akka for actor-based concurrency, io.prometheus.client for metrics collection, and org.alephium packages for various Oxyg3nium-specific functionality.
+- This code uses Akka for actor-based concurrency, io.prometheus.client for metrics collection, and org.oxyg3nium packages for various Oxyg3nium-specific functionality.
 
 3. What is the license for this code?
 - This code is licensed under the GNU Lesser General Public License, version 3 or later.

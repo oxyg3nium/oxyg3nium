@@ -13,7 +13,7 @@ The companion object also provides an `unsafe` method that creates a new `IntraC
 Overall, the `IntraCliqueInfo` class and its companion object are used to represent and validate the information required to establish a clique within the Oxyg3nium network. This information is critical to the functioning of the network, as cliques are responsible for validating transactions and maintaining the network's state.
 ## Questions: 
  1. What is the purpose of this code and how does it fit into the overall alephium project?
-- This code defines a case class `IntraCliqueInfo` and an object `IntraCliqueInfo` with methods for serialization and validation. It is part of the `org.alephium.flow.network.bootstrap` package and is likely related to bootstrapping the network. 
+- This code defines a case class `IntraCliqueInfo` and an object `IntraCliqueInfo` with methods for serialization and validation. It is part of the `org.oxyg3nium.flow.network.bootstrap` package and is likely related to bootstrapping the network. 
 
 2. What is the `CliqueInfo` class and how is it related to `IntraCliqueInfo`?
 - `CliqueInfo` is a case class that represents information about a clique, which is a group of nodes in the Oxyg3nium network. `IntraCliqueInfo` has a method `cliqueInfo` that returns a `CliqueInfo` object based on its own properties.

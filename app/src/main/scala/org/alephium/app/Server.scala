@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.nio.file.Path
 
@@ -23,15 +23,15 @@ import scala.concurrent.{ExecutionContext, Future}
 
 import akka.actor.ActorSystem
 
-import org.alephium.flow.client.Node
-import org.alephium.flow.io.Storages
-import org.alephium.flow.mining.{CpuMiner, Miner, MinerApiController}
-import org.alephium.flow.setting.Oxyg3niumConfig
-import org.alephium.io.RocksDBSource.ProdSettings
-import org.alephium.util.{ActorRefT, Service}
-import org.alephium.wallet.WalletApp
-import org.alephium.wallet.config.WalletConfig
-import org.alephium.wallet.service.WalletService
+import org.oxyg3nium.flow.client.Node
+import org.oxyg3nium.flow.io.Storages
+import org.oxyg3nium.flow.mining.{CpuMiner, Miner, MinerApiController}
+import org.oxyg3nium.flow.setting.Oxyg3niumConfig
+import org.oxyg3nium.io.RocksDBSource.ProdSettings
+import org.oxyg3nium.util.{ActorRefT, Service}
+import org.oxyg3nium.wallet.WalletApp
+import org.oxyg3nium.wallet.config.WalletConfig
+import org.oxyg3nium.wallet.service.WalletService
 
 trait Server extends Service {
   def flowSystem: ActorSystem

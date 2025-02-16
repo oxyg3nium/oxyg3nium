@@ -23,6 +23,6 @@ $ sbt run
  1. What is the purpose of this code?
    - This code is the main entry point for the Oxyg3nium wallet application, which loads configuration settings and starts the wallet app.
 2. What external libraries or dependencies does this code use?
-   - This code uses several external libraries including `com.typesafe.config`, `com.typesafe.scalalogging`, `net.ceedubs.ficus`, and `org.alephium.util`.
+   - This code uses several external libraries including `com.typesafe.config`, `com.typesafe.scalalogging`, `net.ceedubs.ficus`, and `org.oxyg3nium.util`.
 3. What is the license for this code?
    - This code is licensed under the GNU Lesser General Public License, version 3 or later.

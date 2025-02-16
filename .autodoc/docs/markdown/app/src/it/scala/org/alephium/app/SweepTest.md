@@ -17,4 +17,4 @@ Overall, this code provides a set of tests for ensuring that funds can be swept 
 - The `SweepFixture` trait is a trait that defines a set of variables and methods that are used by the tests in the `SweepTest` class. It sets up a test environment with a single node running the Oxyg3nium protocol, creates a wallet with a specified number of addresses, and sends transfers to those addresses.
 
 3. What is the purpose of the `request` method and where is it defined?
-- The `request` method is used to send HTTP requests to the Oxyg3nium node's REST API and receive the corresponding responses. It is defined in the `org.alephium.util` package, which is imported at the beginning of the file.
+- The `request` method is used to send HTTP requests to the Oxyg3nium node's REST API and receive the corresponding responses. It is defined in the `org.oxyg3nium.util` package, which is imported at the beginning of the file.

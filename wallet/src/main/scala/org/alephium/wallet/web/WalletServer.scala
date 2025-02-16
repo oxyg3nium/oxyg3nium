@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.web
+package org.oxyg3nium.wallet.web
 
 import scala.concurrent.ExecutionContext
 
@@ -22,15 +22,15 @@ import io.vertx.ext.web._
 import sttp.model.StatusCode
 import sttp.tapir.server.vertx.VertxFutureServerInterpreter
 
-import org.alephium.api.ApiError
-import org.alephium.api.OpenAPIWriters.openApiJson
-import org.alephium.api.model.ApiKey
-import org.alephium.http.{ServerOptions, SwaggerUI}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.util.{AVector, Duration}
-import org.alephium.wallet.WalletDocumentation
-import org.alephium.wallet.service.WalletService
-import org.alephium.wallet.service.WalletService._
+import org.oxyg3nium.api.ApiError
+import org.oxyg3nium.api.OpenAPIWriters.openApiJson
+import org.oxyg3nium.api.model.ApiKey
+import org.oxyg3nium.http.{ServerOptions, SwaggerUI}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.util.{AVector, Duration}
+import org.oxyg3nium.wallet.WalletDocumentation
+import org.oxyg3nium.wallet.service.WalletService
+import org.oxyg3nium.wallet.service.WalletService._
 
 @SuppressWarnings(Array("org.wartremover.warts.IterableOps"))
 class WalletServer(

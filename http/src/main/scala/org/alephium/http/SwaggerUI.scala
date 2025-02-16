@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.http
+package org.oxyg3nium.http
 
 import java.util.Properties
 
@@ -25,7 +25,7 @@ import sttp.tapir._
 import sttp.tapir.files.staticResourcesGetServerEndpoint
 import sttp.tapir.server.ServerEndpoint
 
-import org.alephium.util.AVector
+import org.oxyg3nium.util.AVector
 
 /*
  * Extracted, with some modifications, from sttp.tapir.swagger.SwaggerUI

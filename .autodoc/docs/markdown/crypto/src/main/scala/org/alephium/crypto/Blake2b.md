@@ -13,7 +13,7 @@ Overall, this code provides a way to generate Blake2b hashes in a standardized w
 Example usage:
 
 ```
-import org.alephium.crypto.Blake2b
+import org.oxyg3nium.crypto.Blake2b
 import akka.util.ByteString
 
 val input = ByteString("hello world")

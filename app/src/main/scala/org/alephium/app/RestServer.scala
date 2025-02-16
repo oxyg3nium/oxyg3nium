@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import scala.collection.immutable.ArraySeq
 import scala.concurrent._
@@ -27,14 +27,14 @@ import io.vertx.ext.web.handler.CorsHandler
 import sttp.tapir.server.vertx.VertxFutureServerInterpreter
 import sttp.tapir.server.vertx.VertxFutureServerInterpreter._
 
-import org.alephium.api.OpenAPIWriters.openApiJson
-import org.alephium.flow.client.Node
-import org.alephium.flow.mining.Miner
-import org.alephium.http.{EndpointSender, ServerOptions, SwaggerUI}
-import org.alephium.protocol.config.BrokerConfig
-import org.alephium.protocol.model.NetworkId
-import org.alephium.util._
-import org.alephium.wallet.web.WalletServer
+import org.oxyg3nium.api.OpenAPIWriters.openApiJson
+import org.oxyg3nium.flow.client.Node
+import org.oxyg3nium.flow.mining.Miner
+import org.oxyg3nium.http.{EndpointSender, ServerOptions, SwaggerUI}
+import org.oxyg3nium.protocol.config.BrokerConfig
+import org.oxyg3nium.protocol.model.NetworkId
+import org.oxyg3nium.util._
+import org.oxyg3nium.wallet.web.WalletServer
 
 // scalastyle:off method.length
 class RestServer(

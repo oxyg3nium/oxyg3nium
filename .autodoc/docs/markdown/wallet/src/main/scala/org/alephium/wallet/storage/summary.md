@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium/wallet/storage)
 
-The `SecretStorage.scala` file in the `org.alephium.wallet.storage` package provides a secure way to store and retrieve private keys and other sensitive information, which is essential for a cryptocurrency wallet application like Oxyg3nium. The file contains a trait called `SecretStorage` and an object called `SecretStorage`, which define methods for creating, loading, and manipulating secret storage files.
+The `SecretStorage.scala` file in the `org.oxyg3nium.wallet.storage` package provides a secure way to store and retrieve private keys and other sensitive information, which is essential for a cryptocurrency wallet application like Oxyg3nium. The file contains a trait called `SecretStorage` and an object called `SecretStorage`, which define methods for creating, loading, and manipulating secret storage files.
 
 The `SecretStorage` trait acts as an interface for secret storage implementations, providing methods to lock, unlock, delete, and query the storage. It also allows for the retrieval of private keys, derivation of new keys, and changing the active private key. For example, to unlock a secret storage, you would call the `unlock` method with the appropriate password and optional mnemonic passphrase:
 

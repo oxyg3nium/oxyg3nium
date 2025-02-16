@@ -11,7 +11,7 @@ The `Mode` trait and its implementations (`SingleByte`, `TwoByte`, `FourByte`, a
 Here's an example of encoding and decoding an unsigned integer:
 
 ```scala
-import org.alephium.serde.CompactInteger.Unsigned
+import org.oxyg3nium.serde.CompactInteger.Unsigned
 import akka.util.ByteString
 
 val number = 42

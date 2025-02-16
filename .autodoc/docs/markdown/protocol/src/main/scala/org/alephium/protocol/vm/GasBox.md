@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/GasBox.scala)
 
-The `GasBox` class and its companion object in the `org.alephium.protocol.vm` package provide functionality for managing gas usage in the Oxyg3nium project. Gas is a measure of computational effort required to execute a transaction on the blockchain. It is used to prevent spamming and denial-of-service attacks on the network. 
+The `GasBox` class and its companion object in the `org.oxyg3nium.protocol.vm` package provide functionality for managing gas usage in the Oxyg3nium project. Gas is a measure of computational effort required to execute a transaction on the blockchain. It is used to prevent spamming and denial-of-service attacks on the network. 
 
 The `GasBox` class is a simple wrapper around an integer value representing the amount of gas available. It provides methods for performing arithmetic operations on gas values, such as addition, subtraction, and multiplication. It also provides a `use` method that checks if there is enough gas available to perform a given operation and returns a new `GasBox` instance with the remaining gas if there is, or an error if there isn't. 
 
@@ -34,4 +34,4 @@ val isValid = GasBox.validate(remainingGas) // true
 - The `serde` field provides a serialization/deserialization mechanism for `GasBox` objects, allowing them to be stored and retrieved from disk or transmitted over a network.
 
 3. What are the minimum and maximum values that a `GasBox` object can have, and how are they enforced?
-- The minimum value for a `GasBox` object is defined as `minimalGas`, which is imported from the `org.alephium.protocol.model` package. The maximum value is defined as `maximalGasPerTx`, which is also imported from the same package. These values are enforced by the `validate` method, which checks if a given `GasBox` object is within the allowed range.
+- The minimum value for a `GasBox` object is defined as `minimalGas`, which is imported from the `org.oxyg3nium.protocol.model` package. The maximum value is defined as `maximalGasPerTx`, which is also imported from the same package. These values are enforced by the `validate` method, which checks if a given `GasBox` object is within the allowed range.

@@ -14,7 +14,7 @@ The `CliqueManager` class is used in the Oxyg3nium network to manage the communi
 - The `CliqueManager` class is responsible for managing the intra and inter clique managers, and ensuring that the self-clique is synced. It receives messages such as `Start`, `Synced`, and `IsSelfCliqueReady` to perform its tasks.
 
 2. What other classes or libraries does this code import and use?
-- The code imports several classes and libraries such as `akka.actor`, `akka.io.Tcp`, `org.alephium.flow.core.BlockFlow`, `org.alephium.flow.handler.AllHandlers`, `org.alephium.flow.network.sync.BlockFlowSynchronizer`, `org.alephium.flow.setting.NetworkSetting`, `org.alephium.protocol.config.BrokerConfig`, and `org.alephium.protocol.model`.
+- The code imports several classes and libraries such as `akka.actor`, `akka.io.Tcp`, `org.oxyg3nium.flow.core.BlockFlow`, `org.oxyg3nium.flow.handler.AllHandlers`, `org.oxyg3nium.flow.network.sync.BlockFlowSynchronizer`, `org.oxyg3nium.flow.setting.NetworkSetting`, `org.oxyg3nium.protocol.config.BrokerConfig`, and `org.oxyg3nium.protocol.model`.
 
 3. What is the license for this code and where can it be found?
 - The code is licensed under the GNU Lesser General Public License, and the license can be found in the comments at the beginning of the file, as well as at the specified URL.

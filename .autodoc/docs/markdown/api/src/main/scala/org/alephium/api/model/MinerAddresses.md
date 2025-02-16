@@ -2,7 +2,7 @@
 
 This code defines a case class called `MinerAddresses` which is used to represent a list of addresses that belong to a miner in the Oxyg3nium blockchain network. The `MinerAddresses` class takes in a parameter called `addresses` which is an `AVector` of `Address.Asset` objects. 
 
-The `Address` class is imported from the `org.alephium.protocol.model` package, which is a part of the Oxyg3nium blockchain protocol implementation. The `AVector` class is imported from the `org.alephium.util` package, which is a collection of utility classes used throughout the Oxyg3nium project.
+The `Address` class is imported from the `org.oxyg3nium.protocol.model` package, which is a part of the Oxyg3nium blockchain protocol implementation. The `AVector` class is imported from the `org.oxyg3nium.util` package, which is a collection of utility classes used throughout the Oxyg3nium project.
 
 This code is a part of the Oxyg3nium API model, which is a set of classes used to represent data structures used in the Oxyg3nium blockchain network. The `MinerAddresses` class is used to represent a list of addresses that belong to a miner, which is an important concept in the Oxyg3nium network. 
 
@@ -11,9 +11,9 @@ This class can be used in various parts of the Oxyg3nium project, such as in the
 Here is an example of how the `MinerAddresses` class can be used:
 
 ```
-import org.alephium.api.model.MinerAddresses
-import org.alephium.protocol.model.Address
-import org.alephium.util.AVector
+import org.oxyg3nium.api.model.MinerAddresses
+import org.oxyg3nium.protocol.model.Address
+import org.oxyg3nium.util.AVector
 
 val addresses = AVector(Address.Asset("0x1234"), Address.Asset("0x5678"))
 val minerAddresses = MinerAddresses(addresses)

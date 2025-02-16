@@ -11,7 +11,7 @@ The `TxScriptGasEstimator.scala` file contains code related to gas estimation fo
 Here's an example of how the `GasEstimation` object might be used:
 
 ```scala
-import org.alephium.flow.gasestimation.GasEstimation
+import org.oxyg3nium.flow.gasestimation.GasEstimation
 
 val gasEstimation = GasEstimation()
 val p2pkhInputs = List(input1, input2, input3)

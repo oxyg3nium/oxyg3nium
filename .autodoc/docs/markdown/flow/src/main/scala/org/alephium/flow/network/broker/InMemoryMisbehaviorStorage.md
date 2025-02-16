@@ -18,7 +18,7 @@ Overall, the `InMemoryMisbehaviorStorage` class provides a way to store and mana
 
 2. What external dependencies does this code have?
     
-    This code imports `java.net.InetAddress` and `scala.collection.mutable`. It also imports `org.alephium.flow.network.broker.MisbehaviorManager._` and `org.alephium.util.{discard, AVector, Duration, TimeStamp}`.
+    This code imports `java.net.InetAddress` and `scala.collection.mutable`. It also imports `org.oxyg3nium.flow.network.broker.MisbehaviorManager._` and `org.oxyg3nium.util.{discard, AVector, Duration, TimeStamp}`.
 
 3. What is the significance of the `penaltyForgivness` parameter?
     

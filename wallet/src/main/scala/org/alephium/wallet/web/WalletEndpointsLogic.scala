@@ -14,17 +14,17 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.web
+package org.oxyg3nium.wallet.web
 
 import scala.concurrent.{ExecutionContext, Future}
 
-import org.alephium.api.model.{Amount, ApiKey}
-import org.alephium.crypto.wallet.Mnemonic
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.util.{AVector, Duration, U256}
-import org.alephium.wallet.api.WalletEndpoints
-import org.alephium.wallet.api.model
-import org.alephium.wallet.service.WalletService
+import org.oxyg3nium.api.model.{Amount, ApiKey}
+import org.oxyg3nium.crypto.wallet.Mnemonic
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.util.{AVector, Duration, U256}
+import org.oxyg3nium.wallet.api.WalletEndpoints
+import org.oxyg3nium.wallet.api.model
+import org.oxyg3nium.wallet.service.WalletService
 
 @SuppressWarnings(Array("org.wartremover.warts.IterableOps"))
 trait WalletEndpointsLogic extends WalletEndpoints {

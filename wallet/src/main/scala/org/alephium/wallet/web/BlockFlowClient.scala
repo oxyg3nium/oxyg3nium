@@ -14,20 +14,20 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.web
+package org.oxyg3nium.wallet.web
 
 import scala.concurrent.{ExecutionContext, Future}
 
 import sttp.model.{StatusCode, Uri}
 
-import org.alephium.api.{ApiError, Endpoints}
-import org.alephium.api.model._
-import org.alephium.http.EndpointSender
-import org.alephium.protocol.{PublicKey, Signature}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{Address, GroupIndex}
-import org.alephium.protocol.vm.{GasBox, GasPrice, LockupScript}
-import org.alephium.util.{AVector, Duration, TimeStamp}
+import org.oxyg3nium.api.{ApiError, Endpoints}
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.http.EndpointSender
+import org.oxyg3nium.protocol.{PublicKey, Signature}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{Address, GroupIndex}
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice, LockupScript}
+import org.oxyg3nium.util.{AVector, Duration, TimeStamp}
 
 trait BlockFlowClient {
   def fetchBalance(

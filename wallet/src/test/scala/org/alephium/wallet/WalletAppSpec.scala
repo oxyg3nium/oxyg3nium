@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet
+package org.oxyg3nium.wallet
 
 import java.net.InetAddress
 
@@ -24,16 +24,16 @@ import io.vertx.ext.web.handler.BodyHandler
 import org.scalatest.concurrent.{IntegrationPatience, ScalaFutures}
 import sttp.model.StatusCode
 
-import org.alephium.api.{ApiError, ApiModelCodec}
-import org.alephium.api.UtilJson.avectorReadWriter
-import org.alephium.api.model._
-import org.alephium.crypto.wallet.Mnemonic
-import org.alephium.http.HttpFixture._
-import org.alephium.http.HttpRouteFixture
-import org.alephium.json.Json._
-import org.alephium.protocol.{OXM, Hash, PrivateKey, PublicKey, SignatureSchema}
-import org.alephium.protocol.config.{GroupConfig, NetworkConfig}
-import org.alephium.protocol.model.{
+import org.oxyg3nium.api.{ApiError, ApiModelCodec}
+import org.oxyg3nium.api.UtilJson.avectorReadWriter
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.crypto.wallet.Mnemonic
+import org.oxyg3nium.http.HttpFixture._
+import org.oxyg3nium.http.HttpRouteFixture
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.{OXM, Hash, PrivateKey, PublicKey, SignatureSchema}
+import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfig}
+import org.oxyg3nium.protocol.model.{
   Address,
   CliqueId,
   NetworkId,
@@ -41,11 +41,11 @@ import org.alephium.protocol.model.{
   TransactionId,
   TxGenerators
 }
-import org.alephium.serde.serialize
-import org.alephium.util.{discard, Oxyg3niumFutureSpec, AVector, Duration, Hex, U256}
-import org.alephium.wallet.api.model._
-import org.alephium.wallet.config.WalletConfigFixture
-import org.alephium.wallet.json.ModelCodecs
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util.{discard, Oxyg3niumFutureSpec, AVector, Duration, Hex, U256}
+import org.oxyg3nium.wallet.api.model._
+import org.oxyg3nium.wallet.config.WalletConfigFixture
+import org.oxyg3nium.wallet.json.ModelCodecs
 
 class WalletAppSpec
     extends Oxyg3niumFutureSpec

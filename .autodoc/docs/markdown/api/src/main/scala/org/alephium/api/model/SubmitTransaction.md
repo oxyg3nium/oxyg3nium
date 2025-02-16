@@ -7,8 +7,8 @@ This class is likely used in the larger Oxyg3nium project to facilitate the subm
 Here is an example of how this class might be used in the Oxyg3nium project:
 
 ```scala
-import org.alephium.api.model.SubmitTransaction
-import org.alephium.protocol.Signature
+import org.oxyg3nium.api.model.SubmitTransaction
+import org.oxyg3nium.protocol.Signature
 
 // Assume we have an unsigned transaction represented as a string
 val unsignedTx = "..."

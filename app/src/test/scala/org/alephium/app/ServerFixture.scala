@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import scala.annotation.nowarn
 import scala.concurrent.{ExecutionContext, Future}
@@ -25,32 +25,32 @@ import akka.testkit.TestProbe
 import akka.util.ByteString
 import org.scalacheck.Gen
 
-import org.alephium.api.ApiModelCodec
-import org.alephium.api.model.{AssetOutput => _, ContractOutput => _, Transaction => _, _}
-import org.alephium.crypto.{Blake2b, Byte32}
-import org.alephium.flow.client.Node
-import org.alephium.flow.core._
-import org.alephium.flow.core.BlockChain.TxIndex
-import org.alephium.flow.core.FlowUtils.{AssetOutputInfo, OutputInfo}
-import org.alephium.flow.handler.{AllHandlers, TxHandler}
-import org.alephium.flow.io.{Storages, StoragesFixture}
-import org.alephium.flow.mempool.MemPool
-import org.alephium.flow.mempool.MemPool.AddedToMemPool
-import org.alephium.flow.network._
-import org.alephium.flow.network.bootstrap.{InfoFixture, IntraCliqueInfo}
-import org.alephium.flow.network.broker.MisbehaviorManager
-import org.alephium.flow.setting.{Oxyg3niumConfig, Oxyg3niumConfigFixture}
-import org.alephium.io.IOResult
-import org.alephium.json.Json._
-import org.alephium.protocol._
-import org.alephium.protocol.model._
-import org.alephium.protocol.model.ModelGenerators
-import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
-import org.alephium.protocol.vm._
-import org.alephium.protocol.vm.nodeindexes.{TxIdTxOutputLocators, TxOutputLocator}
-import org.alephium.serde.serialize
-import org.alephium.util._
-import org.alephium.util.Hex.HexStringSyntax
+import org.oxyg3nium.api.ApiModelCodec
+import org.oxyg3nium.api.model.{AssetOutput => _, ContractOutput => _, Transaction => _, _}
+import org.oxyg3nium.crypto.{Blake2b, Byte32}
+import org.oxyg3nium.flow.client.Node
+import org.oxyg3nium.flow.core._
+import org.oxyg3nium.flow.core.BlockChain.TxIndex
+import org.oxyg3nium.flow.core.FlowUtils.{AssetOutputInfo, OutputInfo}
+import org.oxyg3nium.flow.handler.{AllHandlers, TxHandler}
+import org.oxyg3nium.flow.io.{Storages, StoragesFixture}
+import org.oxyg3nium.flow.mempool.MemPool
+import org.oxyg3nium.flow.mempool.MemPool.AddedToMemPool
+import org.oxyg3nium.flow.network._
+import org.oxyg3nium.flow.network.bootstrap.{InfoFixture, IntraCliqueInfo}
+import org.oxyg3nium.flow.network.broker.MisbehaviorManager
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfig, Oxyg3niumConfigFixture}
+import org.oxyg3nium.io.IOResult
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol._
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.model.ModelGenerators
+import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
+import org.oxyg3nium.protocol.vm._
+import org.oxyg3nium.protocol.vm.nodeindexes.{TxIdTxOutputLocators, TxOutputLocator}
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util._
+import org.oxyg3nium.util.Hex.HexStringSyntax
 
 trait ServerFixture
     extends InfoFixture

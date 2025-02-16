@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/AppException.scala)
 
-This code defines a custom exception class called `AppException` in the `org.alephium.util` package. The purpose of this class is to provide a way to throw exceptions specific to the Oxyg3nium project with a custom message.
+This code defines a custom exception class called `AppException` in the `org.oxyg3nium.util` package. The purpose of this class is to provide a way to throw exceptions specific to the Oxyg3nium project with a custom message.
 
 The `AppException` class extends the built-in `Exception` class and takes a single parameter, `message`, which is a string that describes the reason for the exception. This message can be customized for each instance of the exception, allowing for more informative error messages.
 

@@ -13,7 +13,7 @@ selectionHandler.registerTask(udpServer)
 `SerializedExecutionContext.scala` provides the `SerializedExecutionContext` class, which is a serialized execution context for tasks that need to be executed in a specific order. It maintains a queue of tasks and ensures they are executed in the order they are added. This is useful when processing network messages that need to be executed in a specific order.
 
 ```scala
-import org.alephium.flow.network.udp.SerializedExecutionContext
+import org.oxyg3nium.flow.network.udp.SerializedExecutionContext
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 

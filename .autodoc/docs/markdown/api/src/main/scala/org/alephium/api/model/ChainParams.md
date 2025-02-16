@@ -9,8 +9,8 @@ This `ChainParams` class is used throughout the Oxyg3nium project to store and p
 Here is an example of how the `ChainParams` class might be used in the context of the Oxyg3nium project:
 
 ```scala
-import org.alephium.api.model.ChainParams
-import org.alephium.protocol.model.NetworkId
+import org.oxyg3nium.api.model.ChainParams
+import org.oxyg3nium.protocol.model.NetworkId
 
 val mainNetParams = ChainParams(
   networkId = NetworkId.MainNet,

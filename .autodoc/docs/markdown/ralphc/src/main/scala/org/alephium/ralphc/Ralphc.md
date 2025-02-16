@@ -2,7 +2,7 @@
 
 This code is a part of the Oxyg3nium project and is responsible for running the Ralphc application. The Ralphc application is a command-line interface (CLI) tool that allows users to interact with the Oxyg3nium blockchain. 
 
-The code begins by defining the GNU Lesser General Public License under which the Oxyg3nium project is distributed. It then imports the `org.alephium.ralphc` package and defines an object called `Main`. 
+The code begins by defining the GNU Lesser General Public License under which the Oxyg3nium project is distributed. It then imports the `org.oxyg3nium.ralphc` package and defines an object called `Main`. 
 
 The `Main` object extends the `App` trait, which allows it to be run as a standalone application. The `Main` object contains a `try` block that attempts to call the `Cli()` method with the `args` parameter. The `Cli()` method is responsible for parsing the command-line arguments and executing the appropriate action. The `call()` method is called on the `Cli()` object, which returns an exit code that is passed to the `System.exit()` method. 
 
@@ -20,7 +20,7 @@ Usage: ralphc [options]
 ```
 ## Questions: 
  1. What is the purpose of this code file?
-- This code file is the entry point of the `org.alephium.ralphc` package and contains the `Main` object that executes the command line interface (CLI) for the Oxyg3nium project.
+- This code file is the entry point of the `org.oxyg3nium.ralphc` package and contains the `Main` object that executes the command line interface (CLI) for the Oxyg3nium project.
 
 2. What license is this code file released under?
 - This code file is released under the GNU Lesser General Public License, either version 3 of the License, or any later version.

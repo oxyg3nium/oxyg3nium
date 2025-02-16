@@ -56,7 +56,7 @@ heightIndexStorage.clearHeightIndex()
 - This code defines a trait `NodeStateStorage` and a class `NodeStateRockDBStorage` that implement a storage interface for the Oxyg3nium project. It provides methods for storing and retrieving data related to the state of the node, such as whether it has been initialized, the database version, and chain state information.
 
 2. What external libraries or dependencies does this code rely on?
-- This code relies on several external libraries, including `akka`, `rocksdb`, and `org.alephium` packages. It also imports several classes and traits from these packages, such as `ByteString`, `Deserializer`, and `RocksDBSource`.
+- This code relies on several external libraries, including `akka`, `rocksdb`, and `org.oxyg3nium` packages. It also imports several classes and traits from these packages, such as `ByteString`, `Deserializer`, and `RocksDBSource`.
 
 3. What is the purpose of the `checkDatabaseCompatibility` method and how does it work?
 - The `checkDatabaseCompatibility` method checks whether the current database version is compatible with the expected version for the Oxyg3nium project. It does this by retrieving the current database version from storage and comparing it to the expected version. If the current version is greater than the expected version, an error is thrown. If the current version is less than the expected version, the database version is updated to the expected version. If the current version matches the expected version, no action is taken.

@@ -15,4 +15,4 @@ Overall, this code is used to validate various components of the Oxyg3nium block
 - This code is licensed under the GNU Lesser General Public License version 3 or later.
 
 3. What other files or packages does this code file depend on?
-- This code file depends on several other packages and files within the Oxyg3nium project, including `org.alephium.io`, `org.alephium.protocol.model`, and `org.alephium.protocol.vm`.
+- This code file depends on several other packages and files within the Oxyg3nium project, including `org.oxyg3nium.io`, `org.oxyg3nium.protocol.model`, and `org.oxyg3nium.protocol.vm`.

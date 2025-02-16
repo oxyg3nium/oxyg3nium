@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/CliqueId.scala)
 
-The `CliqueId` class in the `org.alephium.protocol.model` package is a 160-bit identifier of a peer in the Oxyg3nium network. It is used to identify and compare peers in the network. The class takes a `PublicKey` object as a parameter and generates a `ByteString` object from it. The `PublicKey` object is a cryptographic public key used to verify digital signatures and encrypt messages.
+The `CliqueId` class in the `org.oxyg3nium.protocol.model` package is a 160-bit identifier of a peer in the Oxyg3nium network. It is used to identify and compare peers in the network. The class takes a `PublicKey` object as a parameter and generates a `ByteString` object from it. The `PublicKey` object is a cryptographic public key used to verify digital signatures and encrypt messages.
 
 The `CliqueId` class implements the `RandomBytes` trait, which provides a method to generate random bytes. It also implements the `Ordered` trait, which allows instances of the class to be compared with each other. The `compare` method is used to compare two `CliqueId` objects based on their byte strings.
 

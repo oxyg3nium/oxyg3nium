@@ -22,7 +22,7 @@ These classes are used in the Oxyg3nium project to interact with smart contracts
    - This code defines case classes for making calls to Oxyg3nium smart contracts and validating them.
 
 2. What dependencies does this code have?
-   - This code imports several classes from the `org.alephium` package, including `BrokerConfig`, `Address`, `BlockHash`, `ChainIndex`, `TransactionId`, and `AVector`.
+   - This code imports several classes from the `org.oxyg3nium` package, including `BrokerConfig`, `Address`, `BlockHash`, `ChainIndex`, `TransactionId`, and `AVector`.
 
 3. What is the expected input and output of the `validate` method?
    - The `validate` method takes an implicit `BrokerConfig` parameter and returns a `Try[GroupIndex]`. It validates the `group` and `worldStateBlockHash` fields of the `CallContract` instance and returns the corresponding `GroupIndex` if successful.

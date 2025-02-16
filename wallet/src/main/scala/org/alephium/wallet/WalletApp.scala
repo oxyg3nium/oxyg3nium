@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet
+package org.oxyg3nium.wallet
 
 import java.nio.file.Paths
 
@@ -28,12 +28,12 @@ import io.vertx.ext.web._
 import io.vertx.ext.web.handler.CorsHandler
 import sttp.tapir.server.vertx.VertxFutureServerInterpreter._
 
-import org.alephium.http.EndpointSender
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.util.{AVector, Service}
-import org.alephium.wallet.config.WalletConfig
-import org.alephium.wallet.service.WalletService
-import org.alephium.wallet.web._
+import org.oxyg3nium.http.EndpointSender
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.util.{AVector, Service}
+import org.oxyg3nium.wallet.config.WalletConfig
+import org.oxyg3nium.wallet.service.WalletService
+import org.oxyg3nium.wallet.web._
 
 class WalletApp(config: WalletConfig)(implicit
     val executionContext: ExecutionContext

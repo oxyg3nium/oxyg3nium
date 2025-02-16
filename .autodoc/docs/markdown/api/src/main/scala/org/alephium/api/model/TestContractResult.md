@@ -34,4 +34,4 @@ println(debugMessage.toString()) // prints "DEBUG - 0x1234 - Something went wron
 2. What is the `DebugMessage` case class used for?
    - The `DebugMessage` case class represents a debug message associated with a contract address and is used to provide additional information during testing and debugging.
 3. What are the dependencies of this file?
-   - This file depends on several other classes and packages, including `Hash` and `Address` from the `org.alephium.protocol` package, `AVector` from the `org.alephium.util` package, and `ContractState`, `Address`, and `Output` from unspecified packages.
+   - This file depends on several other classes and packages, including `Hash` and `Address` from the `org.oxyg3nium.protocol` package, `AVector` from the `org.oxyg3nium.util` package, and `ContractState`, `Address`, and `Output` from unspecified packages.

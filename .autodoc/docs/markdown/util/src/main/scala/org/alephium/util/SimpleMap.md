@@ -11,7 +11,7 @@ The SimpleMap trait is intended to be used as a building block for other classes
 Here is an example of how the SimpleMap trait could be used:
 
 ```scala
-import org.alephium.util.SimpleMap
+import org.oxyg3nium.util.SimpleMap
 
 class MyCache[K, V] {
   private val map: SimpleMap[K, V] = new SimpleMapImpl[K, V]

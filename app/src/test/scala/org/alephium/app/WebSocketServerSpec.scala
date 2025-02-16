@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import scala.concurrent.ExecutionContext
 
@@ -27,16 +27,16 @@ import io.vertx.core.http.WebSocketClientOptions
 import org.scalatest.{Assertion, EitherValues}
 import sttp.tapir.server.vertx.VertxFutureServerInterpreter._
 
-import org.alephium.api.model.{BlockEntry, GhostUncleBlockEntry}
-import org.alephium.crypto.Blake3
-import org.alephium.flow.handler.AllHandlers.BlockNotify
-import org.alephium.flow.handler.TestUtils
-import org.alephium.json.Json._
-import org.alephium.protocol.{Hash, PublicKey}
-import org.alephium.protocol.model._
-import org.alephium.protocol.vm.LockupScript
-import org.alephium.rpc.model.JsonRPC._
-import org.alephium.util._
+import org.oxyg3nium.api.model.{BlockEntry, GhostUncleBlockEntry}
+import org.oxyg3nium.crypto.Blake3
+import org.oxyg3nium.flow.handler.AllHandlers.BlockNotify
+import org.oxyg3nium.flow.handler.TestUtils
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.{Hash, PublicKey}
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.protocol.vm.LockupScript
+import org.oxyg3nium.rpc.model.JsonRPC._
+import org.oxyg3nium.util._
 
 class WebSocketServerSpec
     extends Oxyg3niumFutureSpec

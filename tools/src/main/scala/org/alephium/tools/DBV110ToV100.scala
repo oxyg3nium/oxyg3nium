@@ -14,17 +14,17 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.tools
+package org.oxyg3nium.tools
 
 import java.nio.charset.StandardCharsets
 
 import akka.util.ByteString
 
-import org.alephium.flow.io.{DatabaseVersion, Storages}
-import org.alephium.io.RocksDBSource.ColumnFamily
-import org.alephium.protocol.Hash
-import org.alephium.serde.serialize
-import org.alephium.util.{Bytes, Files}
+import org.oxyg3nium.flow.io.{DatabaseVersion, Storages}
+import org.oxyg3nium.io.RocksDBSource.ColumnFamily
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.serde.serialize
+import org.oxyg3nium.util.{Bytes, Files}
 
 object DBV110ToV100 extends App {
   private val rootPath      = Files.homeDir.resolve(".alephium/mainnet")

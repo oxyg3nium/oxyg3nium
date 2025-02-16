@@ -11,7 +11,7 @@ The `IOError` class and its subclasses are used throughout the project to handle
 Here is an example of how the `KeyNotFound` error might be used in the project:
 
 ```scala
-import org.alephium.io.IOError
+import org.oxyg3nium.io.IOError
 
 try {
   val value = dataStore.get(key)

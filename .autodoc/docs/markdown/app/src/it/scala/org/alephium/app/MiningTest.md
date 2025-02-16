@@ -16,7 +16,7 @@ The `MiningTest` class is used to ensure that the mining process of the Oxyg3niu
 - The `MiningTest` class is a test suite for testing mining functionality in the Oxyg3nium project.
 
 2. What external dependencies does this code rely on?
-- This code relies on several external dependencies, including `org.alephium.api.model`, `org.alephium.flow.mining.Miner`, and `org.alephium.protocol.model.nonCoinbaseMinGasFee`.
+- This code relies on several external dependencies, including `org.oxyg3nium.api.model`, `org.oxyg3nium.flow.mining.Miner`, and `org.oxyg3nium.protocol.model.nonCoinbaseMinGasFee`.
 
 3. What is the expected behavior of the `work with external miner` test case?
 - The `work with external miner` test case is expected to transfer funds, confirm the transaction, and then mine a block using an external CPU miner.

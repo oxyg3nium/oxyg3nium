@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.tools
+package org.oxyg3nium.tools
 
 import scala.io.Source
 import scala.util.Using
@@ -34,7 +34,7 @@ class BuiltInFunctionsSpec extends AnyFlatSpecLike with Matchers {
 
     assert(
       expectedBuiltinFunctionsDoc == builtinFunctionsDoc,
-      "The built-in functions documentation is not up to date. Please run `sbt tools/runMain org.alephium.tools.BuiltInFunctions` to update it."
+      "The built-in functions documentation is not up to date. Please run `sbt tools/runMain org.oxyg3nium.tools.BuiltInFunctions` to update it."
     )
   }
 }

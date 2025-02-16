@@ -14,11 +14,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.api.model
+package org.oxyg3nium.wallet.api.model
 
-import org.alephium.api.model.Amount
-import org.alephium.protocol.model.Address
-import org.alephium.util.AVector
+import org.oxyg3nium.api.model.Amount
+import org.oxyg3nium.protocol.model.Address
+import org.oxyg3nium.util.AVector
 
 final case class Balances(
     totalBalance: Amount,

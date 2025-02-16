@@ -12,8 +12,8 @@ Here is an example of how this `BlockSolution` class might be used in the Oxyg3n
 
 ```scala
 import akka.util.ByteString
-import org.alephium.api.model.BlockSolution
-import org.alephium.util.U256
+import org.oxyg3nium.api.model.BlockSolution
+import org.oxyg3nium.util.U256
 
 val blockBlob: ByteString = ByteString(Array[Byte](0x01, 0x02, 0x03))
 val miningCount: U256 = U256.fromBigInt(BigInt(100))

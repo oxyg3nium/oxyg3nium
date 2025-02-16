@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol/src/main/scala/org/alephium/protocol/message)
 
-The code in the `org.alephium.protocol.message` package is responsible for defining the message format and handling the serialization and deserialization of messages exchanged between nodes in the Oxyg3nium network. The package contains several classes and objects that represent different types of messages, such as `DiscoveryMessage`, `Header`, `Message`, and `Payload`. These messages are used for various purposes, such as discovering other nodes, handshaking, and requesting and responding with blocks, headers, and transactions.
+The code in the `org.oxyg3nium.protocol.message` package is responsible for defining the message format and handling the serialization and deserialization of messages exchanged between nodes in the Oxyg3nium network. The package contains several classes and objects that represent different types of messages, such as `DiscoveryMessage`, `Header`, `Message`, and `Payload`. These messages are used for various purposes, such as discovering other nodes, handshaking, and requesting and responding with blocks, headers, and transactions.
 
 For example, the `DiscoveryMessage.scala` file defines the message format for the Oxyg3nium discovery protocol, which is used by nodes to discover and communicate with each other. The `Header.scala` file defines the `Header` class, which represents the header of a message in the Oxyg3nium protocol, and provides serialization and deserialization functionality using the `Serde` library.
 
@@ -11,7 +11,7 @@ The `Payload.scala` file defines the `Payload` trait and its implementations, wh
 Here's an example of how to use the `Message` class to create and serialize a new message:
 
 ```scala
-import org.alephium.protocol.message.{Message, Payload}
+import org.oxyg3nium.protocol.message.{Message, Payload}
 
 case class MyPayload(data: String) extends Payload
 

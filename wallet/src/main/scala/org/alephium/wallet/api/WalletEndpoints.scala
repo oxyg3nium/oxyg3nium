@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.api
+package org.oxyg3nium.wallet.api
 
 import sttp.tapir._
 import sttp.tapir.generic.auto._
 
-import org.alephium.api.{BaseEndpoint, TapirCodecs, TapirSchemasLike}
-import org.alephium.api.Endpoints.{jsonBody, jsonBodyWithAlph}
-import org.alephium.api.UtilJson._
-import org.alephium.protocol.model.{Address, GroupIndex}
-import org.alephium.util.AVector
-import org.alephium.wallet.api.model._
-import org.alephium.wallet.json
+import org.oxyg3nium.api.{BaseEndpoint, TapirCodecs, TapirSchemasLike}
+import org.oxyg3nium.api.Endpoints.{jsonBody, jsonBodyWithAlph}
+import org.oxyg3nium.api.UtilJson._
+import org.oxyg3nium.protocol.model.{Address, GroupIndex}
+import org.oxyg3nium.util.AVector
+import org.oxyg3nium.wallet.api.model._
+import org.oxyg3nium.wallet.json
 
 trait WalletEndpoints
     extends json.ModelCodecs

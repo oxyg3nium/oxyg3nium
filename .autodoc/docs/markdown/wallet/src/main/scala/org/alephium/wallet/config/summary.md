@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium/wallet/config)
 
-The `WalletConfig.scala` file in the `org.alephium.wallet.config` package defines the configuration settings for the Oxyg3nium wallet. It allows developers to customize the wallet's behavior, connect it to the blockflow service, and authenticate API requests.
+The `WalletConfig.scala` file in the `org.oxyg3nium.wallet.config` package defines the configuration settings for the Oxyg3nium wallet. It allows developers to customize the wallet's behavior, connect it to the blockflow service, and authenticate API requests.
 
 The `WalletConfig` case class contains various configurable parameters, such as:
 
@@ -23,7 +23,7 @@ The `WalletConfig` object also provides implicit `ValueReader` instances for rea
 Here's an example of creating a `WalletConfig` object with custom parameters:
 
 ```scala
-import org.alephium.wallet.config.WalletConfig
+import org.oxyg3nium.wallet.config.WalletConfig
 
 val config = WalletConfig(
   port = Some(8080),

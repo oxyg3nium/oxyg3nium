@@ -16,5 +16,5 @@ Overall, the `GetChainInfo` case class is a simple but important component of th
 2. What is the significance of the copyright and license information at the top of the file?
    - The copyright and license information indicates that the code is part of the Oxyg3nium project and is licensed under the GNU Lesser General Public License, which allows for redistribution and modification of the code.
    
-3. What is the `org.alephium.api.model` package used for?
-   - The `org.alephium.api.model` package is likely used to contain various models and data structures used in the Oxyg3nium API. The `GetChainInfo` case class is an example of such a model.
+3. What is the `org.oxyg3nium.api.model` package used for?
+   - The `org.oxyg3nium.api.model` package is likely used to contain various models and data structures used in the Oxyg3nium API. The `GetChainInfo` case class is an example of such a model.

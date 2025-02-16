@@ -9,7 +9,7 @@ This file contains two case classes, `ScriptResult` and `ContractResult`, along 
 These classes are likely used throughout the Oxyg3nium project to represent the results of compiling smart contracts and scripts. For example, they may be used by other parts of the project to verify that a contract or script has been compiled correctly, or to extract information about a compiled contract or script. Here is an example of how `ScriptResult` might be used:
 
 ```
-import org.alephium.api.Oxyg3niumAPI
+import org.oxyg3nium.api.Oxyg3niumAPI
 
 val api = new Oxyg3niumAPI()
 val script = "def main():\n  return 42"
@@ -22,7 +22,7 @@ println(scriptResult.version) // prints the version of the compiled script
    - This code defines two case classes, `ScriptResult` and `ContractResult`, which are used to represent the results of compiling Oxyg3nium smart contracts and scripts.
 
 2. What other files or packages does this code depend on?
-   - This code depends on several other packages, including `org.alephium.api.model`, `org.alephium.protocol`, and `org.alephium.util`. It also imports the `Hash` class from `org.alephium.protocol`.
+   - This code depends on several other packages, including `org.oxyg3nium.api.model`, `org.oxyg3nium.protocol`, and `org.oxyg3nium.util`. It also imports the `Hash` class from `org.oxyg3nium.protocol`.
 
 3. What is the license for this code and where can I find more information about it?
    - This code is licensed under the GNU Lesser General Public License, version 3 or later. More information about this license can be found at <http://www.gnu.org/licenses/>.

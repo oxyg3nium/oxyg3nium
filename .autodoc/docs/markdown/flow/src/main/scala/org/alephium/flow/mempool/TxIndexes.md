@@ -30,7 +30,7 @@ txIndexes.remove(tx)
 ## Questions: 
  1. What is the purpose of this code and how does it fit into the overall alephium project?
 - This code defines a class called `TxIndexes` which is used to index transactions in the mempool of the alephium project.
-- It is part of the `org.alephium.flow.mempool` package and is used to manage transactions in the mempool.
+- It is part of the `org.oxyg3nium.flow.mempool` package and is used to manage transactions in the mempool.
 
 2. What are the main data structures used in this code and how are they used?
 - The main data structures used in this code are `mutable.HashMap` and `mutable.ArrayBuffer`.

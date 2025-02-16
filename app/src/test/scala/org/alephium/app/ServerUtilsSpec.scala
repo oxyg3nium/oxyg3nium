@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.net.InetSocketAddress
 
@@ -24,25 +24,25 @@ import akka.util.ByteString
 import org.scalacheck.Gen
 import org.scalatest.Assertion
 
-import org.alephium.api.{model => api}
-import org.alephium.api.{ApiError, Try}
-import org.alephium.api.model.{Transaction => _, TransactionTemplate => _, _}
-import org.alephium.api.model.BuildDeployContractTx.Code
-import org.alephium.crypto.{BIP340Schnorr, SecP256K1}
-import org.alephium.flow.FlowFixture
-import org.alephium.flow.core.{maxForkDepth, AMMContract, BlockFlow, ExtraUtxosInfo}
-import org.alephium.flow.gasestimation._
-import org.alephium.flow.setting.NetworkSetting
-import org.alephium.flow.validation.TxScriptExeFailed
-import org.alephium.protocol._
-import org.alephium.protocol.config.{BrokerConfig, GroupConfig}
-import org.alephium.protocol.model
-import org.alephium.protocol.model.{AssetOutput => _, ContractOutput => ModelContractOutput, _}
-import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
-import org.alephium.protocol.vm.{GasBox, GasPrice, LockupScript, TokenIssuance, UnlockScript}
-import org.alephium.ralph.{Compiler, SourceIndex}
-import org.alephium.serde.{avectorSerde, deserialize, serialize}
-import org.alephium.util._
+import org.oxyg3nium.api.{model => api}
+import org.oxyg3nium.api.{ApiError, Try}
+import org.oxyg3nium.api.model.{Transaction => _, TransactionTemplate => _, _}
+import org.oxyg3nium.api.model.BuildDeployContractTx.Code
+import org.oxyg3nium.crypto.{BIP340Schnorr, SecP256K1}
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.flow.core.{maxForkDepth, AMMContract, BlockFlow, ExtraUtxosInfo}
+import org.oxyg3nium.flow.gasestimation._
+import org.oxyg3nium.flow.setting.NetworkSetting
+import org.oxyg3nium.flow.validation.TxScriptExeFailed
+import org.oxyg3nium.protocol._
+import org.oxyg3nium.protocol.config.{BrokerConfig, GroupConfig}
+import org.oxyg3nium.protocol.model
+import org.oxyg3nium.protocol.model.{AssetOutput => _, ContractOutput => ModelContractOutput, _}
+import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice, LockupScript, TokenIssuance, UnlockScript}
+import org.oxyg3nium.ralph.{Compiler, SourceIndex}
+import org.oxyg3nium.serde.{avectorSerde, deserialize, serialize}
+import org.oxyg3nium.util._
 
 // scalastyle:off file.size.limit number.of.methods
 class ServerUtilsSpec extends Oxyg3niumSpec {

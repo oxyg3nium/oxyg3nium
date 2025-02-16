@@ -7,7 +7,7 @@ The purpose of this code is to provide a utility for processing a collection of 
 Here is an example of how this method might be used:
 
 ```scala
-import org.alephium.util.FutureCollection
+import org.oxyg3nium.util.FutureCollection
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

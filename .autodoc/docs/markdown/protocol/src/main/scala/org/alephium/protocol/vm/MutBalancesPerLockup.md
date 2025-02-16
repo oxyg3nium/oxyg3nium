@@ -17,4 +17,4 @@ The `MutBalancesPerLockup` class is used in the larger Oxyg3nium project to impl
 - This code is licensed under the GNU Lesser General Public License version 3 or later.
 
 3. What other packages or classes does this code depend on?
-- This code depends on several other packages and classes, including `org.alephium.protocol.model`, `org.alephium.util`, and `scala.collection.mutable`.
+- This code depends on several other packages and classes, including `org.oxyg3nium.protocol.model`, `org.oxyg3nium.util`, and `scala.collection.mutable`.

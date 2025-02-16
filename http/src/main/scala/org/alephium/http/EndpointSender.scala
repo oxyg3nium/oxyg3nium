@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.http
+package org.oxyg3nium.http
 
 import scala.collection.immutable.ArraySeq
 import scala.concurrent._
@@ -26,10 +26,10 @@ import sttp.model.{StatusCode, Uri}
 import sttp.tapir.DecodeResult
 import sttp.tapir.client.sttp.SttpClientInterpreter
 
-import org.alephium.api.{ApiError, BaseEndpoint}
-import org.alephium.api.model.ApiKey
-import org.alephium.util.{AVector, Service}
-import org.alephium.util.Utils.getStackTrace
+import org.oxyg3nium.api.{ApiError, BaseEndpoint}
+import org.oxyg3nium.api.model.ApiKey
+import org.oxyg3nium.util.{AVector, Service}
+import org.oxyg3nium.util.Utils.getStackTrace
 
 // scalastyle:off method.length
 class EndpointSender(val maybeApiKey: Option[ApiKey])(implicit

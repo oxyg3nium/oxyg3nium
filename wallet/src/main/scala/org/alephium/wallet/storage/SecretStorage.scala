@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.storage
+package org.oxyg3nium.wallet.storage
 
 import java.io.{File, FileNotFoundException, PrintWriter}
 import java.nio.file.Files
@@ -24,14 +24,14 @@ import scala.util.{Try, Using}
 
 import akka.util.ByteString
 
-import org.alephium.api.UtilJson._
-import org.alephium.crypto.{AES, Sha256}
-import org.alephium.crypto.wallet.{BIP32, Mnemonic}
-import org.alephium.crypto.wallet.BIP32.ExtendedPrivateKey
-import org.alephium.json.Json._
-import org.alephium.serde._
-import org.alephium.util.AVector
-import org.alephium.wallet.Constants
+import org.oxyg3nium.api.UtilJson._
+import org.oxyg3nium.crypto.{AES, Sha256}
+import org.oxyg3nium.crypto.wallet.{BIP32, Mnemonic}
+import org.oxyg3nium.crypto.wallet.BIP32.ExtendedPrivateKey
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.serde._
+import org.oxyg3nium.util.AVector
+import org.oxyg3nium.wallet.Constants
 
 trait SecretStorage {
   def lock(): Unit

@@ -14,20 +14,20 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.web
+package org.oxyg3nium.wallet.web
 
 import scala.concurrent.ExecutionContext
 
 import org.scalatest.Inside
 import sttp.client3._
 
-import org.alephium.api.Endpoints
-import org.alephium.api.model.{Amount, ApiKey, BuildTransferTx, Destination}
-import org.alephium.http.EndpointSender
-import org.alephium.json.Json._
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model._
-import org.alephium.util.{Oxyg3niumSpec, AVector, Duration, U256}
+import org.oxyg3nium.api.Endpoints
+import org.oxyg3nium.api.model.{Amount, ApiKey, BuildTransferTx, Destination}
+import org.oxyg3nium.http.EndpointSender
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Duration, U256}
 
 class BlockFlowClientSpec() extends Oxyg3niumSpec with Inside {
   it should "correclty create an sttp request" in new Fixture {

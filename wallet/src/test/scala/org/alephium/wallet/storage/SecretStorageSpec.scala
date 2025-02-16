@@ -14,15 +14,15 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.storage
+package org.oxyg3nium.wallet.storage
 
 import java.io.{File, PrintWriter}
 import java.nio.file.Files
 
-import org.alephium.crypto.wallet.{BIP32, Mnemonic}
-import org.alephium.protocol.{Generators, Hash}
-import org.alephium.util.{Oxyg3niumSpec, AVector, Hex}
-import org.alephium.wallet.Constants
+import org.oxyg3nium.crypto.wallet.{BIP32, Mnemonic}
+import org.oxyg3nium.protocol.{Generators, Hash}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Hex}
+import org.oxyg3nium.wallet.Constants
 
 class SecretStorageSpec() extends Oxyg3niumSpec with Generators {
 

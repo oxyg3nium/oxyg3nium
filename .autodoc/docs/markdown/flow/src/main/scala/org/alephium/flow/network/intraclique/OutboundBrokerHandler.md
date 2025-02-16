@@ -28,7 +28,7 @@ val outboundBroker = system.actorOf(outboundBrokerHandler)
 
 2. What other classes or libraries does this code depend on?
    
-   This code depends on several other classes and libraries, including `java.net.InetSocketAddress`, `akka.actor.Props`, `org.alephium.flow.core.BlockFlow`, `org.alephium.flow.handler.AllHandlers`, `org.alephium.flow.network.CliqueManager`, `org.alephium.flow.network.broker.OutboundBrokerHandler`, `org.alephium.flow.network.sync.BlockFlowSynchronizer`, `org.alephium.flow.setting.NetworkSetting`, `org.alephium.protocol.config.BrokerConfig`, `org.alephium.protocol.model.BrokerInfo`, and `org.alephium.protocol.model.CliqueInfo`.
+   This code depends on several other classes and libraries, including `java.net.InetSocketAddress`, `akka.actor.Props`, `org.oxyg3nium.flow.core.BlockFlow`, `org.oxyg3nium.flow.handler.AllHandlers`, `org.oxyg3nium.flow.network.CliqueManager`, `org.oxyg3nium.flow.network.broker.OutboundBrokerHandler`, `org.oxyg3nium.flow.network.sync.BlockFlowSynchronizer`, `org.oxyg3nium.flow.setting.NetworkSetting`, `org.oxyg3nium.protocol.config.BrokerConfig`, `org.oxyg3nium.protocol.model.BrokerInfo`, and `org.oxyg3nium.protocol.model.CliqueInfo`.
 
 3. What license is this code released under?
    

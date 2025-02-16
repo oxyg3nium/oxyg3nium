@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.nio.file.Path
 
@@ -28,10 +28,10 @@ import com.typesafe.scalalogging.StrictLogging
 import io.prometheus.client.Gauge
 import io.prometheus.client.hotspot.DefaultExports
 
-import org.alephium.flow.mining.Miner
-import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
-import org.alephium.protocol.model.Block
-import org.alephium.util.{AVector, Duration, Env}
+import org.oxyg3nium.flow.mining.Miner
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
+import org.oxyg3nium.protocol.model.Block
+import org.oxyg3nium.util.{AVector, Duration, Env}
 
 object Boot extends App with StrictLogging {
   try {

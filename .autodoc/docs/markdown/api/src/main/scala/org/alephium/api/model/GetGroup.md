@@ -9,8 +9,8 @@ This code is part of a larger project that provides a variety of API endpoints f
 Here is an example of how this code might be used in the larger project:
 
 ```scala
-import org.alephium.api.model.GetGroup
-import org.alephium.protocol.model.Address
+import org.oxyg3nium.api.model.GetGroup
+import org.oxyg3nium.protocol.model.Address
 
 val address = Address.fromString("0x123456789abcdef")
 val groupRequest = GetGroup(address)
@@ -24,6 +24,6 @@ Overall, this code provides a simple and flexible way for users of the Oxyg3nium
  1. What is the purpose of the `GetGroup` case class?
    - The `GetGroup` case class is used to represent a request to retrieve a group associated with a specific address in the Oxyg3nium protocol.
 2. What is the significance of the `Address` import statement?
-   - The `Address` import statement is used to import the `Address` class from the `org.alephium.protocol.model` package, which is likely used in the implementation of the `GetGroup` case class.
+   - The `Address` import statement is used to import the `Address` class from the `org.oxyg3nium.protocol.model` package, which is likely used in the implementation of the `GetGroup` case class.
 3. What is the license under which this code is distributed?
    - This code is distributed under the GNU Lesser General Public License, version 3 or later.

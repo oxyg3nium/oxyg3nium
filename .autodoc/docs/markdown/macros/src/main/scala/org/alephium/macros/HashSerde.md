@@ -11,7 +11,7 @@ The `HashSerde` annotation is useful in the Oxyg3nium project because it simplif
 Example usage:
 
 ```scala
-import org.alephium.macros.HashSerde
+import org.oxyg3nium.macros.HashSerde
 
 @HashSerde
 case class Person(name: String, age: Int)

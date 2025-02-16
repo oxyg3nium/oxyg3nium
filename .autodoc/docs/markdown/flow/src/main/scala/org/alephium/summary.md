@@ -1,11 +1,11 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/flow/src/main/scala/org/alephium)
 
-The `Utils.scala` file in the `org.alephium` package provides utility functions for displaying various types of data in a human-readable format, which can be used across the Oxyg3nium project. These functions are particularly useful for debugging and logging purposes, as they help developers visualize the data structures used in the project.
+The `Utils.scala` file in the `org.oxyg3nium` package provides utility functions for displaying various types of data in a human-readable format, which can be used across the Oxyg3nium project. These functions are particularly useful for debugging and logging purposes, as they help developers visualize the data structures used in the project.
 
 For example, the `showDigest` function takes a vector of `RandomBytes` objects and returns a string representation of the vector. This can be used to display a compact representation of a list of hashes or IDs:
 
 ```scala
-import org.alephium.flow.Utils._
+import org.oxyg3nium.flow.Utils._
 
 val digest = AVector(RandomBytes(1), RandomBytes(2), RandomBytes(3))
 val digestStr = showDigest(digest)
@@ -15,7 +15,7 @@ println(digestStr) // Output: "[ 01..03 ]"
 Similarly, the `showTxs` function takes a vector of `TransactionTemplate` objects and returns a string representation of the vector, which can be used to display a compact representation of a list of transactions:
 
 ```scala
-import org.alephium.flow.Utils._
+import org.oxyg3nium.flow.Utils._
 
 val txs = AVector(TransactionTemplate(TransactionId(1)), TransactionTemplate(TransactionId(2)), TransactionTemplate(TransactionId(3)))
 val txsStr = showTxs(txs)
@@ -27,7 +27,7 @@ The `showFlow` and `showDataDigest` functions can be used to display a compact r
 The `showChainIndexedDigest` function is useful for displaying a compact representation of a list of pairs of `ChainIndex` and vectors of `TransactionId` objects, which can be helpful for visualizing the structure of the blockchain:
 
 ```scala
-import org.alephium.flow.Utils._
+import org.oxyg3nium.flow.Utils._
 
 val chainIndexedDigest = AVector((ChainIndex(1), AVector(TransactionId(1), TransactionId(2))), (ChainIndex(2), AVector(TransactionId(3), TransactionId(4))))
 val chainIndexedDigestStr = showChainIndexedDigest(chainIndexedDigest)

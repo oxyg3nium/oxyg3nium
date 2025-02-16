@@ -14,7 +14,7 @@ Overall, this code provides a framework for handling incoming broker connections
 - This code is part of the alephium project and defines a trait for an inbound broker handler that handles incoming connections.
 
 2. What dependencies does this code have?
-- This code imports several dependencies, including `akka.io.Tcp`, `org.alephium.flow.network.CliqueManager`, `org.alephium.flow.setting.NetworkSetting`, `org.alephium.protocol.message.{Hello, Payload}`, `org.alephium.protocol.model.CliqueInfo`, and `org.alephium.util.{ActorRefT, Duration}`.
+- This code imports several dependencies, including `akka.io.Tcp`, `org.oxyg3nium.flow.network.CliqueManager`, `org.oxyg3nium.flow.setting.NetworkSetting`, `org.oxyg3nium.protocol.message.{Hello, Payload}`, `org.oxyg3nium.protocol.model.CliqueInfo`, and `org.oxyg3nium.util.{ActorRefT, Duration}`.
 
 3. What is the purpose of the `handShakeDuration` and `pingFrequency` methods?
 - The `handShakeDuration` method returns the duration of the handshake process, while the `pingFrequency` method returns the frequency at which to send ping messages to the remote peer.

@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet
+package org.oxyg3nium.wallet
 
 import scala.collection.immutable.ArraySeq
 import scala.concurrent.{Await, ExecutionContext, Future}
@@ -24,8 +24,8 @@ import com.typesafe.config.{Config, ConfigFactory}
 import com.typesafe.scalalogging.StrictLogging
 import net.ceedubs.ficus.Ficus._
 
-import org.alephium.util.{Duration, Service}
-import org.alephium.wallet.config.WalletConfig
+import org.oxyg3nium.util.{Duration, Service}
+import org.oxyg3nium.wallet.config.WalletConfig
 
 object Main extends App with Service with StrictLogging {
   @SuppressWarnings(Array("org.wartremover.warts.GlobalExecutionContext"))

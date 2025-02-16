@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.net.InetAddress
 
@@ -25,10 +25,10 @@ import com.typesafe.scalalogging.StrictLogging
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ValueReader
 
-import org.alephium.api.model.ApiKey
-import org.alephium.conf._
-import org.alephium.protocol.Hash
-import org.alephium.util.{AVector, Duration, U256}
+import org.oxyg3nium.api.model.ApiKey
+import org.oxyg3nium.conf._
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.util.{AVector, Duration, U256}
 
 /** @param networkInterface
   * @param blockflowFetchMaxAge

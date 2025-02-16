@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/CurrentDifficulty.scala)
 
-The code above defines a case class called `CurrentDifficulty` that takes in a single parameter of type `BigInteger`. This case class is located in the `org.alephium.api.model` package. 
+The code above defines a case class called `CurrentDifficulty` that takes in a single parameter of type `BigInteger`. This case class is located in the `org.oxyg3nium.api.model` package. 
 
 The purpose of this case class is to represent the current difficulty of the Oxyg3nium blockchain. Difficulty is a measure of how difficult it is to find a hash below a given target. In the context of blockchain, difficulty is adjusted periodically to maintain a consistent block time. 
 
@@ -11,7 +11,7 @@ For example, if there is a need to display the current difficulty value on a use
 Here is an example of how the `CurrentDifficulty` case class can be used:
 
 ```scala
-import org.alephium.api.model.CurrentDifficulty
+import org.oxyg3nium.api.model.CurrentDifficulty
 import java.math.BigInteger
 
 val currentDifficulty = CurrentDifficulty(new BigInteger("1234567890"))

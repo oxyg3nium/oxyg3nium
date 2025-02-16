@@ -9,10 +9,10 @@ This code is likely used in the larger Oxyg3nium project to persist transaction 
 Example usage:
 
 ```scala
-import org.alephium.flow.model.PersistedTxId
-import org.alephium.protocol.model.TransactionId
-import org.alephium.serde.Serde
-import org.alephium.util.TimeStamp
+import org.oxyg3nium.flow.model.PersistedTxId
+import org.oxyg3nium.protocol.model.TransactionId
+import org.oxyg3nium.serde.Serde
+import org.oxyg3nium.util.TimeStamp
 
 // create a PersistedTxId instance
 val txId = TransactionId("abc123")

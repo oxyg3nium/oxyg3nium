@@ -6,7 +6,7 @@ The `.autodoc/docs/json/project` folder contains essential files for the Oxyg3ni
 
 ```scala
 import java.io.File
-import org.alephium.serde.Boilerplate
+import org.oxyg3nium.serde.Boilerplate
 
 val srcDir: File = ???
 val testDir: File = ???

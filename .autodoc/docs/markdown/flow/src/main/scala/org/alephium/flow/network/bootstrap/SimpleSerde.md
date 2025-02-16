@@ -1,12 +1,12 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/bootstrap/SimpleSerde.scala)
 
-This file contains a trait called `SimpleSerde` which provides a simple serialization and deserialization interface for a given type `T`. This trait is used in the `org.alephium.flow.network.bootstrap` package to serialize and deserialize messages sent between nodes in the Oxyg3nium network.
+This file contains a trait called `SimpleSerde` which provides a simple serialization and deserialization interface for a given type `T`. This trait is used in the `org.oxyg3nium.flow.network.bootstrap` package to serialize and deserialize messages sent between nodes in the Oxyg3nium network.
 
 The `SimpleSerde` trait defines four methods: `serializeBody`, `serialize`, `deserializeBody`, and `deserialize`. The `serializeBody` method takes an instance of type `T` and returns a `ByteString` representation of the serialized object. The `serialize` method calls `serializeBody` and prepends the length of the serialized object to the serialized data. The `deserializeBody` method takes a `ByteString` and returns a `SerdeResult[T]`, which is a wrapper around the deserialized object and any remaining bytes in the input. The `deserialize` method extracts the length of the serialized object from the input, extracts the serialized data, and calls `deserializeBody` to deserialize the data.
 
 The `tryDeserialize` method is a convenience method that returns an `Option[Staging[T]]` instead of a `SerdeResult[Staging[T]]`. This method is used to attempt to deserialize a `ByteString` and return `None` if the deserialization fails.
 
-Overall, this trait provides a simple interface for serializing and deserializing messages in the Oxyg3nium network. It is used in conjunction with other classes and traits in the `org.alephium.flow.network.bootstrap` package to implement the network protocol. Here is an example of how this trait might be used:
+Overall, this trait provides a simple interface for serializing and deserializing messages in the Oxyg3nium network. It is used in conjunction with other classes and traits in the `org.oxyg3nium.flow.network.bootstrap` package to implement the network protocol. Here is an example of how this trait might be used:
 
 ```scala
 case class MyMessage(foo: Int, bar: String)

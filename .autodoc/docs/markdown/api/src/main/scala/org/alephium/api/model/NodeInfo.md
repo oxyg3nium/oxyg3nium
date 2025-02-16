@@ -7,7 +7,7 @@ This code is likely used in the larger Oxyg3nium project to provide information 
 Here is an example of how this code could be used:
 
 ```scala
-import org.alephium.api.model.NodeInfo
+import org.oxyg3nium.api.model.NodeInfo
 
 val nodeInfo = NodeInfo(
   NodeInfo.BuildInfo("1.0.0", "abc123"),

@@ -11,8 +11,8 @@ The `BrokerDiscoveryState` class and its associated `Serde` instance are likely 
 Example usage:
 
 ```scala
-import org.alephium.flow.model.BrokerDiscoveryState
-import org.alephium.serde.Serde
+import org.oxyg3nium.flow.model.BrokerDiscoveryState
+import org.oxyg3nium.serde.Serde
 
 // Create a new BrokerDiscoveryState instance
 val state = BrokerDiscoveryState(new InetSocketAddress("localhost", 1234), 1)

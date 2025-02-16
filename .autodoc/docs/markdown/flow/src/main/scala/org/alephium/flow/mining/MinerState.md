@@ -16,7 +16,7 @@ Overall, the `MinerState` trait provides a set of methods and variables that are
 - This code defines a trait `MinerState` which provides methods for managing mining tasks and state.
 
 2. What other files or packages does this code depend on?
-- This code depends on several other packages including `org.alephium.flow.model`, `org.alephium.flow.setting`, `org.alephium.protocol.config`, and `org.alephium.protocol.model`.
+- This code depends on several other packages including `org.oxyg3nium.flow.model`, `org.oxyg3nium.flow.setting`, `org.oxyg3nium.protocol.config`, and `org.oxyg3nium.protocol.model`.
 
 3. What is the license for this code?
 - This code is licensed under the GNU Lesser General Public License, version 3 or later.

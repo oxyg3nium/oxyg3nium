@@ -15,7 +15,7 @@ The `verify` method is used to verify a signature. It takes a message of type `B
 Overall, this code provides a set of tools for generating and verifying digital signatures. These tools are likely to be used in other parts of the Oxyg3nium project, such as in the implementation of a cryptocurrency. Here is an example of how this code might be used:
 
 ```
-import org.alephium.crypto._
+import org.oxyg3nium.crypto._
 
 // Define a new signature schema
 object MySignatureSchema extends SignatureSchema[MyPrivateKey, MyPublicKey, MySignature] {

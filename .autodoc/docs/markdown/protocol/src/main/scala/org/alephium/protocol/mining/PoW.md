@@ -1,8 +1,8 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/mining/PoW.scala)
 
-The `PoW` object in the `org.alephium.protocol.mining` package provides functionality related to Proof-of-Work (PoW) mining in the Oxyg3nium blockchain. PoW is a consensus mechanism used in many blockchain systems to validate transactions and create new blocks. The purpose of this code is to provide methods for hashing block headers, checking the validity of PoW solutions, and verifying mined blocks.
+The `PoW` object in the `org.oxyg3nium.protocol.mining` package provides functionality related to Proof-of-Work (PoW) mining in the Oxyg3nium blockchain. PoW is a consensus mechanism used in many blockchain systems to validate transactions and create new blocks. The purpose of this code is to provide methods for hashing block headers, checking the validity of PoW solutions, and verifying mined blocks.
 
-The `hash` method takes a `BlockHeader` object and returns its hash as a `BlockHash` object. It first serializes the header using the `serialize` method from the `org.alephium.serde` package and then calls the `hash` method with the serialized header as a `ByteString` object. The `hash` method takes a `ByteString` object and returns its double SHA-256 hash as a `BlockHash` object.
+The `hash` method takes a `BlockHeader` object and returns its hash as a `BlockHash` object. It first serializes the header using the `serialize` method from the `org.oxyg3nium.serde` package and then calls the `hash` method with the serialized header as a `ByteString` object. The `hash` method takes a `ByteString` object and returns its double SHA-256 hash as a `BlockHash` object.
 
 The `checkWork` method takes a `FlowData` object and a `Target` object and returns a boolean indicating whether the PoW solution represented by the `FlowData` object meets the target difficulty. It first calls the other `checkWork` method with the `FlowData` object's hash and the `Target` object. The other `checkWork` method takes a `BlockHash` object and a `Target` object and returns a boolean indicating whether the hash value is less than or equal to the target value. It does this by converting the hash value to a `BigInt` and comparing it to the target value.
 
@@ -18,7 +18,7 @@ Overall, this code provides essential functionality for PoW mining in the Oxyg3n
 
 2. What external dependencies does this code have?
     
-    This code file imports several classes from the `org.alephium.protocol` package, including `GroupConfig`, `BlockHeader`, `ChainIndex`, `FlowData`, and `Target`. It also imports `ByteString` from `akka.util`.
+    This code file imports several classes from the `org.oxyg3nium.protocol` package, including `GroupConfig`, `BlockHeader`, `ChainIndex`, `FlowData`, and `Target`. It also imports `ByteString` from `akka.util`.
 
 3. What functions are available in the `PoW` object and what do they do?
     

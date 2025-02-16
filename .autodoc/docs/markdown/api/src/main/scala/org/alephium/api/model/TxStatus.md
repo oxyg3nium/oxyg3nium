@@ -11,7 +11,7 @@ These classes are used throughout the Oxyg3nium project to represent the status 
 Here is an example of how this code might be used in the larger project:
 
 ```scala
-import org.alephium.api.model._
+import org.oxyg3nium.api.model._
 
 val txStatus: TxStatus = // some code that retrieves the status of a transaction
 

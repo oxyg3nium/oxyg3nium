@@ -7,7 +7,7 @@ The purpose of this code is to provide a standardized response format for the ha
 Here is an example of how this code might be used in the larger project:
 
 ```scala
-import org.alephium.api.model.HashRateResponse
+import org.oxyg3nium.api.model.HashRateResponse
 
 val responseJson = """{"hashrate": "10 TH/s"}"""
 val response = HashRateResponse(responseJson)
@@ -18,7 +18,7 @@ println(response.hashrate) // prints "10 TH/s"
 In this example, the `responseJson` variable contains a JSON string representing the response from the hash rate API endpoint. The `HashRateResponse` constructor is used to parse the JSON string and create a new `HashRateResponse` instance. The `response.hashrate` field is then accessed to extract the hash rate value from the response. This value can then be used by other parts of the project as needed.
 ## Questions: 
  1. What is the purpose of the `HashRateResponse` case class?
-   - The `HashRateResponse` case class is used to represent a response containing a hashrate value in the `org.alephium.api.model` package.
+   - The `HashRateResponse` case class is used to represent a response containing a hashrate value in the `org.oxyg3nium.api.model` package.
 
 2. What is the expected format of the `hashrate` field in the `HashRateResponse` case class?
    - The `hashrate` field in the `HashRateResponse` case class is expected to be a string.

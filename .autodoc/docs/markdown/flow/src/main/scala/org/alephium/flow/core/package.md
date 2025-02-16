@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/core/package.scala)
 
-This code defines two constants in the `org.alephium.flow.core` package object. The first constant, `maxForkDepth`, is an integer value set to 100. The second constant, `maxSyncBlocksPerChain`, is also an integer value set to 50. 
+This code defines two constants in the `org.oxyg3nium.flow.core` package object. The first constant, `maxForkDepth`, is an integer value set to 100. The second constant, `maxSyncBlocksPerChain`, is also an integer value set to 50. 
 
 These constants are likely used in the larger Oxyg3nium project to set limits on the depth of forks and the number of blocks that can be synced per chain. By setting these limits, the project can ensure that the system remains stable and efficient, preventing excessive resource usage and potential crashes.
 

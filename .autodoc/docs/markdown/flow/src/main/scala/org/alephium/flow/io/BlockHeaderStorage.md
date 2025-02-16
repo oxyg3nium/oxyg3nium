@@ -32,4 +32,4 @@ val retrievedBlockHeader = blockHeaderStorage.get(blockHash) // retrieves the bl
    - This code is licensed under the GNU Lesser General Public License version 3 or later.
 
 3. What other dependencies does this code have?
-   - This code depends on `org.rocksdb` and `org.alephium.io` packages, which are imported at the beginning of the file.
+   - This code depends on `org.rocksdb` and `org.oxyg3nium.io` packages, which are imported at the beginning of the file.

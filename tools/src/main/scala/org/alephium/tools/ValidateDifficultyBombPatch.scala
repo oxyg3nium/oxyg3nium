@@ -14,19 +14,19 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.tools
+package org.oxyg3nium.tools
 
 import java.nio.file.Path
 
-import org.alephium.flow.core.BlockFlow
-import org.alephium.flow.io.Storages
-import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
-import org.alephium.io.RocksDBSource.ProdSettings
-import org.alephium.protocol.OXM
-import org.alephium.protocol.mining.HashRate
-import org.alephium.protocol.model.{BlockDeps, Target}
-import org.alephium.protocol.vm.LockupScript
-import org.alephium.util.{Env, Math}
+import org.oxyg3nium.flow.core.BlockFlow
+import org.oxyg3nium.flow.io.Storages
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
+import org.oxyg3nium.io.RocksDBSource.ProdSettings
+import org.oxyg3nium.protocol.OXM
+import org.oxyg3nium.protocol.mining.HashRate
+import org.oxyg3nium.protocol.model.{BlockDeps, Target}
+import org.oxyg3nium.protocol.vm.LockupScript
+import org.oxyg3nium.util.{Env, Math}
 
 object ValidateDifficultyBombPatch extends App {
   private val rootPath: Path = Platform.getRootPath()

@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import sttp.apispec.openapi.{OpenAPI, Server, ServerVariable}
 import sttp.tapir.Endpoint
 import sttp.tapir.docs.openapi.OpenAPIDocsInterpreter
 
-import org.alephium.api.Endpoints
-import org.alephium.protocol.model.ReleaseVersion
+import org.oxyg3nium.api.Endpoints
+import org.oxyg3nium.protocol.model.ReleaseVersion
 
 trait Documentation extends Endpoints with OpenAPIDocsInterpreter {
 

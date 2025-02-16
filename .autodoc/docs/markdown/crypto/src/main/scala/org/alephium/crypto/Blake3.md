@@ -12,7 +12,7 @@ Overall, this code provides a convenient and efficient implementation of the Bla
 
 ```
 import akka.util.ByteString
-import org.alephium.crypto.Blake3
+import org.oxyg3nium.crypto.Blake3
 
 val input = "hello world"
 val bytes = ByteString(input.getBytes("UTF-8"))

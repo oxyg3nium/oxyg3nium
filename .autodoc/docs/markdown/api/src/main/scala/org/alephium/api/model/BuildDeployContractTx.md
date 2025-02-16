@@ -32,7 +32,7 @@ val decodedCode = deployTx.decodeBytecode().getOrElse(throw new Exception("Faile
 
 2. What dependencies does this code file have?
     
-    This code file depends on several other packages and modules, including `akka`, `org.alephium.api`, `org.alephium.protocol`, `org.alephium.serde`, and `org.alephium.util`.
+    This code file depends on several other packages and modules, including `akka`, `org.oxyg3nium.api`, `org.oxyg3nium.protocol`, `org.oxyg3nium.serde`, and `org.oxyg3nium.util`.
 
 3. What is the license for this code file?
     

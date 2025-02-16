@@ -11,9 +11,9 @@ The `fromProtocol` method in the `TransactionTemplate` object converts a `protoc
 Here is an example of how this code might be used in the larger Oxyg3nium project:
 
 ```scala
-import org.alephium.api.model.TransactionTemplate
-import org.alephium.protocol.config.NetworkConfig
-import org.alephium.protocol.model.{Transaction => ProtocolTransaction}
+import org.oxyg3nium.api.model.TransactionTemplate
+import org.oxyg3nium.protocol.config.NetworkConfig
+import org.oxyg3nium.protocol.model.{Transaction => ProtocolTransaction}
 
 // create an unsigned transaction
 val unsignedTx = ...

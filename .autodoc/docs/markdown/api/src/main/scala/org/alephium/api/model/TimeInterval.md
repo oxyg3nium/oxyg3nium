@@ -9,8 +9,8 @@ The `TimeInterval` object has a `validator` method that returns a `Validator` ty
 This code can be used in the larger project to represent time intervals between two timestamps. It can be used to validate time intervals and calculate their duration. The `validator` method can be used to validate the `TimeInterval` case class before using it in other parts of the project. Here is an example of how to use the `TimeInterval` case class:
 
 ```
-import org.alephium.api.model.TimeInterval
-import org.alephium.util.TimeStamp
+import org.oxyg3nium.api.model.TimeInterval
+import org.oxyg3nium.util.TimeStamp
 
 val from = TimeStamp.now()
 val to = from.plusMinutes(30)

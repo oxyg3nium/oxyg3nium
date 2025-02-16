@@ -9,8 +9,8 @@ The `Node` object provides a default implementation of the `Node` trait and defi
 Here's an example of how the `Node` object might be used to create a new node:
 
 ```scala
-import org.alephium.flow.client.Node
-import org.alephium.flow.storage.Storages
+import org.oxyg3nium.flow.client.Node
+import org.oxyg3nium.flow.storage.Storages
 import akka.actor.ActorSystem
 
 val storages = Storages.default()

@@ -13,7 +13,7 @@ Overall, this code provides a flexible and extensible way to configure and run t
 Example usage:
 
 ```scala
-import org.alephium.ralphc._
+import org.oxyg3nium.ralphc._
 
 // create a new Configs object with custom options and paths
 val configs = Configs(

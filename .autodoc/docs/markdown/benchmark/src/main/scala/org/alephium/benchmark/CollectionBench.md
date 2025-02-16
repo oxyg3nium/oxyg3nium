@@ -18,7 +18,7 @@ Overall, this benchmark is useful for comparing the performance of the `Vector` 
 - This code is a benchmark for comparing the performance of Vector and AVector collections in Scala.
 
 2. What libraries are being used in this code?
-- This code imports `java.util.concurrent.TimeUnit`, `scala.util.Random`, `org.openjdk.jmh.annotations`, and `org.alephium.util.AVector`.
+- This code imports `java.util.concurrent.TimeUnit`, `scala.util.Random`, `org.openjdk.jmh.annotations`, and `org.oxyg3nium.util.AVector`.
 
 3. What is the difference between Vector and AVector in this code?
-- Vector and AVector are two different collection types being compared in this benchmark. Vector is a standard Scala collection, while AVector is a custom collection provided by the `org.alephium.util` library.
+- Vector and AVector are two different collection types being compared in this benchmark. Vector is a standard Scala collection, while AVector is a custom collection provided by the `org.oxyg3nium.util` library.

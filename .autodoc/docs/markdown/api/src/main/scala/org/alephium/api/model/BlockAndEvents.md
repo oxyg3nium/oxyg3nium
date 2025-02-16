@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/api/src/main/scala/org/alephium/api/model/BlockAndEvents.scala)
 
-This file contains a case class called `BlockAndEvents` which is a part of the `org.alephium.api.model` package. The purpose of this class is to represent a block and its associated contract events. 
+This file contains a case class called `BlockAndEvents` which is a part of the `org.oxyg3nium.api.model` package. The purpose of this class is to represent a block and its associated contract events. 
 
 The `BlockAndEvents` class has two fields: `block` and `events`. The `block` field is of type `BlockEntry` and represents the block itself. The `events` field is of type `AVector[ContractEventByBlockHash]` and represents the contract events associated with the block. 
 

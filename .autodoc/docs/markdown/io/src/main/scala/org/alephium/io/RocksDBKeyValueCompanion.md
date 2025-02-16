@@ -11,9 +11,9 @@ This trait is likely used in the larger project to provide a standardized way of
 Example usage:
 
 ```
-import org.alephium.io.RocksDBKeyValueCompanion
-import org.alephium.io.RocksDBKeyValueStorage
-import org.alephium.io.RocksDBSource
+import org.oxyg3nium.io.RocksDBKeyValueCompanion
+import org.oxyg3nium.io.RocksDBKeyValueStorage
+import org.oxyg3nium.io.RocksDBSource
 
 // create a RocksDBSource instance
 val source = new RocksDBSource("/path/to/rocksdb")
@@ -34,4 +34,4 @@ val storage2 = RocksDBKeyValueCompanion[RocksDBKeyValueStorage[String, String]].
 2. What is the license for this code?
    - This code is licensed under the GNU Lesser General Public License version 3 or later.
 3. What other dependencies does this code have?
-   - This code imports `org.rocksdb.{ReadOptions, WriteOptions}` and uses the `Settings` object from `org.alephium.io.RocksDBSource`.
+   - This code imports `org.rocksdb.{ReadOptions, WriteOptions}` and uses the `Settings` object from `org.oxyg3nium.io.RocksDBSource`.

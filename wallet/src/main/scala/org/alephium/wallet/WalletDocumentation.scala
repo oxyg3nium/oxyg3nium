@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet
+package org.oxyg3nium.wallet
 
 import sttp.apispec.openapi.OpenAPI
 import sttp.tapir.Endpoint
 import sttp.tapir.docs.openapi.OpenAPIDocsInterpreter
 
-import org.alephium.wallet.api.WalletEndpoints
+import org.oxyg3nium.wallet.api.WalletEndpoints
 
 trait WalletDocumentation extends WalletEndpoints with OpenAPIDocsInterpreter {
 

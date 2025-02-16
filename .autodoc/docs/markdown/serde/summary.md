@@ -13,7 +13,7 @@ The `SerdeError.scala` file defines a set of error classes that can be used in t
 Here's an example of how to use the library to serialize and deserialize a custom data type:
 
 ```scala
-import org.alephium.serde._
+import org.oxyg3nium.serde._
 import akka.util.ByteString
 
 // Define a custom data type

@@ -29,7 +29,7 @@ compiler.compileProject() match {
 - This code is a compiler for Oxyg3nium smart contracts written in the `.ral` language. It compiles the contracts and generates artifacts in JSON format.
 
 2. What external libraries or dependencies does this code use?
-- This code uses several external libraries including `scala`, `org.alephium`, `java`, and `scala.util`. It also imports several classes and objects from other files in the `alephium` project.
+- This code uses several external libraries including `scala`, `org.oxyg3nium`, `java`, and `scala.util`. It also imports several classes and objects from other files in the `alephium` project.
 
 3. What is the output of this code and where is it stored?
 - The output of this code is a set of JSON artifacts generated from the compiled smart contracts. These artifacts are stored in a specified directory, which is passed as an argument to the `Compiler` class.

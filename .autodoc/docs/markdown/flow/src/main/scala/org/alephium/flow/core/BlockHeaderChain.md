@@ -25,4 +25,4 @@ result match {
 - The code is licensed under the GNU Lesser General Public License version 3 or later.
 
 3. What other packages and libraries are imported in this code?
-- The code imports several packages and libraries including `scala.annotation.tailrec`, `com.typesafe.scalalogging`, `org.alephium.flow`, `org.alephium.io`, `org.alephium.protocol`, `org.alephium.util`, and others.
+- The code imports several packages and libraries including `scala.annotation.tailrec`, `com.typesafe.scalalogging`, `org.oxyg3nium.flow`, `org.oxyg3nium.io`, `org.oxyg3nium.protocol`, `org.oxyg3nium.util`, and others.

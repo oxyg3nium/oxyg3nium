@@ -14,15 +14,15 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.http
+package org.oxyg3nium.http
 
 import org.scalatest.Assertion
 import sttp.client3._
 import sttp.client3.asynchttpclient.future.AsyncHttpClientFutureBackend
 import sttp.model.{Method, Uri}
 
-import org.alephium.json.Json._
-import org.alephium.util.Oxyg3niumFutureSpec
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.util.Oxyg3niumFutureSpec
 
 object HttpFixture {
   implicit class RichResponse[T](val response: Response[T]) extends AnyVal {

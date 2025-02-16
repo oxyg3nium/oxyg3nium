@@ -11,7 +11,7 @@ Additionally, the file defines a number of implicit `Writer` instances for vario
 Here's an example of how this code might be used in the larger project:
 
 ```scala
-import org.alephium.api.OpenAPIWriters._
+import org.oxyg3nium.api.OpenAPIWriters._
 
 // Assume we have an OpenAPI object representing the Oxyg3nium API
 val openAPI: OpenAPI = ...

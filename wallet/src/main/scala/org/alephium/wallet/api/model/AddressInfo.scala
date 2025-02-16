@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.api.model
+package org.oxyg3nium.wallet.api.model
 
-import org.alephium.crypto.wallet.BIP32.ExtendedPrivateKey
-import org.alephium.protocol.PublicKey
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{Address, GroupIndex}
+import org.oxyg3nium.crypto.wallet.BIP32.ExtendedPrivateKey
+import org.oxyg3nium.protocol.PublicKey
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{Address, GroupIndex}
 
 final case class AddressInfo(
     address: Address.Asset,

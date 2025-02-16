@@ -13,11 +13,11 @@ The `Transfer` model represents a transfer of funds from one or more source addr
 Here is an example of how the `Transfer` class might be used:
 
 ```scala
-import org.alephium.wallet.api.model.Transfer
-import org.alephium.api.model.Destination
-import org.alephium.protocol.vm.GasBox
-import org.alephium.protocol.vm.GasPrice
-import org.alephium.util.AVector
+import org.oxyg3nium.wallet.api.model.Transfer
+import org.oxyg3nium.api.model.Destination
+import org.oxyg3nium.protocol.vm.GasBox
+import org.oxyg3nium.protocol.vm.GasPrice
+import org.oxyg3nium.util.AVector
 
 // Create a transfer request with two destinations and gas and gas price specified
 val destinations = AVector(Destination("address1", 100), Destination("address2", 200))

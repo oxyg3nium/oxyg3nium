@@ -16,7 +16,7 @@ Overall, this code provides the implementation for various wallet-related endpoi
 - This code defines the logic for various wallet-related endpoints in the Oxyg3nium project's web API.
 
 2. What dependencies does this code have?
-- This code imports various classes and traits from other packages in the Oxyg3nium project, including `scala.concurrent`, `org.alephium.api.model`, `org.alephium.crypto.wallet`, `org.alephium.protocol.config`, `org.alephium.util`, `org.alephium.wallet.api`, and `org.alephium.wallet.service`.
+- This code imports various classes and traits from other packages in the Oxyg3nium project, including `scala.concurrent`, `org.oxyg3nium.api.model`, `org.oxyg3nium.crypto.wallet`, `org.oxyg3nium.protocol.config`, `org.oxyg3nium.util`, `org.oxyg3nium.wallet.api`, and `org.oxyg3nium.wallet.service`.
 
 3. What are some of the endpoints that this code defines?
 - This code defines the logic for endpoints related to creating, restoring, locking, unlocking, deleting, and getting information about wallets, as well as endpoints related to getting balances, addresses, and miner addresses, revealing mnemonics, transferring funds, sweeping addresses, signing data, deriving addresses, and listing wallets.

@@ -2,7 +2,7 @@
 
 The `MessageSerde` object provides serialization and deserialization functionality for messages in the Oxyg3nium protocol. It defines methods for extracting and validating message fields such as checksums and message lengths, as well as for unwrapping message payloads from their serialized form.
 
-The `MessageSerde` object is designed to be used in conjunction with other classes and objects in the `org.alephium.protocol.message` package, which define the message types and their associated fields. When a message is received or sent, it is first serialized into a byte string using the `Serde` trait, which is implemented by the message classes. The resulting byte string is then passed to the appropriate `MessageSerde` method to extract or validate the message fields.
+The `MessageSerde` object is designed to be used in conjunction with other classes and objects in the `org.oxyg3nium.protocol.message` package, which define the message types and their associated fields. When a message is received or sent, it is first serialized into a byte string using the `Serde` trait, which is implemented by the message classes. The resulting byte string is then passed to the appropriate `MessageSerde` method to extract or validate the message fields.
 
 For example, the `unwrap` method takes a byte string representing a serialized message and returns a tuple containing the message's checksum, length, and payload. It does this by first checking that the message's magic bytes match the expected value for the current network configuration, then extracting the checksum and length fields from the byte string using the `extractChecksum` and `extractLength` methods, respectively.
 

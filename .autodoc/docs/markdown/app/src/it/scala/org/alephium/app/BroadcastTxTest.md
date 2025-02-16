@@ -6,7 +6,7 @@ The first test case tests the broadcasting of transactions within a clique. It c
 
 The second test case tests the broadcasting of transactions between inter-clique nodes. It creates multiple cliques and connects them together. It then creates multiple transactions and verifies that the transactions are added to the mempool of all nodes. It then confirms the transactions by starting mining and checking that the transactions are included in the block.
 
-The `BroadcastTxTest` class uses the `Oxyg3niumActorSpec` class, which is a base class for testing actors in the Oxyg3nium network. It also uses several utility classes and methods from the `org.alephium` package, such as `Address`, `BrokerInfo`, `GroupIndex`, and `transfer`.
+The `BroadcastTxTest` class uses the `Oxyg3niumActorSpec` class, which is a base class for testing actors in the Oxyg3nium network. It also uses several utility classes and methods from the `org.oxyg3nium` package, such as `Address`, `BrokerInfo`, `GroupIndex`, and `transfer`.
 
 Overall, the `BroadcastTxTest` class is an important part of the Oxyg3nium project as it ensures that transactions are broadcasted correctly within and between cliques, which is essential for the proper functioning of the network.
 ## Questions: 

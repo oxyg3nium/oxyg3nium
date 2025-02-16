@@ -9,7 +9,7 @@ The `KeyValueStorage` class extends the `AbstractKeyValueStorage` trait and prov
 Overall, this code provides a generic key-value storage interface that can be used by other parts of the `alephium` project to store and retrieve data. The `KeyValueStorage` class provides a concrete implementation of this interface that can be used by other parts of the project. For example, it could be used to store transaction data or block data in the blockchain. Here is an example of how this class could be used:
 
 ```scala
-import org.alephium.io.KeyValueStorage
+import org.oxyg3nium.io.KeyValueStorage
 
 case class Person(name: String, age: Int)
 

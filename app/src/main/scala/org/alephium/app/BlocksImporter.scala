@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.io.File
 
@@ -24,14 +24,14 @@ import scala.util.{Failure, Success, Using}
 
 import com.typesafe.scalalogging.StrictLogging
 
-import org.alephium.flow.client.Node
-import org.alephium.flow.handler.DependencyHandler
-import org.alephium.flow.model.DataOrigin
-import org.alephium.io.{IOError, IOResult}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.Block
-import org.alephium.serde.deserialize
-import org.alephium.util._
+import org.oxyg3nium.flow.client.Node
+import org.oxyg3nium.flow.handler.DependencyHandler
+import org.oxyg3nium.flow.model.DataOrigin
+import org.oxyg3nium.io.{IOError, IOResult}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.Block
+import org.oxyg3nium.serde.deserialize
+import org.oxyg3nium.util._
 
 object BlocksImporter extends StrictLogging {
 

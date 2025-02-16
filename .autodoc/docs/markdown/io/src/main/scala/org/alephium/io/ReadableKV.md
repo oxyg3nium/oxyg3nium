@@ -13,7 +13,7 @@ This trait can be used as a building block for implementing various data stores 
 Here is an example of how this trait could be used:
 
 ```scala
-import org.alephium.io.ReadableKV
+import org.oxyg3nium.io.ReadableKV
 
 class MyDataStore extends ReadableKV[String, Int] {
   def get(key: String): IOResult[Int] = {
@@ -41,8 +41,8 @@ In this example, a `MyDataStore` class is defined which implements the `Readable
 
 An instance of `MyDataStore` is created and used to read the value of a key called "myKey". The result of the `get` method is pattern matched to handle the success and error cases. If the key is found in the data store, the value is printed to the console. Otherwise, an error message is printed.
 ## Questions: 
- 1. What is the purpose of the `org.alephium.io` package?
-   - The code defines a trait `ReadableKV` within the `org.alephium.io` package, but it's unclear what the package itself is responsible for.
+ 1. What is the purpose of the `org.oxyg3nium.io` package?
+   - The code defines a trait `ReadableKV` within the `org.oxyg3nium.io` package, but it's unclear what the package itself is responsible for.
 
 2. What is the `IOResult` type used in this code?
    - The `get`, `getOpt`, and `exists` methods all return a `IOResult` type, but it's not clear what this type represents or how it's used.

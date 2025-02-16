@@ -9,8 +9,8 @@ This class is likely used in the larger Oxyg3nium project to verify the authenti
 Here is an example of how the `VerifySignature` class might be used in the larger Oxyg3nium project:
 
 ```scala
-import org.alephium.api.model.VerifySignature
-import org.alephium.protocol.{PublicKey, Signature}
+import org.oxyg3nium.api.model.VerifySignature
+import org.oxyg3nium.protocol.{PublicKey, Signature}
 import akka.util.ByteString
 
 val data = ByteString("Hello, world!")
@@ -29,4 +29,4 @@ In the example above, we create a new `VerifySignature` instance with some sampl
    - The GNU Lesser General Public License is the license under which this code is distributed. It allows for the code to be used, modified, and distributed freely, but with certain restrictions and requirements.
 
 3. What other dependencies or imports are required for this code to function properly?
-   - This code requires imports for `akka.util.ByteString` and `org.alephium.protocol.{PublicKey, Signature}` in order to properly define the `VerifySignature` case class. It is possible that other dependencies or imports are required elsewhere in the Oxyg3nium project for this code to function properly.
+   - This code requires imports for `akka.util.ByteString` and `org.oxyg3nium.protocol.{PublicKey, Signature}` in order to properly define the `VerifySignature` case class. It is possible that other dependencies or imports are required elsewhere in the Oxyg3nium project for this code to function properly.

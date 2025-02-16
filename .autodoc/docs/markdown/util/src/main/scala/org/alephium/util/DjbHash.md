@@ -9,7 +9,7 @@ The purpose of this code is to provide a fast and efficient implementation of th
 Here is an example of how the DjbHash object can be used to generate a hash value for a ByteString:
 
 ```
-import org.alephium.util.DjbHash
+import org.oxyg3nium.util.DjbHash
 import akka.util.ByteString
 
 val data = ByteString("Hello, world!")

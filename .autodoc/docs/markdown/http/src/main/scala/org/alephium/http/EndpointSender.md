@@ -16,7 +16,7 @@ Overall, the `EndpointSender` class provides a convenient way to send HTTP reque
 
 2. What external libraries does this code use?
    
-   This code uses the `sttp` library for sending HTTP requests, `sttp.tapir` for defining endpoints, `com.typesafe.scalalogging` for logging, and `org.alephium` for other utility classes.
+   This code uses the `sttp` library for sending HTTP requests, `sttp.tapir` for defining endpoints, `com.typesafe.scalalogging` for logging, and `org.oxyg3nium` for other utility classes.
 
 3. What is the license for this code?
    

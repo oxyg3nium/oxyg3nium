@@ -11,7 +11,7 @@ The `FastParseErrorUtil` object is used in the Oxyg3nium project to handle parsi
 Example usage:
 
 ```scala
-import org.alephium.ralph.error.FastParseErrorUtil
+import org.oxyg3nium.ralph.error.FastParseErrorUtil
 import fastparse.Parsed
 
 val input = "1 + 2 * 3"

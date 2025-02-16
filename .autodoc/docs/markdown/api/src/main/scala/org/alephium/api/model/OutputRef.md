@@ -2,7 +2,7 @@
 
 This file contains code for the `OutputRef` class and its companion object. The `OutputRef` class is a case class that represents a reference to an output in a transaction. It contains two fields: `hint`, an integer that represents the type of output (asset or contract), and `key`, a `Hash` object that represents the unique identifier of the output.
 
-The `OutputRef` class has two methods: `unsafeToAssetOutputRef` and `unsafeToContractOutputRef`. These methods convert an `OutputRef` object to an `AssetOutputRef` or `ContractOutputRef` object, respectively. Both methods use the `Hint` and `TxOutputRef` classes from the `org.alephium.protocol.model` package to create the output reference objects. The `unsafe` methods of these classes are used to create the objects without performing any validation checks. This is because the `OutputRef` class is assumed to contain valid data.
+The `OutputRef` class has two methods: `unsafeToAssetOutputRef` and `unsafeToContractOutputRef`. These methods convert an `OutputRef` object to an `AssetOutputRef` or `ContractOutputRef` object, respectively. Both methods use the `Hint` and `TxOutputRef` classes from the `org.oxyg3nium.protocol.model` package to create the output reference objects. The `unsafe` methods of these classes are used to create the objects without performing any validation checks. This is because the `OutputRef` class is assumed to contain valid data.
 
 The companion object of the `OutputRef` class contains a single method: `from`. This method takes a `TxOutputRef` object and returns an `OutputRef` object that represents the same output reference. This method is useful for converting output references between different contexts within the project.
 

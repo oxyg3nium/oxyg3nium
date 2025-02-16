@@ -7,7 +7,7 @@ The main trait `Serde[T]` is a combination of `Serializer[T]` and `Deserializer[
 Here's an example of how to use the library:
 
 ```scala
-import org.alephium.serde._
+import org.oxyg3nium.serde._
 import akka.util.ByteString
 
 // Define a custom data type

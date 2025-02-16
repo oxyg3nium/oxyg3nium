@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.config
+package org.oxyg3nium.wallet.config
 
 import java.nio.file.Path
 
@@ -26,9 +26,9 @@ import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 import net.ceedubs.ficus.readers.ValueReader
 import sttp.model.Uri
 
-import org.alephium.api.model.ApiKey
-import org.alephium.conf._
-import org.alephium.util.{AVector, Duration}
+import org.oxyg3nium.api.model.ApiKey
+import org.oxyg3nium.conf._
+import org.oxyg3nium.util.{AVector, Duration}
 
 final case class WalletConfig(
     port: Option[Int],

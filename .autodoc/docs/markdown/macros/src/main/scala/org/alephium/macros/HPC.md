@@ -9,7 +9,7 @@ The `SyntaxUtil` class provides utility methods for generating fresh names for v
 Overall, this file provides a useful utility method for creating C-style for loops in Scala. This method can be used in any project that requires efficient looping over a range of values. An example usage of the `cfor` method is shown below:
 
 ```scala
-import org.alephium.macros.HPC._
+import org.oxyg3nium.macros.HPC._
 
 cfor(0)(_ < 10, _ + 1) { i =>
   println(i)

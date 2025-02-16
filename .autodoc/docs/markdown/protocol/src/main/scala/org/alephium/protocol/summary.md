@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/protocol/src/main/scala/org/alephium/protocol)
 
-The code in the `org.alephium.protocol` package provides essential functionality for the Oxyg3nium project, such as managing the Oxyg3nium cryptocurrency, handling message serialization and deserialization, and managing the mining process. This package contains several files and subfolders, each with a specific purpose.
+The code in the `org.oxyg3nium.protocol` package provides essential functionality for the Oxyg3nium project, such as managing the Oxyg3nium cryptocurrency, handling message serialization and deserialization, and managing the mining process. This package contains several files and subfolders, each with a specific purpose.
 
 For example, the `OXM.scala` file contains constants and utility functions related to the Oxyg3nium cryptocurrency, making it easier to maintain and update the code as needed. It can be used throughout the project to perform currency conversions and access important constants related to the Oxyg3nium network.
 
@@ -39,7 +39,7 @@ object MyObject {
 The `message` subfolder contains code for defining the message format and handling the serialization and deserialization of messages exchanged between nodes in the Oxyg3nium network. This package is essential for communication between nodes in the Oxyg3nium network, as it defines the structure and serialization of messages exchanged between them.
 
 ```scala
-import org.alephium.protocol.message.{Message, Payload}
+import org.oxyg3nium.protocol.message.{Message, Payload}
 
 case class MyPayload(data: String) extends Payload
 
@@ -65,4 +65,4 @@ val isValid = PoW.checkWork(flowData, target)
 val isMined = PoW.checkMined(flowData, chainIndex)
 ```
 
-Overall, the code in the `org.alephium.protocol` package plays a crucial role in the Oxyg3nium project by providing essential functionality for various aspects of the project, such as managing the cryptocurrency, handling message serialization and deserialization, and managing the mining process.
+Overall, the code in the `org.oxyg3nium.protocol` package plays a crucial role in the Oxyg3nium project by providing essential functionality for various aspects of the project, such as managing the cryptocurrency, handling message serialization and deserialization, and managing the mining process.

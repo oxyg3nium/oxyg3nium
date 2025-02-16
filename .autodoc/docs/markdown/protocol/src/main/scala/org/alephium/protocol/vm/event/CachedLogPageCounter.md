@@ -11,8 +11,8 @@ This code is used in the larger project to count the number of log pages in the 
 Example usage:
 
 ```
-import org.alephium.protocol.vm.event.CachedLogPageCounter
-import org.alephium.io.MemoryKeyValueStorage
+import org.oxyg3nium.protocol.vm.event.CachedLogPageCounter
+import org.oxyg3nium.io.MemoryKeyValueStorage
 
 val storage = new MemoryKeyValueStorage[String, Int]()
 val counter = CachedLogPageCounter.from(storage)
@@ -28,7 +28,7 @@ counter.persist()
 ```
 ## Questions: 
  1. What is the purpose of this code and how does it fit into the overall alephium project?
-- This code defines a class called `CachedLogPageCounter` that implements a trait called `MutableLog.LogPageCounter`. It is located in the `org.alephium.protocol.vm.event` package. It is not clear how it fits into the overall alephium project without more context.
+- This code defines a class called `CachedLogPageCounter` that implements a trait called `MutableLog.LogPageCounter`. It is located in the `org.oxyg3nium.protocol.vm.event` package. It is not clear how it fits into the overall alephium project without more context.
 
 2. What is the `CachedKVStorage` class and how is it used in this code?
 - The `CachedKVStorage` class is used to store key-value pairs in a cache. In this code, an instance of `CachedKVStorage` is passed to the `CachedLogPageCounter` constructor as a parameter.

@@ -11,7 +11,7 @@ The `RocksDBKeyValueStorage` object provides three factory methods for creating 
 Overall, this code provides a simple and efficient way to store and retrieve key-value pairs using RocksDB. It can be used as a building block for more complex data structures and algorithms that require persistent storage. For example, it could be used to implement a blockchain or a distributed ledger. Here is an example of how to use this code to store and retrieve key-value pairs:
 
 ```scala
-import org.alephium.io._
+import org.oxyg3nium.io._
 
 // Create a RocksDBSource object
 val source = RocksDBSource("/path/to/database")
@@ -38,7 +38,7 @@ storage.iterate((k, v) => println(s"$k -> $v"))
 
 2. What dependencies does this code have?
    
-   This code depends on the `akka.util.ByteString`, `org.rocksdb`, and `org.alephium.serde` libraries.
+   This code depends on the `akka.util.ByteString`, `org.rocksdb`, and `org.oxyg3nium.serde` libraries.
 
 3. What is the license for this code?
    

@@ -107,7 +107,7 @@ object Boilerplate {
       val deVals = arities.map(n => s"pair$n.value").mkString(", ")
 
       block"""
-        |package org.alephium.serde
+        |package org.oxyg3nium.serde
         |
         |import akka.util.ByteString
         |
@@ -170,7 +170,7 @@ object Boilerplate {
       val deVals = arities.map(n => s"pair$n.value").mkString(", ")
 
       block"""
-        |package org.alephium.serde
+        |package org.oxyg3nium.serde
         |
         |import akka.util.ByteString
         |
@@ -209,9 +209,9 @@ object Boilerplate {
       val accesses = synVals.map(v => s"t.$v").mkString(", ")
 
       block"""
-        |package org.alephium.serde
+        |package org.oxyg3nium.serde
         |
-        |import org.alephium.util.Oxyg3niumSpec
+        |import org.oxyg3nium.util.Oxyg3niumSpec
         |
         |class ProductSerdeSpec extends Oxyg3niumSpec {
         |

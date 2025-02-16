@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.service
+package org.oxyg3nium.wallet.service
 
 import java.io.File
 import java.nio.file.Paths
@@ -24,16 +24,16 @@ import scala.util.Random
 
 import akka.actor.ActorSystem
 
-import org.alephium.api.model.{Amount, Destination}
-import org.alephium.crypto.wallet.Mnemonic
-import org.alephium.http.EndpointSender
-import org.alephium.protocol.{Generators, Hash, PrivateKey, PublicKey, SignatureSchema}
-import org.alephium.protocol.model.{Address, TxGenerators}
-import org.alephium.protocol.vm.LockupScript
-import org.alephium.util.{Oxyg3niumFutureSpec, AVector, Duration, Hex}
-import org.alephium.wallet.api.model.{Addresses, AddressInfo}
-import org.alephium.wallet.config.WalletConfigFixture
-import org.alephium.wallet.web.BlockFlowClient
+import org.oxyg3nium.api.model.{Amount, Destination}
+import org.oxyg3nium.crypto.wallet.Mnemonic
+import org.oxyg3nium.http.EndpointSender
+import org.oxyg3nium.protocol.{Generators, Hash, PrivateKey, PublicKey, SignatureSchema}
+import org.oxyg3nium.protocol.model.{Address, TxGenerators}
+import org.oxyg3nium.protocol.vm.LockupScript
+import org.oxyg3nium.util.{Oxyg3niumFutureSpec, AVector, Duration, Hex}
+import org.oxyg3nium.wallet.api.model.{Addresses, AddressInfo}
+import org.oxyg3nium.wallet.config.WalletConfigFixture
+import org.oxyg3nium.wallet.web.BlockFlowClient
 
 class WalletServiceSpec extends Oxyg3niumFutureSpec {
 

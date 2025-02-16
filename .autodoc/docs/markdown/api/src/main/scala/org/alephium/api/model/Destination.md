@@ -13,9 +13,9 @@ This class is used in various parts of the Oxyg3nium project where transactions 
 
 Here is an example of how a `Destination` object might be created and used in a transaction:
 ```
-import org.alephium.api.model.Destination
-import org.alephium.protocol.model.Address
-import org.alephium.util.Amount
+import org.oxyg3nium.api.model.Destination
+import org.oxyg3nium.protocol.model.Address
+import org.oxyg3nium.util.Amount
 
 val destAddress = Address.fromString("OXM-abc123")
 val alphAmount = Amount.fromAlph(10)

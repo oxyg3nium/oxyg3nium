@@ -9,10 +9,10 @@ The `WalletGen` object also contains a `main` method that generates wallets for 
 Here is an example of how to use the `WalletGen` tool:
 
 ```scala
-import org.alephium.tools.WalletGen
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.GroupIndex
-import org.alephium.protocol.model.NetworkId
+import org.oxyg3nium.tools.WalletGen
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.GroupIndex
+import org.oxyg3nium.protocol.model.NetworkId
 
 implicit val config: GroupConfig = new GroupConfig {
   override def groups: Int = 4
@@ -34,7 +34,7 @@ This code generates a wallet for the first group of the default network ID (1). 
 
 2. What external libraries or dependencies does this code use?
    
-   This code imports several libraries from the Oxyg3nium project, including `org.alephium.crypto`, `org.alephium.crypto.wallet`, `org.alephium.protocol`, and `org.alephium.wallet.Constants`.
+   This code imports several libraries from the Oxyg3nium project, including `org.oxyg3nium.crypto`, `org.oxyg3nium.crypto.wallet`, `org.oxyg3nium.protocol`, and `org.oxyg3nium.wallet.Constants`.
 
 3. What is the output of this code?
    

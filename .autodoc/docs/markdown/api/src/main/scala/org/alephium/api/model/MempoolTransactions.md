@@ -11,9 +11,9 @@ This code is used in the larger Oxyg3nium project to manage the mempool and hand
 Here is an example of how this code might be used in the Oxyg3nium project:
 
 ```scala
-import org.alephium.api.model.MempoolTransactions
-import org.alephium.util.AVector
-import org.alephium.api.model.TransactionTemplate
+import org.oxyg3nium.api.model.MempoolTransactions
+import org.oxyg3nium.util.AVector
+import org.oxyg3nium.api.model.TransactionTemplate
 
 // create some transaction templates
 val tx1 = TransactionTemplate(...)

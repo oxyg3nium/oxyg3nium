@@ -19,7 +19,7 @@ println(error.detail) // prints "Resource not found"
 - This code defines a set of case classes that represent different API errors, along with their corresponding status codes and details.
 
 2. What external libraries or dependencies does this code use?
-- This code uses the `sttp` and `tapir` libraries for HTTP requests and API documentation, as well as the `org.alephium.json.Json` library for JSON serialization.
+- This code uses the `sttp` and `tapir` libraries for HTTP requests and API documentation, as well as the `org.oxyg3nium.json.Json` library for JSON serialization.
 
 3. What is the license for this code?
 - This code is licensed under the GNU Lesser General Public License, version 3 or later.

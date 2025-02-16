@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium
+package org.oxyg3nium
 
 package object util {
   @inline @specialized def discard[E](evaluateForSideEffectOnly: E): Unit = {

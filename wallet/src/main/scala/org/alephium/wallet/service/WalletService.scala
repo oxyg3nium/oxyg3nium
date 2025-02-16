@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.service
+package org.oxyg3nium.wallet.service
 
 import java.io.File
 import java.nio.file.Files
@@ -29,19 +29,19 @@ import scala.util.Try
 
 import sttp.model.StatusCode
 
-import org.alephium.api.ApiError
-import org.alephium.api.model.{Amount, Destination, SweepAddressTransaction}
-import org.alephium.crypto.wallet.BIP32.ExtendedPrivateKey
-import org.alephium.crypto.wallet.Mnemonic
-import org.alephium.protocol.{Hash, Signature, SignatureSchema}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{Address, GroupIndex, TransactionId}
-import org.alephium.protocol.vm.{GasBox, GasPrice}
-import org.alephium.util.{discard, AVector, Duration, FutureCollection, Service, TimeStamp}
-import org.alephium.wallet.Constants
-import org.alephium.wallet.api.model.{Addresses, AddressInfo}
-import org.alephium.wallet.storage.SecretStorage
-import org.alephium.wallet.web.BlockFlowClient
+import org.oxyg3nium.api.ApiError
+import org.oxyg3nium.api.model.{Amount, Destination, SweepAddressTransaction}
+import org.oxyg3nium.crypto.wallet.BIP32.ExtendedPrivateKey
+import org.oxyg3nium.crypto.wallet.Mnemonic
+import org.oxyg3nium.protocol.{Hash, Signature, SignatureSchema}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{Address, GroupIndex, TransactionId}
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice}
+import org.oxyg3nium.util.{discard, AVector, Duration, FutureCollection, Service, TimeStamp}
+import org.oxyg3nium.wallet.Constants
+import org.oxyg3nium.wallet.api.model.{Addresses, AddressInfo}
+import org.oxyg3nium.wallet.storage.SecretStorage
+import org.oxyg3nium.wallet.web.BlockFlowClient
 
 // scalastyle:off file.size.limit
 trait WalletService extends Service {

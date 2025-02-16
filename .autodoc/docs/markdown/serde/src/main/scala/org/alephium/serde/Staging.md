@@ -4,12 +4,12 @@ This code defines a case class called `Staging` that is used for serialization a
 
 The `Staging` class has a method called `mapValue` that takes a function `f` as input and applies it to the `value` field of the `Staging` object. The result of the function is then used to create a new `Staging` object with the same `rest` field as the original object. This method is useful for transforming the value of a `Staging` object without modifying the `rest` field.
 
-This code is part of the `org.alephium.serde` package, which contains classes and utilities for serialization and deserialization of data in the Oxyg3nium project. The `Staging` class is likely used in conjunction with other classes in this package to serialize and deserialize data in a consistent and efficient manner.
+This code is part of the `org.oxyg3nium.serde` package, which contains classes and utilities for serialization and deserialization of data in the Oxyg3nium project. The `Staging` class is likely used in conjunction with other classes in this package to serialize and deserialize data in a consistent and efficient manner.
 
 Here is an example of how the `Staging` class might be used in the larger project:
 
 ```scala
-import org.alephium.serde.Staging
+import org.oxyg3nium.serde.Staging
 import akka.util.ByteString
 
 // Define a case class to be serialized
@@ -33,7 +33,7 @@ In this example, we define a case class called `Person` that we want to serializ
 To deserialize the `Person` object, we access the `name` and `age` fields of the `value` field of the `Staging` object. We also get the remaining bytes that were not processed during deserialization from the `rest` field.
 ## Questions: 
  1. What is the purpose of the `Staging` class and how is it used in the `alephium` project?
-   - The `Staging` class is used to represent a value of type `T` along with a `ByteString` that contains the remaining bytes after parsing the value. It is used in the `org.alephium.serde` package of the `alephium` project.
+   - The `Staging` class is used to represent a value of type `T` along with a `ByteString` that contains the remaining bytes after parsing the value. It is used in the `org.oxyg3nium.serde` package of the `alephium` project.
    
 2. What is the significance of the `mapValue` method in the `Staging` class?
    - The `mapValue` method is used to apply a function `f` to the value of type `T` stored in the `Staging` instance and return a new `Staging` instance with the result of the function application and the same `ByteString` as the original instance.

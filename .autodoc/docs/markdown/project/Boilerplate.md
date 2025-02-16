@@ -16,7 +16,7 @@ Example usage of the `Boilerplate` object:
 
 ```scala
 import java.io.File
-import org.alephium.serde.Boilerplate
+import org.oxyg3nium.serde.Boilerplate
 
 val srcDir: File = ???
 val testDir: File = ???

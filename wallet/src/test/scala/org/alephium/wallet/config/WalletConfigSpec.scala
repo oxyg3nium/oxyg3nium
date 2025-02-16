@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.config
+package org.oxyg3nium.wallet.config
 
 import scala.jdk.CollectionConverters._
 import scala.util.Try
@@ -22,9 +22,9 @@ import scala.util.Try
 import com.typesafe.config.{Config, ConfigFactory, ConfigValueFactory}
 import net.ceedubs.ficus.Ficus._
 
-import org.alephium.api.model.ApiKey
-import org.alephium.protocol.Hash
-import org.alephium.util.{Oxyg3niumSpec, AVector}
+import org.oxyg3nium.api.model.ApiKey
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector}
 
 class WalletConfigSpec() extends Oxyg3niumSpec {
   it should "load wallet config" in {

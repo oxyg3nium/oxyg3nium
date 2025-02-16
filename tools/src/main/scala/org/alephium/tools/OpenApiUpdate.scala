@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.tools
+package org.oxyg3nium.tools
 
-import org.alephium.api.OpenAPIWriters.openApiJson
-import org.alephium.api.model.ApiKey
-import org.alephium.app.Documentation
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.util.AVector
-import org.alephium.wallet.WalletDocumentation
+import org.oxyg3nium.api.OpenAPIWriters.openApiJson
+import org.oxyg3nium.api.model.ApiKey
+import org.oxyg3nium.app.Documentation
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.util.AVector
+import org.oxyg3nium.wallet.WalletDocumentation
 
 @SuppressWarnings(Array("org.wartremover.warts.GlobalExecutionContext"))
 object OpenApiUpdate extends App {

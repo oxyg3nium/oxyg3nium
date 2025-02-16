@@ -14,11 +14,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.util
+package org.oxyg3nium.util
 
 import scala.collection.mutable
 
-import org.alephium.util.Forest.Node
+import org.oxyg3nium.util.Forest.Node
 
 object Forest {
   // Note: the parent node should comes first in values; otherwise return None
@@ -26,7 +26,7 @@ object Forest {
     val rootParents = mutable.HashMap.empty[K, mutable.ArrayBuffer[Node[K, T]]]
     val nodes       = mutable.HashMap.empty[K, Node[K, T]]
 
-    import org.alephium.macros.HPC.cfor
+    import org.oxyg3nium.macros.HPC.cfor
     cfor(0)(_ < values.length, _ + 1) { i =>
       val value = values(i)
       val key   = toKey(value)

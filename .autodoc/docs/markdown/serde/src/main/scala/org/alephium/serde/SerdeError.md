@@ -10,7 +10,7 @@ Overall, this code provides a set of error classes and methods that can be used 
 ## Questions: 
  1. What is the purpose of the `SerdeError` class and its subclasses?
    
-   The `SerdeError` class and its subclasses define custom exceptions for serialization and deserialization errors in the `org.alephium.serde` package.
+   The `SerdeError` class and its subclasses define custom exceptions for serialization and deserialization errors in the `org.oxyg3nium.serde` package.
 
 2. What is the difference between the `notEnoughBytes` and `incompleteData` methods in the `SerdeError` object?
    

@@ -13,7 +13,7 @@ Error handling is addressed in the `error` subfolder, which contains code for ha
 Here's an example of how the `Lexer` and `Keyword` components might be used together:
 
 ```scala
-import org.alephium.ralph.{Lexer, Keyword}
+import org.oxyg3nium.ralph.{Lexer, Keyword}
 
 val code = "let x = 42"
 val tokens = Lexer.tokenize(code)

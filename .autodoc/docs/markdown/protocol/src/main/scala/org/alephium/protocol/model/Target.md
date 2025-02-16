@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/Target.scala)
 
-The `Target` object in the `org.alephium.protocol.model` package is used to represent the target difficulty of a block in the Oxyg3nium blockchain. The target difficulty is a value that determines how difficult it is to mine a block. The higher the target difficulty, the more difficult it is to mine a block. The target difficulty is calculated based on the hash rate of the network and the block time.
+The `Target` object in the `org.oxyg3nium.protocol.model` package is used to represent the target difficulty of a block in the Oxyg3nium blockchain. The target difficulty is a value that determines how difficult it is to mine a block. The higher the target difficulty, the more difficult it is to mine a block. The target difficulty is calculated based on the hash rate of the network and the block time.
 
 The `Target` object contains a `final case class` that represents the target difficulty as a byte string. The byte string is converted to a `BigInteger` using a formula that calculates the value of the target difficulty based on the byte string. The `Target` object also contains methods to convert the byte string to a hexadecimal string and to compare two target difficulties.
 

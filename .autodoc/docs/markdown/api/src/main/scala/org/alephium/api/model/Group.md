@@ -35,4 +35,4 @@ Overall, this code defines a simple but useful class for organizing entities wit
 2. What is the significance of the copyright and license information at the top of the file?
    - The copyright and license information indicate that the code is part of the alephium project and is licensed under the GNU Lesser General Public License.
 3. What is the namespace of this code file?
-   - The namespace of this code file is `org.alephium.api.model`.
+   - The namespace of this code file is `org.oxyg3nium.api.model`.

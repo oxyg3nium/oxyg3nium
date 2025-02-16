@@ -15,8 +15,8 @@ The `StagingLogPageCounter` class is used to keep track of the number of log pag
 Example usage:
 
 ```scala
-import org.alephium.protocol.vm.event._
-import org.alephium.io.MemoryKeyValueStorage
+import org.oxyg3nium.protocol.vm.event._
+import org.oxyg3nium.io.MemoryKeyValueStorage
 
 val storage = new MemoryKeyValueStorage[String, Int]()
 val counter = CachedLogPageCounter.from(storage)

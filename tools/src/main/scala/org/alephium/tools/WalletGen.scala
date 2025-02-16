@@ -14,15 +14,15 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.tools
+package org.oxyg3nium.tools
 
 import scala.annotation.tailrec
 
-import org.alephium.crypto.{SecP256K1PrivateKey, SecP256K1PublicKey}
-import org.alephium.crypto.wallet.{BIP32, Mnemonic}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.{Address, GroupIndex, NetworkId}
-import org.alephium.wallet.Constants
+import org.oxyg3nium.crypto.{SecP256K1PrivateKey, SecP256K1PublicKey}
+import org.oxyg3nium.crypto.wallet.{BIP32, Mnemonic}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.{Address, GroupIndex, NetworkId}
+import org.oxyg3nium.wallet.Constants
 
 @SuppressWarnings(Array("org.wartremover.warts.OptionPartial"))
 object WalletGen extends App {

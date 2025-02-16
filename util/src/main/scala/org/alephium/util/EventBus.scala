@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.util
+package org.oxyg3nium.util
 
 import scala.collection.mutable
 
 import akka.actor.{ActorRef, Props}
 
-import org.alephium.util.EventStream.Subscriber
+import org.oxyg3nium.util.EventStream.Subscriber
 
 object EventBus {
   def props(): Props = {

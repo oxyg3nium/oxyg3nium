@@ -14,11 +14,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
-import org.alephium.flow.FlowFixture
-import org.alephium.io.IOError
-import org.alephium.util.Oxyg3niumSpec
+import org.oxyg3nium.flow.FlowFixture
+import org.oxyg3nium.io.IOError
+import org.oxyg3nium.util.Oxyg3niumSpec
 
 class BlocksExporterSpec extends Oxyg3niumSpec {
 

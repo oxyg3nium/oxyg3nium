@@ -13,7 +13,7 @@ Overall, the `ValueSortedMap` class is a useful data structure for scenarios whe
 Example usage:
 
 ```scala
-import org.alephium.util.ValueSortedMap
+import org.oxyg3nium.util.ValueSortedMap
 
 // Create an empty ValueSortedMap
 val map = ValueSortedMap.empty[Int, String]

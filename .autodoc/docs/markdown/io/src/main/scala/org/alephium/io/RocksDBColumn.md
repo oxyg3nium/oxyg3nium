@@ -25,8 +25,8 @@ The `RocksDBColumn` object provides several factory methods for creating instanc
 Overall, this code provides a simple and efficient way to interact with a RocksDB database. It can be used in any project that requires fast and reliable storage and retrieval of key-value pairs. Here is an example of how to use this code to create a new `RocksDBColumn` instance:
 
 ```scala
-import org.alephium.io.RocksDBColumn
-import org.alephium.io.RocksDBSource
+import org.oxyg3nium.io.RocksDBColumn
+import org.oxyg3nium.io.RocksDBSource
 
 val source = new RocksDBSource("/path/to/database")
 val columnFamily = source.columnFamily("myColumnFamily")

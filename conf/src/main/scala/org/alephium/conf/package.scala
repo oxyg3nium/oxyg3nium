@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium
+package org.oxyg3nium
 
 import java.io.File
 import java.net.{InetAddress, InetSocketAddress}
@@ -32,8 +32,8 @@ import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.{NameMapper, ValueReader}
 import net.ceedubs.ficus.readers.CollectionReaders.traversableReader
 
-import org.alephium.protocol.model.Address
-import org.alephium.util.{AVector, Duration, U256}
+import org.oxyg3nium.protocol.model.Address
+import org.oxyg3nium.util.{AVector, Duration, U256}
 
 package object conf {
 

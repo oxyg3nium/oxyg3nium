@@ -32,7 +32,7 @@ stagingLog.commit()
 
 2. What other classes or libraries does this code depend on?
    
-   This code depends on several other classes and libraries, including `Byte32` and `AVector` from the `org.alephium` package, `StagingKVStorage` and `ValueExists` from the `org.alephium.io` package, `ContractId`, `LogStateRef`, `LogStates`, and `LogStatesId` from the `org.alephium.protocol.vm` package, and `MutableLog` from an unknown package.
+   This code depends on several other classes and libraries, including `Byte32` and `AVector` from the `org.oxyg3nium` package, `StagingKVStorage` and `ValueExists` from the `org.oxyg3nium.io` package, `ContractId`, `LogStateRef`, `LogStates`, and `LogStatesId` from the `org.oxyg3nium.protocol.vm` package, and `MutableLog` from an unknown package.
 
 3. What license is this code released under?
    

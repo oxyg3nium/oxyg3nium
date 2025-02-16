@@ -11,8 +11,8 @@ This file is a small but important part of the Oxyg3nium project, as it provides
 Example usage:
 
 ```scala
-import org.alephium.flow.model.BootstrapInfo
-import org.alephium.serde.Serde
+import org.oxyg3nium.flow.model.BootstrapInfo
+import org.oxyg3nium.serde.Serde
 
 // create a BootstrapInfo instance
 val bootstrapInfo = BootstrapInfo(privateKey, timestamp)

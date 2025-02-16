@@ -11,11 +11,11 @@ This case class is used in the Oxyg3nium API to allow users to build multisig tr
 Here is an example of how this case class can be used:
 
 ```
-import org.alephium.api.model.BuildMultisig
-import org.alephium.protocol.PublicKey
-import org.alephium.protocol.model.Address
-import org.alephium.protocol.vm.{GasBox, GasPrice}
-import org.alephium.util.AVector
+import org.oxyg3nium.api.model.BuildMultisig
+import org.oxyg3nium.protocol.PublicKey
+import org.oxyg3nium.protocol.model.Address
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice}
+import org.oxyg3nium.util.AVector
 
 val fromAddress = Address.Asset.fromString("0x123456789abcdef")
 val fromPublicKeys = AVector(PublicKey.fromString("0xabcdef123456789"))

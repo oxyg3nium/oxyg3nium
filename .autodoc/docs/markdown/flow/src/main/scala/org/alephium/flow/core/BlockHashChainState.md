@@ -16,7 +16,7 @@ Overall, the `BlockHashChainState` trait provides a flexible and efficient way t
 
 2. What other files or packages does this code depend on?
     
-    This code depends on several other packages including `org.alephium.flow.io`, `org.alephium.flow.setting`, `org.alephium.io`, and `org.alephium.protocol.model`. It also uses a `ConcurrentHashMap` and a `TimeStamp` from `org.alephium.util`.
+    This code depends on several other packages including `org.oxyg3nium.flow.io`, `org.oxyg3nium.flow.setting`, `org.oxyg3nium.io`, and `org.oxyg3nium.protocol.model`. It also uses a `ConcurrentHashMap` and a `TimeStamp` from `org.oxyg3nium.util`.
 
 3. What is the license for this code?
     

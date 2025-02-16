@@ -14,18 +14,18 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.json
+package org.oxyg3nium.wallet.json
 
 import org.scalatest.Assertion
 
-import org.alephium.api.model.{Amount, Destination}
-import org.alephium.crypto.wallet.Mnemonic
-import org.alephium.json.Json._
-import org.alephium.protocol.{OXM, Hash, PublicKey}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model._
-import org.alephium.util._
-import org.alephium.wallet.api.model._
+import org.oxyg3nium.api.model.{Amount, Destination}
+import org.oxyg3nium.crypto.wallet.Mnemonic
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.{OXM, Hash, PublicKey}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model._
+import org.oxyg3nium.util._
+import org.oxyg3nium.wallet.api.model._
 
 class ModelCodecsSpec extends Oxyg3niumSpec with ModelCodecs {
 

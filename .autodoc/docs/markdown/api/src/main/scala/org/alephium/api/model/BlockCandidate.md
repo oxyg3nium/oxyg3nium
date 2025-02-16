@@ -20,4 +20,4 @@ An example usage of this class could be in the process of mining a new block. Mi
    - The `target` field represents the difficulty target for the candidate block, which is used to ensure that the block is valid and meets the required level of computational effort.
 
 3. What is the relationship between the `BlockCandidate` class and the rest of the `alephium` project?
-   - The `BlockCandidate` class is part of the `org.alephium.api.model` package, which suggests that it is used in the API layer of the Oxyg3nium project. However, without further context it is unclear how exactly it is used within the project.
+   - The `BlockCandidate` class is part of the `org.oxyg3nium.api.model` package, which suggests that it is used in the API layer of the Oxyg3nium project. However, without further context it is unclear how exactly it is used within the project.

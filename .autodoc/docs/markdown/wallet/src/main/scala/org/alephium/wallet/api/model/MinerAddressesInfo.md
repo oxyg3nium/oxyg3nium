@@ -2,7 +2,7 @@
 
 The code defines a case class called `MinerAddressesInfo` which contains a single field called `addresses` of type `AVector[AddressInfo]`. 
 
-`AVector` is a custom vector implementation provided by the `org.alephium.util` package. It is similar to the standard library's `Vector` but with some additional functionality and optimizations specific to the Oxyg3nium project.
+`AVector` is a custom vector implementation provided by the `org.oxyg3nium.util` package. It is similar to the standard library's `Vector` but with some additional functionality and optimizations specific to the Oxyg3nium project.
 
 `AddressInfo` is likely another case class that contains information about a specific address, such as its public key, balance, and transaction history.
 
@@ -13,8 +13,8 @@ The `MinerAddressesInfo` case class is likely used as a response object for an A
 Here is an example of how this code might be used in a larger project:
 
 ```scala
-import org.alephium.wallet.api.model.MinerAddressesInfo
-import org.alephium.util.AVector
+import org.oxyg3nium.wallet.api.model.MinerAddressesInfo
+import org.oxyg3nium.util.AVector
 
 val addresses = AVector(AddressInfo("address1"), AddressInfo("address2"))
 val minerAddressesInfo = MinerAddressesInfo(addresses)

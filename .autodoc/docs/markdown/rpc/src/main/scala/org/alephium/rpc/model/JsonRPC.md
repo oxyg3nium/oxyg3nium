@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/rpc/src/main/scala/org/alephium/rpc/model/JsonRPC.scala)
 
-The `JsonRPC` object in the `org.alephium.rpc.model` package provides an implementation of the JSON-RPC 2.0 specification. It defines several case classes and traits that represent JSON-RPC requests, notifications, and responses. 
+The `JsonRPC` object in the `org.oxyg3nium.rpc.model` package provides an implementation of the JSON-RPC 2.0 specification. It defines several case classes and traits that represent JSON-RPC requests, notifications, and responses. 
 
 The `JsonRPC` object defines a `Handler` type, which is a map of method names to functions that take a `Request` object and return a `Future` of a `Response`. The `Request` object contains the method name, parameters, and an ID. The `Response` object can be either a `Success` or a `Failure`, which contain either a result or an error, respectively. 
 
@@ -11,7 +11,7 @@ The `JsonRPC` object is used in the larger Oxyg3nium project to provide a standa
 Here is an example of how the `JsonRPC` object might be used in the Oxyg3nium project:
 
 ```scala
-import org.alephium.rpc.model.JsonRPC
+import org.oxyg3nium.rpc.model.JsonRPC
 
 // Define a handler function for the "echo" method
 val handler: JsonRPC.Handler = Map(

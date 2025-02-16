@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.api.model
+package org.oxyg3nium.wallet.api.model
 
-import org.alephium.api.model.Destination
-import org.alephium.protocol.model.{GroupIndex, TransactionId}
-import org.alephium.protocol.vm.{GasBox, GasPrice}
-import org.alephium.util.AVector
+import org.oxyg3nium.api.model.Destination
+import org.oxyg3nium.protocol.model.{GroupIndex, TransactionId}
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice}
+import org.oxyg3nium.util.AVector
 
 @SuppressWarnings(Array("org.wartremover.warts.DefaultArguments"))
 final case class Transfer(

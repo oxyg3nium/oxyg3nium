@@ -22,6 +22,6 @@ groupResult match {
  1. What is the purpose of this code?
    - This code defines a trait called `ContractUtils` which provides methods for getting the group index of a contract in the Oxyg3nium project.
 2. What external dependencies does this code have?
-   - This code imports two classes from the `org.alephium.protocol.model` package: `ContractId` and `GroupIndex`. It also relies on a `brokerConfig` object which is not defined in this file.
+   - This code imports two classes from the `org.oxyg3nium.protocol.model` package: `ContractId` and `GroupIndex`. It also relies on a `brokerConfig` object which is not defined in this file.
 3. What license is this code released under?
    - This code is released under the GNU Lesser General Public License, either version 3 or any later version.

@@ -2,16 +2,16 @@
 
 The code defines a case class called `BuildTransactionResult` which represents the result of building a transaction. It contains several fields including the unsigned transaction, gas amount, gas price, transaction ID, and the source and destination groups. The case class extends two traits, `GasInfo` and `ChainIndexInfo`.
 
-The `from` method in the `BuildTransactionResult` object takes an `UnsignedTransaction` as input and returns a `BuildTransactionResult`. The `UnsignedTransaction` is a model class that represents a transaction that has not been signed yet. The `from` method uses the `serialize` method from the `org.alephium.serde` package to convert the `UnsignedTransaction` to a hex string and assigns it to the `unsignedTx` field. It also assigns the `gasAmount`, `gasPrice`, `id`, `fromGroup`, and `toGroup` fields of the `UnsignedTransaction` to the corresponding fields in the `BuildTransactionResult` object.
+The `from` method in the `BuildTransactionResult` object takes an `UnsignedTransaction` as input and returns a `BuildTransactionResult`. The `UnsignedTransaction` is a model class that represents a transaction that has not been signed yet. The `from` method uses the `serialize` method from the `org.oxyg3nium.serde` package to convert the `UnsignedTransaction` to a hex string and assigns it to the `unsignedTx` field. It also assigns the `gasAmount`, `gasPrice`, `id`, `fromGroup`, and `toGroup` fields of the `UnsignedTransaction` to the corresponding fields in the `BuildTransactionResult` object.
 
 This code is likely used in the larger Oxyg3nium project to build and serialize transactions before they are signed and broadcasted to the network. The `BuildTransactionResult` object provides a convenient way to package the results of building a transaction and pass them around the codebase. The `from` method is likely used in conjunction with other methods to build and sign transactions. 
 
 Example usage:
 
 ```scala
-import org.alephium.api.model.BuildTransactionResult
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.UnsignedTransaction
+import org.oxyg3nium.api.model.BuildTransactionResult
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.UnsignedTransaction
 
 implicit val groupConfig: GroupConfig = ???
 

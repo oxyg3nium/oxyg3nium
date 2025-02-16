@@ -9,7 +9,7 @@ These connection types are likely used throughout the project to differentiate b
 Here is an example of how this code might be used in the larger project:
 
 ```scala
-import org.alephium.flow.network.broker._
+import org.oxyg3nium.flow.network.broker._
 
 // Define a function that takes a ConnectionType parameter
 def handleConnection(connType: ConnectionType): Unit = {
@@ -26,13 +26,13 @@ handleConnection(InboundConnection) // prints "Handling incoming connection"
 handleConnection(OutboundConnection) // prints "Handling outgoing connection"
 ```
 
-In this example, the `handleConnection` function takes a `ConnectionType` parameter and prints a message based on the type of connection. The `InboundConnection` and `OutboundConnection` objects from the `org.alephium.flow.network.broker` package are used to create instances of the `ConnectionType` trait.
+In this example, the `handleConnection` function takes a `ConnectionType` parameter and prints a message based on the type of connection. The `InboundConnection` and `OutboundConnection` objects from the `org.oxyg3nium.flow.network.broker` package are used to create instances of the `ConnectionType` trait.
 ## Questions: 
  1. What is the purpose of the `ConnectionType` sealed trait and its two case objects?
-   - The `ConnectionType` sealed trait and its two case objects (`InboundConnection` and `OutboundConnection`) are likely used to differentiate between incoming and outgoing network connections in the `org.alephium.flow.network.broker` module.
+   - The `ConnectionType` sealed trait and its two case objects (`InboundConnection` and `OutboundConnection`) are likely used to differentiate between incoming and outgoing network connections in the `org.oxyg3nium.flow.network.broker` module.
 
 2. What is the significance of the GNU Lesser General Public License mentioned in the comments?
    - The GNU Lesser General Public License is a type of open source software license that allows for the library to be freely distributed and modified, but with certain restrictions and requirements. Developers may want to know more about the specific terms and conditions of this license.
 
-3. What is the purpose of the `org.alephium.flow.network.broker` package?
-   - It is unclear from this code alone what the `org.alephium.flow.network.broker` package is used for. A smart developer may want to investigate other files within this package or consult documentation to understand its purpose within the larger `alephium` project.
+3. What is the purpose of the `org.oxyg3nium.flow.network.broker` package?
+   - It is unclear from this code alone what the `org.oxyg3nium.flow.network.broker` package is used for. A smart developer may want to investigate other files within this package or consult documentation to understand its purpose within the larger `alephium` project.

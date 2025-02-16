@@ -19,7 +19,7 @@ The `.autodoc/docs/json/ralphc/src/main/scala/org/alephium/ralphc` folder contai
 Example usage of the Ralph compiler:
 
 ```scala
-import org.alephium.ralphc._
+import org.oxyg3nium.ralphc._
 
 // create a new Configs object with custom options and paths
 val configs = Configs(

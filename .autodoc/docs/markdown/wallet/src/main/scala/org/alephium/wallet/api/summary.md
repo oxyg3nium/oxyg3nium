@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/wallet/src/main/scala/org/alephium/wallet/api)
 
-The code in the `org.alephium.wallet.api` folder is responsible for defining the wallet API endpoints and providing examples for various wallet-related operations in the Oxyg3nium project. The wallet API allows users to interact with their wallets, manage addresses, and perform transactions.
+The code in the `org.oxyg3nium.wallet.api` folder is responsible for defining the wallet API endpoints and providing examples for various wallet-related operations in the Oxyg3nium project. The wallet API allows users to interact with their wallets, manage addresses, and perform transactions.
 
 `WalletEndpoints.scala` defines the wallet API endpoints using the Tapir library, which provides a type-safe and composable way to define HTTP endpoints in Scala. The `WalletEndpoints` trait includes endpoints for creating, restoring, listing, and managing wallets, as well as transferring OXM tokens, signing data, and managing miner addresses. Each endpoint is defined as a `BaseEndpoint` object, specifying the input and output types using case classes that represent the JSON objects sent and received by the endpoint. The endpoints are organized into two main groups: `wallets` and `minerWallet`, with the former containing endpoints for all wallets and the latter for wallets created with the `isMiner = true` flag.
 
@@ -11,11 +11,11 @@ The `model` subfolder contains case classes and objects representing different w
 Here's an example of how the `Transfer` class might be used:
 
 ```scala
-import org.alephium.wallet.api.model.Transfer
-import org.alephium.api.model.Destination
-import org.alephium.protocol.vm.GasBox
-import org.alephium.protocol.vm.GasPrice
-import org.alephium.util.AVector
+import org.oxyg3nium.wallet.api.model.Transfer
+import org.oxyg3nium.api.model.Destination
+import org.oxyg3nium.protocol.vm.GasBox
+import org.oxyg3nium.protocol.vm.GasPrice
+import org.oxyg3nium.util.AVector
 
 // Create a transfer request with two destinations and gas and gas price specified
 val destinations = AVector(Destination("address1", 100), Destination("address2", 200))

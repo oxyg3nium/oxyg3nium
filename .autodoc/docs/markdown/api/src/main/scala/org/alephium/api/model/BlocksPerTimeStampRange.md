@@ -7,8 +7,8 @@ This case class is likely used in the larger Oxyg3nium project to organize and m
 Here is an example of how this case class could be used:
 
 ```scala
-import org.alephium.api.model.BlocksPerTimeStampRange
-import org.alephium.util.AVector
+import org.oxyg3nium.api.model.BlocksPerTimeStampRange
+import org.oxyg3nium.util.AVector
 
 // Create some sample block entries
 val block1 = BlockEntry(...)

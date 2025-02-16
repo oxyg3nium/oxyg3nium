@@ -16,7 +16,7 @@ This code is used in the Oxyg3nium network to store information about brokers. T
    - This code defines a `BrokerStorage` trait and a `BrokerRocksDBStorage` class that implements it. It provides methods to add a broker and retrieve active brokers from a RocksDB database.
 
 2. What other dependencies does this code have?
-   - This code imports several classes from other packages, including `org.rocksdb`, `org.alephium.flow.model`, `org.alephium.io`, and `org.alephium.protocol.model`. It also extends a `KeyValueStorage` trait and a `RocksDBKeyValueStorage` class.
+   - This code imports several classes from other packages, including `org.rocksdb`, `org.oxyg3nium.flow.model`, `org.oxyg3nium.io`, and `org.oxyg3nium.protocol.model`. It also extends a `KeyValueStorage` trait and a `RocksDBKeyValueStorage` class.
 
 3. What license is this code released under?
    - This code is released under the GNU Lesser General Public License, version 3 or later.

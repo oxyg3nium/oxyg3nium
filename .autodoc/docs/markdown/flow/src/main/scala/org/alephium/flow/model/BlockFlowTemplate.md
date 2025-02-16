@@ -16,9 +16,9 @@ This code is part of the Oxyg3nium blockchain project and is used to represent a
 Here is an example of how the `BlockFlowTemplate` class can be used:
 
 ```scala
-import org.alephium.flow.model.BlockFlowTemplate
-import org.alephium.protocol.model.{BlockHash, ChainIndex, Target, Transaction}
-import org.alephium.util.{AVector, TimeStamp}
+import org.oxyg3nium.flow.model.BlockFlowTemplate
+import org.oxyg3nium.protocol.model.{BlockHash, ChainIndex, Target, Transaction}
+import org.oxyg3nium.util.{AVector, TimeStamp}
 
 // create a block template
 val index = ChainIndex(1, 0)
@@ -46,4 +46,4 @@ println(txsHash)
    - The `txsHash` property calculates and stores the hash of the block's transactions using the `Block.calTxsHash` method. It is marked as `lazy` to ensure that it is only calculated when needed.
 
 3. What other classes or packages does this file depend on?
-   - This file depends on several other classes and packages from the `org.alephium` namespace, including `Hash`, `Block`, `BlockHash`, `ChainIndex`, `Target`, `Transaction`, and `AVector`.
+   - This file depends on several other classes and packages from the `org.oxyg3nium` namespace, including `Hash`, `Block`, `BlockHash`, `ChainIndex`, `Target`, `Transaction`, and `AVector`.

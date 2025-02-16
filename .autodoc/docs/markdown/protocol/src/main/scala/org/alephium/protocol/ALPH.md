@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/OXM.scala)
 
-The `OXM` object in the `org.alephium.protocol` package contains constants and utility functions related to the Oxyg3nium cryptocurrency. 
+The `OXM` object in the `org.oxyg3nium.protocol` package contains constants and utility functions related to the Oxyg3nium cryptocurrency. 
 
 The object defines several constants related to the Oxyg3nium currency, such as the number of coins in one OXM, one cent, and one nanoOXM. It also defines the maximum value of an OXM, the height, weight, and timestamp of the genesis block, and the launch timestamp of the Oxyg3nium network. Additionally, it defines several constants related to the difficulty bomb, such as the timestamp when the pre-Leman difficulty bomb is enabled, the duration of the exponential difficulty period, the timestamp when the difficulty bomb patch is enabled, and the height difference between the difficulty bomb patch and the pre-Leman difficulty bomb.
 

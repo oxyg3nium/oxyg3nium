@@ -9,7 +9,7 @@ The `Utils.scala` file in the `scala` subfolder provides utility functions for d
 For instance, the `showDigest` function can be used to display a compact representation of a list of hashes or IDs:
 
 ```scala
-import org.alephium.flow.Utils._
+import org.oxyg3nium.flow.Utils._
 
 val digest = AVector(RandomBytes(1), RandomBytes(2), RandomBytes(3))
 val digestStr = showDigest(digest)
@@ -19,7 +19,7 @@ println(digestStr) // Output: "[ 01..03 ]"
 Similarly, the `showTxs` function can be used to display a compact representation of a list of transactions:
 
 ```scala
-import org.alephium.flow.Utils._
+import org.oxyg3nium.flow.Utils._
 
 val txs = AVector(TransactionTemplate(TransactionId(1)), TransactionTemplate(TransactionId(2)), TransactionTemplate(TransactionId(3)))
 val txsStr = showTxs(txs)

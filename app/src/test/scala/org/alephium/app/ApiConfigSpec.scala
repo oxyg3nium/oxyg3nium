@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.io.File
 
@@ -22,9 +22,9 @@ import scala.jdk.CollectionConverters._
 
 import com.typesafe.config.{ConfigException, ConfigFactory, ConfigValueFactory}
 
-import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
-import org.alephium.protocol.model.NetworkId
-import org.alephium.util.{Oxyg3niumSpec, AVector, Env}
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
+import org.oxyg3nium.protocol.model.NetworkId
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Env}
 
 // scalastyle:off null
 class ApiConfigSpec extends Oxyg3niumSpec {

@@ -20,7 +20,7 @@ Overall, the `MultisigTest` class provides a comprehensive set of tests for mult
 - This code is for testing multisig transactions in the Oxyg3nium project.
 
 2. What dependencies does this code have?
-- This code imports various classes and objects from different packages within the Oxyg3nium project, such as `org.alephium.api`, `org.alephium.protocol`, and `org.alephium.wallet.api.model`.
+- This code imports various classes and objects from different packages within the Oxyg3nium project, such as `org.oxyg3nium.api`, `org.oxyg3nium.protocol`, and `org.oxyg3nium.wallet.api.model`.
 
 3. What is the expected behavior of the `submitFailedMultisigTransaction` method?
 - The `submitFailedMultisigTransaction` method is expected to return a string that describes the reason for the failed multisig transaction, which could be due to an invalid signature or not enough signatures.

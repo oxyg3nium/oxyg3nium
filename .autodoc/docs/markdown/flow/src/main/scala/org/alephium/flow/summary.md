@@ -5,7 +5,7 @@ The code in the `Utils.scala` file provides utility functions for displaying var
 For example, the `showDigest` function takes a vector of `RandomBytes` objects and returns a string representation of the vector. This can be used to display a compact representation of a list of hashes or IDs:
 
 ```scala
-import org.alephium.flow.Utils._
+import org.oxyg3nium.flow.Utils._
 
 val digest = AVector(RandomBytes(1), RandomBytes(2), RandomBytes(3))
 val digestStr = showDigest(digest)
@@ -15,7 +15,7 @@ println(digestStr) // Output: "[ 01..03 ]"
 Similarly, the `showTxs` function takes a vector of `TransactionTemplate` objects and returns a string representation of the vector, which can be used to display a compact representation of a list of transactions:
 
 ```scala
-import org.alephium.flow.Utils._
+import org.oxyg3nium.flow.Utils._
 
 val txs = AVector(TransactionTemplate(TransactionId(1)), TransactionTemplate(TransactionId(2)), TransactionTemplate(TransactionId(3)))
 val txsStr = showTxs(txs)
@@ -27,7 +27,7 @@ The `showFlow` and `showDataDigest` functions can be used to display a compact r
 The `showChainIndexedDigest` function is useful for displaying a compact representation of a list of pairs of `ChainIndex` and vectors of `TransactionId` objects, which can be helpful for visualizing the structure of the blockchain:
 
 ```scala
-import org.alephium.flow.Utils._
+import org.oxyg3nium.flow.Utils._
 
 val chainIndexedDigest = AVector((ChainIndex(1), AVector(TransactionId(1), TransactionId(2))), (ChainIndex(2), AVector(TransactionId(3), TransactionId(4))))
 val chainIndexedDigestStr = showChainIndexedDigest(chainIndexedDigest)

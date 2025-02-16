@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import scala.concurrent.ExecutionContext
 
@@ -22,8 +22,8 @@ import akka.actor.ActorSystem
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.time.{Minutes, Span}
 
-import org.alephium.flow.setting.Oxyg3niumConfigFixture
-import org.alephium.util.{Oxyg3niumSpec, SocketUtil}
+import org.oxyg3nium.flow.setting.Oxyg3niumConfigFixture
+import org.oxyg3nium.util.{Oxyg3niumSpec, SocketUtil}
 
 class ServerSpec extends Oxyg3niumSpec with ScalaFutures with SocketUtil {
   implicit override val patienceConfig: PatienceConfig = PatienceConfig(timeout = Span(1, Minutes))

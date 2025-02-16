@@ -14,7 +14,7 @@ Here is an example of how this code might be used:
 
 ```scala
 import akka.actor._
-import org.alephium.util.EventStream
+import org.oxyg3nium.util.EventStream
 
 case class MyEvent(data: String) extends EventStream.Event
 

@@ -14,6 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.util
+package org.oxyg3nium.util
 
 class AppException(message: String) extends Exception(message)

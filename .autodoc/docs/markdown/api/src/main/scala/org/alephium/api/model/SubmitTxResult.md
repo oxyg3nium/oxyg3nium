@@ -9,8 +9,8 @@ This class is likely used in other parts of the Oxyg3nium project where transact
 Here is an example of how this class could be used in Scala code:
 
 ```
-import org.alephium.api.model.SubmitTxResult
-import org.alephium.protocol.model.TransactionId
+import org.oxyg3nium.api.model.SubmitTxResult
+import org.oxyg3nium.protocol.model.TransactionId
 
 val txId = TransactionId("abc123")
 val fromGroup = 1

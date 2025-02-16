@@ -12,7 +12,7 @@ Overall, this file provides a simple and efficient implementation of the `BlockH
 
 ```scala
 import akka.util.ByteString
-import org.alephium.protocol.model.BlockHash
+import org.oxyg3nium.protocol.model.BlockHash
 
 val bytes = ByteString("hello world")
 val hash = BlockHash.hash(bytes)

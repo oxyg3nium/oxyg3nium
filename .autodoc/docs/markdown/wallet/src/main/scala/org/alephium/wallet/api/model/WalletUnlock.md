@@ -22,7 +22,7 @@ walletApi.unlockWallet(walletUnlock)
 In this example, a `WalletUnlock` object is created with a password and an optional mnemonic passphrase. This object is then passed as a parameter to the `unlockWallet` method in the wallet API. The API would then use this object to unlock the wallet and perform the requested operation.
 ## Questions: 
  1. What is the purpose of this code and where is it used in the Oxyg3nium project?
-- This code defines a case class called `WalletUnlock` and is located in the `org.alephium.wallet.api.model` package. It is likely used for unlocking a wallet in the Oxyg3nium project.
+- This code defines a case class called `WalletUnlock` and is located in the `org.oxyg3nium.wallet.api.model` package. It is likely used for unlocking a wallet in the Oxyg3nium project.
 
 2. What parameters does the `WalletUnlock` case class take and what do they represent?
 - The `WalletUnlock` case class takes a `password` parameter of type `String` which likely represents the password needed to unlock the wallet. It also takes an optional `mnemonicPassphrase` parameter of type `Option[String]` which may represent an additional passphrase needed to unlock the wallet.

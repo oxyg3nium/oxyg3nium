@@ -19,7 +19,7 @@ The `.autodoc/docs/json/ralphc` folder contains essential components for the Oxy
 Example usage of the Ralph compiler:
 
 ```scala
-import org.alephium.ralphc._
+import org.oxyg3nium.ralphc._
 
 // create a new Configs object with custom options and paths
 val configs = Configs(

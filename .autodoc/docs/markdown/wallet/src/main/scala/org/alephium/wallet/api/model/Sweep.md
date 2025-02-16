@@ -28,4 +28,4 @@ In this example, a new "Sweep" object is created with the destination address "0
    - The optional parameters of the `Sweep` case class are `lockTime`, `gasAmount`, `gasPrice`, `utxosLimit`, and `targetBlockHash`. These parameters allow for customization of the transaction.
 
 3. What other classes are imported in this file?
-   - This file imports classes from the `org.alephium.api.model`, `org.alephium.protocol.model`, `org.alephium.protocol.vm`, and `org.alephium.util` packages. These classes are likely used elsewhere in the `alephium` project.
+   - This file imports classes from the `org.oxyg3nium.api.model`, `org.oxyg3nium.protocol.model`, `org.oxyg3nium.protocol.vm`, and `org.oxyg3nium.util` packages. These classes are likely used elsewhere in the `alephium` project.

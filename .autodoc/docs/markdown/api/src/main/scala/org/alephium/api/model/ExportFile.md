@@ -19,5 +19,5 @@ Overall, this code is a small but important part of the Oxyg3nium project, provi
    - The `ExportFile` case class is used to represent a file that is being exported, and it contains a `filename` field that specifies the name of the file.
 2. What is the significance of the GNU Lesser General Public License mentioned in the code?
    - The GNU Lesser General Public License is the license under which the `alephium` library is distributed, and it allows users to modify and redistribute the library under certain conditions.
-3. What is the `org.alephium.api.model` package used for?
-   - The `org.alephium.api.model` package contains the `ExportFile` case class and potentially other model classes that are used in the `alephium` API.
+3. What is the `org.oxyg3nium.api.model` package used for?
+   - The `org.oxyg3nium.api.model` package contains the `ExportFile` case class and potentially other model classes that are used in the `alephium` API.

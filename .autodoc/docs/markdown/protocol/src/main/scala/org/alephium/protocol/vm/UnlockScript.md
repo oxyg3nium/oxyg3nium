@@ -17,8 +17,8 @@ The object also defines a `serde` implicit value that provides serialization and
 This code is used in the larger project to define and manipulate unlocking scripts in transactions. It provides a type-safe and efficient way to represent and serialize/deserialize unlocking scripts, which is essential for the correctness and performance of the VM. Here is an example of how to create a `P2PKH` unlocking script:
 
 ```scala
-import org.alephium.protocol.PublicKey
-import org.alephium.protocol.vm.UnlockScript
+import org.oxyg3nium.protocol.PublicKey
+import org.oxyg3nium.protocol.vm.UnlockScript
 
 val publicKey: PublicKey = ???
 val unlockingScript: UnlockScript = UnlockScript.p2pkh(publicKey)
@@ -30,7 +30,7 @@ val unlockingScript: UnlockScript = UnlockScript.p2pkh(publicKey)
 
 2. What external libraries or dependencies does this code use?
    
-   This code uses `akka.util.ByteString`, `org.alephium.protocol.PublicKey`, `org.alephium.serde._`, and `org.alephium.util.AVector`.
+   This code uses `akka.util.ByteString`, `org.oxyg3nium.protocol.PublicKey`, `org.oxyg3nium.serde._`, and `org.oxyg3nium.util.AVector`.
 
 3. What is the purpose of the `validateP2mpkh` method?
    

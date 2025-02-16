@@ -12,7 +12,7 @@ This code is used in the larger Oxyg3nium project to facilitate the transfer of 
    - The `TestInputAsset` class represents an input asset for a transaction and provides methods to convert it to an `AssetOutput` and to generate a sequence of instructions to approve all tokens and Alph for the input asset.
 
 2. What external libraries or dependencies does this code use?
-   - The code imports several classes from the `org.alephium.protocol` and `org.alephium.util` packages, as well as `akka.util.ByteString`. It also uses the `vm` package from the `org.alephium.protocol` package.
+   - The code imports several classes from the `org.oxyg3nium.protocol` and `org.oxyg3nium.util` packages, as well as `akka.util.ByteString`. It also uses the `vm` package from the `org.oxyg3nium.protocol` package.
 
 3. What license is this code released under?
    - This code is released under the GNU Lesser General Public License, version 3 or later.

@@ -9,7 +9,7 @@ The `close()` method is used to close the key-value store in a safe manner, mean
 Classes that implement this trait will be able to interact with a key-value store in a standardized way. For example, a class that implements this trait could be used to store and retrieve data for the Oxyg3nium project. Here is an example of how a class could implement this trait:
 
 ```scala
-import org.alephium.io.KeyValueSource
+import org.oxyg3nium.io.KeyValueSource
 
 class MyKeyValueStore extends KeyValueSource {
   // implementation of close(), closeUnsafe(), dESTROY(), and dESTROYUnsafe() methods

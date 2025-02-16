@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet
+package org.oxyg3nium.wallet
 
-import org.alephium.crypto.wallet.BIP32
-import org.alephium.util.AVector
+import org.oxyg3nium.crypto.wallet.BIP32
+import org.oxyg3nium.util.AVector
 
 // scalastyle:off magic.number
 object Constants {

@@ -14,11 +14,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.http
+package org.oxyg3nium.http
 
 import sttp.tapir.server.vertx.VertxFutureServerOptions
 
-import org.alephium.api.DecodeFailureHandler
+import org.oxyg3nium.api.DecodeFailureHandler
 
 object ServerOptions extends DecodeFailureHandler {
   def serverOptions(enableMetrics: Boolean): VertxFutureServerOptions = {

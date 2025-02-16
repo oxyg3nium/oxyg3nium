@@ -9,7 +9,7 @@ The `BlockFlow` object contains a `uri` field that is used to construct the URI 
 Overall, this code provides a way to configure the Oxyg3nium wallet and connect it to the blockflow service. It can be used to customize the behavior of the wallet and to authenticate requests to the API and blockflow service. Here is an example of how this code might be used to create a `WalletConfig` object:
 
 ```scala
-import org.alephium.wallet.config.WalletConfig
+import org.oxyg3nium.wallet.config.WalletConfig
 
 val config = WalletConfig(
   port = Some(8080),

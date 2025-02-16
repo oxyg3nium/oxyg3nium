@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
 
-The `Emission` class in the `org.alephium.protocol.mining` package is responsible for calculating the mining rewards for the Oxyg3nium blockchain. The class takes the block target time and group configuration as input parameters. It calculates the mining rewards based on the time, target, and hash rate of the mining process.
+The `Emission` class in the `org.oxyg3nium.protocol.mining` package is responsible for calculating the mining rewards for the Oxyg3nium blockchain. The class takes the block target time and group configuration as input parameters. It calculates the mining rewards based on the time, target, and hash rate of the mining process.
 
 The class has several constants that define the initial and stable maximum rewards per chain, the low hash rate initial reward per chain, and the number of years until the rewards become stable and until there are no rewards. It also defines the number of blocks in about one year per chain, the blocks to stable max reward, and the blocks to no reward. It calculates the duration to stable max reward and the duration to no reward based on the block target time and the number of blocks.
 

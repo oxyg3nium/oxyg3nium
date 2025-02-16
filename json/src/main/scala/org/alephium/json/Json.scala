@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.json
+package org.oxyg3nium.json
 
 import scala.language.implicitConversions
 import scala.util.{Failure, Success, Try}

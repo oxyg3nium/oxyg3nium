@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.tools
+package org.oxyg3nium.tools
 
 import java.nio.file.{Files, Paths}
 
 import scala.reflect.runtime.universe._
 import scala.util.Using
 
-import org.alephium.protocol.vm._
+import org.oxyg3nium.protocol.vm._
 
 object GenRustDecoder {
   final case class InstrInfo(name: String, code: Int, params: Seq[String]) {

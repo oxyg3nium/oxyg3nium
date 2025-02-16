@@ -9,7 +9,7 @@ The `UnsignedTx` class is used in the larger Oxyg3nium project to represent unsi
 Here is an example of how to create an instance of `UnsignedTx`:
 
 ```scala
-import org.alephium.api.model._
+import org.oxyg3nium.api.model._
 
 val txId = TransactionId(Array[Byte](1, 2, 3))
 val version = 1.toByte

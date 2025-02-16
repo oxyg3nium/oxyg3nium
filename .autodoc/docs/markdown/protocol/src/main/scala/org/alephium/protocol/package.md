@@ -8,11 +8,11 @@ The `SignatureSchema` constant is defined as `SecP256K1`, which is the signature
 
 The `CurrentWireVersion` and `CurrentDiscoveryVersion` constants are defined as `WireVersion` and `DiscoveryVersion`, respectively. These are used to specify the current version of the Oxyg3nium wire protocol and discovery protocol. 
 
-Overall, this code provides a convenient way to reference these types and constants throughout the Oxyg3nium project. For example, other parts of the project can import `org.alephium.protocol._` to use these types and constants without having to fully qualify them. 
+Overall, this code provides a convenient way to reference these types and constants throughout the Oxyg3nium project. For example, other parts of the project can import `org.oxyg3nium.protocol._` to use these types and constants without having to fully qualify them. 
 
 Example usage:
 ```
-import org.alephium.protocol._
+import org.oxyg3nium.protocol._
 
 val hash = Hash.hash(data)
 val publicKey = PublicKey.fromBytes(bytes)

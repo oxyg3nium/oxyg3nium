@@ -20,7 +20,7 @@ Overall, the `BlocksImporter` object provides a convenient way to import blocks 
 
 2. What external libraries or dependencies does this code use?
     
-    This code uses several external libraries including com.typesafe.scalalogging, org.alephium.flow, org.alephium.io, org.alephium.protocol, and org.alephium.util.
+    This code uses several external libraries including com.typesafe.scalalogging, org.oxyg3nium.flow, org.oxyg3nium.io, org.oxyg3nium.protocol, and org.oxyg3nium.util.
 
 3. What is the significance of the `batchNumber` variable?
     

@@ -12,7 +12,7 @@ This tool is useful for generating documentation for the built-in functions in t
 
 Example usage:
 ```scala
-import org.alephium.tools.BuiltInFunctions
+import org.oxyg3nium.tools.BuiltInFunctions
 
 // Generate JSON file containing built-in function information
 BuiltInFunctions.main(Array())

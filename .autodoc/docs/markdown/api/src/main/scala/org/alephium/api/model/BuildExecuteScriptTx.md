@@ -30,4 +30,4 @@ In this example, a new `BuildExecuteScriptTx` object is created with the necessa
 - The optional parameters that can be passed to the `BuildExecuteScriptTx` constructor are `fromPublicKeyType`, `attoAlphAmount`, `tokens`, `gasAmount`, `gasPrice`, and `targetBlockHash`.
 
 3. What other classes or packages are imported in this file?
-- This file imports classes from `akka.util.ByteString`, `org.alephium.protocol.model.BlockHash`, `org.alephium.protocol.vm.{GasBox, GasPrice}`, and `org.alephium.util.AVector`.
+- This file imports classes from `akka.util.ByteString`, `org.oxyg3nium.protocol.model.BlockHash`, `org.oxyg3nium.protocol.vm.{GasBox, GasPrice}`, and `org.oxyg3nium.util.AVector`.

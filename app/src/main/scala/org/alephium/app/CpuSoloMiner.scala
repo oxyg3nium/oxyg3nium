@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.net.InetSocketAddress
 import java.nio.file.Path
@@ -23,9 +23,9 @@ import akka.actor.{ActorRef, ActorSystem}
 import com.typesafe.config.Config
 import com.typesafe.scalalogging.StrictLogging
 
-import org.alephium.flow.mining.{ExternalMinerMock, Miner}
-import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
-import org.alephium.util.{AVector, Env}
+import org.oxyg3nium.flow.mining.{ExternalMinerMock, Miner}
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
+import org.oxyg3nium.util.{AVector, Env}
 
 object CpuSoloMiner extends App {
   val rootPath: Path = Platform.getRootPath()

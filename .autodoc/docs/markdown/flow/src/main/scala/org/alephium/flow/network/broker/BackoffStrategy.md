@@ -9,8 +9,8 @@ The `DefaultBackoffStrategy` and `ResetBackoffStrategy` classes have companion o
 Overall, this code provides a useful abstraction for implementing backoff strategies in network communication that can be easily customized and configured based on the network settings. Here is an example of how to use the `DefaultBackoffStrategy`:
 
 ```
-import org.alephium.flow.network.broker.{BackoffStrategy, DefaultBackoffStrategy}
-import org.alephium.flow.setting.NetworkSetting
+import org.oxyg3nium.flow.network.broker.{BackoffStrategy, DefaultBackoffStrategy}
+import org.oxyg3nium.flow.setting.NetworkSetting
 
 implicit val network: NetworkSetting = NetworkSetting.default
 

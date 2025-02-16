@@ -11,9 +11,9 @@ Overall, this code provides functionality related to calculating group indices b
 Example usage:
 
 ```
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.Hash
-import org.alephium.protocol.model.{ScriptHint, GroupIndex}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.Hash
+import org.oxyg3nium.protocol.model.{ScriptHint, GroupIndex}
 
 // create a GroupConfig object with 10 groups
 implicit val config: GroupConfig = GroupConfig(10)

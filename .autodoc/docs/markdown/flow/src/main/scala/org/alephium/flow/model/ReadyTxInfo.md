@@ -25,6 +25,6 @@ val deserialized = ReadyTxInfo.serde.fromBytes(bytes)
  1. What is the purpose of the `ReadyTxInfo` class?
    - The `ReadyTxInfo` class is a case class that holds information about a transaction that is ready to be processed.
 2. What other classes or libraries does this code import?
-   - This code imports classes from `org.alephium.protocol.model`, `org.alephium.serde`, and `org.alephium.util`.
+   - This code imports classes from `org.oxyg3nium.protocol.model`, `org.oxyg3nium.serde`, and `org.oxyg3nium.util`.
 3. What license is this code released under?
    - This code is released under the GNU Lesser General Public License, version 3 or later.

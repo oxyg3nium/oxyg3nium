@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.api.model
+package org.oxyg3nium.wallet.api.model
 
-import org.alephium.api.model.BuildTxCommon
-import org.alephium.protocol.model.{Address, BlockHash}
-import org.alephium.protocol.vm.{GasBox, GasPrice}
-import org.alephium.util.TimeStamp
+import org.oxyg3nium.api.model.BuildTxCommon
+import org.oxyg3nium.protocol.model.{Address, BlockHash}
+import org.oxyg3nium.protocol.vm.{GasBox, GasPrice}
+import org.oxyg3nium.util.TimeStamp
 
 @SuppressWarnings(Array("org.wartremover.warts.DefaultArguments"))
 final case class Sweep(

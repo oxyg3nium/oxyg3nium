@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/serde/src/main/scala/org)
 
-The `org.alephium.serde` package in the Oxyg3nium project provides a serialization and deserialization library that is essential for data exchange and storage. It includes predefined serializers and deserializers for common data types and utility methods for composing and transforming them.
+The `org.oxyg3nium.serde` package in the Oxyg3nium project provides a serialization and deserialization library that is essential for data exchange and storage. It includes predefined serializers and deserializers for common data types and utility methods for composing and transforming them.
 
 For example, `CompactInteger.scala` offers a compact integer encoding and decoding mechanism for both signed and unsigned integers. This mechanism is used throughout the Oxyg3nium project to efficiently store and transmit integer values, especially when dealing with small integers common in blockchain applications.
 
@@ -13,7 +13,7 @@ The `SerdeError.scala` file defines a set of error classes that can be used in t
 Here's an example of how to use the library to serialize and deserialize a custom data type:
 
 ```scala
-import org.alephium.serde._
+import org.oxyg3nium.serde._
 import akka.util.ByteString
 
 // Define a custom data type

@@ -11,7 +11,7 @@ The `UnsecureRandom` object uses the `scala.util.Random` object as its `source`,
 Overall, this code provides a way to generate random values for use in the Oxyg3nium project, with the option to choose between a faster but less secure random number generator or a slower but more secure one. Here is an example of how to use the `UnsecureRandom` object to generate a random `U256` value:
 
 ```
-import org.alephium.util.UnsecureRandom
+import org.oxyg3nium.util.UnsecureRandom
 
 val random = UnsecureRandom.nextU256()
 ```

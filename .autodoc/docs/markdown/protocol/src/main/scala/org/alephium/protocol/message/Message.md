@@ -11,7 +11,7 @@ The `Message` class also has a `deserialize` method that takes a `ByteString` an
 Overall, this file provides the functionality to create, serialize, and deserialize messages that can be sent over the network in the Oxyg3nium project. It is an important part of the networking layer of the project and is used extensively throughout the codebase. Below is an example of how to use the `Message` class to create and serialize a new message:
 
 ```scala
-import org.alephium.protocol.message.{Message, Payload}
+import org.oxyg3nium.protocol.message.{Message, Payload}
 
 case class MyPayload(data: String) extends Payload
 

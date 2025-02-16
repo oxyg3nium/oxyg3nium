@@ -5,8 +5,8 @@ The `.autodoc/docs/json/flow/src/main/scala/org/alephium/flow/network/broker` fo
 The `BackoffStrategy.scala` file provides a flexible and configurable way to implement backoff strategies for different network settings. It defines the `BackoffStrategy` trait, `DefaultBackoffStrategy` class, and `ResetBackoffStrategy` class. These classes can be used to handle network errors by retrying requests with increasing delays between them. For example, the `DefaultBackoffStrategy` can be used to retry a network request with increasing delays:
 
 ```scala
-import org.alephium.flow.network.broker.{BackoffStrategy, DefaultBackoffStrategy}
-import org.alephium.flow.setting.NetworkSetting
+import org.oxyg3nium.flow.network.broker.{BackoffStrategy, DefaultBackoffStrategy}
+import org.oxyg3nium.flow.setting.NetworkSetting
 
 implicit val network: NetworkSetting = NetworkSetting.default
 

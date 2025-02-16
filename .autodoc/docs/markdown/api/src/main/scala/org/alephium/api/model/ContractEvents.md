@@ -15,7 +15,7 @@ Overall, this code provides a way to represent and manipulate contract events in
 Example usage:
 
 ```scala
-import org.alephium.api.model._
+import org.oxyg3nium.api.model._
 
 // create a ContractEvent instance
 val event = ContractEvent(

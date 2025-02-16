@@ -18,7 +18,7 @@ val changeRequest = ChangeActiveAddress(newAddress)
    - The `ChangeActiveAddress` case class is used to represent a request to change the active address for a specific asset in the Oxyg3nium wallet API.
 
 2. What is the significance of the `Address` import statement?
-   - The `Address` import statement is used to import the `Address` class from the `org.alephium.protocol.model` package, which is likely used within the `ChangeActiveAddress` case class.
+   - The `Address` import statement is used to import the `Address` class from the `org.oxyg3nium.protocol.model` package, which is likely used within the `ChangeActiveAddress` case class.
 
 3. What licensing terms apply to this code?
    - This code is licensed under the GNU Lesser General Public License, version 3 or later.

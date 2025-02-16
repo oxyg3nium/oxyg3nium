@@ -7,8 +7,8 @@ The `Deserializer` trait also has a method called `validateGet` which takes a fu
 The `Deserializer` trait is used in the larger `alephium` project to deserialize binary data received from the network into various types used by the project. For example, the `Block` class in the `alephium` project has a companion object that defines an implicit `Deserializer[Block]` instance, which is used to deserialize binary data into `Block` objects. Here is an example of how the `Block` deserializer can be used:
 
 ```scala
-import org.alephium.serde.Deserializer
-import org.alephium.protocol.Block
+import org.oxyg3nium.serde.Deserializer
+import org.oxyg3nium.protocol.Block
 
 val blockBytes: ByteString = ???
 val result: SerdeResult[Block] = Deserializer[Block].deserialize(blockBytes)

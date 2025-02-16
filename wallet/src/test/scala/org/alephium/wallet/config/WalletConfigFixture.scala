@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.config
+package org.oxyg3nium.wallet.config
 
 import java.net.InetAddress
 import java.nio.file.Files
 
-import org.alephium.api.model.ApiKey
-import org.alephium.protocol.config.{GroupConfig, NetworkConfigFixture}
-import org.alephium.util.{Oxyg3niumSpec, AVector, Duration, SocketUtil}
+import org.oxyg3nium.api.model.ApiKey
+import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfigFixture}
+import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, Duration, SocketUtil}
 
 trait WalletConfigFixture extends SocketUtil with NetworkConfigFixture.Default {
 

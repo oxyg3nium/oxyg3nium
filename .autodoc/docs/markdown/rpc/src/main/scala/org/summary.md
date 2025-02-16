@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/.autodoc/docs/json/rpc/src/main/scala/org)
 
-The `JsonRPC` object in the `org.alephium.rpc.model` package provides an implementation of the JSON-RPC 2.0 specification, which is a remote procedure call (RPC) protocol encoded in JSON. It is used in the Oxyg3nium project to provide a standardized way for clients to interact with the Oxyg3nium node.
+The `JsonRPC` object in the `org.oxyg3nium.rpc.model` package provides an implementation of the JSON-RPC 2.0 specification, which is a remote procedure call (RPC) protocol encoded in JSON. It is used in the Oxyg3nium project to provide a standardized way for clients to interact with the Oxyg3nium node.
 
 The object defines several case classes and traits that represent JSON-RPC requests, notifications, and responses. The main components are:
 
@@ -13,7 +13,7 @@ The `JsonRPC` object also provides helper methods for working with JSON objects,
 Here's an example of how the `JsonRPC` object might be used in the Oxyg3nium project:
 
 ```scala
-import org.alephium.rpc.model.JsonRPC
+import org.oxyg3nium.rpc.model.JsonRPC
 
 // Define a handler function for the "echo" method
 val handler: JsonRPC.Handler = Map(

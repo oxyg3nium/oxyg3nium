@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/setting/Platform.scala)
 
-The code defines a Scala object called `Platform` that provides functionality for getting the root path of the Oxyg3nium project. The `Platform` object is part of the `org.alephium.flow.setting` package.
+The code defines a Scala object called `Platform` that provides functionality for getting the root path of the Oxyg3nium project. The `Platform` object is part of the `org.oxyg3nium.flow.setting` package.
 
 The `Platform` object has two methods: `getRootPath()` and `getRootPath(env: Env)`. The first method returns the root path of the Oxyg3nium project based on the current environment. The second method returns the root path of the Oxyg3nium project based on the environment passed as an argument.
 
@@ -18,7 +18,7 @@ This code is useful for getting the root path of the Oxyg3nium project, which is
 
 2. What external dependencies does this code have?
     
-    This code depends on the `com.typesafe.scalalogging.StrictLogging` library and the `org.alephium.protocol.Hash` and `org.alephium.util.Files` classes from the Oxyg3nium project.
+    This code depends on the `com.typesafe.scalalogging.StrictLogging` library and the `org.oxyg3nium.protocol.Hash` and `org.oxyg3nium.util.Files` classes from the Oxyg3nium project.
 
 3. What is the license for this code?
     

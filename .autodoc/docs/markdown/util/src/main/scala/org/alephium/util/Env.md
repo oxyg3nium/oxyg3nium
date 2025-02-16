@@ -31,4 +31,4 @@ val envName = Env.currentEnv.name
 - This code is released under the GNU Lesser General Public License, version 3 or later.
 
 3. How can a developer use this code in their project?
-- A developer can import the `org.alephium.util.Env` object and use the `currentEnv` or `resolve` methods to determine the current environment or resolve a specific environment, respectively. They can also use the `forProd` method to execute a block of code only if the current environment is production.
+- A developer can import the `org.oxyg3nium.util.Env` object and use the `currentEnv` or `resolve` methods to determine the current environment or resolve a specific environment, respectively. They can also use the `forProd` method to execute a block of code only if the current environment is production.

@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.tools
+package org.oxyg3nium.tools
 
 import java.util.concurrent.atomic.AtomicInteger
 
@@ -22,17 +22,17 @@ import scala.jdk.CollectionConverters._
 
 import com.typesafe.scalalogging.StrictLogging
 
-import org.alephium.flow.client.Node
-import org.alephium.flow.core.maxForkDepth
-import org.alephium.flow.io.Storages
-import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
-import org.alephium.flow.validation.BlockValidation
-import org.alephium.io.IOUtils
-import org.alephium.io.RocksDBSource.ColumnFamily
-import org.alephium.protocol.OXM
-import org.alephium.protocol.model.{Block, ChainIndex}
-import org.alephium.protocol.vm.WorldState
-import org.alephium.util.{AVector, Env}
+import org.oxyg3nium.flow.client.Node
+import org.oxyg3nium.flow.core.maxForkDepth
+import org.oxyg3nium.flow.io.Storages
+import org.oxyg3nium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
+import org.oxyg3nium.flow.validation.BlockValidation
+import org.oxyg3nium.io.IOUtils
+import org.oxyg3nium.io.RocksDBSource.ColumnFamily
+import org.oxyg3nium.protocol.OXM
+import org.oxyg3nium.protocol.model.{Block, ChainIndex}
+import org.oxyg3nium.protocol.vm.WorldState
+import org.oxyg3nium.util.{AVector, Env}
 
 object Indexer extends App with StrictLogging {
   private val rootPath       = Platform.getRootPath()

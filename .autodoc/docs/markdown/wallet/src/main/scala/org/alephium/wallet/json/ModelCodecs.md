@@ -17,4 +17,4 @@ Overall, this code plays an important role in enabling communication between the
 - This code is licensed under the GNU Lesser General Public License, version 3 or later.
 
 3. What other Oxyg3nium modules or libraries are imported in this code?
-- This code imports modules and libraries from org.alephium.api, org.alephium.crypto.wallet, org.alephium.json, and org.alephium.protocol.config.
+- This code imports modules and libraries from org.oxyg3nium.api, org.oxyg3nium.crypto.wallet, org.oxyg3nium.json, and org.oxyg3nium.protocol.config.

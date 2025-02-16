@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/flow/src/main/scala/org/alephium/flow/network/interclique/InboundBrokerHandler.scala)
 
-This code defines a class called `InboundBrokerHandler` and an object called `InboundBrokerHandler` in the `org.alephium.flow.network.interclique` package. The purpose of this code is to handle incoming broker connections in the Oxyg3nium network. 
+This code defines a class called `InboundBrokerHandler` and an object called `InboundBrokerHandler` in the `org.oxyg3nium.flow.network.interclique` package. The purpose of this code is to handle incoming broker connections in the Oxyg3nium network. 
 
 The `InboundBrokerHandler` class extends another class called `BaseInboundBrokerHandler` and implements a trait called `BrokerHandler`. It takes in several parameters, including the `selfCliqueInfo`, `remoteAddress`, `connection`, `blockflow`, `allHandlers`, `cliqueManager`, and `blockFlowSynchronizer`. These parameters are used to handle incoming broker connections and synchronize block flows between different nodes in the network. 
 
@@ -31,7 +31,7 @@ In this example, a new instance of the `InboundBrokerHandler` class is created u
 
 2. What other classes or libraries does this code file depend on?
     
-    This code file depends on several other classes and libraries, including `akka.actor.Props`, `akka.io.Tcp`, `org.alephium.flow.core.BlockFlow`, `org.alephium.flow.handler.AllHandlers`, `org.alephium.flow.network.CliqueManager`, `org.alephium.flow.network.broker.InboundBrokerHandler`, `org.alephium.flow.network.sync.BlockFlowSynchronizer`, `org.alephium.flow.setting.NetworkSetting`, `org.alephium.protocol.config.BrokerConfig`, `org.alephium.protocol.model.CliqueInfo`, and `org.alephium.util.ActorRefT`.
+    This code file depends on several other classes and libraries, including `akka.actor.Props`, `akka.io.Tcp`, `org.oxyg3nium.flow.core.BlockFlow`, `org.oxyg3nium.flow.handler.AllHandlers`, `org.oxyg3nium.flow.network.CliqueManager`, `org.oxyg3nium.flow.network.broker.InboundBrokerHandler`, `org.oxyg3nium.flow.network.sync.BlockFlowSynchronizer`, `org.oxyg3nium.flow.setting.NetworkSetting`, `org.oxyg3nium.protocol.config.BrokerConfig`, `org.oxyg3nium.protocol.model.CliqueInfo`, and `org.oxyg3nium.util.ActorRefT`.
 
 3. What is the license for this code file and what are the terms of that license?
     

@@ -20,7 +20,7 @@ Overall, the `OutboundBrokerHandler` trait is used to handle outbound connection
 - This code is part of the alephium project and it defines an OutboundBrokerHandler trait that extends a BrokerHandler trait. Its purpose is to handle outbound broker connections.
 
 2. What dependencies does this code have?
-- This code has dependencies on several other packages and classes, including akka.io.Tcp, org.alephium.flow.network, org.alephium.flow.setting.NetworkSetting, org.alephium.protocol.message.Hello, org.alephium.protocol.model.CliqueInfo, and org.alephium.util.ActorRefT.
+- This code has dependencies on several other packages and classes, including akka.io.Tcp, org.oxyg3nium.flow.network, org.oxyg3nium.flow.setting.NetworkSetting, org.oxyg3nium.protocol.message.Hello, org.oxyg3nium.protocol.model.CliqueInfo, and org.oxyg3nium.util.ActorRefT.
 
 3. What is the purpose of the Retry case object and how is it used?
 - The Retry case object is used to retry a connection attempt if it fails. It is sent as a message to the actor when a connection attempt fails, and the actor schedules a new connection attempt after a certain amount of time has passed.

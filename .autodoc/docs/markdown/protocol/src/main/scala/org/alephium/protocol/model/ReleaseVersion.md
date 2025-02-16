@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/model/ReleaseVersion.scala)
 
-This code defines a case class `ReleaseVersion` and an object `ReleaseVersion` in the `org.alephium.protocol.model` package. The `ReleaseVersion` case class represents a version number with three components: major, minor, and patch. It extends the `Ordered` trait to allow for comparison between different `ReleaseVersion` instances. The `ReleaseVersion` object provides methods to create a `ReleaseVersion` instance from a string, get the current version from `BuildInfo`, and get a client ID string.
+This code defines a case class `ReleaseVersion` and an object `ReleaseVersion` in the `org.oxyg3nium.protocol.model` package. The `ReleaseVersion` case class represents a version number with three components: major, minor, and patch. It extends the `Ordered` trait to allow for comparison between different `ReleaseVersion` instances. The `ReleaseVersion` object provides methods to create a `ReleaseVersion` instance from a string, get the current version from `BuildInfo`, and get a client ID string.
 
 The `ReleaseVersion` case class is used to represent version numbers throughout the Oxyg3nium project. It is used to compare versions to determine if one version is greater than, less than, or equal to another version. This is useful for determining if a software update is available or if a particular feature is supported.
 

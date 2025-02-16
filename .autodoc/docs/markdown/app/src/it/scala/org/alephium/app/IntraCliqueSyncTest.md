@@ -16,7 +16,7 @@ This code is used to test the synchronization of nodes within a clique in the Ox
 - The `IntraCliqueSyncTest` class is a test class that tests the synchronization of nodes within a clique.
 
 2. What external libraries or dependencies does this code use?
-- This code imports `sttp.model.StatusCode` and uses classes from `org.alephium.api.model`, `org.alephium.protocol.model`, and `org.alephium.util`.
+- This code imports `sttp.model.StatusCode` and uses classes from `org.oxyg3nium.api.model`, `org.oxyg3nium.protocol.model`, and `org.oxyg3nium.util`.
 
 3. What is the expected behavior of the `it should "boot and sync two nodes clique"` test case?
 - The `it should "boot and sync two nodes clique"` test case is expected to boot two nodes in a clique, mine blocks, synchronize the blocks between the two nodes, and then stop the nodes.

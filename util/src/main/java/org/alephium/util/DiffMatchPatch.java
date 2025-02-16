@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package org.alephium.util;
+package org.oxyg3nium.util;
 //package name.fraser.neil.plaintext;
 
 import java.io.UnsupportedEncodingException;

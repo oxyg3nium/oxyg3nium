@@ -9,7 +9,7 @@ This class is likely used in the larger Oxyg3nium project to provide information
 Here is an example of how this class might be used in the Oxyg3nium wallet API:
 
 ```scala
-import org.alephium.wallet.api.model.WalletStatus
+import org.oxyg3nium.wallet.api.model.WalletStatus
 
 val walletName = "my_wallet"
 val isLocked = true
@@ -28,5 +28,5 @@ In this example, we create a new `WalletStatus` object with the name "my_wallet"
 2. What is the significance of the copyright and license information at the top of the file?
    - The copyright and license information indicates that the code is part of the alephium project and is licensed under the GNU Lesser General Public License, which allows for the free distribution and modification of the code.
 
-3. What is the `org.alephium.wallet.api.model` package used for?
-   - The `org.alephium.wallet.api.model` package is likely used to contain various models and data structures related to the wallet functionality of the alephium project.
+3. What is the `org.oxyg3nium.wallet.api.model` package used for?
+   - The `org.oxyg3nium.wallet.api.model` package is likely used to contain various models and data structures related to the wallet functionality of the alephium project.

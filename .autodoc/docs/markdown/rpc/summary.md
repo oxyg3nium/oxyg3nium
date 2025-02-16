@@ -2,7 +2,7 @@
 
 The `.autodoc/docs/json/rpc` folder contains the documentation for the JSON-RPC 2.0 implementation in the Oxyg3nium project. JSON-RPC is a remote procedure call (RPC) protocol encoded in JSON, providing a standardized way for clients to interact with the Oxyg3nium node.
 
-The implementation is located in the `src` subfolder, within the `org.alephium.rpc.model` package. The `JsonRPC` object defines several case classes and traits that represent JSON-RPC requests, notifications, and responses:
+The implementation is located in the `src` subfolder, within the `org.oxyg3nium.rpc.model` package. The `JsonRPC` object defines several case classes and traits that represent JSON-RPC requests, notifications, and responses:
 
 - `Request`: Represents a JSON-RPC request containing the method name, parameters, and an ID.
 - `Response`: Represents a JSON-RPC response, which can be either a `Success` or a `Failure`, containing either a result or an error, respectively.
@@ -13,7 +13,7 @@ The `JsonRPC` object also provides helper methods for working with JSON objects,
 Here's an example of how the `JsonRPC` object might be used in the Oxyg3nium project:
 
 ```scala
-import org.alephium.rpc.model.JsonRPC
+import org.oxyg3nium.rpc.model.JsonRPC
 
 // Define a handler function for the "echo" method
 val handler: JsonRPC.Handler = Map(

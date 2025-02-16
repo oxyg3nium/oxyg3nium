@@ -13,7 +13,7 @@ This trait is likely used by other components in the Oxyg3nium project that are 
 Here is an example of how this trait may be used in code:
 
 ```scala
-import org.alephium.protocol.config.DiscoveryConfig
+import org.oxyg3nium.protocol.config.DiscoveryConfig
 
 class PeerDiscovery(config: DiscoveryConfig) {
   // Use the `scanFrequency` parameter to determine how often to scan for new peers

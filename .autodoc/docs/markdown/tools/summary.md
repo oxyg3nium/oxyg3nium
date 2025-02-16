@@ -5,7 +5,7 @@ The `.autodoc/docs/json/tools` folder contains essential tools and utilities for
 `BuiltInFunctions.scala` is a tool that generates a JSON file containing information about the built-in functions in the Oxyg3nium protocol. This JSON file can be used by other tools to provide information about the functions to users, such as an IDE or a web-based documentation tool. Example usage:
 
 ```scala
-import org.alephium.tools.BuiltInFunctions
+import org.oxyg3nium.tools.BuiltInFunctions
 
 // Generate JSON file containing built-in function information
 BuiltInFunctions.main(Array())
@@ -16,7 +16,7 @@ BuiltInFunctions.main(Array())
 `MiningRewards.scala` is a tool that calculates the inflation rate of the Oxyg3nium cryptocurrency based on different parameters, such as the hashrate of the network and the number of years since the network's inception. This tool is useful for developers working on the Oxyg3nium project who need to calculate the inflation rate of the cryptocurrency based on different parameters.
 
 ```scala
-import org.alephium.tools.MiningRewards
+import org.oxyg3nium.tools.MiningRewards
 
 // Calculate inflation rate
 MiningRewards.main(Array())
@@ -34,9 +34,9 @@ OpenApiUpdate.main(Array())
 `WalletGen.scala` is a tool for generating wallets for the Oxyg3nium cryptocurrency. It generates a set of public and private keys, along with their corresponding addresses and mnemonics. Example usage:
 
 ```scala
-import org.alephium.tools.WalletGen
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.model.GroupIndex
+import org.oxyg3nium.tools.WalletGen
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.model.GroupIndex
 
 implicit val config: GroupConfig = new GroupConfig {
   override def groups: Int = 4

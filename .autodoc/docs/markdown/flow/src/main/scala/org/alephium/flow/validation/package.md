@@ -11,7 +11,7 @@ Finally, the `HeaderValidationResult`, `TxValidationResult`, and `BlockValidatio
 Overall, this code provides a standardized way of handling validation errors and results across the Oxyg3nium project, making it easier to write and maintain code that performs validation operations. Here is an example of how these types might be used in practice:
 
 ```scala
-import org.alephium.flow.validation._
+import org.oxyg3nium.flow.validation._
 
 def validateBlock(block: Block): BlockValidationResult[Block] = {
   // perform validation logic

@@ -18,7 +18,7 @@ Overall, the `BlocksExporter` class provides a convenient way to export blocks f
 
 2. What external dependencies does this code have?
     
-    This code depends on several external libraries, including `com.typesafe.scalalogging`, `org.alephium.flow.core`, `org.alephium.io`, `org.alephium.protocol.config`, `org.alephium.protocol.model`, `org.alephium.serde`, and `org.alephium.util`.
+    This code depends on several external libraries, including `com.typesafe.scalalogging`, `org.oxyg3nium.flow.core`, `org.oxyg3nium.io`, `org.oxyg3nium.protocol.config`, `org.oxyg3nium.protocol.model`, `org.oxyg3nium.serde`, and `org.oxyg3nium.util`.
 
 3. What is the license for this code?
     

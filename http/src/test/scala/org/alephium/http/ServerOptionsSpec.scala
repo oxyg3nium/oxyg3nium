@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.http
+package org.oxyg3nium.http
 
 import scala.concurrent.Future
 
 import sttp.tapir.server.interceptor.metrics.MetricsRequestInterceptor
 
-import org.alephium.util.Oxyg3niumSpec
+import org.oxyg3nium.util.Oxyg3niumSpec
 
 class ServerOptionsSpec extends Oxyg3niumSpec {
   "ServerOptions" should "enable metrics based on the config" in {

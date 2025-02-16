@@ -8,7 +8,7 @@ The `Sha3` class and object can be used in the larger project to compute SHA3 ha
 
 ```
 import akka.util.ByteString
-import org.alephium.crypto.Sha3
+import org.oxyg3nium.crypto.Sha3
 
 val data = "hello world"
 val hash = new Sha3(ByteString(data)).bytes
@@ -18,7 +18,7 @@ The `bytes` property of the `Sha3` instance contains the hash value as a `ByteSt
 
 ```
 import akka.util.ByteString
-import org.alephium.crypto.Sha3
+import org.oxyg3nium.crypto.Sha3
 
 val data = ByteString(Array[Byte](1, 2, 3))
 val hash = Sha3.computeHash(data)

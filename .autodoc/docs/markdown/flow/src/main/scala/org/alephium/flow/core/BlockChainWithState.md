@@ -17,4 +17,4 @@ Overall, this file provides the implementation of the `BlockChainWithState` trai
 - This code is licensed under the GNU Lesser General Public License version 3 or later.
 
 3. What dependencies does this code have?
-- This code imports several packages and objects from the `org.alephium` namespace, including `Utils`, `WorldStateStorage`, `Block`, `Weight`, `BrokerConfig`, `NetworkConfig`, and `ConsensusSetting`. It also imports `IOResult` and `Hash` from other namespaces.
+- This code imports several packages and objects from the `org.oxyg3nium` namespace, including `Utils`, `WorldStateStorage`, `Block`, `Weight`, `BrokerConfig`, `NetworkConfig`, and `ConsensusSetting`. It also imports `IOResult` and `Hash` from other namespaces.

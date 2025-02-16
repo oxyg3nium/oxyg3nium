@@ -12,7 +12,7 @@ Overall, this code provides a way to represent and validate information about pe
 
 ```scala
 import java.net.InetSocketAddress
-import org.alephium.flow.network.bootstrap.PeerInfo
+import org.oxyg3nium.flow.network.bootstrap.PeerInfo
 
 val peerInfo = PeerInfo.unsafe(
   id = 1,

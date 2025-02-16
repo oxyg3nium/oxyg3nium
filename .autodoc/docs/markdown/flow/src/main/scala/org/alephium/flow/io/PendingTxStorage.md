@@ -24,7 +24,7 @@ val retrievedTx = storage.get(txId)
    - This code defines a trait and a class for storing and managing pending transactions in a RocksDB database for the Oxyg3nium project.
 
 2. What other dependencies does this code have?
-   - This code imports `org.rocksdb.{ReadOptions, WriteOptions}` and several classes from the `org.alephium` and `org.alephium.io` packages.
+   - This code imports `org.rocksdb.{ReadOptions, WriteOptions}` and several classes from the `org.oxyg3nium` and `org.oxyg3nium.io` packages.
 
 3. What is the license for this code?
    - This code is licensed under the GNU Lesser General Public License, version 3 or later.

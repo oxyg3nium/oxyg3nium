@@ -15,7 +15,7 @@ Overall, the SerializedExecutionContext provides a way to execute tasks in a ser
 Example usage:
 
 ```scala
-import org.alephium.flow.network.udp.SerializedExecutionContext
+import org.oxyg3nium.flow.network.udp.SerializedExecutionContext
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

@@ -15,7 +15,7 @@ This code can be used to define services in the Oxyg3nium project. For example, 
 Example usage:
 
 ```scala
-import org.alephium.util.Service
+import org.oxyg3nium.util.Service
 
 class MyService extends Service {
   override def startSelfOnce(): Future[Unit] = {

@@ -20,7 +20,7 @@ Overall, the `MiningRewards` object is a useful tool for developers working on t
    - This code calculates the inflation rate of the Oxyg3nium cryptocurrency based on hash rate and time.
 
 2. What external libraries or dependencies does this code use?
-   - This code imports classes from the `org.alephium` and `org.alephium.util` packages, but it is unclear what external libraries or dependencies are required.
+   - This code imports classes from the `org.oxyg3nium` and `org.oxyg3nium.util` packages, but it is unclear what external libraries or dependencies are required.
 
 3. What is the output of this code?
    - This code prints two tables to the console: one showing the inflation rate based on hash rate, and another showing the inflation rate based on time. Each table includes three columns: the hash rate or year, the inflation rate as a decimal, and the yearly reward in OXM.

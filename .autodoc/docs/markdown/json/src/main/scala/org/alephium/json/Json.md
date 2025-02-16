@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/json/src/main/scala/org/alephium/json/Json.scala)
 
-The `Json` object in the `org.alephium.json` package provides utility functions for working with JSON data. The object is implemented using the `upickle` library, which is a lightweight JSON serialization library for Scala.
+The `Json` object in the `org.oxyg3nium.json` package provides utility functions for working with JSON data. The object is implemented using the `upickle` library, which is a lightweight JSON serialization library for Scala.
 
 The `Json` object provides several implicit conversions for working with JSON data. The `fromString` method is an implicit conversion that converts a `String` to a `ujson.Value`. The `OptionWriter` and `OptionReader` methods are implicit conversions that provide serialization and deserialization support for `Option` types. The `readOpt` method is a utility method that reads a JSON value and returns an `Option` of the specified type. If the JSON value cannot be parsed or is missing a required field, `None` is returned.
 

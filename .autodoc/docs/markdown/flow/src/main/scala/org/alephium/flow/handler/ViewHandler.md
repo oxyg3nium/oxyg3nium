@@ -14,7 +14,7 @@ The `ViewHandler` object defines the `props` method, which creates a new instanc
 - This code defines a ViewHandler class and its companion object, which handle subscriptions and updates for mining templates in the Oxyg3nium network.
 
 2. What external dependencies does this code have?
-- This code imports several classes and objects from other packages, including akka.actor, org.alephium.flow.core, org.alephium.flow.mining, org.alephium.flow.network, org.alephium.flow.setting, org.alephium.io, org.alephium.protocol.config, org.alephium.protocol.model, and org.alephium.util.
+- This code imports several classes and objects from other packages, including akka.actor, org.oxyg3nium.flow.core, org.oxyg3nium.flow.mining, org.oxyg3nium.flow.network, org.oxyg3nium.flow.setting, org.oxyg3nium.io, org.oxyg3nium.protocol.config, org.oxyg3nium.protocol.model, and org.oxyg3nium.util.
 
 3. What is the role of the `minerAddressesOpt` variable?
 - `minerAddressesOpt` is an optional variable that stores a vector of lockup scripts for miner addresses. It is used to prepare mining templates and update subscribers when new blocks are added to the chain.

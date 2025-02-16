@@ -26,7 +26,7 @@ println(error.format(Some(Console.RED)))
 Example usage of `FastParseErrorUtil`:
 
 ```scala
-import org.alephium.ralph.error.FastParseErrorUtil
+import org.oxyg3nium.ralph.error.FastParseErrorUtil
 import fastparse.Parsed
 
 val input = "1 + 2 * 3"
@@ -47,7 +47,7 @@ Example usage of `LastIndex` method:
 
 ```scala
 import fastparse._
-import org.alephium.ralph.error.FastParseExtension._
+import org.oxyg3nium.ralph.error.FastParseExtension._
 
 val parser = P("hello" ~ "world").rep(1)
 val input = "hello world hello world"

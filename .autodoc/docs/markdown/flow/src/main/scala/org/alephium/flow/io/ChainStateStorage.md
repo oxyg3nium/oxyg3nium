@@ -13,9 +13,9 @@ By defining this trait, the Oxyg3nium project can support different storage mech
 Here is an example of how this trait could be used in the larger Oxyg3nium project:
 
 ```scala
-import org.alephium.flow.core.BlockHashChain
-import org.alephium.flow.io.ChainStateStorage
-import org.alephium.io.IOResult
+import org.oxyg3nium.flow.core.BlockHashChain
+import org.oxyg3nium.flow.io.ChainStateStorage
+import org.oxyg3nium.io.IOResult
 
 class DatabaseChainStateStorage extends ChainStateStorage {
   override def updateState(state: BlockHashChain.State): IOResult[Unit] = {

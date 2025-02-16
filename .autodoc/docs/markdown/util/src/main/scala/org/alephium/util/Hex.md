@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Hex.scala)
 
-The `Hex` object in the `org.alephium.util` package provides utility functions for working with hexadecimal strings and byte sequences. 
+The `Hex` object in the `org.oxyg3nium.util` package provides utility functions for working with hexadecimal strings and byte sequences. 
 
 The `unsafe` method takes a hexadecimal string as input and returns a `ByteString` object that represents the corresponding byte sequence. It uses the `BHex.decode` method from the `org.bouncycastle.util.encoders` package to decode the input string. This method is marked as `unsafe` because it assumes that the input string is a valid hexadecimal string and does not perform any error checking. 
 

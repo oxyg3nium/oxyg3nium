@@ -19,7 +19,7 @@ Overall, the `SelectionHandler` object and class are used to handle the selectio
    This code uses the following external libraries or dependencies: 
    - akka.actor
    - com.typesafe.scalalogging
-   - org.alephium.util.Duration
+   - org.oxyg3nium.util.Duration
    - java.nio.channels
    
 3. What is the license for this code?

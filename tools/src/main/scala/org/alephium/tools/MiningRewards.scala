@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.tools
+package org.oxyg3nium.tools
 
-import org.alephium.protocol.OXM
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.protocol.mining.Emission
-import org.alephium.util.{Duration, Number, U256}
+import org.oxyg3nium.protocol.OXM
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.protocol.mining.Emission
+import org.oxyg3nium.util.{Duration, Number, U256}
 
 // scalastyle:off magic.number
 object MiningRewards extends App {

@@ -14,5 +14,5 @@ These methods can be used to generate examples of input and output data for endp
 2. What licensing terms apply to the `alephium` library?
    - The `alephium` library is licensed under the GNU Lesser General Public License, version 3 or later.
    
-3. What is the relationship between the `alephium` project and the `org.alephium.api` package?
-   - The `org.alephium.api` package is part of the `alephium` project.
+3. What is the relationship between the `alephium` project and the `org.oxyg3nium.api` package?
+   - The `org.oxyg3nium.api` package is part of the `alephium` project.

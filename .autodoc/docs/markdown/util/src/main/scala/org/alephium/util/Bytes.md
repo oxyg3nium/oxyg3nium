@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/util/src/main/scala/org/alephium/util/Bytes.scala)
 
-The `Bytes` object in the `org.alephium.util` package provides utility methods for working with bytes and byte strings. 
+The `Bytes` object in the `org.oxyg3nium.util` package provides utility methods for working with bytes and byte strings. 
 
 The `toPosInt` method takes a byte and returns its unsigned value as an integer. This is done by performing a bitwise AND operation with `0xff`.
 

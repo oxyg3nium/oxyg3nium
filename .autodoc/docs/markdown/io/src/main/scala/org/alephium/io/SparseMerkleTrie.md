@@ -9,8 +9,8 @@ The code provides several utility functions for working with paths, such as conv
 Here's an example of how to use the `SparseMerkleTrie`:
 
 ```scala
-import org.alephium.io._
-import org.alephium.serde._
+import org.oxyg3nium.io._
+import org.oxyg3nium.serde._
 
 // Define key-value types and their serialization
 implicit val keySerde: Serde[String] = Serde.stringSerde

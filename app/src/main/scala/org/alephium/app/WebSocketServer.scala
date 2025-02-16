@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import scala.collection.immutable.ArraySeq
 import scala.collection.mutable
@@ -28,14 +28,14 @@ import io.vertx.core.eventbus.{EventBus => VertxEventBus}
 import io.vertx.core.http.{HttpServer, HttpServerOptions}
 import sttp.tapir.server.vertx.VertxFutureServerInterpreter._
 
-import org.alephium.api.ApiModelCodec
-import org.alephium.api.model._
-import org.alephium.flow.client.Node
-import org.alephium.flow.handler.AllHandlers.{BlockNotify, TxNotify}
-import org.alephium.json.Json._
-import org.alephium.protocol.config.{GroupConfig, NetworkConfig}
-import org.alephium.rpc.model.JsonRPC._
-import org.alephium.util.{AVector, BaseActor, EventBus, Service}
+import org.oxyg3nium.api.ApiModelCodec
+import org.oxyg3nium.api.model._
+import org.oxyg3nium.flow.client.Node
+import org.oxyg3nium.flow.handler.AllHandlers.{BlockNotify, TxNotify}
+import org.oxyg3nium.json.Json._
+import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfig}
+import org.oxyg3nium.rpc.model.JsonRPC._
+import org.oxyg3nium.util.{AVector, BaseActor, EventBus, Service}
 
 class WebSocketServer(node: Node, wsPort: Int)(implicit
     val system: ActorSystem,

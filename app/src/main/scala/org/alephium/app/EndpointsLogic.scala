@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.app
+package org.oxyg3nium.app
 
 import java.io.{StringWriter, Writer}
 import java.net.InetAddress
@@ -29,24 +29,24 @@ import sttp.model.{StatusCode, Uri}
 import sttp.tapir.server.ServerEndpoint
 import sttp.tapir.server.metrics.prometheus.PrometheusMetrics.prometheusRegistryCodec
 
-import org.alephium.api.{badRequest, notFound, ApiError, Endpoints, Try}
-import org.alephium.api.model.{TransactionTemplate => _, _}
-import org.alephium.app.FutureTry
-import org.alephium.flow.client.Node
-import org.alephium.flow.core.{BlockFlow, ExtraUtxosInfo}
-import org.alephium.flow.handler.{TxHandler, ViewHandler}
-import org.alephium.flow.mining.Miner
-import org.alephium.flow.network.{Bootstrapper, CliqueManager, DiscoveryServer, InterCliqueManager}
-import org.alephium.flow.network.bootstrap.IntraCliqueInfo
-import org.alephium.flow.network.broker.MisbehaviorManager
-import org.alephium.flow.network.broker.MisbehaviorManager.Peers
-import org.alephium.flow.setting.{ConsensusSettings, NetworkSetting}
-import org.alephium.http.{EndpointSender, Metrics}
-import org.alephium.protocol.config.{BrokerConfig, GroupConfig}
-import org.alephium.protocol.mining.HashRate
-import org.alephium.protocol.model.{Transaction => _, _}
-import org.alephium.protocol.vm.{LockupScript, LogConfig}
-import org.alephium.util._
+import org.oxyg3nium.api.{badRequest, notFound, ApiError, Endpoints, Try}
+import org.oxyg3nium.api.model.{TransactionTemplate => _, _}
+import org.oxyg3nium.app.FutureTry
+import org.oxyg3nium.flow.client.Node
+import org.oxyg3nium.flow.core.{BlockFlow, ExtraUtxosInfo}
+import org.oxyg3nium.flow.handler.{TxHandler, ViewHandler}
+import org.oxyg3nium.flow.mining.Miner
+import org.oxyg3nium.flow.network.{Bootstrapper, CliqueManager, DiscoveryServer, InterCliqueManager}
+import org.oxyg3nium.flow.network.bootstrap.IntraCliqueInfo
+import org.oxyg3nium.flow.network.broker.MisbehaviorManager
+import org.oxyg3nium.flow.network.broker.MisbehaviorManager.Peers
+import org.oxyg3nium.flow.setting.{ConsensusSettings, NetworkSetting}
+import org.oxyg3nium.http.{EndpointSender, Metrics}
+import org.oxyg3nium.protocol.config.{BrokerConfig, GroupConfig}
+import org.oxyg3nium.protocol.mining.HashRate
+import org.oxyg3nium.protocol.model.{Transaction => _, _}
+import org.oxyg3nium.protocol.vm.{LockupScript, LogConfig}
+import org.oxyg3nium.util._
 
 // scalastyle:off file.size.limit
 // scalastyle:off method.length

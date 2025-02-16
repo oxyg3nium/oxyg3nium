@@ -17,4 +17,4 @@ Example usage of this test file would be to run it as part of the Oxyg3nium proj
 - This code is released under the GNU Lesser General Public License.
 
 3. What other packages or classes are being imported and used in this code?
-- This code imports and uses the `org.alephium.protocol.OXM` and `org.alephium.util.Oxyg3niumActorSpec` packages, as well as the `ConfigTest` and `CliqueFixture` classes.
+- This code imports and uses the `org.oxyg3nium.protocol.OXM` and `org.oxyg3nium.util.Oxyg3niumActorSpec` packages, as well as the `ConfigTest` and `CliqueFixture` classes.

@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the library. If not, see <http://www.gnu.org/licenses/>.
 
-package org.alephium.wallet.json
+package org.oxyg3nium.wallet.json
 
-import org.alephium.api.ApiModelCodec
-import org.alephium.api.UtilJson._
-import org.alephium.crypto.wallet.Mnemonic
-import org.alephium.json.Json.{ReadWriter => RW, _}
-import org.alephium.protocol.config.GroupConfig
-import org.alephium.wallet.api.model._
+import org.oxyg3nium.api.ApiModelCodec
+import org.oxyg3nium.api.UtilJson._
+import org.oxyg3nium.crypto.wallet.Mnemonic
+import org.oxyg3nium.json.Json.{ReadWriter => RW, _}
+import org.oxyg3nium.protocol.config.GroupConfig
+import org.oxyg3nium.wallet.api.model._
 
 @SuppressWarnings(Array("org.wartremover.warts.ToString"))
 trait ModelCodecs extends ApiModelCodec {
