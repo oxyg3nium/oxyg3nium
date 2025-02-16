@@ -18,7 +18,7 @@ package org.oxyg3nium.protocol.mining
 
 import java.math.BigInteger
 
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.GroupConfig
 import org.oxyg3nium.protocol.model.{BlockHeader, Target}
 import org.oxyg3nium.util.{Duration, Math, TimeStamp, U256}
@@ -29,11 +29,11 @@ final class Emission private (blockTargetTime: Duration, fraction: Emission.Frac
   import Emission.{yearsUntilNoReward, yearsUntilStable}
 
   // scalastyle:off magic.number
-  val initialMaxReward: U256 = ALPH
+  val initialMaxReward: U256 = OXM
     .alph(60)
     .mulUnsafe(U256.unsafe(fraction.numerator))
     .divUnsafe(U256.unsafe(fraction.denominator))
-  val stableMaxReward: U256 = ALPH
+  val stableMaxReward: U256 = OXM
     .alph(20)
     .mulUnsafe(U256.unsafe(fraction.numerator))
     .divUnsafe(U256.unsafe(fraction.denominator))
@@ -56,7 +56,7 @@ final class Emission private (blockTargetTime: Duration, fraction: Emission.Frac
 
   val yearlyCentsDropUntilStable: Long = initialMaxRewardPerChain
     .subUnsafe(stableMaxRewardPerChain)
-    .divUnsafe(ALPH.cent(1))
+    .divUnsafe(OXM.cent(1))
     .divUnsafe(U256.unsafe(yearsUntilStable))
     .toBigInt
     .longValue()
@@ -67,7 +67,7 @@ final class Emission private (blockTargetTime: Duration, fraction: Emission.Frac
     amount.divUnsafe(U256.unsafe(groupConfig.chainNum))
 
   def reward(header: BlockHeader): Emission.RewardType =
-    reward(header.target, header.timestamp, ALPH.LaunchTimestamp)
+    reward(header.target, header.timestamp, OXM.LaunchTimestamp)
 
   def reward(powTarget: Target, blockTs: TimeStamp, launchTs: TimeStamp): Emission.RewardType = {
     val timeBasedReward = rewardWrtTime(blockTs, launchTs)
@@ -93,7 +93,7 @@ final class Emission private (blockTargetTime: Duration, fraction: Emission.Frac
     } else if (elapsed >= durationToStableMaxReward) {
       stableMaxRewardPerChain
     } else {
-      val reducedCents = ALPH.cent(elapsed.millis / durationToDropAboutOnceCent.millis)
+      val reducedCents = OXM.cent(elapsed.millis / durationToDropAboutOnceCent.millis)
       initialMaxRewardPerChain.subUnsafe(reducedCents)
     }
   }
@@ -189,10 +189,10 @@ final class Emission private (blockTargetTime: Duration, fraction: Emission.Frac
   // scalastyle:off magic.number
   def rewardsWrtTime(): IndexedSeq[(Int, U256)] = {
     (0 to yearsUntilNoReward).map { k =>
-      val time0          = ALPH.LaunchTimestamp.plusHoursUnsafe((k * 24 * 365).toLong)
-      val time1          = ALPH.LaunchTimestamp.plusHoursUnsafe(((k + 1) * 24 * 365).toLong)
-      val reward0        = rewardWrtTime(time0, ALPH.LaunchTimestamp)
-      val reward1        = rewardWrtTime(time1, ALPH.LaunchTimestamp)
+      val time0          = OXM.LaunchTimestamp.plusHoursUnsafe((k * 24 * 365).toLong)
+      val time1          = OXM.LaunchTimestamp.plusHoursUnsafe(((k + 1) * 24 * 365).toLong)
+      val reward0        = rewardWrtTime(time0, OXM.LaunchTimestamp)
+      val reward1        = rewardWrtTime(time1, OXM.LaunchTimestamp)
       val rewardPerChain = reward0.addUnsafe(reward1).divUnsafe(U256.Two)
       val rewardsPerYear = calRewardsPerYear(rewardPerChain)
       (k + 1) -> rewardsPerYear

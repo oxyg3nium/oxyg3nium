@@ -17,7 +17,7 @@
 package org.oxyg3nium.flow.client
 
 import org.oxyg3nium.flow.FlowFixture
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.util.Oxyg3niumSpec
 
 class NodeSpec extends Oxyg3niumSpec {
@@ -26,7 +26,7 @@ class NodeSpec extends Oxyg3niumSpec {
     val defaultConfig    = defaultFixture.config
     val defaultBlockFlow = defaultFixture.blockFlow
     val anotherFixture = new FlowFixture {
-      override val genesisBalance = ALPH.alph(1)
+      override val genesisBalance = OXM.alph(1)
     }
     val anotherConfig    = anotherFixture.config
     val anotherBlockFlow = anotherFixture.blockFlow

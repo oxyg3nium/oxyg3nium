@@ -47,7 +47,7 @@ import org.alephium.util._
 // scalastyle:off file.size.limit number.of.methods
 class ServerUtilsSpec extends Oxyg3niumSpec {
   implicit val ec: scala.concurrent.ExecutionContext = scala.concurrent.ExecutionContext.global
-  val defaultUtxosLimit: Int                         = ALPH.MaxTxInputNum * 2
+  val defaultUtxosLimit: Int                         = OXM.MaxTxInputNum * 2
 
   def warningString(code: String, sourceIndex: Option[SourceIndex]) = {
     code.substring(sourceIndex.get.index, sourceIndex.get.endIndex)
@@ -64,7 +64,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       blockflowFetchMaxAge = blockflowFetchMaxAge,
       askTimeout = Duration.ofMinutesUnsafe(1),
       AVector.empty,
-      ALPH.oneAlph,
+      OXM.oneAlph,
       utxosLimitInApiConfig,
       128,
       enableHttpMetrics = true
@@ -317,16 +317,16 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
           .value
 
       checkAddressBalance(fromAddress, senderBalanceWithGas - txTemplate.gasFeeUnsafe)
-      checkAddressBalance(destination1.address, ALPH.oneAlph, 1)
-      checkAddressBalance(destination2.address, ALPH.oneAlph, 1)
+      checkAddressBalance(destination1.address, OXM.oneAlph, 1)
+      checkAddressBalance(destination2.address, OXM.oneAlph, 1)
 
       val block0 = mineFromMemPool(blockFlow, chainIndex)
       addAndCheck(blockFlow, block0)
       serverUtils.getTransactionStatus(blockFlow, txTemplate.id, chainIndex) isE
         Confirmed(block0.hash, 0, 1, 0, 0)
       checkAddressBalance(fromAddress, senderBalanceWithGas - txTemplate.gasFeeUnsafe)
-      checkAddressBalance(destination1.address, ALPH.oneAlph, 1)
-      checkAddressBalance(destination2.address, ALPH.oneAlph, 1)
+      checkAddressBalance(destination1.address, OXM.oneAlph, 1)
+      checkAddressBalance(destination2.address, OXM.oneAlph, 1)
 
       checkTx(blockFlow, block0.nonCoinbase.head, chainIndex)
 
@@ -359,7 +359,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )(
       expectedSenderUtxosCount = 1,
       expectedDestUtxosCount = 2,
-      expectedDestBalance = ALPH.oneAlph * 2,
+      expectedDestBalance = OXM.oneAlph * 2,
       expectedTxsCount = 2
     )
   }
@@ -375,7 +375,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )(
       expectedSenderUtxosCount = 2,
       expectedDestUtxosCount = 2,
-      expectedDestBalance = ALPH.oneAlph * 2,
+      expectedDestBalance = OXM.oneAlph * 2,
       expectedTxsCount = 2
     )
   }
@@ -391,7 +391,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )(
       expectedSenderUtxosCount = 1,
       expectedDestUtxosCount = 2,
-      expectedDestBalance = ALPH.oneAlph * 2,
+      expectedDestBalance = OXM.oneAlph * 2,
       expectedTxsCount = 2
     )
   }
@@ -407,7 +407,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )(
       expectedSenderUtxosCount = 2,
       expectedDestUtxosCount = 514,
-      expectedDestBalance = ALPH.oneAlph * 514,
+      expectedDestBalance = OXM.oneAlph * 514,
       expectedTxsCount = 4
     )
   }
@@ -436,7 +436,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       AVector(0, 1, 2).map { groupIndex =>
         Destination(
           Address.p2pkh(GroupIndex.unsafe(groupIndex).generateKey._2),
-          Some(Amount(ALPH.oneAlph))
+          Some(Amount(OXM.oneAlph))
         )
       }
 
@@ -448,7 +448,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )(
       expectedSenderUtxosCount = 1,
       expectedDestUtxosCount = 3,
-      expectedDestBalance = ALPH.oneAlph * 3,
+      expectedDestBalance = OXM.oneAlph * 3,
       expectedTxsCount = 3
     )
 
@@ -460,7 +460,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )(
       expectedSenderUtxosCount = 1,
       expectedDestUtxosCount = 6,
-      expectedDestBalance = ALPH.oneAlph * 6,
+      expectedDestBalance = OXM.oneAlph * 6,
       expectedTxsCount = 3
     )
 
@@ -472,7 +472,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )(
       expectedSenderUtxosCount = 1,
       expectedDestUtxosCount = 9,
-      expectedDestBalance = ALPH.oneAlph * 9,
+      expectedDestBalance = OXM.oneAlph * 9,
       expectedTxsCount = 3
     )
   }
@@ -491,7 +491,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       genesisPriKey,
       schnorrAddress.lockupScript,
       AVector.empty[(TokenId, U256)],
-      ALPH.alph(2)
+      OXM.alph(2)
     )
     addAndCheck(blockFlow, block0)
 
@@ -500,7 +500,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     addAndCheck(blockFlow, confirmBlock)
 
     implicit val serverUtils: ServerUtils = new ServerUtils
-    val destination = Destination(Address.p2pkh(genesisPubKey), Some(Amount(ALPH.oneAlph)))
+    val destination = Destination(Address.p2pkh(genesisPubKey), Some(Amount(OXM.oneAlph)))
     val buildTransferTransaction = serverUtils
       .buildTransferTransaction(
         blockFlow,
@@ -540,7 +540,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       val fromGroup                          = chainIndex.from
       val (fromPrivateKey, fromPublicKey, _) = genesisKeys(fromGroup.value)
       val fromAddress                        = Address.p2pkh(fromPublicKey)
-      val selfDestination = Destination(fromAddress, Some(Amount(ALPH.oneAlph)), None)
+      val selfDestination = Destination(fromAddress, Some(Amount(OXM.oneAlph)), None)
 
       info("Sending some coins to itself twice, creating 3 UTXOs in total for the same public key")
       val destinations = AVector(selfDestination, selfDestination)
@@ -622,7 +622,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       val toGroup                            = chainIndex.to
       val (toPrivateKey, toPublicKey, _)     = genesisKeys(toGroup.value)
       val toAddress                          = Address.p2pkh(toPublicKey)
-      val destination                        = Destination(toAddress, Some(Amount(ALPH.oneAlph)))
+      val destination                        = Destination(toAddress, Some(Amount(OXM.oneAlph)))
 
       info("Sending some coins to an address, resulting 10 UTXOs for its corresponding public key")
       val destinations = AVector.fill(10)(destination)
@@ -640,7 +640,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         fromPrivateKey
       )
 
-      val senderBalanceWithGas   = genesisBalance - ALPH.alph(10)
+      val senderBalanceWithGas   = genesisBalance - OXM.alph(10)
       val receiverInitialBalance = genesisBalance
 
       checkAddressBalance(fromAddress, senderBalanceWithGas - txTemplate.gasFeeUnsafe)
@@ -650,7 +650,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       serverUtils.getTransactionStatus(blockFlow, txTemplate.id, chainIndex) isE
         Confirmed(block0.hash, 0, 1, 0, 0)
       checkAddressBalance(fromAddress, senderBalanceWithGas - block0.transactions.head.gasFeeUnsafe)
-      checkAddressBalance(toAddress, receiverInitialBalance.addUnsafe(ALPH.alph(10)), 11)
+      checkAddressBalance(toAddress, receiverInitialBalance.addUnsafe(OXM.alph(10)), 11)
 
       checkTx(blockFlow, block0.nonCoinbase.head, chainIndex)
 
@@ -659,10 +659,10 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       serverUtils.getTransactionStatus(blockFlow, txTemplate.id, chainIndex) isE
         Confirmed(block0.hash, 0, 1, 1, 0)
       checkAddressBalance(fromAddress, senderBalanceWithGas - block0.transactions.head.gasFeeUnsafe)
-      checkAddressBalance(toAddress, receiverInitialBalance + ALPH.alph(10), 11)
+      checkAddressBalance(toAddress, receiverInitialBalance + OXM.alph(10), 11)
 
       info("Sweep coins from the 3 UTXOs for the same public key to another address")
-      val senderBalanceBeforeSweep = receiverInitialBalance + ALPH.alph(10)
+      val senderBalanceBeforeSweep = receiverInitialBalance + OXM.alph(10)
       val sweepAddressDestination  = generateAddress(chainIndex)
       val buildSweepAddressTransactionsRes = serverUtils
         .buildSweepAddressTransactions(
@@ -802,7 +802,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val genesisKey  = genesisKeys(groupIndex.value)._1
     val pubKey      = groupIndex.generateKey._2
     (0 until 6).foreach { _ =>
-      val block = transfer(blockFlow, genesisKey, pubKey, ALPH.oneAlph)
+      val block = transfer(blockFlow, genesisKey, pubKey, OXM.oneAlph)
       addAndCheck(blockFlow, block)
     }
     val lockupScript = LockupScript.p2pkh(pubKey)
@@ -869,7 +869,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val chainIndex                         = ChainIndex.unsafe(0, 0)
     val (fromPrivateKey, fromPublicKey, _) = genesisKeys(chainIndex.from.value)
     val fromAddress                        = Address.p2pkh(fromPublicKey)
-    val selfDestination                    = Destination(fromAddress, Some(Amount(ALPH.cent(50))))
+    val selfDestination                    = Destination(fromAddress, Some(Amount(OXM.cent(50))))
 
     info("Sending some coins to itself, creating 2 UTXOs in total for the same public key")
     val selfDestinations = AVector(selfDestination)
@@ -922,7 +922,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       OutputRef(utxo.ref.hint, utxo.ref.key)
     }
 
-    // ALPH.oneAlph is transferred to each destination
+    // OXM.oneAlph is transferred to each destination
     val unsignedTx = serverUtils
       .prepareUnsignedTransaction(
         blockFlow,
@@ -942,12 +942,12 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       val defaultGas =
         GasEstimation.estimateWithSameP2PKHInputs(outputRefs.length, outputLockupScripts.length)
       val defaultGasFee = nonCoinbaseMinGasPrice * defaultGas
-      fromAddressBalance - ALPH.oneAlph.mulUnsafe(2) - defaultGasFee
+      fromAddressBalance - OXM.oneAlph.mulUnsafe(2) - defaultGasFee
     }
 
     unsignedTx.fixedOutputs.map(_.amount).toSeq should contain theSameElementsAs Seq(
-      ALPH.oneAlph,
-      ALPH.oneAlph,
+      OXM.oneAlph,
+      OXM.oneAlph,
       fromAddressBalanceAfterTransfer
     )
   }
@@ -959,14 +959,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       NetworkId.Oxyg3niumDevNet,
       None,
       minimalGas,
-      GasPrice(ALPH.oneAlph),
+      GasPrice(OXM.oneAlph),
       AVector(txInputGen.sample.get),
       AVector.empty
     )
 
     ServerUtils.validateUnsignedTransaction(tooMuchGasFee) is Left(
       ApiError.BadRequest(
-        "Gas fee exceeds the limit: maximum allowed is 1.0 ALPH, but got 20,000.0 ALPH. Please lower the gas price or adjust the alephium.api.gas-fee-cap in your user.conf file."
+        "Gas fee exceeds the limit: maximum allowed is 1.0 OXM, but got 20,000.0 OXM. Please lower the gas price or adjust the alephium.api.gas-fee-cap in your user.conf file."
       )
     )
 
@@ -989,7 +989,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
   it should "not create transaction with provided UTXOs, if Alph amount isn't enough" in new MultipleUtxos {
     val outputRefs = utxos.collect { utxo =>
-      if (utxo.amount.value.equals(ALPH.cent(50))) {
+      if (utxo.amount.value.equals(OXM.cent(50))) {
         Some(OutputRef(utxo.ref.hint, utxo.ref.key))
       } else {
         None
@@ -1116,7 +1116,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         outputRefsOpt = Some(outputRefs),
         destinations,
         gasOpt = Some(minimalGas),
-        GasPrice(ALPH.MaxALPHValue),
+        GasPrice(OXM.MaxOXMValue),
         targetBlockHashOpt = None,
         ExtraUtxosInfo.empty
       )
@@ -1124,10 +1124,10 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       .detail is "Gas price GasPrice(1000000000000000000000000000) too large, maximal GasPrice(999999999999999999999999999)"
   }
 
-  it should "not create transaction with overflowing ALPH amount" in new MultipleUtxos {
+  it should "not create transaction with overflowing OXM amount" in new MultipleUtxos {
     val attoAlphAmountOverflowDestinations = AVector(
       destination1,
-      destination2.copy(attoAlphAmount = Some(Amount(ALPH.MaxALPHValue)))
+      destination2.copy(attoAlphAmount = Some(Amount(OXM.MaxOXMValue)))
     )
     serverUtils
       .prepareUnsignedTransaction(
@@ -1141,7 +1141,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         ExtraUtxosInfo.empty
       )
       .leftValue
-      .detail is "ALPH amount overflow"
+      .detail is "OXM amount overflow"
   }
 
   it should "not create transaction when with token amount overflow" in new MultipleUtxos {
@@ -1202,7 +1202,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       .detail is "Zero transaction outputs"
 
     info("Too many outputs")
-    val tooManyDestinations = AVector.fill(ALPH.MaxTxOutputNum + 1)(generateDestination(chainIndex))
+    val tooManyDestinations = AVector.fill(OXM.MaxTxOutputNum + 1)(generateDestination(chainIndex))
     serverUtils
       .buildTransferTransaction(
         blockFlow,
@@ -1222,7 +1222,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     serverUtils
       .getInitialAttoAlphAmount(Some(minimalAlphInContractPreRhone - 1), HardFork.Leman)
       .leftValue
-      .detail is "Expect 1 ALPH deposit to deploy a new contract"
+      .detail is "Expect 1 OXM deposit to deploy a new contract"
 
     serverUtils.getInitialAttoAlphAmount(None, HardFork.Rhone) isE minimalAlphInContract
     serverUtils.getInitialAttoAlphAmount(
@@ -1232,7 +1232,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     serverUtils
       .getInitialAttoAlphAmount(Some(minimalAlphInContract - 1), HardFork.Rhone)
       .leftValue
-      .detail is "Expect 0.1 ALPH deposit to deploy a new contract"
+      .detail is "Expect 0.1 OXM deposit to deploy a new contract"
   }
 
   it should "fail when outputs belong to different groups" in new FlowFixtureWithApi {
@@ -1301,7 +1301,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val chainIndex            = ChainIndex.unsafe(0, 0)
     val (_, fromPublicKey, _) = genesisKeys(chainIndex.from.value)
-    val amount                = Amount(ALPH.oneAlph)
+    val amount                = Amount(OXM.oneAlph)
     val destination           = Destination(generateAddress(chainIndex), Some(amount))
 
     val source = BuildMultiAddressesTransaction.Source(
@@ -1329,8 +1329,8 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val nbOfInputs             = 10
     val chainIndex             = ChainIndex.unsafe(0, 0)
     val (fromPrivateKey, _, _) = genesisKeys(chainIndex.from.value)
-    val amount                 = ALPH.alph(10)
-    val destination = Destination(generateAddress(chainIndex), Some(Amount(ALPH.oneAlph)))
+    val amount                 = OXM.alph(10)
+    val destination = Destination(generateAddress(chainIndex), Some(Amount(OXM.oneAlph)))
 
     val inputPubKeys = AVector.fill(10)(chainIndex.to.generateKey._2)
 
@@ -1392,16 +1392,16 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val chainIndex = ChainIndex.unsafe(0, 0)
 
-    val destination = Destination(generateAddress(chainIndex), Some(Amount(ALPH.oneAlph)))
+    val destination = Destination(generateAddress(chainIndex), Some(Amount(OXM.oneAlph)))
 
     forAll(Gen.choose(1, 20)) { i =>
       val outputs = serverUtils.mergeAndprepareOutputInfos(AVector.fill(i)(destination)).rightValue
       outputs.length is 1
-      outputs(0).attoAlphAmount is ALPH.alph(i.toLong)
+      outputs(0).attoAlphAmount is OXM.alph(i.toLong)
       outputs(0).tokens is AVector.empty[(TokenId, U256)]
     }
 
-    val destination2 = Destination(generateAddress(chainIndex), Some(Amount(ALPH.alph(2))))
+    val destination2 = Destination(generateAddress(chainIndex), Some(Amount(OXM.alph(2))))
 
     forAll(Gen.choose(1, 20)) { i =>
       val outputs = serverUtils
@@ -1410,9 +1410,9 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         )
         .rightValue
       outputs.length is 2
-      outputs(0).attoAlphAmount is ALPH.alph(i.toLong)
+      outputs(0).attoAlphAmount is OXM.alph(i.toLong)
       outputs(0).tokens is AVector.empty[(TokenId, U256)]
-      outputs(1).attoAlphAmount is ALPH.alph(2 * i.toLong)
+      outputs(1).attoAlphAmount is OXM.alph(2 * i.toLong)
       outputs(1).tokens is AVector.empty[(TokenId, U256)]
     }
   }
@@ -1428,12 +1428,12 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val tokens = AVector(Token(tokenId1, U256.One), Token(tokenId2, U256.Two))
 
     val destination =
-      Destination(generateAddress(chainIndex), Some(Amount(ALPH.oneAlph)), Some(tokens))
+      Destination(generateAddress(chainIndex), Some(Amount(OXM.oneAlph)), Some(tokens))
 
     forAll(Gen.choose(1, 20)) { i =>
       val outputs = serverUtils.mergeAndprepareOutputInfos(AVector.fill(i)(destination)).rightValue
       outputs.length is 1
-      outputs(0).attoAlphAmount is ALPH.alph(i.toLong)
+      outputs(0).attoAlphAmount is OXM.alph(i.toLong)
       outputs(0).tokens is AVector(
         (tokenId1, U256.unsafe(i)),
         (tokenId2, U256.unsafe(2 * i.toLong))
@@ -1441,7 +1441,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     }
 
     val destination2 =
-      Destination(generateAddress(chainIndex), Some(Amount(ALPH.alph(2))), Some(tokens))
+      Destination(generateAddress(chainIndex), Some(Amount(OXM.alph(2))), Some(tokens))
 
     forAll(Gen.choose(1, 20)) { i =>
       val outputs = serverUtils
@@ -1450,12 +1450,12 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         )
         .rightValue
       outputs.length is 2
-      outputs(0).attoAlphAmount is ALPH.alph(i.toLong)
+      outputs(0).attoAlphAmount is OXM.alph(i.toLong)
       outputs(0).tokens is AVector(
         (tokenId1, U256.unsafe(i)),
         (tokenId2, U256.unsafe(2 * i.toLong))
       )
-      outputs(1).attoAlphAmount is ALPH.alph(2 * i.toLong)
+      outputs(1).attoAlphAmount is OXM.alph(2 * i.toLong)
       outputs(1).tokens is AVector(
         (tokenId1, U256.unsafe(i)),
         (tokenId2, U256.unsafe(2 * i.toLong))
@@ -1469,14 +1469,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val chainIndex = ChainIndex.unsafe(0, 0)
 
     val destAddress = generateAddress(chainIndex)
-    val destination = Destination(destAddress, Some(Amount(ALPH.oneAlph)))
+    val destination = Destination(destAddress, Some(Amount(OXM.oneAlph)))
     val destinationLockTime =
-      Destination(destAddress, Some(Amount(ALPH.oneAlph)), lockTime = Some(TimeStamp.now()))
+      Destination(destAddress, Some(Amount(OXM.oneAlph)), lockTime = Some(TimeStamp.now()))
     val destinationMessage =
-      Destination(destAddress, Some(Amount(ALPH.oneAlph)), message = Some(ByteString.empty))
+      Destination(destAddress, Some(Amount(OXM.oneAlph)), message = Some(ByteString.empty))
     val destinationBoth = Destination(
       destAddress,
-      Some(Amount(ALPH.oneAlph)),
+      Some(Amount(OXM.oneAlph)),
       lockTime = Some(TimeStamp.now()),
       message = Some(ByteString.empty)
     )
@@ -1491,17 +1491,17 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val outputs = serverUtils.mergeAndprepareOutputInfos(destinations).rightValue
     outputs.length is 4
-    outputs(0).attoAlphAmount is ALPH.alph(2)
+    outputs(0).attoAlphAmount is OXM.alph(2)
 
-    outputs(1).attoAlphAmount is ALPH.alph(1)
+    outputs(1).attoAlphAmount is OXM.alph(1)
     outputs(1).lockTime.isDefined is true
     outputs(1).additionalDataOpt.isEmpty is true
 
-    outputs(2).attoAlphAmount is ALPH.alph(1)
+    outputs(2).attoAlphAmount is OXM.alph(1)
     outputs(2).lockTime.isEmpty is true
     outputs(2).additionalDataOpt.isDefined is true
 
-    outputs(3).attoAlphAmount is ALPH.alph(1)
+    outputs(3).attoAlphAmount is OXM.alph(1)
     outputs(3).lockTime.isDefined is true
     outputs(3).additionalDataOpt.isDefined is true
   }
@@ -1513,12 +1513,12 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val destAddress = generateAddress(chainIndex)
     val destinationLockTime =
-      Destination(destAddress, Some(Amount(ALPH.oneAlph)), lockTime = Some(TimeStamp.now()))
+      Destination(destAddress, Some(Amount(OXM.oneAlph)), lockTime = Some(TimeStamp.now()))
     val destinationMessage =
-      Destination(destAddress, Some(Amount(ALPH.oneAlph)), message = Some(ByteString.empty))
+      Destination(destAddress, Some(Amount(OXM.oneAlph)), message = Some(ByteString.empty))
     val destinationBoth = Destination(
       destAddress,
-      Some(Amount(ALPH.oneAlph)),
+      Some(Amount(OXM.oneAlph)),
       lockTime = Some(TimeStamp.now()),
       message = Some(ByteString.empty)
     )
@@ -1532,15 +1532,15 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val outputs = serverUtils.mergeAndprepareOutputInfos(destinations).rightValue
     outputs.length is 3
 
-    outputs(0).attoAlphAmount is ALPH.alph(1)
+    outputs(0).attoAlphAmount is OXM.alph(1)
     outputs(0).lockTime.isDefined is true
     outputs(0).additionalDataOpt.isEmpty is true
 
-    outputs(1).attoAlphAmount is ALPH.alph(1)
+    outputs(1).attoAlphAmount is OXM.alph(1)
     outputs(1).lockTime.isEmpty is true
     outputs(1).additionalDataOpt.isDefined is true
 
-    outputs(2).attoAlphAmount is ALPH.alph(1)
+    outputs(2).attoAlphAmount is OXM.alph(1)
     outputs(2).lockTime.isDefined is true
     outputs(2).additionalDataOpt.isDefined is true
   }
@@ -1646,7 +1646,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
   trait CallContractFixture extends ContractFixture {
     val callerAddress = Address.Asset(lockupScript)
-    val inputAsset    = TestInputAsset(callerAddress, AssetState(ALPH.oneAlph))
+    val inputAsset    = TestInputAsset(callerAddress, AssetState(OXM.oneAlph))
 
     val barCode =
       s"""
@@ -1668,7 +1668,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |Contract Foo(mut value: U256) {
          |  @using(preapprovedAssets = true, assetsInContract = true, updateFields = true)
          |  pub fn addOne() -> U256 {
-         |    transferTokenToSelf!(@$callerAddress, ALPH, ${ALPH.oneNanoAlph})
+         |    transferTokenToSelf!(@$callerAddress, OXM, ${OXM.oneNanoAlph})
          |    value = value + 1
          |    let bar = Bar(#${barId.toHexString})
          |    bar.addOne()
@@ -1693,7 +1693,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |@using(preapprovedAssets = true)
          |TxScript Main {
          |  let foo = Foo(#${fooId.toHexString})
-         |  foo.addOne{@$callerAddress -> ALPH: 1 alph}()
+         |  foo.addOne{@$callerAddress -> OXM: 1 alph}()
          |}
          |
          |$fooCode
@@ -1711,7 +1711,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   "ServerUtils.callContract" should "call contract" in new CallContractFixture {
     executeScript(callScriptCode, None)
     checkContractStates(barId, U256.unsafe(1), minimalAlphInContract)
-    checkContractStates(fooId, U256.unsafe(1), minimalAlphInContract + ALPH.oneNanoAlph)
+    checkContractStates(fooId, U256.unsafe(1), minimalAlphInContract + OXM.oneNanoAlph)
 
     info("call contract against the latest world state")
     val params0 = CallContract(
@@ -1726,7 +1726,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     callContractResult0.returns is AVector[Val](ValU256(2))
     callContractResult0.gasUsed is 23206
     callContractResult0.txOutputs.length is 2
-    val contractAttoAlphAmount0 = minimalAlphInContract + ALPH.nanoAlph(2)
+    val contractAttoAlphAmount0 = minimalAlphInContract + OXM.nanoAlph(2)
     callContractResult0.txOutputs(0).attoAlphAmount.value is contractAttoAlphAmount0
 
     callContractResult0.contracts.length is 2
@@ -1748,7 +1748,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     callContractResult1.returns is AVector[Val](ValU256(1))
     callContractResult1.gasUsed is 23206
     callContractResult1.txOutputs.length is 2
-    val contractAttoAlphAmount1 = minimalAlphInContract + ALPH.oneNanoAlph
+    val contractAttoAlphAmount1 = minimalAlphInContract + OXM.oneNanoAlph
     callContractResult1.txOutputs(0).attoAlphAmount.value is contractAttoAlphAmount1
 
     callContractResult1.contracts.length is 2
@@ -1834,7 +1834,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
            |Contract Foo(mut value: U256) {
            |  @using(checkExternalCaller = false, updateFields = true, preapprovedAssets = true, assetsInContract = true)
            |  pub fn foo() -> U256 {
-           |    transferTokenToSelf!(callerAddress!(), ALPH, minimalContractDeposit!())
+           |    transferTokenToSelf!(callerAddress!(), OXM, minimalContractDeposit!())
            |    value = value + 1
            |    return value
            |  }
@@ -1857,7 +1857,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
            |  @using(preapprovedAssets = true)
            |  pub fn main() -> ${if (returnValue) "U256" else "()"} {
            |    ${if (returnValue) "return" else ""} Foo(#${fooId.toHexString}).foo{
-           |      callerAddress!() -> ALPH: minimalContractDeposit!()
+           |      callerAddress!() -> OXM: minimalContractDeposit!()
            |    }()
            |  }
            |}
@@ -1877,7 +1877,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         callerAddress = Some(callerAddress),
         interestedContracts = Some(AVector(fooAddress)),
         worldStateBlockHash = Some(blockHash),
-        inputAssets = Some(AVector(TestInputAsset(callerAddress, AssetState(ALPH.oneAlph))))
+        inputAssets = Some(AVector(TestInputAsset(callerAddress, AssetState(OXM.oneAlph))))
       )
       val result0 = serverUtils.callTxScript(blockFlow, params0).rightValue
       result0.returns is AVector[Val](ValU256(2))
@@ -1887,10 +1887,10 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       result0.contracts.head.asset.attoAlphAmount is minimalAlphInContract * 2
       result0.txOutputs
         .find(_.address == callerAddress)
-        .exists(_.attoAlphAmount.value == ALPH.cent(40)) is true
+        .exists(_.attoAlphAmount.value == OXM.cent(40)) is true
       result0.txOutputs
         .find(_.address == fooAddress)
-        .exists(_.attoAlphAmount.value == ALPH.cent(20)) is true
+        .exists(_.attoAlphAmount.value == OXM.cent(20)) is true
 
       val params1 = params0.copy(worldStateBlockHash = None)
       val result1 = serverUtils.callTxScript(blockFlow, params1).rightValue
@@ -1901,10 +1901,10 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       result1.contracts.head.asset.attoAlphAmount is minimalAlphInContract * 3
       result1.txOutputs
         .find(_.address == callerAddress)
-        .exists(_.attoAlphAmount.value == ALPH.cent(40)) is true
+        .exists(_.attoAlphAmount.value == OXM.cent(40)) is true
       result1.txOutputs
         .find(_.address == fooAddress)
-        .exists(_.attoAlphAmount.value == ALPH.cent(30)) is true
+        .exists(_.attoAlphAmount.value == OXM.cent(30)) is true
 
       checkFooState(2, minimalAlphInContract * 2)
     }
@@ -2008,7 +2008,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |Contract Bar() {
          |  @using(assetsInContract = true)
          |  pub fn bar() -> () {
-         |    createSubContract!{selfAddress!() -> ALPH: 1 alph}(#$createContractPath, #$fooByteCode, #00, #00)
+         |    createSubContract!{selfAddress!() -> OXM: 1 alph}(#$createContractPath, #$fooByteCode, #00, #00)
          |    Foo(subContractId!(#$destroyContractPath)).destroy()
          |  }
          |}
@@ -2027,15 +2027,15 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       None,
       AVector.empty[Val],
       AVector.empty[Val],
-      AssetState(ALPH.oneAlph)
+      AssetState(OXM.oneAlph)
     )
     val testContractParams = TestContract(
       group = Some(groupIndex.value),
       address = Some(Address.contract(barContractId)),
       bytecode = barContract,
-      initialAsset = Some(AssetState(ALPH.alph(10))),
+      initialAsset = Some(AssetState(OXM.alph(10))),
       existingContracts = Some(AVector(existingContract)),
-      inputAssets = Some(AVector(TestInputAsset(assetAddress, AssetState(ALPH.oneAlph))))
+      inputAssets = Some(AVector(TestInputAsset(assetAddress, AssetState(OXM.oneAlph))))
     ).toComplete().rightValue
 
     val testFlow    = BlockFlow.emptyUnsafe(config)
@@ -2054,7 +2054,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val assetOutput = result.txOutputs(1)
     assetOutput.address is assetAddress
     assetOutput.attoAlphAmount is Amount(
-      ALPH.alph(2).subUnsafe(nonCoinbaseMinGasPrice * maximalGasPerTx)
+      OXM.alph(2).subUnsafe(nonCoinbaseMinGasPrice * maximalGasPerTx)
     )
   }
 
@@ -2080,7 +2080,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       group = Some(groupIndex.value),
       address = Some(fooContractAddress),
       bytecode = fooContract,
-      initialAsset = Some(AssetState(ALPH.alph(10))),
+      initialAsset = Some(AssetState(OXM.alph(10))),
       existingContracts = None,
       inputAssets = None
     ).toComplete().rightValue
@@ -2094,7 +2094,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     result.txInputs.length is 1
     result.txInputs(0).lockupScript is fooContractAddress.lockupScript
     result.txOutputs.length is 1
-    result.txOutputs(0).attoAlphAmount.value is ALPH.alph(10)
+    result.txOutputs(0).attoAlphAmount.value is OXM.alph(10)
     result.txOutputs(0).address is assetAddress
   }
 
@@ -2189,7 +2189,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         None,
         AVector(ValByteVec(fooContractId.bytes)),
         AVector.empty,
-        AssetState(ALPH.oneAlph)
+        AssetState(OXM.oneAlph)
       ),
       ContractState(
         Address.contract(fooContractId),
@@ -2198,15 +2198,15 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         None,
         AVector.empty,
         AVector.empty,
-        AssetState(ALPH.oneAlph)
+        AssetState(OXM.oneAlph)
       )
     )
     val testContractParams = TestContract(
       address = Some(Address.contract(barContractId)),
       bytecode = barContract,
-      initialAsset = Some(AssetState(ALPH.alph(10))),
+      initialAsset = Some(AssetState(OXM.alph(10))),
       existingContracts = Some(existingContracts),
-      inputAssets = Some(AVector(TestInputAsset(assetAddress, AssetState(ALPH.oneAlph))))
+      inputAssets = Some(AVector(TestInputAsset(assetAddress, AssetState(OXM.oneAlph))))
     )
 
     val testFlow    = BlockFlow.emptyUnsafe(config)
@@ -2239,10 +2239,10 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val assetOutput = result.txOutputs(1)
     assetOutput.address is assetAddress
     val totalGas = nonCoinbaseMinGasPrice * maximalGasPerTx
-    assetOutput.attoAlphAmount is Amount(ALPH.oneAlph.subUnsafe(totalGas))
+    assetOutput.attoAlphAmount is Amount(OXM.oneAlph.subUnsafe(totalGas))
     val contractOutput = result.txOutputs(0)
     contractOutput.address is Address.contract(fooCallerContractId)
-    contractOutput.attoAlphAmount.value is ALPH.alph(2)
+    contractOutput.attoAlphAmount.value is OXM.alph(2)
   }
 
   it should "fail to destroy contracts and transfer fund to non-calling address" in new DestroyFixture {
@@ -2371,7 +2371,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |Contract Foo() {
          |  @using(assetsInContract = true)
          |  pub fn foo() -> () {
-         |    assert!(tokenRemaining!(selfAddress!(), ALPH) == 1 alph, 0)
+         |    assert!(tokenRemaining!(selfAddress!(), OXM) == 1 alph, 0)
          |  }
          |}
          |""".stripMargin
@@ -2445,14 +2445,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       code = AMMContract.swapCode,
       originalCodeHash = AMMContract.swapCode.hash,
       initialImmFields = AVector[Val](ValByteVec(tokenId.bytes)),
-      initialMutFields = AVector[Val](ValU256(ALPH.alph(10)), ValU256(100)),
-      initialAsset = AssetState.from(ALPH.alph(10), tokens = AVector(Token(tokenId, 100))),
+      initialMutFields = AVector[Val](ValU256(OXM.alph(10)), ValU256(100)),
+      initialAsset = AssetState.from(OXM.alph(10), tokens = AVector(Token(tokenId, 100))),
       testMethodIndex = 0,
-      testArgs = AVector[Val](ValAddress(lp), ValU256(ALPH.alph(100)), ValU256(100)),
+      testArgs = AVector[Val](ValAddress(lp), ValU256(OXM.alph(100)), ValU256(100)),
       inputAssets = AVector(
         TestInputAsset(
           lp,
-          AssetState.from(ALPH.alph(101), AVector(Token(tokenId, 100)))
+          AssetState.from(OXM.alph(101), AVector(Token(tokenId, 100)))
         )
       )
     )
@@ -2463,14 +2463,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val contractState = result0.contracts.head
     contractState.id is ContractId.zero
     contractState.immFields is AVector[Val](ValByteVec(tokenId.bytes))
-    contractState.mutFields is AVector[Val](ValU256(ALPH.alph(110)), ValU256(200))
-    contractState.asset is AssetState.from(ALPH.alph(110), AVector(Token(tokenId, 200)))
+    contractState.mutFields is AVector[Val](ValU256(OXM.alph(110)), ValU256(200))
+    contractState.asset is AssetState.from(OXM.alph(110), AVector(Token(tokenId, 200)))
     result0.txInputs is AVector[Address](contractAddress)
     result0.txOutputs.length is 2
     result0.txOutputs(0) is ContractOutput(
       result0.txOutputs(0).hint,
       emptyKey(0),
-      Amount(ALPH.alph(110)),
+      Amount(OXM.alph(110)),
       contractAddress,
       AVector(Token(tokenId, 200))
     )
@@ -2487,7 +2487,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     result0.events(0).eventIndex is 0
     result0.events(0).fields is AVector[Val](
       ValAddress(lp),
-      ValU256(ALPH.alph(100)),
+      ValU256(OXM.alph(100)),
       ValU256(100)
     )
 
@@ -2499,14 +2499,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         ValByteVec(testContract0.contractId.bytes),
         ValByteVec(tokenId.bytes)
       ),
-      initialAsset = AssetState(ALPH.alph(1)),
+      initialAsset = AssetState(OXM.alph(1)),
       testMethodIndex = 0,
-      testArgs = AVector[Val](ValAddress(lp), ValU256(ALPH.alph(100)), ValU256(100)),
+      testArgs = AVector[Val](ValAddress(lp), ValU256(OXM.alph(100)), ValU256(100)),
       existingContracts = result0.contracts,
       inputAssets = AVector(
         TestInputAsset(
           lp,
-          AssetState.from(ALPH.alph(101), AVector(Token(tokenId, 100)))
+          AssetState.from(OXM.alph(101), AVector(Token(tokenId, 100)))
         )
       )
     )
@@ -2516,14 +2516,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val contractState1 = result1.contracts.head
     contractState1.id is ContractId.zero
     contractState1.immFields is AVector[Val](ValByteVec(tokenId.bytes))
-    contractState1.mutFields is AVector[Val](ValU256(ALPH.alph(210)), ValU256(300))
-    contractState1.asset is AssetState.from(ALPH.alph(210), AVector(Token(tokenId, 300)))
+    contractState1.mutFields is AVector[Val](ValU256(OXM.alph(210)), ValU256(300))
+    contractState1.asset is AssetState.from(OXM.alph(210), AVector(Token(tokenId, 300)))
     result1.txInputs is AVector[Address](contractAddress)
     result1.txOutputs.length is 2
     result1.txOutputs(0) is ContractOutput(
       result1.txOutputs(0).hint,
       emptyKey(0),
-      Amount(ALPH.alph(210)),
+      Amount(OXM.alph(210)),
       contractAddress,
       AVector(Token(tokenId, 300))
     )
@@ -2543,14 +2543,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       code = AMMContract.swapCode,
       originalCodeHash = AMMContract.swapCode.hash,
       initialImmFields = AVector[Val](ValByteVec(tokenId.bytes)),
-      initialMutFields = AVector[Val](ValU256(ALPH.alph(10)), ValU256(100)),
-      initialAsset = AssetState.from(ALPH.alph(10), tokens = AVector(Token(tokenId, 100))),
+      initialMutFields = AVector[Val](ValU256(OXM.alph(10)), ValU256(100)),
+      initialAsset = AssetState.from(OXM.alph(10), tokens = AVector(Token(tokenId, 100))),
       testMethodIndex = 1,
-      testArgs = AVector[Val](ValAddress(buyer), ValU256(ALPH.alph(10))),
+      testArgs = AVector[Val](ValAddress(buyer), ValU256(OXM.alph(10))),
       inputAssets = AVector(
         TestInputAsset(
           lp,
-          AssetState.from(ALPH.alph(101), AVector(Token(tokenId, 100)))
+          AssetState.from(OXM.alph(101), AVector(Token(tokenId, 100)))
         )
       )
     )
@@ -2561,14 +2561,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val contractState = result0.contracts.head
     contractState.id is ContractId.zero
     contractState.immFields is AVector[Val](ValByteVec(tokenId.bytes))
-    contractState.mutFields is AVector[Val](ValU256(ALPH.alph(20)), ValU256(50))
-    contractState.asset is AssetState.from(ALPH.alph(20), AVector(Token(tokenId, 50)))
+    contractState.mutFields is AVector[Val](ValU256(OXM.alph(20)), ValU256(50))
+    contractState.asset is AssetState.from(OXM.alph(20), AVector(Token(tokenId, 50)))
     result0.txInputs is AVector[Address](contractAddress)
     result0.txOutputs.length is 3
     result0.txOutputs(0) is ContractOutput(
       result0.txOutputs(0).hint,
       emptyKey(0),
-      Amount(ALPH.alph(20)),
+      Amount(OXM.alph(20)),
       contractAddress,
       AVector(Token(tokenId, 50))
     )
@@ -2584,7 +2584,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     result0.txOutputs(2) is AssetOutput(
       result0.txOutputs(2).hint,
       emptyKey(2),
-      Amount(ALPH.nanoAlph(90500000000L) - dustUtxoAmount),
+      Amount(OXM.nanoAlph(90500000000L) - dustUtxoAmount),
       buyer,
       AVector.empty,
       TimeStamp.zero,
@@ -2592,7 +2592,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )
     result0.events.length is 1
     result0.events(0).eventIndex is 1
-    result0.events(0).fields is AVector[Val](ValAddress(buyer), ValU256(ALPH.alph(10)))
+    result0.events(0).fields is AVector[Val](ValAddress(buyer), ValU256(OXM.alph(10)))
 
     val testContract1 = TestContract.Complete(
       contractId = testContractId1,
@@ -2602,14 +2602,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         ValByteVec(testContract0.contractId.bytes),
         ValByteVec(tokenId.bytes)
       ),
-      initialAsset = AssetState(ALPH.alph(1)),
+      initialAsset = AssetState(OXM.alph(1)),
       testMethodIndex = 2,
       testArgs = AVector[Val](ValAddress(buyer), ValU256(50)),
       existingContracts = result0.contracts,
       inputAssets = AVector(
         TestInputAsset(
           lp,
-          AssetState.from(ALPH.alph(101), AVector(Token(tokenId, 50)))
+          AssetState.from(OXM.alph(101), AVector(Token(tokenId, 50)))
         )
       )
     )
@@ -2619,21 +2619,21 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val contractState1 = result1.contracts.head
     contractState1.id is ContractId.zero
     contractState1.immFields is AVector[Val](ValByteVec(tokenId.bytes))
-    contractState1.mutFields is AVector[Val](ValU256(ALPH.alph(10)), ValU256(100))
-    contractState1.asset is AssetState.from(ALPH.alph(10), AVector(Token(tokenId, 100)))
+    contractState1.mutFields is AVector[Val](ValU256(OXM.alph(10)), ValU256(100))
+    contractState1.asset is AssetState.from(OXM.alph(10), AVector(Token(tokenId, 100)))
     result1.txInputs is AVector[Address](contractAddress)
     result1.txOutputs.length is 2
     result1.txOutputs(0) is ContractOutput(
       result1.txOutputs(0).hint,
       emptyKey(0),
-      Amount(ALPH.alph(10)),
+      Amount(OXM.alph(10)),
       contractAddress,
       AVector(Token(tokenId, 100))
     )
     result1.txOutputs(1) is AssetOutput(
       result1.txOutputs(1).hint,
       emptyKey(1),
-      Amount(ALPH.nanoAlph(110500000000L)),
+      Amount(OXM.nanoAlph(110500000000L)),
       lp,
       AVector.empty,
       TimeStamp.zero,
@@ -2646,14 +2646,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       code = AMMContract.swapCode,
       originalCodeHash = AMMContract.swapCode.hash,
       initialImmFields = AVector[Val](ValByteVec(tokenId.bytes)),
-      initialMutFields = AVector[Val](ValU256(ALPH.alph(10)), ValU256(100)),
-      initialAsset = AssetState.from(ALPH.alph(10), tokens = AVector(Token(tokenId, 100))),
+      initialMutFields = AVector[Val](ValU256(OXM.alph(10)), ValU256(100)),
+      initialAsset = AssetState.from(OXM.alph(10), tokens = AVector(Token(tokenId, 100))),
       testMethodIndex = 2,
       testArgs = AVector[Val](ValAddress(buyer), ValU256(100)),
       inputAssets = AVector(
         TestInputAsset(
           lp,
-          AssetState.from(ALPH.alph(101), AVector(Token(tokenId, 100)))
+          AssetState.from(OXM.alph(101), AVector(Token(tokenId, 100)))
         )
       )
     )
@@ -2664,21 +2664,21 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val contractState = result0.contracts.head
     contractState.id is ContractId.zero
     contractState.immFields is AVector[Val](ValByteVec(tokenId.bytes))
-    contractState.mutFields is AVector[Val](ValU256(ALPH.alph(5)), ValU256(200))
-    contractState.asset is AssetState.from(ALPH.alph(5), AVector(Token(tokenId, 200)))
+    contractState.mutFields is AVector[Val](ValU256(OXM.alph(5)), ValU256(200))
+    contractState.asset is AssetState.from(OXM.alph(5), AVector(Token(tokenId, 200)))
     result0.txInputs is AVector[Address](contractAddress)
     result0.txOutputs.length is 2
     result0.txOutputs(0) is ContractOutput(
       result0.txOutputs(0).hint,
       emptyKey(0),
-      Amount(ALPH.alph(5)),
+      Amount(OXM.alph(5)),
       contractAddress,
       AVector(Token(tokenId, 200))
     )
     result0.txOutputs(1) is AssetOutput(
       result0.txOutputs(1).hint,
       emptyKey(1),
-      Amount(ALPH.nanoAlph(105500000000L)),
+      Amount(OXM.nanoAlph(105500000000L)),
       buyer,
       AVector.empty,
       TimeStamp.zero,
@@ -2696,14 +2696,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         ValByteVec(testContract0.contractId.bytes),
         ValByteVec(tokenId.bytes)
       ),
-      initialAsset = AssetState(ALPH.alph(1)),
+      initialAsset = AssetState(OXM.alph(1)),
       testMethodIndex = 1,
-      testArgs = AVector[Val](ValAddress(buyer), ValU256(ALPH.alph(5))),
+      testArgs = AVector[Val](ValAddress(buyer), ValU256(OXM.alph(5))),
       existingContracts = result0.contracts,
       inputAssets = AVector(
         TestInputAsset(
           lp,
-          AssetState(ALPH.alph(101))
+          AssetState(OXM.alph(101))
         )
       )
     )
@@ -2713,14 +2713,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val contractState1 = result1.contracts.head
     contractState1.id is ContractId.zero
     contractState1.immFields is AVector[Val](ValByteVec(tokenId.bytes))
-    contractState1.mutFields is AVector[Val](ValU256(ALPH.alph(10)), ValU256(100))
-    contractState1.asset is AssetState.from(ALPH.alph(10), AVector(Token(tokenId, 100)))
+    contractState1.mutFields is AVector[Val](ValU256(OXM.alph(10)), ValU256(100))
+    contractState1.asset is AssetState.from(OXM.alph(10), AVector(Token(tokenId, 100)))
     result1.txInputs is AVector[Address](contractAddress)
     result1.txOutputs.length is 3
     result1.txOutputs(0) is ContractOutput(
       result1.txOutputs(0).hint,
       emptyKey(0),
-      Amount(ALPH.alph(10)),
+      Amount(OXM.alph(10)),
       contractAddress,
       AVector(Token(tokenId, 100))
     )
@@ -2736,7 +2736,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     result1.txOutputs(2) is AssetOutput(
       result1.txOutputs(2).hint,
       emptyKey(2),
-      Amount(ALPH.nanoAlph(95500000000L) - dustUtxoAmount),
+      Amount(OXM.nanoAlph(95500000000L) - dustUtxoAmount),
       lp,
       AVector.empty,
       TimeStamp.zero,
@@ -3087,7 +3087,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       val expected =
         s"""
            |TxScript Main {
-           |  createContract!{@$fromAddress -> ALPH: 10}(#$codeRaw, #$stateRaw, #00)
+           |  createContract!{@$fromAddress -> OXM: 10}(#$codeRaw, #$stateRaw, #00)
            |}
            |""".stripMargin
       Compiler.compileTxScript(expected).isRight is true
@@ -3112,8 +3112,8 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       val expected =
         s"""
            |TxScript Main {
-           |  createContractWithToken!{@$fromAddress -> ALPH: 10}(#$codeRaw, #$stateRaw, #00, 50, @$toAddress)
-           |  transferToken!{@$fromAddress -> ALPH: dustAmount!()}(@$fromAddress, @$toAddress, ALPH, dustAmount!())
+           |  createContractWithToken!{@$fromAddress -> OXM: 10}(#$codeRaw, #$stateRaw, #00, 50, @$toAddress)
+           |  transferToken!{@$fromAddress -> OXM: dustAmount!()}(@$fromAddress, @$toAddress, OXM, dustAmount!())
            |}
            |""".stripMargin
       Compiler.compileTxScript(expected).isRight is true
@@ -3140,7 +3140,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       val expected =
         s"""
            |TxScript Main {
-           |  createContractWithToken!{@$fromAddress -> ALPH: 10, #${token1.toHexString}: 10, #${token2.toHexString}: 20}(#$codeRaw, #$stateRaw, #00, 50)
+           |  createContractWithToken!{@$fromAddress -> OXM: 10, #${token1.toHexString}: 10, #${token2.toHexString}: 20}(#$codeRaw, #$stateRaw, #00, 50)
            |}
            |""".stripMargin
       Compiler.compileTxScript(expected).isRight is true
@@ -3165,7 +3165,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       val expected =
         s"""
            |TxScript Main {
-           |  createContractWithToken!{@$fromAddress -> ALPH: 10}(#$codeRaw, #$stateRaw, #00, 50)
+           |  createContractWithToken!{@$fromAddress -> OXM: 10}(#$codeRaw, #$stateRaw, #00, 50)
            |}
            |""".stripMargin
       Compiler.compileTxScript(expected).isRight is true
@@ -3219,16 +3219,16 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val testContract0 = TestContract(bytecode = code).toComplete().rightValue
     serverUtils.runTestContract(blockFlow, testContract0).rightValue
 
-    val inputAssets1  = AVector(TestInputAsset(caller, AssetState(ALPH.oneAlph / 2)))
+    val inputAssets1  = AVector(TestInputAsset(caller, AssetState(OXM.oneAlph / 2)))
     val testContract1 = testContract0.copy(inputAssets = inputAssets1)
     serverUtils.runTestContract(blockFlow, testContract1).rightValue
 
-    val inputAssets2  = AVector(TestInputAsset(caller, AssetState(ALPH.oneAlph / 2 - 1)))
+    val inputAssets2  = AVector(TestInputAsset(caller, AssetState(OXM.oneAlph / 2 - 1)))
     val testContract2 = testContract0.copy(inputAssets = inputAssets2)
     serverUtils
       .runTestContract(blockFlow, testContract2)
       .leftValue
-      .detail is "First input asset should have at least 0.5 ALPH to cover gas"
+      .detail is "First input asset should have at least 0.5 OXM to cover gas"
   }
 
   it should "test utxo splits for generated outputs" in new Fixture {
@@ -3248,7 +3248,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val inputAssets = TestInputAsset(
       caller,
       AssetState(
-        ALPH.alph(3),
+        OXM.alph(3),
         Some(AVector.fill(2 * maxTokenPerAssetUtxo)(Token(TokenId.random, 1)))
       )
     )
@@ -3256,7 +3256,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       blockHash = Some(BlockHash.random),
       txId = Some(TransactionId.random),
       bytecode = code,
-      initialAsset = Some(AssetState(ALPH.oneAlph, Some(AVector(Token(tokenId, 10))))),
+      initialAsset = Some(AssetState(OXM.oneAlph, Some(AVector(Token(tokenId, 10))))),
       args = Some(AVector.empty[Val]),
       inputAssets = Some(AVector(inputAssets))
     ).toComplete().rightValue
@@ -3308,7 +3308,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         BuildDeployContractTx(
           Hex.unsafe(testPubKey.toHexString),
           bytecode = serialize(Code(code, AVector.empty, AVector.empty)),
-          initialAttoAlphAmount = Some(Amount(ALPH.oneAlph))
+          initialAttoAlphAmount = Some(Amount(OXM.oneAlph))
         )
       )
       .rightValue
@@ -3318,7 +3318,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         deserialize[UnsignedTransaction](Hex.unsafe(deployContractTxResult.unsignedTx)).rightValue
       deployContractTx.fixedOutputs.length is 1
       val output = deployContractTx.fixedOutputs.head
-      output.amount is ALPH.oneAlph.subUnsafe(
+      output.amount is OXM.oneAlph.subUnsafe(
         deployContractTx.gasPrice * deployContractTx.gasAmount
       )
 
@@ -3409,12 +3409,12 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     def deployContract(
         contract: String,
-        initialAttoAlphAmount: Amount = Amount(ALPH.alph(3))
+        initialAttoAlphAmount: Amount = Amount(OXM.alph(3))
     ): Address.Contract = {
       deployContract(contract, initialAttoAlphAmount, (testPriKey, testPubKey), None)
     }
 
-    val testAddressBalance = ALPH.alph(1000)
+    val testAddressBalance = OXM.alph(1000)
     val block              = transfer(blockFlow, genesisKeys(1)._1, testPubKey, testAddressBalance)
     addAndCheck(blockFlow, block)
     checkAddressBalance(testAddress, testAddressBalance)
@@ -3450,7 +3450,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       rhoneHardForkTimestamp = TimeStamp.unsafe(Long.MaxValue)
     )
 
-    intercept[AssertionError](deployContract(fooContract, Amount(ALPH.alph(3)))).getMessage is
+    intercept[AssertionError](deployContract(fooContract, Amount(OXM.alph(3)))).getMessage is
       "BadRequest(Execution error when emulating tx script or contract: InactiveInstr(MethodSelector(Selector(-1928645066))))"
   }
 
@@ -3466,14 +3466,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$fooContract
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(3))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(3))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(3).subUnsafe(scriptTxGasFee))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(3).subUnsafe(scriptTxGasFee))
   }
 
   it should "charge caller gas fee when contract is not paying gas fee" in new GasFeeFixture {
@@ -3482,7 +3482,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |Contract Foo() {
          |  @using(assetsInContract = true)
          |  pub fn foo() -> () {
-         |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+         |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
          |  }
          |}
          |""".stripMargin
@@ -3498,17 +3498,17 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$contract
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(3))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(3))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
     checkAddressBalance(
       scriptCaller,
-      ALPH.alph(1000000).addUnsafe(ALPH.oneAlph).subUnsafe(scriptTxGasFee)
+      OXM.alph(1000000).addUnsafe(OXM.oneAlph).subUnsafe(scriptTxGasFee)
     )
-    checkAddressBalance(contractAddress, ALPH.alph(2))
+    checkAddressBalance(contractAddress, OXM.alph(2))
   }
 
   it should "charge caller gas fee when paying full gas fee in the TxScript" in new GasFeeFixture {
@@ -3520,14 +3520,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
     checkAddressBalance(
       scriptCaller,
-      ALPH.alph(1000000).subUnsafe(scriptTxGasFee)
+      OXM.alph(1000000).subUnsafe(scriptTxGasFee)
     )
   }
 
@@ -3541,14 +3541,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
     checkAddressBalance(
       scriptCaller,
-      ALPH.alph(1000000).subUnsafe(scriptTxGasFee)
+      OXM.alph(1000000).subUnsafe(scriptTxGasFee)
     )
   }
 
@@ -3564,14 +3564,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
     checkAddressBalance(
       scriptCaller,
-      ALPH.alph(1000000).subUnsafe(scriptTxGasFee)
+      OXM.alph(1000000).subUnsafe(scriptTxGasFee)
     )
   }
 
@@ -3587,14 +3587,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$fooContractConditional
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(3))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(3))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(3).subUnsafe(scriptTxGasFee))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(3).subUnsafe(scriptTxGasFee))
   }
 
   it should "charge caller gas fee when contract is not paying gas conditionally" in new GasFeeFixture {
@@ -3609,14 +3609,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$fooContractConditional
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(3))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(3))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000).subUnsafe(scriptTxGasFee))
-    checkAddressBalance(contractAddress, ALPH.alph(3))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000).subUnsafe(scriptTxGasFee))
+    checkAddressBalance(contractAddress, OXM.alph(3))
   }
 
   it should "charge caller gas fee when contract doen't have enough to pay gas fee" in new GasFeeFixture {
@@ -3632,7 +3632,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |}
          |""".stripMargin
 
-    val contractAddress = deployContract(contract, Amount(ALPH.alph(1)))
+    val contractAddress = deployContract(contract, Amount(OXM.alph(1)))
 
     def script =
       s"""
@@ -3643,17 +3643,17 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$contract
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(1))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(1))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
     checkAddressBalance(
       scriptCaller,
-      ALPH.alph(1000000) subUnsafe scriptTxGasFee
+      OXM.alph(1000000) subUnsafe scriptTxGasFee
     )
-    checkAddressBalance(contractAddress, ALPH.alph(1))
+    checkAddressBalance(contractAddress, OXM.alph(1))
   }
 
   it should "charge caller partial gas fee when contract can also pay partial gas fee" in new GasFeeFixture {
@@ -3664,7 +3664,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |Contract Foo() {
          |  @using(assetsInContract = true)
          |  pub fn foo(contractPay: Bool) -> () {
-         |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+         |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
          |    if (contractPay) {
          |      payGasFee!(selfAddress!(), 2)
          |    }
@@ -3672,7 +3672,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |}
          |""".stripMargin
 
-    val contractAddress = deployContract(contract, Amount(ALPH.alph(2).addUnsafe(partialGasFee)))
+    val contractAddress = deployContract(contract, Amount(OXM.alph(2).addUnsafe(partialGasFee)))
 
     def script =
       s"""
@@ -3684,17 +3684,17 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$contract
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(2).addUnsafe(partialGasFee))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(2).addUnsafe(partialGasFee))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
     checkAddressBalance(
       scriptCaller,
-      ALPH.alph(1000000).addUnsafe(ALPH.oneAlph).subUnsafe(scriptTxGasFee.subUnsafe(U256.Two))
+      OXM.alph(1000000).addUnsafe(OXM.oneAlph).subUnsafe(scriptTxGasFee.subUnsafe(U256.Two))
     )
-    checkAddressBalance(contractAddress, ALPH.alph(1).addUnsafe(partialGasFee).subUnsafe(2))
+    checkAddressBalance(contractAddress, OXM.alph(1).addUnsafe(partialGasFee).subUnsafe(2))
   }
 
   it should "charge the contract that has enough balance for gas" in new GasFeeFixture {
@@ -3711,14 +3711,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |""".stripMargin
 
     val barContractAddress =
-      deployContract(barContract, Amount(ALPH.alph(1).addUnsafe(partialGasFee)))
+      deployContract(barContract, Amount(OXM.alph(1).addUnsafe(partialGasFee)))
 
     override def fooContract: String =
       s"""
          |Contract Foo() {
          |  @using(assetsInContract = true)
          |  pub fn foo() -> () {
-         |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+         |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
          |    payGasFee!(selfAddress!(), 0)
          |    Bar(#${barContractAddress.toBase58}).bar()
          |  }
@@ -3727,7 +3727,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$barContract
          |""".stripMargin
 
-    val fooContractAddress = deployContract(fooContract, Amount(ALPH.alph(2)))
+    val fooContractAddress = deployContract(fooContract, Amount(OXM.alph(2)))
 
     def script =
       s"""
@@ -3738,19 +3738,19 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$fooContract
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(fooContractAddress, ALPH.alph(2))
-    checkAddressBalance(barContractAddress, ALPH.alph(1).addUnsafe(partialGasFee))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(fooContractAddress, OXM.alph(2))
+    checkAddressBalance(barContractAddress, OXM.alph(1).addUnsafe(partialGasFee))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
     checkAddressBalance(
       scriptCaller,
-      ALPH.alph(1000000).addUnsafe(ALPH.alph(1)).subUnsafe(scriptTxGasFee.subUnsafe(partialGasFee))
+      OXM.alph(1000000).addUnsafe(OXM.alph(1)).subUnsafe(scriptTxGasFee.subUnsafe(partialGasFee))
     )
-    checkAddressBalance(fooContractAddress, ALPH.alph(1))
-    checkAddressBalance(barContractAddress, ALPH.alph(1))
+    checkAddressBalance(fooContractAddress, OXM.alph(1))
+    checkAddressBalance(barContractAddress, OXM.alph(1))
   }
 
   it should "split gas fee between contract and caller depending on approved token amount" in new GasFeeFixture {
@@ -3770,20 +3770,20 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     def script =
       s"""
          |TxScript Main {
-         |  Foo(#${contractAddress.toBase58}).foo{callerAddress!() -> ALPH: txGasFee!() / 2}()
+         |  Foo(#${contractAddress.toBase58}).foo{callerAddress!() -> OXM: txGasFee!() / 2}()
          |}
          |
          |$contract
          |""".stripMargin
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000))
-    checkAddressBalance(contractAddress, ALPH.alph(3))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000))
+    checkAddressBalance(contractAddress, OXM.alph(3))
 
     val scriptBlock    = executeScript(script)
     val scriptTxGasFee = scriptBlock.nonCoinbase.head.gasFeeUnsafe
 
-    checkAddressBalance(scriptCaller, ALPH.alph(1000000).subUnsafe(scriptTxGasFee / 2))
-    checkAddressBalance(contractAddress, ALPH.alph(3).subUnsafe(scriptTxGasFee / 2))
+    checkAddressBalance(scriptCaller, OXM.alph(1000000).subUnsafe(scriptTxGasFee / 2))
+    checkAddressBalance(contractAddress, OXM.alph(3).subUnsafe(scriptTxGasFee / 2))
   }
 
   it should "fail if caller doesn't have enough to pay for gas even if contract pays for it" in new GasFeeFixture {
@@ -3816,7 +3816,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       info("Caller has no inputs")
       val (testPriKey, testPubKey) = chainIndex.from.generateKey
 
-      checkAddressBalance(contractAddress, ALPH.alph(3))
+      checkAddressBalance(contractAddress, OXM.alph(3))
       val exception =
         intercept[AssertionError](executeScript(script, Some((testPriKey, testPubKey))))
       exception.getMessage() is "Right(InvalidInputGroupIndex)"
@@ -3834,9 +3834,9 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   it should "execute scripts for cross-group confirmed inputs" in new ScriptTxFixture {
-    val block = transfer(blockFlow, genesisKeys(1)._1, testPubKey, ALPH.alph(2))
+    val block = transfer(blockFlow, genesisKeys(1)._1, testPubKey, OXM.alph(2))
     addAndCheck(blockFlow, block)
-    checkAddressBalance(testAddress, ALPH.alph(2))
+    checkAddressBalance(testAddress, OXM.alph(2))
     deployContract()
     blockFlow.getGrandPool().get(deployContractTxResult.txId).isEmpty is false
     confirmNewBlock(blockFlow, ChainIndex.unsafe(0, 0))
@@ -3848,13 +3848,13 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   }
 
   it should "execute scripts for cross-group mempool inputs" in new ScriptTxFixture {
-    val block   = transfer(blockFlow, genesisKeys(1)._1, testPubKey, ALPH.alph(2))
+    val block   = transfer(blockFlow, genesisKeys(1)._1, testPubKey, OXM.alph(2))
     val blockTx = block.nonCoinbase.head.toTemplate
     block.chainIndex is ChainIndex.unsafe(1, 0)
     blockFlow
       .getGrandPool()
       .add(block.chainIndex, blockTx, TimeStamp.now())
-    checkAddressBalance(testAddress, ALPH.alph(2))
+    checkAddressBalance(testAddress, OXM.alph(2))
     deployContract()
     blockFlow.getGrandPool().get(blockTx.id).isEmpty is false
     confirmNewBlock(blockFlow, ChainIndex.unsafe(1, 0))
@@ -3930,7 +3930,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val query = BuildDeployContractTx(
       fromPublicKey = publicKey.bytes,
       bytecode = serialize(Code(contract, AVector.empty, AVector.empty)),
-      initialAttoAlphAmount = Some(Amount(ALPH.alph(2))),
+      initialAttoAlphAmount = Some(Amount(OXM.alph(2))),
       initialTokenAmounts = Some(AVector(Token(tokenId, U256.unsafe(4))))
     )
 
@@ -3938,7 +3938,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     checkBalance(
       LockupScript.P2C(result.contractAddress.contractId),
-      ALPH.alph(2),
+      OXM.alph(2),
       tokenId,
       Some(U256.unsafe(4))
     )
@@ -3948,7 +3948,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val query = BuildDeployContractTx(
       fromPublicKey = publicKey.bytes,
       bytecode = serialize(Code(contract, AVector.empty, AVector.empty)),
-      initialAttoAlphAmount = Some(Amount(ALPH.alph(2))),
+      initialAttoAlphAmount = Some(Amount(OXM.alph(2))),
       issueTokenAmount = Some(Amount(U256.unsafe(10))),
       issueTokenTo = Some(Address.p2pkh(toPublicKey))
     )
@@ -3958,7 +3958,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     checkBalance(
       LockupScript.P2C(result.contractAddress.contractId),
-      ALPH.alph(2),
+      OXM.alph(2),
       tokenId,
       None
     )
@@ -3975,7 +3975,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val query = BuildDeployContractTx(
       fromPublicKey = publicKey.bytes,
       bytecode = serialize(Code(contract, AVector.empty, AVector.empty)),
-      initialAttoAlphAmount = Some(Amount(ALPH.alph(2))),
+      initialAttoAlphAmount = Some(Amount(OXM.alph(2))),
       issueTokenAmount = None,
       issueTokenTo = Some(Address.p2pkh(publicKey))
     )
@@ -4085,7 +4085,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val groupInfo2 = groupInfo(2)
     val groupInfo3 = groupInfo(3)
 
-    val address0InitBalance = ALPH.alph(3)
+    val address0InitBalance = OXM.alph(3)
     val transferToAddress0 = serverUtils
       .buildTransferTransaction(
         blockFlow,
@@ -4106,7 +4106,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       BuildTransferTx(
         groupInfo1.publicKey.bytes,
         None,
-        AVector(groupInfo2.destination(ALPH.oneAlph))
+        AVector(groupInfo2.destination(OXM.oneAlph))
       ),
       errorDetails = "Not enough balance: got 0, expected 1001000000000000000"
     )
@@ -4117,14 +4117,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
           BuildTransferTx(
             groupInfo0.publicKey.bytes,
             None,
-            AVector(groupInfo1.destination(ALPH.alph(2)))
+            AVector(groupInfo1.destination(OXM.alph(2)))
           )
         ),
         BuildChainedTransferTx(
           BuildTransferTx(
             groupInfo0.publicKey.bytes,
             None,
-            AVector(groupInfo2.destination(ALPH.oneAlph))
+            AVector(groupInfo2.destination(OXM.oneAlph))
           )
         )
       ),
@@ -4137,21 +4137,21 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
           BuildTransferTx(
             groupInfo0.publicKey.bytes,
             None,
-            AVector(groupInfo1.destination(ALPH.alph(2)))
+            AVector(groupInfo1.destination(OXM.alph(2)))
           )
         ),
         BuildChainedTransferTx(
           BuildTransferTx(
             groupInfo1.publicKey.bytes,
             None,
-            AVector(groupInfo2.destination(ALPH.oneAlph))
+            AVector(groupInfo2.destination(OXM.oneAlph))
           )
         ),
         BuildChainedTransferTx(
           BuildTransferTx(
             groupInfo0.publicKey.bytes,
             None,
-            AVector(groupInfo3.destination(ALPH.alph(1)))
+            AVector(groupInfo3.destination(OXM.alph(1)))
           )
         )
       ),
@@ -4163,21 +4163,21 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         BuildTransferTx(
           groupInfo0.publicKey.bytes,
           None,
-          AVector(groupInfo1.destination(ALPH.alph(2)))
+          AVector(groupInfo1.destination(OXM.alph(2)))
         )
       ),
       BuildChainedTransferTx(
         BuildTransferTx(
           groupInfo1.publicKey.bytes,
           None,
-          AVector(groupInfo2.destination(ALPH.oneAlph))
+          AVector(groupInfo2.destination(OXM.oneAlph))
         )
       ),
       BuildChainedTransferTx(
         BuildTransferTx(
           groupInfo0.publicKey.bytes,
           None,
-          AVector(groupInfo3.destination(ALPH.alph(1) - nonCoinbaseMinGasFee * 3))
+          AVector(groupInfo3.destination(OXM.alph(1) - nonCoinbaseMinGasFee * 3))
         )
       )
     )
@@ -4197,9 +4197,9 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     confirmNewBlock(blockFlow, ChainIndex.unsafe(1, 2))
     confirmNewBlock(blockFlow, ChainIndex.unsafe(0, 3))
 
-    val address0Transfer01Cost = ALPH.alph(2) + buildTransferTransaction01.value.gasFee
+    val address0Transfer01Cost = OXM.alph(2) + buildTransferTransaction01.value.gasFee
     val address0Transfer03Cost =
-      ALPH.alph(1) - nonCoinbaseMinGasFee * 3 + buildTransferTransaction03.value.gasFee
+      OXM.alph(1) - nonCoinbaseMinGasFee * 3 + buildTransferTransaction03.value.gasFee
     val buildTransferTransaction01GasFee =
       buildTransferTransaction01.value.gasPrice * buildTransferTransaction01.value.gasAmount
     checkAlphBalance(
@@ -4208,10 +4208,10 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     )
     checkAlphBalance(
       groupInfo1.address.lockupScript,
-      ALPH.oneAlph - buildTransferTransaction01GasFee
+      OXM.oneAlph - buildTransferTransaction01GasFee
     )
-    checkAlphBalance(groupInfo2.address.lockupScript, ALPH.oneAlph)
-    checkAlphBalance(groupInfo3.address.lockupScript, ALPH.alph(1) - nonCoinbaseMinGasFee * 3)
+    checkAlphBalance(groupInfo2.address.lockupScript, OXM.oneAlph)
+    checkAlphBalance(groupInfo3.address.lockupScript, OXM.alph(1) - nonCoinbaseMinGasFee * 3)
   }
 
   it should "build a transfer transaction followed by an execute script transactions" in new ChainedTransactionsFixture {
@@ -4251,14 +4251,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
           BuildTransferTx(
             groupInfo0.publicKey.bytes,
             None,
-            AVector(groupInfo1.destination(ALPH.alph(2)))
+            AVector(groupInfo1.destination(OXM.alph(2)))
           )
         ),
         BuildChainedExecuteScriptTx(
           buildExecuteScript(groupInfo1.publicKey)
         ),
         BuildChainedExecuteScriptTx(
-          buildExecuteScript(groupInfo0.publicKey, Some(Amount(ALPH.oneAlph)))
+          buildExecuteScript(groupInfo0.publicKey, Some(Amount(OXM.oneAlph)))
         )
       ),
       errorDetails = "Not enough balance: got 998000000000000000, expected 1005000000000000000"
@@ -4269,14 +4269,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         BuildTransferTx(
           groupInfo0.publicKey.bytes,
           None,
-          AVector(groupInfo1.destination(ALPH.alph(2)))
+          AVector(groupInfo1.destination(OXM.alph(2)))
         )
       ),
       BuildChainedExecuteScriptTx(
         buildExecuteScript(groupInfo1.publicKey)
       ),
       BuildChainedExecuteScriptTx(
-        buildExecuteScript(groupInfo0.publicKey, Some(Amount(ALPH.oneAlph / 2)))
+        buildExecuteScript(groupInfo0.publicKey, Some(Amount(OXM.oneAlph / 2)))
       )
     )
 
@@ -4297,13 +4297,13 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     checkAlphBalance(
       groupInfo0.address.lockupScript,
-      address0InitBalance - ALPH.alph(
+      address0InitBalance - OXM.alph(
         2
       ) - buildTransferTransaction.value.gasFee - buildExecuteScriptTransaction0.value.gasFee
     )
     checkAlphBalance(
       groupInfo1.address.lockupScript,
-      ALPH.oneAlph * 2 - buildExecuteScriptTransaction1.value.gasFee
+      OXM.oneAlph * 2 - buildExecuteScriptTransaction1.value.gasFee
     )
   }
 
@@ -4344,7 +4344,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         )
       ),
       errorDetails =
-        s"Execution error when emulating tx script or contract: Not enough approved balance for address ${groupInfo0.address.toBase58}, tokenId: ALPH, expected: 100000000000000000, got: 16000000000000000"
+        s"Execution error when emulating tx script or contract: Not enough approved balance for address ${groupInfo0.address.toBase58}, tokenId: OXM, expected: 100000000000000000, got: 16000000000000000"
     )
 
     failedChainedTransactions(
@@ -4353,7 +4353,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
           BuildTransferTx(
             groupInfo0.publicKey.bytes,
             None,
-            AVector(groupInfo1.destination(ALPH.alph(2)))
+            AVector(groupInfo1.destination(OXM.alph(2)))
           )
         ),
         BuildChainedDeployContractTx(
@@ -4362,12 +4362,12 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         BuildChainedDeployContractTx(
           buildDeployContract(
             groupInfo0.publicKey,
-            initialAttoAlphAmount = Some(Amount(ALPH.alph(1)))
+            initialAttoAlphAmount = Some(Amount(OXM.alph(1)))
           )
         )
       ),
       errorDetails =
-        s"Execution error when emulating tx script or contract: Not enough approved balance for address ${groupInfo0.address.toBase58}, tokenId: ALPH, expected: 1000000000000000000, got: 996000000000000000"
+        s"Execution error when emulating tx script or contract: Not enough approved balance for address ${groupInfo0.address.toBase58}, tokenId: OXM, expected: 1000000000000000000, got: 996000000000000000"
     )
 
     val buildTransactions = buildChainedTransactions(
@@ -4375,7 +4375,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         BuildTransferTx(
           groupInfo0.publicKey.bytes,
           None,
-          AVector(groupInfo1.destination(ALPH.alph(2)))
+          AVector(groupInfo1.destination(OXM.alph(2)))
         )
       ),
       BuildChainedDeployContractTx(
@@ -4384,7 +4384,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       BuildChainedDeployContractTx(
         buildDeployContract(
           groupInfo0.publicKey,
-          initialAttoAlphAmount = Some(Amount(ALPH.alph(1) / 2))
+          initialAttoAlphAmount = Some(Amount(OXM.alph(1) / 2))
         )
       )
     )
@@ -4404,15 +4404,15 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     confirmNewBlock(blockFlow, buildDeployContractTransaction1.value.chainIndex().value)
     confirmNewBlock(blockFlow, buildDeployContractTransaction0.value.chainIndex().value)
 
-    val address0TransferCost       = buildTransferTransaction.value.gasFee + ALPH.alph(2)
-    val address0DeployContractCost = buildDeployContractTransaction0.value.gasFee + ALPH.alph(1) / 2
+    val address0TransferCost       = buildTransferTransaction.value.gasFee + OXM.alph(2)
+    val address0DeployContractCost = buildDeployContractTransaction0.value.gasFee + OXM.alph(1) / 2
     checkAlphBalance(
       groupInfo0.address.lockupScript,
       address0InitBalance - address0TransferCost - address0DeployContractCost
     )
     checkAlphBalance(
       groupInfo1.address.lockupScript,
-      ALPH.oneAlph * 2 - minimalAlphInContract - buildDeployContractTransaction1.value.gasFee
+      OXM.oneAlph * 2 - minimalAlphInContract - buildDeployContractTransaction1.value.gasFee
     )
   }
 
@@ -4429,7 +4429,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val tokenContract1Address = deployContract(
       tokenContract1,
-      initialAttoAlphAmount = Amount(ALPH.alph(5)),
+      initialAttoAlphAmount = Amount(OXM.alph(5)),
       keyPair = (genesisPrivateKey, genesisPublicKey),
       issueTokenAmount = Some(Amount(U256.unsafe(100)))
     )
@@ -4450,7 +4450,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val tokenContract2Address = deployContract(
       tokenContract2,
-      initialAttoAlphAmount = Amount(ALPH.alph(5)),
+      initialAttoAlphAmount = Amount(OXM.alph(5)),
       keyPair = (genesisPrivateKey, genesisPublicKey),
       issueTokenAmount = Some(Amount(U256.unsafe(200)))
     )
@@ -4470,7 +4470,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val buildWithdrawToken2ExecuteScriptTx = BuildExecuteScriptTx(
       fromPublicKey = genesisPublicKey.bytes,
       bytecode = serialize(withdrawToken2ScriptCode),
-      attoAlphAmount = Some(Amount(ALPH.alph(1))),
+      attoAlphAmount = Some(Amount(OXM.alph(1))),
       tokens = Some(AVector(Token(tokenId1, U256.unsafe(1))))
     )
 
@@ -4491,7 +4491,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val withdrawToken1ScriptCode = Compiler.compileTxScript(withdrawToken1Script).toOption.get
     val buildWithdrawToken1ExecuteScriptTx = BuildExecuteScriptTx(
       fromPublicKey = genesisPublicKey.bytes,
-      attoAlphAmount = Some(Amount(ALPH.alph(1))),
+      attoAlphAmount = Some(Amount(OXM.alph(1))),
       bytecode = serialize(withdrawToken1ScriptCode)
     )
 
@@ -4527,7 +4527,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val tokenContractAddress = deployContract(
       tokenContract,
-      initialAttoAlphAmount = Amount(ALPH.alph(5)),
+      initialAttoAlphAmount = Amount(OXM.alph(5)),
       keyPair = (genesisPrivateKey, genesisPublicKey),
       issueTokenAmount = Some(Amount(U256.unsafe(100)))
     )
@@ -4545,7 +4545,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val withdrawTokenScriptCode = Compiler.compileTxScript(withdrawTokenScript).toOption.get
     val buildWithdrawTokenExecuteScriptTx = BuildExecuteScriptTx(
       fromPublicKey = genesisPublicKey.bytes,
-      attoAlphAmount = Some(Amount(ALPH.alph(1))),
+      attoAlphAmount = Some(Amount(OXM.alph(1))),
       bytecode = serialize(withdrawTokenScriptCode)
     )
 
@@ -4565,12 +4565,12 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val fixedOutputs = unsignedTx.fixedOutputs
     fixedOutputs.length is 1
     fixedOutputs.head.lockupScript is genesisAddress.lockupScript
-    fixedOutputs.head.amount is genesisAddressUtxosAmount - ALPH.alph(1) - unsignedTx.gasFee
+    fixedOutputs.head.amount is genesisAddressUtxosAmount - OXM.alph(1) - unsignedTx.gasFee
     fixedOutputs.head.tokens is AVector.empty[(TokenId, U256)]
 
     val contractPrevOutputs = txScriptExecution.contractPrevOutputs
     contractPrevOutputs.length is 1
-    contractPrevOutputs.head.amount is ALPH.alph(5)
+    contractPrevOutputs.head.amount is OXM.alph(5)
     contractPrevOutputs.head.tokens is AVector(tokenId -> U256.unsafe(100))
 
     val simulatedGeneratedOutputs = txScriptExecution.generatedOutputs
@@ -4582,7 +4582,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     simulatedGeneratedOutputs(1).amount is 999000000000000000L
     simulatedGeneratedOutputs(1).tokens is AVector.empty[(TokenId, U256)]
     simulatedGeneratedOutputs(2).lockupScript is tokenContractLockupScript
-    simulatedGeneratedOutputs(2).amount is ALPH.alph(5)
+    simulatedGeneratedOutputs(2).amount is OXM.alph(5)
     simulatedGeneratedOutputs(2).tokens is AVector(tokenId -> U256.unsafe(99))
 
     val (_, extraUtxosInfo) = serverUtils
@@ -4611,20 +4611,20 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |Contract TokenContract() {
          |  @using(assetsInContract = true)
          |  pub fn withdraw() -> () {
-         |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+         |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
          |  }
          |}
          |""".stripMargin
 
     val tokenContractAddress = deployContract(
       tokenContract,
-      initialAttoAlphAmount = Amount(ALPH.alph(5)),
+      initialAttoAlphAmount = Amount(OXM.alph(5)),
       keyPair = (genesisPrivateKey, genesisPublicKey),
       issueTokenAmount = None
     )
     val tokenContractLockupScript = LockupScript.p2c(tokenContractAddress.contractId)
 
-    val withdrawALPHScript =
+    val withdrawOXMScript =
       s"""
          |TxScript Main {
          |  TokenContract(#${tokenContractAddress}).withdraw()
@@ -4632,22 +4632,22 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |$tokenContract
          |""".stripMargin
 
-    val withdrawALPHScriptCode = Compiler.compileTxScript(withdrawALPHScript).toOption.get
+    val withdrawOXMScriptCode = Compiler.compileTxScript(withdrawOXMScript).toOption.get
 
     val (_, testPubKey)  = chainIndex.from.generateKey
     val testLockupScript = LockupScript.p2pkh(testPubKey)
-    val block            = transfer(blockFlow, genesisKeys(1)._1, testPubKey, ALPH.alph(5))
+    val block            = transfer(blockFlow, genesisKeys(1)._1, testPubKey, OXM.alph(5))
     addAndCheck(blockFlow, block)
 
-    val buildWithdrawALPHExecuteScriptTx = BuildExecuteScriptTx(
+    val buildWithdrawOXMExecuteScriptTx = BuildExecuteScriptTx(
       fromPublicKey = testPubKey.bytes,
-      bytecode = serialize(withdrawALPHScriptCode)
+      bytecode = serialize(withdrawOXMScriptCode)
     )
 
     val (unsignedTx, txScriptExecution) = serverUtils
       .buildExecuteScriptUnsignedTx(
         blockFlow,
-        buildWithdrawALPHExecuteScriptTx,
+        buildWithdrawOXMExecuteScriptTx,
         ExtraUtxosInfo.empty
       )
       .rightValue
@@ -4655,19 +4655,19 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val fixedOutputs = unsignedTx.fixedOutputs
     fixedOutputs.length is 1
     fixedOutputs.head.lockupScript is testLockupScript
-    fixedOutputs.head.amount is ALPH.alph(5) - unsignedTx.gasFee
+    fixedOutputs.head.amount is OXM.alph(5) - unsignedTx.gasFee
 
     val contractPrevOutputs = txScriptExecution.contractPrevOutputs
     contractPrevOutputs.length is 1
     contractPrevOutputs.head.lockupScript is tokenContractLockupScript
-    contractPrevOutputs.head.amount is ALPH.alph(5)
+    contractPrevOutputs.head.amount is OXM.alph(5)
 
     val simulatedGeneratedOutputs = txScriptExecution.generatedOutputs
     simulatedGeneratedOutputs.length is 2
     simulatedGeneratedOutputs(0).lockupScript is testLockupScript
     simulatedGeneratedOutputs(0).amount is U256.unsafe(1000000000000000000L)
     simulatedGeneratedOutputs(1).lockupScript is tokenContractLockupScript
-    simulatedGeneratedOutputs(1).amount is ALPH.alph(4)
+    simulatedGeneratedOutputs(1).amount is OXM.alph(4)
   }
 
   it should "get ghost uncles" in new Fixture {
@@ -4697,7 +4697,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val serverUtils    = new ServerUtils()
     val ghostUncleHash = blockFlow.getHashes(chainIndex, 1).rightValue.last
-    val blockNum       = Random.between(0, ALPH.MaxGhostUncleAge)
+    val blockNum       = Random.between(0, OXM.MaxGhostUncleAge)
     (0 until blockNum).foreach { _ =>
       val block = emptyBlock(blockFlow, chainIndex)
       block.ghostUncleHashes.rightValue.isEmpty is true
@@ -4770,7 +4770,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |  @using(assetsInContract = true)
          |  pub fn burn() -> () {
          |    burnToken!(selfAddress!(), selfTokenId!(), burnAmount)
-         |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+         |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
          |  }
          |
          |  @using(updateFields = true)
@@ -4782,9 +4782,9 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     val contractId = createContract(
       contractCode,
-      initialMutState = AVector(vm.Val.U256(ALPH.oneAlph)),
-      initialAttoAlphAmount = ALPH.alph(100),
-      tokenIssuanceInfo = Some(TokenIssuance.Info(ALPH.alph(20)))
+      initialMutState = AVector(vm.Val.U256(OXM.oneAlph)),
+      initialAttoAlphAmount = OXM.alph(100),
+      tokenIssuanceInfo = Some(TokenIssuance.Info(OXM.alph(20)))
     )._1
 
     val updateBurnAmountScriptCode =
@@ -4845,7 +4845,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
 
     // main0  -> main1 -> main2 (update burn amount to 5)  -> main3 (genesis calls burn) -> main4 (genesis calls burn)
     //        -> fork1 -> fork2 (genesis calls burn)       -> fork3 (genesis calls burn)
-    val main0 = transfer(blockFlow, genesisKeys(0)._1, testKeyPair._2, ALPH.alph(2))
+    val main0 = transfer(blockFlow, genesisKeys(0)._1, testKeyPair._2, OXM.alph(2))
     addAndCheck(blockFlow, main0)
 
     val block1 = emptyBlock(blockFlow, chainIndex)
@@ -4888,8 +4888,8 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       val main4ContractInput = getContractInput(main4)
       fork3ContractInput.key is main4ContractInput.key
       fork3ContractInput.hint is main4ContractInput.hint
-      fork3ContractInput.tokens.head.amount is ALPH.alph(19)
-      main4ContractInput.tokens.head.amount is ALPH.alph(15)
+      fork3ContractInput.tokens.head.amount is OXM.alph(19)
+      main4ContractInput.tokens.head.amount is OXM.alph(15)
 
       val contractOutputRef = ContractOutputRef.unsafe(
         Hint.ofContract(LockupScript.p2c(contractId).scriptHint),
@@ -4897,9 +4897,9 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       )
 
       val contractOutputMain3 = ModelContractOutput(
-        amount = ALPH.alph(99),
+        amount = OXM.alph(99),
         lockupScript = LockupScript.p2c(contractId),
-        tokens = AVector((TokenId.from(contractId), ALPH.alph(15)))
+        tokens = AVector((TokenId.from(contractId), OXM.alph(15)))
       )
       blockFlow.getTxOutput(contractOutputRef, main4.hash, 0) isE Some(contractOutputMain3)
       blockFlow.getTxOutput(contractOutputRef, main4.hash, 1) isE Some(contractOutputMain3)
@@ -4908,9 +4908,9 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       )
 
       val contractOutputFork2 = ModelContractOutput(
-        amount = ALPH.alph(99),
+        amount = OXM.alph(99),
         lockupScript = LockupScript.p2c(contractId),
-        tokens = AVector((TokenId.from(contractId), ALPH.alph(19)))
+        tokens = AVector((TokenId.from(contractId), OXM.alph(19)))
       )
       blockFlow.getTxOutput(contractOutputRef, fork3.hash, 0) isE Some(contractOutputMain3)
       blockFlow.getTxOutput(contractOutputRef, fork3.hash, 1) isE Some(contractOutputFork2)
@@ -4925,7 +4925,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     addAndCheck(blockFlow, main3)
     main3.parentHash is main2.hash
 
-    val main3Updated = verifyAndUpdateContractGeneratedOutput(main3, ALPH.alph(15), ALPH.alph(19))
+    val main3Updated = verifyAndUpdateContractGeneratedOutput(main3, OXM.alph(15), OXM.alph(19))
 
     val fork2 = mineBlock(fork1.hash, main3Updated, 4)
     addAndCheck(blockFlow, fork2)
@@ -4935,7 +4935,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     addAndCheck(blockFlow, main4)
     main4.parentHash is main3.hash
 
-    val main4Updated = verifyAndUpdateContractGeneratedOutput(main4, ALPH.alph(10), ALPH.alph(18))
+    val main4Updated = verifyAndUpdateContractGeneratedOutput(main4, OXM.alph(10), OXM.alph(18))
 
     val fork3 = mineBlock(fork2.hash, main4Updated, 5)
     addAndCheck(blockFlow, fork3)
@@ -4956,7 +4956,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val main3 = mineFromMemPool(blockFlow, chainIndex)
     addAndCheck(blockFlow, main3)
 
-    val main3Updated = verifyAndUpdateContractGeneratedOutput(main3, ALPH.alph(15), ALPH.alph(19))
+    val main3Updated = verifyAndUpdateContractGeneratedOutput(main3, OXM.alph(15), OXM.alph(19))
     val fork2        = mineBlock(fork1.hash, main3Updated, 4)
     addAndCheck(blockFlow, fork2)
     fork2.parentHash is fork1.hash
@@ -4965,7 +4965,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val main4 = mineFromMemPool(blockFlow, chainIndex)
     addAndCheck(blockFlow, main4)
 
-    val main4Updated = verifyAndUpdateContractGeneratedOutput(main4, ALPH.alph(10), ALPH.alph(18))
+    val main4Updated = verifyAndUpdateContractGeneratedOutput(main4, OXM.alph(10), OXM.alph(18))
     val fork3        = mineBlock(fork2.hash, main4Updated, 5)
     addAndCheck(blockFlow, fork3)
     fork3.parentHash is fork2.hash
@@ -4987,10 +4987,10 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       chainIndex,
       AVector.empty[Transaction],
       lockupScript,
-      Some(ALPH.LaunchTimestamp.plusMillisUnsafe(1))
+      Some(OXM.LaunchTimestamp.plusMillisUnsafe(1))
     )
     addAndCheck(blockFlow, block0)
-    val block1 = transfer(blockFlow, fromPrivateKey, toPublicKey, ALPH.oneAlph)
+    val block1 = transfer(blockFlow, fromPrivateKey, toPublicKey, OXM.oneAlph)
     addAndCheck(blockFlow, block1)
 
     block1.nonCoinbase.length is 1
@@ -5034,7 +5034,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val (genesisPrivateKey, genesisPublicKey, _) = genesisKeys(chainIndex.from.value)
     val (privateKey, publicKey)                  = chainIndex.from.generateKey
     (0 to 10).foreach { _ =>
-      val block = transfer(blockFlow, genesisPrivateKey, publicKey, ALPH.alph(1))
+      val block = transfer(blockFlow, genesisPrivateKey, publicKey, OXM.alph(1))
       addAndCheck(blockFlow, block)
     }
 
@@ -5064,7 +5064,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         BuildExecuteScriptTx(
           fromPublicKey = publicKey.bytes,
           bytecode = scriptBytecode,
-          attoAlphAmount = Some(Amount(ALPH.alph(10)))
+          attoAlphAmount = Some(Amount(OXM.alph(10)))
         )
       )
       .rightValue
@@ -5074,7 +5074,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
         BuildExecuteScriptTx(
           fromPublicKey = publicKey.bytes,
           bytecode = scriptBytecode,
-          attoAlphAmount = Some(Amount(ALPH.alph(10))),
+          attoAlphAmount = Some(Amount(OXM.alph(10))),
           gasEstimationMultiplier = Some(1.01)
         )
       )
@@ -5119,7 +5119,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val chainIndex                = ChainIndex.unsafe(0, 0)
     val (genesisPrivateKey, _, _) = genesisKeys(chainIndex.from.value)
     val (_, publicKey)            = chainIndex.from.generateKey
-    val block                     = transfer(blockFlow, genesisPrivateKey, publicKey, ALPH.alph(10))
+    val block                     = transfer(blockFlow, genesisPrivateKey, publicKey, OXM.alph(10))
     addAndCheck(blockFlow, block)
     val txId = block.nonCoinbase.head.id
 
@@ -5191,7 +5191,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val (genesisPrivateKey, _, _) = genesisKeys(chainIndex.from.value)
     val (privateKey0, publicKey0) = chainIndex.from.generateKey
     val (_, publicKey1)           = chainIndex.from.generateKey
-    val block0 = transfer(blockFlow, genesisPrivateKey, publicKey0, ALPH.alph(10))
+    val block0 = transfer(blockFlow, genesisPrivateKey, publicKey0, OXM.alph(10))
     addAndCheck(blockFlow, block0)
 
     val outputToBeSpent = {
@@ -5200,7 +5200,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       utxos.head.output
     }
 
-    val block1 = transfer(blockFlow, privateKey0, publicKey1, ALPH.alph(1))
+    val block1 = transfer(blockFlow, privateKey0, publicKey1, OXM.alph(1))
     addAndCheck(blockFlow, block1)
 
     val transaction = block1.nonCoinbase.head
@@ -5232,7 +5232,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
   it should "get rich transaction that spends asset & contract output" in new ContractFixture {
     val (genesisPrivateKey, _, _) = genesisKeys(chainIndex.from.value)
     val (privateKey0, publicKey0) = chainIndex.from.generateKey
-    val block0 = transfer(blockFlow, genesisPrivateKey, publicKey0, ALPH.alph(10))
+    val block0 = transfer(blockFlow, genesisPrivateKey, publicKey0, OXM.alph(10))
     addAndCheck(blockFlow, block0)
 
     val fooContract: String =
@@ -5243,14 +5243,14 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |  @using(assetsInContract = true)
          |  pub fn foo() -> () {
          |    emit Foo()
-         |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+         |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
          |  }
          |}
          |""".stripMargin
 
     val contractAddress = deployContract(
       fooContract,
-      initialAttoAlphAmount = Amount(ALPH.alph(5)),
+      initialAttoAlphAmount = Amount(OXM.alph(5)),
       keyPair = (privateKey0, publicKey0),
       None
     )
@@ -5341,7 +5341,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
          |Contract ParentContract() {
          |  @using(preapprovedAssets = true)
          |  pub fn createSubContract(index: U256) -> () {
-         |    copyCreateSubContract!{callerAddress!() -> ALPH: 1 alph}(toByteVec!(index), #$subContractTemplateId, #00, #00)
+         |    copyCreateSubContract!{callerAddress!() -> OXM: 1 alph}(toByteVec!(index), #$subContractTemplateId, #00, #00)
          |  }
          |}
          |""".stripMargin
@@ -5356,7 +5356,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     callTxScript(
       s"""
          |TxScript Main {
-         |  ParentContract(#${parentContractId.toHexString}).createSubContract{@$genesisAddress -> ALPH: 1 alph}($subContractIndex)
+         |  ParentContract(#${parentContractId.toHexString}).createSubContract{@$genesisAddress -> OXM: 1 alph}($subContractIndex)
          |}
          |$parentContractRaw
          |""".stripMargin
@@ -5484,7 +5484,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       addAndCheck(blockFlow, block)
     }
 
-    // Transfer ALPH
+    // Transfer OXM
     (1 to 4).foreach { _ =>
       val block = transfer(blockFlow, genesisPrivateKey, testPublicKey, dustUtxoAmount * 2)
       addAndCheck(blockFlow, block)
@@ -5608,7 +5608,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
     val (genesisPrivateKey, _, _) = genesisKeys(chainIndex.from.value)
     val (_, publicKey)            = chainIndex.from.generateKey
     (0 until 10).foreach { _ =>
-      val block = transfer(blockFlow, genesisPrivateKey, publicKey, ALPH.alph(1))
+      val block = transfer(blockFlow, genesisPrivateKey, publicKey, OXM.alph(1))
       addAndCheck(blockFlow, block)
     }
     val lockupScript = LockupScript.p2pkh(publicKey)
@@ -5625,7 +5625,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       .getBalance(blockFlow, Address.from(lockupScript), true)
       .rightValue
       .balance
-      .value is ALPH.alph(10)
+      .value is OXM.alph(10)
     serverUtils1
       .getUTXOsIncludePool(blockFlow, Address.from(lockupScript))
       .rightValue
@@ -5637,7 +5637,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       .getBalance(blockFlow, Address.from(lockupScript), true)
       .rightValue
       .balance
-      .value is ALPH.alph(10)
+      .value is OXM.alph(10)
     serverUtils2
       .getUTXOsIncludePool(blockFlow, Address.from(lockupScript))
       .rightValue
@@ -5700,7 +5700,7 @@ class ServerUtilsSpec extends Oxyg3niumSpec {
       groupConfig: GroupConfig
   ): Destination = {
     val address = generateAddress(chainIndex)
-    val amount  = Amount(ALPH.oneAlph)
+    val amount  = Amount(OXM.oneAlph)
     Destination(address, Some(amount), None, None, Some(message))
   }
 

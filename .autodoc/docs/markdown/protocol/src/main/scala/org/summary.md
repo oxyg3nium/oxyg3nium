@@ -2,11 +2,11 @@
 
 The `org.alephium.protocol` package provides essential functionality for the Oxyg3nium project, such as managing the Oxyg3nium cryptocurrency, handling message serialization and deserialization, and managing the mining process. This package contains several files and subfolders, each with a specific purpose.
 
-For example, the `ALPH.scala` file contains constants and utility functions related to the Oxyg3nium cryptocurrency, making it easier to maintain and update the code as needed. It can be used throughout the project to perform currency conversions and access important constants related to the Oxyg3nium network.
+For example, the `OXM.scala` file contains constants and utility functions related to the Oxyg3nium cryptocurrency, making it easier to maintain and update the code as needed. It can be used throughout the project to perform currency conversions and access important constants related to the Oxyg3nium network.
 
 ```scala
-val amountInWei = ALPH.alph(10)
-val amountInNanoAlph = ALPH.nanoAlph(1000)
+val amountInWei = OXM.alph(10)
+val amountInNanoAlph = OXM.nanoAlph(1000)
 ```
 
 The `DiscoveryVersion.scala` and `WireVersion.scala` files define case classes and objects for representing the version numbers of the discovery and wire protocols used by the Oxyg3nium network. These classes are used to ensure compatibility between nodes in the network.

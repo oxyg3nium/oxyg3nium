@@ -86,8 +86,8 @@ abstract class Parser[Ctx <: StatelessContext] {
       Ast.Variable.apply[Ctx](value)
     }
   def alphTokenId[Unknown: P]: P[Ast.Expr[Ctx]] =
-    PP(Lexer.token(Keyword.ALPH_CAPS)) { _ =>
-      Ast.ALPHTokenId()
+    PP(Lexer.token(Keyword.OXM_CAPS)) { _ =>
+      Ast.OXMTokenId()
     }
 
   def alphAmount[Unknown: P]: P[Ast.Expr[Ctx]]                       = expr

@@ -23,7 +23,7 @@ import scala.util.control.NonFatal
 import fastparse._
 import fastparse.NoWhitespace._
 
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.model.Address
 import org.oxyg3nium.protocol.vm.{LockupScript, StatelessContext, Val}
 import org.oxyg3nium.protocol.vm.Val.ByteVec
@@ -99,7 +99,7 @@ class Lexer(fileURI: Option[java.net.URI]) {
       val baseWidth = input.length
       val width =
         if (unit == "alph") {
-          num = num.multiply(new BigDecimal(ALPH.oneAlph.toBigInt))
+          num = num.multiply(new BigDecimal(OXM.oneAlph.toBigInt))
           baseWidth + spaces.length + unit.length
         } else {
           baseWidth

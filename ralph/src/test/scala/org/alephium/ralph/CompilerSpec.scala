@@ -2719,11 +2719,11 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
     }
   }
 
-  it should "use ApproveAlph instr for approve ALPH" in {
+  it should "use ApproveAlph instr for approve OXM" in {
     val code =
       s"""
          |TxScript Main(address: Address, fooId: ByteVec) {
-         |  Foo(fooId).foo{address -> ALPH: 1}()
+         |  Foo(fooId).foo{address -> OXM: 1}()
          |}
          |
          |@using(methodSelector = false)
@@ -2738,7 +2738,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
 
   it should "use braces syntax for functions that uses preapproved assets" in {
     def code(
-        bracesPart: String = "{callerAddress!() -> ALPH: amount}",
+        bracesPart: String = "{callerAddress!() -> OXM: amount}",
         usePreapprovedAssets: Boolean = true,
         useAssetsInContract: Boolean = false
     ): String =
@@ -2781,12 +2781,12 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
     compileContract(replace(code())).isRight is true
 
     val statements = Seq(
-      "transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)",
+      "transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)",
       "transferTokenFromSelf!(callerAddress!(), selfTokenId!(), 1 alph)",
       "destroySelf!(callerAddress!())",
-      "transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)",
+      "transferTokenToSelf!(callerAddress!(), OXM, 1 alph)",
       "transferTokenToSelf!(callerAddress!(), selfTokenId!(), 1 alph)",
-      "approveToken!(selfAddress!(), ALPH, 1 alph)"
+      "approveToken!(selfAddress!(), OXM, 1 alph)"
     )
     statements.foreach { stmt =>
       compileContract(replace(code("true", stmt))).isRight is true
@@ -2809,7 +2809,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
       )
     }
     Seq(
-      "transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)",
+      "transferTokenToSelf!(callerAddress!(), OXM, 1 alph)",
       "transferTokenToSelf!(callerAddress!(), selfTokenId!(), 1 alph)"
     ).foreach { stmt =>
       testContractError(
@@ -3797,7 +3797,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |  @using(assetsInContract = true, preapprovedAssets = true)
            |  pub fn foo() -> () {
            |    let _ = selfContractId!()
-           |    transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenToSelf!(callerAddress!(), OXM, 1 alph)
            |  }
            |}
            |""".stripMargin
@@ -3880,7 +3880,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |  @using(preapprovedAssets = true)
            |  pub fn foo(tokenId: ByteVec) -> () {
            |    assert!(tokenRemaining!(callerAddress!(), tokenId) == 1, 0)
-           |    assert!(tokenRemaining!(callerAddress!(), ALPH) == 1, 0)
+           |    assert!(tokenRemaining!(callerAddress!(), OXM) == 1, 0)
            |  }
            |}
            |""".stripMargin
@@ -4012,11 +4012,11 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
          |Contract Foo() {
          |  @using(preapprovedAssets = true, assetsInContract = true)
          |  pub fn foo(from: Address, to: Address) -> () {
-         |    approveToken!(from, ALPH, 1 alph)
-         |    tokenRemaining!(from, ALPH)
-         |    transferToken!(from, to, ALPH, 1 alph)
-         |    transferTokenToSelf!(from, ALPH, 1 alph)
-         |    transferTokenFromSelf!(to, ALPH, 1 alph)
+         |    approveToken!(from, OXM, 1 alph)
+         |    tokenRemaining!(from, OXM)
+         |    transferToken!(from, to, OXM, 1 alph)
+         |    transferTokenToSelf!(from, OXM, 1 alph)
+         |    transferTokenFromSelf!(to, OXM, 1 alph)
          |  }
          |
          |  @using(preapprovedAssets = true, assetsInContract = true)
@@ -6724,11 +6724,11 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
          |Contract Foo() {
          |  @using(preapprovedAssets = false, assetsInContract = false, payToContractOnly = true)
          |  pub fn foo0() -> () {
-         |    transferToken!(callerAddress!(), selfAddress!(), ALPH, 1 alph)
+         |    transferToken!(callerAddress!(), selfAddress!(), OXM, 1 alph)
          |  }
          |  @using(preapprovedAssets = true, assetsInContract = true)
          |  pub fn foo1() -> () {
-         |    transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)
+         |    transferTokenToSelf!(callerAddress!(), OXM, 1 alph)
          |  }
          |}
          |""".stripMargin
@@ -6756,9 +6756,9 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
     compileContractFull(replace(code())).rightValue.warnings.isEmpty is true
 
     val statements = Seq(
-      "transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)",
+      "transferTokenToSelf!(callerAddress!(), OXM, 1 alph)",
       "transferTokenToSelf!(callerAddress!(), selfTokenId!(), 1 alph)",
-      "transferToken!(callerAddress!(), selfAddress!(), ALPH, 1 alph)"
+      "transferToken!(callerAddress!(), selfAddress!(), OXM, 1 alph)"
     )
     statements.foreach { stmt =>
       compileContractFull(replace(code("true", stmt))).isRight is true
@@ -6778,7 +6778,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
   it should "check the preapprovedAssets annotation if the function pays to the contract" in {
     def code(
         annotations: String,
-        statement: String = "transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)"
+        statement: String = "transferTokenToSelf!(callerAddress!(), OXM, 1 alph)"
     ) =
       s"""
          |Contract Foo() {
@@ -6805,12 +6805,12 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
       .isRight is true
     Compiler
       .compileContract(
-        replace(code("payToContractOnly = true", "approveToken!(selfAddress!(), ALPH, 1 alph)"))
+        replace(code("payToContractOnly = true", "approveToken!(selfAddress!(), OXM, 1 alph)"))
       )
       .isRight is true
     Compiler
       .compileContract(
-        replace(code("assetsInContract = true", "approveToken!(selfAddress!(), ALPH, 1 alph)"))
+        replace(code("assetsInContract = true", "approveToken!(selfAddress!(), OXM, 1 alph)"))
       )
       .isRight is true
   }
@@ -6828,9 +6828,9 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
 
     val tokenId = TokenId.generate.toHexString
     val statements = Seq(
-      "approveToken!(selfAddress!(), ALPH, 1 alph)",
+      "approveToken!(selfAddress!(), OXM, 1 alph)",
       s"approveToken!(selfAddress!(), #$tokenId, 1 alph)",
-      "transferToken!(callerAddress!(), selfAddress!(), ALPH, 1 alph)",
+      "transferToken!(callerAddress!(), selfAddress!(), OXM, 1 alph)",
       s"transferToken!(callerAddress!(), selfAddress!(), #$tokenId, 1 alph)",
       s"burnToken!(selfAddress!(), #$tokenId, 1 alph)"
     )
@@ -8215,7 +8215,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |  array3: [[U256; 3]; SIZE]
            |) {
            |  let (encodedImmFields, encodedMutFields) = Foo.encodeFields!(array0, array1, array2, array3)
-           |  let _ = createContract!{callerAddress!() -> ALPH: minimalContractDeposit!()}(
+           |  let _ = createContract!{callerAddress!() -> OXM: minimalContractDeposit!()}(
            |    #${Hex.toHexString(serialize(compiledContract.code))},
            |    encodedImmFields,
            |    encodedMutFields
@@ -8908,7 +8908,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |Contract Foo(address: Address) {
            |  @using(preapprovedAssets = true)
            |  @inline fn foo() -> () {
-           |    transferToken!(callerAddress!(), address, ALPH, 1 alph)
+           |    transferToken!(callerAddress!(), address, OXM, 1 alph)
            |  }
            |
            |  pub fn bar() -> () {
@@ -8925,7 +8925,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
         s"""
            |Contract Foo(address: Address) {
            |  $$@inline fn foo() -> () {
-           |    transferToken!(callerAddress!(), address, ALPH, 1 alph)
+           |    transferToken!(callerAddress!(), address, OXM, 1 alph)
            |  }$$
            |
            |  pub fn bar() -> () {
@@ -8943,11 +8943,11 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |Contract Foo(address: Address) {
            |  @using(preapprovedAssets = true)
            |  @inline fn foo() -> () {
-           |    transferToken!(callerAddress!(), address, ALPH, 1 alph)
+           |    transferToken!(callerAddress!(), address, OXM, 1 alph)
            |  }
            |
            |  $$pub fn bar() -> () {
-           |    foo{callerAddress!() -> ALPH: 1 alph}()
+           |    foo{callerAddress!() -> OXM: 1 alph}()
            |  }$$
            |}
            |""".stripMargin
@@ -8961,12 +8961,12 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |Contract Foo(address: Address) {
            |  @using(preapprovedAssets = true)
            |  @inline fn foo() -> () {
-           |    transferToken!(callerAddress!(), address, ALPH, 1 alph)
+           |    transferToken!(callerAddress!(), address, OXM, 1 alph)
            |  }
            |
            |  @using(preapprovedAssets = true)
            |  pub fn bar() -> () {
-           |    foo{callerAddress!() -> ALPH: 1 alph}()
+           |    foo{callerAddress!() -> OXM: 1 alph}()
            |  }
            |}
            |""".stripMargin
@@ -8979,7 +8979,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
         s"""
            |Contract Foo(address: Address) {
            |  $$@inline fn foo() -> () {
-           |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
            |  }$$
            |
            |  pub fn bar() -> () {
@@ -8997,7 +8997,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |Contract Foo(address: Address) {
            |  @using(assetsInContract = true)
            |  @inline fn foo() -> () {
-           |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
            |  }
            |
            |  $$@using(assetsInContract = true)
@@ -9016,7 +9016,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |Contract Foo(address: Address) {
            |  @using(assetsInContract = true)
            |  @inline fn foo() -> () {
-           |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
            |  }
            |
            |  @using(assetsInContract = enforced)
@@ -9512,7 +9512,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |  transfer()
            |
            |  $$@inline fn transfer() -> () {
-           |    transferToken!(from, to, ALPH, 1 alph)
+           |    transferToken!(from, to, OXM, 1 alph)
            |  }$$
            |}
            |""".stripMargin
@@ -9525,11 +9525,11 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
       val code1 =
         s"""
            |TxScript Main(from: Address, to: Address) {
-           |  transfer{from -> ALPH: 1 alph}()
+           |  transfer{from -> OXM: 1 alph}()
            |
            |  @using(preapprovedAssets = true)
            |  @inline fn transfer() -> () {
-           |    transferToken!(from, to, ALPH, 1 alph)
+           |    transferToken!(from, to, OXM, 1 alph)
            |  }
            |}
            |""".stripMargin
@@ -9586,7 +9586,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |Contract Foo(address: Address) {
            |  @using(assetsInContract = true)
            |  @inline fn f0() -> () {
-           |    transferTokenFromSelf!(address, ALPH, 1 alph)
+           |    transferTokenFromSelf!(address, OXM, 1 alph)
            |  }
            |
            |  @using(checkExternalCaller = false)
@@ -9601,7 +9601,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |
            |  @using(assetsInContract = enforced)
            |  @inline fn f5() -> () {
-           |    transferTokenFromSelf!(address, ALPH, 1 alph)
+           |    transferTokenFromSelf!(address, OXM, 1 alph)
            |  }
            |
            |  @using(checkExternalCaller = false)
@@ -9609,14 +9609,14 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |
            |  @using(payToContractOnly = true, preapprovedAssets = true)
            |  @inline fn f7() -> () {
-           |    transferTokenToSelf!(address, ALPH, 1 alph)
+           |    transferTokenToSelf!(address, OXM, 1 alph)
            |  }
            |
            |  @using(checkExternalCaller = false, preapprovedAssets = true)
-           |  pub fn f8() -> () { f7{address -> ALPH: 1 alph}() }
+           |  pub fn f8() -> () { f7{address -> OXM: 1 alph}() }
            |
            |  @using(checkExternalCaller = false, preapprovedAssets = true, assetsInContract = enforced)
-           |  pub fn f9() -> () { f7{address -> ALPH: 1 alph}() }
+           |  pub fn f9() -> () { f7{address -> OXM: 1 alph}() }
            |
            |  @using(checkExternalCaller = false)
            |  pub fn f10() -> () { f11() }
@@ -9625,7 +9625,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |
            |  @using(assetsInContract = true)
            |  @inline fn f12() -> () {
-           |    transferTokenFromSelf!(address, ALPH, 1 alph)
+           |    transferTokenFromSelf!(address, OXM, 1 alph)
            |  }
            |}
            |""".stripMargin
@@ -9660,29 +9660,29 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |Contract Foo() {
            |  @using(checkExternalCaller = false, preapprovedAssets = true)
            |  pub fn f0() -> () {
-           |    f2{callerAddress!() -> ALPH: 1 alph}()
+           |    f2{callerAddress!() -> OXM: 1 alph}()
            |    f3()
            |  }
            |
            |  @using(checkExternalCaller = false, preapprovedAssets = true)
            |  pub fn f1() -> () {
-           |    f2{callerAddress!() -> ALPH: 1 alph}()
-           |    f4{callerAddress!() -> ALPH: 1 alph}()
+           |    f2{callerAddress!() -> OXM: 1 alph}()
+           |    f4{callerAddress!() -> OXM: 1 alph}()
            |  }
            |
            |  @using(payToContractOnly = true, preapprovedAssets = true)
            |  @inline fn f2() -> () {
-           |    transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenToSelf!(callerAddress!(), OXM, 1 alph)
            |  }
            |
            |  @using(assetsInContract = true)
            |  @inline fn f3() -> () {
-           |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
            |  }
            |
            |  @using(payToContractOnly = true, preapprovedAssets = true)
            |  @inline fn f4() -> () {
-           |    transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenToSelf!(callerAddress!(), OXM, 1 alph)
            |  }
            |}
            |""".stripMargin
@@ -9702,12 +9702,12 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |Contract Foo() {
            |  @using(checkExternalCaller = false, preapprovedAssets = true, assetsInContract = enforced)
            |  pub fn f0() -> () {
-           |    f1{callerAddress!() -> ALPH: 1 alph}()
+           |    f1{callerAddress!() -> OXM: 1 alph}()
            |  }
            |
            |  @using(payToContractOnly = true, preapprovedAssets = true)
            |  @inline fn f1() -> () {
-           |    transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenToSelf!(callerAddress!(), OXM, 1 alph)
            |  }
            |}
            |""".stripMargin
@@ -9730,7 +9730,7 @@ class CompilerSpec extends Oxyg3niumSpec with ContextGenerators {
            |
            |  @using(assetsInContract = true)
            |  fn f2() -> () {
-           |    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
+           |    transferTokenFromSelf!(callerAddress!(), OXM, 1 alph)
            |  }
            |}
            |""".stripMargin

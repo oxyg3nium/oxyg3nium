@@ -25,7 +25,7 @@ import org.oxyg3nium.flow.FlowFixture
 import org.oxyg3nium.flow.core.ExtraUtxosInfo
 import org.oxyg3nium.flow.mempool.{Normal, Reorg}
 import org.oxyg3nium.flow.validation.BlockValidation
-import org.oxyg3nium.protocol.{ALPH, Generators, PrivateKey, PublicKey, SignatureSchema}
+import org.oxyg3nium.protocol.{OXM, Generators, PrivateKey, PublicKey, SignatureSchema}
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm._
 import org.oxyg3nium.ralph.Compiler
@@ -183,10 +183,10 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
     val to         = chainIndex.to.generateKey._2
     val txs = AVector.from(0 until txNum).map { _ =>
       val (privateKey, publicKey) = chainIndex.to.generateKey
-      val block                   = transfer(blockFlow, genesisKey, publicKey, ALPH.alph(10))
+      val block                   = transfer(blockFlow, genesisKey, publicKey, OXM.alph(10))
       addAndCheck(blockFlow, block)
       block.coinbase.unsigned.gasAmount is minimalGas
-      transfer(blockFlow, privateKey, to, ALPH.oneAlph).nonCoinbase.head
+      transfer(blockFlow, privateKey, to, OXM.oneAlph).nonCoinbase.head
     }
 
     def prepareTxs(gas: Int) = {
@@ -250,7 +250,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
       .reward(emptyBlock.header)
       .miningReward
     emptyBlock.coinbaseReward is consensusConfigs.mainnet.emission
-      .rewardWrtTime(emptyBlock.timestamp, ALPH.LaunchTimestamp)
+      .rewardWrtTime(emptyBlock.timestamp, OXM.LaunchTimestamp)
     addAndCheck(blockFlow, emptyBlock)
 
     val transferBlock = newTransferBlock()
@@ -267,7 +267,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
     val miningReward = emission
       .reward(emptyBlock.header)
       .miningReward
-    miningReward is emission.rewardWrtTime(emptyBlock.header.timestamp, ALPH.LaunchTimestamp)
+    miningReward is emission.rewardWrtTime(emptyBlock.header.timestamp, OXM.LaunchTimestamp)
     emptyBlock.coinbase.unsigned.fixedOutputs.length is 1
     val mainChainReward = Coinbase.calcMainChainReward(miningReward)
     emptyBlock.coinbaseReward is mainChainReward
@@ -475,9 +475,9 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
     val keys                        = Seq.tabulate(10)(_ => chainIndex.from.generateKey)
     val (fromPriKey, fromPubKey, _) = genesisKeys(0)
     keys.foreach { case (_, pubKey) =>
-      val block = transfer(blockFlow, fromPriKey, pubKey, ALPH.alph(2))
+      val block = transfer(blockFlow, fromPriKey, pubKey, OXM.alph(2))
       addAndCheck(blockFlow, block)
-      blockFlow.getBalance(LockupScript.p2pkh(pubKey), Int.MaxValue, true).rightValue._1 is ALPH
+      blockFlow.getBalance(LockupScript.p2pkh(pubKey), Int.MaxValue, true).rightValue._1 is OXM
         .alph(2)
     }
 
@@ -487,7 +487,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
         blockFlow,
         priKey,
         fromPubKey,
-        ALPH.oneAlph,
+        OXM.oneAlph,
         gasPrice
       ).nonCoinbase.head.toTemplate
     }
@@ -652,7 +652,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
     lazy val keys = (0 until 2).map { _ =>
       val (privateKey, publicKey) = chainIndex.from.generateKey
       val fromPrivateKey          = genesisKeys(chainIndex.from.value)._1
-      val block                   = transfer(blockFlow, fromPrivateKey, publicKey, ALPH.alph(20))
+      val block                   = transfer(blockFlow, fromPrivateKey, publicKey, OXM.alph(20))
       addAndCheck(blockFlow, block)
       (privateKey, publicKey)
     }
@@ -694,9 +694,9 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
 
   it should "collect sequential tx if the input is from parent tx" in new SequentialTxsFixture {
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, ALPH.alph(5))
+    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, OXM.alph(5))
     val (_, toPublicKey1) = chainIndex.to.generateKey
-    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, ALPH.alph(5))
+    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, OXM.alph(5))
 
     tx1.unsigned.inputs.exists(input => tx0.fixedOutputRefs.contains(input.outputRef)) is true
     collectTxs() is AVector(tx0, tx1)
@@ -706,13 +706,13 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
   }
 
   it should "collect sequential tx if inputs are from parent tx and persisted world state" in new SequentialTxsFixture {
-    val block0 = transfer(blockFlow, fromPrivateKey0, fromPublicKey0, ALPH.alph(10))
+    val block0 = transfer(blockFlow, fromPrivateKey0, fromPublicKey0, OXM.alph(10))
     addAndCheck(blockFlow, block0)
 
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, ALPH.alph(5))
+    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, OXM.alph(5))
     val (_, toPublicKey1) = chainIndex.to.generateKey
-    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, ALPH.alph(11))
+    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, OXM.alph(11))
 
     tx1.unsigned.inputs.length is 2
     val groupView = blockFlow.getImmutableGroupView(chainIndex.from).rightValue
@@ -731,9 +731,9 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
   it should "not collect sequential tx if its gas price is larger than parent tx" in new SequentialTxsFixture {
     val gasPrice          = GasPrice(nonCoinbaseMinGasPrice.value.addOneUnsafe())
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, ALPH.alph(5))
+    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, OXM.alph(5))
     val (_, toPublicKey1) = chainIndex.to.generateKey
-    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, ALPH.alph(5), gasPrice)
+    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, OXM.alph(5), gasPrice)
 
     (tx1.unsigned.gasPrice.value > tx0.unsigned.gasPrice.value) is true
     tx1.unsigned.inputs.exists(input => tx0.fixedOutputRefs.contains(input.outputRef)) is true
@@ -747,11 +747,11 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
 
   it should "collect sequential txs based on gas price" in new SequentialTxsFixture {
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, ALPH.alph(5))
+    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, OXM.alph(5))
 
     val gasPrice          = GasPrice(nonCoinbaseMinGasPrice.value.addOneUnsafe())
     val (_, toPublicKey2) = chainIndex.to.generateKey
-    val tx1               = transferTx(fromPrivateKey1, toPublicKey2, ALPH.alph(5), gasPrice)
+    val tx1               = transferTx(fromPrivateKey1, toPublicKey2, OXM.alph(5), gasPrice)
 
     (tx1.unsigned.gasPrice.value > tx0.unsigned.gasPrice.value) is true
     tx1.unsigned.inputs.exists(input => tx0.fixedOutputRefs.contains(input.outputRef)) is false
@@ -764,10 +764,10 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
   it should "not collect sequential txs if the input of the parent tx does not exist" in new SequentialTxsFixture {
     val gasPrice          = GasPrice(nonCoinbaseMinGasPrice.value.addOneUnsafe())
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, ALPH.alph(5))
+    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, OXM.alph(5))
     val (_, toPublicKey1) = chainIndex.to.generateKey
-    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, ALPH.alph(5), gasPrice)
-    val tx2               = transferTx(fromPrivateKey0, toPublicKey1, ALPH.oneAlph)
+    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, OXM.alph(5), gasPrice)
+    val tx2               = transferTx(fromPrivateKey0, toPublicKey1, OXM.oneAlph)
 
     (tx1.unsigned.gasPrice.value > tx0.unsigned.gasPrice.value) is true
     tx1.unsigned.inputs.forall(input => tx0.fixedOutputRefs.contains(input.outputRef)) is true
@@ -784,9 +784,9 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
     override lazy val chainIndex: ChainIndex =
       chainIndexGenForBroker(brokerConfig).retryUntil(!_.isIntraGroup).sample.get
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, ALPH.alph(5))
+    val tx0               = transferTx(fromPrivateKey0, toPublicKey0, OXM.alph(5))
     val (_, toPublicKey1) = chainIndex.to.generateKey
-    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, ALPH.alph(5))
+    val tx1               = transferTx(fromPrivateKey0, toPublicKey1, OXM.alph(5))
 
     blockFlow.getMemPool(chainIndex).getAll().toSet is Set(tx0, tx1)
 
@@ -798,7 +798,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
   it should "collect all sequential txs" in new SequentialTxsFixture {
     val txs = AVector.from((0 until 15).map { _ =>
       val (_, toPublicKey) = chainIndex.to.generateKey
-      transferTx(fromPrivateKey0, toPublicKey, ALPH.alph(1), nonCoinbaseMinGasPrice)
+      transferTx(fromPrivateKey0, toPublicKey, OXM.alph(1), nonCoinbaseMinGasPrice)
     })
 
     collectTxs() is txs
@@ -814,7 +814,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
     val keys = (0 until 4).map { _ =>
       val (privateKey, publicKey) = chainIndex.from.generateKey
       (0 until 10).foreach { _ =>
-        val block = transfer(blockFlow, genesisKeys(0)._1, publicKey, ALPH.alph(5))
+        val block = transfer(blockFlow, genesisKeys(0)._1, publicKey, OXM.alph(5))
         addAndCheck(blockFlow, block)
       }
       (privateKey, publicKey)
@@ -826,7 +826,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
       val toIndex          = (fromIndex + 1) % keys.length
       val (fromKey, toKey) = (keys(fromIndex), keys(toIndex))
       val balance          = getAlphBalance(blockFlow, LockupScript.p2pkh(fromKey._2))
-      if (balance < ALPH.oneAlph) {
+      if (balance < OXM.oneAlph) {
         randomTransferTx
       } else {
         val transferAmount = balance.divUnsafe(U256.Two)
@@ -852,12 +852,12 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
 
     val chainIndex0               = ChainIndex.unsafe(0, 0)
     val (privateKey0, publicKey0) = chainIndex0.from.generateKey
-    val block0 = transfer(blockFlow, genesisKeys(0)._1, publicKey0, ALPH.alph(10))
+    val block0 = transfer(blockFlow, genesisKeys(0)._1, publicKey0, OXM.alph(10))
     addAndCheck(blockFlow, block0)
 
     val chainIndex1     = ChainIndex.unsafe(0, 1)
     val (_, publicKey1) = GroupIndex.unsafe(1).generateKey
-    val tx0 = transfer(blockFlow, privateKey0, publicKey1, ALPH.oneAlph).nonCoinbase.head.toTemplate
+    val tx0 = transfer(blockFlow, privateKey0, publicKey1, OXM.oneAlph).nonCoinbase.head.toTemplate
     val now = TimeStamp.now()
     blockFlow.grandPool.add(chainIndex1, tx0, now)
 
@@ -865,7 +865,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
     var sourceTx        = tx0
     val sequentialTxs = AVector.from(0 until 5).map { index =>
       val tx =
-        transfer(blockFlow, privateKey0, publicKey2, ALPH.oneAlph).nonCoinbase.head.toTemplate
+        transfer(blockFlow, privateKey0, publicKey2, OXM.oneAlph).nonCoinbase.head.toTemplate
       tx.unsigned.inputs.forall(input => sourceTx.fixedOutputRefs.contains(input.outputRef)) is true
       blockFlow.grandPool.add(chainIndex0, tx, now.plusMillisUnsafe(index.toLong))
       sourceTx = tx
@@ -895,7 +895,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
     val lockupScript            = LockupScript.p2pkh(publicKey)
     val unlockScript            = UnlockScript.p2pkh(publicKey)
     val genesisKey              = genesisKeys(chainIndex.from.value)._1
-    addAndCheck(blockFlow, transfer(blockFlow, genesisKey, publicKey, ALPH.alph(5)))
+    addAndCheck(blockFlow, transfer(blockFlow, genesisKey, publicKey, OXM.alph(5)))
     val utxos = blockFlow.getUsableUtxos(lockupScript, Int.MaxValue).rightValue
     utxos.length is 1
 
@@ -906,7 +906,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
         lockupScript,
         unlockScript,
         utxos.map(info => (info.ref, info.output)),
-        ALPH.cent(1),
+        OXM.cent(1),
         AVector.empty,
         minimalGas,
         nonCoinbaseMinGasPrice
@@ -922,7 +922,7 @@ class FlowUtilsSpec extends Oxyg3niumSpec {
         unsignedTx0.fixedOutputRefs.mapWithIndex { case (ref, index) =>
           (ref, unsignedTx0.fixedOutputs(index))
         },
-        ALPH.cent(1),
+        OXM.cent(1),
         AVector.empty,
         minimalGas,
         nonCoinbaseMinGasPrice

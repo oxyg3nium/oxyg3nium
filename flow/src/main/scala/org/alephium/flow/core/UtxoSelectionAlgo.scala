@@ -31,7 +31,7 @@ import org.oxyg3nium.util._
  *   - the Utxos with higher persisted level are selected first (confirmed Utxos are of high priority)
  *   - the Utxos with smaller amounts are selected first
  *   - alph selection non-token Utxos first
- *   - the above logic applies to both ALPH and tokens.
+ *   - the above logic applies to both OXM and tokens.
  */
 // scalastyle:off parameter.number
 object UtxoSelectionAlgo extends StrictLogging {
@@ -174,7 +174,7 @@ object UtxoSelectionAlgo extends StrictLogging {
             scriptGasFee = gasPrice * scriptGas
             totalAttoAlphAmount <- scriptGasFee
               .add(amounts.alph)
-              .toRight("ALPH balance overflow with estimated script gas")
+              .toRight("OXM balance overflow with estimated script gas")
             amountsWithScriptGas = AssetAmounts(totalAttoAlphAmount, amounts.tokens)
             utxosWithGas <- selectUtxos(
               amountsWithScriptGas,

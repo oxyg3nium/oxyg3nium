@@ -202,7 +202,7 @@ object Instr {
     CreateSubContract, CreateSubContractWithToken, CopyCreateSubContract, CopyCreateSubContractWithToken,
     LoadMutFieldByIndex, StoreMutFieldByIndex, ContractExists, CreateContractAndTransferToken, CopyCreateContractAndTransferToken,
     CreateSubContractAndTransferToken, CopyCreateSubContractAndTransferToken,
-    NullContractAddress, SubContractId, SubContractIdOf, ALPHTokenId,
+    NullContractAddress, SubContractId, SubContractIdOf, OXMTokenId,
     LoadImmField, LoadImmFieldByIndex,
     /* Below are instructions for Rhone hard fork */
     PayGasFee, MinimalContractDeposit, CreateMapEntry, MethodSelector, CallExternalBySelector
@@ -1685,7 +1685,7 @@ object LockApprovedAssets extends LockApprovedAssetsInstr {
 }
 
 sealed trait ApproveAssetBase {
-  @inline protected def approveALPH(
+  @inline protected def approveOXM(
       balanceState: MutBalanceState,
       from: LockupScript,
       amount: U256,
@@ -1695,7 +1695,7 @@ sealed trait ApproveAssetBase {
       okay
     } else {
       balanceState
-        .approveALPH(from, amount)
+        .approveOXM(from, amount)
         .toRight(
           Right(
             NotEnoughApprovedBalance(
@@ -1748,7 +1748,7 @@ object ApproveAlph extends AssetInstr with StatefulInstrCompanion0 with ApproveA
       amount       <- frame.popOpStackU256()
       address      <- frame.popOpStackAddress()
       balanceState <- frame.getBalanceState()
-      _ <- approveALPH(balanceState, address.lockupScript, amount.v, frame.ctx.getHardFork())
+      _ <- approveOXM(balanceState, address.lockupScript, amount.v, frame.ctx.getHardFork())
     } yield ()
   }
 }
@@ -1771,7 +1771,7 @@ object ApproveToken extends AssetInstr with StatefulInstrCompanion0 with Approve
       hardFork = frame.ctx.getHardFork()
       _ <-
         if (hardFork.isLemanEnabled() && tokenId == TokenId.alph) {
-          approveALPH(balanceState, address.lockupScript, amount.v, hardFork)
+          approveOXM(balanceState, address.lockupScript, amount.v, hardFork)
         } else {
           approveToken(balanceState, address.lockupScript, tokenId, amount.v, hardFork)
         }
@@ -1810,8 +1810,8 @@ object TokenRemaining extends AssetInstr with StatefulInstrCompanion0 {
       address: Val.Address,
       tokenId: TokenId
   ): ExeResult[U256] = {
-    val isALPH = tokenId == TokenId.alph
-    val amountOpt = if (hardFork.isLemanEnabled() && isALPH) {
+    val isOXM = tokenId == TokenId.alph
+    val amountOpt = if (hardFork.isLemanEnabled() && isOXM) {
       balanceState.alphRemaining(address.lockupScript)
     } else {
       balanceState.tokenRemaining(address.lockupScript, tokenId)
@@ -1820,7 +1820,7 @@ object TokenRemaining extends AssetInstr with StatefulInstrCompanion0 {
       Right(amountOpt.getOrElse(U256.Zero))
     } else {
       amountOpt.toRight(
-        if (isALPH) {
+        if (isOXM) {
           Right(NoAlphBalanceForTheAddress(Address.from(address.lockupScript)))
         } else {
           Right(NoTokenBalanceForTheAddress(tokenId, Address.from(address.lockupScript)))
@@ -2557,7 +2557,7 @@ object SubContractIdOf extends SubContractIdBase {
   }
 }
 
-object ALPHTokenId
+object OXMTokenId
     extends LemanInstrWithSimpleGas[StatefulContext]
     with StatefulInstrCompanion0
     with GasBase {

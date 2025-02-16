@@ -22,7 +22,7 @@ import akka.util.ByteString
 
 import org.oxyg3nium.flow.model.BlockState
 import org.oxyg3nium.io.{IOResult, IOUtils}
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.BrokerConfig
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm.{BlockEnv, WorldState}
@@ -202,7 +202,7 @@ trait MultiChain extends BlockPool with BlockHeaderPool with FlowDifficultyAdjus
     val maxHeight        = chain.maxHeightByWeightUnsafe
     val ghostUncleHeight = getHeightUnsafe(ghostUncleHash)
     val fromHeight       = Math.min(ghostUncleHeight + 1, maxHeight)
-    val toHeight         = Math.min(ghostUncleHeight + ALPH.MaxGhostUncleAge, maxHeight)
+    val toHeight         = Math.min(ghostUncleHeight + OXM.MaxGhostUncleAge, maxHeight)
     var mainChainBlock: Option[(Block, Int)] = None
     (fromHeight to toHeight).find { height =>
       val blockHash = chain.getHashesUnsafe(height).head

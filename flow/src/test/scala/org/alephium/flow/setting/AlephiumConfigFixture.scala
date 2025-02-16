@@ -21,7 +21,7 @@ import scala.jdk.CollectionConverters._
 import com.typesafe.config.{ConfigFactory, ConfigValueFactory}
 
 import org.oxyg3nium.flow.setting._
-import org.oxyg3nium.protocol.{ALPH, PrivateKey, PublicKey}
+import org.oxyg3nium.protocol.{OXM, PrivateKey, PublicKey}
 import org.oxyg3nium.protocol.config.GroupConfig
 import org.oxyg3nium.protocol.model.{Address, GroupIndex}
 import org.oxyg3nium.protocol.vm.{LogConfig, NodeIndexesConfig}
@@ -31,7 +31,7 @@ trait Oxyg3niumConfigFixture extends RandomPortsConfigFixture {
 
   val configValues: Map[String, Any] = Map.empty
 
-  val genesisBalance: U256 = ALPH.alph(Number.million)
+  val genesisBalance: U256 = OXM.alph(Number.million)
 
   lazy val env      = Env.resolve()
   lazy val rootPath = Platform.getRootPath(env)

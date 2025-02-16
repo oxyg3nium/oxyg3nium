@@ -25,7 +25,7 @@ import org.oxyg3nium.flow.core.BlockChain.{ChainDiff, TxIndex, TxStatus}
 import org.oxyg3nium.flow.io._
 import org.oxyg3nium.flow.setting.ConsensusSettings
 import org.oxyg3nium.io.{IOResult, IOUtils}
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.{BrokerConfig, NetworkConfig}
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm.WorldState
@@ -115,7 +115,7 @@ trait BlockChain extends BlockPool with BlockHeaderChain with BlockHashChain {
         }
       }
     }
-    iter(parentHeader.hash, ALPH.MaxGhostUncleAge, AVector.empty, AVector.empty)
+    iter(parentHeader.hash, OXM.MaxGhostUncleAge, AVector.empty, AVector.empty)
   }
 
   def getUsedGhostUnclesAndAncestors(
@@ -138,7 +138,7 @@ trait BlockChain extends BlockPool with BlockHeaderChain with BlockHashChain {
         unclesAcc: AVector[SelectedGhostUncle]
     ): AVector[SelectedGhostUncle] = {
 
-      if (fromHeader.isGenesis || num == 0 || unclesAcc.length >= ALPH.MaxGhostUncleSize) {
+      if (fromHeader.isGenesis || num == 0 || unclesAcc.length >= OXM.MaxGhostUncleSize) {
         unclesAcc
       } else {
         val uncleHeight = getHeightUnsafe(fromHeader.hash)
@@ -158,8 +158,8 @@ trait BlockChain extends BlockPool with BlockHeaderChain with BlockHashChain {
       }
     }
 
-    val availableUncles = iter(parentHeader, ALPH.MaxGhostUncleAge, AVector.empty)
-    availableUncles.takeUpto(ALPH.MaxGhostUncleSize)
+    val availableUncles = iter(parentHeader, OXM.MaxGhostUncleAge, AVector.empty)
+    availableUncles.takeUpto(OXM.MaxGhostUncleSize)
   }
 
   def selectGhostUncles(
@@ -220,11 +220,11 @@ trait BlockChain extends BlockPool with BlockHeaderChain with BlockHashChain {
       fromTs: TimeStamp,
       toTs: TimeStamp
   ): IOResult[AVector[(Block, Int)]] = {
-    locateTimeRangedHeight(fromTs, toTs, ALPH.GenesisHeight, maxHeight).flatMap {
+    locateTimeRangedHeight(fromTs, toTs, OXM.GenesisHeight, maxHeight).flatMap {
       case None => Right(AVector.empty)
       case Some((height, init)) => {
         for {
-          previous <- getLowerBlocks(ALPH.GenesisHeight, height - 1, fromTs, toTs)
+          previous <- getLowerBlocks(OXM.GenesisHeight, height - 1, fromTs, toTs)
           later    <- getUpperBlocks(maxHeight, height + 1, fromTs, toTs)
         } yield {
           (previous.reverse :+ ((init, height))) ++ later
@@ -391,7 +391,7 @@ trait BlockChain extends BlockPool with BlockHeaderChain with BlockHashChain {
 
   def getLatestHashesUnsafe(): AVector[BlockHash] = {
     val toHeight   = maxHeightUnsafe
-    val fromHeight = math.max(ALPH.GenesisHeight + 1, toHeight - 20)
+    val fromHeight = math.max(OXM.GenesisHeight + 1, toHeight - 20)
     (fromHeight to toHeight).foldLeft(AVector.empty[BlockHash]) { case (acc, height) =>
       acc ++ Utils.unsafe(getHashes(height))
     }

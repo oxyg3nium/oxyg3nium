@@ -28,7 +28,7 @@ import org.oxyg3nium.flow.core.FlowUtils._
 import org.oxyg3nium.flow.core.UtxoSelectionAlgo.{AssetAmounts, ProvidedGas}
 import org.oxyg3nium.flow.gasestimation._
 import org.oxyg3nium.io.{IOResult, IOUtils}
-import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.{OXM, PublicKey}
 import org.oxyg3nium.protocol.config.NetworkConfig
 import org.oxyg3nium.protocol.mining.Emission
 import org.oxyg3nium.protocol.model._
@@ -488,7 +488,7 @@ trait TxUtils { Self: FlowUtils =>
           gasPrice
         )
       outputGroups <- TxUtils
-        .weightLimitedGroupBy(outputInfos, groups, ALPH.MaxTxOutputNum - 1)( // - change utxo
+        .weightLimitedGroupBy(outputInfos, groups, OXM.MaxTxOutputNum - 1)( // - change utxo
           _.lockupScript.groupIndex.value,
           _.tokens.length + 1
         )
@@ -705,7 +705,7 @@ trait TxUtils { Self: FlowUtils =>
   /*
    * If the input has define `utxos`, we try to get them.
    * If none was defined, we let the `UtxoSelectionAlgo` finding enough
-   * utxos to cover everything: ALPH, tokens and gas.
+   * utxos to cover everything: OXM, tokens and gas.
    */
   // scalastyle:off parameter.number
   def selectInputDataUtxos(
@@ -925,7 +925,7 @@ trait TxUtils { Self: FlowUtils =>
       totalAmount     <- checkTotalAttoAlphAmount(outputInfos.map(_.attoAlphAmount))
       calculateResult <- UnsignedTransaction.calculateTotalAmountNeeded(outputInfos)
       (totalAmountNeeded, _, txOutputLength) = calculateResult
-      dustAmount <- totalAmountNeeded.sub(totalAmount).toRight("ALPH underflow")
+      dustAmount <- totalAmountNeeded.sub(totalAmount).toRight("OXM underflow")
     } yield {
       // `calculateTotalAmountNeeded` is adding a +1 length for the sender's output
       (dustAmount, txOutputLength)
@@ -988,7 +988,7 @@ trait TxUtils { Self: FlowUtils =>
     // be included in a single transaction as much as possible
     val groupedTokenUtxos = AVector
       .from(filteredTokenUtxos.flatMap(_._2))
-      .groupedWithRemainder(ALPH.MaxTxInputNum / 2)
+      .groupedWithRemainder(OXM.MaxTxInputNum / 2)
     val unsignedTxs = mutable.ArrayBuffer.empty[UnsignedTransaction]
     var alphUtxos   = allAlphUtxos
     val error = groupedTokenUtxos
@@ -1057,7 +1057,7 @@ trait TxUtils { Self: FlowUtils =>
       totalAmountPerToken <- UnsignedTransaction.calculateTotalAmountPerToken(
         tokenUtxos.flatMap(_.output.tokens)
       )
-      totalNumOfOutputs  = totalAmountPerToken.length + 1 // 1 for ALPH change output
+      totalNumOfOutputs  = totalAmountPerToken.length + 1 // 1 for OXM change output
       requiredAlphAmount = dustUtxoAmount.mulUnsafe(U256.unsafe(totalNumOfOutputs))
       selected <- UtxoSelectionAlgo
         .SelectionWithGasEstimation(gasPrice)
@@ -1069,7 +1069,7 @@ trait TxUtils { Self: FlowUtils =>
           AssetScriptGasEstimator.Default(blockFlow)
         )
         .left
-        .map(_ => "Not enough ALPH for gas fee in sweeping")
+        .map(_ => "Not enough OXM for gas fee in sweeping")
       (selectedSoFor, estimatedGas) = selected
       gas <- checkEstimatedGas(gasOpt, estimatedGas)
       tokenDustAmount    = requiredAlphAmount.subUnsafe(dustUtxoAmount)
@@ -1117,7 +1117,7 @@ trait TxUtils { Self: FlowUtils =>
       totalAlphAmount <- checkTotalAttoAlphAmount(alphUtxos.map(_.output.amount))
       outputAmount <- totalAlphAmount
         .sub(gasPrice * gas)
-        .toRight(s"Not enough ALPH for transaction output in sweeping")
+        .toRight(s"Not enough OXM for transaction output in sweeping")
       unsignedTx <- UnsignedTransaction.buildTransferTx(
         fromLockupScript,
         fromUnlockScript,
@@ -1141,7 +1141,7 @@ trait TxUtils { Self: FlowUtils =>
     assume(allAlphUtxos.forall(_.output.tokens.isEmpty))
 
     val sortedAlphUtxos  = allAlphUtxos.sorted(UtxoSelectionAlgo.AssetAscendingOrder.byAlph)
-    val groupedAlphUtxos = sortedAlphUtxos.groupedWithRemainder(ALPH.MaxTxInputNum)
+    val groupedAlphUtxos = sortedAlphUtxos.groupedWithRemainder(OXM.MaxTxInputNum)
     val unsignedTxs      = mutable.ArrayBuffer.empty[UnsignedTransaction]
     val consolidation    = isConsolidation(fromLockupScript, toLockupScript)
     val error = groupedAlphUtxos
@@ -1304,7 +1304,7 @@ trait TxUtils { Self: FlowUtils =>
     }
 
     if (header.isGenesis) {
-      toChain.maxHeightByWeightUnsafe - ALPH.GenesisHeight + 1
+      toChain.maxHeightByWeightUnsafe - OXM.GenesisHeight + 1
     } else {
       iter(toTipHeight + 1) match {
         case None => 0
@@ -1439,8 +1439,8 @@ trait TxUtils { Self: FlowUtils =>
   private def checkGasPrice(gasPrice: GasPrice): Either[String, Unit] = {
     if (gasPrice < coinbaseGasPrice) {
       Left(s"Gas price $gasPrice too small, minimal $coinbaseGasPrice")
-    } else if (gasPrice.value >= ALPH.MaxALPHValue) {
-      val maximalGasPrice = GasPrice(ALPH.MaxALPHValue.subOneUnsafe())
+    } else if (gasPrice.value >= OXM.MaxOXMValue) {
+      val maximalGasPrice = GasPrice(OXM.MaxOXMValue.subOneUnsafe())
       Left(s"Gas price $gasPrice too large, maximal $maximalGasPrice")
     } else {
       Right(())
@@ -1453,8 +1453,8 @@ trait TxUtils { Self: FlowUtils =>
   ): Either[String, Unit] = {
     if (outputInfos.isEmpty) {
       Left("Zero transaction outputs")
-    } else if (outputInfos.length > ALPH.MaxTxOutputNum) {
-      Left(s"Too many transaction outputs, maximal value: ${ALPH.MaxTxOutputNum}")
+    } else if (outputInfos.length > OXM.MaxTxOutputNum) {
+      Left(s"Too many transaction outputs, maximal value: ${OXM.MaxTxOutputNum}")
     } else {
       val groupIndexes = outputInfos.map(_.lockupScript.groupIndex).filter(_ != fromGroup)
 
@@ -1547,7 +1547,7 @@ object TxUtils {
   final case class InputData(
       fromLockupScript: LockupScript.Asset,
       fromUnlockScript: UnlockScript,
-      amount: U256,                             // How much ALPH must be payed by this address
+      amount: U256,                             // How much OXM must be payed by this address
       tokens: Option[AVector[(TokenId, U256)]], // How much tokens must be payed by this address
       gasOpt: Option[GasBox],
       utxos: Option[AVector[AssetOutputRef]]
@@ -1628,8 +1628,8 @@ object TxUtils {
   ): Either[String, U256] = {
     amounts.foldE(U256.Zero) { case (acc, amount) =>
       acc.add(amount).toRight("Alph Amount overflow").flatMap { newAmount =>
-        if (newAmount > ALPH.MaxALPHValue) {
-          Left("ALPH amount overflow")
+        if (newAmount > OXM.MaxOXMValue) {
+          Left("OXM amount overflow")
         } else {
           Right(newAmount)
         }

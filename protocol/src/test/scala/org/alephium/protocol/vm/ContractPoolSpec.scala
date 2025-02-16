@@ -19,7 +19,7 @@ package org.oxyg3nium.protocol.vm
 import org.scalacheck.Gen
 import org.scalatest.Assertion
 
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config._
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.vm.nodeindexes.TxOutputLocator
@@ -41,7 +41,7 @@ class ContractPoolSpec extends Oxyg3niumSpec with NumericHelpers {
         fieldLength: Int = 0
     ): (ContractId, StatefulContract, ContractOutputRef, ContractOutput) = {
       val contractId = ContractId.generate
-      val output     = ContractOutput(ALPH.alph(n), LockupScript.p2c(contractId), AVector.empty)
+      val output     = ContractOutput(OXM.alph(n), LockupScript.p2c(contractId), AVector.empty)
       val outputRef  = contractId.inaccurateFirstOutputRef()
       val method = Method[StatefulContext](
         isPublic = true,

@@ -101,7 +101,7 @@ trait TypeSignatureFixture extends Oxyg3niumFixture {
        |  pub fn bar(a: Bool, mut b: U256, c: I256, mut d: ByteVec, e: Address, f: [[Bool;1];2]) -> (U256, I256, ByteVec, Address, [[Bool;1];2]) {
        |    emit Bar(aa, bb, dd, ee)
        |    emit Debug(`xx`)
-       |    transferTokenToSelf!(callerAddress!(), ALPH, 1 alph)
+       |    transferTokenToSelf!(callerAddress!(), OXM, 1 alph)
        |    let _ = gg
        |    b = 0
        |    bb = 0

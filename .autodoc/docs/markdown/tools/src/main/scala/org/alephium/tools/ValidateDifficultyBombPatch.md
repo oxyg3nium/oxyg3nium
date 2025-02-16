@@ -23,7 +23,7 @@ This tool is used to ensure that the difficulty bomb patch is working as intende
 
 2. What dependencies does this code have?
    
-   This code depends on several libraries and modules, including `java.nio.file.Path`, `org.alephium.flow.core.BlockFlow`, `org.alephium.flow.io.Storages`, `org.alephium.flow.setting.Oxyg3niumConfig`, `org.alephium.io.RocksDBSource.Settings`, `org.alephium.protocol.ALPH`, `org.alephium.protocol.mining.HashRate`, `org.alephium.protocol.model.BlockDeps`, `org.alephium.protocol.model.Target`, `org.alephium.protocol.vm.LockupScript`, and `org.alephium.util.Env`.
+   This code depends on several libraries and modules, including `java.nio.file.Path`, `org.alephium.flow.core.BlockFlow`, `org.alephium.flow.io.Storages`, `org.alephium.flow.setting.Oxyg3niumConfig`, `org.alephium.io.RocksDBSource.Settings`, `org.alephium.protocol.OXM`, `org.alephium.protocol.mining.HashRate`, `org.alephium.protocol.model.BlockDeps`, `org.alephium.protocol.model.Target`, `org.alephium.protocol.vm.LockupScript`, and `org.alephium.util.Env`.
 
 3. What is the expected output of this code?
    

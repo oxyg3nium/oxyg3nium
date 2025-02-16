@@ -19,7 +19,7 @@ package org.oxyg3nium.protocol.vm
 import akka.util.ByteString
 import org.scalacheck.Gen
 
-import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.{OXM, PublicKey}
 import org.oxyg3nium.protocol.config.{GroupConfigFixture, NetworkConfigFixture}
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, TimeStamp, U256}
@@ -322,7 +322,7 @@ class ContextSpec
 
   it should "generate single output when token number <= maxTokenPerUTXO for Mainnet hardfork" in new MainnetAssetOutputFixture {
     (0 to maxTokenPerAssetUtxo).foreach { num =>
-      val output = prepareOutput(ALPH.oneAlph, num)
+      val output = prepareOutput(OXM.oneAlph, num)
       context.generatedOutputs.clear()
       context.generateOutput(output) isE ()
       context.generatedOutputs.toSeq is Seq(output)
@@ -331,7 +331,7 @@ class ContextSpec
 
   it should "generate single output when token number > maxTokenPerUTXO for Mainnet hardfork" in new MainnetAssetOutputFixture {
     (maxTokenPerAssetUtxo + 1 to 5 * maxTokenPerAssetUtxo).foreach { num =>
-      val output = prepareOutput(ALPH.oneAlph, num)
+      val output = prepareOutput(OXM.oneAlph, num)
       context.generatedOutputs.clear()
       context.generateOutput(output) isE ()
       context.generatedOutputs.toSeq is Seq(output)
@@ -340,7 +340,7 @@ class ContextSpec
 
   it should "generate single output when token number <= maxTokenPerUTXO for Leman hardfork" in new LemanAssetOutputFixture {
     (0 to maxTokenPerAssetUtxo).foreach { num =>
-      val output = prepareOutput(ALPH.oneAlph, num)
+      val output = prepareOutput(OXM.oneAlph, num)
       context.generatedOutputs.clear()
       context.generateOutput(output) isE ()
       context.generatedOutputs.toSeq is Seq(output)

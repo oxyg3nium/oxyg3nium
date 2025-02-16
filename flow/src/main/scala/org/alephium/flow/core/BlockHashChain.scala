@@ -23,7 +23,7 @@ import org.oxyg3nium.flow.core.BlockHashChain.ChainDiff
 import org.oxyg3nium.flow.io.{BlockStateStorage, HeightIndexStorage}
 import org.oxyg3nium.flow.model.BlockState
 import org.oxyg3nium.io.{IOError, IOResult, IOUtils}
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.BrokerConfig
 import org.oxyg3nium.protocol.model.{BlockHash, ChainIndex, ChainTip, Weight}
 import org.oxyg3nium.util.{AVector, Cache, EitherF, Math, TimeStamp}
@@ -63,11 +63,11 @@ trait BlockHashChain extends BlockHashPool with ChainDifficultyAdjustment with B
 
   protected def addGenesis(hash: BlockHash): IOResult[Unit] = {
     assume(hash == genesisHash)
-    val genesisState = BlockState(ALPH.GenesisHeight, ALPH.GenesisWeight)
+    val genesisState = BlockState(OXM.GenesisHeight, OXM.GenesisWeight)
     for {
       _ <- blockStateStorage.put(genesisHash, genesisState)
-      _ <- updateHeightIndex(genesisHash, ALPH.GenesisHeight, true)
-      _ <- setGenesisState(genesisHash, ALPH.GenesisTimestamp)
+      _ <- updateHeightIndex(genesisHash, OXM.GenesisHeight, true)
+      _ <- setGenesisState(genesisHash, OXM.GenesisTimestamp)
     } yield ()
   }
 
@@ -114,7 +114,7 @@ trait BlockHashChain extends BlockHashPool with ChainDifficultyAdjustment with B
   def maxHeightByWeightUnsafe: Int = maxWeightTipUnsafe.height
 
   def maxWeightTipUnsafe: ChainTip = {
-    tips.keys().foldLeft(ChainTip(genesisHash, ALPH.GenesisHeight, ALPH.GenesisWeight)) {
+    tips.keys().foldLeft(ChainTip(genesisHash, OXM.GenesisHeight, OXM.GenesisWeight)) {
       case (previousTip, tipHash) =>
         getStateUnsafe(tipHash) match {
           case BlockState(tipHeight, tipWeight) =>
@@ -134,7 +134,7 @@ trait BlockHashChain extends BlockHashPool with ChainDifficultyAdjustment with B
   def maxHeightUnsafe: Int = {
     tips
       .keys()
-      .foldLeft((ALPH.GenesisHeight, genesisHash)) { case ((height, hash), tip) =>
+      .foldLeft((OXM.GenesisHeight, genesisHash)) { case ((height, hash), tip) =>
         val tipHeight = getHeightUnsafe(tip)
         if (BlockHashPool.compareHeight(tip, tipHeight, hash, height) > 0) {
           (tipHeight, tip)
@@ -247,7 +247,7 @@ trait BlockHashChain extends BlockHashPool with ChainDifficultyAdjustment with B
   }
 
   def getPredecessor(hash: BlockHash, height: Int): IOResult[BlockHash] = {
-    assume(height >= ALPH.GenesisHeight)
+    assume(height >= OXM.GenesisHeight)
     @tailrec
     def iter(currentHash: BlockHash, currentHeight: Int): IOResult[BlockHash] = {
       if (currentHeight == height) {
@@ -281,7 +281,7 @@ trait BlockHashChain extends BlockHashPool with ChainDifficultyAdjustment with B
       oldHash: BlockHash,
       oldHeight: Int
   ): IOResult[AVector[BlockHash]] = {
-    assume(oldHeight >= ALPH.GenesisHeight)
+    assume(oldHeight >= OXM.GenesisHeight)
     @SuppressWarnings(Array("org.wartremover.warts.Recursion"))
     def iter(
         acc: AVector[BlockHash],

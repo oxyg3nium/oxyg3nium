@@ -22,7 +22,7 @@ import org.alephium.flow.core.BlockFlow
 import org.alephium.flow.io.Storages
 import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
 import org.alephium.io.RocksDBSource.ProdSettings
-import org.alephium.protocol.ALPH
+import org.alephium.protocol.OXM
 import org.alephium.protocol.mining.HashRate
 import org.alephium.protocol.model.{BlockDeps, Target}
 import org.alephium.protocol.vm.LockupScript
@@ -43,7 +43,7 @@ object ValidateDifficultyBombPatch extends App {
     val miner          = LockupScript.p2pkh(publicKey)
     val template       = blockFlow.prepareBlockFlowUnsafe(chainIndex, miner)
     val parent         = BlockDeps.build(template.deps)(config.broker).uncleHash(chainIndex.to)
-    val height         = chain.getHeightUnsafe(parent) - ALPH.DifficultyBombPatchHeightDiff
+    val height         = chain.getHeightUnsafe(parent) - OXM.DifficultyBombPatchHeightDiff
     val target         = chain.getBlockUnsafe(chain.getHashesUnsafe(height).head).target
     val depTargets =
       template.deps.map(hash => blockFlow.getHeaderChain(hash).getBlockHeaderUnsafe(hash).target)

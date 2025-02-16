@@ -37,7 +37,7 @@ import org.alephium.flow.gasestimation._
 import org.alephium.flow.handler.TxHandler
 import org.alephium.flow.mempool.MemPool._
 import org.alephium.io.IOError
-import org.alephium.protocol.{vm, ALPH, Hash, PublicKey, Signature, SignatureSchema}
+import org.alephium.protocol.{vm, OXM, Hash, PublicKey, Signature, SignatureSchema}
 import org.alephium.protocol.config._
 import org.alephium.protocol.model.{ContractOutput => ProtocolContractOutput, _}
 import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
@@ -1347,7 +1347,7 @@ class ServerUtils(implicit
       utxos <- blockFlow.getUsableUtxos(fromLockupScript, utxosLimit).left.map(failedInIO)
       totalSelectAmount <- amount
         .add(estimatedTotalDustAmount)
-        .toRight(failed("ALPH amount overflow"))
+        .toRight(failed("OXM amount overflow"))
       selectedUtxos <- wrapError(
         UtxoSelectionAlgo
           .Build(
@@ -1395,7 +1395,7 @@ class ServerUtils(implicit
       )
       totalAttoAlphAmount <- initialAttoAlphAmount
         .add(query.issueTokenTo.map(_ => dustUtxoAmount).getOrElse(U256.Zero))
-        .toRight(failed("ALPH amount overflow"))
+        .toRight(failed("OXM amount overflow"))
       result <- unsignedTxFromScript(
         blockFlow,
         script,
@@ -2104,7 +2104,7 @@ class ServerUtils(implicit
       case Some(inputAsset) if inputAsset.asset.attoAlphAmount < testGasFee =>
         Left(
           failed(
-            s"First input asset should have at least ${ALPH.prettifyAmount(testGasFee)} to cover gas"
+            s"First input asset should have at least ${OXM.prettifyAmount(testGasFee)} to cover gas"
           )
         )
       case _ =>
@@ -2307,8 +2307,8 @@ object ServerUtils {
     if (gasFee <= apiConfig.gasFeeCap) {
       Right(())
     } else {
-      val capAmount    = ALPH.prettifyAmount(apiConfig.gasFeeCap)
-      val gasFeeAmount = ALPH.prettifyAmount(gasFee)
+      val capAmount    = OXM.prettifyAmount(apiConfig.gasFeeCap)
+      val gasFeeAmount = OXM.prettifyAmount(gasFee)
       Left(
         ApiError.BadRequest(
           s"Gas fee exceeds the limit: maximum allowed is $capAmount, but got $gasFeeAmount. " +
@@ -2362,7 +2362,7 @@ object ServerUtils {
       case Some((issueAmount, Some(issueTo))) =>
         s"""
            |createContractWithToken!$approveAssets(#$codeRaw, #$immStateRaw, #$mutStateRaw, ${issueAmount.v}, @$issueTo)
-           |  transferToken!{@$address -> ALPH: dustAmount!()}(@$address, @$issueTo, ALPH, dustAmount!())
+           |  transferToken!{@$address -> OXM: dustAmount!()}(@$address, @$issueTo, OXM, dustAmount!())
            |""".stripMargin.stripLeading.stripTrailing
       case Some((issueAmount, None)) =>
         s"createContractWithToken!$approveAssets(#$codeRaw, #$immStateRaw, #$mutStateRaw, ${issueAmount.v})"
@@ -2371,7 +2371,7 @@ object ServerUtils {
     }
 
     val create = if (initialTokenAmounts.isEmpty) {
-      val approveAssets = s"{@$address -> ALPH: ${initialAttoAlphAmount.v}}"
+      val approveAssets = s"{@$address -> OXM: ${initialAttoAlphAmount.v}}"
       toCreate(approveAssets)
     } else {
       val approveTokens = initialTokenAmounts
@@ -2379,7 +2379,7 @@ object ServerUtils {
           s"#${tokenId.toHexString}: ${amount.v}"
         }
         .mkString(", ")
-      val approveAssets = s"{@$address -> ALPH: ${initialAttoAlphAmount.v}, $approveTokens}"
+      val approveAssets = s"{@$address -> OXM: ${initialAttoAlphAmount.v}, $approveTokens}"
       toCreate(approveAssets)
     }
     s"""

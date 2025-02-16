@@ -169,7 +169,7 @@ class UtxoSelectionAlgoSpec extends Oxyg3niumSpec with LockupScriptGenerators {
     }
   }
 
-  it should "prefer non-token utxos for ALPH selection" in new Fixture {
+  it should "prefer non-token utxos for OXM selection" in new Fixture {
     val tokenId = TokenId.generate
     implicit val utxos: AVector[Asset] = buildUtxosWithTokens(
       (20, AVector((tokenId, 10))),

@@ -18,7 +18,7 @@ package org.oxyg3nium.app
 
 import org.oxyg3nium.api.model._
 import org.oxyg3nium.json.Json._
-import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.{OXM, PublicKey}
 import org.oxyg3nium.protocol.model.{
   dustUtxoAmount,
   Address,
@@ -182,7 +182,7 @@ trait VotingFixture extends WalletFixture {
     val allocationTransfers = voters.zipWithIndex
       .map { case (_, i) =>
         s"""
-           |transferToken!(admin, voters[$i], ALPH, $dustAmount)
+           |transferToken!(admin, voters[$i], OXM, $dustAmount)
            |transferTokenFromSelf!(voters[$i], selfTokenId!(), 1)""".stripMargin
       }
       .mkString("\n")
@@ -217,7 +217,7 @@ trait VotingFixture extends WalletFixture {
          |  @using(preapprovedAssets = true, assetsInContract = true, updateFields = true)
          |  pub fn vote(choice: Bool, voter: Address) -> () {
          |    assert!(initialized == true && isClosed == false, 0)
-         |    transferToken!(voter, admin, ALPH, $dustAmount)
+         |    transferToken!(voter, admin, OXM, $dustAmount)
          |    transferTokenToSelf!(voter, selfTokenId!(), 1)
          |
          |    emit VoteCasted(voter, choice)
@@ -277,7 +277,7 @@ trait VotingFixture extends WalletFixture {
          |TxScript TokenAllocation {
          |  let voting = Voting(#${contractId})
          |  let caller = callerAddress!()
-         |  voting.allocateTokens{caller -> ALPH: $dustAmount * ${votersWallets.size}}()
+         |  voting.allocateTokens{caller -> OXM: $dustAmount * ${votersWallets.size}}()
          |}
         $contractCode
       """.stripMargin
@@ -300,7 +300,7 @@ trait VotingFixture extends WalletFixture {
          |TxScript VotingScript {
          |  let caller = callerAddress!()
          |  let voting = Voting(#$contractId)
-         |  voting.vote{caller -> ALPH: $dustAmount, #$contractId: 1}($choice, caller)
+         |  voting.vote{caller -> OXM: $dustAmount, #$contractId: 1}($choice, caller)
          |}
       $contractCode
       """.stripMargin
@@ -456,7 +456,7 @@ trait WalletFixture extends CliqueFixture {
   clique.selfClique().nodes.foreach { peer => request[Boolean](startMining, peer.restPort) is true }
 
   val nWallets       = 5
-  val walletsBalance = ALPH.alph(1000)
+  val walletsBalance = OXM.alph(1000)
   val wallets        = createWallets(nWallets, restPort, walletsBalance)
   wallets.foreach(wallet =>
     request[Balance](getBalance(wallet.activeAddress), restPort).balance.value is walletsBalance

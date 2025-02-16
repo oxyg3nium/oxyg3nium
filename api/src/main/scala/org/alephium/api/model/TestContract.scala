@@ -18,7 +18,7 @@ package org.oxyg3nium.api.model
 
 import org.oxyg3nium.api.{badRequest, Try}
 import org.oxyg3nium.api.model.TestContract._
-import org.oxyg3nium.protocol.{ALPH, Hash}
+import org.oxyg3nium.protocol.{OXM, Hash}
 import org.oxyg3nium.protocol.config.GroupConfig
 import org.oxyg3nium.protocol.model.{Address, BlockHash, ContractId, GroupIndex, TransactionId}
 import org.oxyg3nium.protocol.vm.{ContractState => _, Val => _, _}
@@ -85,7 +85,7 @@ object TestContract {
   val testArgsDefault: AVector[Val]                    = AVector.empty
   val existingContractsDefault: AVector[ContractState] = AVector.empty
   val inputAssetsDefault: AVector[TestInputAsset]      = AVector.empty
-  val initialAssetDefault: AssetState                  = AssetState(ALPH.alph(1))
+  val initialAssetDefault: AssetState                  = AssetState(OXM.alph(1))
 
   @SuppressWarnings(Array("org.wartremover.warts.DefaultArguments"))
   final case class Complete(

@@ -62,9 +62,9 @@ object Keyword {
   case object const      extends Used
   case object `enum`     extends Used
   case object Abstract   extends Used
-  case object ALPH_CAPS extends Used {
+  case object OXM_CAPS extends Used {
     override def name: String =
-      "ALPH"
+      "OXM"
   }
   case object `mapping` extends Used
 

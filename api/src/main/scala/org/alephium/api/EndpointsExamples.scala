@@ -69,8 +69,8 @@ trait EndpointsExamples extends ErrorExamples {
   private val inetAddress       = inetSocketAddress.getAddress
   private val peerAddress       = PeerAddress(inetAddress, restPort, wsPort, minerApiPort)
   private val peers             = AVector(peerAddress)
-  private val bigAmount         = Amount(ALPH.oneAlph.mulUnsafe(U256.Two))
-  private def alph(value: Int)  = Amount(ALPH.oneAlph.mulUnsafe(U256.unsafe(value)))
+  private val bigAmount         = Amount(OXM.oneAlph.mulUnsafe(U256.Two))
+  private def alph(value: Int)  = Amount(OXM.oneAlph.mulUnsafe(U256.unsafe(value)))
   private val height            = 42
   val balance                   = alph(10)
   val halfBalance               = alph(5)
@@ -198,7 +198,7 @@ trait EndpointsExamples extends ErrorExamples {
           hint = outputRef.hint,
           key = outputRef.key,
           unlockScript = unlockupScriptBytes,
-          attoAlphAmount = Amount(ALPH.oneAlph),
+          attoAlphAmount = Amount(OXM.oneAlph),
           address = Address.Asset(lockupScript),
           tokens
         )
@@ -566,7 +566,7 @@ trait EndpointsExamples extends ErrorExamples {
         BuildSweepAddressTransactions(
           publicKey,
           address,
-          Some(Amount(ALPH.oneAlph)),
+          Some(Amount(OXM.oneAlph)),
           Some(ts),
           Some(model.minimalGas),
           Some(model.nonCoinbaseMinGasPrice)
@@ -672,7 +672,7 @@ trait EndpointsExamples extends ErrorExamples {
         address,
         AVector(publicKey),
         address,
-        Some(Amount(ALPH.oneAlph)),
+        Some(Amount(OXM.oneAlph)),
         Some(ts),
         Some(model.minimalGas),
         Some(model.nonCoinbaseMinGasPrice),
@@ -1009,8 +1009,8 @@ trait EndpointsExamples extends ErrorExamples {
     simpleExample(existingContract.bytecode)
 
   private def asset(n: Long) = AssetState.from(
-    ALPH.alph(n),
-    AVector(Token(id = TokenId.hash(s"token${n}"), amount = ALPH.nanoAlph(n)))
+    OXM.alph(n),
+    AVector(Token(id = TokenId.hash(s"token${n}"), amount = OXM.nanoAlph(n)))
   )
   private val anotherContractId = ContractId.hash("contract")
   private val code              = StatefulContract.forSMT.toContract().toOption.get
@@ -1019,8 +1019,8 @@ trait EndpointsExamples extends ErrorExamples {
     bytecode = code,
     codeHash = code.hash,
     initialStateHash = Some(code.initialStateHash(AVector.empty, AVector.empty)),
-    immFields = AVector[Val](ValU256(ALPH.alph(1))),
-    mutFields = AVector[Val](ValU256(ALPH.alph(2))),
+    immFields = AVector[Val](ValU256(OXM.alph(1))),
+    mutFields = AVector[Val](ValU256(OXM.alph(2))),
     asset = asset(2)
   )
   implicit val testContractExamples: List[Example[TestContract]] = {
@@ -1029,11 +1029,11 @@ trait EndpointsExamples extends ErrorExamples {
         group = Some(0),
         address = Some(Address.contract(ContractId.zero)),
         bytecode = code,
-        initialImmFields = Some(AVector[Val](ValU256(ALPH.alph(1)))),
-        initialMutFields = Some(AVector[Val](ValU256(ALPH.alph(2)))),
+        initialImmFields = Some(AVector[Val](ValU256(OXM.alph(1)))),
+        initialMutFields = Some(AVector[Val](ValU256(OXM.alph(2)))),
         initialAsset = Some(asset(1)),
         methodIndex = Some(0),
-        args = Some(AVector[Val](ValU256(ALPH.oneAlph))),
+        args = Some(AVector[Val](ValU256(OXM.oneAlph))),
         existingContracts = Some(AVector(existingContract)),
         inputAssets = Some(AVector(TestInputAsset(address, asset(3))))
       )
@@ -1045,12 +1045,12 @@ trait EndpointsExamples extends ErrorExamples {
       TestContractResult(
         address = contractAddress,
         codeHash = hash,
-        returns = AVector[Val](ValU256(ALPH.oneAlph)),
+        returns = AVector[Val](ValU256(OXM.oneAlph)),
         gasUsed = 20000,
         contracts = AVector(existingContract),
         txInputs = AVector(contractAddress),
         txOutputs =
-          AVector(ContractOutput(1234, hash, Amount(ALPH.oneAlph), contractAddress, tokens)),
+          AVector(ContractOutput(1234, hash, Amount(OXM.oneAlph), contractAddress, tokens)),
         events = AVector(eventByTxId),
         debugMessages = AVector(DebugMessage(contractAddress, "Debugging!"))
       )
@@ -1075,7 +1075,7 @@ trait EndpointsExamples extends ErrorExamples {
     gasUsed = 20000,
     contracts = AVector(existingContract),
     txInputs = AVector(contractAddress),
-    txOutputs = AVector(ContractOutput(1, hash, Amount(ALPH.oneAlph), contractAddress, tokens)),
+    txOutputs = AVector(ContractOutput(1, hash, Amount(OXM.oneAlph), contractAddress, tokens)),
     events = AVector(eventByTxId),
     debugMessages = AVector(DebugMessage(contractAddress, "Debugging!"))
   )
@@ -1102,7 +1102,7 @@ trait EndpointsExamples extends ErrorExamples {
         gasUsed = 100000,
         contracts = AVector(existingContract),
         txInputs = AVector(contractAddress),
-        txOutputs = AVector(ContractOutput(1, hash, Amount(ALPH.oneAlph), contractAddress, tokens)),
+        txOutputs = AVector(ContractOutput(1, hash, Amount(OXM.oneAlph), contractAddress, tokens)),
         events = AVector.empty,
         debugMessages = AVector.empty
       )

@@ -26,7 +26,7 @@ import org.oxyg3nium.util.U256
  * `approved` is the balances that function call potentially can use
  */
 final case class MutBalanceState(remaining: MutBalances, approved: MutBalances) {
-  def approveALPH(lockupScript: LockupScript, amount: U256): Option[Unit] = {
+  def approveOXM(lockupScript: LockupScript, amount: U256): Option[Unit] = {
     for {
       _ <- remaining.subAlph(lockupScript, amount)
       _ <- approved.addAlph(lockupScript, amount)

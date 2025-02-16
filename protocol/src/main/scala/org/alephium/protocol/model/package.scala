@@ -29,13 +29,13 @@ package object model {
 
   // scalastyle:off magic.number
   val minimalGas: GasBox          = GasBox.unsafe(20000)
-  val coinbaseGasPrice: GasPrice  = GasPrice(ALPH.nanoAlph(1))
+  val coinbaseGasPrice: GasPrice  = GasPrice(OXM.nanoAlph(1))
   val coinbaseGasFeeSubsidy: U256 = coinbaseGasPrice * minimalGas
 
   val defaultGasPerInput: GasBox  = GasBox.unsafe(2500)
   val defaultGasPerOutput: GasBox = GasBox.unsafe(6000)
 
-  val nonCoinbaseMinGasPrice: GasPrice = GasPrice(ALPH.nanoAlph(100))
+  val nonCoinbaseMinGasPrice: GasPrice = GasPrice(OXM.nanoAlph(100))
   val nonCoinbaseMinGasFee: U256       = nonCoinbaseMinGasPrice * minimalGas
 
   val maximalTxsInOneBlock: Int          = 2000
@@ -61,14 +61,14 @@ package object model {
   val maximalCodeSizeRhone: Int    = 32 * 1024 // 32KB
   val maximalFieldSize: Int        = 3 * 1024  // 3KB
 
-  val dustUtxoAmount: U256           = ALPH.nanoAlph(1000000)
-  val deprecatedDustUtxoAmount: U256 = ALPH.nanoAlph(1000)
+  val dustUtxoAmount: U256           = OXM.nanoAlph(1000000)
+  val deprecatedDustUtxoAmount: U256 = OXM.nanoAlph(1000)
   val maxTokenPerContractUtxo: Int   = 8
   val maxTokenPerAssetUtxo: Int      = 1
   val deprecatedMaxTokenPerUtxo: Int = 64
 
-  val minimalAlphInContractPreRhone: U256 = ALPH.oneAlph
-  val minimalAlphInContract: U256         = ALPH.oneAlph.divUnsafe(U256.unsafe(10))
+  val minimalAlphInContractPreRhone: U256 = OXM.oneAlph
+  val minimalAlphInContract: U256         = OXM.oneAlph.divUnsafe(U256.unsafe(10))
 
   def minimalContractStorageDeposit(hardFork: HardFork): U256 = {
     if (hardFork.isRhoneEnabled()) minimalAlphInContract else minimalAlphInContractPreRhone

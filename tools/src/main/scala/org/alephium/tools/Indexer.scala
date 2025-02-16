@@ -29,7 +29,7 @@ import org.alephium.flow.setting.{Oxyg3niumConfig, Configs, Platform}
 import org.alephium.flow.validation.BlockValidation
 import org.alephium.io.IOUtils
 import org.alephium.io.RocksDBSource.ColumnFamily
-import org.alephium.protocol.ALPH
+import org.alephium.protocol.OXM
 import org.alephium.protocol.model.{Block, ChainIndex}
 import org.alephium.protocol.vm.WorldState
 import org.alephium.util.{AVector, Env}
@@ -107,7 +107,7 @@ object Indexer extends App with StrictLogging {
     val chain     = blockFlow.getBlockChain(chainIndex)
     IOUtils
       .tryExecute {
-        val fromHeight      = ALPH.GenesisHeight + 1
+        val fromHeight      = OXM.GenesisHeight + 1
         val maxHeight       = chain.maxHeightByWeightUnsafe
         val finalizedHeight = if (maxHeight > maxForkDepth) maxHeight - maxForkDepth else fromHeight
         (fromHeight to maxHeight).foreach { height =>

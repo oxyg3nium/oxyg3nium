@@ -31,7 +31,7 @@ import org.alephium.crypto.wallet.Mnemonic
 import org.alephium.http.HttpFixture._
 import org.alephium.http.HttpRouteFixture
 import org.alephium.json.Json._
-import org.alephium.protocol.{ALPH, Hash, PrivateKey, PublicKey, SignatureSchema}
+import org.alephium.protocol.{OXM, Hash, PrivateKey, PublicKey, SignatureSchema}
 import org.alephium.protocol.config.{GroupConfig, NetworkConfig}
 import org.alephium.protocol.model.{
   Address,
@@ -78,8 +78,8 @@ class WalletAppSpec
   val (_, transferPublicKey) = SignatureSchema.generatePriPub()
   val transferAddress        = Address.p2pkh(transferPublicKey).toBase58
   val transferAmount         = 10
-  val balanceAmount          = Amount(ALPH.alph(42))
-  val lockedAmount           = Amount(ALPH.alph(21))
+  val balanceAmount          = Amount(OXM.alph(42))
+  val lockedAmount           = Amount(OXM.alph(21))
 
   def creationJson(size: Int, name: String) =
     s"""{"password":"$password","mnemonicSize":${size},"walletName":"$name"}"""
@@ -521,7 +521,7 @@ object WalletAppSpec extends {
       complete(
         ctx,
         Balance
-          .from(Amount(ALPH.alph(42)), Amount(ALPH.alph(21)), Some(tokens), Some(lockedTokens), 1)
+          .from(Amount(OXM.alph(42)), Amount(OXM.alph(21)), Some(tokens), Some(lockedTokens), 1)
       )
     }
 

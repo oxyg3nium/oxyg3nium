@@ -19,7 +19,7 @@ The `UnsignedTransaction` object provides several methods for creating and valid
 - `build`: Builds an unsigned transaction from the given input and output information.
 - `approve`: Approves a transaction with a stateful script, owner, inputs, and outputs.
 
-The code also includes helper methods for checking transaction validity, calculating the total amount of tokens and ALPH (the native cryptocurrency) needed for a transaction, and building transaction outputs.
+The code also includes helper methods for checking transaction validity, calculating the total amount of tokens and OXM (the native cryptocurrency) needed for a transaction, and building transaction outputs.
 
 For example, to create an unsigned transaction, you can use the `apply` method:
 
@@ -42,4 +42,4 @@ Overall, the `UnsignedTransaction` code plays a crucial role in the Oxyg3nium pr
    **Answer**: The `build` method is used to create an `UnsignedTransaction` from the provided inputs, such as the lockup and unlock scripts, input UTXOs, output information, gas amount, and gas price. It performs various checks and calculations to ensure the transaction is valid and returns an `Either[String, UnsignedTransaction]`, which is a success case containing the created `UnsignedTransaction` or a failure case with an error message.
 
 3. **Question**: What is the purpose of the `TxOutputInfo` case class and how is it used in the code?
-   **Answer**: The `TxOutputInfo` case class represents the information required for a transaction output, including the lockup script, atto ALPH amount, tokens, lock time, and optional additional data. It is used in various methods, such as `buildOutputs`, `checkMinimalAlphPerOutput`, and `checkTokenValuesNonZero`, to create, validate, and manipulate transaction outputs.
+   **Answer**: The `TxOutputInfo` case class represents the information required for a transaction output, including the lockup script, atto OXM amount, tokens, lock time, and optional additional data. It is used in various methods, such as `buildOutputs`, `checkMinimalAlphPerOutput`, and `checkTokenValuesNonZero`, to create, validate, and manipulate transaction outputs.

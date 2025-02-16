@@ -30,7 +30,7 @@ import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 import net.ceedubs.ficus.readers.ValueReader
 
 import org.oxyg3nium.conf._
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.GroupConfig
 import org.oxyg3nium.protocol.mining.HashRate
 import org.oxyg3nium.protocol.model.{
@@ -82,7 +82,7 @@ class Oxyg3niumConfigSpec extends Oxyg3niumSpec {
     initialHashRate is HashRate.unsafe(new BigInteger("549756862464"))
     config.discovery.bootstrap.head is new InetSocketAddress("bootstrap0.oxyg3nium.org", 9973)
     config.genesis.allocations.length is 858
-    config.genesis.allocations.sumBy(_.amount.value.v) is ALPH.alph(140000000).v
+    config.genesis.allocations.sumBy(_.amount.value.v) is OXM.alph(140000000).v
     config.network.lemanHardForkTimestamp is TimeStamp.unsafe(1680170400000L)
     config.genesisBlocks.flatMap(_.map(_.shortHex)).mkString("-") is
       "634cb950-2c637231-2a7b9072-077cd3d3-c9844184-ecb22a45-d63f3b36-d392ac97-2c9d4d28-08906609-ced88aaa-b7f0541b-5f78e23c-c7a2b25d-6b8cdade-6fedfc7f"
@@ -155,7 +155,7 @@ class Oxyg3niumConfigSpec extends Oxyg3niumSpec {
   }
 
   it should "load genesis config" in {
-    val amount = ALPH.oneAlph
+    val amount = OXM.oneAlph
     val addresses = AVector(
       "127TathFRczW5LXeNK2n2A6Qi2EpkamcmvwCrr3y18uHT",
       "1HMSFdhPpvPybfWLZiHeBxVbnfTc2L6gkVPHfuJWoZrMA"
@@ -176,7 +176,7 @@ class Oxyg3niumConfigSpec extends Oxyg3niumSpec {
          |      },
          |      {
          |        address = "1HMSFdhPpvPybfWLZiHeBxVbnfTc2L6gkVPHfuJWoZrMA",
-         |        amount = "1 ALPH",
+         |        amount = "1 OXM",
          |        lock-duration = 2 days
          |      }
          |    ]

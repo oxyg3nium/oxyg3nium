@@ -46,7 +46,7 @@ import org.oxyg3nium.flow.setting.Oxyg3niumConfig
 import org.oxyg3nium.flow.validation.BlockValidation
 import org.oxyg3nium.http.HttpFixture
 import org.oxyg3nium.json.Json._
-import org.oxyg3nium.protocol.{ALPH, PrivateKey, Signature, SignatureSchema}
+import org.oxyg3nium.protocol.{OXM, PrivateKey, Signature, SignatureSchema}
 import org.oxyg3nium.protocol.model.{Address, Block, ChainIndex, GroupIndex, TokenId, TransactionId}
 import org.oxyg3nium.protocol.vm
 import org.oxyg3nium.protocol.vm.{GasPrice, LockupScript}
@@ -87,7 +87,7 @@ class CliqueFixture(implicit spec: Oxyg3niumActorSpec)
     (Address.p2pkh(pubKey).toBase58, pubKey.toHexString, priKey.toHexString)
   }
 
-  // This address is allocated 1 ALPH in the genensis block
+  // This address is allocated 1 OXM in the genensis block
   val address    = "14PqtYSSbwpUi2RJKUvv9yUwGafd6yHbEcke7ionuiE7w"
   val publicKey  = "03e75902fa24caff042b2b4c350e8f2ffeb3cb95f4263f0e109a2c2d7aa3dcae5c"
   val privateKey = "d24967efb7f1b558ad40a4d71593ceb5b3cecf46d17f0e68ef53def6b391c33d"
@@ -98,7 +98,7 @@ class CliqueFixture(implicit spec: Oxyg3niumActorSpec)
   val password = "password"
 
   val initialBalance = Balance.from(Amount(genesisBalance), Amount.Zero, None, None, 1)
-  val transferAmount = ALPH.alph(1)
+  val transferAmount = OXM.alph(1)
 
   val defaultMasterPort     = generatePort()
   val defaultRestMasterPort = restPort(defaultMasterPort)

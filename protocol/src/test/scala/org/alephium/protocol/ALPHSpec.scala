@@ -23,8 +23,8 @@ import org.oxyg3nium.protocol.model.{Address, ChainIndex, HardFork}
 import org.oxyg3nium.protocol.vm.LockupScript
 import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, NumericHelpers, U256}
 
-class ALPHSpec extends Oxyg3niumSpec {
-  import ALPH._
+class OXMSpec extends Oxyg3niumSpec {
+  import OXM._
 
   it should "use correct unit" in {
     alph(1) is nanoAlph(1).mul(U256.Billion).get
@@ -36,35 +36,35 @@ class ALPHSpec extends Oxyg3niumSpec {
     oneAlph is (oneNanoAlph.mulUnsafe(U256.unsafe(1000000000)))
   }
 
-  it should "parse `x.y ALPH` format" in new Fixture {
-    check("1.2ALPH", alph(12) / 10)
-    check("1.2 ALPH", alph(12) / 10)
-    check("1 ALPH", alph(1))
-    check("1ALPH", alph(1))
-    check("0.1ALPH", alph(1) / 10)
-    check(".1ALPH", alph(1) / 10)
-    check(".1     ALPH", alph(1) / 10)
-    check("0 ALPH", U256.Zero)
-    check("1234.123456 ALPH", alph(1234123456) / 1000000)
+  it should "parse `x.y OXM` format" in new Fixture {
+    check("1.2OXM", alph(12) / 10)
+    check("1.2 OXM", alph(12) / 10)
+    check("1 OXM", alph(1))
+    check("1OXM", alph(1))
+    check("0.1OXM", alph(1) / 10)
+    check(".1OXM", alph(1) / 10)
+    check(".1     OXM", alph(1) / 10)
+    check("0 OXM", U256.Zero)
+    check("1234.123456 OXM", alph(1234123456) / 1000000)
 
-    val alphMax = s"${MaxALPHValue.divUnsafe(oneAlph)}"
+    val alphMax = s"${MaxOXMValue.divUnsafe(oneAlph)}"
     alphMax is "1000000000"
-    check(s"$alphMax ALPH", MaxALPHValue)
+    check(s"$alphMax OXM", MaxOXMValue)
 
     fail("1.2alph")
     fail("-1.2alph")
     fail("1.2 alph")
     fail("1 Alph")
-    fail("1. ALPH")
-    fail(". ALPH")
-    fail(" ALPH")
-    fail("0.000000000000000000001 ALPH")
+    fail("1. OXM")
+    fail(". OXM")
+    fail(" OXM")
+    fail("0.000000000000000000001 OXM")
   }
 
   it should "pretty format" in new Fixture {
     def check(alphAmount: String, str: String) = {
-      val amount = ALPH.alphFromString(s"$alphAmount ALPH").get
-      ALPH.prettifyAmount(amount) is s"$str ALPH"
+      val amount = OXM.alphFromString(s"$alphAmount OXM").get
+      OXM.prettifyAmount(amount) is s"$str OXM"
     }
 
     check("0", "0")
@@ -82,30 +82,30 @@ class ALPHSpec extends Oxyg3niumSpec {
   trait Fixture extends NumericHelpers {
 
     def check(str: String, expected: U256) = {
-      ALPH.alphFromString(str) is Some(expected)
+      OXM.alphFromString(str) is Some(expected)
     }
     def fail(str: String) = {
-      ALPH.alphFromString(str) is None
+      OXM.alphFromString(str) is None
     }
   }
 
   it should "test isSequentialTxSupported" in new GroupConfigFixture.Default {
-    ALPH.isSequentialTxSupported(ChainIndex.unsafe(0, 0), HardFork.Rhone) is true
-    ALPH.isSequentialTxSupported(ChainIndex.unsafe(0, 1), HardFork.Rhone) is false
-    ALPH.isSequentialTxSupported(ChainIndex.unsafe(0, 0), HardFork.PreRhoneForTest) is false
-    ALPH.isSequentialTxSupported(ChainIndex.unsafe(0, 1), HardFork.PreRhoneForTest) is false
+    OXM.isSequentialTxSupported(ChainIndex.unsafe(0, 0), HardFork.Rhone) is true
+    OXM.isSequentialTxSupported(ChainIndex.unsafe(0, 1), HardFork.Rhone) is false
+    OXM.isSequentialTxSupported(ChainIndex.unsafe(0, 0), HardFork.PreRhoneForTest) is false
+    OXM.isSequentialTxSupported(ChainIndex.unsafe(0, 1), HardFork.PreRhoneForTest) is false
   }
 
   it should "test isTestnetMinersWhitelisted" in {
     val validMiners = AVector.from(
-      ALPH.testnetWhitelistedMiners.map(lockupScript =>
+      OXM.testnetWhitelistedMiners.map(lockupScript =>
         Address.from(lockupScript).asInstanceOf[Address.Asset]
       )
     )
-    ALPH.isTestnetMinersWhitelisted(validMiners) is true
-    validMiners.foreach(miner => ALPH.isTestnetMinersWhitelisted(AVector(miner)) is true)
+    OXM.isTestnetMinersWhitelisted(validMiners) is true
+    validMiners.foreach(miner => OXM.isTestnetMinersWhitelisted(AVector(miner)) is true)
     val index        = Random.nextInt(validMiners.length)
     val invalidMiner = Address.Asset(LockupScript.p2pkh(PublicKey.generate))
-    ALPH.isTestnetMinersWhitelisted(validMiners.replace(index, invalidMiner)) is false
+    OXM.isTestnetMinersWhitelisted(validMiners.replace(index, invalidMiner)) is false
   }
 }

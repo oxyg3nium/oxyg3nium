@@ -21,7 +21,7 @@ import java.math.BigInteger
 import org.oxyg3nium.flow.Utils
 import org.oxyg3nium.flow.setting.{ConsensusSetting, ConsensusSettings}
 import org.oxyg3nium.io.{IOResult, IOUtils}
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.{BrokerConfig, NetworkConfig}
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.util.{AVector, Cache, Duration, Math, TimeStamp}
@@ -120,7 +120,7 @@ trait FlowDifficultyAdjustment {
       headerOfIntraDeps
         .map { header =>
           if (header.isGenesis) {
-            genesisHashes(groupIndex.value)(groupIndex.value) -> ALPH.GenesisHeight
+            genesisHashes(groupIndex.value)(groupIndex.value) -> OXM.GenesisHeight
           } else {
             val intraDep = header.getIntraDep(groupIndex)
             val height   = getHeightUnsafe(intraDep)
@@ -172,7 +172,7 @@ trait FlowDifficultyAdjustment {
         (
           consensusConfig.maxMiningTarget.getDifficulty().times(brokerConfig.groups),
           consensusConfig.expectedWindowTimeSpan.timesUnsafe(brokerConfig.groups.toLong),
-          ALPH.GenesisTimestamp
+          OXM.GenesisTimestamp
         )
       } else {
         assume(ChainIndex.from(intraDep).isIntraGroup)

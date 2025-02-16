@@ -19,7 +19,7 @@ package org.oxyg3nium.app
 import java.net.InetSocketAddress
 
 import org.oxyg3nium.api.model._
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.model.{Address, BrokerInfo, GroupIndex}
 import org.oxyg3nium.util._
 
@@ -128,7 +128,7 @@ class BroadcastTxTest extends Oxyg3niumActorSpec {
       transfer(
         publicKey,
         toAddress,
-        ALPH.oneAlph,
+        OXM.oneAlph,
         privateKey,
         restPort(masterPortClique1)
       )

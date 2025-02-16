@@ -2,7 +2,7 @@
 
 The `MiningRewards` object is a tool that calculates the inflation rate of the Oxyg3nium cryptocurrency based on different parameters. The inflation rate is the rate at which the total supply of a cryptocurrency increases over time. The tool calculates the inflation rate based on the hashrate of the network and the number of years since the network's inception.
 
-The tool imports several classes from the Oxyg3nium project, including `ALPH`, `GroupConfig`, `Emission`, `Duration`, `Number`, and `U256`. These classes are used to define the parameters needed to calculate the inflation rate.
+The tool imports several classes from the Oxyg3nium project, including `OXM`, `GroupConfig`, `Emission`, `Duration`, `Number`, and `U256`. These classes are used to define the parameters needed to calculate the inflation rate.
 
 The `MiningRewards` object defines a `groupConfig` object, which specifies the number of groups in the network. It also defines a `blockTargetTime` object, which specifies the target time for each block to be mined. These parameters are used to calculate the `emission` object, which represents the total amount of new coins that will be created over time.
 
@@ -23,4 +23,4 @@ Overall, the `MiningRewards` object is a useful tool for developers working on t
    - This code imports classes from the `org.alephium` and `org.alephium.util` packages, but it is unclear what external libraries or dependencies are required.
 
 3. What is the output of this code?
-   - This code prints two tables to the console: one showing the inflation rate based on hash rate, and another showing the inflation rate based on time. Each table includes three columns: the hash rate or year, the inflation rate as a decimal, and the yearly reward in ALPH.
+   - This code prints two tables to the console: one showing the inflation rate based on hash rate, and another showing the inflation rate based on time. Each table includes three columns: the hash rate or year, the inflation rate as a decimal, and the yearly reward in OXM.

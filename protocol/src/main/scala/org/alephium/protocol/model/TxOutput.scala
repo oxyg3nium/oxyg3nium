@@ -18,7 +18,7 @@ package org.oxyg3nium.protocol.model
 
 import akka.util.ByteString
 
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.GroupConfig
 import org.oxyg3nium.protocol.vm.LockupScript
 import org.oxyg3nium.serde._
@@ -132,7 +132,7 @@ object TxOutput {
       lockupDuration: Duration,
       data: ByteString
   ): AssetOutput = {
-    val lockTime = ALPH.LaunchTimestamp.plusUnsafe(lockupDuration)
+    val lockTime = OXM.LaunchTimestamp.plusUnsafe(lockupDuration)
     AssetOutput(amount, lockupScript, lockTime, AVector.empty, data)
   }
 
@@ -142,7 +142,7 @@ object TxOutput {
 }
 
 /** @param amount
-  *   the number of ALPH in the output
+  *   the number of OXM in the output
   * @param lockupScript
   *   guarding script for unspent output
   * @param lockTime

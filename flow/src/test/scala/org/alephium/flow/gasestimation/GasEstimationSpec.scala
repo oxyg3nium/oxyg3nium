@@ -21,7 +21,7 @@ import org.scalacheck.Gen
 import org.oxyg3nium.flow.Oxyg3niumFlowSpec
 import org.oxyg3nium.flow.core.ExtraUtxosInfo
 import org.oxyg3nium.flow.core.UtxoSelectionAlgo.TxInputWithAsset
-import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.{OXM, PublicKey}
 import org.oxyg3nium.protocol.model._
 import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
 import org.oxyg3nium.protocol.vm.{GasBox, LockupScript, UnlockScript, Val}
@@ -39,8 +39,8 @@ class GasEstimationSpec extends Oxyg3niumFlowSpec with TxInputGenerators {
   }
 
   "GasEstimation.sweepAddress" should "behave the same as GasEstimation.estimateWithP2PKHInputs" in {
-    val inputNumGen  = Gen.choose(1, ALPH.MaxTxInputNum)
-    val outputNumGen = Gen.choose(1, ALPH.MaxTxOutputNum)
+    val inputNumGen  = Gen.choose(1, OXM.MaxTxInputNum)
+    val outputNumGen = Gen.choose(1, OXM.MaxTxOutputNum)
 
     forAll(inputNumGen, outputNumGen) { case (inputNum, outputNum) =>
       val sweepAddressGas = GasEstimation.sweepAddress(inputNum, outputNum)
@@ -400,8 +400,8 @@ class GasEstimationSpec extends Oxyg3niumFlowSpec with TxInputGenerators {
     val group                 = lockup.groupIndex
     val (genesisPriKey, _, _) = genesisKeys(group.value)
     val block =
-      transfer(blockFlow, genesisPriKey, lockup, AVector.empty[(TokenId, U256)], ALPH.alph(2))
-    val output = AVector(TxOutputInfo(lockup, ALPH.alph(1), AVector.empty, None))
+      transfer(blockFlow, genesisPriKey, lockup, AVector.empty[(TokenId, U256)], OXM.alph(2))
+    val output = AVector(TxOutputInfo(lockup, OXM.alph(1), AVector.empty, None))
     addAndCheck(blockFlow, block)
 
     blockFlow

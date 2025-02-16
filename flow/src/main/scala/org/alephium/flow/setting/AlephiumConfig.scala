@@ -33,7 +33,7 @@ import net.ceedubs.ficus.readers.ValueReader
 import org.oxyg3nium.conf._
 import org.oxyg3nium.flow.core.maxForkDepth
 import org.oxyg3nium.flow.network.nat.Upnp
-import org.oxyg3nium.protocol.{ALPH, Hash}
+import org.oxyg3nium.protocol.{OXM, Hash}
 import org.oxyg3nium.protocol.config._
 import org.oxyg3nium.protocol.mining.Emission
 import org.oxyg3nium.protocol.model.{Address, Block, Difficulty, HardFork, NetworkId, Target, Weight}
@@ -228,7 +228,7 @@ object Allocation {
   final case class Amount(value: U256)
   object Amount {
     def from(string: String): Option[Amount] =
-      ALPH.alphFromString(string).map(Amount(_))
+      OXM.alphFromString(string).map(Amount(_))
   }
 }
 

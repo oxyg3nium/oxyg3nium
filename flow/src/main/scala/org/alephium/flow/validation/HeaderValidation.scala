@@ -17,7 +17,7 @@
 package org.oxyg3nium.flow.validation
 
 import org.oxyg3nium.flow.core.BlockFlow
-import org.oxyg3nium.protocol.{ALPH, Hash}
+import org.oxyg3nium.protocol.{OXM, Hash}
 import org.oxyg3nium.protocol.config.{BrokerConfig, ConsensusConfigs, NetworkConfig}
 import org.oxyg3nium.protocol.mining.PoW
 import org.oxyg3nium.protocol.model._
@@ -151,7 +151,7 @@ object HeaderValidation {
     protected[validation] def checkGenesisTimeStamp(
         header: BlockHeader
     ): HeaderValidationResult[Unit] = {
-      if (header.timestamp != ALPH.GenesisTimestamp) {
+      if (header.timestamp != OXM.GenesisTimestamp) {
         invalidHeader(InvalidGenesisTimeStamp)
       } else {
         validHeader(())
@@ -204,7 +204,7 @@ object HeaderValidation {
         header: BlockHeader,
         parent: BlockHeader
     ): HeaderValidationResult[Unit] = {
-      if (header.timestamp < ALPH.LaunchTimestamp) {
+      if (header.timestamp < OXM.LaunchTimestamp) {
         invalidHeader(EarlierThanLaunchTimeStamp)
       } else if (header.timestamp <= parent.timestamp) {
         invalidHeader(NoIncreasingTimeStamp)

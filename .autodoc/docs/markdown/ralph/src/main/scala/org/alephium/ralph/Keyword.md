@@ -4,7 +4,7 @@ This code defines a sealed trait hierarchy for keywords used in the Oxyg3nium pr
 
 The `Keyword` trait has two sub-traits: `Used` and `Unused`. `Used` is further extended by all the keywords that are used in the Oxyg3nium programming language, while `Unused` is extended by a single keyword, `@unused`. 
 
-Each keyword is defined as an object that extends either `Used` or `Unused`. The `name` method is overridden for the `ALPH_CAPS` object to return "ALPH" instead of "ALPH_CAPS". 
+Each keyword is defined as an object that extends either `Used` or `Unused`. The `name` method is overridden for the `OXM_CAPS` object to return "OXM" instead of "OXM_CAPS". 
 
 The `Keyword` object contains an implicit `Ordering` for `Used` keywords, which orders them by their `name`. It also contains a `TreeSet` of all `Used` keywords, which is generated using the `EnumerationMacros` object. The `Used` object also contains a method to check if a given string is a valid `Used` keyword and a method to return the `Used` keyword object for a given string. 
 

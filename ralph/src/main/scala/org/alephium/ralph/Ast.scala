@@ -24,7 +24,7 @@ import scala.collection.mutable
 import akka.util.ByteString
 
 import org.oxyg3nium.protocol.vm
-import org.oxyg3nium.protocol.vm.{ALPHTokenId => ALPHTokenIdInstr, Contract => VmContract, _}
+import org.oxyg3nium.protocol.vm.{OXMTokenId => OXMTokenIdInstr, Contract => VmContract, _}
 import org.oxyg3nium.ralph.LogicalOperator.Not
 import org.oxyg3nium.ralph.Parser.FunctionUsingAnnotation
 import org.oxyg3nium.util.{AVector, DjbHash, Hex, I256, U256}
@@ -32,7 +32,7 @@ import org.oxyg3nium.util.{AVector, DjbHash, Hex, I256, U256}
 // scalastyle:off number.of.methods number.of.types file.size.limit
 object Ast {
   type StdInterfaceId = Val.ByteVec
-  val StdInterfaceIdPrefix: ByteString = ByteString("ALPH", StandardCharsets.UTF_8)
+  val StdInterfaceIdPrefix: ByteString = ByteString("OXM", StandardCharsets.UTF_8)
   private val stdArg: Argument =
     Argument(Ident("__stdInterfaceId"), Type.ByteVec, isMutable = false, isUnused = true)
 
@@ -130,7 +130,7 @@ object Ast {
       val approveCount = tokenAmounts.length
       assume(approveCount >= 1)
       val approveTokens: Seq[Instr[Ctx]] = tokenAmounts.flatMap {
-        case (ALPHTokenId(), amount) =>
+        case (OXMTokenId(), amount) =>
           amount.genCode(state) :+ ApproveAlph.asInstanceOf[Instr[Ctx]]
         case (tokenId, amount) =>
           tokenId.genCode(state) ++ amount.genCode(state) :+ ApproveToken.asInstanceOf[Instr[Ctx]]
@@ -210,12 +210,12 @@ object Ast {
     def genCode(state: Compiler.State[Ctx]): Seq[Instr[Ctx]]
   }
 
-  final case class ALPHTokenId[Ctx <: StatelessContext]() extends Expr[Ctx] {
+  final case class OXMTokenId[Ctx <: StatelessContext]() extends Expr[Ctx] {
     def _getType(state: Compiler.State[Ctx]): Seq[Type] = Seq(Type.ByteVec)
 
     @SuppressWarnings(Array("org.wartremover.warts.AsInstanceOf"))
     def genCode(state: Compiler.State[Ctx]): Seq[Instr[Ctx]] = Seq(
-      ALPHTokenIdInstr.asInstanceOf[Instr[Ctx]]
+      OXMTokenIdInstr.asInstanceOf[Instr[Ctx]]
     )
   }
   final case class Const[Ctx <: StatelessContext](v: Val) extends Expr[Ctx] {
@@ -632,16 +632,16 @@ object Ast {
     @SuppressWarnings(Array("org.wartremover.warts.AsInstanceOf"))
     def _genCode(state: Compiler.State[Ctx]): Seq[Instr[Ctx]] = {
       (id, args) match {
-        case (BuiltIn.approveToken.funcId, Seq(from, ALPHTokenId(), amount)) =>
+        case (BuiltIn.approveToken.funcId, Seq(from, OXMTokenId(), amount)) =>
           Seq(from, amount).flatMap(_.genCode(state)) :+ ApproveAlph.asInstanceOf[Instr[Ctx]]
-        case (BuiltIn.tokenRemaining.funcId, Seq(from, ALPHTokenId())) =>
+        case (BuiltIn.tokenRemaining.funcId, Seq(from, OXMTokenId())) =>
           val instrs = from.genCode(state) :+ AlphRemaining.asInstanceOf[Instr[Ctx]]
           if (ignoreReturn) instrs :+ Pop.asInstanceOf[Instr[Ctx]] else instrs
-        case (BuiltIn.transferToken.funcId, Seq(from, to, ALPHTokenId(), amount)) =>
+        case (BuiltIn.transferToken.funcId, Seq(from, to, OXMTokenId(), amount)) =>
           Seq(from, to, amount).flatMap(_.genCode(state)) :+ TransferAlph.asInstanceOf[Instr[Ctx]]
-        case (BuiltIn.transferTokenFromSelf.funcId, Seq(to, ALPHTokenId(), amount)) =>
+        case (BuiltIn.transferTokenFromSelf.funcId, Seq(to, OXMTokenId(), amount)) =>
           Seq(to, amount).flatMap(_.genCode(state)) :+ TransferAlphFromSelf.asInstanceOf[Instr[Ctx]]
-        case (BuiltIn.transferTokenToSelf.funcId, Seq(from, ALPHTokenId(), amount)) =>
+        case (BuiltIn.transferTokenToSelf.funcId, Seq(from, OXMTokenId(), amount)) =>
           Seq(from, amount).flatMap(_.genCode(state)) :+ TransferAlphToSelf.asInstanceOf[Instr[Ctx]]
         case _ =>
           val func = getFunc(state)
@@ -1137,9 +1137,9 @@ object Ast {
         mutFields :+ CreateMapEntry(immFieldLength.toByte, mutFieldLength.toByte)
     }
     def genCode(state: Compiler.State[StatefulContext]): Seq[Instr[StatefulContext]] = {
-      val approveALPHCodes    = args(0).genCode(state) ++ Seq(MinimalContractDeposit, ApproveAlph)
+      val approveOXMCodes    = args(0).genCode(state) ++ Seq(MinimalContractDeposit, ApproveAlph)
       val createContractCodes = genCreateContract(state)
-      approveALPHCodes ++ createContractCodes
+      approveOXMCodes ++ createContractCodes
     }
     override def reset(): Unit = {
       args.foreach(_.reset())

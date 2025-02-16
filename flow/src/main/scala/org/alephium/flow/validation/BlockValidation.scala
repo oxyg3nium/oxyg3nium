@@ -19,7 +19,7 @@ package org.oxyg3nium.flow.validation
 import org.oxyg3nium.flow.core.{BlockChain, BlockFlow, BlockFlowGroupView}
 import org.oxyg3nium.flow.model.BlockFlowTemplate
 import org.oxyg3nium.io.{IOError, IOUtils}
-import org.oxyg3nium.protocol.{ALPH, Hash}
+import org.oxyg3nium.protocol.{OXM, Hash}
 import org.oxyg3nium.protocol.config.{BrokerConfig, ConsensusConfigs, NetworkConfig}
 import org.oxyg3nium.protocol.mining.Emission
 import org.oxyg3nium.protocol.model._
@@ -222,7 +222,7 @@ trait BlockValidation extends Validation[Block, InvalidBlockStatus, Option[World
   @inline private def checkGhostUncleSize(
       ghostUncleSize: Int
   ): BlockValidationResult[Unit] = {
-    if (ghostUncleSize > ALPH.MaxGhostUncleSize) {
+    if (ghostUncleSize > OXM.MaxGhostUncleSize) {
       invalidBlock(InvalidGhostUncleSize)
     } else {
       validBlock(())
@@ -311,7 +311,7 @@ trait BlockValidation extends Validation[Block, InvalidBlockStatus, Option[World
   }
 
   private[validation] def checkGasPriceDecreasing(block: Block): BlockValidationResult[Unit] = {
-    val result = block.transactions.foldE[Unit, GasPrice](GasPrice(ALPH.MaxALPHValue)) {
+    val result = block.transactions.foldE[Unit, GasPrice](GasPrice(OXM.MaxOXMValue)) {
       case (lastGasPrice, tx) =>
         val txGasPrice = tx.unsigned.gasPrice
         if (txGasPrice > lastGasPrice) Left(()) else Right(txGasPrice)
@@ -467,7 +467,7 @@ trait BlockValidation extends Validation[Block, InvalidBlockStatus, Option[World
     if (
       hardFork.isRhoneEnabled() &&
       networkConfig.networkId == NetworkId.Oxyg3niumTestNet &&
-      !ALPH.testnetWhitelistedMiners.contains(block.minerLockupScript)
+      !OXM.testnetWhitelistedMiners.contains(block.minerLockupScript)
     ) {
       invalidBlock(InvalidTestnetMiner)
     } else {
@@ -674,7 +674,7 @@ trait BlockValidation extends Validation[Block, InvalidBlockStatus, Option[World
         None,
         index
       )
-      if (ALPH.isSequentialTxSupported(chainIndex, hardFork)) {
+      if (OXM.isSequentialTxSupported(chainIndex, hardFork)) {
         blockEnv.addOutputRefFromTx(tx.unsigned)
       }
       txValidationResult match {

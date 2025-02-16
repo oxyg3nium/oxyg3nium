@@ -19,7 +19,7 @@ package org.oxyg3nium.ralph
 import fastparse.{EagerOps, Parsed}
 
 import org.oxyg3nium.crypto.Byte32
-import org.oxyg3nium.protocol.{ALPH, Hash, PublicKey}
+import org.oxyg3nium.protocol.{OXM, Hash, PublicKey}
 import org.oxyg3nium.protocol.model.{Address, ContractId}
 import org.oxyg3nium.protocol.vm.Val
 import org.oxyg3nium.ralph.ArithOperator._
@@ -51,18 +51,18 @@ abstract class LexerSpec(fileURI: Option[java.net.URI]) extends Oxyg3niumSpec {
     parsePositioned("-5i", Lexer.typedNum(_)).get.value.v is Val.I256(I256.from(-5))
     parsePositioned("-5", Lexer.typedNum(_)).get.value.v is Val.I256(I256.from(-5))
     parsePositioned("0x12", Lexer.typedNum(_)).get.value.v is Val.U256(U256.unsafe(18))
-    parsePositioned("5e18", Lexer.typedNum(_)).get.value.v is Val.U256(ALPH.alph(5))
-    parsePositioned("5.12e18", Lexer.typedNum(_)).get.value.v is Val.U256(ALPH.cent(512))
+    parsePositioned("5e18", Lexer.typedNum(_)).get.value.v is Val.U256(OXM.alph(5))
+    parsePositioned("5.12e18", Lexer.typedNum(_)).get.value.v is Val.U256(OXM.cent(512))
     parsePositioned("-5e18", Lexer.typedNum(_)).get.value.v is Val.I256(
-      I256.unsafe(ALPH.alph(5).toBigInt.negate())
+      I256.unsafe(OXM.alph(5).toBigInt.negate())
     )
     parsePositioned("-5.12e18", Lexer.typedNum(_)).get.value.v is Val.I256(
-      I256.unsafe(ALPH.cent(512).toBigInt.negate())
+      I256.unsafe(OXM.cent(512).toBigInt.negate())
     )
     parsePositioned("1_000_000", Lexer.typedNum(_)).get.value.v is Val.U256(U256.unsafe(1000000))
-    parsePositioned("1alph", Lexer.typedNum(_)).get.value.v is Val.U256(ALPH.oneAlph)
-    parsePositioned("1 alph", Lexer.typedNum(_)).get.value.v is Val.U256(ALPH.oneAlph)
-    parsePositioned("0.01 alph", Lexer.typedNum(_)).get.value.v is Val.U256(ALPH.cent(1))
+    parsePositioned("1alph", Lexer.typedNum(_)).get.value.v is Val.U256(OXM.oneAlph)
+    parsePositioned("1 alph", Lexer.typedNum(_)).get.value.v is Val.U256(OXM.oneAlph)
+    parsePositioned("0.01 alph", Lexer.typedNum(_)).get.value.v is Val.U256(OXM.cent(1))
     parsePositioned("1e-18 alph", Lexer.typedNum(_)).get.value.v is Val.U256(U256.One)
     parsePositioned("1e-18 alph", Lexer.typedNum(_)).get.value.v is Val.U256(U256.One)
 

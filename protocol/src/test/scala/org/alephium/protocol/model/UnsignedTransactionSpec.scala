@@ -18,7 +18,7 @@ package org.oxyg3nium.protocol.model
 
 import akka.util.ByteString
 
-import org.oxyg3nium.protocol.{ALPH, PublicKey}
+import org.oxyg3nium.protocol.{OXM, PublicKey}
 import org.oxyg3nium.protocol.model.UnsignedTransaction.TxOutputInfo
 import org.oxyg3nium.protocol.vm.LockupScript
 import org.oxyg3nium.util.{Oxyg3niumSpec, AVector, NumericHelpers, TimeStamp, U256}
@@ -28,13 +28,13 @@ class UnsignedTransactionSpec extends Oxyg3niumSpec with NumericHelpers {
 
   trait BuildOutputsFixture extends Fixture
 
-  it should "build outputs for ALPH" in new BuildOutputsFixture {
+  it should "build outputs for OXM" in new BuildOutputsFixture {
     UnsignedTransaction.buildOutputs(outputInfo(dustUtxoAmount - 1)) is
       AVector(output(dustUtxoAmount))
     UnsignedTransaction.buildOutputs(outputInfo(dustUtxoAmount)) is
       AVector(output(dustUtxoAmount))
-    UnsignedTransaction.buildOutputs(outputInfo(ALPH.oneAlph)) is
-      AVector(output(ALPH.oneAlph))
+    UnsignedTransaction.buildOutputs(outputInfo(OXM.oneAlph)) is
+      AVector(output(OXM.oneAlph))
   }
 
   it should "build outputs for token" in new BuildOutputsFixture {
@@ -45,7 +45,7 @@ class UnsignedTransactionSpec extends Oxyg3niumSpec with NumericHelpers {
     ) is AVector(output(dustUtxoAmount, tokenId0, 1), output(dustUtxoAmount, tokenId1, 2))
   }
 
-  it should "build outputs for ALPH and token" in new BuildOutputsFixture {
+  it should "build outputs for OXM and token" in new BuildOutputsFixture {
     UnsignedTransaction.buildOutputs(outputInfo(dustUtxoAmount - 1, AVector(tokenId0 -> 1))) is
       AVector(output(dustUtxoAmount, tokenId0, 1))
     UnsignedTransaction.buildOutputs(outputInfo(dustUtxoAmount, AVector(tokenId0 -> 1))) is
@@ -88,10 +88,10 @@ class UnsignedTransactionSpec extends Oxyg3niumSpec with NumericHelpers {
     }
   }
 
-  it should "calculate change outputs for ALPH" in new ChangeOutputFixture {
+  it should "calculate change outputs for OXM" in new ChangeOutputFixture {
     calculateChangeOutputs(0, AVector.empty) isE AVector.empty[AssetOutput]
     calculateChangeOutputs(dustUtxoAmount - 1, AVector.empty).leftValue is
-      s"Not enough ALPH for ALPH change output, expected $dustUtxoAmount, got ${dustUtxoAmount - 1}"
+      s"Not enough OXM for OXM change output, expected $dustUtxoAmount, got ${dustUtxoAmount - 1}"
     calculateChangeOutputs(dustUtxoAmount, AVector.empty) isE
       AVector(output(dustUtxoAmount))
     calculateChangeOutputs(dustUtxoAmount + 1, AVector.empty) isE
@@ -100,34 +100,34 @@ class UnsignedTransactionSpec extends Oxyg3niumSpec with NumericHelpers {
 
   it should "calculate change outputs for token" in new ChangeOutputFixture {
     calculateChangeOutputs(0, AVector(tokenId0 -> 1)).leftValue is
-      s"Not enough ALPH for token change output, expected $dustUtxoAmount, got 0"
+      s"Not enough OXM for token change output, expected $dustUtxoAmount, got 0"
     calculateChangeOutputs(dustUtxoAmount - 1, AVector(tokenId0 -> 1)).leftValue is
-      s"Not enough ALPH for token change output, expected $dustUtxoAmount, got ${dustUtxoAmount - 1}"
+      s"Not enough OXM for token change output, expected $dustUtxoAmount, got ${dustUtxoAmount - 1}"
     calculateChangeOutputs(dustUtxoAmount, AVector(tokenId0 -> 1)) isE
       AVector(output(dustUtxoAmount, tokenId0, 1))
     calculateChangeOutputs(dustUtxoAmount + 1, AVector(tokenId0 -> 1)).leftValue is
-      s"Not enough ALPH for ALPH and token change output, expected ${dustUtxoAmount * 2}, got ${dustUtxoAmount + 1}"
+      s"Not enough OXM for OXM and token change output, expected ${dustUtxoAmount * 2}, got ${dustUtxoAmount + 1}"
     calculateChangeOutputs(dustUtxoAmount * 2 - 1, AVector(tokenId0 -> 1)).leftValue is
-      s"Not enough ALPH for ALPH and token change output, expected ${dustUtxoAmount * 2}, got ${dustUtxoAmount * 2 - 1}"
+      s"Not enough OXM for OXM and token change output, expected ${dustUtxoAmount * 2}, got ${dustUtxoAmount * 2 - 1}"
     calculateChangeOutputs(dustUtxoAmount * 2, AVector(tokenId0 -> 1)) isE
       AVector(output(dustUtxoAmount, tokenId0, 1), output(dustUtxoAmount))
 
     calculateChangeOutputs(0, AVector(tokenId0 -> 1, tokenId1 -> 1)).leftValue is
-      s"Not enough ALPH for token change output, expected ${dustUtxoAmount * 2}, got 0"
+      s"Not enough OXM for token change output, expected ${dustUtxoAmount * 2}, got 0"
     calculateChangeOutputs(
       dustUtxoAmount * 2 - 1,
       AVector(tokenId0 -> 1, tokenId1 -> 1)
-    ).leftValue is s"Not enough ALPH for token change output, expected ${dustUtxoAmount * 2}, got ${dustUtxoAmount * 2 - 1}"
+    ).leftValue is s"Not enough OXM for token change output, expected ${dustUtxoAmount * 2}, got ${dustUtxoAmount * 2 - 1}"
     calculateChangeOutputs(dustUtxoAmount * 2, AVector(tokenId0 -> 1, tokenId1 -> 1)) isE
       AVector(output(dustUtxoAmount, tokenId0, 1), output(dustUtxoAmount, tokenId1, 1))
     calculateChangeOutputs(
       dustUtxoAmount * 2 + 1,
       AVector(tokenId0 -> 1, tokenId1 -> 1)
-    ).leftValue is s"Not enough ALPH for ALPH and token change output, expected ${dustUtxoAmount * 3}, got ${dustUtxoAmount * 2 + 1}"
+    ).leftValue is s"Not enough OXM for OXM and token change output, expected ${dustUtxoAmount * 3}, got ${dustUtxoAmount * 2 + 1}"
     calculateChangeOutputs(
       dustUtxoAmount * 3 - 1,
       AVector(tokenId0 -> 1, tokenId1 -> 1)
-    ).leftValue is s"Not enough ALPH for ALPH and token change output, expected ${dustUtxoAmount * 3}, got ${dustUtxoAmount * 3 - 1}"
+    ).leftValue is s"Not enough OXM for OXM and token change output, expected ${dustUtxoAmount * 3}, got ${dustUtxoAmount * 3 - 1}"
     calculateChangeOutputs(dustUtxoAmount * 3, AVector(tokenId0 -> 1, tokenId1 -> 1)) isE
       AVector(
         output(dustUtxoAmount, tokenId0, 1),
@@ -142,7 +142,7 @@ class UnsignedTransactionSpec extends Oxyg3niumSpec with NumericHelpers {
 
   trait TotalAmountFixture extends Fixture {}
 
-  it should "calculate total amount needed for ALPH" in new TotalAmountFixture {
+  it should "calculate total amount needed for OXM" in new TotalAmountFixture {
     calculateTotalAmountNeeded(AVector(outputInfo(dustUtxoAmount - 1))) isE
       ((dustUtxoAmount * 2, AVector.empty[(TokenId, U256)], 2))
     calculateTotalAmountNeeded(AVector(outputInfo(dustUtxoAmount))) isE
@@ -172,7 +172,7 @@ class UnsignedTransactionSpec extends Oxyg3niumSpec with NumericHelpers {
     ) isE ((dustUtxoAmount * 7, AVector(tokenId0 -> U256.unsafe(4), tokenId1 -> U256.unsafe(6)), 7))
   }
 
-  it should "calculate total amount needed for ALPH and token" in new TotalAmountFixture {
+  it should "calculate total amount needed for OXM and token" in new TotalAmountFixture {
     calculateTotalAmountNeeded(AVector(outputInfo(dustUtxoAmount + 1, AVector(tokenId0 -> 1)))) isE
       ((dustUtxoAmount * 4, AVector(tokenId0 -> U256.One), 4))
     calculateTotalAmountNeeded(

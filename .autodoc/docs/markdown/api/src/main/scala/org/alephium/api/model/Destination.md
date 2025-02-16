@@ -17,7 +17,7 @@ import org.alephium.api.model.Destination
 import org.alephium.protocol.model.Address
 import org.alephium.util.Amount
 
-val destAddress = Address.fromString("ALPH-abc123")
+val destAddress = Address.fromString("OXM-abc123")
 val alphAmount = Amount.fromAlph(10)
 val token1 = Token.fromString("TOKEN1-xyz789")
 val token2 = Token.fromString("TOKEN2-123abc")

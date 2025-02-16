@@ -21,13 +21,13 @@ import java.text.{DecimalFormat, DecimalFormatSymbols}
 import org.oxyg3nium.protocol.model.{Address, ChainIndex, HardFork, Weight}
 import org.oxyg3nium.util.{AVector, Duration, Number, TimeStamp, U256}
 
-object ALPH {
+object OXM {
   // scalastyle:off magic.number
-  val CoinInOneALPH: U256     = U256.unsafe(Number.quintillion)
-  val CoinInOneCent: U256     = CoinInOneALPH divUnsafe U256.unsafe(100)
+  val CoinInOneOXM: U256     = U256.unsafe(Number.quintillion)
+  val CoinInOneCent: U256     = CoinInOneOXM divUnsafe U256.unsafe(100)
   val CoinInOneNanoAlph: U256 = U256.unsafe(Number.billion)
 
-  val MaxALPHValue: U256 = U256.Billion mulUnsafe CoinInOneALPH
+  val MaxOXMValue: U256 = U256.Billion mulUnsafe CoinInOneOXM
 
   val GenesisHeight: Int          = 0
   val GenesisWeight: Weight       = Weight.zero
@@ -52,11 +52,11 @@ object ALPH {
   val MaxGhostUncleSize: Int = 2
   // scalastyle:on magic.number
 
-  def alph(amount: U256): Option[U256] = amount.mul(CoinInOneALPH)
+  def alph(amount: U256): Option[U256] = amount.mul(CoinInOneOXM)
 
   def alph(amount: Long): U256 = {
     assume(amount >= 0)
-    U256.unsafe(amount).mulUnsafe(CoinInOneALPH)
+    U256.unsafe(amount).mulUnsafe(CoinInOneOXM)
   }
 
   def cent(amount: Long): U256 = {
@@ -69,12 +69,12 @@ object ALPH {
     U256.unsafe(amount).mulUnsafe(CoinInOneNanoAlph)
   }
 
-  val oneAlph: U256     = CoinInOneALPH
+  val oneAlph: U256     = CoinInOneOXM
   val oneNanoAlph: U256 = CoinInOneNanoAlph
 
-  // x.x ALPH format
+  // x.x OXM format
   def alphFromString(string: String): Option[U256] = {
-    val regex = """([0-9]*\.?[0-9]+) *ALPH""".r
+    val regex = """([0-9]*\.?[0-9]+) *OXM""".r
     string match {
       case regex(v) =>
         val bigDecimal = new java.math.BigDecimal(v)
@@ -92,10 +92,10 @@ object ALPH {
 
   def prettifyAmount(amount: U256): String = {
     if (amount == U256.Zero) {
-      "0 ALPH"
+      "0 OXM"
     } else {
       val converted = (BigDecimal(amount.v) / BigDecimal(oneAlph.v)).toDouble
-      s"${format(converted)} ALPH"
+      s"${format(converted)} OXM"
     }
   }
 

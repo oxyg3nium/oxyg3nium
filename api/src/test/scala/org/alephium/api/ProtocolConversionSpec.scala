@@ -25,7 +25,7 @@ import org.scalatest.{Assertion, EitherValues}
 
 import org.oxyg3nium.api.model._
 import org.oxyg3nium.json.Json._
-import org.oxyg3nium.protocol.{model => protocol, ALPH}
+import org.oxyg3nium.protocol.{model => protocol, OXM}
 import org.oxyg3nium.protocol.config.NetworkConfigFixture
 import org.oxyg3nium.protocol.vm
 import org.oxyg3nium.serde.deserialize
@@ -126,7 +126,7 @@ class ProtocolConversionSpec extends Oxyg3niumSpec with EitherValues with Numeri
   it should "convert genesis block" in new Fixture {
     val block = blockGen(chainIndexGen.sample.value).sample.value
     val genesis = block
-      .copy(header = block.header.copy(timestamp = ALPH.GenesisTimestamp))
+      .copy(header = block.header.copy(timestamp = OXM.GenesisTimestamp))
       .copy(transactions = AVector.empty)
 
     genesis.isGenesis is true

@@ -2,11 +2,11 @@
 
 The `.autodoc/docs/json/protocol` folder is a crucial part of the Oxyg3nium project, providing essential functionality for various aspects such as managing the Oxyg3nium cryptocurrency, handling message serialization and deserialization, and managing the mining process. The code is organized into the `org.alephium.protocol` package, which includes several files and subfolders, each with a specific purpose.
 
-For instance, the `ALPH.scala` file contains constants and utility functions related to the Oxyg3nium cryptocurrency, allowing for easy maintenance and updates. It can be used throughout the project for currency conversions and accessing important constants:
+For instance, the `OXM.scala` file contains constants and utility functions related to the Oxyg3nium cryptocurrency, allowing for easy maintenance and updates. It can be used throughout the project for currency conversions and accessing important constants:
 
 ```scala
-val amountInWei = ALPH.alph(10)
-val amountInNanoAlph = ALPH.nanoAlph(1000)
+val amountInWei = OXM.alph(10)
+val amountInNanoAlph = OXM.nanoAlph(1000)
 ```
 
 The `DiscoveryVersion.scala` and `WireVersion.scala` files define case classes and objects for representing the version numbers of the discovery and wire protocols used by the Oxyg3nium network, ensuring compatibility between nodes:

@@ -26,7 +26,7 @@ import com.typesafe.scalalogging.LazyLogging
 import org.oxyg3nium.flow.model.BlockFlowTemplate
 import org.oxyg3nium.flow.setting.MiningSetting
 import org.oxyg3nium.flow.validation.InvalidTestnetMiner
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.{GroupConfig, NetworkConfig}
 import org.oxyg3nium.protocol.mining.PoW
 import org.oxyg3nium.protocol.model._
@@ -137,7 +137,7 @@ object Miner extends LazyLogging {
       miners: AVector[Address.Asset]
   )(implicit network: NetworkConfig): Either[String, Unit] = {
     if (network.networkId == NetworkId.Oxyg3niumTestNet) {
-      if (ALPH.isTestnetMinersWhitelisted(miners)) {
+      if (OXM.isTestnetMinersWhitelisted(miners)) {
         Right(())
       } else {
         Left(InvalidTestnetMiner.toString)

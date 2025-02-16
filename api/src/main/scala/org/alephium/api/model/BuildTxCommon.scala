@@ -79,7 +79,7 @@ object BuildTxCommon {
           case ((Some(alphAmount), tokenList), Token(TokenId.alph, tokenAmount)) =>
             alphAmount
               .add(tokenAmount)
-              .toRight("ALPH amount overflow")
+              .toRight("OXM amount overflow")
               .map(v => (Some(v), tokenList))
           case ((None, tokenList), Token(TokenId.alph, tokenAmount)) =>
             Right((Some(tokenAmount), tokenList))

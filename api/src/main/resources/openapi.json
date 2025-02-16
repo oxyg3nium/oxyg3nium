@@ -891,7 +891,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y ALPH`, where `1 ALPH = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
+            "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y OXM`, where `1 OXM = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
             "content": {
               "application/json": {
                 "schema": {
@@ -899,14 +899,14 @@
                 },
                 "example": {
                   "totalBalance": "10000000000000000000",
-                  "totalBalanceHint": "10 ALPH",
+                  "totalBalanceHint": "10 OXM",
                   "balances": [
                     {
                       "address": "1AujpupFP4KWeZvqA7itsHY9cLJmx4qTzojVZrg8W9y",
                       "balance": "10000000000000000000",
-                      "balanceHint": "10 ALPH",
+                      "balanceHint": "10 OXM",
                       "lockedBalance": "0",
-                      "lockedBalanceHint": "0 ALPH"
+                      "lockedBalanceHint": "0 OXM"
                     }
                   ]
                 }
@@ -1126,7 +1126,7 @@
         "tags": [
           "Wallets"
         ],
-        "summary": "Transfer ALPH from the active address",
+        "summary": "Transfer OXM from the active address",
         "operationId": "postWalletsWallet_nameTransfer",
         "parameters": [
           {
@@ -1139,7 +1139,7 @@
           }
         ],
         "requestBody": {
-          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y ALPH`, where `1 ALPH = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
+          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y OXM`, where `1 OXM = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
           "content": {
             "application/json": {
               "schema": {
@@ -1290,7 +1290,7 @@
         "tags": [
           "Wallets"
         ],
-        "summary": "Transfer all unlocked ALPH from the active address to another address",
+        "summary": "Transfer all unlocked OXM from the active address to another address",
         "operationId": "postWalletsWallet_nameSweep-active-address",
         "parameters": [
           {
@@ -1437,7 +1437,7 @@
         "tags": [
           "Wallets"
         ],
-        "summary": "Transfer unlocked ALPH from all addresses (including all mining addresses if applicable) to another address",
+        "summary": "Transfer unlocked OXM from all addresses (including all mining addresses if applicable) to another address",
         "operationId": "postWalletsWallet_nameSweep-all-addresses",
         "parameters": [
           {
@@ -5719,7 +5719,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y ALPH`, where `1 ALPH = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
+            "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y OXM`, where `1 OXM = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
             "content": {
               "application/json": {
                 "schema": {
@@ -5730,9 +5730,9 @@
                     "summary": "Default",
                     "value": {
                       "balance": "10000000000000000000",
-                      "balanceHint": "10 ALPH",
+                      "balanceHint": "10 OXM",
                       "lockedBalance": "5000000000000000000",
-                      "lockedBalanceHint": "5 ALPH",
+                      "lockedBalanceHint": "5 OXM",
                       "tokenBalances": [
                         {
                           "id": "2d11fd6c12435ffb07aaed4d190a505b621b927a5f6e51b61ce0ebe186397bdd",
@@ -5756,9 +5756,9 @@
                     "summary": "More settings",
                     "value": {
                       "balance": "10000000000000000000",
-                      "balanceHint": "10 ALPH",
+                      "balanceHint": "10 OXM",
                       "lockedBalance": "5000000000000000000",
-                      "lockedBalanceHint": "5 ALPH",
+                      "lockedBalanceHint": "5 OXM",
                       "tokenBalances": [
                         {
                           "id": "2d11fd6c12435ffb07aaed4d190a505b621b927a5f6e51b61ce0ebe186397bdd",
@@ -6506,7 +6506,7 @@
         "summary": "Build an unsigned transfer transaction to a number of recipients",
         "operationId": "postTransactionsBuild",
         "requestBody": {
-          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y ALPH`, where `1 ALPH = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
+          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y OXM`, where `1 OXM = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
           "content": {
             "application/json": {
               "schema": {
@@ -6785,7 +6785,7 @@
         "summary": "Build unsigned transfer transactions from an address of one group to addresses of many groups. Each target group requires a dedicated transaction or more in case large number of outputs needed to be split.",
         "operationId": "postTransactionsBuild-transfer-from-one-to-many-groups",
         "requestBody": {
-          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y ALPH`, where `1 ALPH = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
+          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y OXM`, where `1 OXM = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
           "content": {
             "application/json": {
               "schema": {
@@ -6955,7 +6955,7 @@
         "summary": "Build an unsigned transaction with multiple addresses to a number of recipients",
         "operationId": "postTransactionsBuild-multi-addresses",
         "requestBody": {
-          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y ALPH`, where `1 ALPH = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
+          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y OXM`, where `1 OXM = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
           "content": {
             "application/json": {
               "schema": {
@@ -7089,7 +7089,7 @@
         "tags": [
           "Transactions"
         ],
-        "summary": "Build unsigned transactions to send all unlocked ALPH and token balances of one address to another address",
+        "summary": "Build unsigned transactions to send all unlocked OXM and token balances of one address to another address",
         "operationId": "postTransactionsSweep-addressBuild",
         "requestBody": {
           "content": {
@@ -11702,7 +11702,7 @@
         "summary": "Create the multisig address and unlock script",
         "operationId": "postMultisigAddress",
         "requestBody": {
-          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y ALPH`, where `1 ALPH = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
+          "description": "Format 1: `1000000000000000000`\n\nFormat 2: `x.y OXM`, where `1 OXM = 1000000000000000000\n\nField fromPublicKeyType can be  `default` or `bip340-schnorr`",
           "content": {
             "application/json": {
               "schema": {
@@ -11983,7 +11983,7 @@
         "tags": [
           "Multi-signature"
         ],
-        "summary": "Sweep all unlocked ALPH and token balances of a multisig address to another address",
+        "summary": "Sweep all unlocked OXM and token balances of a multisig address to another address",
         "operationId": "postMultisigSweep",
         "requestBody": {
           "content": {
@@ -13622,7 +13622,7 @@
           },
           "balanceHint": {
             "type": "string",
-            "format": "x.x ALPH"
+            "format": "x.x OXM"
           },
           "lockedBalance": {
             "type": "string",
@@ -13630,7 +13630,7 @@
           },
           "lockedBalanceHint": {
             "type": "string",
-            "format": "x.x ALPH"
+            "format": "x.x OXM"
           }
         }
       },
@@ -13795,7 +13795,7 @@
           },
           "balanceHint": {
             "type": "string",
-            "format": "x.x ALPH"
+            "format": "x.x OXM"
           },
           "lockedBalance": {
             "type": "string",
@@ -13803,7 +13803,7 @@
           },
           "lockedBalanceHint": {
             "type": "string",
-            "format": "x.x ALPH"
+            "format": "x.x OXM"
           },
           "tokenBalances": {
             "type": "array",
@@ -13838,7 +13838,7 @@
           },
           "totalBalanceHint": {
             "type": "string",
-            "format": "x.x ALPH"
+            "format": "x.x OXM"
           },
           "balances": {
             "type": "array",

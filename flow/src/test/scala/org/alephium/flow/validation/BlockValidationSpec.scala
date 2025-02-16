@@ -28,7 +28,7 @@ import org.oxyg3nium.flow.FlowFixture
 import org.oxyg3nium.flow.core.{BlockFlow, FlowUtils}
 import org.oxyg3nium.flow.gasestimation.GasEstimation
 import org.oxyg3nium.flow.io.StoragesFixture
-import org.oxyg3nium.protocol.{ALPH, Hash, PrivateKey, PublicKey, Signature, SignatureSchema}
+import org.oxyg3nium.protocol.{OXM, Hash, PrivateKey, PublicKey, Signature, SignatureSchema}
 import org.oxyg3nium.protocol.config._
 import org.oxyg3nium.protocol.mining.{Emission, HashRate}
 import org.oxyg3nium.protocol.model._
@@ -291,7 +291,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
       Map(("oxyg3nium.network.rhone-hard-fork-timestamp", TimeStamp.Max.millis))
     networkConfig.getHardFork(TimeStamp.now()) is HardFork.Leman
 
-    val ghostUncles = AVector.fill(ALPH.MaxGhostUncleSize)(
+    val ghostUncles = AVector.fill(OXM.MaxGhostUncleSize)(
       GhostUncleData(BlockHash.random, assetLockupGen(chainIndex.to).sample.get)
     )
 
@@ -614,7 +614,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
 
   it should "validate old blocks" in new GenesisForkFixture {
     val block0     = transfer(blockFlow, chainIndex)
-    val newBlockTs = ALPH.LaunchTimestamp.plusSecondsUnsafe(10)
+    val newBlockTs = OXM.LaunchTimestamp.plusSecondsUnsafe(10)
     val block1     = mineWithoutCoinbase(blockFlow, chainIndex, block0.nonCoinbase, newBlockTs)
     checkBlockUnit(block1, blockFlow) isE ()
   }
@@ -706,7 +706,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
 
     def mineBlockWith2Uncle(heightDiff0: Int, heightDiff1: Int): (Block, Int, Int) = {
       assume(heightDiff0 <= heightDiff1)
-      (0 until ALPH.MaxGhostUncleAge).foreach(_ =>
+      (0 until OXM.MaxGhostUncleAge).foreach(_ =>
         addAndCheck(blockFlow, emptyBlock(blockFlow, chainIndex))
       )
       val maxHeight   = blockFlow.getMaxHeightByWeight(chainIndex).rightValue
@@ -749,7 +749,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
 
     {
       info("block has 1 uncle")
-      val heightDiff      = Random.between(1, ALPH.MaxGhostUncleAge)
+      val heightDiff      = Random.between(1, OXM.MaxGhostUncleAge)
       val block           = mineBlockWith1Uncle(heightDiff)
       val miningReward    = getMiningReward(block)
       val mainChainReward = Coinbase.calcMainChainReward(miningReward)
@@ -776,7 +776,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
 
     {
       info("block has 2 uncles")
-      val diffs = (0 until 2).map(_ => Random.between(1, ALPH.MaxGhostUncleAge)).sorted
+      val diffs = (0 until 2).map(_ => Random.between(1, OXM.MaxGhostUncleAge)).sorted
       val (block, diff0, diff1) = mineBlockWith2Uncle(diffs(0), diffs(1))
       val miningReward          = getMiningReward(block)
       val mainChainReward       = Coinbase.calcMainChainReward(miningReward)
@@ -833,7 +833,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
 
     {
       info("block has 1 uncle")
-      val heightDiff      = Random.between(1, ALPH.MaxGhostUncleAge)
+      val heightDiff      = Random.between(1, OXM.MaxGhostUncleAge)
       val block           = mineBlockWith1Uncle(heightDiff)
       val miningReward    = getMiningReward(block)
       val mainChainReward = Coinbase.calcMainChainReward(miningReward)
@@ -857,7 +857,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
 
     {
       info("block has 2 uncles")
-      val diffs = (0 until 2).map(_ => Random.between(1, ALPH.MaxGhostUncleAge)).sorted
+      val diffs = (0 until 2).map(_ => Random.between(1, OXM.MaxGhostUncleAge)).sorted
       val (block, diff0, diff1) = mineBlockWith2Uncle(diffs(0), diffs(1))
       val miningReward          = getMiningReward(block)
       val mainChainReward       = Coinbase.calcMainChainReward(miningReward)
@@ -915,11 +915,11 @@ class BlockValidationSpec extends Oxyg3niumSpec {
   }
 
   it should "invalidate block with invalid uncles size" in new RhoneFixture {
-    val hashes        = mineBlocks(ALPH.MaxGhostUncleSize + 1)
+    val hashes        = mineBlocks(OXM.MaxGhostUncleSize + 1)
     val blockTemplate = blockFlow.prepareBlockFlowUnsafe(chainIndex, miner)
-    blockTemplate.ghostUncleHashes.length is ALPH.MaxGhostUncleSize
+    blockTemplate.ghostUncleHashes.length is OXM.MaxGhostUncleSize
     val ghostUncleHashes = hashes.tail
-    ghostUncleHashes.length is ALPH.MaxGhostUncleSize + 1
+    ghostUncleHashes.length is OXM.MaxGhostUncleSize + 1
     val block = mine(
       blockFlow,
       blockTemplate.setGhostUncles(
@@ -930,7 +930,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
   }
 
   it should "invalidate block with unsorted uncles" in new RhoneFixture {
-    mineBlocks(ALPH.MaxGhostUncleSize)
+    mineBlocks(OXM.MaxGhostUncleSize)
     val blockTemplate = blockFlow.prepareBlockFlowUnsafe(chainIndex, miner)
     blockTemplate.ghostUncleHashes.length is 2
 
@@ -981,7 +981,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
   }
 
   it should "invalidate block if the uncle miner is invalid" in new RhoneFixture {
-    mineBlocks(ALPH.MaxGhostUncleSize)
+    mineBlocks(OXM.MaxGhostUncleSize)
     val blockTemplate = blockFlow.prepareBlockFlowUnsafe(chainIndex, miner)
     blockTemplate.ghostUncleHashes.length is 2
 
@@ -995,7 +995,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
   }
 
   it should "invalidate block with used uncles" in new RhoneFixture {
-    mineBlocks(ALPH.MaxGhostUncleSize)
+    mineBlocks(OXM.MaxGhostUncleSize)
     val block0 = mineBlockTemplate(blockFlow, chainIndex)
     addAndCheck(blockFlow, block0)
 
@@ -1034,7 +1034,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
     addAndCheck(blockFlow, block0)
 
     var parentBlock = block0
-    (0 until ALPH.MaxGhostUncleAge).foreach { _ =>
+    (0 until OXM.MaxGhostUncleAge).foreach { _ =>
       val blockTemplate = blockFlow.prepareBlockFlowUnsafe(chainIndex, miner)
       val invalidBlock =
         mine(
@@ -1050,7 +1050,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
 
     addAndCheck(blockFlow, emptyBlockWithMiner(blockFlow, chainIndex, miner))
     (blockFlow.getMaxHeightByWeight(chainIndex).rightValue -
-      blockFlow.getHeightUnsafe(block0.hash)) > ALPH.MaxGhostUncleAge is true
+      blockFlow.getHeightUnsafe(block0.hash)) > OXM.MaxGhostUncleAge is true
     val blockTemplate = blockFlow.prepareBlockFlowUnsafe(chainIndex, miner)
     val invalidBlock =
       mine(
@@ -1136,9 +1136,9 @@ class BlockValidationSpec extends Oxyg3niumSpec {
   }
 
   it should "validate block with valid uncles" in new RhoneFixture {
-    mineBlocks(ALPH.MaxGhostUncleSize)
+    mineBlocks(OXM.MaxGhostUncleSize)
     val blockTemplate = blockFlow.prepareBlockFlowUnsafe(chainIndex, miner)
-    blockTemplate.ghostUncleHashes.length is ALPH.MaxGhostUncleSize
+    blockTemplate.ghostUncleHashes.length is OXM.MaxGhostUncleSize
     (0 until blockTemplate.ghostUncleHashes.length).foreach { size =>
       val selectedUncles = blockTemplate.ghostUncleHashes.take(size).map { hash =>
         val lockupScript = blockFlow.getBlockUnsafe(hash).minerLockupScript
@@ -1183,10 +1183,10 @@ class BlockValidationSpec extends Oxyg3niumSpec {
     val lockupScript            = LockupScript.p2pkh(publicKey)
     keyManager.addOne(lockupScript -> privateKey)
 
-    val tx0 = transfer(blockFlow, genesisKey, publicKey, ALPH.alph(20)).nonCoinbase.head
+    val tx0 = transfer(blockFlow, genesisKey, publicKey, OXM.alph(20)).nonCoinbase.head
     blockFlow.grandPool.add(chainIndex, tx0.toTemplate, TimeStamp.now())
 
-    val tx1   = transferTx(blockFlow, chainIndex, lockupScript, ALPH.alph(10), None)
+    val tx1   = transferTx(blockFlow, chainIndex, lockupScript, OXM.alph(10), None)
     val block = mineWithTxs(blockFlow, chainIndex, AVector(tx0, tx1))
     checkBlock(block, blockFlow).leftValue isE ExistInvalidTx(tx1, NonExistInput)
   }
@@ -1197,7 +1197,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
     val genesisKey = genesisKeys(chainIndex.from.value)._1
     val privateKey = {
       val (privateKey, publicKey) = chainIndex.from.generateKey
-      addAndCheck(blockFlow, transfer(blockFlow, genesisKey, publicKey, ALPH.alph(20)))
+      addAndCheck(blockFlow, transfer(blockFlow, genesisKey, publicKey, OXM.alph(20)))
       privateKey
     }
 
@@ -1215,11 +1215,11 @@ class BlockValidationSpec extends Oxyg3niumSpec {
     override lazy val chainIndex =
       chainIndexGenForBroker(brokerConfig).retryUntil(_.isIntraGroup).sample.get
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0 = transfer(blockFlow, privateKey, toPublicKey0, ALPH.alph(5)).nonCoinbase.head
+    val tx0 = transfer(blockFlow, privateKey, toPublicKey0, OXM.alph(5)).nonCoinbase.head
     blockFlow.grandPool.add(chainIndex, tx0.toTemplate, TimeStamp.now())
 
     val (_, toPublicKey1) = chainIndex.to.generateKey
-    val tx1 = transfer(blockFlow, privateKey, toPublicKey1, ALPH.alph(5)).nonCoinbase.head
+    val tx1 = transfer(blockFlow, privateKey, toPublicKey1, OXM.alph(5)).nonCoinbase.head
     tx1.unsigned.inputs.head.outputRef is tx0.fixedOutputRefs(1)
 
     val block = mineWithTxs(blockFlow, chainIndex, AVector(tx0, tx1))
@@ -1231,14 +1231,14 @@ class BlockValidationSpec extends Oxyg3niumSpec {
       chainIndexGenForBroker(brokerConfig).retryUntil(_.isIntraGroup).sample.get
     val (_, toPublicKey0) = chainIndex.to.generateKey
     val now               = TimeStamp.now()
-    val tx0 = transfer(blockFlow, privateKey, toPublicKey0, ALPH.oneAlph).nonCoinbase.head
+    val tx0 = transfer(blockFlow, privateKey, toPublicKey0, OXM.oneAlph).nonCoinbase.head
     blockFlow.grandPool.add(chainIndex, tx0.toTemplate, now)
-    val tx1 = transfer(blockFlow, privateKey, toPublicKey0, ALPH.oneAlph).nonCoinbase.head
+    val tx1 = transfer(blockFlow, privateKey, toPublicKey0, OXM.oneAlph).nonCoinbase.head
     tx1.unsigned.inputs.forall(input =>
       tx0.unsigned.fixedOutputRefs.contains(input.outputRef)
     ) is true
     blockFlow.grandPool.add(chainIndex, tx1.toTemplate, now.plusMillisUnsafe(1))
-    val tx2 = transfer(blockFlow, privateKey, toPublicKey0, ALPH.oneAlph).nonCoinbase.head
+    val tx2 = transfer(blockFlow, privateKey, toPublicKey0, OXM.oneAlph).nonCoinbase.head
     tx2.unsigned.inputs.forall(input =>
       tx1.unsigned.fixedOutputRefs.contains(input.outputRef)
     ) is true
@@ -1255,13 +1255,13 @@ class BlockValidationSpec extends Oxyg3niumSpec {
     override lazy val chainIndex =
       chainIndexGenForBroker(brokerConfig).retryUntil(_.isIntraGroup).sample.get
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0 = transfer(blockFlow, privateKey, toPublicKey0, ALPH.alph(5)).nonCoinbase.head
+    val tx0 = transfer(blockFlow, privateKey, toPublicKey0, OXM.alph(5)).nonCoinbase.head
     blockFlow.grandPool.add(chainIndex, tx0.toTemplate, TimeStamp.now())
 
     val (_, toPublicKey1) = chainIndex.to.generateKey
     val (_, toPublicKey2) = chainIndex.to.generateKey
-    val tx1 = transfer(blockFlow, privateKey, toPublicKey1, ALPH.alph(5)).nonCoinbase.head
-    val tx2 = transfer(blockFlow, privateKey, toPublicKey2, ALPH.alph(5)).nonCoinbase.head
+    val tx1 = transfer(blockFlow, privateKey, toPublicKey1, OXM.alph(5)).nonCoinbase.head
+    val tx2 = transfer(blockFlow, privateKey, toPublicKey2, OXM.alph(5)).nonCoinbase.head
     tx1.unsigned.inputs.length is 1
     tx1.unsigned.inputs.head.outputRef is tx0.fixedOutputRefs(1)
     tx1.unsigned.inputs is tx2.unsigned.inputs
@@ -1276,11 +1276,11 @@ class BlockValidationSpec extends Oxyg3niumSpec {
       chainIndexGenForBroker(brokerConfig).retryUntil(!_.isIntraGroup).sample.get
 
     val (_, toPublicKey0) = chainIndex.to.generateKey
-    val tx0 = transfer(blockFlow, privateKey, toPublicKey0, ALPH.alph(5)).nonCoinbase.head
+    val tx0 = transfer(blockFlow, privateKey, toPublicKey0, OXM.alph(5)).nonCoinbase.head
     blockFlow.grandPool.add(chainIndex, tx0.toTemplate, TimeStamp.now())
 
     val (_, toPublicKey1) = chainIndex.to.generateKey
-    val tx1   = transfer(blockFlow, privateKey, toPublicKey1, ALPH.alph(5)).nonCoinbase.head
+    val tx1   = transfer(blockFlow, privateKey, toPublicKey1, OXM.alph(5)).nonCoinbase.head
     val block = mineWithTxs(blockFlow, chainIndex, AVector(tx0, tx1))
     checkBlock(block, blockFlow).leftValue isE ExistInvalidTx(tx1, NonExistInput)
   }
@@ -1294,7 +1294,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
       val (privateKey, publicKey) = chainIndex.from.generateKey
       val utxoLength              = 2
       (0 until utxoLength).foreach { _ =>
-        val block = transfer(blockFlow, genesisPrivateKey, publicKey, ALPH.alph(1))
+        val block = transfer(blockFlow, genesisPrivateKey, publicKey, OXM.alph(1))
         addAndCheck(blockFlow, block)
       }
       val lockupScript = LockupScript.p2pkh(publicKey)
@@ -1360,7 +1360,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
     }
 
     def emptyPoLWBlock(): Block = {
-      emptyPoLWBlock(nextInt(0, ALPH.MaxGhostUncleSize))
+      emptyPoLWBlock(nextInt(0, OXM.MaxGhostUncleSize))
     }
   }
 
@@ -1480,7 +1480,7 @@ class BlockValidationSpec extends Oxyg3niumSpec {
   trait TestnetFixture extends Fixture {
     override lazy val chainIndex = ChainIndex.unsafe(0, 0)
     lazy val whitelistedMiner =
-      ALPH.testnetWhitelistedMiners
+      OXM.testnetWhitelistedMiners
         .filter(_.groupIndex == chainIndex.to)
         .head
         .asInstanceOf[LockupScript.Asset]

@@ -1,6 +1,6 @@
 [View code on GitHub](https://github.com/alephium/alephium/protocol/src/main/scala/org/alephium/protocol/vm/GasPrice.scala)
 
-This file contains the implementation of the GasPrice class and its companion object. The GasPrice class represents the gas price used in the Oxyg3nium blockchain. Gas is a unit of measurement for the computational effort required to execute a transaction or a smart contract on the blockchain. The gas price is the amount of ALPH tokens that a user is willing to pay for each unit of gas consumed by the transaction or smart contract.
+This file contains the implementation of the GasPrice class and its companion object. The GasPrice class represents the gas price used in the Oxyg3nium blockchain. Gas is a unit of measurement for the computational effort required to execute a transaction or a smart contract on the blockchain. The gas price is the amount of OXM tokens that a user is willing to pay for each unit of gas consumed by the transaction or smart contract.
 
 The GasPrice class is a simple wrapper around the U256 class, which represents an unsigned 256-bit integer. The class implements the Ordered trait, which allows instances of GasPrice to be compared with each other. The class also defines a multiplication operator that takes a GasBox instance as an argument and returns the product of the gas price and the gas limit as a U256 instance.
 

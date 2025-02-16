@@ -43,7 +43,7 @@ import org.alephium.flow.network.broker.MisbehaviorManager
 import org.alephium.http.HttpFixture._
 import org.alephium.http.HttpRouteFixture
 import org.alephium.json.Json._
-import org.alephium.protocol.{ALPH, Hash}
+import org.alephium.protocol.{OXM, Hash}
 import org.alephium.protocol.mining.HashRate
 import org.alephium.protocol.model.{Transaction => _, _}
 import org.alephium.protocol.model.UnsignedTransaction.TxOutputInfo
@@ -1585,7 +1585,7 @@ trait RestServerFixture
       blockflowFetchMaxAge = blockflowFetchMaxAge,
       askTimeout = Duration.ofMinutesUnsafe(1),
       apiConfig.apiKey,
-      ALPH.oneAlph,
+      OXM.oneAlph,
       utxosLimit,
       maxFormBufferedBytes,
       enableHttpMetrics = true

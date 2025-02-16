@@ -23,7 +23,7 @@ import scala.util.Using
 
 import org.scalatest.Assertion
 
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config.GroupConfig
 import org.oxyg3nium.protocol.model.Target
 import org.oxyg3nium.util.{Oxyg3niumSpec, Duration, NumericHelpers, TimeStamp, U256}
@@ -45,7 +45,7 @@ class EmissionSpec extends Oxyg3niumSpec with NumericHelpers {
   }
 
   def getInflationRate(amount: U256): Double = {
-    (BigDecimal(amount.toBigInt) / BigDecimal(ALPH.MaxALPHValue.toBigInt)).doubleValue
+    (BigDecimal(amount.toBigInt) / BigDecimal(OXM.MaxOXMValue.toBigInt)).doubleValue
   }
 
   implicit class RichTarget(target: Target) {
@@ -86,15 +86,15 @@ class EmissionSpec extends Oxyg3niumSpec with NumericHelpers {
   it should "compute max reward based on timestamp" in new Fixture {
     import emission._
 
-    rewardWrtTime(TimeStamp.zero, TimeStamp.zero) is ALPH.cent(375)
+    rewardWrtTime(TimeStamp.zero, TimeStamp.zero) is OXM.cent(375)
     rewardWrtTime(TimeStamp.zero + Duration.ofHoursUnsafe(1 * 365 * 24), TimeStamp.zero) is
-      ALPH.cent(313)
+      OXM.cent(313)
     rewardWrtTime(TimeStamp.zero + Duration.ofHoursUnsafe(2 * 365 * 24), TimeStamp.zero) is
-      ALPH.cent(251)
+      OXM.cent(251)
     rewardWrtTime(TimeStamp.zero + Duration.ofHoursUnsafe(3 * 365 * 24), TimeStamp.zero) is
-      ALPH.cent(189)
+      OXM.cent(189)
     rewardWrtTime(TimeStamp.zero + Duration.ofHoursUnsafe(4 * 365 * 24), TimeStamp.zero) is
-      ALPH.cent(125)
+      OXM.cent(125)
   }
 
   def average(reward0: U256, reward1: U256): U256 = {

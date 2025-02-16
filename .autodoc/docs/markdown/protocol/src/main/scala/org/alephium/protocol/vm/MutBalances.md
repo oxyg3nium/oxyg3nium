@@ -17,10 +17,10 @@ balances.addAlph(lockupScript, U256.from(100))
 Overall, the `MutBalances` class provides a convenient way to manage balances for a given lockup script in the Oxyg3nium project.
 ## Questions: 
  1. What is the purpose of the `MutBalances` class?
-- The `MutBalances` class represents a mutable collection of balances for different lockup scripts, which can hold both ALPH and token amounts.
+- The `MutBalances` class represents a mutable collection of balances for different lockup scripts, which can hold both OXM and token amounts.
 
 2. What methods are available for modifying the balances in `MutBalances`?
-- The `MutBalances` class provides methods for adding and subtracting ALPH and token amounts for specific lockup scripts, as well as merging balances with another `MutBalances` instance.
+- The `MutBalances` class provides methods for adding and subtracting OXM and token amounts for specific lockup scripts, as well as merging balances with another `MutBalances` instance.
 
 3. How are `MutBalances` used to create transaction outputs?
 - The `toOutputs` method of `MutBalances` can be used to convert the balances into a vector of transaction outputs, which can be used to create a transaction.

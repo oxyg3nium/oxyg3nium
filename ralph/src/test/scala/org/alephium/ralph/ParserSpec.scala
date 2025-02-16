@@ -349,7 +349,7 @@ class ParserSpec(fileURI: Option[java.net.URI]) extends Oxyg3niumSpec {
         )
       )
     fastparse
-      .parse("foo{ x -> ALPH: 1e-18 alph, token: 2; y -> ALPH: 3 }(z)", StatefulParser.expr(_))
+      .parse("foo{ x -> OXM: 1e-18 alph, token: 2; y -> OXM: 3 }(z)", StatefulParser.expr(_))
       .get
       .value is
       CallExpr[StatefulContext](
@@ -358,13 +358,13 @@ class ParserSpec(fileURI: Option[java.net.URI]) extends Oxyg3niumSpec {
           Ast.ApproveAsset(
             Variable(Ident("x")),
             Seq(
-              Ast.ALPHTokenId()        -> Const(Val.U256(U256.One)),
+              Ast.OXMTokenId()        -> Const(Val.U256(U256.One)),
               Variable(Ident("token")) -> Const(Val.U256(U256.Two))
             )
           ),
           Ast.ApproveAsset(
             Variable(Ident("y")),
-            Seq(Ast.ALPHTokenId() -> Const(Val.U256(U256.unsafe(3))))
+            Seq(Ast.OXMTokenId() -> Const(Val.U256(U256.unsafe(3))))
           )
         ),
         List(Variable(Ident("z")))
@@ -388,10 +388,10 @@ class ParserSpec(fileURI: Option[java.net.URI]) extends Oxyg3niumSpec {
       )
 
     info("Braces syntax")
-    fastparse.parse("{ x -> ALPH: 1 alph }", StatelessParser.approveAssets(_)).isSuccess is true
+    fastparse.parse("{ x -> OXM: 1 alph }", StatelessParser.approveAssets(_)).isSuccess is true
     fastparse.parse("{ x -> tokenId: 2 }", StatelessParser.approveAssets(_)).isSuccess is true
     fastparse
-      .parse("{ x -> ALPH: 1 alph, tokenId: 2; y -> ALPH: 3 }", StatelessParser.approveAssets(_))
+      .parse("{ x -> OXM: 1 alph, tokenId: 2; y -> OXM: 3 }", StatelessParser.approveAssets(_))
       .isSuccess is true
 
     info("Contract call")
@@ -403,7 +403,7 @@ class ParserSpec(fileURI: Option[java.net.URI]) extends Oxyg3niumSpec {
         List(Variable(Ident("x")))
       )
     fastparse
-      .parse("Foo(x).bar{ z -> ALPH: 1 }(x)", StatefulParser.contractCallOrLoadData(_))
+      .parse("Foo(x).bar{ z -> OXM: 1 }(x)", StatefulParser.contractCallOrLoadData(_))
       .get
       .value is
       ContractCallExpr(
@@ -412,7 +412,7 @@ class ParserSpec(fileURI: Option[java.net.URI]) extends Oxyg3niumSpec {
         Seq(
           Ast.ApproveAsset(
             Variable(Ident("z")),
-            Seq(ALPHTokenId() -> Const(Val.U256(U256.One)))
+            Seq(OXMTokenId() -> Const(Val.U256(U256.One)))
           )
         ),
         List(Variable(Ident("x")))
@@ -516,7 +516,7 @@ class ParserSpec(fileURI: Option[java.net.URI]) extends Oxyg3niumSpec {
         Seq(Ast.NamedVar(false, Ident("bytes"))),
         Const(Val.ByteVec(ByteString.empty))
       )
-    parse("ALPH", StatefulParser.expr(_)).get.value is ALPHTokenId[StatefulContext]()
+    parse("OXM", StatefulParser.expr(_)).get.value is OXMTokenId[StatefulContext]()
   }
 
   it should "parse return" in {

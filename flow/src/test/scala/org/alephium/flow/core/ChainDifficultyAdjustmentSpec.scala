@@ -26,7 +26,7 @@ import akka.util.ByteString
 import org.oxyg3nium.flow.Oxyg3niumFlowSpec
 import org.oxyg3nium.flow.setting.{ConsensusSetting, ConsensusSettings}
 import org.oxyg3nium.io.IOResult
-import org.oxyg3nium.protocol.ALPH
+import org.oxyg3nium.protocol.OXM
 import org.oxyg3nium.protocol.config._
 import org.oxyg3nium.protocol.model.{BlockHash, HardFork, NetworkId, Target}
 import org.oxyg3nium.util.{AVector, Duration, NumericHelpers, TimeStamp}
@@ -120,7 +120,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
 
   it should "return initial target when few blocks" in {
     implicit val consensusConfig = consensusConfigs.mainnet
-    val maxHeight                = ALPH.GenesisHeight + consensusConfig.powAveragingWindow + 1
+    val maxHeight                = OXM.GenesisHeight + consensusConfig.powAveragingWindow + 1
     (1 until maxHeight).foreach { n =>
       val data       = AVector.fill(n)(BlockHash.random -> TimeStamp.zero)
       val fixture    = new MockFixture { setup(data) }
@@ -130,7 +130,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       fixture.calNextHashTargetRaw(
         latestHash,
         currentTarget,
-        ALPH.LaunchTimestamp,
+        OXM.LaunchTimestamp,
         TimeStamp.now()
       ) isE currentTarget
     }
@@ -152,7 +152,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       calNextHashTargetRaw(
         hash,
         currentTarget,
-        ALPH.LaunchTimestamp,
+        OXM.LaunchTimestamp,
         TimeStamp.now()
       ) isE currentTarget
     }
@@ -175,7 +175,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       calTimeSpan(hash, height, TimeStamp.now()) isE Some(
         data(height)._2 deltaUnsafe data(height - 17)._2
       )
-      calNextHashTargetRaw(hash, currentTarget, ALPH.LaunchTimestamp, TimeStamp.now()) isE
+      calNextHashTargetRaw(hash, currentTarget, OXM.LaunchTimestamp, TimeStamp.now()) isE
         reTarget(currentTarget, consensusConfig.windowTimeSpanMax.millis)
     }
   }
@@ -197,7 +197,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       calTimeSpan(hash, height, TimeStamp.now()) isE Some(
         data(height)._2 deltaUnsafe data(height - 17)._2
       )
-      calNextHashTargetRaw(hash, currentTarget, ALPH.LaunchTimestamp, TimeStamp.now()) isE
+      calNextHashTargetRaw(hash, currentTarget, OXM.LaunchTimestamp, TimeStamp.now()) isE
         reTarget(currentTarget, consensusConfig.windowTimeSpanMin.millis)
     }
   }
@@ -207,7 +207,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       override def networkId: NetworkId       = NetworkId.Oxyg3niumMainNet
       override def noPreMineProof: ByteString = ByteString.empty
       override def lemanHardForkTimestamp: TimeStamp =
-        ALPH.DifficultyBombPatchEnabledTimeStamp.plusHoursUnsafe(100)
+        OXM.DifficultyBombPatchEnabledTimeStamp.plusHoursUnsafe(100)
       def rhoneHardForkTimestamp: TimeStamp = TimeStamp.unsafe(Long.MaxValue)
     }
 
@@ -223,8 +223,8 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
     }
 
     val currentTarget           = consensusConfig.maxMiningTarget
-    val diffBombEnabledTs       = ALPH.PreLemanDifficultyBombEnabledTimestamp
-    val diffBombFirstAdjustment = diffBombEnabledTs.plusUnsafe(ALPH.ExpDiffPeriod)
+    val diffBombEnabledTs       = OXM.PreLemanDifficultyBombEnabledTimestamp
+    val diffBombFirstAdjustment = diffBombEnabledTs.plusUnsafe(OXM.ExpDiffPeriod)
 
     info("Before the diff bomb")
     calIceAgeTarget(
@@ -251,15 +251,15 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
     info("The diff bomb patch is not enabled yet")
     calIceAgeTarget(
       currentTarget,
-      ALPH.DifficultyBombPatchEnabledTimeStamp.minusUnsafe(Duration.ofSecondsUnsafe(2)),
-      ALPH.DifficultyBombPatchEnabledTimeStamp.minusUnsafe(Duration.ofSecondsUnsafe(1))
+      OXM.DifficultyBombPatchEnabledTimeStamp.minusUnsafe(Duration.ofSecondsUnsafe(2)),
+      OXM.DifficultyBombPatchEnabledTimeStamp.minusUnsafe(Duration.ofSecondsUnsafe(1))
     ) isnot currentTarget
 
     info("The diff bomb patch is enabled")
     calIceAgeTarget(
       currentTarget,
-      ALPH.DifficultyBombPatchEnabledTimeStamp.minusUnsafe(Duration.ofSecondsUnsafe(1)),
-      ALPH.DifficultyBombPatchEnabledTimeStamp
+      OXM.DifficultyBombPatchEnabledTimeStamp.minusUnsafe(Duration.ofSecondsUnsafe(1)),
+      OXM.DifficultyBombPatchEnabledTimeStamp
     ) is currentTarget
 
     info("Leman hardfork is not enabled yet")
@@ -300,7 +300,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       calNextHashTargetRaw(
         getHash(currentHeight),
         initialTarget,
-        ALPH.LaunchTimestamp,
+        OXM.LaunchTimestamp,
         TimeStamp.now()
       ).rightValue
     currentTarget is initialTarget
@@ -315,7 +315,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       currentTarget = calNextHashTargetRaw(
         newHash,
         currentTarget,
-        ALPH.LaunchTimestamp,
+        OXM.LaunchTimestamp,
         TimeStamp.now()
       ).rightValue
     }
@@ -367,7 +367,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       calNextHashTargetRaw(
         hash,
         currentTarget,
-        ALPH.LaunchTimestamp,
+        OXM.LaunchTimestamp,
         getTimestamp(hash).rightValue
       ) isE
         reTarget(currentTarget, consensusConfig.windowTimeSpanMin.millis)
@@ -379,7 +379,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       calNextHashTargetRaw(
         hash,
         currentTarget,
-        ALPH.LaunchTimestamp,
+        OXM.LaunchTimestamp,
         getTimestamp(hash).rightValue
       ) isE difficultyBombPatchTarget
     }
@@ -392,7 +392,7 @@ class ChainDifficultyAdjustmentSpec extends Oxyg3niumFlowSpec { Test =>
       calNextHashTargetRaw(
         hash,
         currentTarget,
-        ALPH.LaunchTimestamp,
+        OXM.LaunchTimestamp,
         getTimestamp(hash).rightValue
       ) isE
         reTarget(currentTarget, consensusConfig.windowTimeSpanMin.millis)
